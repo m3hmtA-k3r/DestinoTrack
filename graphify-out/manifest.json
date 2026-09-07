@@ -1,0 +1,212 @@
+{
+  "DestinoTrack.Business/DestinoTrack.Business.csproj": {
+    "mtime": 1788493637.628517,
+    "seen": 1788633681.5095177,
+    "ast_hash": "147906a918e92b606b013c93942ca494",
+    "semantic_hash": "147906a918e92b606b013c93942ca494"
+  },
+  "DestinoTrack.DTO/DestinoTrack.DTO.csproj": {
+    "mtime": 1788492846.2410312,
+    "seen": 1788633681.50953,
+    "ast_hash": "5536c8a2aff17aea1c4c8e5a3b9818f1",
+    "semantic_hash": "5536c8a2aff17aea1c4c8e5a3b9818f1"
+  },
+  "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj": {
+    "mtime": 1788493549.5161538,
+    "seen": 1788633681.5095348,
+    "ast_hash": "fa43840b4642b3ece6aa09d24c348cf2",
+    "semantic_hash": "fa43840b4642b3ece6aa09d24c348cf2"
+  },
+  "DestinoTrack.Entity/DestinoTrack.Entity.csproj": {
+    "mtime": 1788630100.536062,
+    "seen": 1788633681.5095367,
+    "ast_hash": "d83be512691197b6f4059bad688dbab2",
+    "semantic_hash": "d83be512691197b6f4059bad688dbab2"
+  },
+  "DestinoTrack.Entity/Entities/About.cs": {
+    "mtime": 1788632531.3424544,
+    "seen": 1788633681.5095391,
+    "ast_hash": "d78cfc6ae3976ab175ababcd1d273b72",
+    "semantic_hash": "d78cfc6ae3976ab175ababcd1d273b72"
+  },
+  "DestinoTrack.Entity/Entities/Address.cs": {
+    "mtime": 1788632501.212958,
+    "seen": 1788633681.509541,
+    "ast_hash": "47ddab5c25859f66ef7f0e0220cfc3e2",
+    "semantic_hash": "47ddab5c25859f66ef7f0e0220cfc3e2"
+  },
+  "DestinoTrack.Entity/Entities/AppRole.cs": {
+    "mtime": 1788633588.7953022,
+    "seen": 1788633681.5095432,
+    "ast_hash": "6c4d6b1a71bc8b176b3afa477663998a",
+    "semantic_hash": "6c4d6b1a71bc8b176b3afa477663998a"
+  },
+  "DestinoTrack.Entity/Entities/AppUser.cs": {
+    "mtime": 1788633534.6212518,
+    "seen": 1788633681.5095446,
+    "ast_hash": "c3a74b5ded08347a78d49bd95289c862",
+    "semantic_hash": "c3a74b5ded08347a78d49bd95289c862"
+  },
+  "DestinoTrack.Entity/Entities/Branch.cs": {
+    "mtime": 1788632426.6270442,
+    "seen": 1788633681.5095465,
+    "ast_hash": "6b83c51b6bb9402204b211f107ed9924",
+    "semantic_hash": "6b83c51b6bb9402204b211f107ed9924"
+  },
+  "DestinoTrack.Entity/Entities/Cargo.cs": {
+    "mtime": 1788633518.5978959,
+    "seen": 1788633681.5095482,
+    "ast_hash": "7c34bf430b8c04acfeb32339d39fb656",
+    "semantic_hash": "7c34bf430b8c04acfeb32339d39fb656"
+  },
+  "DestinoTrack.Entity/Entities/CargoMovement.cs": {
+    "mtime": 1788632347.268768,
+    "seen": 1788633681.50955,
+    "ast_hash": "127ec8a03b04ffdecd24cd37f8e2972a",
+    "semantic_hash": "127ec8a03b04ffdecd24cd37f8e2972a"
+  },
+  "DestinoTrack.Entity/Entities/City.cs": {
+    "mtime": 1788631139.739692,
+    "seen": 1788633681.5095522,
+    "ast_hash": "fee41959e943a7c42acf6d990858f724",
+    "semantic_hash": "fee41959e943a7c42acf6d990858f724"
+  },
+  "DestinoTrack.Entity/Entities/Common/BaseEntity.cs": {
+    "mtime": 1788630129.4629514,
+    "seen": 1788633681.5095541,
+    "ast_hash": "8ac48828b1a4ce0049230f96b79a31a5",
+    "semantic_hash": "8ac48828b1a4ce0049230f96b79a31a5"
+  },
+  "DestinoTrack.Entity/Entities/ContactInfo.cs": {
+    "mtime": 1788632549.4484446,
+    "seen": 1788633681.509556,
+    "ast_hash": "5a9d4aa582f310f04bcd68c278fa69c0",
+    "semantic_hash": "5a9d4aa582f310f04bcd68c278fa69c0"
+  },
+  "DestinoTrack.Entity/Entities/Courier.cs": {
+    "mtime": 1788632379.6579652,
+    "seen": 1788633681.5095575,
+    "ast_hash": "8b46dae40902cc70d072e34cd9e9704a",
+    "semantic_hash": "8b46dae40902cc70d072e34cd9e9704a"
+  },
+  "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs": {
+    "mtime": 1788633484.0792382,
+    "seen": 1788633681.5095592,
+    "ast_hash": "325f7fbbe02cb80c1a529731fbf611b9",
+    "semantic_hash": "325f7fbbe02cb80c1a529731fbf611b9"
+  },
+  "DestinoTrack.Entity/Entities/Enums/CargoType.cs": {
+    "mtime": 1788633451.9248085,
+    "seen": 1788633681.5095608,
+    "ast_hash": "d43fc64843949139091459456d999659",
+    "semantic_hash": "d43fc64843949139091459456d999659"
+  },
+  "DestinoTrack.Entity/Entities/Enums/PaymentType.cs": {
+    "mtime": 1788633422.529899,
+    "seen": 1788633681.5095623,
+    "ast_hash": "cfa277e25bcda128963b76cbe63bf294",
+    "semantic_hash": "cfa277e25bcda128963b76cbe63bf294"
+  },
+  "DestinoTrack.WebUI/Controllers/HomeController.cs": {
+    "mtime": 1788491203.1506083,
+    "seen": 1788633681.5095644,
+    "ast_hash": "6b9ca0b6a8066e556dba366ef0e82394",
+    "semantic_hash": "6b9ca0b6a8066e556dba366ef0e82394"
+  },
+  "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj": {
+    "mtime": 1788493705.270971,
+    "seen": 1788633681.509566,
+    "ast_hash": "1cf62e43b6223a146c52965d705a596e",
+    "semantic_hash": "1cf62e43b6223a146c52965d705a596e"
+  },
+  "DestinoTrack.WebUI/Models/ErrorViewModel.cs": {
+    "mtime": 1788491203.0488813,
+    "seen": 1788633681.5095677,
+    "ast_hash": "b9535ae4dfd0e783ad85f4e7ad750b1e",
+    "semantic_hash": "b9535ae4dfd0e783ad85f4e7ad750b1e"
+  },
+  "DestinoTrack.WebUI/Program.cs": {
+    "mtime": 1788491203.0691829,
+    "seen": 1788633681.5095692,
+    "ast_hash": "a9db57802b2d37b56253580fcd618325",
+    "semantic_hash": "a9db57802b2d37b56253580fcd618325"
+  },
+  "DestinoTrack.WebUI/Properties/launchSettings.json": {
+    "mtime": 1788491202.6195242,
+    "seen": 1788633681.5095716,
+    "ast_hash": "bc30a27f3274bd592a85289d1380a7b8",
+    "semantic_hash": "bc30a27f3274bd592a85289d1380a7b8"
+  },
+  "DestinoTrack.WebUI/Views/Home/Index.cshtml": {
+    "mtime": 1788491202.7365901,
+    "seen": 1788633681.5095735,
+    "ast_hash": "445641c0cb65aff6ed92354e519953d9",
+    "semantic_hash": "445641c0cb65aff6ed92354e519953d9"
+  },
+  "DestinoTrack.WebUI/Views/Home/Privacy.cshtml": {
+    "mtime": 1788491202.511479,
+    "seen": 1788633681.5095751,
+    "ast_hash": "6ac68e2b0d9ab26bd02a905a365a2bcc",
+    "semantic_hash": "6ac68e2b0d9ab26bd02a905a365a2bcc"
+  },
+  "DestinoTrack.WebUI/Views/Shared/Error.cshtml": {
+    "mtime": 1788491202.5124793,
+    "seen": 1788633681.509577,
+    "ast_hash": "939096be653d41fb8a147fb4ff36bfb5",
+    "semantic_hash": "939096be653d41fb8a147fb4ff36bfb5"
+  },
+  "DestinoTrack.WebUI/Views/Shared/_Layout.cshtml": {
+    "mtime": 1788491202.513986,
+    "seen": 1788633681.5095787,
+    "ast_hash": "40ed121c5da810e6d092382b10fcd121",
+    "semantic_hash": "40ed121c5da810e6d092382b10fcd121"
+  },
+  "DestinoTrack.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml": {
+    "mtime": 1788491202.5159874,
+    "seen": 1788633681.5095806,
+    "ast_hash": "04c9739bd41a158c3fb95b9ec3020c94",
+    "semantic_hash": "04c9739bd41a158c3fb95b9ec3020c94"
+  },
+  "DestinoTrack.WebUI/Views/_ViewImports.cshtml": {
+    "mtime": 1788491202.6205263,
+    "seen": 1788633681.509582,
+    "ast_hash": "652ba29b7065e081dcc33a379f08d356",
+    "semantic_hash": "652ba29b7065e081dcc33a379f08d356"
+  },
+  "DestinoTrack.WebUI/Views/_ViewStart.cshtml": {
+    "mtime": 1788491202.6215262,
+    "seen": 1788633681.509584,
+    "ast_hash": "e4cd881cf745e1e88cf2c5f6eceae943",
+    "semantic_hash": "e4cd881cf745e1e88cf2c5f6eceae943"
+  },
+  "DestinoTrack.WebUI/appsettings.Development.json": {
+    "mtime": 1788491202.5254953,
+    "seen": 1788633681.5095854,
+    "ast_hash": "804b473502a4c415cf75db61c56c32aa",
+    "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
+  },
+  "DestinoTrack.WebUI/appsettings.json": {
+    "mtime": 1788491202.5274954,
+    "seen": 1788633681.5095873,
+    "ast_hash": "f7e65dde4e5533740a0d57ac9355c0e8",
+    "semantic_hash": "f7e65dde4e5533740a0d57ac9355c0e8"
+  },
+  "DestinoTrack.WebUI/wwwroot/js/site.js": {
+    "mtime": 1788491202.5179877,
+    "seen": 1788633681.509589,
+    "ast_hash": "53e309eeca51b3b6de20c4d24e1b2b63",
+    "semantic_hash": "53e309eeca51b3b6de20c4d24e1b2b63"
+  },
+  "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js": {
+    "mtime": 1788491202.6245255,
+    "seen": 1788633681.5095906,
+    "ast_hash": "2a905437ecdd58e97aad5ee4d30d3687",
+    "semantic_hash": "2a905437ecdd58e97aad5ee4d30d3687"
+  },
+  "DestinoTrack.sln": {
+    "mtime": 1788491203.402052,
+    "seen": 1788633681.5095923,
+    "ast_hash": "eca58c2517ef576e33cb8a86c03f8600",
+    "semantic_hash": "eca58c2517ef576e33cb8a86c03f8600"
+  }
+}

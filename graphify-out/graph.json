@@ -1,0 +1,5658 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "destinotrack_entity_entities_about_destinotrack_entity_entities_about",
+      "label": "About",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "about",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
+      "label": "ContactInfo",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "contactinfo",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "label": "CargoStatus",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s42"
+        ]
+      },
+      "norm_label": "cargostatus",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype",
+      "label": "PaymentType",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s126"
+        ]
+      },
+      "norm_label": "paymenttype",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "label": "Cargo",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "cargo",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "label": "CargoType",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "cargotype",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "destinotrack_entity_entities_approle_destinotrack_entity_entities_approle",
+      "label": "AppRole",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s43"
+        ]
+      },
+      "norm_label": "approle",
+      "source_file": "DestinoTrack.Entity/Entities/AppRole.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "label": "Branch",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "branch",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "label": "City",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "city",
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "label": "BaseEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Common",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "baseentity",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "label": "Address",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "address",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "label": "AppUser",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s87"
+        ]
+      },
+      "norm_label": "appuser",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "label": "HomeController",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Controllers",
+        "scope_chain": [
+          "s96"
+        ]
+      },
+      "norm_label": "homecontroller",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel",
+      "label": "ErrorViewModel",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "errorviewmodel",
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "label": "CargoMovement",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "cargomovement",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "label": "Courier",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "courier",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_error",
+      "label": ".Error()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Controllers",
+        "scope_chain": [
+          "s96"
+        ]
+      },
+      "norm_label": ".error()",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L26"
+    },
+    {
+      "id": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_index",
+      "label": ".Index()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Controllers",
+        "scope_chain": [
+          "s96"
+        ]
+      },
+      "norm_label": ".index()",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L16"
+    },
+    {
+      "id": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_privacy",
+      "label": ".Privacy()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Controllers",
+        "scope_chain": [
+          "s96"
+        ]
+      },
+      "norm_label": ".privacy()",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L21"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_appendmodelprefix",
+      "label": "appendModelPrefix()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "appendmodelprefix()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L48"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_escapeattributevalue",
+      "label": "escapeAttributeValue()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "escapeattributevalue()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L39"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_getmodelprefix",
+      "label": "getModelPrefix()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "getmodelprefix()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L44"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onerror",
+      "label": "onError()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "onerror()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L55"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onerrors",
+      "label": "onErrors()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "onerrors()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L72"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onreset",
+      "label": "onReset()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "onreset()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L102"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onsuccess",
+      "label": "onSuccess()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "onsuccess()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L86"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_setvalidationvalues",
+      "label": "setValidationValues()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "setvalidationvalues()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L28"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_splitandtrim",
+      "label": "splitAndTrim()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "splitandtrim()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L35"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_validationinfo",
+      "label": "validationInfo()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "validationinfo()",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L127"
+    },
+    {
+      "id": "csharp_namespace:16bb917edc1a82d7",
+      "label": "DestinoTrack.Entity.Entities",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.Entity.Entities"
+      },
+      "norm_label": "destinotrack.entity.entities",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L3",
+      "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:3bafa95ce1a97488",
+      "label": "DestinoTrack.Entity.Entities.Enums",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.Entity.Entities.Enums"
+      },
+      "norm_label": "destinotrack.entity.entities.enums",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L3",
+      "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:4d8cf7ad560befce",
+      "label": "DestinoTrack.Entity.Entities.Common",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.Entity.Entities.Common"
+      },
+      "norm_label": "destinotrack.entity.entities.common",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "destinotrack_entity_entities_about",
+      "label": "About.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "about.cs",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_about_destinotrack_entity_entities_about_description",
+      "label": "Description",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "description",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_entity_entities_about_destinotrack_entity_entities_about_imageurl",
+      "label": "ImageUrl",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "imageurl",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_about_destinotrack_entity_entities_about_title",
+      "label": "Title",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "title",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser",
+      "label": "AppUser.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "appuser.cs",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch",
+      "label": "Branch.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "branch.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo",
+      "label": "Cargo.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "cargo.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement",
+      "label": "CargoMovement.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "cargomovement.cs",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_contactinfo",
+      "label": "ContactInfo.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "contactinfo.cs",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_address",
+      "label": "Address",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "address",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_email",
+      "label": "Email",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "email",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_phonenumber",
+      "label": "PhoneNumber",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "phonenumber",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier",
+      "label": "Courier.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "courier.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus",
+      "label": "CargoStatus.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "cargostatus.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_arrivedatdeliverybranch",
+      "label": "ArrivedAtDeliveryBranch",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s42"
+        ]
+      },
+      "norm_label": "arrivedatdeliverybranch",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_delivered",
+      "label": "Delivered",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s42"
+        ]
+      },
+      "norm_label": "delivered",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_dispatchedfromtransfercenter",
+      "label": "DispatchedFromTransferCenter",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s42"
+        ]
+      },
+      "norm_label": "dispatchedfromtransfercenter",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_intransfercenter",
+      "label": "InTransferCenter",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s42"
+        ]
+      },
+      "norm_label": "intransfercenter",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_outfordelivery",
+      "label": "OutForDelivery",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s42"
+        ]
+      },
+      "norm_label": "outfordelivery",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_received",
+      "label": "Received",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s42"
+        ]
+      },
+      "norm_label": "received",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_paymenttype",
+      "label": "PaymentType.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "paymenttype.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype_receiverpays",
+      "label": "ReceiverPays",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s126"
+        ]
+      },
+      "norm_label": "receiverpays",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype_senderpays",
+      "label": "SenderPays",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s126"
+        ]
+      },
+      "norm_label": "senderpays",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "cargotype",
+      "label": "CargoType",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "cargotype",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_cs_cargostatus",
+      "label": "CargoStatus",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "cargostatus",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_cs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_cs_ilist",
+      "label": "IList",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "ilist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_cargostatus",
+      "label": "CargoStatus",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "cargostatus",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_cargotype",
+      "label": "CargoType",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "cargotype",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L14"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_courierid",
+      "label": "CourierId",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "courierid",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L29"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_destinationbranch",
+      "label": "DestinationBranch",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "destinationbranch",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L36"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_destinationbranchid",
+      "label": "DestinationBranchId",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "destinationbranchid",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L28"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_estimatedarrivaldate",
+      "label": "EstimatedArrivalDate",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "estimatedarrivaldate",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_ispaid",
+      "label": "IsPaid",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "ispaid",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L20"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_movements",
+      "label": "Movements",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "movements",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L38"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_originbranch",
+      "label": "OriginBranch",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "originbranch",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L35"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_originbranchid",
+      "label": "OriginBranchId",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "originbranchid",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L27"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_paymenttype",
+      "label": "PaymentType",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "paymenttype",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L21"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_price",
+      "label": "Price",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "price",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L19"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_receiver",
+      "label": "Receiver",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "receiver",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L34"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_receiverid",
+      "label": "ReceiverId",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "receiverid",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L26"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_sender",
+      "label": "Sender",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "sender",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L33"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_senderid",
+      "label": "SenderId",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "senderid",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L25"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_shipmentdate",
+      "label": "ShipmentDate",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "shipmentdate",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_trackcode",
+      "label": "TrackCode",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "trackcode",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_weight",
+      "label": "Weight",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "weight",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "paymenttype",
+      "label": "PaymentType",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "paymenttype",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype",
+      "label": "CargoType.cs",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "cargotype.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_coldchain",
+      "label": "ColdChain",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "coldchain",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_document",
+      "label": "Document",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "document",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_fragile",
+      "label": "Fragile",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "fragile",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_heavy",
+      "label": "Heavy",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "heavy",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_oversized",
+      "label": "Oversized",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "oversized",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_standard",
+      "label": "Standard",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "standard",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_urgent",
+      "label": "Urgent",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "urgent",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_valuable",
+      "label": "Valuable",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "valuable",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L11"
+    },
+    {
+      "id": "destinotrack_entity_entities_approle",
+      "label": "AppRole.cs",
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "norm_label": "approle.cs",
+      "source_file": "DestinoTrack.Entity/Entities/AppRole.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_approle_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "identityrole",
+      "label": "IdentityRole",
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "norm_label": "identityrole",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_webui_program",
+      "label": "Program.cs",
+      "_origin": "ast",
+      "community": 12,
+      "file_type": "code",
+      "norm_label": "program.cs",
+      "source_file": "DestinoTrack.WebUI/Program.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_webui_views_home_index",
+      "label": "Index.cshtml",
+      "_origin": "ast",
+      "community": 13,
+      "file_type": "code",
+      "norm_label": "index.cshtml",
+      "source_file": "DestinoTrack.WebUI/Views/Home/Index.cshtml",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_webui_views_home_privacy",
+      "label": "Privacy.cshtml",
+      "_origin": "ast",
+      "community": 14,
+      "file_type": "code",
+      "norm_label": "privacy.cshtml",
+      "source_file": "DestinoTrack.WebUI/Views/Home/Privacy.cshtml",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_webui_views_shared_error",
+      "label": "Error.cshtml",
+      "_origin": "ast",
+      "community": 15,
+      "file_type": "code",
+      "norm_label": "error.cshtml",
+      "source_file": "DestinoTrack.WebUI/Views/Shared/Error.cshtml",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_webui_views_shared_layout",
+      "label": "_Layout.cshtml",
+      "_origin": "ast",
+      "community": 16,
+      "file_type": "code",
+      "norm_label": "_layout.cshtml",
+      "source_file": "DestinoTrack.WebUI/Views/Shared/_Layout.cshtml",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_webui_views_shared_validationscriptspartial",
+      "label": "_ValidationScriptsPartial.cshtml",
+      "_origin": "ast",
+      "community": 17,
+      "file_type": "code",
+      "norm_label": "_validationscriptspartial.cshtml",
+      "source_file": "DestinoTrack.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_webui_views_viewstart",
+      "label": "_ViewStart.cshtml",
+      "_origin": "ast",
+      "community": 18,
+      "file_type": "code",
+      "norm_label": "_viewstart.cshtml",
+      "source_file": "DestinoTrack.WebUI/Views/_ViewStart.cshtml",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_js_site",
+      "label": "site.js",
+      "_origin": "ast",
+      "community": 19,
+      "file_type": "code",
+      "norm_label": "site.js",
+      "source_file": "DestinoTrack.WebUI/wwwroot/js/site.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings",
+      "label": "launchSettings.json",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "launchsettings.json",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "label": "ASPNETCORE_ENVIRONMENT",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "aspnetcore_environment",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_http_applicationurl",
+      "label": "applicationUrl",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "applicationurl",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_http_commandname",
+      "label": "commandName",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "commandname",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_http_dotnetrunmessages",
+      "label": "dotnetRunMessages",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "dotnetrunmessages",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_http_environmentvariables",
+      "label": "environmentVariables",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "environmentvariables",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_http_launchbrowser",
+      "label": "launchBrowser",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "launchbrowser",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_https_applicationurl",
+      "label": "applicationUrl",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "applicationurl",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L25"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_https_commandname",
+      "label": "commandName",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "commandname",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L22"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_https_dotnetrunmessages",
+      "label": "dotnetRunMessages",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "dotnetrunmessages",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L23"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_https_environmentvariables",
+      "label": "environmentVariables",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "environmentvariables",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L26"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_https_launchbrowser",
+      "label": "launchBrowser",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "launchbrowser",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L24"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iis_express_commandname",
+      "label": "commandName",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "commandname",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L31"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iis_express_environmentvariables",
+      "label": "environmentVariables",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "environmentvariables",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L33"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iis_express_launchbrowser",
+      "label": "launchBrowser",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "launchbrowser",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L32"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iisexpress_applicationurl",
+      "label": "applicationUrl",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "applicationurl",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iisexpress_sslport",
+      "label": "sslPort",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "sslport",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iissettings",
+      "label": "iisSettings",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "iissettings",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iissettings_anonymousauthentication",
+      "label": "anonymousAuthentication",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "anonymousauthentication",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iissettings_iisexpress",
+      "label": "iisExpress",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "iisexpress",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_iissettings_windowsauthentication",
+      "label": "windowsAuthentication",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "windowsauthentication",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_profiles",
+      "label": "profiles",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "profiles",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L11"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_profiles_http",
+      "label": "http",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "http",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L12"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_profiles_https",
+      "label": "https",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "https",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L21"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_profiles_iis_express",
+      "label": "IIS Express",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "iis express",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L30"
+    },
+    {
+      "id": "destinotrack_webui_properties_launchsettings_schema",
+      "label": "$schema",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "$schema",
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_cs_ilist",
+      "label": "IList",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "ilist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_city",
+      "label": "City",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "city",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_cityid",
+      "label": "CityId",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "cityid",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_couriers",
+      "label": "Couriers",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "couriers",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_destinationcargos",
+      "label": "DestinationCargos",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "destinationcargos",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L14"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_name",
+      "label": "Name",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "name",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_origincargos",
+      "label": "OriginCargos",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "origincargos",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L13"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_courier",
+      "label": "Courier",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "norm_label": "courier",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L37"
+    },
+    {
+      "id": "destinotrack_entity_entities_city",
+      "label": "City.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "city.cs",
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_city_cs_ilist",
+      "label": "IList",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "ilist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_city_destinotrack_entity_entities_city_branches",
+      "label": "Branches",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "branches",
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "destinotrack_entity_entities_city_destinotrack_entity_entities_city_name",
+      "label": "Name",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "name",
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity",
+      "label": "BaseEntity.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "baseentity.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_id",
+      "label": "Id",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Common",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "norm_label": "id",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_entity_entities_address",
+      "label": "Address.cs",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "address.cs",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_address_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_city",
+      "label": "City",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "city",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_district",
+      "label": "District",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "district",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_fulladdress",
+      "label": "FullAddress",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "fulladdress",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_title",
+      "label": "Title",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "title",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_user",
+      "label": "User",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "user",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_userid",
+      "label": "UserId",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "userid",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_cs_ilist",
+      "label": "IList",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "ilist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_addresses",
+      "label": "Addresses",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s87"
+        ]
+      },
+      "norm_label": "addresses",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L14"
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_firstname",
+      "label": "FirstName",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s87"
+        ]
+      },
+      "norm_label": "firstname",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_lastname",
+      "label": "LastName",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s87"
+        ]
+      },
+      "norm_label": "lastname",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_receivedcargos",
+      "label": "ReceivedCargos",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s87"
+        ]
+      },
+      "norm_label": "receivedcargos",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L13"
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_sentcargos",
+      "label": "SentCargos",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s87"
+        ]
+      },
+      "norm_label": "sentcargos",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "identityuser",
+      "label": "IdentityUser",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "identityuser",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack",
+      "label": "DestinoTrack.sln",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "destinotrack.sln",
+      "source_file": "DestinoTrack.sln",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_business_destinotrack_business",
+      "label": "DestinoTrack.Business",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "destinotrack.business",
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "label": "DestinoTrack.DataAccess",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "destinotrack.dataaccess",
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_dto_destinotrack_dto",
+      "label": "DestinoTrack.DTO",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "destinotrack.dto",
+      "source_file": "DestinoTrack.DTO/DestinoTrack.DTO.csproj",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_entity_destinotrack_entity",
+      "label": "DestinoTrack.Entity",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "destinotrack.entity",
+      "source_file": "DestinoTrack.Entity/DestinoTrack.Entity.csproj",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_webui_destinotrack_webui",
+      "label": "DestinoTrack.WebUI",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "destinotrack.webui",
+      "source_file": "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_fluentvalidation_aspnetcore",
+      "label": "FluentValidation.AspNetCore (11.3.1)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "fluentvalidation.aspnetcore (11.3.1)",
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_mapster",
+      "label": "Mapster (10.0.12)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "mapster (10.0.12)",
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_aspnetcore_identity_entityframeworkcore",
+      "label": "Microsoft.AspNetCore.Identity.EntityFrameworkCore (8.0.30)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "microsoft.aspnetcore.identity.entityframeworkcore (8.0.30)",
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_entityframeworkcore_design",
+      "label": "Microsoft.EntityFrameworkCore.Design (8.0.30)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "microsoft.entityframeworkcore.design (8.0.30)",
+      "source_file": "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_entityframeworkcore_proxies",
+      "label": "Microsoft.EntityFrameworkCore.Proxies (8.0.30)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "microsoft.entityframeworkcore.proxies (8.0.30)",
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_entityframeworkcore_sqlserver",
+      "label": "Microsoft.EntityFrameworkCore.SqlServer (8.0.30)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "microsoft.entityframeworkcore.sqlserver (8.0.30)",
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_entityframeworkcore_tools",
+      "label": "Microsoft.EntityFrameworkCore.Tools (8.0.30)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "microsoft.entityframeworkcore.tools (8.0.30)",
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_extensions_identity_stores",
+      "label": "Microsoft.Extensions.Identity.Stores (8.0.30)",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "microsoft.extensions.identity.stores (8.0.30)",
+      "source_file": "DestinoTrack.Entity/DestinoTrack.Entity.csproj",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_dto_destinotrack_dto_csproj_framework_net8_0",
+      "label": "net8.0",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "net8.0",
+      "source_file": "DestinoTrack.DTO/DestinoTrack.DTO.csproj",
+      "source_location": null
+    },
+    {
+      "id": "destinotrack_dto_destinotrack_dto_csproj_sdk_microsoft_net_sdk",
+      "label": "Microsoft.NET.Sdk",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "microsoft.net.sdk",
+      "source_file": "DestinoTrack.DTO/DestinoTrack.DTO.csproj",
+      "source_location": null
+    },
+    {
+      "id": "sdk_microsoft_net_sdk_web",
+      "label": "Microsoft.NET.Sdk.Web",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "microsoft.net.sdk.web",
+      "source_file": "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj",
+      "source_location": null
+    },
+    {
+      "id": "controller",
+      "label": "Controller",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "controller",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "csharp_namespace:c18ba39a52108b83",
+      "label": "DestinoTrack.WebUI.Models",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.WebUI.Models"
+      },
+      "norm_label": "destinotrack.webui.models",
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:d4d3a595762c8d07",
+      "label": "DestinoTrack.WebUI.Controllers",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.WebUI.Controllers"
+      },
+      "norm_label": "destinotrack.webui.controllers",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L5",
+      "type": "namespace"
+    },
+    {
+      "id": "destinotrack_webui_controllers_homecontroller",
+      "label": "HomeController.cs",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "homecontroller.cs",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_webui_models_errorviewmodel",
+      "label": "ErrorViewModel.cs",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "errorviewmodel.cs",
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel_requestid",
+      "label": "RequestId",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "requestid",
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel_showrequestid",
+      "label": "ShowRequestId",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Models",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "showrequestid",
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_webui_views_viewimports",
+      "label": "_ViewImports.cshtml",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "_viewimports.cshtml",
+      "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
+      "source_location": null
+    },
+    {
+      "id": "iactionresult",
+      "label": "IActionResult",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "iactionresult",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ilogger",
+      "label": "ILogger",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "ilogger",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "responsecache",
+      "label": "ResponseCache",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "responsecache",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_cs_cargostatus",
+      "label": "CargoStatus",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "cargostatus",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_cs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_branch",
+      "label": "Branch",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "branch",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L18"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_branchid",
+      "label": "BranchId",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "branchid",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L14"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargo",
+      "label": "Cargo",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "cargo",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L17"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargoid",
+      "label": "CargoId",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "cargoid",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L13"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargostatus",
+      "label": "CargoStatus",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "cargostatus",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_description",
+      "label": "Description",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "description",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_movementdate",
+      "label": "MovementDate",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "norm_label": "movementdate",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "label": "jquery.validate.unobtrusive.js",
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "jquery.validate.unobtrusive.js",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_cs_guid",
+      "label": "Guid",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "guid",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_cs_ilist",
+      "label": "IList",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "ilist",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_branch",
+      "label": "Branch",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "branch",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_branchid",
+      "label": "BranchId",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "branchid",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L12"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_cargos",
+      "label": "Cargos",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "cargos",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L16"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_firstname",
+      "label": "FirstName",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "firstname",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_isactive",
+      "label": "IsActive",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "isactive",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L10"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_lastname",
+      "label": "LastName",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "lastname",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_phonenumber",
+      "label": "PhoneNumber",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "phonenumber",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L9"
+    }
+  ],
+  "links": [
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_error",
+      "target": "responsecache",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ResponseCache"
+      },
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onerror",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_escapeattributevalue",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "AppUser"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Branch"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Branch"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_cs_cargostatus",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "CargoStatus"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_cs_cargostatus",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "CargoStatus"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "cargotype",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "CargoType"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_city",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "City"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_cs_datetime",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_cs_datetime",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "target": "destinotrack_entity_entities_common_baseentity_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_cs_ilist",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IList"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_cs_ilist",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IList"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_cs_ilist",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IList"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "target": "destinotrack_entity_entities_city_cs_ilist",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IList"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_cs_ilist",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IList"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "target": "ilogger",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ILogger"
+      },
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "paymenttype",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "PaymentType"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_about_destinotrack_entity_entities_about",
+      "target": "destinotrack_entity_entities_about_destinotrack_entity_entities_about_title",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_about_destinotrack_entity_entities_about",
+      "target": "destinotrack_entity_entities_about_destinotrack_entity_entities_about_description",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_about_destinotrack_entity_entities_about",
+      "target": "destinotrack_entity_entities_about_destinotrack_entity_entities_about_imageurl",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_fulladdress",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_userid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_user",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_title",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_city",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address_district",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_sentcargos",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_receivedcargos",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_addresses",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_firstname",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_lastname",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_city",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_origincargos",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_destinationcargos",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_couriers",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_name",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_cityid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_shipmentdate",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_estimatedarrivaldate",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_weight",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_cargotype",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_cargostatus",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_price",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_ispaid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_paymenttype",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_senderid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_receiverid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_originbranchid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_destinationbranchid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_courierid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_sender",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_receiver",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_originbranch",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_destinationbranch",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_courier",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_movements",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_trackcode",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_description",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargoid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_branchid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargo",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_branch",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_movementdate",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargostatus",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "target": "destinotrack_entity_entities_city_destinotrack_entity_entities_city_branches",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "target": "destinotrack_entity_entities_city_destinotrack_entity_entities_city_name",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_id",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
+      "target": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_address",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
+      "target": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_email",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
+      "target": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_phonenumber",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_isactive",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_branchid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_branch",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_cargos",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_firstname",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_lastname",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_phonenumber",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel",
+      "target": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel_requestid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel",
+      "target": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel_showrequestid",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Branch"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Cargo"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Cargo"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Cargo"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoMovement"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_courier",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Courier"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_approle_destinotrack_entity_entities_approle",
+      "target": "destinotrack_entity_entities_approle_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/AppRole.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_cs_guid",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_about",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_contactinfo",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller",
+      "target": "csharp_namespace:c18ba39a52108b83",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Models",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_views_viewimports",
+      "target": "csharp_namespace:c18ba39a52108b83",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Models",
+        "scope_kind": "file"
+      },
+      "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_error",
+      "target": "iactionresult",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_index",
+      "target": "iactionresult",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_privacy",
+      "target": "iactionresult",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_about_destinotrack_entity_entities_about",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "target": "controller",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "Controller"
+      },
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_approle_destinotrack_entity_entities_approle",
+      "target": "identityrole",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "IdentityRole"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/AppRole.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "target": "identityuser",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "IdentityUser"
+      },
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "target": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_arrivedatdeliverybranch",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "target": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_outfordelivery",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "target": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_delivered",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "target": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_received",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "target": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_intransfercenter",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "target": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_dispatchedfromtransfercenter",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_coldchain",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_valuable",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_oversized",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_standard",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_urgent",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_fragile",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_heavy",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_document",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype",
+      "target": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype_senderpays",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype",
+      "target": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype_receiverpays",
+      "relation": "case_of",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack",
+      "target": "destinotrack_business_destinotrack_business",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.sln",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack",
+      "target": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.sln",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack",
+      "target": "destinotrack_dto_destinotrack_dto",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.sln",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack",
+      "target": "destinotrack_entity_destinotrack_entity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.sln",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack",
+      "target": "destinotrack_webui_destinotrack_webui",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.sln",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_about",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_about",
+      "target": "destinotrack_entity_entities_about_destinotrack_entity_entities_about",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/About.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_address",
+      "target": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Address.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_approle",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/AppRole.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_approle",
+      "target": "destinotrack_entity_entities_approle_destinotrack_entity_entities_approle",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/AppRole.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_appuser",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/AppUser.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_branch",
+      "target": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Branch.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargo",
+      "target": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_cargomovement",
+      "target": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/CargoMovement.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_city",
+      "target": "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/City.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_common_baseentity",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_common_baseentity",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_contactinfo",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_contactinfo",
+      "target": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/ContactInfo.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_courier",
+      "target": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Courier.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargostatus",
+      "target": "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoStatus.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_cargotype",
+      "target": "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/CargoType.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_paymenttype",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_paymenttype",
+      "target": "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller",
+      "target": "csharp_namespace:d4d3a595762c8d07",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller",
+      "target": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_models_errorviewmodel",
+      "target": "csharp_namespace:c18ba39a52108b83",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_models_errorviewmodel",
+      "target": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Models/ErrorViewModel.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings",
+      "target": "destinotrack_webui_properties_launchsettings_profiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings",
+      "target": "destinotrack_webui_properties_launchsettings_schema",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings",
+      "target": "destinotrack_webui_properties_launchsettings_iissettings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_http_environmentvariables",
+      "target": "destinotrack_webui_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_https_environmentvariables",
+      "target": "destinotrack_webui_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_iis_express_environmentvariables",
+      "target": "destinotrack_webui_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_iissettings",
+      "target": "destinotrack_webui_properties_launchsettings_iissettings_windowsauthentication",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_iissettings",
+      "target": "destinotrack_webui_properties_launchsettings_iissettings_anonymousauthentication",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_iissettings",
+      "target": "destinotrack_webui_properties_launchsettings_iissettings_iisexpress",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_iissettings_iisexpress",
+      "target": "destinotrack_webui_properties_launchsettings_iisexpress_applicationurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_iissettings_iisexpress",
+      "target": "destinotrack_webui_properties_launchsettings_iisexpress_sslport",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles",
+      "target": "destinotrack_webui_properties_launchsettings_profiles_http",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles",
+      "target": "destinotrack_webui_properties_launchsettings_profiles_https",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles",
+      "target": "destinotrack_webui_properties_launchsettings_profiles_iis_express",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_http",
+      "target": "destinotrack_webui_properties_launchsettings_http_commandname",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_http",
+      "target": "destinotrack_webui_properties_launchsettings_http_dotnetrunmessages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_http",
+      "target": "destinotrack_webui_properties_launchsettings_http_launchbrowser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_http",
+      "target": "destinotrack_webui_properties_launchsettings_http_applicationurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_http",
+      "target": "destinotrack_webui_properties_launchsettings_http_environmentvariables",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_https",
+      "target": "destinotrack_webui_properties_launchsettings_https_commandname",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_https",
+      "target": "destinotrack_webui_properties_launchsettings_https_dotnetrunmessages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_https",
+      "target": "destinotrack_webui_properties_launchsettings_https_launchbrowser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_https",
+      "target": "destinotrack_webui_properties_launchsettings_https_applicationurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_https",
+      "target": "destinotrack_webui_properties_launchsettings_https_environmentvariables",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_iis_express",
+      "target": "destinotrack_webui_properties_launchsettings_iis_express_commandname",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_iis_express",
+      "target": "destinotrack_webui_properties_launchsettings_iis_express_launchbrowser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_properties_launchsettings_profiles_iis_express",
+      "target": "destinotrack_webui_properties_launchsettings_iis_express_environmentvariables",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Properties/launchSettings.json",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onreset",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L102",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_validationinfo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_setvalidationvalues",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_splitandtrim",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_escapeattributevalue",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_getmodelprefix",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_appendmodelprefix",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L48",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onerror",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onerrors",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onsuccess",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_business_destinotrack_business",
+      "target": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_business_destinotrack_business",
+      "target": "destinotrack_dto_destinotrack_dto",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_business_destinotrack_business",
+      "target": "nuget_fluentvalidation_aspnetcore",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_business_destinotrack_business",
+      "target": "nuget_mapster",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "target": "destinotrack_entity_destinotrack_entity",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "target": "nuget_microsoft_aspnetcore_identity_entityframeworkcore",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "target": "nuget_microsoft_entityframeworkcore_proxies",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "target": "nuget_microsoft_entityframeworkcore_sqlserver",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "target": "nuget_microsoft_entityframeworkcore_tools",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dto_destinotrack_dto",
+      "target": "destinotrack_entity_destinotrack_entity",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DTO/DestinoTrack.DTO.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_destinotrack_entity",
+      "target": "nuget_microsoft_extensions_identity_stores",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/DestinoTrack.Entity.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_destinotrack_webui",
+      "target": "destinotrack_business_destinotrack_business",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_destinotrack_webui",
+      "target": "nuget_microsoft_entityframeworkcore_design",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "target": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_index",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "target": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_privacy",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "target": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_error",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_business_destinotrack_business",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_framework_net8_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_business_destinotrack_business",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Business/DestinoTrack.Business.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_framework_net8_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dto_destinotrack_dto",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_framework_net8_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DTO/DestinoTrack.DTO.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_dto_destinotrack_dto",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.DTO/DestinoTrack.DTO.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_destinotrack_entity",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_framework_net8_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/DestinoTrack.Entity.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_entity_destinotrack_entity",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.Entity/DestinoTrack.Entity.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_destinotrack_webui",
+      "target": "destinotrack_dto_destinotrack_dto_csproj_framework_net8_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_destinotrack_webui",
+      "target": "sdk_microsoft_net_sdk_web",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_validationinfo",
+      "target": "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onreset",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "source_location": "L130",
+      "weight": 1.0
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_error",
+      "target": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L29",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": []
+}

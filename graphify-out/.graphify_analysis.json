@@ -1,0 +1,385 @@
+{
+  "communities": {
+    "0": [
+      "csharp_namespace:16bb917edc1a82d7",
+      "csharp_namespace:3bafa95ce1a97488",
+      "csharp_namespace:4d8cf7ad560befce",
+      "destinotrack_entity_entities_about",
+      "destinotrack_entity_entities_about_destinotrack_entity_entities_about",
+      "destinotrack_entity_entities_about_destinotrack_entity_entities_about_description",
+      "destinotrack_entity_entities_about_destinotrack_entity_entities_about_imageurl",
+      "destinotrack_entity_entities_about_destinotrack_entity_entities_about_title",
+      "destinotrack_entity_entities_appuser",
+      "destinotrack_entity_entities_branch",
+      "destinotrack_entity_entities_cargo",
+      "destinotrack_entity_entities_cargomovement",
+      "destinotrack_entity_entities_contactinfo",
+      "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
+      "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_address",
+      "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_email",
+      "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo_phonenumber",
+      "destinotrack_entity_entities_courier",
+      "destinotrack_entity_entities_enums_cargostatus",
+      "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus",
+      "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_arrivedatdeliverybranch",
+      "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_delivered",
+      "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_dispatchedfromtransfercenter",
+      "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_intransfercenter",
+      "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_outfordelivery",
+      "destinotrack_entity_entities_enums_cargostatus_destinotrack_entity_entities_enums_cargostatus_received",
+      "destinotrack_entity_entities_enums_paymenttype",
+      "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype",
+      "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype_receiverpays",
+      "destinotrack_entity_entities_enums_paymenttype_destinotrack_entity_entities_enums_paymenttype_senderpays"
+    ],
+    "1": [
+      "cargotype",
+      "destinotrack_entity_entities_cargo_cs_cargostatus",
+      "destinotrack_entity_entities_cargo_cs_datetime",
+      "destinotrack_entity_entities_cargo_cs_guid",
+      "destinotrack_entity_entities_cargo_cs_ilist",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_cargostatus",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_cargotype",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_courierid",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_destinationbranch",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_destinationbranchid",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_estimatedarrivaldate",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_ispaid",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_movements",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_originbranch",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_originbranchid",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_paymenttype",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_price",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_receiver",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_receiverid",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_sender",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_senderid",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_shipmentdate",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_trackcode",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_weight",
+      "paymenttype"
+    ],
+    "2": [
+      "destinotrack_webui_properties_launchsettings",
+      "destinotrack_webui_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "destinotrack_webui_properties_launchsettings_http_applicationurl",
+      "destinotrack_webui_properties_launchsettings_http_commandname",
+      "destinotrack_webui_properties_launchsettings_http_dotnetrunmessages",
+      "destinotrack_webui_properties_launchsettings_http_environmentvariables",
+      "destinotrack_webui_properties_launchsettings_http_launchbrowser",
+      "destinotrack_webui_properties_launchsettings_https_applicationurl",
+      "destinotrack_webui_properties_launchsettings_https_commandname",
+      "destinotrack_webui_properties_launchsettings_https_dotnetrunmessages",
+      "destinotrack_webui_properties_launchsettings_https_environmentvariables",
+      "destinotrack_webui_properties_launchsettings_https_launchbrowser",
+      "destinotrack_webui_properties_launchsettings_iis_express_commandname",
+      "destinotrack_webui_properties_launchsettings_iis_express_environmentvariables",
+      "destinotrack_webui_properties_launchsettings_iis_express_launchbrowser",
+      "destinotrack_webui_properties_launchsettings_iisexpress_applicationurl",
+      "destinotrack_webui_properties_launchsettings_iisexpress_sslport",
+      "destinotrack_webui_properties_launchsettings_iissettings",
+      "destinotrack_webui_properties_launchsettings_iissettings_anonymousauthentication",
+      "destinotrack_webui_properties_launchsettings_iissettings_iisexpress",
+      "destinotrack_webui_properties_launchsettings_iissettings_windowsauthentication",
+      "destinotrack_webui_properties_launchsettings_profiles",
+      "destinotrack_webui_properties_launchsettings_profiles_http",
+      "destinotrack_webui_properties_launchsettings_profiles_https",
+      "destinotrack_webui_properties_launchsettings_profiles_iis_express",
+      "destinotrack_webui_properties_launchsettings_schema"
+    ],
+    "3": [
+      "destinotrack_entity_entities_branch_cs_guid",
+      "destinotrack_entity_entities_branch_cs_ilist",
+      "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_city",
+      "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_cityid",
+      "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_couriers",
+      "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_destinationcargos",
+      "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_name",
+      "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch_origincargos",
+      "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo_courier",
+      "destinotrack_entity_entities_city",
+      "destinotrack_entity_entities_city_cs_ilist",
+      "destinotrack_entity_entities_city_destinotrack_entity_entities_city",
+      "destinotrack_entity_entities_city_destinotrack_entity_entities_city_branches",
+      "destinotrack_entity_entities_city_destinotrack_entity_entities_city_name",
+      "destinotrack_entity_entities_common_baseentity",
+      "destinotrack_entity_entities_common_baseentity_cs_guid",
+      "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_id"
+    ],
+    "4": [
+      "destinotrack_entity_entities_address",
+      "destinotrack_entity_entities_address_cs_guid",
+      "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "destinotrack_entity_entities_address_destinotrack_entity_entities_address_city",
+      "destinotrack_entity_entities_address_destinotrack_entity_entities_address_district",
+      "destinotrack_entity_entities_address_destinotrack_entity_entities_address_fulladdress",
+      "destinotrack_entity_entities_address_destinotrack_entity_entities_address_title",
+      "destinotrack_entity_entities_address_destinotrack_entity_entities_address_user",
+      "destinotrack_entity_entities_address_destinotrack_entity_entities_address_userid",
+      "destinotrack_entity_entities_appuser_cs_guid",
+      "destinotrack_entity_entities_appuser_cs_ilist",
+      "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_addresses",
+      "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_firstname",
+      "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_lastname",
+      "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_receivedcargos",
+      "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_sentcargos",
+      "identityuser"
+    ],
+    "5": [
+      "destinotrack",
+      "destinotrack_business_destinotrack_business",
+      "destinotrack_dataaccess_destinotrack_dataaccess",
+      "destinotrack_dto_destinotrack_dto",
+      "destinotrack_dto_destinotrack_dto_csproj_framework_net8_0",
+      "destinotrack_dto_destinotrack_dto_csproj_sdk_microsoft_net_sdk",
+      "destinotrack_entity_destinotrack_entity",
+      "destinotrack_webui_destinotrack_webui",
+      "nuget_fluentvalidation_aspnetcore",
+      "nuget_mapster",
+      "nuget_microsoft_aspnetcore_identity_entityframeworkcore",
+      "nuget_microsoft_entityframeworkcore_design",
+      "nuget_microsoft_entityframeworkcore_proxies",
+      "nuget_microsoft_entityframeworkcore_sqlserver",
+      "nuget_microsoft_entityframeworkcore_tools",
+      "nuget_microsoft_extensions_identity_stores",
+      "sdk_microsoft_net_sdk_web"
+    ],
+    "6": [
+      "controller",
+      "csharp_namespace:c18ba39a52108b83",
+      "csharp_namespace:d4d3a595762c8d07",
+      "destinotrack_webui_controllers_homecontroller",
+      "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_error",
+      "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_index",
+      "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_privacy",
+      "destinotrack_webui_models_errorviewmodel",
+      "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel",
+      "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel_requestid",
+      "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel_showrequestid",
+      "destinotrack_webui_views_viewimports",
+      "iactionresult",
+      "ilogger",
+      "responsecache"
+    ],
+    "7": [
+      "destinotrack_entity_entities_cargomovement_cs_cargostatus",
+      "destinotrack_entity_entities_cargomovement_cs_datetime",
+      "destinotrack_entity_entities_cargomovement_cs_guid",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_branch",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_branchid",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargo",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargoid",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_cargostatus",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_description",
+      "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement_movementdate"
+    ],
+    "8": [
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_appendmodelprefix",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_escapeattributevalue",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_getmodelprefix",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onerror",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onerrors",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onreset",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_onsuccess",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_setvalidationvalues",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_splitandtrim",
+      "destinotrack_webui_wwwroot_lib_jquery_validation_unobtrusive_jquery_validate_unobtrusive_validationinfo"
+    ],
+    "9": [
+      "destinotrack_entity_entities_courier_cs_guid",
+      "destinotrack_entity_entities_courier_cs_ilist",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_branch",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_branchid",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_cargos",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_firstname",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_isactive",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_lastname",
+      "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier_phonenumber"
+    ],
+    "10": [
+      "destinotrack_entity_entities_enums_cargotype",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_coldchain",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_document",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_fragile",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_heavy",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_oversized",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_standard",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_urgent",
+      "destinotrack_entity_entities_enums_cargotype_destinotrack_entity_entities_enums_cargotype_valuable"
+    ],
+    "11": [
+      "destinotrack_entity_entities_approle",
+      "destinotrack_entity_entities_approle_cs_guid",
+      "destinotrack_entity_entities_approle_destinotrack_entity_entities_approle",
+      "identityrole"
+    ],
+    "12": [
+      "destinotrack_webui_program"
+    ],
+    "13": [
+      "destinotrack_webui_views_home_index"
+    ],
+    "14": [
+      "destinotrack_webui_views_home_privacy"
+    ],
+    "15": [
+      "destinotrack_webui_views_shared_error"
+    ],
+    "16": [
+      "destinotrack_webui_views_shared_layout"
+    ],
+    "17": [
+      "destinotrack_webui_views_shared_validationscriptspartial"
+    ],
+    "18": [
+      "destinotrack_webui_views_viewstart"
+    ],
+    "19": [
+      "destinotrack_webui_wwwroot_js_site"
+    ]
+  },
+  "cohesion": {
+    "0": 0.08505747126436781,
+    "1": 0.07692307692307693,
+    "2": 0.08307692307692308,
+    "3": 0.1111111111111111,
+    "4": 0.1111111111111111,
+    "5": 0.20588235294117646,
+    "6": 0.15,
+    "7": 0.18181818181818182,
+    "8": 0.21818181818181817,
+    "9": 0.2,
+    "10": 0.2,
+    "11": 0.5,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0
+  },
+  "gods": [
+    {
+      "id": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
+      "label": "Cargo",
+      "degree": 32
+    },
+    {
+      "id": "destinotrack_entity_entities_branch_destinotrack_entity_entities_branch",
+      "label": "Branch",
+      "degree": 16
+    },
+    {
+      "id": "destinotrack_entity_entities_cargomovement_destinotrack_entity_entities_cargomovement",
+      "label": "CargoMovement",
+      "degree": 14
+    },
+    {
+      "id": "destinotrack_entity_entities_courier_destinotrack_entity_entities_courier",
+      "label": "Courier",
+      "degree": 13
+    },
+    {
+      "id": "csharp_namespace:16bb917edc1a82d7",
+      "label": "DestinoTrack.Entity.Entities",
+      "degree": 11
+    },
+    {
+      "id": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser",
+      "label": "AppUser",
+      "degree": 11
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "label": "BaseEntity",
+      "degree": 11
+    },
+    {
+      "id": "destinotrack_entity_entities_address_destinotrack_entity_entities_address",
+      "label": "Address",
+      "degree": 10
+    },
+    {
+      "id": "csharp_namespace:4d8cf7ad560befce",
+      "label": "DestinoTrack.Entity.Entities.Common",
+      "degree": 10
+    },
+    {
+      "id": "destinotrack_dataaccess_destinotrack_dataaccess",
+      "label": "DestinoTrack.DataAccess",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "DestinoTrack.Business",
+      "target": "net8.0",
+      "source_files": [
+        "DestinoTrack.Business/DestinoTrack.Business.csproj",
+        "DestinoTrack.DTO/DestinoTrack.DTO.csproj"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "DestinoTrack.Business",
+      "target": "Microsoft.NET.Sdk",
+      "source_files": [
+        "DestinoTrack.Business/DestinoTrack.Business.csproj",
+        "DestinoTrack.DTO/DestinoTrack.DTO.csproj"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "DestinoTrack.DataAccess",
+      "target": "net8.0",
+      "source_files": [
+        "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+        "DestinoTrack.DTO/DestinoTrack.DTO.csproj"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "DestinoTrack.DataAccess",
+      "target": "Microsoft.NET.Sdk",
+      "source_files": [
+        "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
+        "DestinoTrack.DTO/DestinoTrack.DTO.csproj"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "DestinoTrack.Entity",
+      "target": "net8.0",
+      "source_files": [
+        "DestinoTrack.Entity/DestinoTrack.Entity.csproj",
+        "DestinoTrack.DTO/DestinoTrack.DTO.csproj"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}
