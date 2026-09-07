@@ -14,5 +14,8 @@ namespace DestinoTrack.Entity.Entities
         public virtual IList<Cargo> DestinationCargos { get; set; }
         public virtual IList<Courier> Couriers { get; set; }
 
+        // Branch için
+        public virtual IList<Payment> CollectedPayments { get; set; }
+
     }
 }

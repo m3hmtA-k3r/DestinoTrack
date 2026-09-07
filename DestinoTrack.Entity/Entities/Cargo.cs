@@ -36,6 +36,8 @@ namespace DestinoTrack.Entity.Entities
         public virtual Branch DestinationBranch { get; set; }
         public virtual Courier Courier { get; set; }
         public virtual IList<CargoMovement> Movements { get; set; }
+        public virtual IList<Payment> Payments { get; set; }
+
 
     }
 }
