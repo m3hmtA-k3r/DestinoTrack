@@ -5,6 +5,7 @@ namespace DestinoTrack.Entity.Entities
 {
     public class AppUser: IdentityUser<Guid>
     {
+        public Guid? CustomerId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
@@ -12,5 +13,6 @@ namespace DestinoTrack.Entity.Entities
         public virtual IList<Cargo> SentCargos { get; set; }
         public virtual IList<Cargo> ReceivedCargos { get; set; }
         public virtual IList<Address> Addresses { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

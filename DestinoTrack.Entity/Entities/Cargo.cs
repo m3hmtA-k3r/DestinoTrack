@@ -1,4 +1,4 @@
-using DestinoTrack.Entity.Entities.Common;
+﻿using DestinoTrack.Entity.Entities.Common;
 using DestinoTrack.Entity.Entities.Enums;
 
 namespace DestinoTrack.Entity.Entities
@@ -34,5 +34,17 @@ namespace DestinoTrack.Entity.Entities
         public virtual Courier Courier { get; set; }
         public virtual IList<CargoMovement> Movements { get; set; }
         public virtual IList<Payment> Payments { get; set; }
+
+        //Kargo ücreti, ağırlık ile desinin büyüğü üzerinden hesaplanır.
+        //Şu an Cargo'da sadece Weight var — hacimli ama hafif gönderiler
+        //(yastık, koltuk, abajur) olduğundan çok ucuza fiyatlanır
+        public double Width { get; set; }    // cm
+        public double Height { get; set; }   // cm
+        public double Length { get; set; }   // cm
+        public double Desi { get; set; }     // (W × H × L) / 3000
+        public string Barcode { get; set; }  // takip kodundan ayrı barkod
+
+        public Guid? CustomerId { get; set; }
+        public virtual Customer Customer { get; set; }
     }
 }

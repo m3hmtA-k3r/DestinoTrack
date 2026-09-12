@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DestinoTrack.Entity.Entities.Enums
+﻿namespace DestinoTrack.Entity.Entities.Enums
 {
     public enum BranchType
     {
