@@ -18,5 +18,7 @@ namespace DestinoTrack.Entity.Entities
         // Navigation Properties
         public virtual Cargo Cargo { get; set; }
         public virtual Branch Branch { get; set; }
+
+        public DelayReason? DelayReason { get; set; } // gecikme yoksa boş kalır
     }
 }

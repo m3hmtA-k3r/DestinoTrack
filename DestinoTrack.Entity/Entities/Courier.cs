@@ -1,4 +1,5 @@
 ﻿using DestinoTrack.Entity.Entities.Common;
+using DestinoTrack.Entity.Entities.Enums;
 
 namespace DestinoTrack.Entity.Entities
 {
@@ -18,5 +19,10 @@ namespace DestinoTrack.Entity.Entities
 
         // Courier için
         public virtual IList<Payment> CollectedPayments { get; set; }
+
+        public VehicleType VehicleType { get; set; }  // Motorize / Panelvan / Kamyonet
+        public string VehiclePlate { get; set; }      // Plakası
+        public string Region { get; set; }            // dağıtım bölgesi
+        public decimal Rating { get; set; }           // müşteri puanı, 0-5
     }
 }

@@ -1,6 +1,4 @@
-﻿using DestinoTrack.Entity.Entities;
-
-namespace DestinoTrack.Entity.Entities.Enums
+﻿namespace DestinoTrack.Entity.Entities.Enums
 {
     public enum CargoStatus
     {

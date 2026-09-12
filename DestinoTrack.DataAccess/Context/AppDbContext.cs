@@ -1,4 +1,4 @@
-using DestinoTrack.Entity.Entities;
+﻿using DestinoTrack.Entity.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,10 +20,13 @@ namespace DestinoTrack.DataAccess.Context
         public DbSet<Country> Countries { get; set; }
         public DbSet<Courier> Couriers { get; set; }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder); //ikili ilişkileri kuruyoruz
+
+
 
             /// Cargo ==> AppUser
             builder.Entity<Cargo>()
@@ -118,6 +121,35 @@ namespace DestinoTrack.DataAccess.Context
                 .HasForeignKey(a => a.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            //müşteri => Country
+            builder.Entity<Customer>()
+                .HasOne(m => m.Country)
+                .WithMany()
+                .HasForeignKey(m => m.CountryId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Kargo => Müşteri (kurumsal gönderi)
+            builder.Entity<Cargo>()
+                .HasOne(c => c.Customer)
+                .WithMany(m => m.Cargos)
+                .HasForeignKey(c => c.CustomerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Şube => Yönetici (AppUser)
+            builder.Entity<Branch>()
+                .HasOne(b => b.Manager)
+                .WithMany()
+                .HasForeignKey(b => b.ManagerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Customer => Müşteri hesabı (kurumsal kullanıcı)
+            builder.Entity<AppUser>()
+                .HasOne(u => u.Customer)
+                .WithMany(m => m.Users)
+                .HasForeignKey(u => u.CustomerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+
             //TrackCode sütununda aynı değer iki kez olamaz
             builder.Entity<Cargo>()
                 .HasIndex(c => c.TrackCode)
@@ -128,6 +160,22 @@ namespace DestinoTrack.DataAccess.Context
                 .HasIndex(c => c.IsoCode)
                 .IsUnique();
 
+            // Aynı barkod iki kargoda olamaz
+            builder.Entity<Cargo>()
+                .HasIndex(c => c.Barcode)
+                .IsUnique();
+
+            // Aynı tesis kodu iki şubede olamaz
+            builder.Entity<Branch>()
+                .HasIndex(b => b.Code)
+                .IsUnique();
+
+            // Aynı müşteri kodu iki hesapta olamaz
+            builder.Entity<Customer>()
+                .HasIndex(m => m.Code)
+                .IsUnique();
+
+
             // --- Para alanları: kuruş hassasiyeti ---
             builder.Entity<Cargo>()
                 .Property(c => c.Price)
@@ -136,6 +184,17 @@ namespace DestinoTrack.DataAccess.Context
             builder.Entity<Payment>()
                 .Property(p => p.Amount)
                 .HasPrecision(18, 2);
+
+            builder.Entity<Courier>()
+                .Property(k => k.Rating)
+                .HasPrecision(3, 2);          // 4,85
+
+            builder.Entity<Customer>(e =>
+            {
+                e.Property(m => m.CreditLimit).HasPrecision(18, 2);
+                e.Property(m => m.CurrentBalance).HasPrecision(18, 2);
+            });
+
 
             // --- Metin uzunlukları ---
             builder.Entity<Cargo>(e =>
@@ -157,14 +216,36 @@ namespace DestinoTrack.DataAccess.Context
             builder.Entity<City>()
                 .Property(c => c.Name).HasMaxLength(100);
 
-            builder.Entity<Branch>()
-                .Property(b => b.Name).HasMaxLength(100);
+            builder.Entity<Branch>(e =>
+            {
+                e.Property(b => b.Name).HasMaxLength(100);
+                e.Property(b => b.Code).HasMaxLength(20);
+            });
 
             builder.Entity<Courier>(e =>
             {
                 e.Property(k => k.FirstName).HasMaxLength(50);
                 e.Property(k => k.LastName).HasMaxLength(50);
                 e.Property(k => k.PhoneNumber).HasMaxLength(20);
+                e.Property(k => k.VehiclePlate).HasMaxLength(20);
+                e.Property(k => k.Region).HasMaxLength(100);
+            });
+
+            builder.Entity<Cargo>(e =>
+            {
+                e.Property(c => c.TrackCode).HasMaxLength(30);
+                e.Property(c => c.CurrencyCode).HasMaxLength(3);
+                e.Property(c => c.Barcode).HasMaxLength(50);
+            });
+
+            builder.Entity<Customer>(e =>
+            {
+                e.Property(m => m.Code).HasMaxLength(20);
+                e.Property(m => m.Title).HasMaxLength(200);
+                e.Property(m => m.TaxNumber).HasMaxLength(20);
+                e.Property(m => m.TaxOffice).HasMaxLength(100);
+                e.Property(m => m.Email).HasMaxLength(100);
+                e.Property(m => m.PhoneNumber).HasMaxLength(20);
             });
 
             builder.Entity<ContactInfo>(e =>
