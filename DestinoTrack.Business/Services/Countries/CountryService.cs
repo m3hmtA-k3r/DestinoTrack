@@ -1,0 +1,57 @@
+using DestinoTrack.DataAccess.Repositories.Countries;
+using DestinoTrack.DTO.DTOs.CountryDtos;
+using DestinoTrack.Entity.Entities;
+using Mapster;
+using System.ComponentModel.DataAnnotations;
+
+namespace DestinoTrack.Business.Services.Countries
+{
+    public class CountryService(ICountryRepository _countryRepository) : ICountryService
+    {
+        public async Task<List<ResultCountryDto>> GetAllAsync()
+        {
+            var countries = await _countryRepository.GetAllAsync();
+            return countries.Adapt<List<ResultCountryDto>>();
+        }
+
+        public async Task<UpdateCountryDto> GetByIdAsync(Guid id)
+        {
+            var country = await _countryRepository.GetByIdAsync(id);
+            if (country == null)
+            {
+                throw new ValidationException("Ülke bulunamadı.");
+            }
+
+            return country.Adapt<UpdateCountryDto>();
+        }
+
+        public async Task CreateAsync(CreateCountryDto createCountryDto)
+        {
+            var country = createCountryDto.Adapt<Country>();
+            await _countryRepository.CreateAsync(country);
+        }
+
+        public async Task UpdateAsync(UpdateCountryDto updateCountryDto)
+        {
+            var country = await _countryRepository.GetByIdAsync(updateCountryDto.Id);
+            if (country == null)
+            {
+                throw new ValidationException("Ülke bulunamadı.");
+            }
+
+            updateCountryDto.Adapt(country);
+            await _countryRepository.UpdateAsync(country);
+        }
+
+        public async Task DeleteAsync(Guid id)
+        {
+            var country = await _countryRepository.GetByIdAsync(id);
+            if (country == null)
+            {
+                throw new ValidationException("Ülke bulunamadı.");
+            }
+
+            await _countryRepository.DeleteAsync(country);
+        }
+    }
+}

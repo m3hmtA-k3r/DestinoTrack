@@ -6,16 +6,20 @@ namespace DestinoTrack.WebUI.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
+        }
+
+        // Takip sorgusu. Cargo servisi yazıldığında burada gerçek arama yapılacak
+        // (CargoRepository.GetByTrackCodeAsync zaten hazır).
+        [HttpPost]
+        public IActionResult Track(string code)
+        {
+            TempData["TrackCode"] = code;
+            TempData["TrackNotice"] = "Kargo modülü henüz tamamlanmadı. Takip sorgusu Cargo servisi eklendiğinde çalışacak.";
+
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Privacy()

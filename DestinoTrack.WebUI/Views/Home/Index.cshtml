@@ -1,8 +1,41 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+@{
+    ViewData["Title"] = L["TrackCargo"].Value;
+    var notice = TempData["TrackNotice"] as string;
+    var submittedCode = TempData["TrackCode"] as string;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<section class="bg-ink">
+    <div class="mx-auto max-w-5xl px-6 py-20">
+
+        <h1 class="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+            @L["TrackCargo"]
+        </h1>
+
+        <form asp-controller="Home" asp-action="Track" method="post" class="mt-8 max-w-xl">
+            <label for="code" class="mb-2 block text-sm text-white/60">@L["TrackCode"]</label>
+            <div class="flex gap-2">
+                <input id="code" name="code" value="@submittedCode"
+                       class="w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 font-mono text-base text-white placeholder:text-white/30 focus:border-signal focus:outline-none focus:ring-1 focus:ring-signal"
+                       placeholder="DT20260907001" autocomplete="off" />
+                <button type="submit"
+                        class="shrink-0 rounded-md bg-signal px-6 py-3 text-sm font-semibold text-ink transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+                    @L["TrackAction"]
+                </button>
+            </div>
+        </form>
+
+        @if (!string.IsNullOrEmpty(notice))
+        {
+            <p class="mt-4 max-w-xl rounded-md border border-signal/30 bg-signal/10 px-4 py-3 text-sm text-signal">
+                @notice
+            </p>
+        }
+
+        <div class="mt-16 flex flex-wrap gap-x-10 gap-y-3 border-t border-white/10 pt-6 text-sm text-white/50">
+            <span>Türkiye &middot; <span class="font-mono">TRY</span></span>
+            <span>Malta &middot; <span class="font-mono">EUR</span></span>
+            <span>Brasil &middot; <span class="font-mono">BRL</span></span>
+        </div>
+
+    </div>
+</section>

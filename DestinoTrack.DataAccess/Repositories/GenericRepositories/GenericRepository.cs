@@ -1,4 +1,4 @@
-﻿using DestinoTrack.DataAccess.Context;
+using DestinoTrack.DataAccess.Context;
 using DestinoTrack.Entity.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -7,6 +7,7 @@ namespace DestinoTrack.DataAccess.Repositories.GenericRepositories
     public class GenericRepository<TEntity> : IRepository<TEntity> where TEntity : BaseEntity
     {
         private readonly AppDbContext _context;
+
         public GenericRepository(AppDbContext context)
         {
             _context = context;
@@ -14,14 +15,21 @@ namespace DestinoTrack.DataAccess.Repositories.GenericRepositories
 
         public async Task<List<TEntity>> GetAllAsync()
         {
-           return await _context.Set<TEntity>().ToListAsync();
+            return await _context.Set<TEntity>().ToListAsync();
         }
 
         public async Task<TEntity> GetByIdAsync(Guid id)
         {
             return await _context.Set<TEntity>().FindAsync(id);
         }
-                
+
+        // Gösterge panelindeki sayaçlar için. Tüm kayıtları belleğe çekmek
+        // yerine veritabanına COUNT(*) sorgusu gönderir.
+        public async Task<int> CountAsync()
+        {
+            return await _context.Set<TEntity>().CountAsync();
+        }
+
         public async Task CreateAsync(TEntity entity)
         {
             await _context.AddAsync(entity);
@@ -39,7 +47,5 @@ namespace DestinoTrack.DataAccess.Repositories.GenericRepositories
             _context.Remove(entity);
             await _context.SaveChangesAsync();
         }
-
-        
     }
 }

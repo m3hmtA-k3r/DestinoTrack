@@ -1,4 +1,4 @@
-﻿using DestinoTrack.Entity.Entities;
+using DestinoTrack.Entity.Entities;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,6 +17,7 @@ namespace DestinoTrack.DataAccess.Context
         public DbSet<CargoMovement> CargoMovements { get; set; }
         public DbSet<City> Cities { get; set; }
         public DbSet<ContactInfo> Contacts { get; set; }
+        public DbSet<Country> Countries { get; set; }
         public DbSet<Courier> Couriers { get; set; }
         public DbSet<Payment> Payments { get; set; }
 
@@ -103,6 +104,13 @@ namespace DestinoTrack.DataAccess.Context
                 .HasForeignKey(b => b.CityId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Şehir => Ülke
+            builder.Entity<City>()
+                .HasOne(c => c.Country)
+                .WithMany(k => k.Cities)
+                .HasForeignKey(c => c.CountryId)
+                .OnDelete(DeleteBehavior.Restrict);
+
             // Address => AppUser
             builder.Entity<Address>()
                 .HasOne(a => a.User)
@@ -115,6 +123,11 @@ namespace DestinoTrack.DataAccess.Context
                 .HasIndex(c => c.TrackCode)
                 .IsUnique();
 
+            // Aynı ISO kodu iki ülkede olamaz (TR, MT, BR)
+            builder.Entity<Country>()
+                .HasIndex(c => c.IsoCode)
+                .IsUnique();
+
             // --- Para alanları: kuruş hassasiyeti ---
             builder.Entity<Cargo>()
                 .Property(c => c.Price)
@@ -125,8 +138,21 @@ namespace DestinoTrack.DataAccess.Context
                 .HasPrecision(18, 2);
 
             // --- Metin uzunlukları ---
-            builder.Entity<Cargo>()
-                .Property(c => c.TrackCode).HasMaxLength(30);
+            builder.Entity<Cargo>(e =>
+            {
+                e.Property(c => c.TrackCode).HasMaxLength(30);
+                e.Property(c => c.CurrencyCode).HasMaxLength(3);
+            });
+
+            builder.Entity<Country>(e =>
+            {
+                e.Property(c => c.Name).HasMaxLength(100);
+                e.Property(c => c.IsoCode).HasMaxLength(2);
+                e.Property(c => c.CurrencyCode).HasMaxLength(3);
+                e.Property(c => c.PhoneCode).HasMaxLength(6);
+                e.Property(c => c.TimeZoneId).HasMaxLength(50);
+                e.Property(c => c.LanguageCode).HasMaxLength(5);
+            });
 
             builder.Entity<City>()
                 .Property(c => c.Name).HasMaxLength(100);
@@ -153,6 +179,7 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(a => a.Title).HasMaxLength(50);
                 e.Property(a => a.City).HasMaxLength(100);
                 e.Property(a => a.District).HasMaxLength(100);
+                e.Property(a => a.PostalCode).HasMaxLength(20);
                 e.Property(a => a.FullAddress).HasMaxLength(500);
             });
 
@@ -174,6 +201,41 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(u => u.FirstName).HasMaxLength(50);
                 e.Property(u => u.LastName).HasMaxLength(50);
             });
+
+            // --- Sabit veri: faaliyet gösterilen üç ülke ---
+            // Id'ler elle verildi; HasData her migration'da aynı kaydı üretebilmek için
+            // değişmeyen anahtar ister (Guid.NewGuid burada kullanılamaz).
+            builder.Entity<Country>().HasData(
+                new Country
+                {
+                    Id = Guid.Parse("11111111-1111-1111-1111-111111111111"),
+                    Name = "Türkiye",
+                    IsoCode = "TR",
+                    CurrencyCode = "TRY",
+                    PhoneCode = "+90",
+                    TimeZoneId = "Europe/Istanbul",
+                    LanguageCode = "tr"
+                },
+                new Country
+                {
+                    Id = Guid.Parse("22222222-2222-2222-2222-222222222222"),
+                    Name = "Malta",
+                    IsoCode = "MT",
+                    CurrencyCode = "EUR",
+                    PhoneCode = "+356",
+                    TimeZoneId = "Europe/Malta",
+                    LanguageCode = "en"
+                },
+                new Country
+                {
+                    Id = Guid.Parse("33333333-3333-3333-3333-333333333333"),
+                    Name = "Brasil",
+                    IsoCode = "BR",
+                    CurrencyCode = "BRL",
+                    PhoneCode = "+55",
+                    TimeZoneId = "America/Sao_Paulo",
+                    LanguageCode = "pt"
+                });
         }
     }
 }

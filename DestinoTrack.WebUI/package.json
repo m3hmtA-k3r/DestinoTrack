@@ -1,0 +1,13 @@
+{
+  "name": "destinotrack-webui",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "css": "tailwindcss -i ./Styles/app.css -o ./wwwroot/css/app.css --watch",
+    "css:build": "tailwindcss -i ./Styles/app.css -o ./wwwroot/css/app.css --minify"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0",
+    "tailwindcss": "^4.1.0"
+  }
+}

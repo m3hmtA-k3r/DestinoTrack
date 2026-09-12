@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <data name="AdminPanel" xml:space="preserve"><value>Yönetim Paneli</value></data>
+  <data name="Dashboard" xml:space="preserve"><value>Panel</value></data>
+  <data name="Countries" xml:space="preserve"><value>Ülkeler</value></data>
+  <data name="Cities" xml:space="preserve"><value>Şehirler</value></data>
+  <data name="Branches" xml:space="preserve"><value>Şubeler</value></data>
+  <data name="Couriers" xml:space="preserve"><value>Kuryeler</value></data>
+  <data name="Cargos" xml:space="preserve"><value>Kargolar</value></data>
+  <data name="Payments" xml:space="preserve"><value>Ödemeler</value></data>
+
+  <data name="Save" xml:space="preserve"><value>Kaydet</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Vazgeç</value></data>
+  <data name="Update" xml:space="preserve"><value>Güncelle</value></data>
+  <data name="Delete" xml:space="preserve"><value>Sil</value></data>
+  <data name="Create" xml:space="preserve"><value>Ekle</value></data>
+  <data name="Actions" xml:space="preserve"><value>İşlemler</value></data>
+  <data name="ConfirmDelete" xml:space="preserve"><value>Bu kaydı silmek istediğinize emin misiniz?</value></data>
+  <data name="NoRecords" xml:space="preserve"><value>Henüz kayıt eklenmemiş.</value></data>
+
+  <data name="Country" xml:space="preserve"><value>Ülke</value></data>
+  <data name="CityName" xml:space="preserve"><value>Şehir Adı</value></data>
+  <data name="NewCity" xml:space="preserve"><value>Yeni Şehir</value></data>
+  <data name="UpdateCity" xml:space="preserve"><value>Şehir Güncelle</value></data>
+
+  <data name="TrackCargo" xml:space="preserve"><value>Kargo Takip</value></data>
+  <data name="TrackCode" xml:space="preserve"><value>Takip Kodu</value></data>
+  <data name="TrackAction" xml:space="preserve"><value>Sorgula</value></data>
+
+  <data name="Status_Received" xml:space="preserve"><value>Kargo kabul edildi</value></data>
+  <data name="Status_InTransferCenter" xml:space="preserve"><value>Transfer merkezinde</value></data>
+  <data name="Status_DispatchedFromTransferCenter" xml:space="preserve"><value>Transfer merkezinden ayrıldı</value></data>
+  <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Dağıtım şubesine ulaştı</value></data>
+  <data name="Status_OutForDelivery" xml:space="preserve"><value>Dağıtıma çıktı</value></data>
+  <data name="Status_Delivered" xml:space="preserve"><value>Teslim edildi</value></data>
+</root>

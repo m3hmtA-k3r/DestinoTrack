@@ -71,6 +71,11 @@ namespace DestinoTrack.DataAccess.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -226,6 +231,11 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Property<Guid?>("CourierId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CurrencyCode")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
+
                     b.Property<Guid>("DestinationBranchId")
                         .HasColumnType("uniqueidentifier");
 
@@ -318,12 +328,17 @@ namespace DestinoTrack.DataAccess.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("CountryId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
 
                     b.ToTable("Cities");
                 });
@@ -352,6 +367,82 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contacts");
+                });
+
+            modelBuilder.Entity("DestinoTrack.Entity.Entities.Country", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CurrencyCode")
+                        .IsRequired()
+                        .HasMaxLength(3)
+                        .HasColumnType("nvarchar(3)");
+
+                    b.Property<string>("IsoCode")
+                        .IsRequired()
+                        .HasMaxLength(2)
+                        .HasColumnType("nvarchar(2)");
+
+                    b.Property<string>("LanguageCode")
+                        .IsRequired()
+                        .HasMaxLength(5)
+                        .HasColumnType("nvarchar(5)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("PhoneCode")
+                        .IsRequired()
+                        .HasMaxLength(6)
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<string>("TimeZoneId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsoCode")
+                        .IsUnique();
+
+                    b.ToTable("Countries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("11111111-1111-1111-1111-111111111111"),
+                            CurrencyCode = "TRY",
+                            IsoCode = "TR",
+                            LanguageCode = "tr",
+                            Name = "Türkiye",
+                            PhoneCode = "+90",
+                            TimeZoneId = "Europe/Istanbul"
+                        },
+                        new
+                        {
+                            Id = new Guid("22222222-2222-2222-2222-222222222222"),
+                            CurrencyCode = "EUR",
+                            IsoCode = "MT",
+                            LanguageCode = "en",
+                            Name = "Malta",
+                            PhoneCode = "+356",
+                            TimeZoneId = "Europe/Malta"
+                        },
+                        new
+                        {
+                            Id = new Guid("33333333-3333-3333-3333-333333333333"),
+                            CurrencyCode = "BRL",
+                            IsoCode = "BR",
+                            LanguageCode = "pt",
+                            Name = "Brasil",
+                            PhoneCode = "+55",
+                            TimeZoneId = "America/Sao_Paulo"
+                        });
                 });
 
             modelBuilder.Entity("DestinoTrack.Entity.Entities.Courier", b =>
@@ -615,6 +706,17 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Navigation("Cargo");
                 });
 
+            modelBuilder.Entity("DestinoTrack.Entity.Entities.City", b =>
+                {
+                    b.HasOne("DestinoTrack.Entity.Entities.Country", "Country")
+                        .WithMany("Cities")
+                        .HasForeignKey("CountryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Country");
+                });
+
             modelBuilder.Entity("DestinoTrack.Entity.Entities.Courier", b =>
                 {
                     b.HasOne("DestinoTrack.Entity.Entities.Branch", "Branch")
@@ -732,6 +834,11 @@ namespace DestinoTrack.DataAccess.Migrations
             modelBuilder.Entity("DestinoTrack.Entity.Entities.City", b =>
                 {
                     b.Navigation("Branches");
+                });
+
+            modelBuilder.Entity("DestinoTrack.Entity.Entities.Country", b =>
+                {
+                    b.Navigation("Cities");
                 });
 
             modelBuilder.Entity("DestinoTrack.Entity.Entities.Courier", b =>
