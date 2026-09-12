@@ -10,8 +10,8 @@ namespace DestinoTrack.Entity.Entities.Enums
     {
         Branch = 1, //Şube
         TransferCenter = 2, //Transfer Merkesi
-        MainWarehose = 3, //Ana Depo
-        Logisticspark = 4, // Lojistik Park
+        MainWarehouse = 3, //Ana Depo
+        LogisticsPark = 4, // Lojistik Park
 
     }
 }

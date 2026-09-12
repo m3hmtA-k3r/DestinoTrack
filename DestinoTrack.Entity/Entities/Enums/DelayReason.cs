@@ -5,7 +5,7 @@
         Traffic = 1, //Trafik
         Weather = 2, //Hava durumu
         AddressNotFound = 3, // Adres bulunamadı
-        ReciptientUnavaileble = 4, // Alıcı Adreste yok
+        RecipientUnavailable = 4, // Alıcı Adreste yok
         Customs = 5 // Gümrük
     }
 }
