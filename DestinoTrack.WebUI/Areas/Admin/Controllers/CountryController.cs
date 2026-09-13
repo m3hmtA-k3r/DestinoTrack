@@ -1,14 +1,16 @@
-﻿using DestinoTrack.Business.Services.Countries;
+﻿using DestinoTrack.Business;
+using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.DTO.DTOs.CountryDtos;
 using DestinoTrack.WebUI.Consts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using System.ComponentModel.DataAnnotations;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
     [Area(AreaNames.Admin)]
-    public class CountryController(ICountryService _countryService) : Controller
+    public class CountryController(ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : Controller
     {
         public async Task<IActionResult> Index()
         {
@@ -25,7 +27,7 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateCountryDto createCountryDto)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(createCountryDto);
             }
@@ -35,7 +37,8 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
             }
             catch (DbUpdateException)
             {
-                ModelState.AddModelError(nameof(createCountryDto.IsoCode), "Bu Iso kodu başka bir ülkeye kayıtlı");
+                // aynı kod ikinci kez girilirse buraya düşer
+                ModelState.AddModelError(nameof(createCountryDto.IsoCode), _localizer["IsoCodeTaken"].Value);
                 return View(createCountryDto);
             }
 
@@ -76,7 +79,7 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
             catch (DbUpdateException)
             {
                 // Başka bir ülkenin ISO kodu verilirse unique index engeller
-                ModelState.AddModelError(nameof(updateCountryDto.IsoCode), "Bu ISO kodu başka bir ülkede kayıtlı.");
+                ModelState.AddModelError(nameof(updateCountryDto.IsoCode), _localizer["IsoCodeTaken"].Value);
                 return View(updateCountryDto);
             }
             catch (ValidationException ex)
@@ -99,7 +102,7 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
             catch (DbUpdateException)
             {
                 //bağlı şehir veya müşteri varken veritabanı silmeyi engeller
-                TempData["Error"] = "Bu ülkeye bağlı şehir veya müşteri kaydı var. Önce onları silin.";
+                TempData["Error"] = _localizer["CountryHasDependents"].Value;
             }
             catch (ValidationException ex)
             {

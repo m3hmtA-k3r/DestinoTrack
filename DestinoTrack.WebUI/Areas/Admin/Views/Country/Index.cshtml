@@ -10,7 +10,7 @@
             <span class="material-symbols-outlined text-[28px]">public</span>
         </div>
         <div class="flex flex-col">
-            <span class="font-label-md text-label-md text-primary uppercase">Konum Tanımları</span>
+            <span class="font-label-md text-label-md text-primary uppercase">@L["LocationSettings"]</span>
             <div class="flex items-center gap-2">
                 <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Countries"]</h1>
                 <span class="chip-neutral">@Model.Count</span>
@@ -23,7 +23,7 @@
     </a>
 </div>
 
-<!-- Silme hatası (Controller'daki TempData["Error"]) -->
+<!-- Hata bandı (Controller'daki TempData["Error"]) -->
 @if (TempData["Error"] is string error)
 {
     <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">

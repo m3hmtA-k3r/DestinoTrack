@@ -1,12 +1,13 @@
-using DestinoTrack.DataAccess.Repositories.Countries;
+﻿using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DTO.DTOs.CountryDtos;
 using DestinoTrack.Entity.Entities;
 using Mapster;
+using Microsoft.Extensions.Localization;
 using System.ComponentModel.DataAnnotations;
 
 namespace DestinoTrack.Business.Services.Countries
 {
-    public class CountryService(ICountryRepository _countryRepository) : ICountryService
+    public class CountryService(ICountryRepository _countryRepository, IStringLocalizer<SharedResource> _localizer) : ICountryService
     {
         public async Task<List<ResultCountryDto>> GetAllAsync()
         {
@@ -19,7 +20,7 @@ namespace DestinoTrack.Business.Services.Countries
             var country = await _countryRepository.GetByIdAsync(id);
             if (country == null)
             {
-                throw new ValidationException("Ülke bulunamadı.");
+                throw new ValidationException(_localizer["CountryNotFound"].Value);
             }
 
             return country.Adapt<UpdateCountryDto>();
@@ -36,7 +37,7 @@ namespace DestinoTrack.Business.Services.Countries
             var country = await _countryRepository.GetByIdAsync(updateCountryDto.Id);
             if (country == null)
             {
-                throw new ValidationException("Ülke bulunamadı.");
+                throw new ValidationException(_localizer["CountryNotFound"].Value);
             }
 
             updateCountryDto.Adapt(country);
@@ -48,7 +49,7 @@ namespace DestinoTrack.Business.Services.Countries
             var country = await _countryRepository.GetByIdAsync(id);
             if (country == null)
             {
-                throw new ValidationException("Ülke bulunamadı.");
+                throw new ValidationException(_localizer["CountryNotFound"].Value);
             }
 
             await _countryRepository.DeleteAsync(country);

@@ -160,6 +160,12 @@ namespace DestinoTrack.DataAccess.Context
                 .HasIndex(c => c.IsoCode)
                 .IsUnique();
 
+            // Aynı ülkede aynı şehir iki kez olamaz (TALP-19)
+            // İki sütun birlikte unique: "Ankara" Türkiye'de bir kez, ama başka ülkede aynı ad olabilir
+            builder.Entity<City>()
+                .HasIndex(c => new { c.CountryId, c.Name })
+                .IsUnique();
+
             // Aynı barkod iki kargoda olamaz
             builder.Entity<Cargo>()
                 .HasIndex(c => c.Barcode)
@@ -213,8 +219,11 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(c => c.LanguageCode).HasMaxLength(5);
             });
 
+            // CI_AI: büyük/küçük harf ve aksan duyarsız — "Sao Paulo" = "São Paulo", "ankara" = "Ankara" (TALP-19)
             builder.Entity<City>()
-                .Property(c => c.Name).HasMaxLength(100);
+                .Property(c => c.Name)
+                .HasMaxLength(100)
+                .UseCollation("Latin1_General_CI_AI");
 
             builder.Entity<Branch>(e =>
             {
