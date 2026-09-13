@@ -1,0 +1,189 @@
+﻿@{
+    // Aktif menüyü bulmak için şu anki controller adı
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+
+    // Dil seçici: şu anki dil + dil değişince geri dönülecek adres
+    var currentLang = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var returnUrl = Context.Request.Path + Context.Request.QueryString;
+
+    // Stitch menü sınıfları
+    var navBase = "flex items-center gap-3 px-4 py-3 rounded-xl transition-all";
+    var navPassive = navBase + " text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface";
+    var navActive = navBase + " bg-primary-container text-on-primary font-headline-sm";
+    var navDisabled = navBase + " text-on-surface-variant opacity-40 cursor-not-allowed";
+}
+<!DOCTYPE html>
+<html lang="@currentLang">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] · DestinoTrack @L["AdminPanel"]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true" />
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface">
+
+    <!-- ============ SIDEBAR ============ -->
+    <aside id="sidebar" class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between -translate-x-full lg:translate-x-0 transition-transform duration-300">
+        <div class="flex flex-col min-h-0 overflow-y-auto">
+
+            <!-- Logo -->
+            <div class="px-6 pt-6 pb-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+                        <span class="material-symbols-outlined text-[24px]">local_shipping</span>
+                    </div>
+                    <div>
+                        <div class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">DestinoTrack</div>
+                        <span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-md font-label-md uppercase tracking-wider">@L["AdminPanel"]</span>
+                    </div>
+                </div>
+                <button type="button" id="sidebarClose" class="lg:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" aria-label="Menüyü kapat">
+                    <span class="material-symbols-outlined text-[22px]">close</span>
+                </button>
+            </div>
+
+            <!-- Stitch menüsü (epikleri geldikçe linke dönüşecek) -->
+            <nav class="px-4 mt-4 flex flex-col gap-1">
+                <span class="@navDisabled" title="Yakında">
+                    <span class="material-symbols-outlined text-[20px]">dashboard</span>
+                    <span class="font-body-sm text-body-sm">Gösterge Paneli</span>
+                </span>
+                <span class="@navDisabled" title="Yakında">
+                    <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                    <span class="font-body-sm text-body-sm">Gönderi Yönetimi</span>
+                </span>
+                <span class="@navDisabled" title="Yakında">
+                    <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+                    <span class="font-body-sm text-body-sm">Kurye &amp; Dağıtım</span>
+                </span>
+                <span class="@navDisabled" title="Yakında">
+                    <span class="material-symbols-outlined text-[20px]">warehouse</span>
+                    <span class="font-body-sm text-body-sm">Şubeler &amp; Depolar</span>
+                </span>
+                <span class="@navDisabled" title="Yakında">
+                    <span class="material-symbols-outlined text-[20px]">groups</span>
+                    <span class="font-body-sm text-body-sm">Müşteriler</span>
+                </span>
+                <span class="@navDisabled" title="Yakında">
+                    <span class="material-symbols-outlined text-[20px]">monitoring</span>
+                    <span class="font-body-sm text-body-sm">Raporlar &amp; Analiz</span>
+                </span>
+                <span class="@navDisabled" title="Yakında">
+                    <span class="material-symbols-outlined text-[20px]">settings</span>
+                    <span class="font-body-sm text-body-sm">Sistem Ayarları</span>
+                </span>
+            </nav>
+
+            <!-- Konum tanımları (TALP-10) -->
+            <div class="px-8 mt-6 mb-2 text-label-md font-label-md uppercase tracking-wider text-secondary">Konum Tanımları</div>
+            <nav class="px-4 pb-4 flex flex-col gap-1">
+                <a asp-area="Admin" asp-controller="Country" asp-action="Index" class="@(controller == "Country" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">public</span>
+                    <span class="font-body-sm text-body-sm">@L["Countries"]</span>
+                </a>
+                <a asp-area="Admin" asp-controller="City" asp-action="Index" class="@(controller == "City" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">location_city</span>
+                    <span class="font-body-sm text-body-sm">@L["Cities"]</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Kullanıcı kartı (Kimlik & Roller epiğinde bağlanacak) -->
+        <div class="p-4 mx-4 mb-6 rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
+                </div>
+                <div class="overflow-hidden">
+                    <div class="font-headline-sm text-body-sm text-on-surface truncate">Yönetici</div>
+                    <div class="font-label-md text-label-md text-on-surface-variant truncate">Oturum henüz yok</div>
+                </div>
+            </div>
+            <span class="p-2 rounded-lg text-on-surface-variant opacity-40 cursor-not-allowed shrink-0" title="Çıkış Yap">
+                <span class="material-symbols-outlined text-[20px]">logout</span>
+            </span>
+        </div>
+    </aside>
+
+    <!-- Mobil karartma -->
+    <div id="sidebarOverlay" class="fixed inset-0 z-40 bg-on-surface/40 hidden lg:hidden"></div>
+
+    <div class="lg:pl-72 min-h-screen flex flex-col">
+
+        <!-- ============ HEADER ============ -->
+        <header class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 px-margin-mobile lg:px-gutter flex items-center justify-between gap-3 lg:gap-6">
+
+            <div class="flex items-center gap-3 flex-1 min-w-0">
+                <button type="button" id="sidebarOpen" class="lg:hidden p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors" aria-label="Menüyü aç">
+                    <span class="material-symbols-outlined text-[22px]">menu</span>
+                </button>
+                <div class="hidden sm:block flex-1 max-w-xl">
+                    <div class="relative flex items-center w-full">
+                        <span class="material-symbols-outlined absolute left-4 text-secondary text-[20px]">search</span>
+                        <input type="search" class="w-full pl-11 pr-4 py-2.5 rounded-xl bg-surface-container-lowest text-on-surface font-body-sm text-body-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)] placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-tertiary transition-all" placeholder="Takip no, müşteri adı veya şube ara..." />
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-2 lg:gap-4 shrink-0">
+                <!-- Dil seçici -->
+                <div class="flex items-center p-1 rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+                    @foreach (var lang in new[] { "tr", "en", "pt" })
+                    {
+                        <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-culture="@lang" asp-route-returnUrl="@returnUrl"
+                           class="px-2.5 py-1.5 rounded-lg text-label-md font-label-md uppercase transition-colors @(lang == currentLang ? "bg-secondary-container text-on-secondary-fixed" : "text-on-surface-variant hover:bg-surface-container-high")">@lang</a>
+                    }
+                </div>
+
+                <button type="button" class="relative p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors" aria-label="Bildirimler">
+                    <span class="material-symbols-outlined text-[22px]">notifications</span>
+                </button>
+
+                <button type="button" disabled class="hidden md:flex items-center gap-2 px-4 py-2.5 rounded-xl bg-primary-container text-on-primary font-headline-sm text-body-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)] disabled:opacity-40 disabled:cursor-not-allowed" title="Gönderi Yönetimi epiğinde açılacak">
+                    <span class="material-symbols-outlined text-[20px]">add</span>
+                    <span>Yeni Gönderi Oluştur</span>
+                </button>
+
+                <div class="hidden sm:flex w-8 h-8 rounded-full bg-primary items-center justify-center">
+                    <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- ============ İÇERİK ============ -->
+        <main class="relative pt-20 bg-surface flex-1 w-full px-margin-mobile lg:px-gutter">
+            <div class="flex flex-col w-full pb-12">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        (function () {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+
+            document.getElementById('sidebarOpen').addEventListener('click', openSidebar);
+            document.getElementById('sidebarClose').addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidebar(); });
+        })();
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

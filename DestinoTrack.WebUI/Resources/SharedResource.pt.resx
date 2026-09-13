@@ -28,6 +28,14 @@
   <data name="NewCity" xml:space="preserve"><value>Nova cidade</value></data>
   <data name="UpdateCity" xml:space="preserve"><value>Atualizar cidade</value></data>
 
+  <data name="NewCountry" xml:space="preserve"><value>Novo país</value></data>
+  <data name="UpdateCountry" xml:space="preserve"><value>Atualizar país</value></data>
+  <data name="IsoCode" xml:space="preserve"><value>Código ISO</value></data>
+  <data name="CurrencyCode" xml:space="preserve"><value>Moeda</value></data>
+  <data name="PhoneCode" xml:space="preserve"><value>Código telefônico</value></data>
+  <data name="LanguageCode" xml:space="preserve"><value>Idioma</value></data>
+  <data name="TimeZone" xml:space="preserve"><value>Fuso horário</value></data>
+
   <data name="TrackCargo" xml:space="preserve"><value>Rastrear encomenda</value></data>
   <data name="TrackCode" xml:space="preserve"><value>Código de rastreio</value></data>
   <data name="TrackAction" xml:space="preserve"><value>Rastrear</value></data>

@@ -34,12 +34,12 @@ builder.Services.AddIdentity<AppUser, AppRole>()
     .AddDefaultTokenProviders();
     //.AddAddDefaultTokenProviders();
 
-// FluentValidation için gerekli servisleri ekliyoruz.
+// FluentValidation için gerekli servisler 
 builder.Services.AddFluentValidationAutoValidation()
     .AddFluentValidationClientsideAdapters()
     .AddValidatorsFromAssembly(typeof(BusinessAssembly).Assembly);
 
-// --- Çok dillilik: Türkiye (tr), Malta (en), Brezilya (pt) ---
+// --- Çok dillilik 
 var supportedCultures = new[] { "tr", "en", "pt" };
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
@@ -69,7 +69,10 @@ builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 
-builder.Services.AddControllersWithViews()
+builder.Services.AddControllersWithViews(options =>
+{
+    options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
+})
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
 

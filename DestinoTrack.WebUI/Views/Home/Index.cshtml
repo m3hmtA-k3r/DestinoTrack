@@ -1,37 +1,42 @@
-@{
+﻿@{
     ViewData["Title"] = L["TrackCargo"].Value;
     var notice = TempData["TrackNotice"] as string;
     var submittedCode = TempData["TrackCode"] as string;
 }
 
-<section class="bg-ink">
-    <div class="mx-auto max-w-5xl px-6 py-20">
+<section class="bg-inverse-surface">
+    <div class="mx-auto max-w-7xl px-margin-mobile lg:px-margin-desktop py-16 lg:py-24">
 
-        <h1 class="max-w-2xl text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+        <h1 class="max-w-2xl font-headline-lg-mobile text-headline-lg-mobile sm:font-display-lg sm:text-display-lg text-inverse-on-surface">
             @L["TrackCargo"]
         </h1>
 
         <form asp-controller="Home" asp-action="Track" method="post" class="mt-8 max-w-xl">
-            <label for="code" class="mb-2 block text-sm text-white/60">@L["TrackCode"]</label>
-            <div class="flex gap-2">
-                <input id="code" name="code" value="@submittedCode"
-                       class="w-full rounded-md border border-white/15 bg-white/5 px-4 py-3 font-mono text-base text-white placeholder:text-white/30 focus:border-signal focus:outline-none focus:ring-1 focus:ring-signal"
-                       placeholder="DT20260907001" autocomplete="off" />
+            <label for="code" class="mb-2 block font-label-md text-label-md uppercase tracking-wider text-inverse-on-surface/60">@L["TrackCode"]</label>
+            <div class="flex flex-col sm:flex-row gap-3">
+                <div class="relative flex-1">
+                    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[20px] text-inverse-on-surface/50">inventory_2</span>
+                    <input id="code" name="code" value="@submittedCode"
+                           class="w-full pl-12 pr-4 py-3.5 rounded-xl bg-inverse-on-surface/5 font-mono text-body-md text-inverse-on-surface placeholder:text-inverse-on-surface/30 ring-1 ring-inverse-on-surface/15 focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"
+                           placeholder="DT20260907001" autocomplete="off" />
+                </div>
                 <button type="submit"
-                        class="shrink-0 rounded-md bg-signal px-6 py-3 text-sm font-semibold text-ink transition hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-signal focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
-                    @L["TrackAction"]
+                        class="btn-accent px-6 py-3.5 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-container focus-visible:ring-offset-2 focus-visible:ring-offset-inverse-surface">
+                    <span class="material-symbols-outlined text-[20px]">search</span>
+                    <span>@L["TrackAction"]</span>
                 </button>
             </div>
         </form>
 
         @if (!string.IsNullOrEmpty(notice))
         {
-            <p class="mt-4 max-w-xl rounded-md border border-signal/30 bg-signal/10 px-4 py-3 text-sm text-signal">
-                @notice
+            <p class="mt-4 max-w-xl flex items-start gap-3 rounded-xl bg-primary-container/10 ring-1 ring-primary-container/30 px-4 py-3 font-body-sm text-body-sm text-primary-container">
+                <span class="material-symbols-outlined text-[20px] shrink-0">info</span>
+                <span>@notice</span>
             </p>
         }
 
-        <div class="mt-16 flex flex-wrap gap-x-10 gap-y-3 border-t border-white/10 pt-6 text-sm text-white/50">
+        <div class="mt-16 flex flex-wrap gap-x-10 gap-y-3 border-t border-inverse-on-surface/10 pt-6 font-body-sm text-body-sm text-inverse-on-surface/50">
             <span>Türkiye &middot; <span class="font-mono">TRY</span></span>
             <span>Malta &middot; <span class="font-mono">EUR</span></span>
             <span>Brasil &middot; <span class="font-mono">BRL</span></span>
