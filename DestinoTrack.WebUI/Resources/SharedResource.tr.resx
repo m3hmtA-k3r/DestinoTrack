@@ -28,6 +28,14 @@
   <data name="NewCity" xml:space="preserve"><value>Yeni Şehir</value></data>
   <data name="UpdateCity" xml:space="preserve"><value>Şehir Güncelle</value></data>
 
+  <data name="NewCountry" xml:space="preserve"><value>Yeni Ülke</value></data>
+  <data name="UpdateCountry" xml:space="preserve"><value>Ülke Güncelle</value></data>
+  <data name="IsoCode" xml:space="preserve"><value>ISO Kodu</value></data>
+  <data name="CurrencyCode" xml:space="preserve"><value>Para Birimi</value></data>
+  <data name="PhoneCode" xml:space="preserve"><value>Telefon Kodu</value></data>
+  <data name="LanguageCode" xml:space="preserve"><value>Dil</value></data>
+  <data name="TimeZone" xml:space="preserve"><value>Saat Dilimi</value></data>
+
   <data name="TrackCargo" xml:space="preserve"><value>Kargo Takip</value></data>
   <data name="TrackCode" xml:space="preserve"><value>Takip Kodu</value></data>
   <data name="TrackAction" xml:space="preserve"><value>Sorgula</value></data>

@@ -29,7 +29,6 @@
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\" />
   </ItemGroup>
 
   <!-- Tailwind: her .NET build'inde CSS otomatik derlenir -->

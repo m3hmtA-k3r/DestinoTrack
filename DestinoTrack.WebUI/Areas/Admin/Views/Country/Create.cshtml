@@ -1,0 +1,72 @@
+﻿@model CreateCountryDto
+@{
+    ViewData["Title"] = L["NewCountry"].Value;
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex items-center gap-4 mt-4 mb-8">
+    <a asp-action="Index" title="@L["Cancel"]"
+       class="p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+    </a>
+    <div class="flex flex-col">
+        <span class="font-label-md text-label-md text-primary uppercase">@L["Countries"]</span>
+        <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["NewCountry"]</h1>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="m3-card p-6 w-full max-w-3xl">
+    <form asp-action="Create" method="post" class="flex flex-col gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+            <div class="md:col-span-2">
+                <label asp-for="Name" class="field-label">@L["Country"]</label>
+                <input asp-for="Name" class="field-input" placeholder="Türkiye" maxlength="100" autocomplete="off" />
+                <span asp-validation-for="Name" class="field-error"></span>
+            </div>
+
+            <div>
+                <label asp-for="IsoCode" class="field-label">@L["IsoCode"]</label>
+                <input asp-for="IsoCode" class="field-input" placeholder="TR" maxlength="2" autocomplete="off" />
+                <span asp-validation-for="IsoCode" class="field-error"></span>
+            </div>
+
+            <div>
+                <label asp-for="CurrencyCode" class="field-label">@L["CurrencyCode"]</label>
+                <input asp-for="CurrencyCode" class="field-input" placeholder="TRY" maxlength="3" autocomplete="off" />
+                <span asp-validation-for="CurrencyCode" class="field-error"></span>
+            </div>
+
+            <div>
+                <label asp-for="PhoneCode" class="field-label">@L["PhoneCode"]</label>
+                <input asp-for="PhoneCode" class="field-input" placeholder="+90" maxlength="6" autocomplete="off" />
+                <span asp-validation-for="PhoneCode" class="field-error"></span>
+            </div>
+
+            <div>
+                <label asp-for="LanguageCode" class="field-label">@L["LanguageCode"]</label>
+                <input asp-for="LanguageCode" class="field-input" placeholder="tr" maxlength="5" autocomplete="off" />
+                <span asp-validation-for="LanguageCode" class="field-error"></span>
+            </div>
+
+            <div class="md:col-span-2">
+                <label asp-for="TimeZoneId" class="field-label">@L["TimeZone"]</label>
+                <input asp-for="TimeZoneId" class="field-input" placeholder="Europe/Istanbul" maxlength="50" autocomplete="off" />
+                <span asp-validation-for="TimeZoneId" class="field-error"></span>
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
+            <a asp-action="Index" class="btn-tonal">@L["Cancel"]</a>
+            <button type="submit" class="btn-filled">
+                <span class="material-symbols-outlined text-[20px]">check</span>
+                <span>@L["Save"]</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

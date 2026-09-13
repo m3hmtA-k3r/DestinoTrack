@@ -1,0 +1,48 @@
+﻿@model CreateCityDto
+@{
+    ViewData["Title"] = L["NewCity"].Value;
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex items-center gap-4 mt-4 mb-8">
+    <a asp-action="Index" title="@L["Cancel"]"
+       class="p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+    </a>
+    <div class="flex flex-col">
+        <span class="font-label-md text-label-md text-primary uppercase">@L["Cities"]</span>
+        <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["NewCity"]</h1>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="m3-card p-6 w-full max-w-2xl">
+    <form asp-action="Create" method="post" class="flex flex-col gap-5">
+
+        <div>
+            <label asp-for="Name" class="field-label">@L["CityName"]</label>
+            <input asp-for="Name" class="field-input" autocomplete="off" />
+            <span asp-validation-for="Name" class="field-error"></span>
+        </div>
+
+        <div>
+            <label asp-for="CountryId" class="field-label">@L["Country"]</label>
+            <select asp-for="CountryId" asp-items="ViewBag.Countries" class="field-input cursor-pointer">
+                <option value="">— @L["Country"] —</option>
+            </select>
+            <span asp-validation-for="CountryId" class="field-error"></span>
+        </div>
+
+        <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
+            <a asp-action="Index" class="btn-tonal">@L["Cancel"]</a>
+            <button type="submit" class="btn-filled">
+                <span class="material-symbols-outlined text-[20px]">check</span>
+                <span>@L["Save"]</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

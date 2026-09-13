@@ -1,10 +1,8 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
-/* ---------------------------------------------------------------
-   DestinoTrack — Material 3 tema
-   Tasarımdaki inline tailwind.config buraya taşındı.
-   CDN yerine npm ile derleniyor; görüntü birebir aynı.
-   --------------------------------------------------------------- */
+
+   /*DestinoTrack — Material 3 tema
+   CDN yerine npm ile derleniyor*/
 
 @theme {
   /* --- Renkler --- */
