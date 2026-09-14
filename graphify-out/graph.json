@@ -109,7 +109,7 @@
       "label": "DestinoTrack.Business.Services.Cities",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -122,11 +122,11 @@
       "label": "CityService",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
-          "s186"
+          "s284"
         ]
       },
       "_callable": true,
@@ -134,18 +134,42 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_cities_cityservice_cs_istringlocalizer",
+      "label": "IStringLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_cities_cityservice_cs_sharedresource",
+      "label": "SharedResource",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getallasync",
       "label": ".GetAllAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L11",
+      "source_location": "L13",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
-          "s186"
+          "s284"
         ]
       },
       "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_cities_cityservice_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -165,26 +189,33 @@
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getbyidasync",
-      "label": ".GetByIdAsync()",
+      "id": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "label": ".GetCountryFiltersAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L24",
+      "source_location": "L28",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
-          "s186"
+          "s284"
         ]
       },
       "_callable": true,
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_business_services_cities_cityservice_cs_guid",
-      "label": "Guid",
+      "id": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getbyidasync",
+      "label": ".GetByIdAsync()",
       "file_type": "code",
-      "source_file": "",
-      "source_location": "",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L44",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Cities",
+        "scope_chain": [
+          "s284"
+        ]
+      },
+      "_callable": true,
       "_origin": "ast"
     },
     {
@@ -192,11 +223,11 @@
       "label": ".CreateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L35",
+      "source_location": "L55",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
-          "s186"
+          "s284"
         ]
       },
       "_callable": true,
@@ -207,11 +238,11 @@
       "label": ".UpdateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L41",
+      "source_location": "L61",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
-          "s186"
+          "s284"
         ]
       },
       "_callable": true,
@@ -222,11 +253,11 @@
       "label": ".DeleteAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L53",
+      "source_location": "L73",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
-          "s186"
+          "s284"
         ]
       },
       "_callable": true,
@@ -261,37 +292,6 @@
       "label": ".GetAllAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L7",
-      "metadata": {
-        "namespace": "DestinoTrack.Business.Services.Cities",
-        "scope_chain": [
-          "s44"
-        ]
-      },
-      "_callable": true,
-      "_origin": "ast"
-    },
-    {
-      "id": "destinotrack_business_services_cities_icityservice_cs_task",
-      "label": "Task",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast"
-    },
-    {
-      "id": "destinotrack_business_services_cities_icityservice_cs_list",
-      "label": "List",
-      "file_type": "code",
-      "source_file": "",
-      "source_location": "",
-      "_origin": "ast"
-    },
-    {
-      "id": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getbyidasync",
-      "label": ".GetByIdAsync()",
-      "file_type": "code",
-      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
       "source_location": "L8",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
@@ -311,11 +311,57 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_cities_icityservice_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_cities_icityservice_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getcountryfiltersasync",
+      "label": ".GetCountryFiltersAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Cities",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getbyidasync",
+      "label": ".GetByIdAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Cities",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_createasync",
       "label": ".CreateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L9",
+      "source_location": "L14",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
@@ -330,7 +376,7 @@
       "label": ".UpdateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L10",
+      "source_location": "L15",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
@@ -345,7 +391,7 @@
       "label": ".DeleteAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L11",
+      "source_location": "L16",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Cities",
         "scope_chain": [
@@ -368,7 +414,7 @@
       "label": "DestinoTrack.Business.Services.Countries",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -381,11 +427,11 @@
       "label": "CountryService",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Countries",
         "scope_chain": [
-          "s192"
+          "s236"
         ]
       },
       "_callable": true,
@@ -393,15 +439,31 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_countries_countryservice_cs_istringlocalizer",
+      "label": "IStringLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_countries_countryservice_cs_sharedresource",
+      "label": "SharedResource",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_countries_countryservice_destinotrack_business_services_countries_countryservice_getallasync",
       "label": ".GetAllAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L11",
+      "source_location": "L12",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Countries",
         "scope_chain": [
-          "s192"
+          "s236"
         ]
       },
       "_callable": true,
@@ -428,11 +490,11 @@
       "label": ".GetByIdAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Countries",
         "scope_chain": [
-          "s192"
+          "s236"
         ]
       },
       "_callable": true,
@@ -451,11 +513,11 @@
       "label": ".CreateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L28",
+      "source_location": "L29",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Countries",
         "scope_chain": [
-          "s192"
+          "s236"
         ]
       },
       "_callable": true,
@@ -466,11 +528,11 @@
       "label": ".UpdateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L34",
+      "source_location": "L35",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Countries",
         "scope_chain": [
-          "s192"
+          "s236"
         ]
       },
       "_callable": true,
@@ -481,11 +543,11 @@
       "label": ".DeleteAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L46",
+      "source_location": "L47",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Countries",
         "scope_chain": [
-          "s192"
+          "s236"
         ]
       },
       "_callable": true,
@@ -722,6 +784,30 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_sharedresource",
+      "label": "SharedResource.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/SharedResource.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_sharedresource_destinotrack_business_sharedresource",
+      "label": "SharedResource",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/SharedResource.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.Business",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_validators_cities_createcityvalidator",
       "label": "CreateCityValidator.cs",
       "file_type": "code",
@@ -734,7 +820,7 @@
       "label": "DestinoTrack.Business.Validators.Cities",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -747,11 +833,11 @@
       "label": "CreateCityValidator",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "metadata": {
         "namespace": "DestinoTrack.Business.Validators.Cities",
         "scope_chain": [
-          "s63"
+          "s107"
         ]
       },
       "_callable": true,
@@ -779,11 +865,11 @@
       "label": "UpdateCityValidator",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Validators/Cities/UpdateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "metadata": {
         "namespace": "DestinoTrack.Business.Validators.Cities",
         "scope_chain": [
-          "s63"
+          "s107"
         ]
       },
       "_callable": true,
@@ -803,7 +889,7 @@
       "label": "DestinoTrack.Business.Validators.Countries",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -816,11 +902,11 @@
       "label": "CreateCountryValidator",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "metadata": {
         "namespace": "DestinoTrack.Business.Validators.Countries",
         "scope_chain": [
-          "s66"
+          "s110"
         ]
       },
       "_callable": true,
@@ -840,15 +926,102 @@
       "label": "UpdateCountryValidator",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Validators/Countries/UpdateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "metadata": {
         "namespace": "DestinoTrack.Business.Validators.Countries",
         "scope_chain": [
-          "s66"
+          "s110"
         ]
       },
       "_callable": true,
       "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "label": "CityCountryFilterDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:1203581e50ecc61f",
+      "label": "DestinoTrack.DTO.DTOs.CityDtos",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L1",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.DTO.DTOs.CityDtos"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "label": "CityCountryFilterDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L4",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.CityDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto_countryid",
+      "label": "CountryId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.CityDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto_countryname",
+      "label": "CountryName",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.CityDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto_citycount",
+      "label": "CityCount",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.CityDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
       "_origin": "ast"
     },
     {
@@ -857,19 +1030,6 @@
       "file_type": "code",
       "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CreateCityDto.cs",
       "source_location": "L1",
-      "_origin": "ast"
-    },
-    {
-      "id": "csharp_namespace:1203581e50ecc61f",
-      "label": "DestinoTrack.DTO.DTOs.CityDtos",
-      "file_type": "code",
-      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CreateCityDto.cs",
-      "source_location": "L1",
-      "type": "namespace",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "DestinoTrack.DTO.DTOs.CityDtos"
-      },
       "_origin": "ast"
     },
     {
@@ -2272,6 +2432,69 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name",
+      "label": "20260913125716_mig_city_unique_name.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name",
+      "label": "mig_city_unique_name",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L8",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s75"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name_up",
+      "label": ".Up()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s75"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_cs_migrationbuilder",
+      "label": "MigrationBuilder",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name_down",
+      "label": ".Down()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L36",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s75"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot",
       "label": "AppDbContextModelSnapshot.cs",
       "file_type": "code",
@@ -2778,7 +3001,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
         "scope_chain": [
-          "s177"
+          "s180"
         ]
       },
       "_callable": true,
@@ -2790,14 +3013,22 @@
       "label": ".GetAllWithCountryAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
-      "source_location": "L14",
+      "source_location": "L12",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
         "scope_chain": [
-          "s177"
+          "s180"
         ]
       },
       "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -2811,6 +3042,29 @@
     {
       "id": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_list",
       "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getcitycountsbycountryasync",
+      "label": ".GetCityCountsByCountryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L34",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
+        "scope_chain": [
+          "s180"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_dictionary",
+      "label": "Dictionary",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
@@ -2833,7 +3087,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
         "scope_chain": [
-          "s101"
+          "s104"
         ]
       },
       "_callable": true,
@@ -2845,14 +3099,22 @@
       "label": ".GetAllWithCountryAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
-      "source_location": "L8",
+      "source_location": "L9",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
         "scope_chain": [
-          "s101"
+          "s104"
         ]
       },
       "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -2866,6 +3128,29 @@
     {
       "id": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_list",
       "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getcitycountsbycountryasync",
+      "label": ".GetCityCountsByCountryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
+        "scope_chain": [
+          "s104"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_dictionary",
+      "label": "Dictionary",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
@@ -6554,7 +6839,7 @@
       "label": "DestinoTrack.WebUI.Areas.Admin.Controllers",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L6",
+      "source_location": "L14",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -6567,11 +6852,11 @@
       "label": "CityController",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L8",
+      "source_location": "L16",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s155"
+          "s482"
         ]
       },
       "_callable": true,
@@ -6587,18 +6872,34 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_istringlocalizer",
+      "label": "IStringLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_index",
       "label": ".Index()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L12",
+      "source_location": "L20",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s155"
+          "s482"
         ]
       },
       "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -6615,6 +6916,455 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "label": ".Create()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L33",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s482"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_httppost",
+      "label": "HttpPost",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_validateantiforgerytoken",
+      "label": "ValidateAntiForgeryToken",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "label": ".Update()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L64",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s482"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "label": ".Delete()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L108",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s482"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_yuklecountriesasync",
+      "label": ".YukleCountriesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L126",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s482"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "label": "CountryController.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "label": "CountryController",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s319"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_istringlocalizer",
+      "label": "IStringLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_index",
+      "label": ".Index()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s319"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_iactionresult",
+      "label": "IActionResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "label": ".Create()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L21",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s319"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_httppost",
+      "label": "HttpPost",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_validateantiforgerytoken",
+      "label": "ValidateAntiForgeryToken",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "label": ".Update()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L50",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s319"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "label": ".Delete()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L94",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s319"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "label": "CityIndexViewModel.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:73772d8ed13bc437",
+      "label": "DestinoTrack.WebUI.Areas.Admin.Models",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L3",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "label": "CityIndexViewModel",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_cities",
+      "label": "Cities",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_countryfilters",
+      "label": "CountryFilters",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L10",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_selectedcountryid",
+      "label": "SelectedCountryId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_search",
+      "label": "Search",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_totalcitycount",
+      "label": "TotalCityCount",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_isfiltered",
+      "label": "IsFiltered",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L19",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s44"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_city_create",
+      "label": "Create.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/City/Create.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_city_index",
+      "label": "Index.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/City/Index.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_city_update",
+      "label": "Update.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/City/Update.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_country_create",
+      "label": "Create.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Country/Create.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_country_index",
+      "label": "Index.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Country/Index.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_country_index_cshtml_resultcountrydto",
+      "label": "ResultCountryDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Country/Index.cshtml",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_country_update",
+      "label": "Update.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Country/Update.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_shared_adminlayout",
+      "label": "_AdminLayout.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Shared/_AdminLayout.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_viewimports",
+      "label": "_ViewImports.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_viewimports_cshtml_microsoft_aspnetcore_mvc_localization",
+      "label": "Microsoft.AspNetCore.Mvc.Localization",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L5",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_viewimports_cshtml_ihtmllocalizer",
+      "label": "IHtmlLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_viewimports_cshtml_sharedresource",
+      "label": "SharedResource",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_viewstart",
+      "label": "_ViewStart.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewStart.cshtml",
+      "source_location": null,
       "_origin": "ast"
     },
     {
@@ -6667,7 +7417,7 @@
       "label": "DestinoTrack.WebUI.Controllers",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L5",
+      "source_location": "L7",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -6680,11 +7430,11 @@
       "label": "HomeController",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
-          "s92"
+          "s165"
         ]
       },
       "_callable": true,
@@ -6692,15 +7442,23 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_controllers_homecontroller_cs_istringlocalizer",
+      "label": "IStringLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_index",
       "label": ".Index()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
-          "s92"
+          "s165"
         ]
       },
       "_callable": true,
@@ -6719,18 +7477,18 @@
       "label": ".Track()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
-          "s92"
+          "s165"
         ]
       },
       "_callable": true,
       "_origin": "ast"
     },
     {
-      "id": "httppost",
+      "id": "destinotrack_webui_controllers_homecontroller_cs_httppost",
       "label": "HttpPost",
       "file_type": "code",
       "source_file": "",
@@ -6742,11 +7500,11 @@
       "label": ".Privacy()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L25",
+      "source_location": "L26",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
-          "s92"
+          "s165"
         ]
       },
       "_callable": true,
@@ -6757,11 +7515,11 @@
       "label": ".Error()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L30",
+      "source_location": "L31",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
-          "s92"
+          "s165"
         ]
       },
       "_callable": true,
@@ -7144,43 +7902,6 @@
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_webui_sharedresource",
-      "label": "SharedResource.cs",
-      "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/SharedResource.cs",
-      "source_location": "L1",
-      "_origin": "ast"
-    },
-    {
-      "id": "csharp_namespace:1b198991430b72dd",
-      "label": "DestinoTrack.WebUI",
-      "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/SharedResource.cs",
-      "source_location": "L1",
-      "type": "namespace",
-      "metadata": {
-        "kind": "csharp_namespace",
-        "namespace": "DestinoTrack.WebUI"
-      },
-      "_origin": "ast"
-    },
-    {
-      "id": "destinotrack_webui_sharedresource_destinotrack_webui_sharedresource",
-      "label": "SharedResource",
-      "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/SharedResource.cs",
-      "source_location": "L6",
-      "metadata": {
-        "namespace": "DestinoTrack.WebUI",
-        "scope_chain": [
-          "s0"
-        ]
-      },
-      "_callable": true,
-      "_callable_class": true,
-      "_origin": "ast"
-    },
-    {
       "id": "destinotrack_webui_views_home_index",
       "label": "Index.cshtml",
       "file_type": "code",
@@ -7205,27 +7926,11 @@
       "_origin": "ast"
     },
     {
-      "id": "errorviewmodel",
-      "label": "ErrorViewModel",
-      "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/Views/Shared/Error.cshtml",
-      "source_location": "L1",
-      "_origin": "ast"
-    },
-    {
       "id": "destinotrack_webui_views_shared_layout",
       "label": "_Layout.cshtml",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Views/Shared/_Layout.cshtml",
       "source_location": null,
-      "_origin": "ast"
-    },
-    {
-      "id": "system_globalization",
-      "label": "System.Globalization",
-      "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/Views/Shared/_Layout.cshtml",
-      "source_location": "L1",
       "_origin": "ast"
     },
     {
@@ -7245,15 +7950,15 @@
       "_origin": "ast"
     },
     {
-      "id": "microsoft_aspnetcore_mvc_localization",
+      "id": "destinotrack_webui_views_viewimports_cshtml_microsoft_aspnetcore_mvc_localization",
       "label": "Microsoft.AspNetCore.Mvc.Localization",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
-      "source_location": "L3",
+      "source_location": "L4",
       "_origin": "ast"
     },
     {
-      "id": "ihtmllocalizer",
+      "id": "destinotrack_webui_views_viewimports_cshtml_ihtmllocalizer",
       "label": "IHtmlLocalizer",
       "file_type": "code",
       "source_file": "",
@@ -7261,11 +7966,11 @@
       "_origin": "ast"
     },
     {
-      "id": "sharedresource",
+      "id": "destinotrack_webui_views_viewimports_cshtml_sharedresource",
       "label": "SharedResource",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
-      "source_location": "L4",
+      "source_location": "L5",
       "_origin": "ast"
     },
     {
@@ -7589,12 +8294,28 @@
     },
     {
       "source": "destinotrack_business_services_cities_cityservice",
-      "target": "csharp_namespace:1203581e50ecc61f",
+      "target": "csharp_namespace:1d30898fce1ac78b",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
       "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.Countries",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice",
+      "target": "csharp_namespace:1203581e50ecc61f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L3",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -7610,7 +8331,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L3",
+      "source_location": "L4",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -7626,11 +8347,27 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
         "target_fqn": "Mapster",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -7642,7 +8379,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -7657,7 +8394,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7667,7 +8404,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7677,7 +8414,7 @@
       "relation": "implements",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "ref_token": "ICityService"
@@ -7690,7 +8427,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -7700,12 +8437,68 @@
     },
     {
       "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice",
-      "target": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getallasync",
-      "relation": "method",
+      "target": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository",
+      "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
       "source_location": "L11",
       "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICountryRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice",
+      "target": "destinotrack_business_services_cities_cityservice_cs_istringlocalizer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IStringLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice",
+      "target": "destinotrack_business_services_cities_cityservice_cs_sharedresource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "SharedResource"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice",
+      "target": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getallasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getallasync",
+      "target": "destinotrack_business_services_cities_cityservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
       "_origin": "ast"
     },
     {
@@ -7714,7 +8507,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -7728,7 +8521,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -7742,7 +8535,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -7752,11 +8545,63 @@
     },
     {
       "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice",
+      "target": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "target": "destinotrack_business_services_cities_cityservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "target": "destinotrack_business_services_cities_cityservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CityCountryFilterDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice",
       "target": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getbyidasync",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L24",
+      "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7766,7 +8611,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L24",
+      "source_location": "L44",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -7780,7 +8625,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L24",
+      "source_location": "L44",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -7794,7 +8639,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L24",
+      "source_location": "L44",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -7808,7 +8653,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L35",
+      "source_location": "L55",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7818,7 +8663,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L35",
+      "source_location": "L55",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -7832,7 +8677,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L35",
+      "source_location": "L55",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -7846,7 +8691,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L41",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7856,7 +8701,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L41",
+      "source_location": "L61",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -7870,7 +8715,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L41",
+      "source_location": "L61",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -7884,7 +8729,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L53",
+      "source_location": "L73",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7894,7 +8739,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L53",
+      "source_location": "L73",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -7908,7 +8753,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L53",
+      "source_location": "L73",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -7923,7 +8768,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L15",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -7933,7 +8789,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L37",
+      "source_location": "L57",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -7983,8 +8839,22 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getallasync",
+      "target": "destinotrack_business_services_cities_icityservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
       "_origin": "ast"
     },
     {
@@ -7993,7 +8863,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8007,7 +8877,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -8021,7 +8891,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -8031,11 +8901,63 @@
     },
     {
       "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getcountryfiltersasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getcountryfiltersasync",
+      "target": "destinotrack_business_services_cities_icityservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getcountryfiltersasync",
+      "target": "destinotrack_business_services_cities_icityservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getcountryfiltersasync",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CityCountryFilterDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice",
       "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getbyidasync",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8045,7 +8967,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8059,7 +8981,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8073,7 +8995,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L8",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -8087,7 +9009,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L9",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8097,7 +9019,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L9",
+      "source_location": "L14",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8111,7 +9033,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L9",
+      "source_location": "L14",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8125,7 +9047,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L10",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8135,7 +9057,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L10",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8149,7 +9071,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L10",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8163,7 +9085,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8173,7 +9095,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8187,7 +9109,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Cities/ICityService.cs",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8261,12 +9183,28 @@
     },
     {
       "source": "destinotrack_business_services_countries_countryservice",
-      "target": "system_componentmodel_dataannotations",
+      "target": "microsoft_extensions_localization",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
       "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_countries_countryservice",
+      "target": "system_componentmodel_dataannotations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
+      "source_location": "L6",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -8281,7 +9219,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8291,7 +9229,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8301,7 +9239,7 @@
       "relation": "implements",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "ref_token": "ICountryService"
@@ -8314,7 +9252,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -8324,11 +9262,39 @@
     },
     {
       "source": "destinotrack_business_services_countries_countryservice_destinotrack_business_services_countries_countryservice",
+      "target": "destinotrack_business_services_countries_countryservice_cs_istringlocalizer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IStringLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_countries_countryservice_destinotrack_business_services_countries_countryservice",
+      "target": "destinotrack_business_services_countries_countryservice_cs_sharedresource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "SharedResource"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_countries_countryservice_destinotrack_business_services_countries_countryservice",
       "target": "destinotrack_business_services_countries_countryservice_destinotrack_business_services_countries_countryservice_getallasync",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8338,7 +9304,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8352,7 +9318,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -8366,7 +9332,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -8380,7 +9346,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8390,7 +9356,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8404,7 +9370,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8418,7 +9384,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -8432,7 +9398,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8442,7 +9408,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8456,7 +9422,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8470,7 +9436,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8480,7 +9446,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8494,7 +9460,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L34",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8508,7 +9474,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -8518,7 +9484,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -8532,7 +9498,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -8546,7 +9512,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -9147,6 +10113,26 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_sharedresource",
+      "target": "csharp_namespace:38073f96d8e536d2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/SharedResource.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_sharedresource",
+      "target": "destinotrack_business_sharedresource_destinotrack_business_sharedresource",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/SharedResource.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_validators_cities_createcityvalidator",
       "target": "csharp_namespace:1203581e50ecc61f",
       "relation": "imports",
@@ -9180,11 +10166,27 @@
     },
     {
       "source": "destinotrack_business_validators_cities_createcityvalidator",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_cities_createcityvalidator",
       "target": "csharp_namespace:05a9ab49f2685b93",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9194,7 +10196,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9204,7 +10206,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "ref_token": "AbstractValidator"
@@ -9217,7 +10219,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -9259,11 +10261,27 @@
     },
     {
       "source": "destinotrack_business_validators_cities_updatecityvalidator",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Cities/UpdateCityValidator.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_cities_updatecityvalidator",
       "target": "csharp_namespace:05a9ab49f2685b93",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/UpdateCityValidator.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9273,7 +10291,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/UpdateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9283,7 +10301,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/UpdateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "ref_token": "AbstractValidator"
@@ -9296,7 +10314,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Cities/UpdateCityValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -9338,11 +10356,27 @@
     },
     {
       "source": "destinotrack_business_validators_countries_createcountryvalidator",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_countries_createcountryvalidator",
       "target": "csharp_namespace:867ed03987d35738",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9352,7 +10386,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9362,7 +10396,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "ref_token": "AbstractValidator"
@@ -9375,7 +10409,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -9417,11 +10451,27 @@
     },
     {
       "source": "destinotrack_business_validators_countries_updatecountryvalidator",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Countries/UpdateCountryValidator.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_countries_updatecountryvalidator",
       "target": "csharp_namespace:867ed03987d35738",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/UpdateCountryValidator.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9431,7 +10481,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/UpdateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -9441,7 +10491,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/UpdateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "ref_token": "AbstractValidator"
@@ -9454,12 +10504,79 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Validators/Countries/UpdateCountryValidator.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
         "ref_token": "UpdateCountryDto"
       },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "target": "csharp_namespace:1203581e50ecc61f",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto_countryid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto_countryname",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto_citycount",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
       "_origin": "ast"
     },
     {
@@ -10688,7 +11805,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L251",
+      "source_location": "L260",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -10702,7 +11819,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L267",
+      "source_location": "L276",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -10717,7 +11834,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L290",
+      "source_location": "L299",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -11345,6 +12462,103 @@
       "context": "generic_arg",
       "metadata": {
         "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name",
+      "target": "microsoft_entityframeworkcore_migrations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore.Migrations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name",
+      "target": "csharp_namespace:00b9497d9b228753",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name",
+      "target": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name",
+      "target": "migration",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "Migration"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name",
+      "target": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name_up",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name_up",
+      "target": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name",
+      "target": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name_down",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_destinotrack_dataaccess_migrations_mig_city_unique_name_down",
+      "target": "destinotrack_dataaccess_migrations_20260913125716_mig_city_unique_name_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs",
+      "source_location": "L36",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
       },
       "_origin": "ast"
     },
@@ -12892,8 +14106,22 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
-      "source_location": "L14",
+      "source_location": "L12",
       "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getallwithcountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
       "_origin": "ast"
     },
     {
@@ -12902,7 +14130,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
-      "source_location": "L14",
+      "source_location": "L12",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -12916,7 +14144,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
-      "source_location": "L14",
+      "source_location": "L12",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -12930,11 +14158,63 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
-      "source_location": "L14",
+      "source_location": "L12",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
         "ref_token": "City"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getcitycountsbycountryasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getcitycountsbycountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getcitycountsbycountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_dictionary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Dictionary"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getcitycountsbycountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Guid"
       },
       "_origin": "ast"
     },
@@ -13023,8 +14303,22 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getallwithcountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
       "_origin": "ast"
     },
     {
@@ -13033,7 +14327,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -13047,7 +14341,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -13061,11 +14355,63 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
         "ref_token": "City"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getcitycountsbycountryasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getcitycountsbycountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getcitycountsbycountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_dictionary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Dictionary"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getcitycountsbycountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Guid"
       },
       "_origin": "ast"
     },
@@ -17987,7 +19333,7 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
-      "target": "csharp_namespace:5562ed0f146122f7",
+      "target": "csharp_namespace:38073f96d8e536d2",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -17996,7 +19342,71 @@
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
-        "target_fqn": "DestinoTrack.DataAccess.Repositories.Cities",
+        "target_fqn": "DestinoTrack.Business",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "csharp_namespace:b55ba66978804b14",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Cities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "csharp_namespace:54ea4b44f6196729",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Countries",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "csharp_namespace:1203581e50ecc61f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.CityDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "csharp_namespace:73772d8ed13bc437",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Areas.Admin.Models",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -18008,7 +19418,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L2",
+      "source_location": "L6",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -18024,11 +19434,75 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L3",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
         "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "microsoft_aspnetcore_mvc_rendering",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc.Rendering",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "microsoft_entityframeworkcore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "system_componentmodel_dataannotations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.ComponentModel.DataAnnotations",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -18040,7 +19514,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L4",
+      "source_location": "L12",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -18055,7 +19529,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L6",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18065,7 +19539,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L8",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18075,7 +19549,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L8",
+      "source_location": "L16",
       "weight": 1.0,
       "metadata": {
         "ref_token": "Controller"
@@ -18084,15 +19558,57 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
-      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L9",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "field",
       "metadata": {
-        "ref_token": "ICityRepository"
+        "ref_token": "ICityService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICountryService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_istringlocalizer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IStringLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "destinotrack_business_sharedresource_destinotrack_business_sharedresource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "SharedResource"
       },
       "_origin": "ast"
     },
@@ -18102,8 +19618,22 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L12",
+      "source_location": "L20",
       "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_index",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
       "_origin": "ast"
     },
     {
@@ -18112,7 +19642,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L12",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -18126,12 +19656,1095 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L12",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
         "ref_token": "IActionResult"
       },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "target": "destinotrack_dto_dtos_citydtos_createcitydto_destinotrack_dto_dtos_citydtos_createcitydto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CreateCityDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L64",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_dto_dtos_citydtos_updatecitydto_destinotrack_dto_dtos_citydtos_updatecitydto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "UpdateCityDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L79",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L108",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_yuklecountriesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L126",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_yuklecountriesasync",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L126",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_yuklecountriesasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_yuklecountriesasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "csharp_namespace:38073f96d8e536d2",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "csharp_namespace:54ea4b44f6196729",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Countries",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "csharp_namespace:809a94512f8ed55f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.CountryDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "csharp_namespace:d7c578e66491639d",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Consts",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "microsoft_aspnetcore_mvc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "microsoft_entityframeworkcore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "system_componentmodel_dataannotations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.ComponentModel.DataAnnotations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "csharp_namespace:3a3e63d31d338c86",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "controller",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "Controller"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICountryService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_istringlocalizer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IStringLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_business_sharedresource_destinotrack_business_sharedresource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "SharedResource"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_index",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_index",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_index",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "target": "destinotrack_dto_dtos_countrydtos_createcountrydto_destinotrack_dto_dtos_countrydtos_createcountrydto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CreateCountryDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_dto_dtos_countrydtos_updatecountrydto_destinotrack_dto_dtos_countrydtos_updatecountrydto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "UpdateCountryDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L66",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_countrycontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L94",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "csharp_namespace:1203581e50ecc61f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.CityDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "csharp_namespace:73772d8ed13bc437",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_cities",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_dto_dtos_citydtos_resultcitydto_destinotrack_dto_dtos_citydtos_resultcitydto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "ResultCityDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_countryfilters",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_dto_dtos_citydtos_citycountryfilterdto_destinotrack_dto_dtos_citydtos_citycountryfilterdto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CityCountryFilterDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_selectedcountryid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_search",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_totalcitycount",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel_isfiltered",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_country_index",
+      "target": "destinotrack_webui_areas_admin_views_country_index_cshtml_resultcountrydto",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Country/Index.cshtml",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "csharp_namespace:c18ba39a52108b83",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Models",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "csharp_namespace:73772d8ed13bc437",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "csharp_namespace:38073f96d8e536d2",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "destinotrack_webui_areas_admin_views_viewimports_cshtml_microsoft_aspnetcore_mvc_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "csharp_namespace:1203581e50ecc61f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.CityDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "csharp_namespace:809a94512f8ed55f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.CountryDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "destinotrack_webui_areas_admin_views_viewimports_cshtml_ihtmllocalizer",
+      "relation": "references",
+      "context": "field",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "IHtmlLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "destinotrack_webui_areas_admin_views_viewimports_cshtml_sharedresource",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L9",
+      "weight": 1.0,
       "_origin": "ast"
     },
     {
@@ -18156,12 +20769,28 @@
     },
     {
       "source": "destinotrack_webui_controllers_homecontroller",
-      "target": "csharp_namespace:c18ba39a52108b83",
+      "target": "csharp_namespace:38073f96d8e536d2",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
       "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller",
+      "target": "csharp_namespace:c18ba39a52108b83",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L2",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -18177,11 +20806,27 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L2",
+      "source_location": "L3",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
         "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -18193,7 +20838,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -18208,7 +20853,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18218,7 +20863,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18228,10 +20873,38 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "metadata": {
         "ref_token": "Controller"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "target": "destinotrack_webui_controllers_homecontroller_cs_istringlocalizer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IStringLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller",
+      "target": "destinotrack_business_sharedresource_destinotrack_business_sharedresource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "SharedResource"
       },
       "_origin": "ast"
     },
@@ -18241,7 +20914,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18251,7 +20924,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -18265,7 +20938,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18275,7 +20948,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -18285,11 +20958,11 @@
     },
     {
       "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_track",
-      "target": "httppost",
+      "target": "destinotrack_webui_controllers_homecontroller_cs_httppost",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -18303,7 +20976,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18313,7 +20986,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -18327,7 +21000,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -18337,7 +21010,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -18351,7 +21024,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
-      "source_location": "L30",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -19126,68 +21799,6 @@
       "_origin": "ast"
     },
     {
-      "source": "destinotrack_webui_sharedresource",
-      "target": "csharp_namespace:1b198991430b72dd",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/SharedResource.cs",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_sharedresource",
-      "target": "destinotrack_webui_sharedresource_destinotrack_webui_sharedresource",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/SharedResource.cs",
-      "source_location": "L6",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_views_shared_error",
-      "target": "errorviewmodel",
-      "relation": "references",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/Views/Shared/Error.cshtml",
-      "source_location": "L1",
-      "weight": 1.0,
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_views_shared_layout",
-      "target": "system_globalization",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/Views/Shared/_Layout.cshtml",
-      "source_location": "L1",
-      "weight": 1.0,
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "System.Globalization",
-        "scope_kind": "file"
-      },
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_views_viewimports",
-      "target": "csharp_namespace:1b198991430b72dd",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
-      "source_location": "L1",
-      "weight": 1.0,
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "DestinoTrack.WebUI",
-        "scope_kind": "file"
-      },
-      "_origin": "ast"
-    },
-    {
       "source": "destinotrack_webui_views_viewimports",
       "target": "csharp_namespace:c18ba39a52108b83",
       "relation": "imports",
@@ -19205,12 +21816,28 @@
     },
     {
       "source": "destinotrack_webui_views_viewimports",
-      "target": "microsoft_aspnetcore_mvc_localization",
+      "target": "csharp_namespace:38073f96d8e536d2",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
       "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_views_viewimports",
+      "target": "destinotrack_webui_views_viewimports_cshtml_microsoft_aspnetcore_mvc_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
+      "source_location": "L4",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -19221,12 +21848,12 @@
     },
     {
       "source": "destinotrack_webui_views_viewimports",
-      "target": "ihtmllocalizer",
+      "target": "destinotrack_webui_views_viewimports_cshtml_ihtmllocalizer",
       "relation": "references",
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "metadata": {
         "ref_token": "IHtmlLocalizer"
@@ -19235,11 +21862,11 @@
     },
     {
       "source": "destinotrack_webui_views_viewimports",
-      "target": "sharedresource",
+      "target": "destinotrack_webui_views_viewimports_cshtml_sharedresource",
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Views/_ViewImports.cshtml",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19524,6 +22151,30 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_index",
+      "target": "destinotrack_webui_areas_admin_models_cityindexviewmodel_destinotrack_webui_areas_admin_models_cityindexviewmodel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_controllers_homecontroller_destinotrack_webui_controllers_homecontroller_error",
+      "target": "destinotrack_webui_models_errorviewmodel_destinotrack_webui_models_errorviewmodel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DestinoTrack.WebUI/Controllers/HomeController.cs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getallasync",
       "target": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getallwithcountryasync",
       "relation": "calls",
@@ -19531,7 +22182,19 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getcitycountsbycountryasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19548,6 +22211,150 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_index",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getallasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_index",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getcountryfiltersasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_create",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_createasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L51",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getbyidasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_update",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_updateasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_delete",
+      "target": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_deleteasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller_yuklecountriesasync",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice_getallasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L128",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_index",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice_getallasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_create",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice_createasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice_getbyidasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_update",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice_updateasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L77",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller_delete",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice_deleteasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
+      "source_location": "L100",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getallasync",
       "target": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getallasync",
       "relation": "dispatches_to",
@@ -19555,7 +22362,19 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_icityservice_destinotrack_business_services_cities_icityservice_getcountryfiltersasync",
+      "target": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getcountryfiltersasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19567,7 +22386,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19579,7 +22398,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19591,7 +22410,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19603,7 +22422,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19615,7 +22434,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19627,7 +22446,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19639,7 +22458,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19651,7 +22470,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19663,7 +22482,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19706,6 +22525,18 @@
     {
       "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getallwithcountryasync",
       "target": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getallwithcountryasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getcitycountsbycountryasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_getcitycountsbycountryasync",
       "relation": "dispatches_to",
       "context": "call",
       "confidence": "INFERRED",

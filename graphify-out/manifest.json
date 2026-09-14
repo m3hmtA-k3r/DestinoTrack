@@ -108,15 +108,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Controllers/HomeController.cs": {
-    "mtime": 1788877543.3526008,
-    "seen": 1788892602.391695,
-    "ast_hash": "2b318b763e1490fb3379679d72fd3d08",
+    "mtime": 1789309403.536992,
+    "seen": 1789313415.326815,
+    "ast_hash": "27271a35b8d067838ed94bf396dda4c4",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj": {
-    "mtime": 1789018215.022606,
-    "seen": 1789245076.9155672,
-    "ast_hash": "c291e9de34ae3f1ef0d5b085a91ed7ab",
+    "mtime": 1789311638.0923932,
+    "seen": 1789313415.3268166,
+    "ast_hash": "05ee3e6414155060a403502f74104817",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Models/ErrorViewModel.cs": {
@@ -126,9 +126,9 @@
     "semantic_hash": "b9535ae4dfd0e783ad85f4e7ad750b1e"
   },
   "DestinoTrack.WebUI/Program.cs": {
-    "mtime": 1789011048.5177917,
-    "seen": 1789245076.9155712,
-    "ast_hash": "983374f077447f15483161903ec904ee",
+    "mtime": 1789303516.839677,
+    "seen": 1789313415.326818,
+    "ast_hash": "347327e6d06a5f90d45332bab7d6c220",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Properties/launchSettings.json": {
@@ -138,27 +138,27 @@
     "semantic_hash": "bc30a27f3274bd592a85289d1380a7b8"
   },
   "DestinoTrack.WebUI/Views/Home/Index.cshtml": {
-    "mtime": 1788877523.446406,
-    "seen": 1788892602.3917003,
-    "ast_hash": "3ebd8a2661507762e6a27c40cca68e7a",
+    "mtime": 1789303516.8446767,
+    "seen": 1789313415.3268197,
+    "ast_hash": "d4c051b5199b3bf4a25686a60eafc6e0",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/Home/Privacy.cshtml": {
-    "mtime": 1788877525.9970903,
-    "seen": 1788892602.391701,
-    "ast_hash": "4474e70fb0e7a4b24c6219e0a7937dc7",
+    "mtime": 1789303516.845677,
+    "seen": 1789313415.3268204,
+    "ast_hash": "a371b6ce7434a0e83555cdd176e27748",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/Shared/Error.cshtml": {
-    "mtime": 1788877528.5766706,
-    "seen": 1788892602.3917017,
-    "ast_hash": "bd97d51713f32af50da728ede7228f0d",
+    "mtime": 1789303516.8466785,
+    "seen": 1789313415.326821,
+    "ast_hash": "c2c1ca3bad6a963b7b04f925914b5d02",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/Shared/_Layout.cshtml": {
-    "mtime": 1788877515.6841466,
-    "seen": 1788892602.3917024,
-    "ast_hash": "2f2a321188136b5de91ad341e98f0d40",
+    "mtime": 1789303516.8476784,
+    "seen": 1789313415.3268218,
+    "ast_hash": "8f2bf8e496827575a5ed220f4ce8f0a4",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml": {
@@ -168,9 +168,9 @@
     "semantic_hash": "04c9739bd41a158c3fb95b9ec3020c94"
   },
   "DestinoTrack.WebUI/Views/_ViewImports.cshtml": {
-    "mtime": 1788877506.4278476,
-    "seen": 1788892602.3917043,
-    "ast_hash": "eeccd1fddce595f0126849cba4b58090",
+    "mtime": 1789308275.1844442,
+    "seen": 1789313415.3268237,
+    "ast_hash": "0620500d8293fa3973fb5f3385e6041e",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/_ViewStart.cshtml": {
@@ -216,21 +216,21 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cities/CityService.cs": {
-    "mtime": 1788877267.3937576,
-    "seen": 1788892602.3916426,
-    "ast_hash": "807867994b9fe133a5c97dca60d5af66",
+    "mtime": 1789311139.8945625,
+    "seen": 1789313415.3267374,
+    "ast_hash": "8e0ae0b086ad14fa1f2ff71be5685f0b",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cities/ICityService.cs": {
-    "mtime": 1788858036.4082603,
-    "seen": 1788892602.3916433,
-    "ast_hash": "26eefbdfdcaec76cf10c5f84becdee64",
+    "mtime": 1789311121.4762497,
+    "seen": 1789313415.3267403,
+    "ast_hash": "caf1ae680ea0be304dd4ca8889341320",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Countries/CountryService.cs": {
-    "mtime": 1788877260.9839885,
-    "seen": 1788892602.3916445,
-    "ast_hash": "03647bc2b5ad0cf323088aeb8d0e4c95",
+    "mtime": 1789309713.1796198,
+    "seen": 1789313415.326742,
+    "ast_hash": "8edeb35c2be13ee0ae8db85e8af0057f",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Countries/ICountryService.cs": {
@@ -240,27 +240,27 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Validators/Cities/CreateCityValidator.cs": {
-    "mtime": 1788877282.8037314,
-    "seen": 1788892602.391646,
-    "ast_hash": "892ae7da0fa909361da2b4e69874e6f9",
+    "mtime": 1789309643.1532211,
+    "seen": 1789313415.3267486,
+    "ast_hash": "6daf01ddc051c4ee4a2dec6df1375dd3",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Validators/Cities/UpdateCityValidator.cs": {
-    "mtime": 1788877285.6175215,
-    "seen": 1788892602.3916464,
-    "ast_hash": "8c466b1ed678b462369736cbfc470ecc",
+    "mtime": 1789309663.9790814,
+    "seen": 1789313415.3267493,
+    "ast_hash": "de34fff1220c455dbd1cc8e21e99c27a",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Validators/Countries/CreateCountryValidator.cs": {
-    "mtime": 1788877272.9967058,
-    "seen": 1788892602.3916473,
-    "ast_hash": "a569a2191faa0b363e1ec42ef47a1293",
+    "mtime": 1789309676.5797458,
+    "seen": 1789313415.3267505,
+    "ast_hash": "66a4f193a5a6a3037145ae045ae4cfb6",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Validators/Countries/UpdateCountryValidator.cs": {
-    "mtime": 1788877279.321998,
-    "seen": 1788892602.3916485,
-    "ast_hash": "5a6dcbd1ebb40a654b52743e4c38427c",
+    "mtime": 1789309687.427823,
+    "seen": 1789313415.3267515,
+    "ast_hash": "940ae3e03edae089fac938792f33021e",
     "semantic_hash": ""
   },
   "DestinoTrack.DTO/DTOs/CityDtos/CreateCityDto.cs": {
@@ -300,9 +300,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Context/AppDbContext.cs": {
-    "mtime": 1789212875.799029,
-    "seen": 1789245076.9154508,
-    "ast_hash": "25d57954954d4256d90121ce8b34c569",
+    "mtime": 1789304085.5561075,
+    "seen": 1789313415.3267615,
+    "ast_hash": "aaa4232c8e8e1b44d252533e0a36a6f2",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Migrations/20260907183549_mig_initial.cs": {
@@ -324,9 +324,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Migrations/AppDbContextModelSnapshot.cs": {
-    "mtime": 1789212875.8015387,
-    "seen": 1789245076.915466,
-    "ast_hash": "6f5e4eac47582d1e353e051321c592e0",
+    "mtime": 1789304236.2370403,
+    "seen": 1789313415.3267677,
+    "ast_hash": "648b542a6680380298c2876d544f3712",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Abouts/AboutRepository.cs": {
@@ -390,15 +390,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs": {
-    "mtime": 1788877252.4468472,
-    "seen": 1788892602.391664,
-    "ast_hash": "02847072dd38a0ef69d0b93a06daec6e",
+    "mtime": 1789310842.3412597,
+    "seen": 1789313415.3267765,
+    "ast_hash": "578dc9facb09f5a240035659c2e73818",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs": {
-    "mtime": 1788877248.9010336,
-    "seen": 1788892602.391665,
-    "ast_hash": "0953c16db0422f6d2898e580890d3123",
+    "mtime": 1789310664.9744437,
+    "seen": 1789313415.3267775,
+    "ast_hash": "0b7f68ae0fd30f4cd3fa2ef9a4201711",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/ContactInfos/ContactInfoRepository.cs": {
@@ -480,27 +480,21 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs": {
-    "mtime": 1789179722.64111,
-    "seen": 1789245076.9155583,
-    "ast_hash": "2929d9bbdc9365c3fd1e9e35b6ab1dce",
+    "mtime": 1789311739.646386,
+    "seen": 1789313415.326806,
+    "ast_hash": "b89b3eef29b945a273a5202e8f998611",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Consts/AreaNames.cs": {
-    "mtime": 1788859216.815502,
-    "seen": 1788892602.391694,
-    "ast_hash": "fc817bf79002ffb78777cc33b0b02864",
+    "mtime": 1789313003.3548265,
+    "seen": 1789313415.3268142,
+    "ast_hash": "e90b65e56cd1505279f0ce05f452f904",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Controllers/LanguageController.cs": {
     "mtime": 1788868080.559705,
     "seen": 1788892602.3916955,
     "ast_hash": "e0e609b9c7ab3b7a6304792c9a41093a",
-    "semantic_hash": ""
-  },
-  "DestinoTrack.WebUI/SharedResource.cs": {
-    "mtime": 1788868076.949604,
-    "seen": 1788892602.3916996,
-    "ast_hash": "d4e5c0b4ff5f9b06d222cf7c352f0940",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/package.json": {
@@ -585,6 +579,90 @@
     "mtime": 1789212875.8095376,
     "seen": 1789245076.915554,
     "ast_hash": "0ce2c4b6bfd821e37c2590692629b95b",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/SharedResource.cs": {
+    "mtime": 1789306669.6375556,
+    "seen": 1789313415.326748,
+    "ast_hash": "ea280962e5a1581eaed505be9e5a0fc1",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/CityDtos/CityCountryFilterDto.cs": {
+    "mtime": 1789311067.9332902,
+    "seen": 1789313415.3267522,
+    "ast_hash": "be185db168974dafc4a0da6d42e5dd07",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Migrations/20260913125716_mig_city_unique_name.cs": {
+    "mtime": 1789304236.23504,
+    "seen": 1789313415.3267665,
+    "ast_hash": "1c2594fab17b62e9c5aa13269f69baf9",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs": {
+    "mtime": 1789309308.3186636,
+    "seen": 1789313415.3268068,
+    "ast_hash": "5ba6d0e184f0f05c0fee902f358ccb52",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Models/CityIndexViewModel.cs": {
+    "mtime": 1789311687.7603004,
+    "seen": 1789313415.3268077,
+    "ast_hash": "b961a4bd06adb6e44d8ac8e9ac4b8a95",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/City/Create.cshtml": {
+    "mtime": 1789303516.8336763,
+    "seen": 1789313415.3268082,
+    "ast_hash": "2fc3d191f380ca307f5b4d27f378bb84",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/City/Index.cshtml": {
+    "mtime": 1789311820.3730533,
+    "seen": 1789313415.3268092,
+    "ast_hash": "f4f0d68215969f4d7dee1a67e7e9d95b",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/City/Update.cshtml": {
+    "mtime": 1789303516.8346777,
+    "seen": 1789313415.3268096,
+    "ast_hash": "a296ced6751ea208619f378b2608da80",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Country/Create.cshtml": {
+    "mtime": 1789303516.8346777,
+    "seen": 1789313415.3268101,
+    "ast_hash": "0c5033fcce14d82d07a49dc3f73c1676",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Country/Index.cshtml": {
+    "mtime": 1789308869.6601849,
+    "seen": 1789313415.3268108,
+    "ast_hash": "50363e446d44884467fea52908c019ca",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Country/Update.cshtml": {
+    "mtime": 1789303516.8366766,
+    "seen": 1789313415.3268113,
+    "ast_hash": "9481618c3f61845b3ac1f9ae33b951fc",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Shared/_AdminLayout.cshtml": {
+    "mtime": 1789308796.805291,
+    "seen": 1789313415.3268118,
+    "ast_hash": "61336dc16e56b23ce7f5dd0462ca1e40",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml": {
+    "mtime": 1789311702.256285,
+    "seen": 1789313415.3268127,
+    "ast_hash": "0a4ea960619470a516eb5f65e0dfd2b5",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/_ViewStart.cshtml": {
+    "mtime": 1789303516.8386772,
+    "seen": 1789313415.3268135,
+    "ast_hash": "36951a1685cb783b94fbb27719de3fa9",
     "semantic_hash": ""
   }
 }
