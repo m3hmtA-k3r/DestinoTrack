@@ -123,4 +123,74 @@
   <data name="EmailRequired" xml:space="preserve"><value>E-posta boş olamaz.</value></data>
   <data name="EmailInvalid" xml:space="preserve"><value>Geçerli bir e-posta adresi girin.</value></data>
   <data name="PasswordRequired" xml:space="preserve"><value>Şifre boş olamaz.</value></data>
+  <!-- ═══ 11 · Identity hata mesajları (LocalizedIdentityErrorDescriber) · anahtar = Identity_<Code> ═══ -->
+  <data name="Identity_DefaultError" xml:space="preserve"><value>Beklenmeyen bir hata oluştu.</value></data>
+  <data name="Identity_ConcurrencyFailure" xml:space="preserve"><value>Bu kayıt bu arada başka biri tarafından değiştirildi. Sayfayı yenileyip tekrar deneyin.</value></data>
+  <data name="Identity_PasswordMismatch" xml:space="preserve"><value>Şifre hatalı.</value></data>
+  <data name="Identity_InvalidToken" xml:space="preserve"><value>Bağlantı geçersiz ya da süresi dolmuş.</value></data>
+  <data name="Identity_RecoveryCodeRedemptionFailed" xml:space="preserve"><value>Kurtarma kodu kullanılamadı.</value></data>
+  <data name="Identity_LoginAlreadyAssociated" xml:space="preserve"><value>Bu harici giriş başka bir hesaba bağlı.</value></data>
+  <data name="Identity_InvalidUserName" xml:space="preserve"><value>'{0}' kullanılamaz. Yalnızca Türkçe karakter içermeyen harfler, rakamlar ve - . _ @ + geçerlidir.</value></data>
+  <data name="Identity_InvalidEmail" xml:space="preserve"><value>'{0}' geçerli bir e-posta adresi değil.</value></data>
+  <data name="Identity_DuplicateUserName" xml:space="preserve"><value>'{0}' kullanıcı adı zaten kullanılıyor.</value></data>
+  <data name="Identity_DuplicateEmail" xml:space="preserve"><value>'{0}' e-posta adresi zaten kullanılıyor.</value></data>
+  <data name="Identity_InvalidRoleName" xml:space="preserve"><value>'{0}' geçerli bir rol adı değil.</value></data>
+  <data name="Identity_DuplicateRoleName" xml:space="preserve"><value>'{0}' rolü zaten mevcut.</value></data>
+  <data name="Identity_UserAlreadyHasPassword" xml:space="preserve"><value>Bu kullanıcının zaten bir şifresi var.</value></data>
+  <data name="Identity_UserLockoutNotEnabled" xml:space="preserve"><value>Bu kullanıcı için hesap kilitleme açık değil.</value></data>
+  <data name="Identity_UserAlreadyInRole" xml:space="preserve"><value>Kullanıcı zaten '{0}' rolünde.</value></data>
+  <data name="Identity_UserNotInRole" xml:space="preserve"><value>Kullanıcı '{0}' rolünde değil.</value></data>
+  <data name="Identity_PasswordTooShort" xml:space="preserve"><value>Şifre en az {0} karakter olmalı.</value></data>
+  <data name="Identity_PasswordRequiresUniqueChars" xml:space="preserve"><value>Şifrede en az {0} farklı karakter olmalı.</value></data>
+  <data name="Identity_PasswordRequiresNonAlphanumeric" xml:space="preserve"><value>Şifrede en az bir özel karakter (ör. ! @ # ?) olmalı.</value></data>
+  <data name="Identity_PasswordRequiresDigit" xml:space="preserve"><value>Şifrede en az bir rakam (0-9) olmalı.</value></data>
+  <data name="Identity_PasswordRequiresLower" xml:space="preserve"><value>Şifrede en az bir küçük harf (a-z) olmalı.</value></data>
+  <data name="Identity_PasswordRequiresUpper" xml:space="preserve"><value>Şifrede en az bir büyük harf (A-Z) olmalı.</value></data>
+  <!-- ═══ 12 · Kullanıcı yönetimi (Admin): ekran · işlem · doğrulama ═══ -->
+  <data name="Users" xml:space="preserve"><value>Kullanıcılar</value></data>
+  <data name="UsersSubtitle" xml:space="preserve"><value>Personel hesaplarını, rollerini ve sorumluluk alanlarını yönet.</value></data>
+  <data name="NewUser" xml:space="preserve"><value>Yeni Kullanıcı</value></data>
+  <data name="UpdateUser" xml:space="preserve"><value>Kullanıcı Güncelle</value></data>
+  <data name="SearchUser" xml:space="preserve"><value>Ad, soyad veya e-posta ara...</value></data>
+  <data name="FirstName" xml:space="preserve"><value>Ad</value></data>
+  <data name="LastName" xml:space="preserve"><value>Soyad</value></data>
+  <data name="ConfirmPassword" xml:space="preserve"><value>Şifre (tekrar)</value></data>
+  <data name="NewPassword" xml:space="preserve"><value>Yeni şifre</value></data>
+  <data name="ConfirmNewPassword" xml:space="preserve"><value>Yeni şifre (tekrar)</value></data>
+  <data name="NewPasswordHint" xml:space="preserve"><value>Şifreyi değiştirmeyeceksen boş bırak.</value></data>
+  <data name="PasswordRuleHint" xml:space="preserve"><value>En az {0} karakter; büyük harf, küçük harf ve rakam içermeli.</value></data>
+  <data name="SelectRole" xml:space="preserve"><value>Rol seçin</value></data>
+  <data name="SelectCountry" xml:space="preserve"><value>Ülke seçin</value></data>
+  <data name="Branch" xml:space="preserve"><value>Şube</value></data>
+  <data name="BranchComingSoon" xml:space="preserve"><value>Şube seçimi, şubeler eklendiğinde (4. aşama) açılacak.</value></data>
+  <data name="Status" xml:space="preserve"><value>Durum</value></data>
+  <data name="Active" xml:space="preserve"><value>Aktif</value></data>
+  <data name="Inactive" xml:space="preserve"><value>Pasif</value></data>
+  <data name="Deactivate" xml:space="preserve"><value>Pasifleştir</value></data>
+  <data name="Activate" xml:space="preserve"><value>Aktifleştir</value></data>
+  <data name="ConfirmDeactivate" xml:space="preserve"><value>Bu kullanıcı pasifleştirilecek ve giriş yapamayacak. Emin misin?</value></data>
+  <data name="CurrentUserBadge" xml:space="preserve"><value>Sen</value></data>
+  <data name="UserNotFound" xml:space="preserve"><value>Kullanıcı bulunamadı.</value></data>
+  <data name="LastAdminProtected" xml:space="preserve"><value>Sistemde en az bir aktif Sistem Yöneticisi kalmalı. Bu işlem yapılamaz.</value></data>
+  <data name="CannotDeactivateSelf" xml:space="preserve"><value>Kendi hesabını pasifleştiremezsin.</value></data>
+  <data name="CannotChangeOwnRole" xml:space="preserve"><value>Kendi rolünü değiştiremezsin.</value></data>
+  <data name="AccountDeactivated" xml:space="preserve"><value>Hesabın pasif durumda. Yöneticinle iletişime geç.</value></data>
+  <data name="FirstNameRequired" xml:space="preserve"><value>Ad boş olamaz.</value></data>
+  <data name="FirstNameMaxLength" xml:space="preserve"><value>Ad en fazla 50 karakter olabilir.</value></data>
+  <data name="LastNameRequired" xml:space="preserve"><value>Soyad boş olamaz.</value></data>
+  <data name="LastNameMaxLength" xml:space="preserve"><value>Soyad en fazla 50 karakter olabilir.</value></data>
+  <data name="EmailMaxLength" xml:space="preserve"><value>E-posta en fazla 256 karakter olabilir.</value></data>
+  <data name="ConfirmPasswordMismatch" xml:space="preserve"><value>Şifreler eşleşmiyor.</value></data>
+  <data name="RoleRequired" xml:space="preserve"><value>Rol seçilmelidir.</value></data>
+  <data name="RoleInvalid" xml:space="preserve"><value>Geçersiz rol.</value></data>
+  <data name="CountryRequiredForManager" xml:space="preserve"><value>Bölge Operasyon Müdürü için ülke seçilmelidir.</value></data>
+  <!-- ═══ 13 · Admin menüsü (TALP-32: sabit Türkçe menü metinleri) ═══ -->
+  <data name="Menu_Dashboard" xml:space="preserve"><value>Gösterge Paneli</value></data>
+  <data name="Menu_Shipments" xml:space="preserve"><value>Gönderi Yönetimi</value></data>
+  <data name="Menu_CourierDistribution" xml:space="preserve"><value>Kurye &amp; Dağıtım</value></data>
+  <data name="Menu_BranchesWarehouses" xml:space="preserve"><value>Şubeler &amp; Depolar</value></data>
+  <data name="Menu_Customers" xml:space="preserve"><value>Müşteriler</value></data>
+  <data name="Menu_Reports" xml:space="preserve"><value>Raporlar &amp; Analiz</value></data>
+  <data name="Menu_SystemSettings" xml:space="preserve"><value>Sistem Ayarları</value></data>
+  <data name="Menu_UserSettings" xml:space="preserve"><value>Kullanıcı ve Yetki</value></data>
 </root>

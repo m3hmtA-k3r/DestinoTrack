@@ -1,0 +1,122 @@
+﻿@model UpdateUserDto
+@inject IOptions<IdentityOptions> IdentityOptions
+@{
+    ViewData["Title"] = L["UpdateUser"].Value;
+
+    var formErrors = ViewData.ModelState[string.Empty]?.Errors;
+
+    var isSelf = ViewBag.IsSelf == true;
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex items-center gap-4 mt-4 mb-8">
+    <a asp-action="Index" title="@L["Cancel"]"
+       class="p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+    </a>
+    <div class="flex flex-col">
+        <span class="font-label-md text-label-md text-primary uppercase">@L["Users"]</span>
+        <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["UpdateUser"]</h1>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="m3-card p-6 w-full max-w-2xl">
+    @if (formErrors?.Count > 0)
+    {
+        <div class="flex items-start gap-3 p-4 mb-5 rounded-xl bg-error-container text-on-error-container">
+            <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+            <span class="font-body-sm text-body-sm">@formErrors[0].ErrorMessage</span>
+        </div>
+    }
+
+    <form asp-action="Update" method="post" class="flex flex-col gap-5">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+                <label asp-for="FirstName" class="field-label">@L["FirstName"]</label>
+                <input asp-for="FirstName" class="field-input" autocomplete="off" />
+                <span asp-validation-for="FirstName" class="field-error"></span>
+            </div>
+            <div>
+                <label asp-for="LastName" class="field-label">@L["LastName"]</label>
+                <input asp-for="LastName" class="field-input" autocomplete="off" />
+                <span asp-validation-for="LastName" class="field-error"></span>
+            </div>
+        </div>
+
+        <div>
+            <label asp-for="Email" class="field-label">@L["Email"]</label>
+            <input asp-for="Email" type="email" class="field-input" autocomplete="off" />
+            <span asp-validation-for="Email" class="field-error"></span>
+        </div>
+        
+        <div class="flex flex-col gap-2">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="NewPassword" class="field-label">@L["NewPassword"]</label>
+                    <input asp-for="NewPassword" type="password" class="field-input" autocomplete="new-password" />
+                    <span asp-validation-for="NewPassword" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="ConfirmNewPassword" class="field-label">@L["ConfirmNewPassword"]</label>
+                    <input asp-for="ConfirmNewPassword" type="password" class="field-input" autocomplete="new-password" />
+                    <span asp-validation-for="ConfirmNewPassword" class="field-error"></span>
+                </div>
+            </div>
+            <p class="field-hint">@L["NewPasswordHint"] @L["PasswordRuleHint", IdentityOptions.Value.Password.RequiredLength]</p>
+        </div>
+
+        <div>
+            <label asp-for="Role" class="field-label">@L["Role"]</label>
+            @if (isSelf)
+            {
+                <input type="hidden" asp-for="Role" />
+                <select class="field-input cursor-not-allowed" disabled data-role-select>
+                    @foreach (var item in (List<SelectListItem>)ViewBag.Roles)
+                    {
+                        <option value="@item.Value" selected="@(item.Value == Model.Role)">@item.Text</option>
+                    }
+                </select>
+                <p class="field-hint">@L["CannotChangeOwnRole"]</p>
+            }
+            else
+            {
+                <select asp-for="Role" asp-items="ViewBag.Roles" class="field-input cursor-pointer" data-role-select>
+                    <option value="">— @L["SelectRole"] —</option>
+                </select>
+            }
+            <span asp-validation-for="Role" class="field-error"></span>
+        </div>
+
+        <div data-scope-for="Manager">
+            <label asp-for="CountryId" class="field-label">@L["Country"]</label>
+            <select asp-for="CountryId" asp-items="ViewBag.Countries" class="field-input cursor-pointer">
+                <option value="">— @L["SelectCountry"] —</option>
+            </select>
+            <span asp-validation-for="CountryId" class="field-error"></span>
+        </div>
+
+        <div data-scope-for="Personel Courier">
+            <label for="BranchPlaceholder" class="field-label">@L["Branch"]</label>
+            <select id="BranchPlaceholder" class="field-input cursor-not-allowed" disabled>
+                <option>@L["BranchNotAssigned"]</option>
+            </select>
+            <p class="field-hint">@L["BranchComingSoon"]</p>
+        </div>
+
+        <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
+            <a asp-action="Index" class="btn-tonal">@L["Cancel"]</a>
+            <button type="submit" class="btn-filled">
+                <span class="material-symbols-outlined text-[20px]">check</span>
+                <span>@L["Update"]</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <partial name="_RoleScopeScript" />
+}

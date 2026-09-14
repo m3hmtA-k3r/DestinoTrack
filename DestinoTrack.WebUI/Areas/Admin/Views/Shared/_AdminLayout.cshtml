@@ -50,33 +50,34 @@
             <nav class="px-4 mt-4 flex flex-col gap-1">
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">dashboard</span>
-                    <span class="font-body-sm text-body-sm">Gösterge Paneli</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_Dashboard"]</span>
                 </span>
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">inventory_2</span>
-                    <span class="font-body-sm text-body-sm">Gönderi Yönetimi</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_Shipments"]</span>
                 </span>
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
-                    <span class="font-body-sm text-body-sm">Kurye &amp; Dağıtım</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_CourierDistribution"]</span>
                 </span>
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">warehouse</span>
-                    <span class="font-body-sm text-body-sm">Şubeler &amp; Depolar</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_BranchesWarehouses"]</span>
                 </span>
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">groups</span>
-                    <span class="font-body-sm text-body-sm">Müşteriler</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_Customers"]</span>
                 </span>
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">monitoring</span>
-                    <span class="font-body-sm text-body-sm">Raporlar &amp; Analiz</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_Reports"]</span>
                 </span>
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">settings</span>
-                    <span class="font-body-sm text-body-sm">Sistem Ayarları</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_SystemSettings"]</span>
                 </span>
             </nav>
+
 
             <!-- Konum tanımları  -->
             <div class="px-8 mt-6 mb-2 text-label-md font-label-md uppercase tracking-wider text-secondary">@L["LocationSettings"]</div>
@@ -90,6 +91,17 @@
                     <span class="font-body-sm text-body-sm">@L["Cities"]</span>
                 </a>
             </nav>
+
+            <!-- Kullanıcı ve yetki  -->
+            <div class="px-8 mt-2 mb-2 text-label-md font-label-md uppercase tracking-wider text-secondary">@L["Menu_UserSettings"]</div>
+            <nav class="px-4 pb-4 flex flex-col gap-1">
+                <a asp-area="Admin" asp-controller="User" asp-action="Index" class="@(controller == "User" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">manage_accounts</span>
+                    <span class="font-body-sm text-body-sm">@L["Users"]</span>
+                </a>
+            </nav>
+
+
         </div>
 
         <!-- Kullanıcı kartı  -->

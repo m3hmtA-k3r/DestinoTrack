@@ -1,7 +1,9 @@
 ﻿using DestinoTrack.Business;
+using DestinoTrack.Business.Localization;
 using DestinoTrack.Business.Services.Cities;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Dashboard;
+using DestinoTrack.Business.Services.Users;
 using DestinoTrack.DataAccess.Context;
 using DestinoTrack.DataAccess.Repositories.Abouts;
 using DestinoTrack.DataAccess.Repositories.Addresses;
@@ -47,7 +49,8 @@ builder.Services.AddIdentity<AppUser, AppRole>(options =>
     // Aynı e-postayla ikinci hesap açılamaz
     options.User.RequireUniqueEmail = true;
 }).AddEntityFrameworkStores<AppDbContext>()
-    .AddDefaultTokenProviders();
+    .AddDefaultTokenProviders()
+    .AddErrorDescriber<LocalizedIdentityErrorDescriber>();
 
 // Oturum çerezi — giriş, çıkış ve erişim engeli adresleri + süre
 builder.Services.ConfigureApplicationCookie(options =>
@@ -100,6 +103,7 @@ builder.Services.AddScoped<IPaymentsRepository, PaymentsRepository>();
 builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 builder.Services.AddControllersWithViews(options =>
 {
