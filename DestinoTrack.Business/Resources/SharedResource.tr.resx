@@ -96,4 +96,31 @@
   <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Dağıtım şubesine ulaştı</value></data>
   <data name="Status_OutForDelivery" xml:space="preserve"><value>Dağıtıma çıktı</value></data>
   <data name="Status_Delivered" xml:space="preserve"><value>Teslim edildi</value></data>
+  <!-- ═══ 10 · Hesap: giriş · çıkış · erişim engeli · Hesabım · rol adları ═══ -->
+  <data name="Login" xml:space="preserve"><value>Giriş Yap</value></data>
+  <data name="LoginTitle" xml:space="preserve"><value>Hesabına giriş yap</value></data>
+  <data name="LoginSubtitle" xml:space="preserve"><value>Devam etmek için e-posta adresini ve şifreni gir.</value></data>
+  <data name="Email" xml:space="preserve"><value>E-posta</value></data>
+  <data name="Password" xml:space="preserve"><value>Şifre</value></data>
+  <data name="RememberMe" xml:space="preserve"><value>Beni hatırla</value></data>
+  <data name="InvalidLogin" xml:space="preserve"><value>E-posta veya şifre hatalı.</value></data>
+  <data name="AccountLocked" xml:space="preserve"><value>Çok fazla hatalı deneme yapıldı. Hesabın 15 dakika boyunca kilitlendi.</value></data>
+  <data name="AccessDeniedTitle" xml:space="preserve"><value>Erişim engellendi</value></data>
+  <data name="AccessDeniedMessage" xml:space="preserve"><value>Bu sayfayı görüntüleme yetkin yok.</value></data>
+  <data name="BackToHome" xml:space="preserve"><value>Ana sayfaya dön</value></data>
+  <data name="MyAccount" xml:space="preserve"><value>Hesabım</value></data>
+  <data name="FullName" xml:space="preserve"><value>Ad Soyad</value></data>
+  <data name="Role" xml:space="preserve"><value>Rol</value></data>
+  <data name="Scope" xml:space="preserve"><value>Kapsam</value></data>
+  <data name="ScopeAllCountries" xml:space="preserve"><value>Tüm ülkeler</value></data>
+  <data name="CountryNotAssigned" xml:space="preserve"><value>Ülke henüz atanmadı</value></data>
+  <data name="BranchNotAssigned" xml:space="preserve"><value>Şube henüz atanmadı</value></data>
+  <data name="Role_Admin" xml:space="preserve"><value>Sistem Yöneticisi</value></data>
+  <data name="Role_Manager" xml:space="preserve"><value>Bölge Operasyon Müdürü</value></data>
+  <data name="Role_Personel" xml:space="preserve"><value>Şube Yetkilisi</value></data>
+  <data name="Role_Courier" xml:space="preserve"><value>Kurye</value></data>
+  <data name="Role_Customer" xml:space="preserve"><value>Müşteri</value></data>
+  <data name="EmailRequired" xml:space="preserve"><value>E-posta boş olamaz.</value></data>
+  <data name="EmailInvalid" xml:space="preserve"><value>Geçerli bir e-posta adresi girin.</value></data>
+  <data name="PasswordRequired" xml:space="preserve"><value>Şifre boş olamaz.</value></data>
 </root>

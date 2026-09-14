@@ -149,6 +149,21 @@ namespace DestinoTrack.DataAccess.Context
                 .HasForeignKey(u => u.CustomerId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            // Kullanıcı kapsamı : Manager → ülke
+            builder.Entity<AppUser>()
+                .HasOne(u => u.Country)
+                .WithMany()
+                .HasForeignKey(u => u.CountryId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Kullanıcı kapsamı: Personel / Courier → şube
+            // Branch.Manager da AppUser'a bağlı; ikisi ayrı ilişki — WithMany() ikisinde de açıkça yazılı
+            builder.Entity<AppUser>()
+                .HasOne(u => u.Branch)
+                .WithMany()
+                .HasForeignKey(u => u.BranchId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             //TrackCode sütununda aynı değer iki kez olamaz
             builder.Entity<Cargo>()
@@ -160,7 +175,7 @@ namespace DestinoTrack.DataAccess.Context
                 .HasIndex(c => c.IsoCode)
                 .IsUnique();
 
-            // Aynı ülkede aynı şehir iki kez olamaz (TALP-19)
+            // Aynı ülkede aynı şehir iki kez olamaz  
             // İki sütun birlikte unique: "Ankara" Türkiye'de bir kez, ama başka ülkede aynı ad olabilir
             builder.Entity<City>()
                 .HasIndex(c => new { c.CountryId, c.Name })
@@ -219,7 +234,7 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(c => c.LanguageCode).HasMaxLength(5);
             });
 
-            // CI_AI: büyük/küçük harf ve aksan duyarsız — "Sao Paulo" = "São Paulo", "ankara" = "Ankara" (TALP-19)
+            // CI_AI: büyük/küçük harf ve aksan duyarsız — "Sao Paulo" = "São Paulo", "ankara" = "Ankara" 
             builder.Entity<City>()
                 .Property(c => c.Name)
                 .HasMaxLength(100)
@@ -292,9 +307,7 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(u => u.LastName).HasMaxLength(50);
             });
 
-            // --- Sabit veri: faaliyet gösterilen üç ülke ---
-            // Id'ler elle verildi; HasData her migration'da aynı kaydı üretebilmek için
-            // değişmeyen anahtar ister (Guid.NewGuid burada kullanılamaz).
+            // Şuan için Sabit veri: faaliyet gösterilen üç ülke  
             builder.Entity<Country>().HasData(
                 new Country
                 {

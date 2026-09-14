@@ -96,4 +96,31 @@
   <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Chegou à filial de entrega</value></data>
   <data name="Status_OutForDelivery" xml:space="preserve"><value>Saiu para entrega</value></data>
   <data name="Status_Delivered" xml:space="preserve"><value>Entregue</value></data>
+  <!-- ═══ 10 · Hesap: giriş · çıkış · erişim engeli · Hesabım · rol adları ═══ -->
+  <data name="Login" xml:space="preserve"><value>Entrar</value></data>
+  <data name="LoginTitle" xml:space="preserve"><value>Entre na sua conta</value></data>
+  <data name="LoginSubtitle" xml:space="preserve"><value>Informe seu e-mail e sua senha para continuar.</value></data>
+  <data name="Email" xml:space="preserve"><value>E-mail</value></data>
+  <data name="Password" xml:space="preserve"><value>Senha</value></data>
+  <data name="RememberMe" xml:space="preserve"><value>Lembrar de mim</value></data>
+  <data name="InvalidLogin" xml:space="preserve"><value>E-mail ou senha inválidos.</value></data>
+  <data name="AccountLocked" xml:space="preserve"><value>Muitas tentativas inválidas. Sua conta foi bloqueada por 15 minutos.</value></data>
+  <data name="AccessDeniedTitle" xml:space="preserve"><value>Acesso negado</value></data>
+  <data name="AccessDeniedMessage" xml:space="preserve"><value>Você não tem permissão para ver esta página.</value></data>
+  <data name="BackToHome" xml:space="preserve"><value>Voltar ao início</value></data>
+  <data name="MyAccount" xml:space="preserve"><value>Minha conta</value></data>
+  <data name="FullName" xml:space="preserve"><value>Nome completo</value></data>
+  <data name="Role" xml:space="preserve"><value>Função</value></data>
+  <data name="Scope" xml:space="preserve"><value>Escopo</value></data>
+  <data name="ScopeAllCountries" xml:space="preserve"><value>Todos os países</value></data>
+  <data name="CountryNotAssigned" xml:space="preserve"><value>Nenhum país atribuído ainda</value></data>
+  <data name="BranchNotAssigned" xml:space="preserve"><value>Nenhuma filial atribuída ainda</value></data>
+  <data name="Role_Admin" xml:space="preserve"><value>Administrador do sistema</value></data>
+  <data name="Role_Manager" xml:space="preserve"><value>Gerente de Operações Regional</value></data>
+  <data name="Role_Personel" xml:space="preserve"><value>Responsável da filial</value></data>
+  <data name="Role_Courier" xml:space="preserve"><value>Entregador</value></data>
+  <data name="Role_Customer" xml:space="preserve"><value>Cliente</value></data>
+  <data name="EmailRequired" xml:space="preserve"><value>O e-mail não pode ficar vazio.</value></data>
+  <data name="EmailInvalid" xml:space="preserve"><value>Informe um endereço de e-mail válido.</value></data>
+  <data name="PasswordRequired" xml:space="preserve"><value>A senha não pode ficar vazia.</value></data>
 </root>

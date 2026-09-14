@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Identity;
 namespace DestinoTrack.WebUI.Seed
 {
     // Uygulama açılışında çalışır: rolleri ve ilk Admin'i oluşturur.
-    // Kayıt zaten varsa dokunmaz — kaç kez çalışırsa çalışsın çift kayıt oluşmaz.
+    // Kkaç kez çalışırsa çalışsın çift kayıt oluşmaz.
     public static class IdentitySeeder
     {
         public static async Task SeedAsync(IServiceProvider services)
@@ -17,8 +17,7 @@ namespace DestinoTrack.WebUI.Seed
             var configuration = scope.ServiceProvider.GetRequiredService<IConfiguration>();
             var logger = scope.ServiceProvider.GetRequiredService<ILoggerFactory>().CreateLogger("IdentitySeeder");
 
-            // 1 · Roller — RoleManager, NormalizedName'i kendisi doldurur
-            //     (referans projedeki context.Roles.AddRange bunu boş bırakıyordu)
+            // 1 · Roller — RoleManager, NormalizedName'i kendisi doldurur 
             foreach (var roleName in RoleNames.All)
             {
                 if (!await roleManager.RoleExistsAsync(roleName))

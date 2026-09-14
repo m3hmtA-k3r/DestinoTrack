@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = L["AccessDeniedTitle"].Value;
+}
+<!-- kim olduğunu biliyorum ama buraya giremezsin" durumunda açılıyor.  -->
+<section class="mx-auto flex max-w-7xl justify-center px-margin-mobile lg:px-margin-desktop py-12 lg:py-20">
+    <div class="m3-card w-full max-w-md p-6 sm:p-8 flex flex-col items-center gap-4 text-center">
+        <div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+            <span class="material-symbols-outlined text-[28px]">block</span>
+        </div>
+        <h1 class="font-headline-md text-headline-md text-on-surface">@L["AccessDeniedTitle"]</h1>
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["AccessDeniedMessage"]</p>
+
+        <div class="flex flex-col sm:flex-row gap-3 w-full sm:w-auto pt-2">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">home</span>
+                <span>@L["BackToHome"]</span>
+            </a>
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a asp-area="" asp-controller="Account" asp-action="Profile" class="btn-filled">
+                    <span class="material-symbols-outlined text-[20px]">person</span>
+                    <span>@L["MyAccount"]</span>
+                </a>
+            }
+        </div>
+    </div>
+</section>

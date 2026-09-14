@@ -1,0 +1,82 @@
+﻿@model ProfileViewModel
+@{
+    ViewData["Title"] = L["MyAccount"].Value;
+
+    var isAdmin = Model.Roles.Contains(RoleNames.Admin);
+    var isManager = Model.Roles.Contains(RoleNames.Manager);
+    var isBranchUser = Model.Roles.Contains(RoleNames.Personel) || Model.Roles.Contains(RoleNames.Courier);
+
+    // Avatar için ad ve soyadın baş harfleri: "Mehmet Yılmaz" → "MY"
+    var initials = string.Concat(Model.FullName
+        .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+        .Take(2)
+        .Select(part => char.ToUpper(part[0])));
+
+    // Şu anki dilin kendi dilindeki adı: Türkçe · English · Português
+    var languageName = System.Globalization.CultureInfo.CurrentUICulture.NativeName;
+    languageName = languageName.Length > 0 ? char.ToUpper(languageName[0]) + languageName[1..] : languageName;
+}
+
+<section class="mx-auto flex max-w-7xl justify-center px-margin-mobile lg:px-margin-desktop py-12 lg:py-20">
+    <div class="m3-card w-full max-w-lg p-6 sm:p-8">
+
+        <div class="flex items-center gap-4 mb-8">
+            <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shrink-0">@initials</div>
+            <div class="min-w-0">
+                <span class="font-label-md text-label-md text-primary uppercase">@L["MyAccount"]</span>
+                <h1 class="font-headline-md text-headline-md text-on-surface truncate">@Model.FullName</h1>
+            </div>
+        </div>
+
+        <dl class="flex flex-col divide-y divide-outline-variant/40">
+            <div class="flex items-center justify-between gap-4 py-3">
+                <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["Email"]</dt>
+                <dd class="font-body-sm text-body-sm text-on-surface text-right break-all">@Model.Email</dd>
+            </div>
+
+            <div class="flex items-center justify-between gap-4 py-3">
+                <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["Role"]</dt>
+                <dd class="flex flex-wrap justify-end gap-2">
+                    @foreach (var role in Model.Roles)
+                    {
+                        <span class="chip-info">@L["Role_" + role]</span>
+                    }
+                </dd>
+            </div>
+
+            @* Customer'ın kapsamı yok — satır yalnızca personel rollerinde görünür *@
+            @if (isAdmin || isManager || isBranchUser)
+            {
+                <div class="flex items-center justify-between gap-4 py-3">
+                    <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["Scope"]</dt>
+                    <dd class="font-body-sm text-body-sm text-on-surface text-right">
+                        @if (isAdmin)
+                        {
+                            @L["ScopeAllCountries"]
+                        }
+                        else if (isManager)
+                        {
+                            @(Model.CountryName ?? L["CountryNotAssigned"].Value)
+                        }
+                        else
+                        {
+                            @(Model.BranchName ?? L["BranchNotAssigned"].Value)
+                        }
+                    </dd>
+                </div>
+            }
+
+            <div class="flex items-center justify-between gap-4 py-3">
+                <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["LanguageCode"]</dt>
+                <dd class="font-body-sm text-body-sm text-on-surface text-right">@languageName</dd>
+            </div>
+        </dl>
+
+        <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" class="mt-8">
+            <button type="submit" class="btn-tonal w-full h-11 hover:bg-error-container hover:text-on-error-container">
+                <span class="material-symbols-outlined text-[20px]">logout</span>
+                <span>@L["Logout"]</span>
+            </button>
+        </form>
+    </div>
+</section>
