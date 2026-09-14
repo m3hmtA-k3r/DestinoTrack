@@ -1,10 +1,12 @@
+﻿using DestinoTrack.Business;
 using DestinoTrack.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Localization;
 using System.Diagnostics;
 
 namespace DestinoTrack.WebUI.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController(IStringLocalizer<SharedResource> _localizer) : Controller
     {
         public IActionResult Index()
         {
@@ -12,12 +14,11 @@ namespace DestinoTrack.WebUI.Controllers
         }
 
         // Takip sorgusu. Cargo servisi yazıldığında burada gerçek arama yapılacak
-        // (CargoRepository.GetByTrackCodeAsync zaten hazır).
         [HttpPost]
         public IActionResult Track(string code)
         {
             TempData["TrackCode"] = code;
-            TempData["TrackNotice"] = "Kargo modülü henüz tamamlanmadı. Takip sorgusu Cargo servisi eklendiğinde çalışacak.";
+            TempData["TrackNotice"] = _localizer["TrackNotice"].Value;
 
             return RedirectToAction(nameof(Index));
         }

@@ -4,6 +4,8 @@
     {
         public const string Admin = "Admin";
         public const string Manager = "Manager";
-        public const string User = "User";
+        public const string Personel = "Personel";
+        public const string Customer = "Customer";
+        public const string Courier = "Courier";
     }
 }

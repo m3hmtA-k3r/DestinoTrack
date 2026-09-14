@@ -1,4 +1,4 @@
-using DestinoTrack.DataAccess.Context;
+﻿using DestinoTrack.DataAccess.Context;
 using DestinoTrack.DataAccess.Repositories.GenericRepositories;
 using DestinoTrack.Entity.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -9,14 +9,34 @@ namespace DestinoTrack.DataAccess.Repositories.Cities
     {
         private readonly AppDbContext _context = context;
 
-        // Listeleme ekranında ülke adı da gösteriliyor.
-        // Include olmadan her satır için ayrı sorgu açılırdı (N+1).
-        public async Task<List<City>> GetAllWithCountryAsync()
+        public async Task<List<City>> GetAllWithCountryAsync(Guid? countryId = null, string? search = null)
         {
-            return await _context.Cities
-                .Include(c => c.Country)
+            // Sorgu adım adım kurulur; ToListAsync'e kadar veritabanına gidilmez
+            IQueryable<City> query = _context.Cities.Include(c => c.Country);
+
+            if (countryId.HasValue)
+            {
+                query = query.Where(c => c.CountryId == countryId.Value);
+            }
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {                
+                var term = search.Trim();
+                query = query.Where(c => c.Name.Contains(term));
+            }
+
+            return await query
                 .OrderBy(c => c.Name)
                 .ToListAsync();
+        }
+
+        // CountryId — sayım veritabanında yapılır, şehirler belleğe çekilmez
+        public async Task<Dictionary<Guid, int>> GetCityCountsByCountryAsync()
+        {
+            return await _context.Cities
+                .GroupBy(c => c.CountryId)
+                .Select(g => new { CountryId = g.Key, Count = g.Count() })
+                .ToDictionaryAsync(x => x.CountryId, x => x.Count);
         }
     }
 }

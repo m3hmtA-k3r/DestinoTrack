@@ -1,7 +1,11 @@
-﻿
-@model List<ResultCityDto>
+﻿@model CityIndexViewModel
 @{
     ViewData["Title"] = L["Cities"].Value;
+
+    // Ülke sınıfları: seçili olan turuncu, diğerleri beyaz
+    var chipBase = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-label-md text-label-md transition-colors";
+    var chipOn = chipBase + " bg-primary-container text-on-primary";
+    var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
 }
 
 <!-- Sayfa başlığı -->
@@ -11,10 +15,10 @@
             <span class="material-symbols-outlined text-[28px]">location_city</span>
         </div>
         <div class="flex flex-col">
-            <span class="font-label-md text-label-md text-primary uppercase">Konum Tanımları</span>
+            <span class="font-label-md text-label-md text-primary uppercase">@L["LocationSettings"]</span>
             <div class="flex items-center gap-2">
                 <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Cities"]</h1>
-                <span class="chip-neutral">@Model.Count</span>
+                <span class="chip-neutral">@Model.Cities.Count</span>
             </div>
         </div>
     </div>
@@ -33,9 +37,44 @@
     </div>
 }
 
+<!-- Filtre: ülke + şehir adı araması -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+
+    <!-- link: tıklanınca sayfa ?countryId=... ile yeniden yüklenir, arama korunur -->
+    <div class="flex flex-wrap items-center gap-2">
+        <a asp-action="Index" asp-route-q="@Model.Search"
+           class="@(Model.SelectedCountryId == null ? chipOn : chipOff)">
+            <span>@L["All"]</span>
+            <span class="opacity-70">@Model.TotalCityCount</span>
+        </a>
+        @foreach (var country in Model.CountryFilters)
+        {
+            <a asp-action="Index" asp-route-countryId="@country.CountryId" asp-route-q="@Model.Search"
+               class="@(Model.SelectedCountryId == country.CountryId ? chipOn : chipOff)">
+                <span>@country.CountryName</span>
+                <span class="opacity-70">@country.CityCount</span>
+            </a>
+        }
+    </div>
+
+    <!-- Arama formu GET ile gider: sonuç adres çubuğunda görünür, seçili ülke gizli alanla korunur -->
+    <form asp-action="Index" method="get" class="flex items-center gap-2 w-full lg:w-auto">
+        @if (Model.SelectedCountryId != null)
+        {
+            <input type="hidden" name="countryId" value="@Model.SelectedCountryId" />
+        }
+        <div class="relative flex-1 lg:w-72">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
+            <input type="search" name="q" value="@Model.Search" placeholder="@L["SearchCity"]"
+                   class="field-input pl-10" autocomplete="off" />
+        </div>
+        <button type="submit" class="btn-tonal shrink-0">@L["Search"]</button>
+    </form>
+</div>
+
 <!-- Liste -->
 <div class="m3-card overflow-hidden">
-    @if (Model.Any())
+    @if (Model.Cities.Any())
     {
         <div class="overflow-x-auto">
             <table class="m3-table font-body-sm text-body-sm">
@@ -47,7 +86,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var city in Model)
+                    @foreach (var city in Model.Cities)
                     {
                         <tr>
                             <td class="py-4 px-6">
@@ -82,8 +121,21 @@
             </table>
         </div>
     }
+    else if (Model.IsFiltered)
+    {
+        <!-- Filtreye uyan şehir yok -->
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+            <a asp-action="Index" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+                <span>@L["ClearFilter"]</span>
+            </a>
+        </div>
+    }
     else
     {
+        <!-- Veritabanında hiç şehir yok -->
         <div class="empty-state">
             <span class="material-symbols-outlined text-[48px] text-outline">location_off</span>
             <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</p>

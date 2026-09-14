@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <!-- ═══ 1 · Menü ve modül adları ═══ -->
+  <data name="AdminPanel" xml:space="preserve"><value>Yönetim Paneli</value></data>
+  <data name="Dashboard" xml:space="preserve"><value>Panel</value></data>
+  <data name="Countries" xml:space="preserve"><value>Ülkeler</value></data>
+  <data name="Cities" xml:space="preserve"><value>Şehirler</value></data>
+  <data name="Branches" xml:space="preserve"><value>Şubeler</value></data>
+  <data name="Couriers" xml:space="preserve"><value>Kuryeler</value></data>
+  <data name="Cargos" xml:space="preserve"><value>Kargolar</value></data>
+  <data name="Payments" xml:space="preserve"><value>Ödemeler</value></data>
+  <data name="LocationSettings" xml:space="preserve"><value>Konum Tanımları</value></data>
+
+  <!-- ═══ 2 · Ortak butonlar ve durumlar ═══ -->
+  <data name="Save" xml:space="preserve"><value>Kaydet</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Vazgeç</value></data>
+  <data name="Update" xml:space="preserve"><value>Güncelle</value></data>
+  <data name="Delete" xml:space="preserve"><value>Sil</value></data>
+  <data name="Create" xml:space="preserve"><value>Ekle</value></data>
+  <data name="Actions" xml:space="preserve"><value>İşlemler</value></data>
+  <data name="ConfirmDelete" xml:space="preserve"><value>Bu kaydı silmek istediğinize emin misiniz?</value></data>
+  <data name="NoRecords" xml:space="preserve"><value>Henüz kayıt eklenmemiş.</value></data>
+  <data name="ComingSoon" xml:space="preserve"><value>Yakında</value></data>
+  <data name="All" xml:space="preserve"><value>Tümü</value></data>
+  <data name="Search" xml:space="preserve"><value>Ara</value></data>
+  <data name="NoResults" xml:space="preserve"><value>Sonuç bulunamadı.</value></data>
+  <data name="ClearFilter" xml:space="preserve"><value>Filtreyi temizle</value></data>
+
+  <!-- ═══ 3 · Admin layout (üst çubuk, kullanıcı kartı, mobil menü) ═══ -->
+  <data name="Administrator" xml:space="preserve"><value>Yönetici</value></data>
+  <data name="NoSessionYet" xml:space="preserve"><value>Oturum henüz yok</value></data>
+  <data name="Logout" xml:space="preserve"><value>Çıkış Yap</value></data>
+  <data name="OpenMenu" xml:space="preserve"><value>Menüyü aç</value></data>
+  <data name="CloseMenu" xml:space="preserve"><value>Menüyü kapat</value></data>
+  <data name="Notifications" xml:space="preserve"><value>Bildirimler</value></data>
+  <data name="GlobalSearchPlaceholder" xml:space="preserve"><value>Takip no, müşteri adı veya şube ara...</value></data>
+  <data name="NewShipment" xml:space="preserve"><value>Yeni Gönderi Oluştur</value></data>
+
+  <!-- ═══ 4 · Şehir ekranları ═══ -->
+  <data name="CityName" xml:space="preserve"><value>Şehir Adı</value></data>
+  <data name="NewCity" xml:space="preserve"><value>Yeni Şehir</value></data>
+  <data name="UpdateCity" xml:space="preserve"><value>Şehir Güncelle</value></data>
+  <data name="SearchCity" xml:space="preserve"><value>Şehir ara...</value></data>
+
+  <!-- ═══ 5 · Ülke ekranları ═══ -->
+  <data name="Country" xml:space="preserve"><value>Ülke</value></data>
+  <data name="NewCountry" xml:space="preserve"><value>Yeni Ülke</value></data>
+  <data name="UpdateCountry" xml:space="preserve"><value>Ülke Güncelle</value></data>
+  <data name="IsoCode" xml:space="preserve"><value>ISO Kodu</value></data>
+  <data name="CurrencyCode" xml:space="preserve"><value>Para Birimi</value></data>
+  <data name="PhoneCode" xml:space="preserve"><value>Telefon Kodu</value></data>
+  <data name="LanguageCode" xml:space="preserve"><value>Dil</value></data>
+  <data name="TimeZone" xml:space="preserve"><value>Saat Dilimi</value></data>
+
+  <!-- ═══ 6 · İşlem mesajları (controller ve servislerden) ═══ -->
+  <data name="CityNotFound" xml:space="preserve"><value>Şehir bulunamadı.</value></data>
+  <data name="CountryNotFound" xml:space="preserve"><value>Ülke bulunamadı.</value></data>
+  <data name="CityNameTaken" xml:space="preserve"><value>Bu ülkede bu şehir zaten kayıtlı.</value></data>
+  <data name="IsoCodeTaken" xml:space="preserve"><value>Bu ISO kodu başka bir ülkede kayıtlı.</value></data>
+  <data name="CountryHasDependents" xml:space="preserve"><value>Bu ülkeye bağlı şehir veya müşteri kaydı var. Önce onları silin.</value></data>
+
+  <!-- ═══ 7 · Doğrulama mesajları (validator'lardan) ═══ -->
+  <data name="RecordIdRequired" xml:space="preserve"><value>Güncellenecek kayıt belirtilmedi.</value></data>
+  <data name="CityNameRequired" xml:space="preserve"><value>Şehir adı boş olamaz.</value></data>
+  <data name="CityNameMinLength" xml:space="preserve"><value>Şehir adı en az 2 karakter olmalıdır.</value></data>
+  <data name="CityNameMaxLength" xml:space="preserve"><value>Şehir adı en fazla 100 karakter olabilir.</value></data>
+  <data name="CountryRequired" xml:space="preserve"><value>Ülke seçilmelidir.</value></data>
+  <data name="CountryNameRequired" xml:space="preserve"><value>Ülke adı boş olamaz.</value></data>
+  <data name="CountryNameMaxLength" xml:space="preserve"><value>Ülke adı en fazla 100 karakter olabilir.</value></data>
+  <data name="IsoCodeRequired" xml:space="preserve"><value>ISO kodu boş olamaz.</value></data>
+  <data name="IsoCodeLength" xml:space="preserve"><value>ISO kodu 2 harf olmalıdır. Örnek: TR, MT, BR</value></data>
+  <data name="CurrencyCodeRequired" xml:space="preserve"><value>Para birimi kodu boş olamaz.</value></data>
+  <data name="CurrencyCodeLength" xml:space="preserve"><value>Para birimi kodu 3 harf olmalıdır. Örnek: TRY, EUR, BRL</value></data>
+  <data name="PhoneCodeRequired" xml:space="preserve"><value>Telefon kodu boş olamaz.</value></data>
+  <data name="PhoneCodeMaxLength" xml:space="preserve"><value>Telefon kodu en fazla 6 karakter olabilir.</value></data>
+  <data name="TimeZoneRequired" xml:space="preserve"><value>Saat dilimi boş olamaz.</value></data>
+  <data name="TimeZoneMaxLength" xml:space="preserve"><value>Saat dilimi en fazla 50 karakter olabilir.</value></data>
+  <data name="LanguageCodeRequired" xml:space="preserve"><value>Dil kodu boş olamaz.</value></data>
+  <data name="LanguageCodeMaxLength" xml:space="preserve"><value>Dil kodu en fazla 5 karakter olabilir.</value></data>
+
+  <!-- ═══ 8 · Kargo takip (public ana sayfa) ═══ -->
+  <data name="TrackCargo" xml:space="preserve"><value>Kargo Takip</value></data>
+  <data name="TrackCode" xml:space="preserve"><value>Takip Kodu</value></data>
+  <data name="TrackAction" xml:space="preserve"><value>Sorgula</value></data>
+  <data name="TrackNotice" xml:space="preserve"><value>Kargo modülü henüz tamamlanmadı. Takip sorgusu Cargo servisi eklendiğinde çalışacak.</value></data>
+
+  <!-- ═══ 9 · Kargo durumları ═══ -->
+  <data name="Status_Received" xml:space="preserve"><value>Kargo kabul edildi</value></data>
+  <data name="Status_InTransferCenter" xml:space="preserve"><value>Transfer merkezinde</value></data>
+  <data name="Status_DispatchedFromTransferCenter" xml:space="preserve"><value>Transfer merkezinden ayrıldı</value></data>
+  <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Dağıtım şubesine ulaştı</value></data>
+  <data name="Status_OutForDelivery" xml:space="preserve"><value>Dağıtıma çıktı</value></data>
+  <data name="Status_Delivered" xml:space="preserve"><value>Teslim edildi</value></data>
+</root>

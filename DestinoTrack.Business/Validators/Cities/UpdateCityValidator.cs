@@ -1,22 +1,23 @@
-using DestinoTrack.DTO.DTOs.CityDtos;
+﻿using DestinoTrack.DTO.DTOs.CityDtos;
 using FluentValidation;
+using Microsoft.Extensions.Localization;
 
 namespace DestinoTrack.Business.Validators.Cities
 {
     public class UpdateCityValidator : AbstractValidator<UpdateCityDto>
     {
-        public UpdateCityValidator()
+        public UpdateCityValidator(IStringLocalizer<SharedResource> localizer)
         {
             RuleFor(x => x.Id)
-                .NotEmpty().WithMessage("Güncellenecek kayıt belirtilmedi.");
+                .NotEmpty().WithMessage(localizer["RecordIdRequired"].Value);
 
             RuleFor(x => x.Name)
-                .NotEmpty().WithMessage("Şehir adı boş olamaz.")
-                .MinimumLength(2).WithMessage("Şehir adı en az 2 karakter olmalıdır.")
-                .MaximumLength(100).WithMessage("Şehir adı en fazla 100 karakter olabilir.");
+                .NotEmpty().WithMessage(localizer["CityNameRequired"].Value)
+                .MinimumLength(2).WithMessage(localizer["CityNameMinLength"].Value)
+                .MaximumLength(100).WithMessage(localizer["CityNameMaxLength"].Value);
 
             RuleFor(x => x.CountryId)
-                .NotEmpty().WithMessage("Ülke seçilmelidir.");
+                .NotEmpty().WithMessage(localizer["CountryRequired"].Value);
         }
     }
 }

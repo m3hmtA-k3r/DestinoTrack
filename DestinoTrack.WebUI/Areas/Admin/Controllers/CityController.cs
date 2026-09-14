@@ -1,22 +1,33 @@
-﻿using DestinoTrack.Business.Services.Countries;
+﻿using DestinoTrack.Business;
 using DestinoTrack.Business.Services.Cities;
+using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.DTO.DTOs.CityDtos;
+using DestinoTrack.WebUI.Areas.Admin.Models;
 using DestinoTrack.WebUI.Consts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Localization;
 using System.ComponentModel.DataAnnotations;
+using System.Threading.Tasks;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
     [Area(AreaNames.Admin)]
-    public class CityController(ICityService _cityService, ICountryService _countryService) : Controller
+    public class CityController(ICityService _cityService, ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : Controller
     {
-        
-        public async Task<IActionResult> Index()
+
+        public async Task<IActionResult> Index(Guid? countryId, string? q)
         {
-            var values = await _cityService.GetAllAsync();
-            return View(values);
+            var model = new CityIndexViewModel
+            {
+                Cities = await _cityService.GetAllAsync(countryId, q),
+                CountryFilters = await _cityService.GetCountryFiltersAsync(),
+                SelectedCountryId = countryId,
+                Search = q?.Trim()
+            };
+
+            return View(model);
         }
 
         public async Task<IActionResult> Create()
@@ -35,7 +46,18 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
                 return View(createCityDto);
             }
 
-            await _cityService.CreateAsync(createCityDto);
+            try
+            {
+                await _cityService.CreateAsync(createCityDto);
+            }
+            catch (DbUpdateException)
+            {
+                // (CountryId, Name) unique — aynı ülkede aynı şehir ikinci kez eklenirse buraya düşer
+                ModelState.AddModelError(nameof(createCityDto.Name), _localizer["CityNameTaken"].Value);
+                await YukleCountriesAsync();
+                return View(createCityDto);
+            }
+
             return RedirectToAction(nameof(Index));
         }
 
@@ -68,6 +90,13 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
             {
                 await _cityService.UpdateAsync(updateCityDto);
             }
+            catch (DbUpdateException)
+            {
+                // Başka bir şehrin adı verilirse (CountryId, Name) unique index engeller
+                ModelState.AddModelError(nameof(updateCityDto.Name), _localizer["CityNameTaken"].Value);
+                await YukleCountriesAsync();
+                return View(updateCityDto);
+            }
             catch (ValidationException ex)
             {
                 TempData["Error"] = ex.Message;
@@ -93,7 +122,7 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 
         }
 
-      
+
         private async Task YukleCountriesAsync()
         {
             var countries = await _countryService.GetAllAsync();

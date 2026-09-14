@@ -1,35 +1,36 @@
-using DestinoTrack.DTO.DTOs.CountryDtos;
+﻿using DestinoTrack.DTO.DTOs.CountryDtos;
 using FluentValidation;
+using Microsoft.Extensions.Localization;
 
 namespace DestinoTrack.Business.Validators.Countries
 {
     public class CreateCountryValidator : AbstractValidator<CreateCountryDto>
     {
-        public CreateCountryValidator()
+        public CreateCountryValidator(IStringLocalizer<SharedResource> localizer)
         {
             RuleFor(x => x.Name)
-                .NotEmpty().WithMessage("Ülke adı boş olamaz.")
-                .MaximumLength(100).WithMessage("Ülke adı en fazla 100 karakter olabilir.");
+                .NotEmpty().WithMessage(localizer["CountryNameRequired"].Value)
+                .MaximumLength(100).WithMessage(localizer["CountryNameMaxLength"].Value);
 
             RuleFor(x => x.IsoCode)
-                .NotEmpty().WithMessage("ISO kodu boş olamaz.")
-                .Length(2).WithMessage("ISO kodu 2 harf olmalıdır. Örnek: TR, MT, BR");
+                .NotEmpty().WithMessage(localizer["IsoCodeRequired"].Value)
+                .Length(2).WithMessage(localizer["IsoCodeLength"].Value);
 
             RuleFor(x => x.CurrencyCode)
-                .NotEmpty().WithMessage("Para birimi kodu boş olamaz.")
-                .Length(3).WithMessage("Para birimi kodu 3 harf olmalıdır. Örnek: TRY, EUR, BRL");
+                .NotEmpty().WithMessage(localizer["CurrencyCodeRequired"].Value)
+                .Length(3).WithMessage(localizer["CurrencyCodeLength"].Value);
 
             RuleFor(x => x.PhoneCode)
-                .NotEmpty().WithMessage("Telefon kodu boş olamaz.")
-                .MaximumLength(6).WithMessage("Telefon kodu en fazla 6 karakter olabilir.");
+                .NotEmpty().WithMessage(localizer["PhoneCodeRequired"].Value)
+                .MaximumLength(6).WithMessage(localizer["PhoneCodeMaxLength"].Value);
 
             RuleFor(x => x.TimeZoneId)
-                .NotEmpty().WithMessage("Saat dilimi boş olamaz.")
-                .MaximumLength(50).WithMessage("Saat dilimi en fazla 50 karakter olabilir.");
+                .NotEmpty().WithMessage(localizer["TimeZoneRequired"].Value)
+                .MaximumLength(50).WithMessage(localizer["TimeZoneMaxLength"].Value);
 
             RuleFor(x => x.LanguageCode)
-                .NotEmpty().WithMessage("Dil kodu boş olamaz.")
-                .MaximumLength(5).WithMessage("Dil kodu en fazla 5 karakter olabilir.");
+                .NotEmpty().WithMessage(localizer["LanguageCodeRequired"].Value)
+                .MaximumLength(5).WithMessage(localizer["LanguageCodeMaxLength"].Value);
         }
     }
 }

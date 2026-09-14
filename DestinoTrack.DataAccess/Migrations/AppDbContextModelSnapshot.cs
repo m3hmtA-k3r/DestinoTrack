@@ -392,11 +392,13 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasColumnType("nvarchar(100)")
+                        .UseCollation("Latin1_General_CI_AI");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CountryId");
+                    b.HasIndex("CountryId", "Name")
+                        .IsUnique();
 
                     b.ToTable("Cities");
                 });
