@@ -123,4 +123,74 @@
   <data name="EmailRequired" xml:space="preserve"><value>O e-mail não pode ficar vazio.</value></data>
   <data name="EmailInvalid" xml:space="preserve"><value>Informe um endereço de e-mail válido.</value></data>
   <data name="PasswordRequired" xml:space="preserve"><value>A senha não pode ficar vazia.</value></data>
+  <!-- ═══ 11 · Identity hata mesajları (LocalizedIdentityErrorDescriber) · anahtar = Identity_<Code> ═══ -->
+  <data name="Identity_DefaultError" xml:space="preserve"><value>Ocorreu um erro inesperado.</value></data>
+  <data name="Identity_ConcurrencyFailure" xml:space="preserve"><value>Este registro foi alterado por outra pessoa nesse meio-tempo. Atualize a página e tente novamente.</value></data>
+  <data name="Identity_PasswordMismatch" xml:space="preserve"><value>Senha incorreta.</value></data>
+  <data name="Identity_InvalidToken" xml:space="preserve"><value>O link é inválido ou expirou.</value></data>
+  <data name="Identity_RecoveryCodeRedemptionFailed" xml:space="preserve"><value>Não foi possível usar o código de recuperação.</value></data>
+  <data name="Identity_LoginAlreadyAssociated" xml:space="preserve"><value>Este login externo já está vinculado a outra conta.</value></data>
+  <data name="Identity_InvalidUserName" xml:space="preserve"><value>'{0}' não pode ser usado. Apenas letras sem acento, números e - . _ @ + são permitidos.</value></data>
+  <data name="Identity_InvalidEmail" xml:space="preserve"><value>'{0}' não é um endereço de e-mail válido.</value></data>
+  <data name="Identity_DuplicateUserName" xml:space="preserve"><value>O nome de usuário '{0}' já está em uso.</value></data>
+  <data name="Identity_DuplicateEmail" xml:space="preserve"><value>O e-mail '{0}' já está em uso.</value></data>
+  <data name="Identity_InvalidRoleName" xml:space="preserve"><value>'{0}' não é um nome de função válido.</value></data>
+  <data name="Identity_DuplicateRoleName" xml:space="preserve"><value>A função '{0}' já existe.</value></data>
+  <data name="Identity_UserAlreadyHasPassword" xml:space="preserve"><value>Este usuário já possui uma senha.</value></data>
+  <data name="Identity_UserLockoutNotEnabled" xml:space="preserve"><value>O bloqueio de conta não está ativado para este usuário.</value></data>
+  <data name="Identity_UserAlreadyInRole" xml:space="preserve"><value>O usuário já possui a função '{0}'.</value></data>
+  <data name="Identity_UserNotInRole" xml:space="preserve"><value>O usuário não possui a função '{0}'.</value></data>
+  <data name="Identity_PasswordTooShort" xml:space="preserve"><value>A senha deve ter pelo menos {0} caracteres.</value></data>
+  <data name="Identity_PasswordRequiresUniqueChars" xml:space="preserve"><value>A senha deve conter pelo menos {0} caracteres diferentes.</value></data>
+  <data name="Identity_PasswordRequiresNonAlphanumeric" xml:space="preserve"><value>A senha deve conter pelo menos um caractere especial (ex.: ! @ # ?).</value></data>
+  <data name="Identity_PasswordRequiresDigit" xml:space="preserve"><value>A senha deve conter pelo menos um número (0-9).</value></data>
+  <data name="Identity_PasswordRequiresLower" xml:space="preserve"><value>A senha deve conter pelo menos uma letra minúscula (a-z).</value></data>
+  <data name="Identity_PasswordRequiresUpper" xml:space="preserve"><value>A senha deve conter pelo menos uma letra maiúscula (A-Z).</value></data>
+  <!-- ═══ 12 · Kullanıcı yönetimi (Admin): ekran · işlem · doğrulama ═══ -->
+  <data name="Users" xml:space="preserve"><value>Usuários</value></data>
+  <data name="UsersSubtitle" xml:space="preserve"><value>Gerencie as contas da equipe, suas funções e áreas de responsabilidade.</value></data>
+  <data name="NewUser" xml:space="preserve"><value>Novo usuário</value></data>
+  <data name="UpdateUser" xml:space="preserve"><value>Atualizar usuário</value></data>
+  <data name="SearchUser" xml:space="preserve"><value>Buscar por nome, sobrenome ou e-mail...</value></data>
+  <data name="FirstName" xml:space="preserve"><value>Nome</value></data>
+  <data name="LastName" xml:space="preserve"><value>Sobrenome</value></data>
+  <data name="ConfirmPassword" xml:space="preserve"><value>Confirmar senha</value></data>
+  <data name="NewPassword" xml:space="preserve"><value>Nova senha</value></data>
+  <data name="ConfirmNewPassword" xml:space="preserve"><value>Confirmar nova senha</value></data>
+  <data name="NewPasswordHint" xml:space="preserve"><value>Deixe em branco para manter a senha atual.</value></data>
+  <data name="PasswordRuleHint" xml:space="preserve"><value>No mínimo {0} caracteres, com uma letra maiúscula, uma minúscula e um número.</value></data>
+  <data name="SelectRole" xml:space="preserve"><value>Selecione uma função</value></data>
+  <data name="SelectCountry" xml:space="preserve"><value>Selecione um país</value></data>
+  <data name="Branch" xml:space="preserve"><value>Filial</value></data>
+  <data name="BranchComingSoon" xml:space="preserve"><value>A seleção de filial ficará disponível quando as filiais forem cadastradas (fase 4).</value></data>
+  <data name="Status" xml:space="preserve"><value>Status</value></data>
+  <data name="Active" xml:space="preserve"><value>Ativo</value></data>
+  <data name="Inactive" xml:space="preserve"><value>Inativo</value></data>
+  <data name="Deactivate" xml:space="preserve"><value>Desativar</value></data>
+  <data name="Activate" xml:space="preserve"><value>Ativar</value></data>
+  <data name="ConfirmDeactivate" xml:space="preserve"><value>Este usuário será desativado e não poderá mais entrar. Tem certeza?</value></data>
+  <data name="CurrentUserBadge" xml:space="preserve"><value>Você</value></data>
+  <data name="UserNotFound" xml:space="preserve"><value>Usuário não encontrado.</value></data>
+  <data name="LastAdminProtected" xml:space="preserve"><value>Deve permanecer pelo menos um Administrador do sistema ativo. Esta ação não pode ser concluída.</value></data>
+  <data name="CannotDeactivateSelf" xml:space="preserve"><value>Você não pode desativar sua própria conta.</value></data>
+  <data name="CannotChangeOwnRole" xml:space="preserve"><value>Você não pode alterar sua própria função.</value></data>
+  <data name="AccountDeactivated" xml:space="preserve"><value>Sua conta está inativa. Entre em contato com o administrador.</value></data>
+  <data name="FirstNameRequired" xml:space="preserve"><value>O nome não pode ficar vazio.</value></data>
+  <data name="FirstNameMaxLength" xml:space="preserve"><value>O nome pode ter no máximo 50 caracteres.</value></data>
+  <data name="LastNameRequired" xml:space="preserve"><value>O sobrenome não pode ficar vazio.</value></data>
+  <data name="LastNameMaxLength" xml:space="preserve"><value>O sobrenome pode ter no máximo 50 caracteres.</value></data>
+  <data name="EmailMaxLength" xml:space="preserve"><value>O e-mail pode ter no máximo 256 caracteres.</value></data>
+  <data name="ConfirmPasswordMismatch" xml:space="preserve"><value>As senhas não coincidem.</value></data>
+  <data name="RoleRequired" xml:space="preserve"><value>Selecione uma função.</value></data>
+  <data name="RoleInvalid" xml:space="preserve"><value>Função inválida.</value></data>
+  <data name="CountryRequiredForManager" xml:space="preserve"><value>Selecione um país para a função Gerente de Operações Regional.</value></data>
+  <!-- ═══ 13 · Admin menüsü (TALP-32: sabit Türkçe menü metinleri) ═══ -->
+  <data name="Menu_Dashboard" xml:space="preserve"><value>Painel</value></data>
+  <data name="Menu_Shipments" xml:space="preserve"><value>Gestão de encomendas</value></data>
+  <data name="Menu_CourierDistribution" xml:space="preserve"><value>Entregadores e distribuição</value></data>
+  <data name="Menu_BranchesWarehouses" xml:space="preserve"><value>Filiais e armazéns</value></data>
+  <data name="Menu_Customers" xml:space="preserve"><value>Clientes</value></data>
+  <data name="Menu_Reports" xml:space="preserve"><value>Relatórios e análises</value></data>
+  <data name="Menu_SystemSettings" xml:space="preserve"><value>Configurações do sistema</value></data>
+  <data name="Menu_UserSettings" xml:space="preserve"><value>Usuários e acesso</value></data>
 </root>

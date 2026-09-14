@@ -1,5 +1,6 @@
 ﻿using DestinoTrack.Business;
 using DestinoTrack.Business.Consts;
+using DestinoTrack.Business.Services.Users;
 using DestinoTrack.DTO.DTOs.AccountDtos;
 using DestinoTrack.Entity.Entities;
 using DestinoTrack.WebUI.Consts;
@@ -13,14 +14,14 @@ namespace DestinoTrack.WebUI.Controllers
 {
     public class AccountController(SignInManager<AppUser> _signInManager,
                                    UserManager<AppUser> _userManager,
+                                   IUserService _userService,
                                    IStringLocalizer<SharedResource> _localizer) : Controller
     {
         public IActionResult Login(string? returnUrl = null)
-        {           
+        {
             if (User.Identity?.IsAuthenticated == true)
             {
                 return RedirectToAction(nameof(Profile)); // Zaten giriş yapmış kullanıcı formu tekrar görmez
-
             }
 
             ViewData["ReturnUrl"] = returnUrl;
@@ -44,7 +45,8 @@ namespace DestinoTrack.WebUI.Controllers
 
             if (result.IsLockedOut)
             {
-                ModelState.AddModelError(string.Empty, _localizer["AccountLocked"].Value);
+                //pasif hesap mı, 15 dakikalık kilit mi — mesajı servis belirler
+                ModelState.AddModelError(string.Empty, await _userService.GetLockedOutMessageAsync(loginDto.Email, loginDto.Password));
                 return View(loginDto);
             }
 

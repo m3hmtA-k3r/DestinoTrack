@@ -1,0 +1,20 @@
+﻿@* Create ve Update ortak: seçili role göre kapsam alanını gösterir.
+   data-scope-for="Manager" → yalnızca Manager seçiliyken görünür · "Personel Courier" → ikisinden biri seçiliyken *@
+<script>
+    (function () {
+        var roleSelect = document.querySelector('[data-role-select]');
+        if (!roleSelect) return;
+
+        var scopes = document.querySelectorAll('[data-scope-for]');
+
+        function refresh() {
+            scopes.forEach(function (scope) {
+                var roles = scope.getAttribute('data-scope-for').split(' ');
+                scope.hidden = roles.indexOf(roleSelect.value) === -1;
+            });
+        }
+
+        roleSelect.addEventListener('change', refresh);
+        refresh();
+    })();
+</script>
