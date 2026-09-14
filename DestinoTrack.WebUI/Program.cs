@@ -14,6 +14,7 @@ using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DataAccess.Repositories.Couriers;
 using DestinoTrack.DataAccess.Repositories.Payments;
 using DestinoTrack.Entity.Entities;
+using DestinoTrack.WebUI.Seed;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
@@ -29,10 +30,41 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 // Identity için gerekli servisleri ekliyoruz.
-builder.Services.AddIdentity<AppUser, AppRole>()
-    .AddEntityFrameworkStores<AppDbContext>()
+builder.Services.AddIdentity<AppUser, AppRole>(options =>
+{
+    // K4 · Şifre: en az 8 karakter, büyük + küçük harf + rakam; özel karakter zorunlu değil
+    options.Password.RequiredLength = 8;
+    options.Password.RequireUppercase = true;
+    options.Password.RequireLowercase = true;
+    options.Password.RequireDigit = true;
+    options.Password.RequireNonAlphanumeric = false;
+
+    // K4 · 5 hatalı denemede 15 dakika kilit — yeni açılan hesaplar için de geçerli
+    options.Lockout.MaxFailedAccessAttempts = 5;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+    options.Lockout.AllowedForNewUsers = true;
+
+    // Aynı e-postayla ikinci hesap açılamaz
+    options.User.RequireUniqueEmail = true;
+}).AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
-    //.AddAddDefaultTokenProviders();
+
+// Oturum çerezi — giriş, çıkış ve erişim engeli adresleri + süre
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/Account/Login";
+    options.LogoutPath = "/Account/Logout";
+    options.AccessDeniedPath = "/Account/AccessDenied";
+
+    // Varsayılan ".AspNetCore.Identity.Application" yerine projeye özel ad
+    options.Cookie.Name = "DestinoTrack.Auth";
+    // JavaScript çereze erişemez — XSS ile oturum çalınamaz
+    options.Cookie.HttpOnly = true;
+
+    // 30 dakika işlem yapılmazsa oturum düşer; her istekte süre yenilenir
+    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+    options.SlidingExpiration = true;
+});
 
 // FluentValidation için gerekli servisler 
 builder.Services.AddFluentValidationAutoValidation()
@@ -77,6 +109,9 @@ builder.Services.AddControllersWithViews(options =>
     .AddDataAnnotationsLocalization();
 
 var app = builder.Build();
+
+// Roller ve ilk Admin kayıt varsa dokunmaz
+await IdentitySeeder.SeedAsync(app.Services);
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

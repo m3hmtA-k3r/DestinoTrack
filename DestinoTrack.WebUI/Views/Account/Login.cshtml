@@ -1,0 +1,56 @@
+﻿@model LoginDto
+@{
+    ViewData["Title"] = L["Login"].Value;
+
+    // Alana bağlı olmayan hatalar (yanlış bilgi, kilit) ModelState'in boş anahtarında durur
+    var formErrors = ViewData.ModelState[string.Empty]?.Errors;
+}
+
+<section class="mx-auto flex max-w-7xl justify-center px-margin-mobile lg:px-margin-desktop py-12 lg:py-20">
+    <div class="m3-card w-full max-w-md p-6 sm:p-8">
+
+        <div class="flex flex-col items-center gap-3 mb-8 text-center">
+            <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+                <span class="material-symbols-outlined text-[28px]">lock</span>
+            </div>
+            <h1 class="font-headline-md text-headline-md text-on-surface">@L["LoginTitle"]</h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["LoginSubtitle"]</p>
+        </div>
+
+        @if (formErrors?.Count > 0)
+        {
+            <div class="flex items-start gap-3 p-4 mb-5 rounded-xl bg-error-container text-on-error-container">
+                <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+                <span class="font-body-sm text-body-sm">@formErrors[0].ErrorMessage</span>
+            </div>
+        }
+
+        <form asp-controller="Account" asp-action="Login" asp-route-returnUrl="@ViewData["ReturnUrl"]" method="post" class="flex flex-col gap-5">
+            <div>
+                <label asp-for="Email" class="field-label">@L["Email"]</label>
+                <input asp-for="Email" type="email" class="field-input" autocomplete="username" />
+                <span asp-validation-for="Email" class="field-error"></span>
+            </div>
+
+            <div>
+                <label asp-for="Password" class="field-label">@L["Password"]</label>
+                <input asp-for="Password" type="password" class="field-input" autocomplete="current-password" />
+                <span asp-validation-for="Password" class="field-error"></span>
+            </div>
+
+            <label class="flex items-center gap-3 cursor-pointer select-none">
+                <input asp-for="RememberMe" class="w-5 h-5 accent-primary cursor-pointer" />
+                <span class="font-body-sm text-body-sm text-on-surface">@L["RememberMe"]</span>
+            </label>
+
+            <button type="submit" class="btn-filled w-full h-11">
+                <span class="material-symbols-outlined text-[20px]">login</span>
+                <span>@L["Login"]</span>
+            </button>
+        </form>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

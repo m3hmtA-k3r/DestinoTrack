@@ -96,4 +96,31 @@
   <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Arrived at delivery branch</value></data>
   <data name="Status_OutForDelivery" xml:space="preserve"><value>Out for delivery</value></data>
   <data name="Status_Delivered" xml:space="preserve"><value>Delivered</value></data>
+  <!-- ═══ 10 · Hesap: giriş · çıkış · erişim engeli · Hesabım · rol adları ═══ -->
+  <data name="Login" xml:space="preserve"><value>Log in</value></data>
+  <data name="LoginTitle" xml:space="preserve"><value>Sign in to your account</value></data>
+  <data name="LoginSubtitle" xml:space="preserve"><value>Enter your email and password to continue.</value></data>
+  <data name="Email" xml:space="preserve"><value>Email</value></data>
+  <data name="Password" xml:space="preserve"><value>Password</value></data>
+  <data name="RememberMe" xml:space="preserve"><value>Remember me</value></data>
+  <data name="InvalidLogin" xml:space="preserve"><value>Invalid email or password.</value></data>
+  <data name="AccountLocked" xml:space="preserve"><value>Too many failed attempts. Your account is locked for 15 minutes.</value></data>
+  <data name="AccessDeniedTitle" xml:space="preserve"><value>Access denied</value></data>
+  <data name="AccessDeniedMessage" xml:space="preserve"><value>You do not have permission to view this page.</value></data>
+  <data name="BackToHome" xml:space="preserve"><value>Back to home</value></data>
+  <data name="MyAccount" xml:space="preserve"><value>My account</value></data>
+  <data name="FullName" xml:space="preserve"><value>Full name</value></data>
+  <data name="Role" xml:space="preserve"><value>Role</value></data>
+  <data name="Scope" xml:space="preserve"><value>Scope</value></data>
+  <data name="ScopeAllCountries" xml:space="preserve"><value>All countries</value></data>
+  <data name="CountryNotAssigned" xml:space="preserve"><value>No country assigned yet</value></data>
+  <data name="BranchNotAssigned" xml:space="preserve"><value>No branch assigned yet</value></data>
+  <data name="Role_Admin" xml:space="preserve"><value>System Administrator</value></data>
+  <data name="Role_Manager" xml:space="preserve"><value>Regional Operations Manager</value></data>
+  <data name="Role_Personel" xml:space="preserve"><value>Branch Officer</value></data>
+  <data name="Role_Courier" xml:space="preserve"><value>Courier</value></data>
+  <data name="Role_Customer" xml:space="preserve"><value>Customer</value></data>
+  <data name="EmailRequired" xml:space="preserve"><value>Email cannot be empty.</value></data>
+  <data name="EmailInvalid" xml:space="preserve"><value>Enter a valid email address.</value></data>
+  <data name="PasswordRequired" xml:space="preserve"><value>Password cannot be empty.</value></data>
 </root>
