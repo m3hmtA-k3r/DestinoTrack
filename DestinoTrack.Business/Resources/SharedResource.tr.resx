@@ -193,4 +193,47 @@
   <data name="Menu_Reports" xml:space="preserve"><value>Raporlar &amp; Analiz</value></data>
   <data name="Menu_SystemSettings" xml:space="preserve"><value>Sistem Ayarları</value></data>
   <data name="Menu_UserSettings" xml:space="preserve"><value>Kullanıcı ve Yetki</value></data>
+  <!-- ═══ 14 · Müşteri kaydı (TALP-28): kayıt sayfası · doğrulama · servis · Hesabım ═══ -->
+  <data name="Register" xml:space="preserve"><value>Kayıt Ol</value></data>
+  <data name="RegisterTitle" xml:space="preserve"><value>Müşteri hesabı oluştur</value></data>
+  <data name="RegisterSubtitle" xml:space="preserve"><value>Gönderilerini takip etmek için hesabını birkaç adımda aç.</value></data>
+  <data name="NoAccountYet" xml:space="preserve"><value>Hesabın yok mu?</value></data>
+  <data name="AlreadyHaveAccount" xml:space="preserve"><value>Zaten hesabın var mı?</value></data>
+  <data name="CustomerType" xml:space="preserve"><value>Müşteri türü</value></data>
+  <data name="CustomerType_Individual" xml:space="preserve"><value>Bireysel</value></data>
+  <data name="CustomerType_Corporate" xml:space="preserve"><value>Kurumsal</value></data>
+  <data name="CorporateApprovalHint" xml:space="preserve"><value>Kurumsal başvurular yönetici onayından sonra aktifleşir.</value></data>
+  <data name="CompanyTitle" xml:space="preserve"><value>Şirket ünvanı</value></data>
+  <data name="AuthorizedPerson" xml:space="preserve"><value>Yetkili kişi</value></data>
+  <data name="Phone" xml:space="preserve"><value>Telefon</value></data>
+  <data name="IdentityNumber" xml:space="preserve"><value>Kimlik numarası</value></data>
+  <data name="TaxNumber" xml:space="preserve"><value>Vergi numarası</value></data>
+  <data name="TaxOffice" xml:space="preserve"><value>Vergi dairesi</value></data>
+  <data name="TaxNumberHint" xml:space="preserve"><value>Numaranın biçimi seçtiğin ülkeye göre denetlenir.</value></data>
+  <data name="CustomerTypeInvalid" xml:space="preserve"><value>Geçersiz müşteri türü.</value></data>
+  <data name="CompanyTitleRequired" xml:space="preserve"><value>Şirket ünvanı boş olamaz.</value></data>
+  <data name="CompanyTitleMaxLength" xml:space="preserve"><value>Şirket ünvanı en fazla 200 karakter olabilir.</value></data>
+  <data name="PhoneRequired" xml:space="preserve"><value>Telefon boş olamaz.</value></data>
+  <data name="PhoneInvalid" xml:space="preserve"><value>Telefon yalnızca rakam, boşluk ve baştaki + işaretinden oluşmalı (7–20 karakter).</value></data>
+  <data name="IdentityNumberRequired" xml:space="preserve"><value>Kimlik numarası boş olamaz.</value></data>
+  <data name="TaxNumberRequired" xml:space="preserve"><value>Vergi numarası boş olamaz.</value></data>
+  <data name="TaxOfficeRequired" xml:space="preserve"><value>Vergi dairesi boş olamaz.</value></data>
+  <data name="TaxOfficeMaxLength" xml:space="preserve"><value>Vergi dairesi en fazla 100 karakter olabilir.</value></data>
+  <data name="CustomerEmailMaxLength" xml:space="preserve"><value>E-posta en fazla 100 karakter olabilir.</value></data>
+  <data name="TaxIdFormat_TR_Individual" xml:space="preserve"><value>T.C. kimlik numarası 11 rakamdan oluşmalı ve 0 ile başlamamalı.</value></data>
+  <data name="TaxIdFormat_TR_Corporate" xml:space="preserve"><value>Vergi kimlik numarası 10 rakamdan oluşmalı.</value></data>
+  <data name="TaxIdFormat_BR_Individual" xml:space="preserve"><value>CPF 11 rakamdan oluşmalı.</value></data>
+  <data name="TaxIdFormat_BR_Corporate" xml:space="preserve"><value>CNPJ 14 rakamdan oluşmalı.</value></data>
+  <data name="TaxIdFormat_MT_Individual" xml:space="preserve"><value>Malta kimlik kartı numarası 1–7 rakam ve bir harften oluşmalı (örn. 123456M).</value></data>
+  <data name="TaxIdFormat_MT_Corporate" xml:space="preserve"><value>Malta VAT numarası 8 rakamdan oluşmalı.</value></data>
+  <data name="TaxIdFormat_Other" xml:space="preserve"><value>Numara 5–20 harf veya rakamdan oluşmalı.</value></data>
+  <data name="TaxNumberTaken" xml:space="preserve"><value>Bu ülkede bu kimlik / vergi numarasıyla kayıtlı bir müşteri var.</value></data>
+  <data name="CustomerCode" xml:space="preserve"><value>Müşteri kodu</value></data>
+  <data name="AccountStatus" xml:space="preserve"><value>Hesap durumu</value></data>
+  <data name="AccountStatus_Active" xml:space="preserve"><value>Aktif</value></data>
+  <data name="AccountStatus_Suspended" xml:space="preserve"><value>Askıya alındı</value></data>
+  <data name="AccountStatus_PendingApproval" xml:space="preserve"><value>Onay bekliyor</value></data>
+  <data name="AccountStatus_Closed" xml:space="preserve"><value>Kapatıldı</value></data>
+  <data name="PendingApprovalNotice" xml:space="preserve"><value>Kurumsal hesabın yönetici onayı bekliyor.</value></data>
+  <data name="RegistrationCompleted" xml:space="preserve"><value>Hesabın oluşturuldu, hoş geldin!</value></data>
 </root>

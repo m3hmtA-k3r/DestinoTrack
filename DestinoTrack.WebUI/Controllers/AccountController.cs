@@ -1,20 +1,18 @@
 ﻿using DestinoTrack.Business;
-using DestinoTrack.Business.Consts;
-using DestinoTrack.Business.Services.Users;
+using DestinoTrack.Business.Services.Accounts;
+using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.DTO.DTOs.AccountDtos;
-using DestinoTrack.Entity.Entities;
 using DestinoTrack.WebUI.Consts;
-using DestinoTrack.WebUI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Localization;
 
 namespace DestinoTrack.WebUI.Controllers
 {
-    public class AccountController(SignInManager<AppUser> _signInManager,
-                                   UserManager<AppUser> _userManager,
-                                   IUserService _userService,
+    public class AccountController(IAccountService _accountService,
+                                   ICountryService _countryService,
                                    IStringLocalizer<SharedResource> _localizer) : Controller
     {
         public IActionResult Login(string? returnUrl = null)
@@ -39,20 +37,10 @@ namespace DestinoTrack.WebUI.Controllers
                 return View(loginDto);
             }
 
-            // lockoutOnFailure: true → 5 hatalı denemede 15 dakika kilit 
-            var result = await _signInManager.PasswordSignInAsync(
-                loginDto.Email, loginDto.Password, loginDto.RememberMe, lockoutOnFailure: true);
-
-            if (result.IsLockedOut)
-            {
-                //pasif hesap mı, 15 dakikalık kilit mi — mesajı servis belirler
-                ModelState.AddModelError(string.Empty, await _userService.GetLockedOutMessageAsync(loginDto.Email, loginDto.Password));
-                return View(loginDto);
-            }
-
+            var result = await _accountService.LoginAsync(loginDto);
             if (!result.Succeeded)
             {
-                ModelState.AddModelError(string.Empty, _localizer["InvalidLogin"].Value);
+                ModelState.AddModelError(string.Empty, result.ErrorMessage!);
                 return View(loginDto);
             }
 
@@ -62,8 +50,7 @@ namespace DestinoTrack.WebUI.Controllers
                 return LocalRedirect(returnUrl);
             }
 
-            var user = await _userManager.FindByEmailAsync(loginDto.Email);
-            if (user != null && await _userManager.IsInRoleAsync(user, RoleNames.Admin))
+            if (result.IsAdmin)
             {
                 return RedirectToAction("Index", "City", new { area = AreaNames.Admin });
             }
@@ -72,11 +59,50 @@ namespace DestinoTrack.WebUI.Controllers
             return RedirectToAction(nameof(Profile));
         }
 
+        public async Task<IActionResult> Register()
+        {
+            if (User.Identity?.IsAuthenticated == true)
+            {
+                return RedirectToAction(nameof(Profile));
+            }
+
+            await LoadCountriesAsync();
+            return View(new RegisterDto());
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(RegisterDto registerDto)
+        {
+            if (User.Identity?.IsAuthenticated == true)
+            {
+                return RedirectToAction(nameof(Profile));
+            }
+
+            if (!ModelState.IsValid)
+            {
+                await LoadCountriesAsync();
+                return View(registerDto);
+            }
+
+            var result = await _accountService.RegisterCustomerAsync(registerDto);
+            if (!result.Succeeded)
+            {
+                AddErrors(result);
+                await LoadCountriesAsync();
+                return View(registerDto);
+            }
+
+            // servis kullanıcıyı giriş de yaptırdı
+            TempData["Success"] = _localizer["RegistrationCompleted"].Value;
+            return RedirectToAction(nameof(Profile));
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            await _signInManager.SignOutAsync();
+            await _accountService.LogoutAsync();
             return RedirectToAction("Index", "Home");
         }
 
@@ -88,27 +114,45 @@ namespace DestinoTrack.WebUI.Controllers
         [Authorize]
         public async Task<IActionResult> Profile()
         {
-            var user = await _userManager.GetUserAsync(User);
-            if (user == null)
+            var profile = await _accountService.GetProfileAsync(User);
+            if (profile == null)
             {
                 // Çerez var ama kullanıcı artık yok — oturumu kapatıp girişe gönder
-                await _signInManager.SignOutAsync();
+                await _accountService.LogoutAsync();
                 return RedirectToAction(nameof(Login));
             }
 
-            var roles = await _userManager.GetRolesAsync(user);
+            return View(profile);
+        }
 
-            var model = new ProfileViewModel
+        private void AddErrors(IdentityResult result)
+        {
+            foreach (var error in result.Errors)
             {
-                FullName = $"{user.FirstName} {user.LastName}",
-                Email = user.Email,
-                Roles = roles.ToList(),
-                // Lazy loading: ülke ve şube ihtiyaç anında yüklenir
-                CountryName = user.Country?.Name,
-                BranchName = user.Branch?.Name
-            };
+                if (error.Code == "DuplicateUserName")
+                {
+                    continue;
+                }
 
-            return View(model);
+                var field = error.Code switch
+                {
+                    "DuplicateEmail" or "InvalidEmail" or "InvalidUserName" => nameof(RegisterDto.Email),
+                    "CountryNotFound" => nameof(RegisterDto.CountryId),
+                    "TaxNumberTaken" => nameof(RegisterDto.TaxNumber),
+                    _ when error.Code.StartsWith("TaxIdFormat_") => nameof(RegisterDto.TaxNumber),
+                    _ when error.Code.StartsWith("Password") => nameof(RegisterDto.Password),
+                    _ => string.Empty
+                };
+
+                ModelState.AddModelError(field, error.Description);
+            }
+        }
+
+        // Kayıt formundaki ülke listesi — form ilk açıldığında da, hatayla geri döndüğünde de doldurulur
+        private async Task LoadCountriesAsync()
+        {
+            var countries = await _countryService.GetAllAsync();
+            ViewBag.Countries = new SelectList(countries, "Id", "Name");
         }
     }
 }

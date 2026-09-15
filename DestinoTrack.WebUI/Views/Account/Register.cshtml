@@ -1,0 +1,160 @@
+﻿@model RegisterDto
+@inject Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Identity.IdentityOptions> IdentityOptions
+@{
+    ViewData["Title"] = L["Register"].Value;
+
+    var formErrors = ViewData.ModelState[string.Empty]?.Errors;
+
+    // sayfa hatayla geri döndüğünde seçili türün alanları açık gelsin
+    var isCorporate = Model.CustomerType == CustomerType.Corporate;
+}
+
+<section class="mx-auto flex max-w-7xl justify-center px-margin-mobile lg:px-margin-desktop py-12 lg:py-20">
+    <div class="m3-card w-full max-w-2xl p-6 sm:p-8">
+
+        <div class="flex flex-col items-center gap-3 mb-8 text-center">
+            <div class="w-12 h-12 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+                <span class="material-symbols-outlined text-[28px]">person_add</span>
+            </div>
+            <h1 class="font-headline-md text-headline-md text-on-surface">@L["RegisterTitle"]</h1>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["RegisterSubtitle"]</p>
+        </div>
+
+        @if (formErrors?.Count > 0)
+        {
+            <div class="flex items-start gap-3 p-4 mb-5 rounded-xl bg-error-container text-on-error-container">
+                <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+                <span class="font-body-sm text-body-sm">@formErrors[0].ErrorMessage</span>
+            </div>
+        }
+
+        <form asp-controller="Account" asp-action="Register" method="post" class="flex flex-col gap-5">
+
+            @* müşteri türü — kurumsal alanları bu seçim açar *@
+            <fieldset>
+                <legend class="field-label">@L["CustomerType"]</legend>
+                <div class="grid grid-cols-2 gap-3">
+                    <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low cursor-pointer has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed-variant">
+                        <input type="radio" asp-for="CustomerType" id="CustomerType_Individual" value="Individual" class="w-4 h-4 accent-primary" data-customer-type />
+                        <span class="material-symbols-outlined text-[20px]">person</span>
+                        <span class="font-body-sm text-body-sm">@L["CustomerType_Individual"]</span>
+                    </label>
+                    <label class="flex items-center gap-3 p-3 rounded-xl bg-surface-container-low cursor-pointer has-[:checked]:bg-primary-fixed has-[:checked]:text-on-primary-fixed-variant">
+                        <input type="radio" asp-for="CustomerType" id="CustomerType_Corporate" value="Corporate" class="w-4 h-4 accent-primary" data-customer-type />
+                        <span class="material-symbols-outlined text-[20px]">domain</span>
+                        <span class="font-body-sm text-body-sm">@L["CustomerType_Corporate"]</span>
+                    </label>
+                </div>
+                <span asp-validation-for="CustomerType" class="field-error"></span>
+                <p class="field-hint mt-2" data-corporate-only hidden="@(!isCorporate)">@L["CorporateApprovalHint"]</p>
+            </fieldset>
+
+            <div data-corporate-only hidden="@(!isCorporate)">
+                <label asp-for="CompanyTitle" class="field-label">@L["CompanyTitle"]</label>
+                <input asp-for="CompanyTitle" class="field-input" autocomplete="organization" />
+                <span asp-validation-for="CompanyTitle" class="field-error"></span>
+            </div>
+
+            <div>
+                <p class="field-label" data-corporate-only hidden="@(!isCorporate)">@L["AuthorizedPerson"]</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label asp-for="FirstName" class="field-label">@L["FirstName"]</label>
+                        <input asp-for="FirstName" class="field-input" autocomplete="given-name" />
+                        <span asp-validation-for="FirstName" class="field-error"></span>
+                    </div>
+                    <div>
+                        <label asp-for="LastName" class="field-label">@L["LastName"]</label>
+                        <input asp-for="LastName" class="field-input" autocomplete="family-name" />
+                        <span asp-validation-for="LastName" class="field-error"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="Email" class="field-label">@L["Email"]</label>
+                    <input asp-for="Email" type="email" class="field-input" autocomplete="email" />
+                    <span asp-validation-for="Email" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="PhoneNumber" class="field-label">@L["Phone"]</label>
+                    <input asp-for="PhoneNumber" type="tel" class="field-input" autocomplete="tel" />
+                    <span asp-validation-for="PhoneNumber" class="field-error"></span>
+                </div>
+            </div>
+
+            <div>
+                <label asp-for="CountryId" class="field-label">@L["Country"]</label>
+                <select asp-for="CountryId" asp-items="ViewBag.Countries" class="field-input cursor-pointer">
+                    <option value="">— @L["SelectCountry"] —</option>
+                </select>
+                <span asp-validation-for="CountryId" class="field-error"></span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    @*  aynı alan — bireyselde kimlik no, kurumsalda vergi no *@
+                    <label asp-for="TaxNumber" class="field-label">
+                        <span data-individual-only hidden="@isCorporate">@L["IdentityNumber"]</span>
+                        <span data-corporate-only hidden="@(!isCorporate)">@L["TaxNumber"]</span>
+                    </label>
+                    <input asp-for="TaxNumber" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="TaxNumber" class="field-error"></span>
+                    <p class="field-hint">@L["TaxNumberHint"]</p>
+                </div>
+                <div data-corporate-only hidden="@(!isCorporate)">
+                    <label asp-for="TaxOffice" class="field-label">@L["TaxOffice"]</label>
+                    <input asp-for="TaxOffice" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="TaxOffice" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-2">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label asp-for="Password" class="field-label">@L["Password"]</label>
+                        <input asp-for="Password" type="password" class="field-input" autocomplete="new-password" />
+                        <span asp-validation-for="Password" class="field-error"></span>
+                    </div>
+                    <div>
+                        <label asp-for="ConfirmPassword" class="field-label">@L["ConfirmPassword"]</label>
+                        <input asp-for="ConfirmPassword" type="password" class="field-input" autocomplete="new-password" />
+                        <span asp-validation-for="ConfirmPassword" class="field-error"></span>
+                    </div>
+                </div>
+                <p class="field-hint">@L["PasswordRuleHint", IdentityOptions.Value.Password.RequiredLength]</p>
+            </div>
+
+            <button type="submit" class="btn-filled w-full h-11">
+                <span class="material-symbols-outlined text-[20px]">person_add</span>
+                <span>@L["Register"]</span>
+            </button>
+        </form>
+
+        <p class="mt-6 text-center font-body-sm text-body-sm text-on-surface-variant">
+            @L["AlreadyHaveAccount"]
+            <a asp-controller="Account" asp-action="Login" class="font-bold text-primary hover:underline">@L["Login"]</a>
+        </p>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        // müşteri türüne göre kurumsal alanlar ve numara etiketi değişir
+        (function () {
+            var radios = document.querySelectorAll('[data-customer-type]');
+
+            function refresh() {
+                var selected = document.querySelector('[data-customer-type]:checked');
+                var corporate = selected !== null && selected.value === 'Corporate';
+                document.querySelectorAll('[data-corporate-only]').forEach(function (el) { el.hidden = !corporate; });
+                document.querySelectorAll('[data-individual-only]').forEach(function (el) { el.hidden = corporate; });
+            }
+
+            radios.forEach(function (radio) { radio.addEventListener('change', refresh); });
+            refresh();
+        })();
+    </script>
+}

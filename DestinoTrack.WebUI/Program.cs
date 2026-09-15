@@ -3,6 +3,7 @@ using DestinoTrack.Business.Localization;
 using DestinoTrack.Business.Services.Cities;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Dashboard;
+using DestinoTrack.Business.Services.Accounts;
 using DestinoTrack.Business.Services.Users;
 using DestinoTrack.DataAccess.Context;
 using DestinoTrack.DataAccess.Repositories.Abouts;
@@ -106,6 +107,7 @@ builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 
 builder.Services.AddControllersWithViews(options =>
 {

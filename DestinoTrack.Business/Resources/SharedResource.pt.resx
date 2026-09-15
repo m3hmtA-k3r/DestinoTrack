@@ -193,4 +193,47 @@
   <data name="Menu_Reports" xml:space="preserve"><value>Relatórios e análises</value></data>
   <data name="Menu_SystemSettings" xml:space="preserve"><value>Configurações do sistema</value></data>
   <data name="Menu_UserSettings" xml:space="preserve"><value>Usuários e acesso</value></data>
+  <!-- ═══ 14 · Müşteri kaydı (TALP-28): kayıt sayfası · doğrulama · servis · Hesabım ═══ -->
+  <data name="Register" xml:space="preserve"><value>Cadastrar-se</value></data>
+  <data name="RegisterTitle" xml:space="preserve"><value>Crie sua conta de cliente</value></data>
+  <data name="RegisterSubtitle" xml:space="preserve"><value>Abra sua conta em poucos passos para acompanhar suas encomendas.</value></data>
+  <data name="NoAccountYet" xml:space="preserve"><value>Ainda não tem conta?</value></data>
+  <data name="AlreadyHaveAccount" xml:space="preserve"><value>Já tem uma conta?</value></data>
+  <data name="CustomerType" xml:space="preserve"><value>Tipo de cliente</value></data>
+  <data name="CustomerType_Individual" xml:space="preserve"><value>Pessoa física</value></data>
+  <data name="CustomerType_Corporate" xml:space="preserve"><value>Pessoa jurídica</value></data>
+  <data name="CorporateApprovalHint" xml:space="preserve"><value>Cadastros de pessoa jurídica são ativados após aprovação do administrador.</value></data>
+  <data name="CompanyTitle" xml:space="preserve"><value>Razão social</value></data>
+  <data name="AuthorizedPerson" xml:space="preserve"><value>Responsável</value></data>
+  <data name="Phone" xml:space="preserve"><value>Telefone</value></data>
+  <data name="IdentityNumber" xml:space="preserve"><value>Número de identificação</value></data>
+  <data name="TaxNumber" xml:space="preserve"><value>Número fiscal</value></data>
+  <data name="TaxOffice" xml:space="preserve"><value>Repartição fiscal</value></data>
+  <data name="TaxNumberHint" xml:space="preserve"><value>O formato do número é verificado conforme o país selecionado.</value></data>
+  <data name="CustomerTypeInvalid" xml:space="preserve"><value>Tipo de cliente inválido.</value></data>
+  <data name="CompanyTitleRequired" xml:space="preserve"><value>A razão social não pode ficar vazia.</value></data>
+  <data name="CompanyTitleMaxLength" xml:space="preserve"><value>A razão social pode ter no máximo 200 caracteres.</value></data>
+  <data name="PhoneRequired" xml:space="preserve"><value>O telefone não pode ficar vazio.</value></data>
+  <data name="PhoneInvalid" xml:space="preserve"><value>O telefone deve conter apenas números, espaços e um + inicial (7–20 caracteres).</value></data>
+  <data name="IdentityNumberRequired" xml:space="preserve"><value>O número de identificação não pode ficar vazio.</value></data>
+  <data name="TaxNumberRequired" xml:space="preserve"><value>O número fiscal não pode ficar vazio.</value></data>
+  <data name="TaxOfficeRequired" xml:space="preserve"><value>A repartição fiscal não pode ficar vazia.</value></data>
+  <data name="TaxOfficeMaxLength" xml:space="preserve"><value>A repartição fiscal pode ter no máximo 100 caracteres.</value></data>
+  <data name="CustomerEmailMaxLength" xml:space="preserve"><value>O e-mail pode ter no máximo 100 caracteres.</value></data>
+  <data name="TaxIdFormat_TR_Individual" xml:space="preserve"><value>O número de identidade turco (TCKN) deve ter 11 dígitos e não pode começar com 0.</value></data>
+  <data name="TaxIdFormat_TR_Corporate" xml:space="preserve"><value>O número fiscal turco (VKN) deve ter 10 dígitos.</value></data>
+  <data name="TaxIdFormat_BR_Individual" xml:space="preserve"><value>O CPF deve ter 11 dígitos.</value></data>
+  <data name="TaxIdFormat_BR_Corporate" xml:space="preserve"><value>O CNPJ deve ter 14 dígitos.</value></data>
+  <data name="TaxIdFormat_MT_Individual" xml:space="preserve"><value>O número do cartão de identidade maltês deve ter de 1 a 7 dígitos seguidos de uma letra (ex.: 123456M).</value></data>
+  <data name="TaxIdFormat_MT_Corporate" xml:space="preserve"><value>O número de IVA maltês deve ter 8 dígitos.</value></data>
+  <data name="TaxIdFormat_Other" xml:space="preserve"><value>O número deve ter de 5 a 20 letras ou dígitos.</value></data>
+  <data name="TaxNumberTaken" xml:space="preserve"><value>Já existe um cliente com este número de identificação / fiscal neste país.</value></data>
+  <data name="CustomerCode" xml:space="preserve"><value>Código do cliente</value></data>
+  <data name="AccountStatus" xml:space="preserve"><value>Situação da conta</value></data>
+  <data name="AccountStatus_Active" xml:space="preserve"><value>Ativa</value></data>
+  <data name="AccountStatus_Suspended" xml:space="preserve"><value>Suspensa</value></data>
+  <data name="AccountStatus_PendingApproval" xml:space="preserve"><value>Aguardando aprovação</value></data>
+  <data name="AccountStatus_Closed" xml:space="preserve"><value>Encerrada</value></data>
+  <data name="PendingApprovalNotice" xml:space="preserve"><value>Sua conta de pessoa jurídica está aguardando aprovação do administrador.</value></data>
+  <data name="RegistrationCompleted" xml:space="preserve"><value>Sua conta foi criada. Boas-vindas!</value></data>
 </root>

@@ -48,6 +48,13 @@
                 <span>@L["Login"]</span>
             </button>
         </form>
+
+        @* dışarıdan yalnızca müşteri hesabı açılır *@
+        <p class="mt-6 text-center font-body-sm text-body-sm text-on-surface-variant">
+            @L["NoAccountYet"]
+            <a asp-controller="Account" asp-action="Register" class="font-bold text-primary hover:underline">@L["Register"]</a>
+        </p>
+
     </div>
 </section>
 

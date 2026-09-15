@@ -1,10 +1,13 @@
-﻿@model ProfileViewModel
+﻿@model ProfileDto
 @{
     ViewData["Title"] = L["MyAccount"].Value;
 
     var isAdmin = Model.Roles.Contains(RoleNames.Admin);
     var isManager = Model.Roles.Contains(RoleNames.Manager);
     var isBranchUser = Model.Roles.Contains(RoleNames.Personel) || Model.Roles.Contains(RoleNames.Courier);
+
+    // yalnızca müşteri hesabında cari bilgisi var
+    var isCustomer = Model.CustomerCode != null;
 
     // Avatar için ad ve soyadın baş harfleri: "Mehmet Yılmaz" → "MY"
     var initials = string.Concat(Model.FullName
@@ -15,10 +18,36 @@
     // Şu anki dilin kendi dilindeki adı: Türkçe · English · Português
     var languageName = System.Globalization.CultureInfo.CurrentUICulture.NativeName;
     languageName = languageName.Length > 0 ? char.ToUpper(languageName[0]) + languageName[1..] : languageName;
+
+    // Hesap durumu : Aktif yeşil · Onay bekliyor mavi · Askıda / Kapalı kırmızı
+    var statusChip = Model.CustomerStatus switch
+    {
+        AccountStatus.Active => "chip-active",
+        AccountStatus.PendingApproval => "chip-info",
+        _ => "chip-error"
+    };
 }
 
 <section class="mx-auto flex max-w-7xl justify-center px-margin-mobile lg:px-margin-desktop py-12 lg:py-20">
     <div class="m3-card w-full max-w-lg p-6 sm:p-8">
+
+        @* Kayıttan hemen sonra bir kez görünür (TempData) *@
+        @if (TempData["Success"] is string success)
+        {
+            <div class="flex items-start gap-3 p-4 mb-5 rounded-xl bg-primary-fixed text-on-primary-fixed-variant">
+                <span class="material-symbols-outlined text-[22px] shrink-0">check_circle</span>
+                <span class="font-body-sm text-body-sm">@success</span>
+            </div>
+        }
+
+        @* kurumsal başvuru onay bekliyor *@
+        @if (Model.CustomerStatus == AccountStatus.PendingApproval)
+        {
+            <div class="flex items-start gap-3 p-4 mb-5 rounded-xl bg-secondary-container text-on-secondary-fixed">
+                <span class="material-symbols-outlined text-[22px] shrink-0">hourglass_top</span>
+                <span class="font-body-sm text-body-sm">@L["PendingApprovalNotice"]</span>
+            </div>
+        }
 
         <div class="flex items-center gap-4 mb-8">
             <div class="w-14 h-14 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm shrink-0">@initials</div>
@@ -63,6 +92,33 @@
                             @(Model.BranchName ?? L["BranchNotAssigned"].Value)
                         }
                     </dd>
+                </div>
+            }
+
+            @* müşteri cari bilgileri *@
+            @if (isCustomer)
+            {
+                <div class="flex items-center justify-between gap-4 py-3">
+                    <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["CustomerCode"]</dt>
+                    <dd class="font-body-sm text-body-sm text-on-surface text-right font-bold tracking-wide">@Model.CustomerCode</dd>
+                </div>
+
+                <div class="flex items-center justify-between gap-4 py-3">
+                    <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["CustomerType"]</dt>
+                    <dd class="font-body-sm text-body-sm text-on-surface text-right">@L["CustomerType_" + Model.CustomerType]</dd>
+                </div>
+
+                @if (Model.CustomerType == CustomerType.Corporate)
+                {
+                    <div class="flex items-center justify-between gap-4 py-3">
+                        <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["CompanyTitle"]</dt>
+                        <dd class="font-body-sm text-body-sm text-on-surface text-right break-words">@Model.CustomerTitle</dd>
+                    </div>
+                }
+
+                <div class="flex items-center justify-between gap-4 py-3">
+                    <dt class="font-body-sm text-body-sm text-on-surface-variant">@L["AccountStatus"]</dt>
+                    <dd class="text-right"><span class="@statusChip">@L["AccountStatus_" + Model.CustomerStatus]</span></dd>
                 </div>
             }
 

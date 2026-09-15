@@ -193,4 +193,47 @@
   <data name="Menu_Reports" xml:space="preserve"><value>Reports &amp; analytics</value></data>
   <data name="Menu_SystemSettings" xml:space="preserve"><value>System settings</value></data>
   <data name="Menu_UserSettings" xml:space="preserve"><value>Users &amp; access</value></data>
+  <!-- ═══ 14 · Müşteri kaydı (TALP-28): kayıt sayfası · doğrulama · servis · Hesabım ═══ -->
+  <data name="Register" xml:space="preserve"><value>Sign up</value></data>
+  <data name="RegisterTitle" xml:space="preserve"><value>Create a customer account</value></data>
+  <data name="RegisterSubtitle" xml:space="preserve"><value>Open your account in a few steps to track your shipments.</value></data>
+  <data name="NoAccountYet" xml:space="preserve"><value>Don't have an account?</value></data>
+  <data name="AlreadyHaveAccount" xml:space="preserve"><value>Already have an account?</value></data>
+  <data name="CustomerType" xml:space="preserve"><value>Customer type</value></data>
+  <data name="CustomerType_Individual" xml:space="preserve"><value>Individual</value></data>
+  <data name="CustomerType_Corporate" xml:space="preserve"><value>Corporate</value></data>
+  <data name="CorporateApprovalHint" xml:space="preserve"><value>Corporate applications become active after administrator approval.</value></data>
+  <data name="CompanyTitle" xml:space="preserve"><value>Company name</value></data>
+  <data name="AuthorizedPerson" xml:space="preserve"><value>Authorized person</value></data>
+  <data name="Phone" xml:space="preserve"><value>Phone</value></data>
+  <data name="IdentityNumber" xml:space="preserve"><value>Identity number</value></data>
+  <data name="TaxNumber" xml:space="preserve"><value>Tax number</value></data>
+  <data name="TaxOffice" xml:space="preserve"><value>Tax office</value></data>
+  <data name="TaxNumberHint" xml:space="preserve"><value>The number format is checked according to the selected country.</value></data>
+  <data name="CustomerTypeInvalid" xml:space="preserve"><value>Invalid customer type.</value></data>
+  <data name="CompanyTitleRequired" xml:space="preserve"><value>Company name cannot be empty.</value></data>
+  <data name="CompanyTitleMaxLength" xml:space="preserve"><value>Company name can be at most 200 characters.</value></data>
+  <data name="PhoneRequired" xml:space="preserve"><value>Phone cannot be empty.</value></data>
+  <data name="PhoneInvalid" xml:space="preserve"><value>Phone may contain only digits, spaces and a leading + (7–20 characters).</value></data>
+  <data name="IdentityNumberRequired" xml:space="preserve"><value>Identity number cannot be empty.</value></data>
+  <data name="TaxNumberRequired" xml:space="preserve"><value>Tax number cannot be empty.</value></data>
+  <data name="TaxOfficeRequired" xml:space="preserve"><value>Tax office cannot be empty.</value></data>
+  <data name="TaxOfficeMaxLength" xml:space="preserve"><value>Tax office can be at most 100 characters.</value></data>
+  <data name="CustomerEmailMaxLength" xml:space="preserve"><value>Email can be at most 100 characters.</value></data>
+  <data name="TaxIdFormat_TR_Individual" xml:space="preserve"><value>Turkish ID number (TCKN) must be 11 digits and cannot start with 0.</value></data>
+  <data name="TaxIdFormat_TR_Corporate" xml:space="preserve"><value>Turkish tax number (VKN) must be 10 digits.</value></data>
+  <data name="TaxIdFormat_BR_Individual" xml:space="preserve"><value>CPF must be 11 digits.</value></data>
+  <data name="TaxIdFormat_BR_Corporate" xml:space="preserve"><value>CNPJ must be 14 digits.</value></data>
+  <data name="TaxIdFormat_MT_Individual" xml:space="preserve"><value>Maltese ID card number must be 1–7 digits followed by a letter (e.g. 123456M).</value></data>
+  <data name="TaxIdFormat_MT_Corporate" xml:space="preserve"><value>Maltese VAT number must be 8 digits.</value></data>
+  <data name="TaxIdFormat_Other" xml:space="preserve"><value>The number must be 5–20 letters or digits.</value></data>
+  <data name="TaxNumberTaken" xml:space="preserve"><value>A customer with this identity / tax number already exists in this country.</value></data>
+  <data name="CustomerCode" xml:space="preserve"><value>Customer code</value></data>
+  <data name="AccountStatus" xml:space="preserve"><value>Account status</value></data>
+  <data name="AccountStatus_Active" xml:space="preserve"><value>Active</value></data>
+  <data name="AccountStatus_Suspended" xml:space="preserve"><value>Suspended</value></data>
+  <data name="AccountStatus_PendingApproval" xml:space="preserve"><value>Pending approval</value></data>
+  <data name="AccountStatus_Closed" xml:space="preserve"><value>Closed</value></data>
+  <data name="PendingApprovalNotice" xml:space="preserve"><value>Your corporate account is awaiting administrator approval.</value></data>
+  <data name="RegistrationCompleted" xml:space="preserve"><value>Your account has been created. Welcome!</value></data>
 </root>
