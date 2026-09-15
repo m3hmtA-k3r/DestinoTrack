@@ -4,8 +4,6 @@ using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Users;
 using DestinoTrack.DTO.DTOs.UserDtos;
 using DestinoTrack.WebUI.Areas.Admin.Models;
-using DestinoTrack.WebUI.Consts;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -15,12 +13,8 @@ using System.Security.Claims;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
-   
-    [Area(AreaNames.Admin)] // Kullanıcı yönetimi yalnızca Admin'e açık
-    [Authorize(Roles = RoleNames.Admin)]
-    public class UserController(IUserService _userService, ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : Controller
-    {
-        // [Authorize] sayesinde burada her zaman giriş yapmış bir kullanıcı var
+    public class UserController(IUserService _userService, ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : AdminBaseController
+    {    // [Authorize] sayesinde burada her zaman giriş yapmış bir kullanıcı var
         private Guid CurrentUserId => Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
         public async Task<IActionResult> Index(string? role, string? q)

@@ -9571,10 +9571,10 @@
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_webui_areas_admin_controllers_citycontroller",
-      "label": "CityController.cs",
+      "id": "destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "label": "AdminBaseController.cs",
       "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
       "source_location": "L1",
       "_origin": "ast"
     },
@@ -9582,8 +9582,8 @@
       "id": "csharp_namespace:3a3e63d31d338c86",
       "label": "DestinoTrack.WebUI.Areas.Admin.Controllers",
       "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L14",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L6",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -9592,15 +9592,15 @@
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
-      "label": "CityController",
+      "id": "destinotrack_webui_areas_admin_controllers_adminbasecontroller_destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "label": "AdminBaseController",
       "file_type": "code",
-      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L16",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L11",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s482"
+          "s152"
         ]
       },
       "_callable": true,
@@ -9616,6 +9616,30 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller",
+      "label": "CityController.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
+      "label": "CityController",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s448"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_areas_admin_controllers_citycontroller_cs_istringlocalizer",
       "label": "IStringLocalizer",
       "file_type": "code",
@@ -9628,11 +9652,11 @@
       "label": ".Index()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L20",
+      "source_location": "L18",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s482"
+          "s448"
         ]
       },
       "_callable": true,
@@ -9667,11 +9691,11 @@
       "label": ".Create()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L33",
+      "source_location": "L31",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s482"
+          "s448"
         ]
       },
       "_callable": true,
@@ -9698,11 +9722,11 @@
       "label": ".Update()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L64",
+      "source_location": "L62",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s482"
+          "s448"
         ]
       },
       "_callable": true,
@@ -9713,11 +9737,11 @@
       "label": ".Delete()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L108",
+      "source_location": "L106",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s482"
+          "s448"
         ]
       },
       "_callable": true,
@@ -9728,11 +9752,11 @@
       "label": ".YukleCountriesAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L126",
+      "source_location": "L124",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s482"
+          "s448"
         ]
       },
       "_callable": true,
@@ -9751,11 +9775,11 @@
       "label": "CountryController",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L12",
+      "source_location": "L11",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s319"
+          "s285"
         ]
       },
       "_callable": true,
@@ -9775,11 +9799,11 @@
       "label": ".Index()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L15",
+      "source_location": "L13",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s319"
+          "s285"
         ]
       },
       "_callable": true,
@@ -9806,11 +9830,11 @@
       "label": ".Create()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L21",
+      "source_location": "L19",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s319"
+          "s285"
         ]
       },
       "_callable": true,
@@ -9837,11 +9861,11 @@
       "label": ".Update()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L50",
+      "source_location": "L48",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s319"
+          "s285"
         ]
       },
       "_callable": true,
@@ -9860,11 +9884,11 @@
       "label": ".Delete()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L94",
+      "source_location": "L92",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s319"
+          "s285"
         ]
       },
       "_callable": true,
@@ -9883,11 +9907,11 @@
       "label": "UserController",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L19",
+      "source_location": "L16",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_callable": true,
@@ -9907,11 +9931,11 @@
       "label": "CurrentUserId",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L24",
+      "source_location": "L18",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_origin": "ast"
@@ -9929,11 +9953,11 @@
       "label": ".Index()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L26",
+      "source_location": "L20",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_callable": true,
@@ -9960,11 +9984,11 @@
       "label": ".Create()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L46",
+      "source_location": "L40",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_callable": true,
@@ -9991,11 +10015,11 @@
       "label": ".Update()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L73",
+      "source_location": "L67",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_callable": true,
@@ -10006,11 +10030,11 @@
       "label": ".SetActive()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L117",
+      "source_location": "L111",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_callable": true,
@@ -10021,11 +10045,11 @@
       "label": ".AddErrors()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L138",
+      "source_location": "L132",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_callable": true,
@@ -10044,11 +10068,11 @@
       "label": ".LoadFormListsAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L161",
+      "source_location": "L155",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s561"
+          "s484"
         ]
       },
       "_callable": true,
@@ -27998,6 +28022,103 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "target": "csharp_namespace:4bf53c97117b8a03",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Consts",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "target": "csharp_namespace:d7c578e66491639d",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Consts",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "target": "microsoft_aspnetcore_authorization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Authorization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "target": "microsoft_aspnetcore_mvc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "target": "csharp_namespace:3a3e63d31d338c86",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_adminbasecontroller_destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_adminbasecontroller_destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "target": "controller",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/AdminBaseController.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "Controller"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
       "target": "csharp_namespace:38073f96d8e536d2",
       "relation": "imports",
@@ -28079,28 +28200,12 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
-      "target": "csharp_namespace:d7c578e66491639d",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L6",
-      "weight": 1.0,
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "DestinoTrack.WebUI.Consts",
-        "scope_kind": "file"
-      },
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_areas_admin_controllers_citycontroller",
       "target": "microsoft_aspnetcore_mvc",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28116,7 +28221,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28132,7 +28237,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L9",
+      "source_location": "L8",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28148,7 +28253,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28164,7 +28269,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L11",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28180,7 +28285,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28195,7 +28300,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L14",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28205,20 +28310,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_citycontroller_destinotrack_webui_areas_admin_controllers_citycontroller",
-      "target": "controller",
+      "target": "destinotrack_webui_areas_admin_controllers_adminbasecontroller_destinotrack_webui_areas_admin_controllers_adminbasecontroller",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L16",
+      "source_location": "L15",
       "weight": 1.0,
       "metadata": {
-        "ref_token": "Controller"
+        "ref_token": "AdminBaseController"
       },
       "_origin": "ast"
     },
@@ -28228,7 +28333,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L17",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -28242,7 +28347,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L17",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -28256,7 +28361,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L17",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -28270,7 +28375,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L17",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -28284,7 +28389,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L20",
+      "source_location": "L18",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28294,7 +28399,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L20",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -28308,7 +28413,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L20",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28322,7 +28427,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L20",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -28336,7 +28441,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L33",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28346,7 +28451,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L33",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28360,7 +28465,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L33",
+      "source_location": "L31",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -28374,7 +28479,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L39",
+      "source_location": "L37",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -28388,7 +28493,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L39",
+      "source_location": "L37",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28402,7 +28507,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L39",
+      "source_location": "L37",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28416,7 +28521,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L64",
+      "source_location": "L62",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28426,7 +28531,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L64",
+      "source_location": "L62",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -28440,7 +28545,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L64",
+      "source_location": "L62",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28454,7 +28559,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L64",
+      "source_location": "L62",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -28468,7 +28573,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L79",
+      "source_location": "L77",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -28482,7 +28587,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L79",
+      "source_location": "L77",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28496,7 +28601,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L79",
+      "source_location": "L77",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28510,7 +28615,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L108",
+      "source_location": "L106",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28520,7 +28625,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L108",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -28534,7 +28639,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L108",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28548,7 +28653,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L108",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -28562,7 +28667,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L108",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28576,7 +28681,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L108",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28590,7 +28695,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L126",
+      "source_location": "L124",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28600,7 +28705,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L126",
+      "source_location": "L124",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28615,7 +28720,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L35",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28626,7 +28731,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L69",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28680,28 +28785,12 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
-      "target": "csharp_namespace:d7c578e66491639d",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L4",
-      "weight": 1.0,
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "DestinoTrack.WebUI.Consts",
-        "scope_kind": "file"
-      },
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_areas_admin_controllers_countrycontroller",
       "target": "microsoft_aspnetcore_mvc",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L5",
+      "source_location": "L4",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28717,7 +28806,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28733,7 +28822,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L7",
+      "source_location": "L6",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28749,7 +28838,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -28764,7 +28853,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L10",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28774,20 +28863,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_countrycontroller_destinotrack_webui_areas_admin_controllers_countrycontroller",
-      "target": "controller",
+      "target": "destinotrack_webui_areas_admin_controllers_adminbasecontroller_destinotrack_webui_areas_admin_controllers_adminbasecontroller",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L12",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
-        "ref_token": "Controller"
+        "ref_token": "AdminBaseController"
       },
       "_origin": "ast"
     },
@@ -28797,7 +28886,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L13",
+      "source_location": "L11",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -28811,7 +28900,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L13",
+      "source_location": "L11",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -28825,7 +28914,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L13",
+      "source_location": "L11",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -28839,7 +28928,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L15",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28849,7 +28938,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L15",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28863,7 +28952,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L15",
+      "source_location": "L13",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -28877,7 +28966,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L21",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28887,7 +28976,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L21",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28901,7 +28990,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L26",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -28915,7 +29004,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L26",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28929,7 +29018,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L26",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28943,7 +29032,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L26",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -28957,7 +29046,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L50",
+      "source_location": "L48",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -28967,7 +29056,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L50",
+      "source_location": "L48",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -28981,7 +29070,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L50",
+      "source_location": "L48",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -28995,7 +29084,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L50",
+      "source_location": "L48",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -29009,7 +29098,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L66",
+      "source_location": "L64",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29023,7 +29112,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L66",
+      "source_location": "L64",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29037,7 +29126,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L66",
+      "source_location": "L64",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29051,7 +29140,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L94",
+      "source_location": "L92",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29061,7 +29150,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L94",
+      "source_location": "L92",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29075,7 +29164,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L94",
+      "source_location": "L92",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -29089,7 +29178,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L94",
+      "source_location": "L92",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -29103,7 +29192,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L94",
+      "source_location": "L92",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29117,7 +29206,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L94",
+      "source_location": "L92",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29223,44 +29312,12 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_usercontroller",
-      "target": "csharp_namespace:d7c578e66491639d",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L7",
-      "weight": 1.0,
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "DestinoTrack.WebUI.Consts",
-        "scope_kind": "file"
-      },
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_areas_admin_controllers_usercontroller",
-      "target": "microsoft_aspnetcore_authorization",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L8",
-      "weight": 1.0,
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "Microsoft.AspNetCore.Authorization",
-        "scope_kind": "file"
-      },
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_webui_areas_admin_controllers_usercontroller",
       "target": "microsoft_aspnetcore_identity",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L9",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -29276,7 +29333,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L10",
+      "source_location": "L8",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -29292,7 +29349,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L11",
+      "source_location": "L9",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -29308,7 +29365,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L12",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -29324,7 +29381,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L13",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -29340,7 +29397,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L14",
+      "source_location": "L12",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -29355,7 +29412,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29365,20 +29422,20 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L19",
+      "source_location": "L16",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_usercontroller_destinotrack_webui_areas_admin_controllers_usercontroller",
-      "target": "controller",
+      "target": "destinotrack_webui_areas_admin_controllers_adminbasecontroller_destinotrack_webui_areas_admin_controllers_adminbasecontroller",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L19",
+      "source_location": "L16",
       "weight": 1.0,
       "metadata": {
-        "ref_token": "Controller"
+        "ref_token": "AdminBaseController"
       },
       "_origin": "ast"
     },
@@ -29388,7 +29445,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L21",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -29402,7 +29459,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L21",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -29416,7 +29473,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L21",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -29430,7 +29487,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L21",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -29444,7 +29501,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L24",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -29455,7 +29512,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L24",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -29469,7 +29526,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L26",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29479,7 +29536,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L26",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -29493,7 +29550,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L26",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -29507,7 +29564,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L46",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29517,7 +29574,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L46",
+      "source_location": "L40",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -29531,7 +29588,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L46",
+      "source_location": "L40",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -29545,7 +29602,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L52",
+      "source_location": "L46",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29559,7 +29616,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L52",
+      "source_location": "L46",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29573,7 +29630,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L52",
+      "source_location": "L46",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29587,7 +29644,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L73",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29597,7 +29654,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L73",
+      "source_location": "L67",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29611,7 +29668,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L73",
+      "source_location": "L67",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -29625,7 +29682,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L73",
+      "source_location": "L67",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -29639,7 +29696,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L88",
+      "source_location": "L82",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29653,7 +29710,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L88",
+      "source_location": "L82",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29667,7 +29724,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L88",
+      "source_location": "L82",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29681,7 +29738,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L117",
+      "source_location": "L111",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29691,7 +29748,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L117",
+      "source_location": "L111",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29705,7 +29762,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L117",
+      "source_location": "L111",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -29719,7 +29776,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L117",
+      "source_location": "L111",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -29733,7 +29790,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L117",
+      "source_location": "L111",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29747,7 +29804,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L117",
+      "source_location": "L111",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -29761,7 +29818,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L138",
+      "source_location": "L132",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29771,7 +29828,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L138",
+      "source_location": "L132",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29785,7 +29842,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L161",
+      "source_location": "L155",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29795,7 +29852,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L161",
+      "source_location": "L155",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -29809,7 +29866,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L161",
+      "source_location": "L155",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -29824,7 +29881,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L48",
+      "source_location": "L42",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29835,7 +29892,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L65",
+      "source_location": "L59",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29846,7 +29903,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L78",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -29857,7 +29914,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L103",
+      "source_location": "L97",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -32857,7 +32914,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L22",
+      "source_location": "L20",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -32869,7 +32926,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L34",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -32881,7 +32938,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L164",
+      "source_location": "L158",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33001,7 +33058,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L24",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33013,7 +33070,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L25",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33025,7 +33082,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L51",
+      "source_location": "L49",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33037,7 +33094,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L68",
+      "source_location": "L66",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33049,7 +33106,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L91",
+      "source_location": "L89",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33061,7 +33118,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L114",
+      "source_location": "L112",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33073,7 +33130,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CityController.cs",
-      "source_location": "L128",
+      "source_location": "L126",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33085,7 +33142,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L17",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33097,7 +33154,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L36",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33109,7 +33166,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L54",
+      "source_location": "L52",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33121,7 +33178,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L77",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33133,7 +33190,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/CountryController.cs",
-      "source_location": "L100",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33145,7 +33202,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L36",
+      "source_location": "L30",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33157,7 +33214,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L37",
+      "source_location": "L31",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33169,7 +33226,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L62",
+      "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33181,7 +33238,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L77",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33193,7 +33250,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L100",
+      "source_location": "L94",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33205,7 +33262,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L123",
+      "source_location": "L117",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33217,7 +33274,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L167",
+      "source_location": "L161",
       "weight": 1.0,
       "_origin": "ast"
     },

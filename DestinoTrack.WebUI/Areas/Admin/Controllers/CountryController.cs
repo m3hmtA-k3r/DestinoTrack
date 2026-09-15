@@ -1,7 +1,6 @@
 ﻿using DestinoTrack.Business;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.DTO.DTOs.CountryDtos;
-using DestinoTrack.WebUI.Consts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Localization;
@@ -9,8 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
-    [Area(AreaNames.Admin)]
-    public class CountryController(ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : Controller
+    public class CountryController(ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : AdminBaseController
     {
         public async Task<IActionResult> Index()
         {

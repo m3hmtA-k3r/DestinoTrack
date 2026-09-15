@@ -3,7 +3,6 @@ using DestinoTrack.Business.Services.Cities;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.DTO.DTOs.CityDtos;
 using DestinoTrack.WebUI.Areas.Admin.Models;
-using DestinoTrack.WebUI.Consts;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -13,8 +12,7 @@ using System.Threading.Tasks;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
-    [Area(AreaNames.Admin)]
-    public class CityController(ICityService _cityService, ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : Controller
+    public class CityController(ICityService _cityService, ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : AdminBaseController
     {
 
         public async Task<IActionResult> Index(Guid? countryId, string? q)
