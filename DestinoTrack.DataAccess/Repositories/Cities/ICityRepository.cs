@@ -10,5 +10,9 @@ namespace DestinoTrack.DataAccess.Repositories.Cities
 
         // Ülke çiplerindeki sayılar: CountryId → o ülkedeki şehir sayısı
         Task<Dictionary<Guid, int>> GetCityCountsByCountryAsync();
+
+        // Silme öncesi: bu şehre bağlı şube var mı
+        Task<bool> HasBranchesAsync(Guid cityId);
+
     }
 }

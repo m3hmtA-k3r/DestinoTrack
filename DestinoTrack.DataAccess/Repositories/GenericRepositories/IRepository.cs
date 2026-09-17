@@ -1,4 +1,4 @@
-using DestinoTrack.Entity.Entities.Common;
+﻿using DestinoTrack.Entity.Entities.Common;
 
 namespace DestinoTrack.DataAccess.Repositories.GenericRepositories
 {
@@ -10,5 +10,8 @@ namespace DestinoTrack.DataAccess.Repositories.GenericRepositories
         Task CreateAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
         Task DeleteAsync(TEntity entity);
+
+        // Soft delete'i atlar — yalnızca yarım kalan işlemin geri alınması için 
+        Task HardDeleteAsync(TEntity entity);
     }
 }

@@ -5,6 +5,7 @@ using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Dashboard;
 using DestinoTrack.Business.Services.Accounts;
 using DestinoTrack.Business.Services.Users;
+using DestinoTrack.DataAccess.Interceptors;
 using DestinoTrack.DataAccess.Context;
 using DestinoTrack.DataAccess.Repositories.Abouts;
 using DestinoTrack.DataAccess.Repositories.Addresses;
@@ -31,6 +32,9 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
     options.UseLazyLoadingProxies();
+
+    // Tarihler + soft delete: her SaveChanges'ta BaseEntity kayıtlarını düzenler 
+    options.AddInterceptors(new BaseEntityInterceptor());
 });
 
 // Identity için gerekli servisleri ekliyoruz.

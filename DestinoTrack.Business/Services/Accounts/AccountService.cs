@@ -127,7 +127,8 @@ namespace DestinoTrack.Business.Services.Accounts
             var created = await _userManager.CreateAsync(user, registerDto.Password);
             if (!created.Succeeded)
             {
-                await _customerRepository.DeleteAsync(customer);
+                await _customerRepository.HardDeleteAsync(customer); // geri alma: gerçek silme  
+
                 return created;
             }
 
@@ -135,7 +136,7 @@ namespace DestinoTrack.Business.Services.Accounts
             if (!roleResult.Succeeded)
             {
                 await _userManager.DeleteAsync(user);
-                await _customerRepository.DeleteAsync(customer);
+                await _customerRepository.HardDeleteAsync(customer); // geri alma: gerçek silme 
                 return roleResult;
             }
 

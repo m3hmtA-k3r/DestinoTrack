@@ -78,7 +78,14 @@ namespace DestinoTrack.Business.Services.Cities
                 throw new ValidationException(_localizer["CityNotFound"].Value);
             }
 
+            // Bağlı şube varken silinmez (soft delete'te bunu veritabanı engellemiyor)
+            if (await _cityRepository.HasBranchesAsync(id))
+            {
+                throw new ValidationException(_localizer["CityHasDependents"].Value);
+            }
+
             await _cityRepository.DeleteAsync(city);
         }
+
     }
 }

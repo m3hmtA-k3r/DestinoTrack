@@ -1,4 +1,4 @@
-using DestinoTrack.DataAccess.Context;
+﻿using DestinoTrack.DataAccess.Context;
 using DestinoTrack.Entity.Entities.Common;
 using Microsoft.EntityFrameworkCore;
 
@@ -24,7 +24,6 @@ namespace DestinoTrack.DataAccess.Repositories.GenericRepositories
         }
 
         // Gösterge panelindeki sayaçlar için. Tüm kayıtları belleğe çekmek
-        // yerine veritabanına COUNT(*) sorgusu gönderir.
         public async Task<int> CountAsync()
         {
             return await _context.Set<TEntity>().CountAsync();
@@ -42,10 +41,19 @@ namespace DestinoTrack.DataAccess.Repositories.GenericRepositories
             await _context.SaveChangesAsync();
         }
 
+        // BaseEntityInterceptor bu silmeyi soft delete'e çevirir 
         public async Task DeleteAsync(TEntity entity)
         {
             _context.Remove(entity);
             await _context.SaveChangesAsync();
         }
+
+        // ExecuteDelete SaveChanges'tan geçmez → interceptor çalışmaz, satır gerçekten silinir 
+        public async Task HardDeleteAsync(TEntity entity)
+        {
+            await _context.Set<TEntity>().IgnoreQueryFilters().Where(e => e.Id == entity.Id).ExecuteDeleteAsync();
+            _context.Entry(entity).State = EntityState.Detached;
+        }
+
     }
 }

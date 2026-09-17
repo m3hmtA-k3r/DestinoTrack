@@ -1,4 +1,6 @@
-﻿using DestinoTrack.Entity.Entities;
+﻿using System.Linq.Expressions;
+using DestinoTrack.Entity.Entities;
+using DestinoTrack.Entity.Entities.Common;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -165,36 +167,44 @@ namespace DestinoTrack.DataAccess.Context
                 .OnDelete(DeleteBehavior.Restrict);
 
 
+            // Tekil indeksler yalnızca silinmemiş kayıtlarda geçerli (D9): silinen kayıt aynı değerin yeniden eklenmesini engellemez
+
             //TrackCode sütununda aynı değer iki kez olamaz
             builder.Entity<Cargo>()
                 .HasIndex(c => c.TrackCode)
-                .IsUnique();
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
 
             // Aynı ISO kodu iki ülkede olamaz (TR, MT, BR)
             builder.Entity<Country>()
                 .HasIndex(c => c.IsoCode)
-                .IsUnique();
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
 
             // Aynı ülkede aynı şehir iki kez olamaz  
             // İki sütun birlikte unique: "Ankara" Türkiye'de bir kez, ama başka ülkede aynı ad olabilir
             builder.Entity<City>()
                 .HasIndex(c => new { c.CountryId, c.Name })
-                .IsUnique();
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
 
             // Aynı barkod iki kargoda olamaz
             builder.Entity<Cargo>()
                 .HasIndex(c => c.Barcode)
-                .IsUnique();
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
 
             // Aynı tesis kodu iki şubede olamaz
             builder.Entity<Branch>()
                 .HasIndex(b => b.Code)
-                .IsUnique();
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
 
             // Aynı müşteri kodu iki hesapta olamaz
             builder.Entity<Customer>()
                 .HasIndex(m => m.Code)
-                .IsUnique();
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
 
 
             // --- Para alanları: kuruş hassasiyeti ---
@@ -234,7 +244,7 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(c => c.LanguageCode).HasMaxLength(5);
             });
 
-            // CI_AI: büyük/küçük harf ve aksan duyarsız — "Sao Paulo" = "São Paulo", "ankara" = "Ankara" 
+            // büyük/küçük harf ve aksan duyarsız — "Sao Paulo" = "São Paulo", "ankara" = "Ankara" 
             builder.Entity<City>()
                 .Property(c => c.Name)
                 .HasMaxLength(100)
@@ -307,7 +317,8 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(u => u.LastName).HasMaxLength(50);
             });
 
-            // Şuan için Sabit veri: faaliyet gösterilen üç ülke  
+            // Sabit oluşturma tarihi: yoksa her migration'da seed farkı çıkar
+            var seedDate = new DateTime(2026, 9, 7, 0, 0, 0, DateTimeKind.Utc);
             builder.Entity<Country>().HasData(
                 new Country
                 {
@@ -317,7 +328,8 @@ namespace DestinoTrack.DataAccess.Context
                     CurrencyCode = "TRY",
                     PhoneCode = "+90",
                     TimeZoneId = "Europe/Istanbul",
-                    LanguageCode = "tr"
+                    LanguageCode = "tr",
+                    CreatedDate = seedDate
                 },
                 new Country
                 {
@@ -327,7 +339,8 @@ namespace DestinoTrack.DataAccess.Context
                     CurrencyCode = "EUR",
                     PhoneCode = "+356",
                     TimeZoneId = "Europe/Malta",
-                    LanguageCode = "en"
+                    LanguageCode = "en",
+                    CreatedDate = seedDate
                 },
                 new Country
                 {
@@ -337,8 +350,22 @@ namespace DestinoTrack.DataAccess.Context
                     CurrencyCode = "BRL",
                     PhoneCode = "+55",
                     TimeZoneId = "America/Sao_Paulo",
-                    LanguageCode = "pt"
+                    LanguageCode = "pt",
+                    CreatedDate = seedDate
                 });
+
+            // --- Soft delete + tarihler  ---
+            foreach (var entityType in builder.Model.GetEntityTypes().Where(t => typeof(BaseEntity).IsAssignableFrom(t.ClrType)).ToList())
+            {
+                // Silinmiş kayıt hiçbir sorguda görünmez:  
+                var parameter = Expression.Parameter(entityType.ClrType, "e");
+                var notDeleted = Expression.Lambda(Expression.Not(Expression.Property(parameter, nameof(BaseEntity.IsDeleted))), parameter);
+                builder.Entity(entityType.ClrType).HasQueryFilter(notDeleted);
+
+                // Migration'da mevcut satırlar o anın tarihini alır; yeni kayıtta tarihi interceptor yazar
+                builder.Entity(entityType.ClrType).Property(nameof(BaseEntity.CreatedDate)).HasDefaultValueSql("SYSUTCDATETIME()");
+            }
         }
+
     }
 }

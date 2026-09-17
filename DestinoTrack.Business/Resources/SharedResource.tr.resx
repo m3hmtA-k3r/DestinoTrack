@@ -61,7 +61,8 @@
   <data name="CountryNotFound" xml:space="preserve"><value>Ülke bulunamadı.</value></data>
   <data name="CityNameTaken" xml:space="preserve"><value>Bu ülkede bu şehir zaten kayıtlı.</value></data>
   <data name="IsoCodeTaken" xml:space="preserve"><value>Bu ISO kodu başka bir ülkede kayıtlı.</value></data>
-  <data name="CountryHasDependents" xml:space="preserve"><value>Bu ülkeye bağlı şehir veya müşteri kaydı var. Önce onları silin.</value></data>
+  <data name="CountryHasDependents" xml:space="preserve"><value>Bu ülkeye bağlı şehir, müşteri veya kullanıcı kaydı var. Önce onları kaldırın.</value></data>
+  <data name="CityHasDependents" xml:space="preserve"><value>Bu şehre bağlı şube kaydı var. Önce şubeleri kaldırın.</value></data>
 
   <!-- ═══ 7 · Doğrulama mesajları (validator'lardan) ═══ -->
   <data name="RecordIdRequired" xml:space="preserve"><value>Güncellenecek kayıt belirtilmedi.</value></data>

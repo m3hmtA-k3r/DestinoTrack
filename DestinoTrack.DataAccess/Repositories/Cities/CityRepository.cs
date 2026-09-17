@@ -38,5 +38,13 @@ namespace DestinoTrack.DataAccess.Repositories.Cities
                 .Select(g => new { CountryId = g.Key, Count = g.Count() })
                 .ToDictionaryAsync(x => x.CountryId, x => x.Count);
         }
+
+
+        // Soft delete'te veritabanının FK koruması çalışmaz — kural serviste bu sorguyla işler
+        public async Task<bool> HasBranchesAsync(Guid cityId)
+        {
+            return await _context.Branches.AnyAsync(b => b.CityId == cityId);
+        }
+
     }
 }

@@ -61,7 +61,8 @@
   <data name="CountryNotFound" xml:space="preserve"><value>País não encontrado.</value></data>
   <data name="CityNameTaken" xml:space="preserve"><value>Esta cidade já está cadastrada neste país.</value></data>
   <data name="IsoCodeTaken" xml:space="preserve"><value>Este código ISO já está cadastrado em outro país.</value></data>
-  <data name="CountryHasDependents" xml:space="preserve"><value>Este país possui cidades ou clientes vinculados. Exclua-os primeiro.</value></data>
+  <data name="CountryHasDependents" xml:space="preserve"><value>Este país possui cidades, clientes ou usuários vinculados. Remova-os primeiro.</value></data>
+  <data name="CityHasDependents" xml:space="preserve"><value>Esta cidade possui filiais vinculadas. Remova-as primeiro.</value></data>
 
   <!-- ═══ 7 · Doğrulama mesajları (validator'lardan) ═══ -->
   <data name="RecordIdRequired" xml:space="preserve"><value>Nenhum registro foi informado para atualização.</value></data>

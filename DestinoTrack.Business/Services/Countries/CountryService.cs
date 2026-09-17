@@ -52,7 +52,14 @@ namespace DestinoTrack.Business.Services.Countries
                 throw new ValidationException(_localizer["CountryNotFound"].Value);
             }
 
+            // Bağlı şehir / müşteri / kullanıcı varken silinmez (soft delete'te bunu veritabanı engellemiyor)
+            if (await _countryRepository.HasDependentsAsync(id))
+            {
+                throw new ValidationException(_localizer["CountryHasDependents"].Value);
+            }
+
             await _countryRepository.DeleteAsync(country);
         }
+
     }
 }
