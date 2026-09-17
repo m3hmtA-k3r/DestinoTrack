@@ -6,6 +6,7 @@ using DestinoTrack.Business.Services.Dashboard;
 using DestinoTrack.Business.Services.Accounts;
 using DestinoTrack.Business.Services.Users;
 using DestinoTrack.DataAccess.Interceptors;
+using DestinoTrack.WebUI.Infrastructure;
 using DestinoTrack.DataAccess.Context;
 using DestinoTrack.DataAccess.Repositories.Abouts;
 using DestinoTrack.DataAccess.Repositories.Addresses;
@@ -27,27 +28,33 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Denetimi kaydını "kim yaptı" bilgisi o anki HTTP isteğinden okunur hale getirdik
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUserAccessor, HttpCurrentUserAccessor>();
+builder.Services.AddScoped<AuditLogInterceptor>();
+
 // DB bağlantısını yapıyoruz.
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<AppDbContext>((sp, options) =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
     options.UseLazyLoadingProxies();
 
-    // Tarihler + soft delete: her SaveChanges'ta BaseEntity kayıtlarını düzenler 
-    options.AddInterceptors(new BaseEntityInterceptor());
+    // Sıra önemli — önce tarihler + soft delete, sonra denetim: AuditLog silmeyi "IsDeleted false → true" olarak görür
+    options.AddInterceptors(new BaseEntityInterceptor(), sp.GetRequiredService<AuditLogInterceptor>());
 });
+
 
 // Identity için gerekli servisleri ekliyoruz.
 builder.Services.AddIdentity<AppUser, AppRole>(options =>
 {
-    // K4 · Şifre: en az 8 karakter, büyük + küçük harf + rakam; özel karakter zorunlu değil
+    //  Şifre: en az 8 karakter, büyük + küçük harf + rakam; özel karakter zorunlu değil
     options.Password.RequiredLength = 8;
     options.Password.RequireUppercase = true;
     options.Password.RequireLowercase = true;
     options.Password.RequireDigit = true;
     options.Password.RequireNonAlphanumeric = false;
 
-    // K4 · 5 hatalı denemede 15 dakika kilit — yeni açılan hesaplar için de geçerli
+    // 5 hatalı denemede 15 dakika kilit — yeni açılan hesaplar için de geçerli
     options.Lockout.MaxFailedAccessAttempts = 5;
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
     options.Lockout.AllowedForNewUsers = true;

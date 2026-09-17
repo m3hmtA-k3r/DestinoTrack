@@ -23,6 +23,7 @@ namespace DestinoTrack.DataAccess.Context
         public DbSet<Courier> Couriers { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Customer> Customers { get; set; }
+        public DbSet<AuditLog> AuditLogs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -316,6 +317,23 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(u => u.FirstName).HasMaxLength(50);
                 e.Property(u => u.LastName).HasMaxLength(50);
             });
+
+            // --- Denetim kaydı ---
+            builder.Entity<AuditLog>(e =>
+            {
+                e.Property(a => a.EntityName).HasMaxLength(100);
+                e.Property(a => a.UserEmail).HasMaxLength(256);   // Identity'deki e-posta uzunluğuyla aynı
+                e.Property(a => a.Description).HasMaxLength(500);
+                // OldValues / NewValues bilerek MAX: JSON, kaydın bütün alanlarını taşıyabilir
+
+                // "Bu kaydın geçmişi" sorgusu: hangi tablo + hangi kayıt
+                e.HasIndex(a => new { a.EntityName, a.EntityId });
+
+                // Denetim ekranı (Epik 16) tarihe göre sıralar ve süzer
+                e.HasIndex(a => a.CreatedDate);
+            });
+
+
 
             // Sabit oluşturma tarihi: yoksa her migration'da seed farkı çıkar
             var seedDate = new DateTime(2026, 9, 7, 0, 0, 0, DateTimeKind.Utc);
