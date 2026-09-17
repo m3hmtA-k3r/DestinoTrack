@@ -19,7 +19,7 @@
 
     <!--  HEADER-->
     <header class="sticky top-0 z-40 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <!-- max-w-7xl = 1280px (Velocity Flux container-max) -->
+        <!-- max-w-7xl = 1280px  -->
         <div class="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-margin-mobile lg:px-margin-desktop">
             <a asp-area="" asp-controller="Home" asp-action="Index" class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
@@ -28,14 +28,20 @@
                 <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight">DestinoTrack</span>
             </a>
 
-            <!-- Dil seçici -->
-            <div class="flex items-center p-1 rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-                @foreach (var lang in new[] { "tr", "en", "pt" })
-                {
-                    <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-culture="@lang" asp-route-returnUrl="@returnUrl"
-                       class="px-2.5 py-1.5 rounded-lg text-label-md font-label-md uppercase transition-colors @(lang == culture ? "bg-secondary-container text-on-secondary-fixed" : "text-on-surface-variant hover:bg-surface-container-high")">@lang</a>
-                }
+            <div class="flex items-center gap-2 lg:gap-4">
+                <!-- Dil seçici -->
+                <div class="flex items-center p-1 rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+                    @foreach (var lang in new[] { "tr", "en", "pt" })
+                    {
+                        <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-culture="@lang" asp-route-returnUrl="@returnUrl"
+                           class="px-2.5 py-1.5 rounded-lg text-label-md font-label-md uppercase transition-colors @(lang == culture ? "bg-secondary-container text-on-secondary-fixed" : "text-on-surface-variant hover:bg-surface-container-high")">@lang</a>
+                    }
+                </div>
+
+                <!-- Hesap menüsü — ViewComponent, verisini IAccountService'ten alır -->
+                @await Component.InvokeAsync("UserMenu")
             </div>
+
         </div>
     </header>
 

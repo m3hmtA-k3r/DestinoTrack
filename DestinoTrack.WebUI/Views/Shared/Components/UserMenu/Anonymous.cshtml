@@ -1,0 +1,10 @@
+﻿<!-- Hesap menüsü UserMenuViewComponent -->
+<div class="flex items-center gap-2">
+    <a asp-area="" asp-controller="Account" asp-action="Login" class="btn-tonal">
+        <span class="material-symbols-outlined text-[20px]">login</span>
+        <span>@L["Login"]</span>
+    </a>
+
+    <!-- Dar ekranda gizli: başlık sığsın, giriş sayfasında "Kayıt Ol" bağlantısı zaten var -->
+    <a asp-area="" asp-controller="Account" asp-action="Register" class="btn-filled hidden sm:inline-flex">@L["Register"]</a>
+</div>

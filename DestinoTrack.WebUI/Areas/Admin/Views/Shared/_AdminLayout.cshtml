@@ -1,5 +1,4 @@
 ﻿@{
-    // Aktif menüyü bulmak için şu anki controller adı
     var controller = ViewContext.RouteData.Values["controller"]?.ToString();
 
     // Dil seçici 
@@ -104,21 +103,10 @@
 
         </div>
 
-        <!-- Kullanıcı kartı  -->
-        <div class="p-4 mx-4 mb-6 rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
-                    <span class="material-symbols-outlined text-on-primary text-[20px]">person</span>
-                </div>
-                <div class="overflow-hidden">
-                    <div class="font-headline-sm text-body-sm text-on-surface truncate">@L["Administrator"]</div>
-                    <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["NoSessionYet"]</div>
-                </div>
-            </div>
-            <span class="p-2 rounded-lg text-on-surface-variant opacity-40 cursor-not-allowed shrink-0" title="@L["Logout"]">
-                <span class="material-symbols-outlined text-[20px]">logout</span>
-            </span>
-        </div>
+       
+        <!-- Kullanıcı kartı — ViewComponent, verisini IAccountService'ten alır -->
+        @await Component.InvokeAsync("AdminUserCard")
+
     </aside>
 
     <!-- Mobil karartma -->
@@ -163,9 +151,10 @@
                     <span>@L["NewShipment"]</span>
                 </button>
 
-                <div class="hidden sm:flex w-8 h-8 rounded-full bg-primary items-center justify-center">
-                    <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
-                </div>
+                <!-- Kullanıcı kartı — ViewComponent Avatar,-->
+                  @await Component.InvokeAsync("AdminUserCard", new { view = "Avatar" })
+
+
             </div>
         </header>
 

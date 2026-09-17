@@ -183,8 +183,43 @@ namespace DestinoTrack.Business.Services.Accounts
             return code;
         }
 
+        public async Task<UserCardDto?> GetUserCardAsync(ClaimsPrincipal principal)
+        {
+            // Girişsiz talep varsa veritabanına hiç gidemez
+            if (principal.Identity?.IsAuthenticated != true)
+            {
+                return null;
+            }
+
+            var user = await _userManager.GetUserAsync(principal);
+            if (user == null)
+            {
+                // Çerez var ama kullanıcı artık yok
+                return null;
+            }
+
+            // Roller çerezden değil veritabanından: Admin rolü değiştirirse kart hemen doğru rolü gösterir
+            var roles = await _userManager.GetRolesAsync(user);
+
+            // Ülke, şube, cari (lazy loading) okunmaz — her sayfada yalnızca 2 sorgu: kullanıcı + roller
+            return new UserCardDto
+            {
+                FullName = $"{user.FirstName} {user.LastName}",
+                Initials = FirstLetter(user.FirstName) + FirstLetter(user.LastName),
+                Role = RoleNames.All.FirstOrDefault(roles.Contains) ?? string.Empty,
+                IsAdmin = roles.Contains(RoleNames.Admin)
+            };
+        }
+
+
         // Kod = resx anahtarı: controller hatayı bu koda bakarak doğru alana yazar
         private IdentityResult Fail(string key) =>
             IdentityResult.Failed(new IdentityError { Code = key, Description = _localizer[key].Value });
+
+        // Avatar harfi — ad boşsa boş döner
+        private static string FirstLetter(string? value) =>
+            string.IsNullOrWhiteSpace(value) ? string.Empty : char.ToUpperInvariant(value.Trim()[0]).ToString();
+
+
     }
 }

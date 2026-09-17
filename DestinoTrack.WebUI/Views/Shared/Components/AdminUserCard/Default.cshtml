@@ -1,0 +1,25 @@
+﻿@model UserCardDto
+
+<!-- Kullanıcı kartı — AdminUserCardViewComponent · Default -->
+<div class="p-4 mx-4 mb-6 rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] flex items-center justify-between gap-2">
+   
+    <a asp-area="" asp-controller="Account" asp-action="Profile" class="flex items-center gap-3 min-w-0 -m-1 p-1 rounded-lg hover:bg-surface-container-high transition-colors" title="@L["MyAccount"]">
+        <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+            <span class="font-headline-sm text-body-sm text-on-primary">@Model.Initials</span>
+        </div>
+        <div class="overflow-hidden">
+            <div class="font-headline-sm text-body-sm text-on-surface truncate">@Model.FullName</div>
+            @if (!string.IsNullOrEmpty(Model.Role))
+            {
+                <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["Role_" + Model.Role]</div>
+            }
+        </div>
+    </a>
+
+   
+    <form asp-area="" asp-controller="Account" asp-action="Logout" method="post" class="shrink-0">
+        <button type="submit" class="p-2 rounded-lg text-on-surface-variant hover:bg-error-container hover:text-on-error-container transition-colors" title="@L["Logout"]" aria-label="@L["Logout"]">
+            <span class="material-symbols-outlined text-[20px]">logout</span>
+        </button>
+    </form>
+</div>

@@ -32,11 +32,10 @@
   <data name="ClearFilter" xml:space="preserve"><value>Clear filter</value></data>
 
   <!-- ═══ 3 · Admin layout (üst çubuk, kullanıcı kartı, mobil menü) ═══ -->
-  <data name="Administrator" xml:space="preserve"><value>Administrator</value></data>
-  <data name="NoSessionYet" xml:space="preserve"><value>Not signed in yet</value></data>
   <data name="Logout" xml:space="preserve"><value>Log out</value></data>
   <data name="OpenMenu" xml:space="preserve"><value>Open menu</value></data>
   <data name="CloseMenu" xml:space="preserve"><value>Close menu</value></data>
+  <data name="AccountMenu" xml:space="preserve"><value>Account menu</value></data>
   <data name="Notifications" xml:space="preserve"><value>Notifications</value></data>
   <data name="GlobalSearchPlaceholder" xml:space="preserve"><value>Search tracking no., customer or branch...</value></data>
   <data name="NewShipment" xml:space="preserve"><value>Create shipment</value></data>

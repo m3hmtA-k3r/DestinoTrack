@@ -1,0 +1,8 @@
+﻿@model UserCardDto
+
+<!-- Başlık avatarı — AdminUserCardViewComponent · Avatar -->
+<a asp-area="" asp-controller="Account" asp-action="Profile"
+   class="hidden sm:flex w-8 h-8 rounded-full bg-primary items-center justify-center hover:bg-primary-container transition-colors"
+   title="@Model.FullName" aria-label="@L["MyAccount"]">
+    <span class="font-headline-sm text-label-md text-on-primary">@Model.Initials</span>
+</a>

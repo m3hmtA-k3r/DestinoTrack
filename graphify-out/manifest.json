@@ -114,8 +114,8 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj": {
-    "mtime": 1789430452.5498707,
-    "seen": 1789461261.3517854,
+    "mtime": 1789612779.453223,
+    "seen": 1789613100.5860682,
     "ast_hash": "ea9f7c098357590770b7b7587ec8bd09",
     "semantic_hash": ""
   },
@@ -156,9 +156,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/Shared/_Layout.cshtml": {
-    "mtime": 1789303516.8476784,
-    "seen": 1789313415.3268218,
-    "ast_hash": "8f2bf8e496827575a5ed220f4ce8f0a4",
+    "mtime": 1789613254.7149189,
+    "seen": 1789616222.0672467,
+    "ast_hash": "0da9ffb612800bd850029e8f108d45ee",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/Shared/_ValidationScriptsPartial.cshtml": {
@@ -648,9 +648,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Views/Shared/_AdminLayout.cshtml": {
-    "mtime": 1789430452.544361,
-    "seen": 1789461261.3517668,
-    "ast_hash": "060644fe1acd52375e7c4c782a3a02dc",
+    "mtime": 1789612577.945979,
+    "seen": 1789613100.5860527,
+    "ast_hash": "e91a5c1d88d4895d64929822df62ab67",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml": {
@@ -822,15 +822,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Accounts/AccountService.cs": {
-    "mtime": 1789506334.0965676,
-    "seen": 1789509763.2196352,
-    "ast_hash": "a6014d0f4405e77d97d25e751a0c2567",
+    "mtime": 1789512145.0182514,
+    "seen": 1789512587.6836698,
+    "ast_hash": "2a2e7877b46f0da5e1f359bee9a7866b",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Accounts/IAccountService.cs": {
-    "mtime": 1789505341.0939343,
-    "seen": 1789509763.2196364,
-    "ast_hash": "8f011ebc2cc3d6fa1b634556cb59120c",
+    "mtime": 1789511992.4896982,
+    "seen": 1789512587.6836717,
+    "ast_hash": "3644fac1df277d1da39fe5217ff36bf1",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Validators/Accounts/RegisterValidator.cs": {
@@ -873,6 +873,48 @@
     "mtime": 1789511126.824546,
     "seen": 1789511422.8731747,
     "ast_hash": "5e21d05a97b64baae9a1623bfb91e1fa",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs": {
+    "mtime": 1789511957.0043616,
+    "seen": 1789512587.683699,
+    "ast_hash": "ec2c52daff680b1e366315bed032acb1",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs": {
+    "mtime": 1789611926.104604,
+    "seen": 1789612457.235673,
+    "ast_hash": "621b61433b6badd3c38437f34c36e722",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Views/Shared/Components/AdminUserCard/Avatar.cshtml": {
+    "mtime": 1789612070.9173975,
+    "seen": 1789612457.2356853,
+    "ast_hash": "c8b29ffe1b0c9bc7cffe8b3d173a8ce4",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Views/Shared/Components/AdminUserCard/Default.cshtml": {
+    "mtime": 1789616043.1401725,
+    "seen": 1789616222.0672424,
+    "ast_hash": "598acd97fe9207b7b7700affb61f8e56",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs": {
+    "mtime": 1789612696.8733141,
+    "seen": 1789613100.586078,
+    "ast_hash": "ca1dd8909fe0105dd3be170218e697aa",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Views/Shared/Components/UserMenu/Anonymous.cshtml": {
+    "mtime": 1789612824.9233527,
+    "seen": 1789613100.5860875,
+    "ast_hash": "7b0788623327cd918b51fe61451e81b3",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Views/Shared/Components/UserMenu/Default.cshtml": {
+    "mtime": 1789612853.491352,
+    "seen": 1789613100.5860882,
+    "ast_hash": "ac2d717c44ffa25bc8263ab98f4a9bf2",
     "semantic_hash": ""
   }
 }

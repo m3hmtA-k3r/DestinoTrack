@@ -716,11 +716,41 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
+      "label": ".GetUserCardAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L186",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Accounts",
+        "scope_chain": [
+          "s478"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_fail",
       "label": ".Fail()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L216",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Accounts",
+        "scope_chain": [
+          "s478"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_firstletter",
+      "label": ".FirstLetter()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L220",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -836,6 +866,21 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "label": ".GetUserCardAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Accounts/IAccountService.cs",
+      "source_location": "L21",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Accounts",
+        "scope_chain": [
+          "s116"
+        ]
+      },
+      "_callable": true,
       "_origin": "ast"
     },
     {
@@ -2938,6 +2983,86 @@
         "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
         "scope_chain": [
           "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_accountdtos_usercarddto",
+      "label": "UserCardDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "label": "UserCardDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L4",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_fullname",
+      "label": "FullName",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_initials",
+      "label": "Initials",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_role",
+      "label": "Role",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_isadmin",
+      "label": "IsAdmin",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
+        "scope_chain": [
+          "s3"
         ]
       },
       "_origin": "ast"
@@ -11381,6 +11506,137 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "label": "AdminUserCardViewComponent.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:0e7d1a31bb52da18",
+      "label": "DestinoTrack.WebUI.ViewComponents",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L4",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.WebUI.ViewComponents"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "label": "AdminUserCardViewComponent",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.ViewComponents",
+        "scope_chain": [
+          "s86"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "viewcomponent",
+      "label": "ViewComponent",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent_invokeasync",
+      "label": ".InvokeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.ViewComponents",
+        "scope_chain": [
+          "s86"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_cs_iviewcomponentresult",
+      "label": "IViewComponentResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "label": "UserMenuViewComponent.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "label": "UserMenuViewComponent",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.ViewComponents",
+        "scope_chain": [
+          "s86"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent_invokeasync",
+      "label": ".InvokeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.ViewComponents",
+        "scope_chain": [
+          "s86"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_usermenuviewcomponent_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_usermenuviewcomponent_cs_iviewcomponentresult",
+      "label": "IViewComponentResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_views_account_accessdenied",
       "label": "AccessDenied.cshtml",
       "file_type": "code",
@@ -11433,6 +11689,38 @@
       "label": "Privacy.cshtml",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Views/Home/Privacy.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_views_shared_components_adminusercard_avatar",
+      "label": "Avatar.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Views/Shared/Components/AdminUserCard/Avatar.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_views_shared_components_adminusercard_default",
+      "label": "Default.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Views/Shared/Components/AdminUserCard/Default.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_views_shared_components_usermenu_anonymous",
+      "label": "Anonymous.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Views/Shared/Components/UserMenu/Anonymous.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_views_shared_components_usermenu_default",
+      "label": "Default.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Views/Shared/Components/UserMenu/Default.cshtml",
       "source_location": null,
       "_origin": "ast"
     },
@@ -12987,11 +13275,63 @@
     },
     {
       "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice",
+      "target": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L186",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
+      "target": "destinotrack_business_services_accounts_accountservice_cs_claimsprincipal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L186",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "ClaimsPrincipal"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
+      "target": "destinotrack_business_services_accounts_accountservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L186",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L186",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "UserCardDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice",
       "target": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_fail",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L216",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13001,12 +13341,22 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L216",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
         "ref_token": "IdentityResult"
       },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice",
+      "target": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_firstletter",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L220",
+      "weight": 1.0,
       "_origin": "ast"
     },
     {
@@ -13061,6 +13411,28 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
       "source_location": "L159",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L205",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
+      "target": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_firstletter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L208",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13309,6 +13681,58 @@
       "context": "generic_arg",
       "metadata": {
         "ref_token": "ProfileDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice",
+      "target": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/IAccountService.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "target": "destinotrack_business_services_accounts_iaccountservice_cs_claimsprincipal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/IAccountService.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "ClaimsPrincipal"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "target": "destinotrack_business_services_accounts_iaccountservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/IAccountService.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Accounts/IAccountService.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "UserCardDto"
       },
       "_origin": "ast"
     },
@@ -18281,6 +18705,70 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/RegisterDto.cs",
       "source_location": "L29",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_accountdtos_usercarddto",
+      "target": "csharp_namespace:340ccb1ecf645ca5",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_accountdtos_usercarddto",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_fullname",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_initials",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_role",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_isadmin",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -32467,6 +32955,240 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "target": "csharp_namespace:3b3406be028aabd6",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Accounts",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "target": "microsoft_aspnetcore_mvc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "target": "csharp_namespace:0e7d1a31bb52da18",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "target": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "target": "viewcomponent",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "ViewComponent"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "target": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IAccountService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent",
+      "target": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent_invokeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent_invokeasync",
+      "target": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent_invokeasync",
+      "target": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_cs_iviewcomponentresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IViewComponentResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "target": "csharp_namespace:3b3406be028aabd6",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Accounts",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "target": "microsoft_aspnetcore_mvc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "target": "csharp_namespace:0e7d1a31bb52da18",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "target": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "target": "viewcomponent",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "ViewComponent"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "target": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IAccountService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent",
+      "target": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent_invokeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent_invokeasync",
+      "target": "destinotrack_webui_viewcomponents_usermenuviewcomponent_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent_invokeasync",
+      "target": "destinotrack_webui_viewcomponents_usermenuviewcomponent_cs_iviewcomponentresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IViewComponentResult"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_webui_views_account_register",
       "target": "destinotrack_webui_views_account_register_cshtml_ioptions",
       "relation": "references",
@@ -32890,7 +33612,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L188",
+      "source_location": "L217",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33351,6 +34073,30 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_destinotrack_webui_viewcomponents_adminusercardviewcomponent_invokeasync",
+      "target": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent_destinotrack_webui_viewcomponents_usermenuviewcomponent_invokeasync",
+      "target": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/ViewComponents/UserMenuViewComponent.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_loginasync",
       "target": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_loginasync",
       "relation": "dispatches_to",
@@ -33389,6 +34135,18 @@
     {
       "source": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getprofileasync",
       "target": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getprofileasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_accounts_iaccountservice_destinotrack_business_services_accounts_iaccountservice_getusercardasync",
+      "target": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_getusercardasync",
       "relation": "dispatches_to",
       "context": "call",
       "confidence": "INFERRED",

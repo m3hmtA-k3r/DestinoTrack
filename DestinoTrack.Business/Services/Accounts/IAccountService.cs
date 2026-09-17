@@ -16,5 +16,8 @@ namespace DestinoTrack.Business.Services.Accounts // Giriş · çıkış · kay�
 
         // Giriş yapan kullanıcının Hesabım bilgisi; kullanıcı artık yoksa null
         Task<ProfileDto?> GetProfileAsync(ClaimsPrincipal principal);
+
+        // Layout'taki kullanıcı kartı ve üst menü (ViewComponent'ler); girişsizse ya da kullanıcı artık yoksa null
+        Task<UserCardDto?> GetUserCardAsync(ClaimsPrincipal principal);
     }
 }
