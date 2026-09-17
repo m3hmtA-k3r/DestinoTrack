@@ -65,17 +65,26 @@ namespace DestinoTrack.DataAccess.Context
                 .OnDelete(DeleteBehavior.Restrict);
 
             //CargoMovement
+            // Hareket geçmişi silinmez 
             builder.Entity<CargoMovement>()
                 .HasOne(m => m.Cargo)
                 .WithMany(c => c.Movements)
                 .HasForeignKey(m => m.CargoId)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<CargoMovement>()
                 .HasOne(m => m.Branch)
                 .WithMany()
                 .HasForeignKey(m => m.BranchId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // İşlemi yapan kullanıcı => kullanıcıya bağlı hareketler, kullanıcıyla birlikte silinmez
+            builder.Entity<CargoMovement>()
+                .HasOne(m => m.PerformedByUser)
+                .WithMany()
+                .HasForeignKey(m => m.PerformedByUserId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             //Payment => Cargo / Kurye / Şube
             builder.Entity<Payment>()

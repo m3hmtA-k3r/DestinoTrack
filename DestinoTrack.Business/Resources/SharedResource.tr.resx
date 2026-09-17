@@ -90,12 +90,15 @@
   <data name="TrackNotice" xml:space="preserve"><value>Kargo modülü henüz tamamlanmadı. Takip sorgusu Cargo servisi eklendiğinde çalışacak.</value></data>
 
   <!-- ═══ 9 · Kargo durumları ═══ -->
-  <data name="Status_Received" xml:space="preserve"><value>Kargo kabul edildi</value></data>
+  <data name="Status_Created" xml:space="preserve"><value>Oluşturuldu</value></data>
+  <data name="Status_AtOriginBranch" xml:space="preserve"><value>Gönderici şubesinde</value></data>
   <data name="Status_InTransferCenter" xml:space="preserve"><value>Transfer merkezinde</value></data>
-  <data name="Status_DispatchedFromTransferCenter" xml:space="preserve"><value>Transfer merkezinden ayrıldı</value></data>
-  <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Dağıtım şubesine ulaştı</value></data>
+  <data name="Status_AtDestinationBranch" xml:space="preserve"><value>Varış şubesinde</value></data>
   <data name="Status_OutForDelivery" xml:space="preserve"><value>Dağıtıma çıktı</value></data>
   <data name="Status_Delivered" xml:space="preserve"><value>Teslim edildi</value></data>
+  <data name="Status_DeliveryFailed" xml:space="preserve"><value>Teslim edilemedi</value></data>
+  <data name="Status_ReturnInProgress" xml:space="preserve"><value>İade sürecinde</value></data>
+  <data name="Status_ReturnedToSender" xml:space="preserve"><value>Göndericiye iade edildi</value></data>
   <!-- ═══ 10 · Hesap: giriş · çıkış · erişim engeli · Hesabım · rol adları ═══ -->
   <data name="Login" xml:space="preserve"><value>Giriş Yap</value></data>
   <data name="LoginTitle" xml:space="preserve"><value>Hesabına giriş yap</value></data>

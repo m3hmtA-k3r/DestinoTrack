@@ -682,7 +682,7 @@
       "label": ".GetProfileAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L147",
+      "source_location": "L148",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -705,7 +705,7 @@
       "label": ".GenerateCustomerCodeAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L174",
+      "source_location": "L175",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -720,7 +720,7 @@
       "label": ".GetUserCardAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L186",
+      "source_location": "L187",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -735,7 +735,7 @@
       "label": ".Fail()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L216",
+      "source_location": "L217",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -750,7 +750,7 @@
       "label": ".FirstLetter()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L220",
+      "source_location": "L221",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -4402,7 +4402,7 @@
       "label": "DestinoTrack.DataAccess.Context",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L5",
+      "source_location": "L7",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -4415,11 +4415,11 @@
       "label": "AppDbContext",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_callable": true,
@@ -4447,11 +4447,11 @@
       "label": "Abouts",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4469,11 +4469,11 @@
       "label": "Addresses",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L14",
+      "source_location": "L16",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4483,11 +4483,11 @@
       "label": "Branches",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L15",
+      "source_location": "L17",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4497,11 +4497,11 @@
       "label": "Cargos",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L16",
+      "source_location": "L18",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4511,11 +4511,11 @@
       "label": "CargoMovements",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L17",
+      "source_location": "L19",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4525,11 +4525,11 @@
       "label": "Cities",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L18",
+      "source_location": "L20",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4539,11 +4539,11 @@
       "label": "Contacts",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L19",
+      "source_location": "L21",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4553,11 +4553,11 @@
       "label": "Countries",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L20",
+      "source_location": "L22",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4575,11 +4575,11 @@
       "label": "Couriers",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L21",
+      "source_location": "L23",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4589,11 +4589,11 @@
       "label": "Payments",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L22",
+      "source_location": "L24",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4603,11 +4603,25 @@
       "label": "Customers",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L23",
+      "source_location": "L25",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_auditlogs",
+      "label": "AuditLogs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L26",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Context",
+        "scope_chain": [
+          "s214"
         ]
       },
       "_origin": "ast"
@@ -4617,11 +4631,11 @@
       "label": ".OnModelCreating()",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L25",
+      "source_location": "L28",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s138"
+          "s214"
         ]
       },
       "_callable": true,
@@ -4681,6 +4695,383 @@
       "file_type": "concept",
       "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
       "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "label": "AuditLogInterceptor.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:07f545999980e60e",
+      "label": "DestinoTrack.DataAccess.Interceptors",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L10",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.DataAccess.Interceptors"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "label": "AuditLogInterceptor",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L14",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s329"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "savechangesinterceptor",
+      "label": "SaveChangesInterceptor",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "jsonserializeroptions",
+      "label": "JsonSerializerOptions",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "hashset",
+      "label": "HashSet",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchanges",
+      "label": ".SavingChanges()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L21",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s329"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dbcontexteventdata",
+      "label": "DbContextEventData",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_interceptionresult",
+      "label": "InterceptionResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "label": ".SavingChangesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L37",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s329"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_cancellationtoken",
+      "label": "CancellationToken",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_valuetask",
+      "label": "ValueTask",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "label": ".Changed()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L54",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s329"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dbcontext",
+      "label": "DbContext",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "entityentry",
+      "label": "EntityEntry",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "label": ".AddLogs()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s329"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dictionary",
+      "label": "Dictionary",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "propertyvalues",
+      "label": "PropertyValues",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_snapshot",
+      "label": ".Snapshot()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L128",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s329"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "label": "BaseEntityInterceptor.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "label": "BaseEntityInterceptor",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s137"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchanges",
+      "label": ".SavingChanges()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s137"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_dbcontexteventdata",
+      "label": "DbContextEventData",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_interceptionresult",
+      "label": "InterceptionResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchangesasync",
+      "label": ".SavingChangesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L17",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s137"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_cancellationtoken",
+      "label": "CancellationToken",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_valuetask",
+      "label": "ValueTask",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_apply",
+      "label": ".Apply()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L23",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s137"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_dbcontext",
+      "label": "DbContext",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "label": "ICurrentUserAccessor.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "label": "ICurrentUserAccessor",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L4",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor_userid",
+      "label": "UserId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor_email",
+      "label": "Email",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Interceptors",
+        "scope_chain": [
+          "s3"
+        ]
+      },
       "_origin": "ast"
     },
     {
@@ -5155,6 +5546,156 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates",
+      "label": "20260917040507_mig_soft_delete_dates.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates",
+      "label": "mig_soft_delete_dates",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L9",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates_up",
+      "label": ".Up()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_cs_migrationbuilder",
+      "label": "MigrationBuilder",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates_down",
+      "label": ".Down()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L323",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_cs_datetime",
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs",
+      "label": "20260917070358_mig_Audit_Logs.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs",
+      "label": "mig_Audit_Logs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L9",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_up",
+      "label": ".Up()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_cs_migrationbuilder",
+      "label": "MigrationBuilder",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_down",
+      "label": ".Down()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L46",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s90"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_cs_datetime",
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot",
       "label": "AppDbContextModelSnapshot.cs",
       "file_type": "code",
@@ -5219,16 +5760,16 @@
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetimeoffset",
-      "label": "DateTimeOffset",
+      "id": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetime",
+      "label": "DateTime",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetime",
-      "label": "DateTime",
+      "id": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetimeoffset",
+      "label": "DateTimeOffset",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
@@ -5731,6 +6272,21 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_hasbranchesasync",
+      "label": ".HasBranchesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L44",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
+        "scope_chain": [
+          "s185"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dataaccess_repositories_cities_icityrepository",
       "label": "ICityRepository.cs",
       "file_type": "code",
@@ -5817,6 +6373,21 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_hasbranchesasync",
+      "label": ".HasBranchesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Cities",
+        "scope_chain": [
+          "s107"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dataaccess_repositories_contactinfos_contactinforepository",
       "label": "ContactInfoRepository.cs",
       "file_type": "code",
@@ -5890,7 +6461,7 @@
       "label": "DestinoTrack.DataAccess.Repositories.Countries",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L5",
+      "source_location": "L6",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -5903,15 +6474,46 @@
       "label": "CountryRepository",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.Countries",
         "scope_chain": [
-          "s140"
+          "s180"
         ]
       },
       "_callable": true,
       "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_countries_countryrepository_destinotrack_dataaccess_repositories_countries_countryrepository_hasdependentsasync",
+      "label": ".HasDependentsAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Countries",
+        "scope_chain": [
+          "s180"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_countries_countryrepository_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_countries_countryrepository_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -5931,11 +6533,42 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.Countries",
         "scope_chain": [
-          "s101"
+          "s104"
         ]
       },
       "_callable": true,
       "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository_hasdependentsasync",
+      "label": ".HasDependentsAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/ICountryRepository.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Countries",
+        "scope_chain": [
+          "s104"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_countries_icountryrepository_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_countries_icountryrepository_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -6182,7 +6815,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s120"
+          "s123"
         ]
       },
       "_callable": true,
@@ -6198,7 +6831,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s120"
+          "s123"
         ]
       },
       "_callable": true,
@@ -6229,7 +6862,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s120"
+          "s123"
         ]
       },
       "_callable": true,
@@ -6248,11 +6881,11 @@
       "label": ".CountAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L28",
+      "source_location": "L27",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s120"
+          "s123"
         ]
       },
       "_callable": true,
@@ -6263,11 +6896,11 @@
       "label": ".CreateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L33",
+      "source_location": "L32",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s120"
+          "s123"
         ]
       },
       "_callable": true,
@@ -6278,11 +6911,11 @@
       "label": ".UpdateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L39",
+      "source_location": "L38",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s120"
+          "s123"
         ]
       },
       "_callable": true,
@@ -6297,7 +6930,22 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s120"
+          "s123"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_genericrepositories_genericrepository_destinotrack_dataaccess_repositories_genericrepositories_genericrepository_harddeleteasync",
+      "label": ".HardDeleteAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
+      "source_location": "L52",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
+        "scope_chain": [
+          "s123"
         ]
       },
       "_callable": true,
@@ -6320,7 +6968,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s44"
+          "s47"
         ]
       },
       "_callable": true,
@@ -6336,7 +6984,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s44"
+          "s47"
         ]
       },
       "_callable": true,
@@ -6367,7 +7015,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s44"
+          "s47"
         ]
       },
       "_callable": true,
@@ -6390,7 +7038,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s44"
+          "s47"
         ]
       },
       "_callable": true,
@@ -6405,7 +7053,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s44"
+          "s47"
         ]
       },
       "_callable": true,
@@ -6420,7 +7068,7 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s44"
+          "s47"
         ]
       },
       "_callable": true,
@@ -6435,7 +7083,22 @@
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
         "scope_chain": [
-          "s44"
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_genericrepositories_irepository_destinotrack_dataaccess_repositories_genericrepositories_irepository_harddeleteasync",
+      "label": ".HardDeleteAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/IRepository.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
+        "scope_chain": [
+          "s47"
         ]
       },
       "_callable": true,
@@ -6973,6 +7636,186 @@
         "namespace": "DestinoTrack.Entity.Entities",
         "scope_chain": [
           "s87"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog",
+      "label": "AuditLog.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "label": "AuditLog",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_id",
+      "label": "Id",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_userid",
+      "label": "UserId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_useremail",
+      "label": "UserEmail",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_action",
+      "label": "Action",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_entityname",
+      "label": "EntityName",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_entityid",
+      "label": "EntityId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L17",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_createddate",
+      "label": "CreatedDate",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L18",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_cs_datetime",
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_description",
+      "label": "Description",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L20",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_oldvalues",
+      "label": "OldValues",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L21",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_newvalues",
+      "label": "NewValues",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L22",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s48"
         ]
       },
       "_origin": "ast"
@@ -8039,6 +8882,56 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_createddate",
+      "label": "CreatedDate",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Common",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity_cs_datetime",
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_updateddate",
+      "label": "UpdatedDate",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Common",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_isdeleted",
+      "label": "IsDeleted",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Common",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_entity_entities_contactinfo",
       "label": "ContactInfo.cs",
       "file_type": "code",
@@ -8822,6 +9715,72 @@
       "label": "Closed",
       "file_type": "code",
       "source_file": "DestinoTrack.Entity/Entities/Enums/AccountStatus.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_auditaction",
+      "label": "AuditAction.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction",
+      "label": "AuditAction",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L4",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction_create",
+      "label": "Create",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction_update",
+      "label": "Update",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction_delete",
+      "label": "Delete",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
       "source_location": "L8",
       "metadata": {
         "namespace": "DestinoTrack.Entity.Entities.Enums",
@@ -11125,6 +12084,109 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "label": "HttpCurrentUserAccessor.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:0e6ed99892ae61ae",
+      "label": "DestinoTrack.WebUI.Infrastructure",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L4",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.WebUI.Infrastructure"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "label": "HttpCurrentUserAccessor",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Infrastructure",
+        "scope_chain": [
+          "s81"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "ihttpcontextaccessor",
+      "label": "IHttpContextAccessor",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor_user",
+      "label": "User",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Infrastructure",
+        "scope_chain": [
+          "s81"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_cs_claimsprincipal",
+      "label": "ClaimsPrincipal",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor_userid",
+      "label": "UserId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Infrastructure",
+        "scope_chain": [
+          "s81"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor_email",
+      "label": "Email",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Infrastructure",
+        "scope_chain": [
+          "s81"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_models_errorviewmodel",
       "label": "ErrorViewModel.cs",
       "file_type": "code",
@@ -13203,7 +14265,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L147",
+      "source_location": "L148",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13213,7 +14275,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L147",
+      "source_location": "L148",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -13227,7 +14289,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L147",
+      "source_location": "L148",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -13241,7 +14303,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L147",
+      "source_location": "L148",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -13255,7 +14317,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L174",
+      "source_location": "L175",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13265,7 +14327,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L174",
+      "source_location": "L175",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -13279,7 +14341,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L186",
+      "source_location": "L187",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13289,7 +14351,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L186",
+      "source_location": "L187",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -13303,7 +14365,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L186",
+      "source_location": "L187",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -13317,7 +14379,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L186",
+      "source_location": "L187",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -13331,7 +14393,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L216",
+      "source_location": "L217",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13341,7 +14403,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L216",
+      "source_location": "L217",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -13355,7 +14417,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L220",
+      "source_location": "L221",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13410,7 +14472,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L159",
+      "source_location": "L160",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13421,7 +14483,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L205",
+      "source_location": "L206",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -13432,7 +14494,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L208",
+      "source_location": "L209",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19863,7 +20925,7 @@
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext",
-      "target": "csharp_namespace:16bb917edc1a82d7",
+      "target": "system_linq_expressions",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -19872,7 +20934,39 @@
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
+        "target_fqn": "System.Linq.Expressions",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
         "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -19884,7 +20978,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L2",
+      "source_location": "L4",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -19900,7 +20994,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -19915,7 +21009,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19925,7 +21019,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -19935,7 +21029,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "metadata": {
         "ref_token": "IdentityDbContext"
@@ -19948,7 +21042,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -19962,7 +21056,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -19976,7 +21070,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -19990,7 +21084,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20001,7 +21095,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -20015,7 +21109,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20029,7 +21123,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20040,7 +21134,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20054,7 +21148,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20065,7 +21159,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20079,7 +21173,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20090,7 +21184,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20104,7 +21198,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20115,7 +21209,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20129,7 +21223,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20140,7 +21234,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20154,7 +21248,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20165,7 +21259,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20179,7 +21273,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20190,7 +21284,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20204,7 +21298,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20215,7 +21309,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20229,7 +21323,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20240,7 +21334,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20254,7 +21348,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L23",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -20265,7 +21359,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L23",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20275,11 +21369,36 @@
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "target": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_auditlogs",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "AuditLog"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
       "target": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -20289,7 +21408,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -20303,7 +21422,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L32",
+      "source_location": "L35",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20317,7 +21436,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L65",
+      "source_location": "L68",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20331,7 +21450,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L78",
+      "source_location": "L81",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20345,7 +21464,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L97",
+      "source_location": "L100",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20359,7 +21478,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L104",
+      "source_location": "L107",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20373,7 +21492,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L111",
+      "source_location": "L114",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20387,7 +21506,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L118",
+      "source_location": "L121",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20401,7 +21520,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L125",
+      "source_location": "L128",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20415,7 +21534,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L146",
+      "source_location": "L149",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20429,7 +21548,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L174",
+      "source_location": "L180",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20443,7 +21562,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L275",
+      "source_location": "L286",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20457,11 +21576,25 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L291",
+      "source_location": "L302",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
         "ref_token": "About"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L322",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "AuditLog"
       },
       "_origin": "ast"
     },
@@ -20472,7 +21605,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L312",
+      "source_location": "L341",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -20537,6 +21670,917 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj",
       "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "system_text_encodings_web",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.Text.Encodings.Web",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "system_text_json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.Text.Json",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "microsoft_entityframeworkcore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "microsoft_entityframeworkcore_changetracking",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore.ChangeTracking",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "microsoft_entityframeworkcore_diagnostics",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore.Diagnostics",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "csharp_namespace:07f545999980e60e",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "savechangesinterceptor",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "SaveChangesInterceptor"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICurrentUserAccessor"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "jsonserializeroptions",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "JsonSerializerOptions"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "hashset",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "HashSet"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchanges",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dbcontexteventdata",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "DbContextEventData"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_interceptionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "InterceptionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dbcontexteventdata",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "DbContextEventData"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_interceptionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "InterceptionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_cancellationtoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CancellationToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_valuetask",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L37",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "ValueTask"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L54",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dbcontext",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L54",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "DbContext"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L54",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "target": "entityentry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L54",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "EntityEntry"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L54",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dbcontext",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "DbContext"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "entityentry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "EntityEntry"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dictionary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Dictionary"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "propertyvalues",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "PropertyValues"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_snapshot",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L128",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_snapshot",
+      "target": "entityentry",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L128",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "EntityEntry"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_snapshot",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L128",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_snapshot",
+      "target": "propertyvalues",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L128",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "PropertyValues"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_snapshot",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dictionary",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L128",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Dictionary"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dictionary",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_changed",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_cs_dictionary",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_snapshot",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "microsoft_entityframeworkcore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "microsoft_entityframeworkcore_diagnostics",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore.Diagnostics",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "csharp_namespace:07f545999980e60e",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "savechangesinterceptor",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "SaveChangesInterceptor"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchanges",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_dbcontexteventdata",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "DbContextEventData"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_interceptionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "InterceptionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchangesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_dbcontexteventdata",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "DbContextEventData"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_interceptionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "InterceptionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_cancellationtoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CancellationToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_valuetask",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "ValueTask"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_apply",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_apply",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_cs_dbcontext",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L23",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "DbContext"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchanges",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_apply",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_savingchangesasync",
+      "target": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_apply",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_baseentityinterceptor_destinotrack_dataaccess_interceptors_baseentityinterceptor_apply",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/BaseEntityInterceptor.cs",
+      "source_location": "L34",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "target": "csharp_namespace:07f545999980e60e",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "target": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "target": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor_userid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "target": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "target": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor_email",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Interceptors/ICurrentUserAccessor.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
       "_origin": "ast"
     },
     {
@@ -21328,6 +23372,274 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates",
+      "target": "system",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates",
+      "target": "microsoft_entityframeworkcore_migrations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore.Migrations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates",
+      "target": "csharp_namespace:00b9497d9b228753",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates",
+      "target": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates",
+      "target": "migration",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "Migration"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates",
+      "target": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates_up",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates_up",
+      "target": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates",
+      "target": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates_down",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L323",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates_down",
+      "target": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L323",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_destinotrack_dataaccess_migrations_mig_soft_delete_dates_up",
+      "target": "destinotrack_dataaccess_migrations_20260917040507_mig_soft_delete_dates_cs_datetime",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917040507_mig_soft_delete_dates.cs",
+      "source_location": "L38",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs",
+      "target": "system",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs",
+      "target": "microsoft_entityframeworkcore_migrations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore.Migrations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs",
+      "target": "csharp_namespace:00b9497d9b228753",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs",
+      "target": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs",
+      "target": "migration",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "Migration"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs",
+      "target": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_up",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_up",
+      "target": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs",
+      "target": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_down",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_down",
+      "target": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_up",
+      "target": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_destinotrack_dataaccess_migrations_mig_audit_logs_up",
+      "target": "destinotrack_dataaccess_migrations_20260917070358_mig_audit_logs_cs_datetime",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260917070358_mig_Audit_Logs.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot",
       "target": "system",
       "relation": "imports",
@@ -21496,29 +23808,29 @@
     },
     {
       "source": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_buildmodel",
-      "target": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetimeoffset",
+      "target": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetime",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Migrations/AppDbContextModelSnapshot.cs",
-      "source_location": "L164",
+      "source_location": "L34",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
-        "ref_token": "DateTimeOffset"
+        "ref_token": "DateTime"
       },
       "_origin": "ast"
     },
     {
       "source": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_buildmodel",
-      "target": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetime",
+      "target": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot_cs_datetimeoffset",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Migrations/AppDbContextModelSnapshot.cs",
-      "source_location": "L293",
+      "source_location": "L186",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
-        "ref_token": "DateTime"
+        "ref_token": "DateTimeOffset"
       },
       "_origin": "ast"
     },
@@ -22984,6 +25296,44 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_hasbranchesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_hasbranchesasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_hasbranchesasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_dataaccess_repositories_cities_icityrepository",
       "target": "csharp_namespace:1e60bb1d89ada22c",
       "relation": "imports",
@@ -23177,6 +25527,44 @@
       "context": "generic_arg",
       "metadata": {
         "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_hasbranchesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_hasbranchesasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_hasbranchesasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
       },
       "_origin": "ast"
     },
@@ -23431,11 +25819,27 @@
     },
     {
       "source": "destinotrack_dataaccess_repositories_countries_countryrepository",
+      "target": "microsoft_entityframeworkcore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_countryrepository",
       "target": "csharp_namespace:1d30898fce1ac78b",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -23445,7 +25849,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -23455,7 +25859,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "metadata": {
         "ref_token": "GenericRepository"
@@ -23468,7 +25872,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -23482,7 +25886,7 @@
       "relation": "implements",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "metadata": {
         "ref_token": "ICountryRepository"
@@ -23495,11 +25899,49 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "context": "field",
       "metadata": {
         "ref_token": "AppDbContext"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_countryrepository_destinotrack_dataaccess_repositories_countries_countryrepository",
+      "target": "destinotrack_dataaccess_repositories_countries_countryrepository_destinotrack_dataaccess_repositories_countries_countryrepository_hasdependentsasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_countryrepository_destinotrack_dataaccess_repositories_countries_countryrepository_hasdependentsasync",
+      "target": "destinotrack_dataaccess_repositories_countries_countryrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_countryrepository_destinotrack_dataaccess_repositories_countries_countryrepository_hasdependentsasync",
+      "target": "destinotrack_dataaccess_repositories_countries_countryrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
       },
       "_origin": "ast"
     },
@@ -23579,6 +26021,44 @@
       "context": "generic_arg",
       "metadata": {
         "ref_token": "Country"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository",
+      "target": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository_hasdependentsasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/ICountryRepository.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository_hasdependentsasync",
+      "target": "destinotrack_dataaccess_repositories_countries_icountryrepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/ICountryRepository.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository_hasdependentsasync",
+      "target": "destinotrack_dataaccess_repositories_countries_icountryrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/ICountryRepository.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
       },
       "_origin": "ast"
     },
@@ -24301,7 +26781,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24311,7 +26791,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L28",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24325,7 +26805,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L33",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24335,7 +26815,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L33",
+      "source_location": "L32",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24349,7 +26829,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L39",
+      "source_location": "L38",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24359,7 +26839,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
-      "source_location": "L39",
+      "source_location": "L38",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24384,6 +26864,30 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
       "source_location": "L45",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_genericrepositories_genericrepository_destinotrack_dataaccess_repositories_genericrepositories_genericrepository",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_genericrepository_destinotrack_dataaccess_repositories_genericrepositories_genericrepository_harddeleteasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_genericrepositories_genericrepository_destinotrack_dataaccess_repositories_genericrepositories_genericrepository_harddeleteasync",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_genericrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/GenericRepository.cs",
+      "source_location": "L52",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24592,6 +27096,30 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/IRepository.cs",
       "source_location": "L12",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_genericrepositories_irepository_destinotrack_dataaccess_repositories_genericrepositories_irepository",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_irepository_destinotrack_dataaccess_repositories_genericrepositories_irepository_harddeleteasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/IRepository.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_genericrepositories_irepository_destinotrack_dataaccess_repositories_genericrepositories_irepository_harddeleteasync",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_irepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/GenericRepositories/IRepository.cs",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25488,6 +28016,194 @@
       "metadata": {
         "ref_token": "Customer"
       },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_id",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_userid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_useremail",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_action",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "AuditAction"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_entityname",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_entityid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_createddate",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_cs_datetime",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_description",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_oldvalues",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog_newvalues",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/AuditLog.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "field",
       "_origin": "ast"
     },
     {
@@ -26805,6 +29521,53 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_createddate",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "target": "destinotrack_entity_entities_common_baseentity_cs_datetime",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_updateddate",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity_isdeleted",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Common/BaseEntity.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_entity_entities_contactinfo",
       "target": "csharp_namespace:4d8cf7ad560befce",
       "relation": "imports",
@@ -27746,6 +30509,56 @@
       "relation": "case_of",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Entity/Entities/Enums/AccountStatus.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_auditaction",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_auditaction",
+      "target": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction",
+      "target": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction_create",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction",
+      "target": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction_update",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction",
+      "target": "destinotrack_entity_entities_enums_auditaction_destinotrack_entity_entities_enums_auditaction_delete",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/AuditAction.cs",
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
@@ -32053,6 +34866,146 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "system_security_claims",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.Security.Claims",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "csharp_namespace:07f545999980e60e",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Interceptors",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "csharp_namespace:0e6ed99892ae61ae",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "destinotrack_dataaccess_interceptors_icurrentuseraccessor_destinotrack_dataaccess_interceptors_icurrentuseraccessor",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "ICurrentUserAccessor"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "ihttpcontextaccessor",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IHttpContextAccessor"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor_user",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_cs_claimsprincipal",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ClaimsPrincipal"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor_userid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor",
+      "target": "destinotrack_webui_infrastructure_httpcurrentuseraccessor_destinotrack_webui_infrastructure_httpcurrentuseraccessor_email",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Infrastructure/HttpCurrentUserAccessor.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_webui_models_errorviewmodel",
       "target": "csharp_namespace:c18ba39a52108b83",
       "relation": "contains",
@@ -32208,12 +35161,44 @@
     },
     {
       "source": "destinotrack_webui_program",
-      "target": "csharp_namespace:ae7894bd03fd865f",
+      "target": "csharp_namespace:07f545999980e60e",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
       "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Interceptors",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_program",
+      "target": "csharp_namespace:0e6ed99892ae61ae",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Program.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Infrastructure",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_program",
+      "target": "csharp_namespace:ae7894bd03fd865f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Program.cs",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32229,7 +35214,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32245,7 +35230,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L10",
+      "source_location": "L12",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32261,7 +35246,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32277,7 +35262,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L12",
+      "source_location": "L14",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32293,7 +35278,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32309,7 +35294,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32325,7 +35310,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L15",
+      "source_location": "L17",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32341,7 +35326,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32357,7 +35342,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32373,7 +35358,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L18",
+      "source_location": "L20",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32389,7 +35374,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L19",
+      "source_location": "L21",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32405,7 +35390,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L20",
+      "source_location": "L22",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32421,7 +35406,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L21",
+      "source_location": "L23",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32437,7 +35422,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32453,7 +35438,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L23",
+      "source_location": "L25",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32469,7 +35454,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L24",
+      "source_location": "L26",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -32485,7 +35470,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L25",
+      "source_location": "L27",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -33612,7 +36597,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L217",
+      "source_location": "L218",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33625,6 +36610,18 @@
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
       "source_location": "L315",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_interceptors_auditloginterceptor_destinotrack_dataaccess_interceptors_auditloginterceptor_addlogs",
+      "target": "destinotrack_entity_entities_auditlog_destinotrack_entity_entities_auditlog",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DestinoTrack.DataAccess/Interceptors/AuditLogInterceptor.cs",
+      "source_location": "L113",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33732,7 +36729,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L181",
+      "source_location": "L182",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -33757,6 +36754,30 @@
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
       "source_location": "L31",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_deleteasync",
+      "target": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_hasbranchesasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Cities/CityService.cs",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_countries_countryservice_destinotrack_business_services_countries_countryservice_deleteasync",
+      "target": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository_hasdependentsasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Countries/CountryService.cs",
+      "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -34428,6 +37449,30 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_hasbranchesasync",
+      "target": "destinotrack_dataaccess_repositories_cities_cityrepository_destinotrack_dataaccess_repositories_cities_cityrepository_hasbranchesasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository_hasdependentsasync",
+      "target": "destinotrack_dataaccess_repositories_countries_countryrepository_destinotrack_dataaccess_repositories_countries_countryrepository_hasdependentsasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/Countries/CountryRepository.cs",
       "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"

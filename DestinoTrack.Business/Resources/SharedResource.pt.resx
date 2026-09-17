@@ -90,12 +90,15 @@
   <data name="TrackNotice" xml:space="preserve"><value>O módulo de encomendas ainda não foi concluído. O rastreio funcionará quando o serviço de encomendas for adicionado.</value></data>
 
   <!-- ═══ 9 · Kargo durumları ═══ -->
-  <data name="Status_Received" xml:space="preserve"><value>Encomenda recebida</value></data>
+  <data name="Status_Created" xml:space="preserve"><value>Criada</value></data>
+  <data name="Status_AtOriginBranch" xml:space="preserve"><value>Na filial de origem</value></data>
   <data name="Status_InTransferCenter" xml:space="preserve"><value>No centro de transferência</value></data>
-  <data name="Status_DispatchedFromTransferCenter" xml:space="preserve"><value>Saiu do centro de transferência</value></data>
-  <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Chegou à filial de entrega</value></data>
+  <data name="Status_AtDestinationBranch" xml:space="preserve"><value>Na filial de destino</value></data>
   <data name="Status_OutForDelivery" xml:space="preserve"><value>Saiu para entrega</value></data>
   <data name="Status_Delivered" xml:space="preserve"><value>Entregue</value></data>
+  <data name="Status_DeliveryFailed" xml:space="preserve"><value>Falha na entrega</value></data>
+  <data name="Status_ReturnInProgress" xml:space="preserve"><value>Em devolução</value></data>
+  <data name="Status_ReturnedToSender" xml:space="preserve"><value>Devolvida ao remetente</value></data>
   <!-- ═══ 10 · Hesap: giriş · çıkış · erişim engeli · Hesabım · rol adları ═══ -->
   <data name="Login" xml:space="preserve"><value>Entrar</value></data>
   <data name="LoginTitle" xml:space="preserve"><value>Entre na sua conta</value></data>

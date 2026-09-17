@@ -90,12 +90,15 @@
   <data name="TrackNotice" xml:space="preserve"><value>The shipment module is not finished yet. Tracking will work once the shipment service is added.</value></data>
 
   <!-- ═══ 9 · Kargo durumları ═══ -->
-  <data name="Status_Received" xml:space="preserve"><value>Shipment received</value></data>
+  <data name="Status_Created" xml:space="preserve"><value>Created</value></data>
+  <data name="Status_AtOriginBranch" xml:space="preserve"><value>At origin branch</value></data>
   <data name="Status_InTransferCenter" xml:space="preserve"><value>At transfer centre</value></data>
-  <data name="Status_DispatchedFromTransferCenter" xml:space="preserve"><value>Left transfer centre</value></data>
-  <data name="Status_ArrivedAtDeliveryBranch" xml:space="preserve"><value>Arrived at delivery branch</value></data>
+  <data name="Status_AtDestinationBranch" xml:space="preserve"><value>At destination branch</value></data>
   <data name="Status_OutForDelivery" xml:space="preserve"><value>Out for delivery</value></data>
   <data name="Status_Delivered" xml:space="preserve"><value>Delivered</value></data>
+  <data name="Status_DeliveryFailed" xml:space="preserve"><value>Delivery failed</value></data>
+  <data name="Status_ReturnInProgress" xml:space="preserve"><value>Return in progress</value></data>
+  <data name="Status_ReturnedToSender" xml:space="preserve"><value>Returned to sender</value></data>
   <!-- ═══ 10 · Hesap: giriş · çıkış · erişim engeli · Hesabım · rol adları ═══ -->
   <data name="Login" xml:space="preserve"><value>Log in</value></data>
   <data name="LoginTitle" xml:space="preserve"><value>Sign in to your account</value></data>
