@@ -1,8 +1,7 @@
-using DestinoTrack.DataAccess.Repositories.Branches;
+﻿using DestinoTrack.DataAccess.Repositories.Branches;
 using DestinoTrack.DataAccess.Repositories.Cargos;
 using DestinoTrack.DataAccess.Repositories.Cities;
 using DestinoTrack.DataAccess.Repositories.Countries;
-using DestinoTrack.DataAccess.Repositories.Couriers;
 using DestinoTrack.DTO.DTOs.DashboardDtos;
 using DestinoTrack.Entity.Entities.Enums;
 
@@ -12,8 +11,8 @@ namespace DestinoTrack.Business.Services.Dashboard
         ICargoRepository _cargoRepository,
         ICountryRepository _countryRepository,
         ICityRepository _cityRepository,
-        IBranchRepository _branchRepository,
-        ICourierRepository _courierRepository) : IDashboardService
+        IBranchRepository _branchRepository
+        ) : IDashboardService
     {
         public async Task<DashboardSummaryDto> GetSummaryAsync()
         {
@@ -26,8 +25,7 @@ namespace DestinoTrack.Business.Services.Dashboard
 
                 CountryCount = await _countryRepository.CountAsync(),
                 CityCount = await _cityRepository.CountAsync(),
-                BranchCount = await _branchRepository.CountAsync(),
-                CourierCount = await _courierRepository.CountAsync()
+                BranchCount = await _branchRepository.CountAsync()
             };
         }
     }

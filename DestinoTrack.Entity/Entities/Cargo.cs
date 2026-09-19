@@ -31,7 +31,9 @@ namespace DestinoTrack.Entity.Entities
         public virtual AppUser Receiver { get; set; }
         public virtual Branch OriginBranch { get; set; }
         public virtual Branch DestinationBranch { get; set; }
-        public virtual Courier Courier { get; set; }
+
+        // Kuryelik yapan personel (Employee.JobType = Courier)
+        public virtual Employee Courier { get; set; }
         public virtual IList<CargoMovement> Movements { get; set; }
         public virtual IList<Payment> Payments { get; set; }
 

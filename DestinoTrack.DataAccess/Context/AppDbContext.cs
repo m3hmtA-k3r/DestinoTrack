@@ -20,10 +20,11 @@ namespace DestinoTrack.DataAccess.Context
         public DbSet<City> Cities { get; set; }
         public DbSet<ContactInfo> Contacts { get; set; }
         public DbSet<Country> Countries { get; set; }
-        public DbSet<Courier> Couriers { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Customer> Customers { get; set; }
         public DbSet<AuditLog> AuditLogs { get; set; }
+        public DbSet<Employee> Employees { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -57,7 +58,7 @@ namespace DestinoTrack.DataAccess.Context
                 .HasForeignKey(c => c.DestinationBranchId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            //Cargo => Kurye
+            // Cargo => Kurye (Employee, JobType = Courier)
             builder.Entity<Cargo>()
                 .HasOne(c => c.Courier)
                 .WithMany(k => k.Cargos)
@@ -105,11 +106,19 @@ namespace DestinoTrack.DataAccess.Context
                 .HasForeignKey(p => p.CollectedByBranchId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            // Kurye => Şube
-            builder.Entity<Courier>()
-                .HasOne(k => k.Branch)
-                .WithMany(b => b.Couriers)
-                .HasForeignKey(k => k.BranchId)
+            // Personel => Şube
+            builder.Entity<Employee>()
+                .HasOne(e => e.Branch)
+                .WithMany(b => b.Employees)
+                .HasForeignKey(e => e.BranchId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Personel => kullanıcı hesabı (varsa) : giriş yapmayan personelde boş kalır
+            // WithMany() boş: AppUser tarafında personel listesi tutulmuyor
+            builder.Entity<Employee>()
+                .HasOne(e => e.AppUser)
+                .WithMany()
+                .HasForeignKey(e => e.AppUserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             // Şube => Şehir
@@ -177,7 +186,7 @@ namespace DestinoTrack.DataAccess.Context
                 .OnDelete(DeleteBehavior.Restrict);
 
 
-            // Tekil indeksler yalnızca silinmemiş kayıtlarda geçerli (D9): silinen kayıt aynı değerin yeniden eklenmesini engellemez
+            // Tekil indeksler yalnızca silinmemiş kayıtlarda geçerli: silinen kayıt aynı değerin yeniden eklenmesini engellemez
 
             //TrackCode sütununda aynı değer iki kez olamaz
             builder.Entity<Cargo>()
@@ -204,7 +213,7 @@ namespace DestinoTrack.DataAccess.Context
                 .IsUnique()
                 .HasFilter("[IsDeleted] = 0");
 
-            // Aynı tesis kodu iki şubede olamaz
+            // Aynı tesis kodu iki şubede olamaz ( kod elle girilir, tekildir)
             builder.Entity<Branch>()
                 .HasIndex(b => b.Code)
                 .IsUnique()
@@ -226,8 +235,8 @@ namespace DestinoTrack.DataAccess.Context
                 .Property(p => p.Amount)
                 .HasPrecision(18, 2);
 
-            builder.Entity<Courier>()
-                .Property(k => k.Rating)
+            builder.Entity<Employee>()
+                .Property(e => e.Rating)
                 .HasPrecision(3, 2);          // 4,85
 
             builder.Entity<Customer>(e =>
@@ -266,13 +275,13 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(b => b.Code).HasMaxLength(20);
             });
 
-            builder.Entity<Courier>(e =>
+            builder.Entity<Employee>(e =>
             {
-                e.Property(k => k.FirstName).HasMaxLength(50);
-                e.Property(k => k.LastName).HasMaxLength(50);
-                e.Property(k => k.PhoneNumber).HasMaxLength(20);
-                e.Property(k => k.VehiclePlate).HasMaxLength(20);
-                e.Property(k => k.Region).HasMaxLength(100);
+                e.Property(x => x.FirstName).HasMaxLength(50);
+                e.Property(x => x.LastName).HasMaxLength(50);
+                e.Property(x => x.PhoneNumber).HasMaxLength(20);
+                e.Property(x => x.VehiclePlate).HasMaxLength(20);
+                e.Property(x => x.Region).HasMaxLength(100);
             });
 
             builder.Entity<Cargo>(e =>
@@ -338,7 +347,7 @@ namespace DestinoTrack.DataAccess.Context
                 // "Bu kaydın geçmişi" sorgusu: hangi tablo + hangi kayıt
                 e.HasIndex(a => new { a.EntityName, a.EntityId });
 
-                // Denetim ekranı (Epik 16) tarihe göre sıralar ve süzer
+                // Denetim ekranı tarihe göre sıralar ve süzer
                 e.HasIndex(a => a.CreatedDate);
             });
 
@@ -393,6 +402,7 @@ namespace DestinoTrack.DataAccess.Context
                 builder.Entity(entityType.ClrType).Property(nameof(BaseEntity.CreatedDate)).HasDefaultValueSql("SYSUTCDATETIME()");
             }
         }
+
 
     }
 }

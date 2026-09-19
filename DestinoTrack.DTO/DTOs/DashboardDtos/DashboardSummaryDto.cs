@@ -1,4 +1,4 @@
-namespace DestinoTrack.DTO.DTOs.DashboardDtos
+﻿namespace DestinoTrack.DTO.DTOs.DashboardDtos
 {
     public class DashboardSummaryDto
     {
@@ -12,7 +12,6 @@ namespace DestinoTrack.DTO.DTOs.DashboardDtos
         public int CountryCount { get; set; }
         public int CityCount { get; set; }
         public int BranchCount { get; set; }
-        public int CourierCount { get; set; }
 
         // Teslim oranı — kargo yokken sıfıra bölme olmasın diye burada hesaplanıyor
         public double DeliveryRate =>

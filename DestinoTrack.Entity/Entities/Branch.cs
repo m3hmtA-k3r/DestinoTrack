@@ -13,7 +13,10 @@ namespace DestinoTrack.Entity.Entities
         public virtual City City { get; set; }
         public virtual IList<Cargo> OriginCargos { get; set; }
         public virtual IList<Cargo> DestinationCargos { get; set; }
-        public virtual IList<Courier> Couriers { get; set; }
+
+        // Şubede çalışan personel (kurye · şube personeli · depo · şoför)
+        public virtual IList<Employee> Employees { get; set; }
+
 
         // Branch için
         public virtual IList<Payment> CollectedPayments { get; set; }

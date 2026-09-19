@@ -17,7 +17,7 @@ namespace DestinoTrack.Entity.Entities
 
         // Navigation Properties
         public virtual Cargo Cargo { get; set; }
-        public virtual Courier CollectedByCourier { get; set; }
+        public virtual Employee CollectedByCourier { get; set; }
         public virtual Branch CollectedByBranch { get; set; }
     }
 }
