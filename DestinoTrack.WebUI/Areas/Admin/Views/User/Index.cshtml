@@ -18,7 +18,7 @@
             <span class="font-label-md text-label-md text-primary uppercase">@L["Menu_UserSettings"]</span>
             <div class="flex items-center gap-2">
                 <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Users"]</h1>
-                <span class="chip-neutral">@Model.Users.Count</span>
+                <span class="chip-neutral">@Model.Users.TotalCount</span>
             </div>
             <p class="font-body-sm text-body-sm text-on-surface-variant">@L["UsersSubtitle"]</p>
         </div>
@@ -38,43 +38,45 @@
     </div>
 }
 
-<!-- Filtre: rol  + ad / e-posta araması -->
+<!-- Filtre: rol çipleri + ad / e-posta araması. İkisi de POST ile gider, seçim oturumda saklanır -->
 <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
 
-    <div class="flex flex-wrap items-center gap-2">
-        <a asp-action="Index" asp-route-q="@Model.Search"
-           class="@(Model.SelectedRole == null ? chipOn : chipOff)">
+    <!-- Çipler: her düğme kendi rolünü gönderir; o anki arama gizli alanla korunur -->
+    <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2">
+        <input type="hidden" name="q" value="@Model.Search" />
+
+        <button type="submit" name="role" value=""
+                class="@(Model.SelectedRole == null ? chipOn : chipOff)">
             <span>@L["All"]</span>
             <span class="opacity-70">@Model.TotalUserCount</span>
-        </a>
+        </button>
+
         @foreach (var roleCount in Model.RoleCounts)
         {
-            <a asp-action="Index" asp-route-role="@roleCount.Key" asp-route-q="@Model.Search"
-               class="@(Model.SelectedRole == roleCount.Key ? chipOn : chipOff)">
+            <button type="submit" name="role" value="@roleCount.Key"
+                    class="@(Model.SelectedRole == roleCount.Key ? chipOn : chipOff)">
                 <span>@L["Role_" + roleCount.Key]</span>
                 <span class="opacity-70">@roleCount.Value</span>
-            </a>
+            </button>
         }
-    </div>
+    </form>
 
-    <!-- GET: sonuç adres çubuğunda görünür, seçili rol gizli alanla korunur -->
-    <form asp-action="Index" method="get" class="flex items-center gap-2 w-full lg:w-auto">
-        @if (Model.SelectedRole != null)
-        {
-            <input type="hidden" name="role" value="@Model.SelectedRole" />
-        }
+    <!-- Arama: seçili rol gizli alanla korunur · kutu boşaltılınca form kendiliğinden gider -->
+    <form asp-action="Filter" method="post" class="flex items-center gap-2 w-full lg:w-auto">
+        <input type="hidden" name="role" value="@Model.SelectedRole" />
         <div class="relative flex-1 lg:w-72">
             <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
             <input type="search" name="q" value="@Model.Search" placeholder="@L["SearchUser"]"
-                   class="field-input pl-10" autocomplete="off" />
+                   class="field-input pl-10" autocomplete="off" data-clear-submit />
         </div>
         <button type="submit" class="btn-tonal shrink-0">@L["Search"]</button>
     </form>
 </div>
 
+
 <!-- Liste -->
 <div class="m3-card overflow-hidden">
-    @if (Model.Users.Any())
+    @if (Model.Users.Items.Count > 0)
     {
         <div class="overflow-x-auto">
             <table class="m3-table font-body-sm text-body-sm">
@@ -88,7 +90,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var user in Model.Users)
+                    @foreach (var user in Model.Users.Items)
                     {
                         var isMe = user.Id == Model.CurrentUserId;
                         var initials = $"{user.FirstName.FirstOrDefault()}{user.LastName.FirstOrDefault()}".ToUpper();
@@ -144,21 +146,14 @@
                                         <span class="material-symbols-outlined text-[18px]">edit</span>
                                     </a>
 
-                                    @* K6: kendini pasifleştiremez — kendi satırında buton yok *@
+                                    @* kendini pasifleştiremez — kendi satırında buton yok *@
                                     @if (!isMe)
                                     {
                                         <form asp-action="SetActive" method="post" data-confirm="@L["ConfirmDeactivate"]"
                                               onsubmit="@(user.IsActive ? "return confirm(this.dataset.confirm);" : null)">
                                             <input type="hidden" name="id" value="@user.Id" />
                                             <input type="hidden" name="isActive" value="@(user.IsActive ? "false" : "true")" />
-                                            @if (Model.SelectedRole != null)
-                                            {
-                                                <input type="hidden" name="role" value="@Model.SelectedRole" />
-                                            }
-                                            @if (!string.IsNullOrEmpty(Model.Search))
-                                            {
-                                                <input type="hidden" name="q" value="@Model.Search" />
-                                            }
+                                           
                                             <button type="submit" title="@(user.IsActive? L["Deactivate"] : L["Activate"])"
                                                     class="p-2 rounded-xl bg-surface-container text-on-surface transition-colors @(user.IsActive ? "hover:bg-error-container hover:text-on-error-container" : "hover:bg-primary-fixed hover:text-on-primary-fixed-variant")">
                                                 <span class="material-symbols-outlined text-[18px]">@(user.IsActive ? "person_off" : "person_check")</span>
@@ -172,6 +167,8 @@
                 </tbody>
             </table>
         </div>
+
+        @await Html.PartialAsync("_Pagination", Model.Users)
     }
     else if (Model.IsFiltered)
     {
@@ -198,3 +195,17 @@
         </div>
     }
 </div>
+
+@section Scripts {
+    <script>
+        // Arama kutusu boşaltılınca filtre kendiliğinden kalkar
+        document.querySelectorAll('[data-clear-submit]').forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value === '') {
+                    input.form.submit();
+                }
+            });
+        });
+    </script>
+}
+

@@ -17,20 +17,21 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
     {    // [Authorize] sayesinde burada her zaman giriş yapmış bir kullanıcı var
         private Guid CurrentUserId => Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
-        public async Task<IActionResult> Index(string? role, string? q)
+        // Filtre oturumda tutulur: adres yalnızca sayfa numarası taşır
+        private const string RoleKey = "user.role";
+        private const string SearchKey = "user.q";
+
+        public async Task<IActionResult> Index(int page = 1)
         {
-            // Listede olmayan bir rol adrese elle yazılırsa filtre yok sayılır
-            if (role != null && !RoleNames.Staff.Contains(role))
-            {
-                role = null;
-            }
+            var role = HttpContext.Session.GetString(RoleKey);
+            var search = HttpContext.Session.GetString(SearchKey);
 
             var model = new UserIndexViewModel
             {
-                Users = await _userService.GetAllAsync(role, q),
+                Users = await _userService.GetPagedAsync(role, search, page),
                 RoleCounts = await _userService.GetRoleCountsAsync(),
                 SelectedRole = role,
-                Search = q?.Trim(),
+                Search = search,
                 CurrentUserId = CurrentUserId
             };
 
@@ -107,10 +108,10 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-       
+
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> SetActive(Guid id, bool isActive, string? role, string? q)  // silme yok — pasifleştir / aktifleştir. role ve q: işlemden sonra aynı filtreli listeye dönülür
+        public async Task<IActionResult> SetActive(Guid id, bool isActive)   // silme yok — pasifleştir / aktifleştir
         {
             try
             {
@@ -125,14 +126,14 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
                 TempData["Error"] = ex.Message;
             }
 
-            return RedirectToAction(nameof(Index), new { role, q });
+            return RedirectToAction(nameof(Index));
         }
 
         // Hata kodu → formdaki alan. Eşleşmeyen kod formun üstündeki banda (boş anahtar) yazılır
         private void AddErrors(IdentityResult result, string passwordField)
         {
             foreach (var error in result.Errors)
-            {             
+            {
                 if (error.Code == "DuplicateUserName")
                 {
                     continue;
@@ -149,6 +150,34 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 
                 ModelState.AddModelError(field, error.Description);
             }
+        }
+
+        // Rol  ve arama kutusu buraya gönderir; kaydedip listeye döner 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Filter(string? role, string? q)
+        {
+            // Listede olmayan bir rol gönderilirse filtre yok sayılır
+            if (!string.IsNullOrEmpty(role) && RoleNames.Staff.Contains(role))
+            {
+                HttpContext.Session.SetString(RoleKey, role);
+            }
+            else
+            {
+                HttpContext.Session.Remove(RoleKey);
+            }
+
+            var search = q?.Trim();
+            if (string.IsNullOrEmpty(search))
+            {
+                HttpContext.Session.Remove(SearchKey);
+            }
+            else
+            {
+                HttpContext.Session.SetString(SearchKey, search);
+            }
+
+            return RedirectToAction(nameof(Index));
         }
 
         // Rol ve ülke listeleri — form ilk açıldığında da, hatayla geri döndüğünde de doldurulur

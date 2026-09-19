@@ -14,15 +14,20 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
     public class CityController(ICityService _cityService, ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : AdminBaseController
     {
-
-        public async Task<IActionResult> Index(Guid? countryId, string? q)
+        // Filtre oturumda tutulur: adres yalnızca sayfa numarası taşır
+        private const string CountryKey = "city.countryId";
+        private const string SearchKey = "city.q";
+        public async Task<IActionResult> Index(int page = 1)
         {
+            var countryId = Guid.TryParse(HttpContext.Session.GetString(CountryKey), out var id) ? id : (Guid?)null;
+            var search = HttpContext.Session.GetString(SearchKey);
+
             var model = new CityIndexViewModel
             {
-                Cities = await _cityService.GetAllAsync(countryId, q),
+                Cities = await _cityService.GetPagedAsync(countryId, search, page),
                 CountryFilters = await _cityService.GetCountryFiltersAsync(),
                 SelectedCountryId = countryId,
-                Search = q?.Trim()
+                Search = search
             };
 
             return View(model);
@@ -120,6 +125,33 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 
         }
 
+        // Çipler ve arama kutusu buraya gönderir; kaydedip listeye döner (adres temiz kalır)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Filter(Guid? countryId, string? q)
+        {
+            if (countryId.HasValue)
+            {
+                HttpContext.Session.SetString(CountryKey, countryId.Value.ToString());
+            }
+            else
+            {
+                HttpContext.Session.Remove(CountryKey);
+            }
+
+            var search = q?.Trim();
+            if (string.IsNullOrEmpty(search))
+            {
+                HttpContext.Session.Remove(SearchKey);
+            }
+            else
+            {
+                HttpContext.Session.SetString(SearchKey, search);
+            }
+
+            // Filtre değişti → her zaman 1. sayfadan başla
+            return RedirectToAction(nameof(Index));
+        }
 
         private async Task YukleCountriesAsync()
         {

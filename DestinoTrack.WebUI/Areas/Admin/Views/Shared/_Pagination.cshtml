@@ -1,0 +1,56 @@
+﻿@model PagedResultBase
+@{
+    // _Pagination.cshtml, liste ekranlarının altındaki sayfa çubuğunu çizen parçadır. Tek işi budur: kendisi veri çekmez, hangi kaydın gösterileceğine karar vermez.
+    var query = Context.Request.Query
+        .Where(p => p.Key != "page")
+        .ToDictionary(p => p.Key, p => (object?)p.Value.ToString());
+
+    Func<int, string?> pageUrl = p => Url.Action(null, null, new Dictionary<string, object?>(query) { ["page"] = p });
+
+    var passive = "btn-tonal h-10 opacity-40 pointer-events-none";
+}
+
+@if (Model.TotalPages > 1)
+{
+    <nav class="flex flex-col sm:flex-row items-center justify-between gap-3 mt-6 px-6 pb-6">
+        <p class="font-body-sm text-body-sm text-on-surface-variant">
+            @L["Pagination_Range", Model.FirstRow, Model.LastRow, Model.TotalCount]
+        </p>
+
+        <div class="flex items-center gap-2">
+            @if (Model.HasPrevious)
+            {
+                <a href="@pageUrl(Model.Page - 1)" class="btn-tonal h-10">
+                    <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                    <span>@L["Pagination_Previous"]</span>
+                </a>
+            }
+            else
+            {
+                <span class="@passive" aria-disabled="true">
+                    <span class="material-symbols-outlined text-[20px]">chevron_left</span>
+                    <span>@L["Pagination_Previous"]</span>
+                </span>
+            }
+
+            <span class="px-2 font-label-md text-label-md text-on-surface-variant">
+                @L["Pagination_PageOf", Model.Page, Model.TotalPages]
+            </span>
+
+            @if (Model.HasNext)
+            {
+                <a href="@pageUrl(Model.Page + 1)" class="btn-tonal h-10">
+                    <span>@L["Pagination_Next"]</span>
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </a>
+            }
+            else
+            {
+                <span class="@passive" aria-disabled="true">
+                    <span>@L["Pagination_Next"]</span>
+                    <span class="material-symbols-outlined text-[20px]">chevron_right</span>
+                </span>
+            }
+        </div>
+    </nav>
+}

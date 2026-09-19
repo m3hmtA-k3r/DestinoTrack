@@ -10,11 +10,12 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
     public class CountryController(ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : AdminBaseController
     {
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var values = await _countryService.GetAllAsync();
+            var values = await _countryService.GetPagedAsync(page);
             return View(values);
         }
+
 
         public IActionResult Create()
         {

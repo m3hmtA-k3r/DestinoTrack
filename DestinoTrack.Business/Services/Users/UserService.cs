@@ -1,5 +1,6 @@
 ﻿using DestinoTrack.Business.Consts;
 using DestinoTrack.DataAccess.Repositories.Countries;
+using DestinoTrack.DTO.DTOs.Common;
 using DestinoTrack.DTO.DTOs.UserDtos;
 using DestinoTrack.Entity.Entities;
 using Microsoft.AspNetCore.Identity;
@@ -16,9 +17,10 @@ namespace DestinoTrack.Business.Services.Users
     {
         // pasif kullanıcı = süresiz kilitli
         private static readonly DateTimeOffset DeactivatedUntil = DateTimeOffset.MaxValue;
-
-        public async Task<List<ResultUserDto>> GetAllAsync(string? role = null, string? search = null)
+        public async Task<PagedResult<ResultUserDto>> GetPagedAsync(string? role = null, string? search = null, int page = 1)
         {
+            page = page < 1 ? 1 : page;
+
             var staffRoles = await GetStaffRolesAsync();
 
             var ids = staffRoles
@@ -34,9 +36,20 @@ namespace DestinoTrack.Business.Services.Users
                 query = query.Where(u => u.FirstName.Contains(term) || u.LastName.Contains(term) || u.Email!.Contains(term));
             }
 
+            var totalCount = await query.CountAsync();
+
+            // Sayım burada yapıldığı için son sayfa düzeltmesi tek sorguyla olur
+            var totalPages = (int)Math.Ceiling(totalCount / (double)Paging.PageSize);
+            if (totalPages > 0 && page > totalPages)
+            {
+                page = totalPages;
+            }
+
             // Ülke ve şube adı aynı sorguda gelir — kullanıcı başına ayrı sorgu atılmaz
             var users = await query
                 .OrderBy(u => u.FirstName).ThenBy(u => u.LastName)
+                .Skip((page - 1) * Paging.PageSize)
+                .Take(Paging.PageSize)
                 .Select(u => new
                 {
                     u.Id,
@@ -49,18 +62,25 @@ namespace DestinoTrack.Business.Services.Users
                 })
                 .ToListAsync();
 
-            return users.Select(u => new ResultUserDto
+            return new PagedResult<ResultUserDto>
             {
-                Id = u.Id,
-                FirstName = u.FirstName,
-                LastName = u.LastName,
-                Email = u.Email!,
-                Role = staffRoles[u.Id],
-                CountryName = u.CountryName,
-                BranchName = u.BranchName,
-                IsActive = u.LockoutEnd != DeactivatedUntil
-            }).ToList();
+                Items = users.Select(u => new ResultUserDto
+                {
+                    Id = u.Id,
+                    FirstName = u.FirstName,
+                    LastName = u.LastName,
+                    Email = u.Email!,
+                    Role = staffRoles[u.Id],
+                    CountryName = u.CountryName,
+                    BranchName = u.BranchName,
+                    IsActive = u.LockoutEnd != DeactivatedUntil
+                }).ToList(),
+                Page = page,
+                PageSize = Paging.PageSize,
+                TotalCount = totalCount
+            };
         }
+
 
         public async Task<Dictionary<string, int>> GetRoleCountsAsync()
         {

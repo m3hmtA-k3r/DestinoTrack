@@ -1,11 +1,13 @@
-﻿using DestinoTrack.DTO.DTOs.UserDtos;
+﻿using DestinoTrack.DTO.DTOs.Common;
+using DestinoTrack.DTO.DTOs.UserDtos;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Models
 {
     // Kullanıcı listesi + roller + o an seçili filtre
     public class UserIndexViewModel
     {
-        public List<ResultUserDto> Users { get; set; } = new();
+        public PagedResult<ResultUserDto> Users { get; set; } = new();
+
         public Dictionary<string, int> RoleCounts { get; set; } = new();
 
         public string? SelectedRole { get; set; }

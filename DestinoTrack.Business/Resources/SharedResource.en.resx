@@ -82,6 +82,14 @@
   <data name="TimeZoneMaxLength" xml:space="preserve"><value>Time zone can be at most 50 characters.</value></data>
   <data name="LanguageCodeRequired" xml:space="preserve"><value>Language code cannot be empty.</value></data>
   <data name="LanguageCodeMaxLength" xml:space="preserve"><value>Language code can be at most 5 characters.</value></data>
+  <data name="Binding_ValueInvalid" xml:space="preserve"><value>The value '{0}' is invalid.</value></data>
+  <data name="Binding_ValueInvalidFor" xml:space="preserve"><value>The value '{0}' is not valid for {1}.</value></data>
+  <data name="Binding_UnknownValueInvalid" xml:space="preserve"><value>The supplied value is invalid.</value></data>
+  <data name="Binding_UnknownValueInvalidFor" xml:space="preserve"><value>The supplied value is invalid for {0}.</value></data>
+  <data name="Binding_MustBeNumber" xml:space="preserve"><value>The field must be a number.</value></data>
+  <data name="Binding_MustBeNumberFor" xml:space="preserve"><value>The field {0} must be a number.</value></data>
+  <data name="Binding_MissingValueFor" xml:space="preserve"><value>A value for '{0}' was not provided.</value></data>
+  <data name="Binding_ValueRequired" xml:space="preserve"><value>A value is required.</value></data>
 
   <!-- ═══ 8 · Kargo takip (public ana sayfa) ═══ -->
   <data name="TrackCargo" xml:space="preserve"><value>Track shipment</value></data>
@@ -111,6 +119,13 @@
   <data name="AccessDeniedTitle" xml:space="preserve"><value>Access denied</value></data>
   <data name="AccessDeniedMessage" xml:space="preserve"><value>You do not have permission to view this page.</value></data>
   <data name="BackToHome" xml:space="preserve"><value>Back to home</value></data>
+  <data name="ErrorTitle" xml:space="preserve"><value>Something went wrong</value></data>
+  <data name="ErrorMessage" xml:space="preserve"><value>An unexpected error occurred while processing your request. Please try again shortly.</value></data>
+  <data name="ErrorCode" xml:space="preserve"><value>Error code</value></data>
+  <data name="NotFoundTitle" xml:space="preserve"><value>Page not found</value></data>
+  <data name="NotFoundMessage" xml:space="preserve"><value>The page you are looking for may have been moved, deleted or never existed.</value></data>
+  <data name="HttpStatusTitle" xml:space="preserve"><value>The request could not be completed</value></data>
+  <data name="HttpStatusMessage" xml:space="preserve"><value>The server could not process the request (code {0}).</value></data>
   <data name="MyAccount" xml:space="preserve"><value>My account</value></data>
   <data name="FullName" xml:space="preserve"><value>Full name</value></data>
   <data name="Role" xml:space="preserve"><value>Role</value></data>
@@ -239,4 +254,9 @@
   <data name="AccountStatus_Closed" xml:space="preserve"><value>Closed</value></data>
   <data name="PendingApprovalNotice" xml:space="preserve"><value>Your corporate account is awaiting administrator approval.</value></data>
   <data name="RegistrationCompleted" xml:space="preserve"><value>Your account has been created. Welcome!</value></data>
+  <!-- ═══ 15 · Sayfalama (TALP-41): liste ekranlarının sayfa çubuğu ═══ -->
+  <data name="Pagination_Previous" xml:space="preserve"><value>Previous</value></data>
+  <data name="Pagination_Next" xml:space="preserve"><value>Next</value></data>
+  <data name="Pagination_PageOf" xml:space="preserve"><value>Page {0} of {1}</value></data>
+  <data name="Pagination_Range" xml:space="preserve"><value>{0}–{1} of {2} records</value></data>
 </root>

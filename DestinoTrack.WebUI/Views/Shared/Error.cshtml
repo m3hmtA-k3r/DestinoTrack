@@ -1,22 +1,29 @@
 ﻿@model ErrorViewModel
 @{
-    ViewData["Title"] = "Error";
+    ViewData["Title"] = L["ErrorTitle"].Value;
 }
 
-<div class="mx-auto max-w-3xl px-margin-mobile lg:px-margin-desktop py-16">
-    <div class="m3-card p-8 flex flex-col items-start gap-4">
+<section class="mx-auto flex max-w-7xl justify-center px-margin-mobile lg:px-margin-desktop py-12 lg:py-20">
+    <div class="m3-card w-full max-w-md p-6 sm:p-8 flex flex-col items-center gap-4 text-center">
         <div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
             <span class="material-symbols-outlined text-[28px]">error</span>
         </div>
-        <h1 class="font-headline-md text-headline-md text-error">Bir şeyler ters gitti</h1>
-        <p class="font-body-md text-body-md text-on-surface-variant">İstek işlenirken bir hata oluştu.</p>
+        <h1 class="font-headline-md text-headline-md text-on-surface">@L["ErrorTitle"]</h1>
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["ErrorMessage"]</p>
 
         @if (Model?.ShowRequestId ?? false)
         {
             <p class="font-body-sm text-body-sm text-on-surface-variant">
-                İstek numarası:
+                @L["ErrorCode"]:
                 <code class="px-2 py-0.5 rounded-lg bg-surface-container font-mono text-label-md text-on-surface">@Model.RequestId</code>
             </p>
         }
+
+        <div class="pt-2">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">home</span>
+                <span>@L["BackToHome"]</span>
+            </a>
+        </div>
     </div>
-</div>
+</section>

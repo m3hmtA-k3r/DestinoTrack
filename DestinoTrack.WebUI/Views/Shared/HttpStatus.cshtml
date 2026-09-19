@@ -1,0 +1,21 @@
+﻿@model int
+@{
+    ViewData["Title"] = L["HttpStatusTitle"].Value;
+}
+
+<section class="mx-auto flex max-w-7xl justify-center px-margin-mobile lg:px-margin-desktop py-12 lg:py-20">
+    <div class="m3-card w-full max-w-md p-6 sm:p-8 flex flex-col items-center gap-4 text-center">
+        <div class="w-12 h-12 rounded-xl bg-error-container text-on-error-container flex items-center justify-center">
+            <span class="material-symbols-outlined text-[28px]">warning</span>
+        </div>
+        <h1 class="font-headline-md text-headline-md text-on-surface">@L["HttpStatusTitle"]</h1>
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["HttpStatusMessage", Model]</p>
+
+        <div class="pt-2">
+            <a asp-area="" asp-controller="Home" asp-action="Index" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">home</span>
+                <span>@L["BackToHome"]</span>
+            </a>
+        </div>
+    </div>
+</section>

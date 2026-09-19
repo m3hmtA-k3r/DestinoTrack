@@ -16,5 +16,22 @@ namespace DestinoTrack.DataAccess.Repositories.Countries
                 || await _context.Customers.AnyAsync(m => m.CountryId == countryId)
                 || await _context.Users.AnyAsync(u => u.CountryId == countryId);
         }
+
+
+        public async Task<(List<Country> Items, int TotalCount)> GetPagedAsync(int page, int pageSize)
+        {
+            IQueryable<Country> query = _context.Countries;
+
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+                .OrderBy(c => c.Name)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (items, totalCount);
+        }
+
     }
 }

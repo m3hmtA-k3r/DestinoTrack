@@ -1,12 +1,13 @@
-﻿using DestinoTrack.DTO.DTOs.UserDtos;
+﻿using DestinoTrack.DTO.DTOs.Common;
+using DestinoTrack.DTO.DTOs.UserDtos;
 using Microsoft.AspNetCore.Identity;
 
 namespace DestinoTrack.Business.Services.Users
 {
     public interface IUserService
     {
-        // Yalnızca personel (RoleNames.Staff); rol ve arama isteğe bağlı — ikisi de boşsa hepsi
-        Task<List<ResultUserDto>> GetAllAsync(string? role = null, string? search = null);
+        Task<PagedResult<ResultUserDto>> GetPagedAsync(string? role = null, string? search = null, int page = 1);
+
 
         // Rol çipleri için: her personel rolünde kaç kullanıcı var (0 olanlar dahil)
         Task<Dictionary<string, int>> GetRoleCountsAsync();
@@ -17,7 +18,6 @@ namespace DestinoTrack.Business.Services.Users
         Task<IdentityResult> CreateAsync(CreateUserDto createUserDto);
         Task<IdentityResult> UpdateAsync(UpdateUserDto updateUserDto, Guid currentUserId);
 
-        //pasifleştir / aktifleştir 
         Task<IdentityResult> SetActiveAsync(Guid id, bool isActive, Guid currentUserId);
 
         // Giriş kilitliyse gösterilecek mesaj: pasif hesap mı, süreli kilit mi

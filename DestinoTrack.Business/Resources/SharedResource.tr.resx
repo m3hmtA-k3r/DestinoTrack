@@ -82,6 +82,14 @@
   <data name="TimeZoneMaxLength" xml:space="preserve"><value>Saat dilimi en fazla 50 karakter olabilir.</value></data>
   <data name="LanguageCodeRequired" xml:space="preserve"><value>Dil kodu boş olamaz.</value></data>
   <data name="LanguageCodeMaxLength" xml:space="preserve"><value>Dil kodu en fazla 5 karakter olabilir.</value></data>
+  <data name="Binding_ValueInvalid" xml:space="preserve"><value>'{0}' değeri geçersiz.</value></data>
+  <data name="Binding_ValueInvalidFor" xml:space="preserve"><value>'{0}' değeri {1} alanı için geçersiz.</value></data>
+  <data name="Binding_UnknownValueInvalid" xml:space="preserve"><value>Girilen değer geçersiz.</value></data>
+  <data name="Binding_UnknownValueInvalidFor" xml:space="preserve"><value>{0} alanı için girilen değer geçersiz.</value></data>
+  <data name="Binding_MustBeNumber" xml:space="preserve"><value>Bu alan sayı olmalı.</value></data>
+  <data name="Binding_MustBeNumberFor" xml:space="preserve"><value>{0} alanı sayı olmalı.</value></data>
+  <data name="Binding_MissingValueFor" xml:space="preserve"><value>'{0}' için değer girilmedi.</value></data>
+  <data name="Binding_ValueRequired" xml:space="preserve"><value>Bir değer girilmesi gerekiyor.</value></data>
 
   <!-- ═══ 8 · Kargo takip (public ana sayfa) ═══ -->
   <data name="TrackCargo" xml:space="preserve"><value>Kargo Takip</value></data>
@@ -111,6 +119,13 @@
   <data name="AccessDeniedTitle" xml:space="preserve"><value>Erişim engellendi</value></data>
   <data name="AccessDeniedMessage" xml:space="preserve"><value>Bu sayfayı görüntüleme yetkin yok.</value></data>
   <data name="BackToHome" xml:space="preserve"><value>Ana sayfaya dön</value></data>
+  <data name="ErrorTitle" xml:space="preserve"><value>Bir şeyler ters gitti</value></data>
+  <data name="ErrorMessage" xml:space="preserve"><value>İsteğin işlenirken beklenmeyen bir hata oluştu. Lütfen biraz sonra tekrar dene.</value></data>
+  <data name="ErrorCode" xml:space="preserve"><value>Hata kodu</value></data>
+  <data name="NotFoundTitle" xml:space="preserve"><value>Sayfa bulunamadı</value></data>
+  <data name="NotFoundMessage" xml:space="preserve"><value>Aradığın sayfa taşınmış, silinmiş ya da hiç var olmamış olabilir.</value></data>
+  <data name="HttpStatusTitle" xml:space="preserve"><value>İstek tamamlanamadı</value></data>
+  <data name="HttpStatusMessage" xml:space="preserve"><value>Sunucu isteği işleyemedi (kod {0}).</value></data>
   <data name="MyAccount" xml:space="preserve"><value>Hesabım</value></data>
   <data name="FullName" xml:space="preserve"><value>Ad Soyad</value></data>
   <data name="Role" xml:space="preserve"><value>Rol</value></data>
@@ -239,4 +254,9 @@
   <data name="AccountStatus_Closed" xml:space="preserve"><value>Kapatıldı</value></data>
   <data name="PendingApprovalNotice" xml:space="preserve"><value>Kurumsal hesabın yönetici onayı bekliyor.</value></data>
   <data name="RegistrationCompleted" xml:space="preserve"><value>Hesabın oluşturuldu, hoş geldin!</value></data>
+  <!-- ═══ 15 · Sayfalama (TALP-41): liste ekranlarının sayfa çubuğu ═══ -->
+  <data name="Pagination_Previous" xml:space="preserve"><value>Önceki</value></data>
+  <data name="Pagination_Next" xml:space="preserve"><value>Sonraki</value></data>
+  <data name="Pagination_PageOf" xml:space="preserve"><value>Sayfa {0} / {1}</value></data>
+  <data name="Pagination_Range" xml:space="preserve"><value>{2} kayıttan {0}–{1} arası</value></data>
 </root>

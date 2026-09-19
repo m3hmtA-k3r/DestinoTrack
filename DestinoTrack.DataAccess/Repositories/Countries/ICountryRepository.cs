@@ -7,5 +7,8 @@ namespace DestinoTrack.DataAccess.Repositories.Countries
     {
         Task<bool> HasDependentsAsync(Guid countryId);
 
+        // Sayfalı liste: ada göre sıralı, yalnızca istenen sayfa + toplam sayı
+        Task<(List<Country> Items, int TotalCount)> GetPagedAsync(int page, int pageSize);
+
     }
 }

@@ -8,10 +8,9 @@ namespace DestinoTrack.DataAccess.Repositories.Cities
     public class CityRepository(AppDbContext context) : GenericRepository<City>(context), ICityRepository
     {
         private readonly AppDbContext _context = context;
-
-        public async Task<List<City>> GetAllWithCountryAsync(Guid? countryId = null, string? search = null)
+        public async Task<(List<City> Items, int TotalCount)> GetPagedWithCountryAsync(Guid? countryId, string? search, int page, int pageSize)
         {
-            // Sorgu adım adım kurulur; ToListAsync'e kadar veritabanına gidilmez
+            // Filtreler eskisiyle aynı — değişen yalnızca sonunda sayfanın alınması
             IQueryable<City> query = _context.Cities.Include(c => c.Country);
 
             if (countryId.HasValue)
@@ -20,15 +19,24 @@ namespace DestinoTrack.DataAccess.Repositories.Cities
             }
 
             if (!string.IsNullOrWhiteSpace(search))
-            {                
+            {
                 var term = search.Trim();
                 query = query.Where(c => c.Name.Contains(term));
             }
 
-            return await query
+            // Sayfa sayısı filtreye uyan TÜM kayıtlara göre hesaplanır → önce sayım   
+            var totalCount = await query.CountAsync();
+
+            // Skip / Take veritabanında çalışır: 3. sayfa istendiğinde yalnızca 20 satır gelir
+            var items = await query
                 .OrderBy(c => c.Name)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
                 .ToListAsync();
+
+            return (items, totalCount);
         }
+
 
         // CountryId — sayım veritabanında yapılır, şehirler belleğe çekilmez
         public async Task<Dictionary<Guid, int>> GetCityCountsByCountryAsync()

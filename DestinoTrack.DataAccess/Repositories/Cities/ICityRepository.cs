@@ -5,8 +5,8 @@ namespace DestinoTrack.DataAccess.Repositories.Cities
 {
     public interface ICityRepository : IRepository<City>
     {
-        // Ülke ve ad filtresi isteğe bağlı 
-        Task<List<City>> GetAllWithCountryAsync(Guid? countryId = null, string? search = null);
+        // Sayfalı liste : filtreye uyan kayıtların yalnızca istenen sayfası + toplam sayı
+        Task<(List<City> Items, int TotalCount)> GetPagedWithCountryAsync(Guid? countryId, string? search, int page, int pageSize);
 
         // Ülke çiplerindeki sayılar: CountryId → o ülkedeki şehir sayısı
         Task<Dictionary<Guid, int>> GetCityCountsByCountryAsync();

@@ -127,22 +127,51 @@ builder.Services.AddControllersWithViews(options =>
     .AddViewLocalization()
     .AddDataAnnotationsLocalization();
 
+
+// MVC'nin İngilizce model binding mesajları seçili dilde
+builder.Services.ConfigureOptions<LocalizedModelBindingMessages>();
+
+// Liste filtreleri adreste taşınmaz 
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.Cookie.Name = ".DestinoTrack.Session";
+    options.Cookie.IsEssential = true;           
+    options.IdleTimeout = TimeSpan.FromMinutes(30);
+});
+
+
+
+// Beklenmeyen hatalar tek yerde yakalanır ve günlüğe yazılır 
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+
+
 var app = builder.Build();
 
 // Roller ve ilk Admin kayıt varsa dokunmaz
 await IdentitySeeder.SeedAsync(app.Services);
 
-// Configure the HTTP request pipeline.
+
+// Hata yönetimi her ortamda aynı:
+// beklenmeyen hata → GlobalExceptionHandler günlüğe yazar → kullanıcı /Home/Error sayfasını görür
+app.UseExceptionHandler("/Home/Error");
+
+// 404 gibi içeriği boş hata kodları → /Home/HttpStatus/404 sayfası çizilir (adres çubuğu değişmez, durum kodu korunur)
+// Action adı StatusCode değil: ControllerBase'teki StatusCode(int) metoduyla çakışırdı
+app.UseStatusCodePagesWithReExecute("/Home/HttpStatus/{0}");
+
+// HSTS (tarayıcıya "bu siteye yalnızca https ile gel") yalnızca canlıda — geliştirmede localhost sertifikasını kalıcılaştırmasın
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 // Dil seçimi çerezden okunur — Authentication'dan önce çalışmalı
 app.UseRequestLocalization();

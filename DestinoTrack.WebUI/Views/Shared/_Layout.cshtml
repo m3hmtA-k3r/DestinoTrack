@@ -1,8 +1,25 @@
 ﻿@using System.Globalization
+@using Microsoft.AspNetCore.Diagnostics
 @{
     var culture = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+
+    // Dil değişince dönülecek adres.
+    // Hata sayfalarında Request.Path iç adrestir (/Home/Error · /Home/HttpStatus/404) → kullanıcının açtığı asıl adres kullanılır 
     var returnUrl = Context.Request.Path + Context.Request.QueryString;
+
+    var statusPage = Context.Features.Get<IStatusCodeReExecuteFeature>();
+    var errorPage = Context.Features.Get<IExceptionHandlerPathFeature>();
+
+    if (statusPage is not null)
+    {
+        returnUrl = statusPage.OriginalPath + statusPage.OriginalQueryString;
+    }
+    else if (errorPage is not null)
+    {
+        returnUrl = errorPage.Path;
+    }
 }
+
 <!DOCTYPE html>
 <html lang="@culture">
 <head>

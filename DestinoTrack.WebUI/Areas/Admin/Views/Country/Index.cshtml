@@ -1,4 +1,5 @@
-﻿@model List<ResultCountryDto>
+﻿@model PagedResult<ResultCountryDto>
+
 @{
     ViewData["Title"] = L["Countries"].Value;
 }
@@ -13,7 +14,7 @@
             <span class="font-label-md text-label-md text-primary uppercase">@L["LocationSettings"]</span>
             <div class="flex items-center gap-2">
                 <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Countries"]</h1>
-                <span class="chip-neutral">@Model.Count</span>
+                <span class="chip-neutral">@Model.TotalCount</span>
             </div>
         </div>
     </div>
@@ -34,7 +35,7 @@
 
 <!-- Liste -->
 <div class="m3-card overflow-hidden">
-    @if (Model.Any())
+    @if (Model.Items.Count > 0)
     {
         <div class="overflow-x-auto">
             <table class="m3-table font-body-sm text-body-sm">
@@ -48,7 +49,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach (var country in Model)
+                    @foreach (var country in Model.Items)
                     {
                         <tr>
                             <td class="py-4 px-6">
@@ -86,6 +87,8 @@
                 </tbody>
             </table>
         </div>
+
+        @await Html.PartialAsync("_Pagination", Model)
     }
     else
     {

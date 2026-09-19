@@ -1,4 +1,5 @@
 ﻿using DestinoTrack.DTO.DTOs.CityDtos;
+using DestinoTrack.DTO.DTOs.Common;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Models
 {
@@ -6,8 +7,9 @@ namespace DestinoTrack.WebUI.Areas.Admin.Models
     // liste + ülke  + o an seçili filtre
     public class CityIndexViewModel
     {
-        public List<ResultCityDto> Cities { get; set; } = new();
+        public PagedResult<ResultCityDto> Cities { get; set; } = new();
         public List<CityCountryFilterDto> CountryFilters { get; set; } = new();
+
 
         public Guid? SelectedCountryId { get; set; }
         public string? Search { get; set; }

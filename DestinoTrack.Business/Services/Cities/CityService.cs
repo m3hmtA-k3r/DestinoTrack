@@ -1,6 +1,8 @@
-﻿using DestinoTrack.DataAccess.Repositories.Cities;
+﻿using DestinoTrack.Business.Consts;
+using DestinoTrack.DataAccess.Repositories.Cities;
 using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DTO.DTOs.CityDtos;
+using DestinoTrack.DTO.DTOs.Common;
 using DestinoTrack.Entity.Entities;
 using Mapster;
 using Microsoft.Extensions.Localization;
@@ -9,21 +11,38 @@ using System.ComponentModel.DataAnnotations;
 namespace DestinoTrack.Business.Services.Cities
 {
     public class CityService(ICityRepository _cityRepository, ICountryRepository _countryRepository, IStringLocalizer<SharedResource> _localizer) : ICityService
-    {
-        public async Task<List<ResultCityDto>> GetAllAsync(Guid? countryId = null, string? search = null)
+    {        
+        public async Task<PagedResult<ResultCityDto>> GetPagedAsync(Guid? countryId = null, string? search = null, int page = 1)
         {
-            var cities = await _cityRepository.GetAllWithCountryAsync(countryId, search);
+            // Adres çubuğuna ?page=0 veya ?page=-3 yazılabilir: en küçük sayfa 1
+            page = page < 1 ? 1 : page;
 
-            return cities.Select(c => new ResultCityDto
+            var (cities, totalCount) = await _cityRepository.GetPagedWithCountryAsync(countryId, search, page, Paging.PageSize);
+
+            // Son sayfadaki tek kayıt silinince o sayfa boş kalır → varsa yeni son sayfa gösterilir
+            if (cities.Count == 0 && totalCount > 0)
             {
-                Id = c.Id,
-                Name = c.Name,
-                CountryId = c.CountryId,
-                CountryName = c.Country?.Name
-            }).ToList();
+                page = (int)Math.Ceiling(totalCount / (double)Paging.PageSize);
+                (cities, totalCount) = await _cityRepository.GetPagedWithCountryAsync(countryId, search, page, Paging.PageSize);
+            }
+
+            return new PagedResult<ResultCityDto>
+            {
+                Items = cities.Select(c => new ResultCityDto
+                {
+                    Id = c.Id,
+                    Name = c.Name,
+                    CountryId = c.CountryId,
+                    CountryName = c.Country?.Name
+                }).ToList(),
+                Page = page,
+                PageSize = Paging.PageSize,
+                TotalCount = totalCount
+            };
         }
 
-        // Şehri olmayan ülke de çip olarak görünür (sayısı 0) —
+
+        // Şehri olmayan ülke de çip olarak görünür (sayısı 0) 
         // bu yüzden sayımlar ülke listesinin üzerine eklenir, tersi değil
         public async Task<List<CityCountryFilterDto>> GetCountryFiltersAsync()
         {

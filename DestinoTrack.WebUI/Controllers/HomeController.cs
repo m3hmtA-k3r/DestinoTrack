@@ -2,7 +2,6 @@
 using DestinoTrack.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
-using System.Diagnostics;
 
 namespace DestinoTrack.WebUI.Controllers
 {
@@ -28,10 +27,23 @@ namespace DestinoTrack.WebUI.Controllers
             return View();
         }
 
+        // Beklenmeyen hata (500) · UseExceptionHandler isteği buraya yeniden çalıştırır
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(new ErrorViewModel { RequestId = HttpContext.TraceIdentifier });
+        }
+
+        // Gövdesi boş hata kodları (404 · 400 · 405 …) · UseStatusCodePagesWithReExecute isteği buraya yeniden çalıştırır
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult HttpStatus(int id)
+        {
+            if (id == StatusCodes.Status404NotFound)
+            {
+                return View("NotFound");
+            }
+
+            return View("HttpStatus", id);
         }
     }
 }
