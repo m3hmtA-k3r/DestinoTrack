@@ -32,6 +32,10 @@ namespace DestinoTrack.WebUI.Infrastructure
             messages.SetMissingBindRequiredValueAccessor(field => _localizer["Binding_MissingValueFor", field].Value);
             messages.SetMissingKeyOrValueAccessor(() => _localizer["Binding_ValueRequired"].Value);
             messages.SetMissingRequestBodyRequiredValueAccessor(() => _localizer["Binding_ValueRequired"].Value);
+
+            // Değer tiplerine MVC'nin kendiliğinden eklediği [Required] mesajı 
+            options.ModelMetadataDetailsProviders.Add(new LocalizedRequiredMetadataProvider());
+
         }
     }
 }

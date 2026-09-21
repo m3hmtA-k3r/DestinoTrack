@@ -59,10 +59,20 @@
                     <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_CourierDistribution"]</span>
                 </span>
-                <span class="@navDisabled" title="@L["ComingSoon"]">
+                <a asp-area="Admin" asp-controller="Branch" asp-action="Index" class="@(controller == "Branch" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">warehouse</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_BranchesWarehouses"]</span>
-                </span>
+                </a>
+                <a asp-area="Admin" asp-controller="TransferCenter" asp-action="Index" class="@(controller == "TransferCenter" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">hub</span>
+                    <span class="font-body-sm text-body-sm">@L["TransferCenters"]</span>
+                </a>
+
+                <a asp-area="Admin" asp-controller="Employee" asp-action="Index" class="@(controller == "Employee" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">badge</span>
+                    <span class="font-body-sm text-body-sm">@L["Employees"]</span>
+                </a>
+
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">groups</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_Customers"]</span>

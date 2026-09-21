@@ -1,19 +1,19 @@
 {
   "DestinoTrack.Business/DestinoTrack.Business.csproj": {
-    "mtime": 1789504992.4271395,
-    "seen": 1789509763.2196293,
+    "mtime": 1790017239.4616406,
+    "seen": 1790020330.9121017,
     "ast_hash": "147906a918e92b606b013c93942ca494",
     "semantic_hash": "147906a918e92b606b013c93942ca494"
   },
   "DestinoTrack.DTO/DestinoTrack.DTO.csproj": {
-    "mtime": 1789645593.3839107,
-    "seen": 1789809580.4295275,
+    "mtime": 1790015899.7606232,
+    "seen": 1790020330.9121625,
     "ast_hash": "5536c8a2aff17aea1c4c8e5a3b9818f1",
     "semantic_hash": "5536c8a2aff17aea1c4c8e5a3b9818f1"
   },
   "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj": {
-    "mtime": 1789617364.6123438,
-    "seen": 1789629246.362698,
+    "mtime": 1790016371.6296036,
+    "seen": 1790020330.9121647,
     "ast_hash": "fa43840b4642b3ece6aa09d24c348cf2",
     "semantic_hash": "fa43840b4642b3ece6aa09d24c348cf2"
   },
@@ -108,8 +108,8 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/DestinoTrack.WebUI.csproj": {
-    "mtime": 1789624777.8266604,
-    "seen": 1789629246.3627987,
+    "mtime": 1790018195.0140753,
+    "seen": 1790020330.9122498,
     "ast_hash": "ea9f7c098357590770b7b7587ec8bd09",
     "semantic_hash": ""
   },
@@ -120,9 +120,9 @@
     "semantic_hash": "b9535ae4dfd0e783ad85f4e7ad750b1e"
   },
   "DestinoTrack.WebUI/Program.cs": {
-    "mtime": 1789812691.0775278,
-    "seen": 1789813164.8771708,
-    "ast_hash": "fc0e92662213a13ff929fed6d47a643a",
+    "mtime": 1790017384.471481,
+    "seen": 1790020330.9122548,
+    "ast_hash": "3078fd44aa90e7c4dd8c8e7c9060e021",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Properties/launchSettings.json": {
@@ -210,15 +210,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cities/CityService.cs": {
-    "mtime": 1789808348.8964386,
-    "seen": 1789809580.4294899,
-    "ast_hash": "2bb76bf003a0f4d97ff1acc68226355a",
+    "mtime": 1789880269.790996,
+    "seen": 1789886489.6734421,
+    "ast_hash": "91a077f7e4d014246bb798d723e67051",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cities/ICityService.cs": {
-    "mtime": 1789808151.5494516,
-    "seen": 1789809580.4294913,
-    "ast_hash": "b102937884cf2416edaf27a4b32a5d31",
+    "mtime": 1789872801.4004362,
+    "seen": 1789886489.6734445,
+    "ast_hash": "484ddf2e9dfd6b543e109c51114c5d7c",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Countries/CountryService.cs": {
@@ -348,15 +348,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs": {
-    "mtime": 1788774112.690726,
-    "seen": 1788892602.3916607,
-    "ast_hash": "ff016bde7faa76356a4b7d6fa6a0578d",
+    "mtime": 1790017664.5179646,
+    "seen": 1790020330.9121823,
+    "ast_hash": "cae38a78098f2a951fa2750becadb697",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs": {
-    "mtime": 1788774016.4400601,
-    "seen": 1788892602.3916614,
-    "ast_hash": "e7e2031c08ed773017b6e6cf4a91a459",
+    "mtime": 1790017461.4054027,
+    "seen": 1790020330.912183,
+    "ast_hash": "b5fc5a12cca06e3a40dcda82b66f937a",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/CargoMovements/CargoMovementRepository.cs": {
@@ -384,15 +384,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs": {
-    "mtime": 1789808234.789919,
-    "seen": 1789809580.4295511,
-    "ast_hash": "72b64200a87cff948f1785ad04891e79",
+    "mtime": 1789873222.1333728,
+    "seen": 1789886489.6735992,
+    "ast_hash": "845fcd68951e2da9894898010a4bbfe0",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cities/ICityRepository.cs": {
-    "mtime": 1789808212.42185,
-    "seen": 1789809580.4295518,
-    "ast_hash": "a128949cfe6e22252a2f483e90e10f8c",
+    "mtime": 1789873201.3653767,
+    "seen": 1789886489.6736014,
+    "ast_hash": "ba15afe192a7b8e305416b5e8222cb95",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/ContactInfos/ContactInfoRepository.cs": {
@@ -630,15 +630,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Views/Shared/_AdminLayout.cshtml": {
-    "mtime": 1789612577.945979,
-    "seen": 1789613100.5860527,
-    "ast_hash": "e91a5c1d88d4895d64929822df62ab67",
+    "mtime": 1790019596.5347617,
+    "seen": 1790020330.9122384,
+    "ast_hash": "184dc95d5d936b096f472247628ef058",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml": {
-    "mtime": 1789792845.3436377,
-    "seen": 1789809580.4295976,
-    "ast_hash": "ec4557d09a879f6cdc88b030f5916c50",
+    "mtime": 1790018056.6787484,
+    "seen": 1790020330.9122453,
+    "ast_hash": "287db462f6ccbf8ea696535ebfe6b3ff",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Views/_ViewStart.cshtml": {
@@ -960,9 +960,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Infrastructure/LocalizedModelBindingMessages.cs": {
-    "mtime": 1789642492.052778,
-    "seen": 1789645443.4430418,
-    "ast_hash": "583b1f044da75e25db8c1656c41cc7f5",
+    "mtime": 1789885135.0879698,
+    "seen": 1789886489.6737568,
+    "ast_hash": "e4b339a341a5c331f4a42ea060d72fb3",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/Shared/HttpStatus.cshtml": {
@@ -1011,6 +1011,210 @@
     "mtime": 1789810994.1059425,
     "seen": 1789813164.877144,
     "ast_hash": "dd63604d594227c7144399a6cb95496d",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Branches/BranchService.cs": {
+    "mtime": 1790017701.0376177,
+    "seen": 1790020330.9121087,
+    "ast_hash": "e9f1268f450bc932ad605114ce8581ba",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Branches/IBranchService.cs": {
+    "mtime": 1790017688.375582,
+    "seen": 1790020330.91211,
+    "ast_hash": "b6d6286e9ed4a2538b1096edb887a643",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Validators/Branches/CreateBranchValidator.cs": {
+    "mtime": 1789814395.9838312,
+    "seen": 1789886489.6734688,
+    "ast_hash": "7145bf0c8e9e88a06b0072da1f9317f5",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Validators/Branches/UpdateBranchValidator.cs": {
+    "mtime": 1789814381.1610682,
+    "seen": 1789886489.673471,
+    "ast_hash": "4ed675e761fce0b50aa7bfd6510aa9ca",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/BranchDtos/BranchTypeFilterDto.cs": {
+    "mtime": 1789813577.2720263,
+    "seen": 1789886489.6735017,
+    "ast_hash": "61c1ee5267bea106be2f165695b8bdcb",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/BranchDtos/CreateBranchDto.cs": {
+    "mtime": 1789813589.687966,
+    "seen": 1789886489.673504,
+    "ast_hash": "8e5389a988f34ab128c630632d0733ec",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/BranchDtos/ResultBranchDto.cs": {
+    "mtime": 1789813603.7837677,
+    "seen": 1789886489.6735058,
+    "ast_hash": "b77a9e402786c5ee7916e3067e0bb912",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/BranchDtos/UpdateBranchDto.cs": {
+    "mtime": 1789813584.2075725,
+    "seen": 1789886489.6735077,
+    "ast_hash": "08f7e51f4fdbeb3f945c058bbf5959e6",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/CityDtos/CityLookupDto.cs": {
+    "mtime": 1789880211.623886,
+    "seen": 1789886489.6735122,
+    "ast_hash": "2c8c9797791fe985a7d2f5585a7a1afa",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Controllers/BranchController.cs": {
+    "mtime": 1790009132.154466,
+    "seen": 1790011129.557294,
+    "ast_hash": "84a199d00e897da392f363899afea00d",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Models/BranchIndexViewModel.cs": {
+    "mtime": 1789814661.519936,
+    "seen": 1789886489.6736956,
+    "ast_hash": "4def4479c10bcb4a2580c310dd65a927",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Branch/Create.cshtml": {
+    "mtime": 1790018029.9957387,
+    "seen": 1790020330.9122286,
+    "ast_hash": "c8b98ea174a7f52b1dc1961079343e9c",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Branch/Index.cshtml": {
+    "mtime": 1790009446.4892116,
+    "seen": 1790011129.5573165,
+    "ast_hash": "7ac007e822ae03104ff25751ce901b5a",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Branch/Update.cshtml": {
+    "mtime": 1790018017.4695575,
+    "seen": 1790020330.912231,
+    "ast_hash": "61f772dd337ab8a193bb2d9c3bfff84b",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Infrastructure/LocalizedRequiredMetadataProvider.cs": {
+    "mtime": 1789886237.8340085,
+    "seen": 1789886489.6737587,
+    "ast_hash": "a6f7cda856459a11be85ee77315b0bad",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Controllers/BranchControllerBase.cs": {
+    "mtime": 1790019898.3176892,
+    "seen": 1790020330.912221,
+    "ast_hash": "7dff812a2fda6f94be3af9a1e001abc4",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Controllers/TransferCenterController.cs": {
+    "mtime": 1790009194.4400432,
+    "seen": 1790011129.5573044,
+    "ast_hash": "d164b243f66d9c7bcf97ab9788dfb637",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Employees/EmployeeService.cs": {
+    "mtime": 1790017359.1836934,
+    "seen": 1790020330.912117,
+    "ast_hash": "cb947a66072bb7f17523b3337e6d8238",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Employees/IEmployeeService.cs": {
+    "mtime": 1790017265.477038,
+    "seen": 1790020330.912118,
+    "ast_hash": "ff17de55c557341ba9b8272d9e548b77",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Validators/Employees/CreateEmployeeValidator.cs": {
+    "mtime": 1790016840.915479,
+    "seen": 1790020330.912132,
+    "ast_hash": "172d8cd51622ba277efad788a5e8d405",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Validators/Employees/UpdateEmployeeValidator.cs": {
+    "mtime": 1790016809.2121713,
+    "seen": 1790020330.912133,
+    "ast_hash": "7587e7b1fe11cfeb2f469dd26aeba66b",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/BranchDtos/BranchLookupDto.cs": {
+    "mtime": 1790017422.1450083,
+    "seen": 1790020330.9121423,
+    "ast_hash": "3c7163b28c458672299667611b949550",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/EmployeeDtos/CreateEmployeeDto.cs": {
+    "mtime": 1790016139.4538243,
+    "seen": 1790020330.9121568,
+    "ast_hash": "55166270d80cc574a87ef3dfc1f2a758",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/EmployeeDtos/EmployeeJobTypeFilterDto.cs": {
+    "mtime": 1790016173.0624447,
+    "seen": 1790020330.9121578,
+    "ast_hash": "45d04ed526657627ed27c35b2abc7617",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/EmployeeDtos/ResultEmployeeDto.cs": {
+    "mtime": 1790016097.1323655,
+    "seen": 1790020330.9121585,
+    "ast_hash": "f168484544ddc1264f98ff0ee9f80ad3",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/EmployeeDtos/UpdateEmployeeDto.cs": {
+    "mtime": 1790016153.0061152,
+    "seen": 1790020330.912159,
+    "ast_hash": "6dad36dc673d0c885b99650ea9016396",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Repositories/Employees/EmployeeRepository.cs": {
+    "mtime": 1790016439.981042,
+    "seen": 1790020330.9121928,
+    "ast_hash": "46eb884a3928c3effb9d3d749c867007",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Repositories/Employees/IEmployeeRepository.cs": {
+    "mtime": 1790016401.444144,
+    "seen": 1790020330.9121938,
+    "ast_hash": "6cac80668bbb174842463caae46a88e2",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Controllers/EmployeeController.cs": {
+    "mtime": 1790020446.131109,
+    "seen": 1790020664.7382815,
+    "ast_hash": "11c4ca2c8575d763a7751b0233a6f50a",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Models/EmployeeIndexViewModel.cs": {
+    "mtime": 1790018077.912105,
+    "seen": 1790020330.9122272,
+    "ast_hash": "53910ca0e4f61411e7279f8a63f5e3bc",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Employee/Create.cshtml": {
+    "mtime": 1790018678.5164657,
+    "seen": 1790020330.9122362,
+    "ast_hash": "ec7e43a05f3f0691a6ee0fd7baec4caf",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Employee/Index.cshtml": {
+    "mtime": 1790018290.5118203,
+    "seen": 1790020330.9122367,
+    "ast_hash": "2c02ec5319d14aaca0f0fc7c33cb9cb2",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Employee/Update.cshtml": {
+    "mtime": 1790020484.5466866,
+    "seen": 1790020664.7382982,
+    "ast_hash": "22377cae8908e1bd8f1df290226049a3",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Admin/Views/Shared/_CascadeSelectScript.cshtml": {
+    "mtime": 1790017781.3903034,
+    "seen": 1790020330.9122388,
+    "ast_hash": "cc942c47fa96826dcae247e2ce0ad5ac",
     "semantic_hash": ""
   }
 }

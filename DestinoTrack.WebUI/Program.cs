@@ -1,13 +1,14 @@
 ﻿using DestinoTrack.Business;
 using DestinoTrack.Business.Localization;
+using DestinoTrack.Business.Services.Accounts;
+using DestinoTrack.Business.Services.Branches;
 using DestinoTrack.Business.Services.Cities;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Dashboard;
-using DestinoTrack.Business.Services.Accounts;
+using DestinoTrack.Business.Services.Employees;
 using DestinoTrack.Business.Services.Users;
-using DestinoTrack.DataAccess.Interceptors;
-using DestinoTrack.WebUI.Infrastructure;
 using DestinoTrack.DataAccess.Context;
+using DestinoTrack.DataAccess.Interceptors;
 using DestinoTrack.DataAccess.Repositories.Abouts;
 using DestinoTrack.DataAccess.Repositories.Addresses;
 using DestinoTrack.DataAccess.Repositories.Branches;
@@ -17,8 +18,10 @@ using DestinoTrack.DataAccess.Repositories.Cities;
 using DestinoTrack.DataAccess.Repositories.ContactInfos;
 using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DataAccess.Repositories.Customers;
+using DestinoTrack.DataAccess.Repositories.Employees;
 using DestinoTrack.DataAccess.Repositories.Payments;
 using DestinoTrack.Entity.Entities;
+using DestinoTrack.WebUI.Infrastructure;
 using DestinoTrack.WebUI.Seed;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -110,9 +113,13 @@ builder.Services.AddScoped<IContactInfoRepository, ContactInfoRepository>();
 builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IPaymentsRepository, PaymentsRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+
 
 // Servisler
 builder.Services.AddScoped<ICityService, CityService>();
+builder.Services.AddScoped<IBranchService, BranchService>();
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IUserService, UserService>();
@@ -123,7 +130,10 @@ builder.Services.AddControllersWithViews(options =>
     options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
 })
     .AddViewLocalization()
-    .AddDataAnnotationsLocalization();
+    .AddDataAnnotationsLocalization(options =>
+        options.DataAnnotationLocalizerProvider = (type, factory) => factory.Create(typeof(SharedResource)));
+
+
 
 
 // MVC'nin İngilizce model binding mesajları seçili dilde

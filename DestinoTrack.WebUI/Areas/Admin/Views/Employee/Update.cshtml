@@ -1,0 +1,145 @@
+﻿@model UpdateEmployeeDto
+@{
+    ViewData["Title"] = L["Update"].Value;
+}
+
+<div class="mx-auto max-w-3xl">
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">edit</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["Employees"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@Model.FirstName @Model.LastName</h1>
+        </div>
+    </div>
+
+    <div class="m3-card p-6 sm:p-8">
+        <form asp-action="Update" method="post" class="flex flex-col gap-5">
+            <div asp-validation-summary="ModelOnly" class="field-error"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="FirstName" class="field-label">@L["FirstName"]</label>
+                    <input asp-for="FirstName" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="FirstName" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="LastName" class="field-label">@L["LastName"]</label>
+                    <input asp-for="LastName" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="LastName" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="PhoneNumber" class="field-label">@L["Phone"]</label>
+                    <input asp-for="PhoneNumber" class="field-input" autocomplete="off" placeholder="+90 555 111 22 33" />
+                    <span asp-validation-for="PhoneNumber" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="JobType" class="field-label">@L["JobType"]</label>
+                    <select asp-for="JobType" class="field-input cursor-pointer">
+                        @foreach (var type in Enum.GetValues<EmployeeJobType>())
+                        {
+                            <option value="@type">@L["JobType_" + type]</option>
+                        }
+                    </select>
+                    <span asp-validation-for="JobType" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    @* Kayda yazılmaz; yalnızca tesis listesini süzmek için *@
+                    <label class="field-label">@L["Country"]</label>
+                    <select id="countrySelect" asp-items="ViewBag.Countries" class="field-input cursor-pointer">
+                        <option value="">— @L["SelectCountry"] —</option>
+                    </select>
+                </div>
+                <div>
+                    <label asp-for="BranchId" class="field-label">@L["Branch"]</label>
+                    <select asp-for="BranchId" data-cascade-from="countrySelect" class="field-input cursor-pointer">
+                        <option value="">— @L["SelectBranch"] —</option>
+                        @foreach (var branch in (List<BranchLookupDto>)ViewBag.Branches)
+                        {
+                            <option value="@branch.Id" data-parent="@branch.CountryId">@branch.Name · @branch.CityName</option>
+                        }
+                    </select>
+                    <span asp-validation-for="BranchId" class="field-error"></span>
+                </div>
+            </div>
+
+            <!-- Kurye bilgileri: yalnızca görev Kurye iken görünür -->
+            <fieldset data-courier-only class="flex flex-col gap-5 p-4 rounded-xl bg-surface-container-low">
+                <legend class="field-label">@L["CourierInfo"]</legend>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label asp-for="VehicleType" class="field-label">@L["VehicleType"]</label>
+                        <select asp-for="VehicleType" class="field-input cursor-pointer">
+                            <option value="">—</option>
+                            @foreach (var type in Enum.GetValues<VehicleType>())
+                            {
+                                <option value="@type">@L["VehicleType_" + type]</option>
+                            }
+                        </select>
+                        <span asp-validation-for="VehicleType" class="field-error"></span>
+                    </div>
+                    <div>
+                        <label asp-for="VehiclePlate" class="field-label">@L["VehiclePlate"]</label>
+                        <input asp-for="VehiclePlate" class="field-input" autocomplete="off" placeholder="34 ABC 123" />
+                        <span asp-validation-for="VehiclePlate" class="field-error"></span>
+                    </div>
+                </div>
+                <div>
+                    <label asp-for="Region" class="field-label">@L["Region"]</label>
+                    <input asp-for="Region" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="Region" class="field-error"></span>
+                </div>
+            </fieldset>
+
+            <!-- Giriş hesabı: isteğe bağlı -->
+            @if (Model.HasLoginAccount)
+            {
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    <span class="chip-info">@L["HasLoginAccount"]</span>
+                </p>
+            }
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button type="submit" class="btn-filled">
+                    <span class="material-symbols-outlined text-[20px]">save</span>
+                    <span>@L["Save"]</span>
+                </button>
+                <a asp-action="Index" class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    <span>@L["Cancel"]</span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <partial name="_CascadeSelectScript" />
+    <script>
+        // Kurye alanları yalnız görev Kurye iken, hesap alanları yalnız kutu işaretliyken görünür
+        (function () {
+            const job = document.getElementById('JobType');
+            const courier = document.querySelector('[data-courier-only]');
+            const toggleCourier = () => courier.hidden = job.value !== 'Courier';
+            job.addEventListener('change', toggleCourier);
+            toggleCourier();
+
+            const account = document.getElementById('CreateAccount');
+            const accountFields = document.querySelector('[data-account-only]');
+            if (account && accountFields) {
+                const toggleAccount = () => accountFields.hidden = !account.checked;
+                account.addEventListener('change', toggleAccount);
+                toggleAccount();
+            }
+        })();
+    </script>
+}

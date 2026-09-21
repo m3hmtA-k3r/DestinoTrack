@@ -11,6 +11,9 @@ namespace DestinoTrack.Business.Services.Cities
         // Şehir listesi (her ülke + şehir sayısı)
         Task<List<CityCountryFilterDto>> GetCountryFiltersAsync();
 
+        Task<List<CityLookupDto>> GetLookupAsync();   // sayfasız, yalnızca Id + ad + ülke
+
+
         Task<UpdateCityDto> GetByIdAsync(Guid id);
         Task CreateAsync(CreateCityDto createCityDto);
         Task UpdateAsync(UpdateCityDto updateCityDto);

@@ -1,0 +1,194 @@
+﻿@model EmployeeIndexViewModel
+@{
+    ViewData["Title"] = L["Employees"].Value;
+
+    var chipBase = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-label-md text-label-md transition-colors";
+    var chipOn = chipBase + " bg-primary-container text-on-primary";
+    var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">badge</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["Menu_BranchesWarehouses"]</span>
+            <div class="flex items-center gap-2">
+                <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Employees"]</h1>
+                <span class="chip-neutral">@Model.Employees.TotalCount</span>
+            </div>
+        </div>
+    </div>
+    <a asp-action="Create" class="btn-filled h-11 w-full sm:w-auto">
+        <span class="material-symbols-outlined text-[20px]">person_add</span>
+        <span>@L["NewEmployee"]</span>
+    </a>
+</div>
+
+@if (TempData["Error"] is string error)
+{
+    <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">
+        <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+        <span class="font-body-sm text-body-sm">@error</span>
+    </div>
+}
+
+<!-- Filtre: görev çipleri + arama. İkisi de POST ile gider, seçim oturumda saklanır -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+    <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2">
+        <input type="hidden" name="q" value="@Model.Search" />
+
+        <button type="submit" name="jobType" value="" class="@(Model.SelectedJobType == null ? chipOn : chipOff)">
+            <span>@L["All"]</span>
+            <span class="opacity-70">@Model.TotalEmployeeCount</span>
+        </button>
+
+        @foreach (var filter in Model.JobTypeFilters)
+        {
+            <button type="submit" name="jobType" value="@filter.JobType"
+                    class="@(Model.SelectedJobType == filter.JobType ? chipOn : chipOff)">
+                <span>@L["JobType_" + filter.JobType]</span>
+                <span class="opacity-70">@filter.EmployeeCount</span>
+            </button>
+        }
+    </form>
+
+    <form asp-action="Filter" method="post" class="flex items-center gap-2 w-full lg:w-auto">
+        <input type="hidden" name="jobType" value="@Model.SelectedJobType" />
+        <div class="relative flex-1 lg:w-72">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
+            <input type="search" name="q" value="@Model.Search" placeholder="@L["SearchEmployee"]"
+                   class="field-input pl-10" autocomplete="off" data-clear-submit />
+        </div>
+        <button type="submit" class="btn-tonal shrink-0">@L["Search"]</button>
+    </form>
+</div>
+
+<!-- Liste -->
+<div class="m3-card overflow-hidden">
+    @if (Model.Employees.Items.Count > 0)
+    {
+        <div class="overflow-x-auto">
+            <table class="m3-table font-body-sm text-body-sm">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-6">@L["FullName"]</th>
+                        <th class="py-3.5 px-4">@L["JobType"]</th>
+                        <th class="py-3.5 px-4">@L["Branch"]</th>
+                        <th class="py-3.5 px-4">@L["VehicleType"]</th>
+                        <th class="py-3.5 px-4 text-right">@L["Rating"]</th>
+                        <th class="py-3.5 px-4">@L["Status"]</th>
+                        <th class="py-3.5 px-6 text-right">@L["Actions"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var employee in Model.Employees.Items)
+                    {
+                        <tr class="@(employee.IsActive ? "" : "opacity-60")">
+                            <td class="py-4 px-6">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-on-surface">@employee.FirstName @employee.LastName</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">@employee.PhoneNumber</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="chip-neutral">@L["JobType_" + employee.JobType]</span>
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="chip-info">@employee.BranchName</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">· @employee.CityName</span>
+                            </td>
+                            <td class="py-4 px-4 text-on-surface">
+                                @if (employee.JobType == EmployeeJobType.Courier && employee.VehicleType != null)
+                                {
+                                    <span>@L["VehicleType_" + employee.VehicleType] · @employee.VehiclePlate</span>
+                                }
+                                else
+                                {
+                                    <span class="text-on-surface-variant">—</span>
+                                }
+                            </td>
+                            <td class="py-4 px-4 text-right text-on-surface">@(employee.Rating?.ToString("0.0") ?? "—")</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-wrap items-center gap-1">
+                                    <span class="chip-neutral">@(employee.IsActive? L["Active"] : L["Inactive"])</span>
+                                    @if (employee.HasLoginAccount)
+                                    {
+                                        <span class="chip-info">@L["HasLoginAccount"]</span>
+                                    }
+                                </div>
+                            </td>
+                            <td class="py-4 px-6">
+                                <div class="flex items-center justify-end gap-2">
+                                    <a asp-action="Update" asp-route-id="@employee.Id" title="@L["Update"]"
+                                       class="p-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-colors">
+                                        <span class="material-symbols-outlined text-[18px]">edit</span>
+                                    </a>
+                                    <form asp-action="SetActive" method="post" data-confirm="@L["ConfirmDeactivateEmployee"]"
+                                          onsubmit="@(employee.IsActive ? "return confirm(this.dataset.confirm);" : null)">
+                                        <input type="hidden" name="id" value="@employee.Id" />
+                                        <input type="hidden" name="isActive" value="@(employee.IsActive ? "false" : "true")" />
+                                        <button type="submit" title="@(employee.IsActive? L["Deactivate"] : L["Activate"])"
+                                                class="p-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-colors">
+                                            <span class="material-symbols-outlined text-[18px]">@(employee.IsActive ? "person_off" : "person_check")</span>
+                                        </button>
+                                    </form>
+                                    <form asp-action="Delete" asp-route-id="@employee.Id" method="post"
+                                          onsubmit="return confirm('@L["ConfirmDelete"]');">
+                                        <button type="submit" title="@L["Delete"]"
+                                                class="p-2 rounded-xl bg-surface-container text-on-surface hover:bg-error-container hover:text-on-error-container transition-colors">
+                                            <span class="material-symbols-outlined text-[18px]">delete</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @await Html.PartialAsync("_Pagination", Model.Employees)
+    }
+    else if (Model.IsFiltered)
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+            <form asp-action="Filter" method="post">
+                <input type="hidden" name="jobType" value="" />
+                <input type="hidden" name="q" value="" />
+                <button type="submit" class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+                    <span>@L["ClearFilter"]</span>
+                </button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">badge</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</p>
+            <a asp-action="Create" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">person_add</span>
+                <span>@L["NewEmployee"]</span>
+            </a>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Arama kutusu boşaltılınca filtre kendiliğinden kalkar
+        document.querySelectorAll('[data-clear-submit]').forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value === '') {
+                    input.form.submit();
+                }
+            });
+        });
+    </script>
+}

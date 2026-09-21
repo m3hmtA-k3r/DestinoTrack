@@ -37,6 +37,15 @@ namespace DestinoTrack.DataAccess.Repositories.Cities
             return (items, totalCount);
         }
 
+        public async Task<List<City>> GetLookupAsync()
+        {
+            return await _context.Cities
+                .Include(c => c.Country)
+                .OrderBy(c => c.Name)
+                .ToListAsync();
+        }
+
+
 
         // CountryId — sayım veritabanında yapılır, şehirler belleğe çekilmez
         public async Task<Dictionary<Guid, int>> GetCityCountsByCountryAsync()

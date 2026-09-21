@@ -1,0 +1,35 @@
+﻿@* Sıralı seçim : data-cascade-from="üstKutuId" taşıyan açılır liste, seçenekleri data-parent'a göre süzülür.
+   Sunucuya ikinci istek gitmez: bütün seçenekler sayfada, script yalnızca gösterip gizler.
+   Düzenlemede kayıtlı seçimin üst değeri (ör. ülkesi) baştan seçili gelir. *@
+<script>
+    (function () {
+        document.querySelectorAll('select[data-cascade-from]').forEach(function (child) {
+            const parent = document.getElementById(child.dataset.cascadeFrom);
+            if (!parent) return;
+
+            const options = Array.from(child.options).filter(o => o.value !== '');
+
+            function filter() {
+                const selected = parent.value;
+                options.forEach(o => {
+                    const match = !selected || o.dataset.parent === selected;
+                    o.hidden = !match;
+                    o.disabled = !match;   // Firefox / Safari hidden'ı yok sayabiliyor
+                });
+
+                // Seçili değer artık listede görünmüyorsa seçim temizlenir
+                if (child.selectedOptions.length && child.selectedOptions[0].hidden) {
+                    child.value = '';
+                }
+            }
+
+            const current = child.selectedOptions[0];
+            if (current && current.dataset.parent) {
+                parent.value = current.dataset.parent;
+            }
+
+            parent.addEventListener('change', filter);
+            filter();
+        });
+    })();
+</script>

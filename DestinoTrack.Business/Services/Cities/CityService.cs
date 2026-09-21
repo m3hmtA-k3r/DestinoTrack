@@ -41,6 +41,21 @@ namespace DestinoTrack.Business.Services.Cities
             };
         }
 
+        public async Task<List<CityLookupDto>> GetLookupAsync()
+        {
+            var cities = await _cityRepository.GetLookupAsync();
+
+            return cities.Select(c => new CityLookupDto
+            {
+                Id = c.Id,
+                Name = c.Name,
+                CountryId = c.CountryId,
+                CountryName = c.Country?.Name
+            }).ToList();
+
+        }
+
+
 
         // Şehri olmayan ülke de çip olarak görünür (sayısı 0) 
         // bu yüzden sayımlar ülke listesinin üzerine eklenir, tersi değil

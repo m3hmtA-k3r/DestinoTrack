@@ -1,262 +1,914 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
-  <resheader name="version"><value>2.0</value></resheader>
-  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
-  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
 
-  <!-- ═══ 1 · Menü ve modül adları ═══ -->
-  <data name="AdminPanel" xml:space="preserve"><value>Admin Panel</value></data>
-  <data name="Dashboard" xml:space="preserve"><value>Dashboard</value></data>
-  <data name="Countries" xml:space="preserve"><value>Countries</value></data>
-  <data name="Cities" xml:space="preserve"><value>Cities</value></data>
-  <data name="Branches" xml:space="preserve"><value>Branches</value></data>
-  <data name="Couriers" xml:space="preserve"><value>Couriers</value></data>
-  <data name="Cargos" xml:space="preserve"><value>Shipments</value></data>
-  <data name="Payments" xml:space="preserve"><value>Payments</value></data>
-  <data name="LocationSettings" xml:space="preserve"><value>Location settings</value></data>
-
-  <!-- ═══ 2 · Ortak butonlar ve durumlar ═══ -->
-  <data name="Save" xml:space="preserve"><value>Save</value></data>
-  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
-  <data name="Update" xml:space="preserve"><value>Update</value></data>
-  <data name="Delete" xml:space="preserve"><value>Delete</value></data>
-  <data name="Create" xml:space="preserve"><value>Add</value></data>
-  <data name="Actions" xml:space="preserve"><value>Actions</value></data>
-  <data name="ConfirmDelete" xml:space="preserve"><value>Are you sure you want to delete this record?</value></data>
-  <data name="NoRecords" xml:space="preserve"><value>No records yet.</value></data>
-  <data name="ComingSoon" xml:space="preserve"><value>Coming soon</value></data>
-  <data name="All" xml:space="preserve"><value>All</value></data>
-  <data name="Search" xml:space="preserve"><value>Search</value></data>
-  <data name="NoResults" xml:space="preserve"><value>No results found.</value></data>
-  <data name="ClearFilter" xml:space="preserve"><value>Clear filter</value></data>
-
-  <!-- ═══ 3 · Admin layout (üst çubuk, kullanıcı kartı, mobil menü) ═══ -->
-  <data name="Logout" xml:space="preserve"><value>Log out</value></data>
-  <data name="OpenMenu" xml:space="preserve"><value>Open menu</value></data>
-  <data name="CloseMenu" xml:space="preserve"><value>Close menu</value></data>
-  <data name="AccountMenu" xml:space="preserve"><value>Account menu</value></data>
-  <data name="Notifications" xml:space="preserve"><value>Notifications</value></data>
-  <data name="GlobalSearchPlaceholder" xml:space="preserve"><value>Search tracking no., customer or branch...</value></data>
-  <data name="NewShipment" xml:space="preserve"><value>Create shipment</value></data>
-
-  <!-- ═══ 4 · Şehir ekranları ═══ -->
-  <data name="CityName" xml:space="preserve"><value>City name</value></data>
-  <data name="NewCity" xml:space="preserve"><value>New city</value></data>
-  <data name="UpdateCity" xml:space="preserve"><value>Update city</value></data>
-  <data name="SearchCity" xml:space="preserve"><value>Search city...</value></data>
-
-  <!-- ═══ 5 · Ülke ekranları ═══ -->
-  <data name="Country" xml:space="preserve"><value>Country</value></data>
-  <data name="NewCountry" xml:space="preserve"><value>New country</value></data>
-  <data name="UpdateCountry" xml:space="preserve"><value>Update country</value></data>
-  <data name="IsoCode" xml:space="preserve"><value>ISO code</value></data>
-  <data name="CurrencyCode" xml:space="preserve"><value>Currency</value></data>
-  <data name="PhoneCode" xml:space="preserve"><value>Phone code</value></data>
-  <data name="LanguageCode" xml:space="preserve"><value>Language</value></data>
-  <data name="TimeZone" xml:space="preserve"><value>Time zone</value></data>
-
-  <!-- ═══ 6 · İşlem mesajları (controller ve servislerden) ═══ -->
-  <data name="CityNotFound" xml:space="preserve"><value>City not found.</value></data>
-  <data name="CountryNotFound" xml:space="preserve"><value>Country not found.</value></data>
-  <data name="CityNameTaken" xml:space="preserve"><value>This city is already registered in this country.</value></data>
-  <data name="IsoCodeTaken" xml:space="preserve"><value>This ISO code is already used by another country.</value></data>
-  <data name="CountryHasDependents" xml:space="preserve"><value>This country has linked cities, customers or users. Remove them first.</value></data>
-  <data name="CityHasDependents" xml:space="preserve"><value>This city has linked branches. Remove them first.</value></data>
-
-  <!-- ═══ 7 · Doğrulama mesajları (validator'lardan) ═══ -->
-  <data name="RecordIdRequired" xml:space="preserve"><value>No record was specified for update.</value></data>
-  <data name="CityNameRequired" xml:space="preserve"><value>City name cannot be empty.</value></data>
-  <data name="CityNameMinLength" xml:space="preserve"><value>City name must be at least 2 characters.</value></data>
-  <data name="CityNameMaxLength" xml:space="preserve"><value>City name can be at most 100 characters.</value></data>
-  <data name="CountryRequired" xml:space="preserve"><value>Please select a country.</value></data>
-  <data name="CountryNameRequired" xml:space="preserve"><value>Country name cannot be empty.</value></data>
-  <data name="CountryNameMaxLength" xml:space="preserve"><value>Country name can be at most 100 characters.</value></data>
-  <data name="IsoCodeRequired" xml:space="preserve"><value>ISO code cannot be empty.</value></data>
-  <data name="IsoCodeLength" xml:space="preserve"><value>ISO code must be 2 letters. Example: TR, MT, BR</value></data>
-  <data name="CurrencyCodeRequired" xml:space="preserve"><value>Currency code cannot be empty.</value></data>
-  <data name="CurrencyCodeLength" xml:space="preserve"><value>Currency code must be 3 letters. Example: TRY, EUR, BRL</value></data>
-  <data name="PhoneCodeRequired" xml:space="preserve"><value>Phone code cannot be empty.</value></data>
-  <data name="PhoneCodeMaxLength" xml:space="preserve"><value>Phone code can be at most 6 characters.</value></data>
-  <data name="TimeZoneRequired" xml:space="preserve"><value>Time zone cannot be empty.</value></data>
-  <data name="TimeZoneMaxLength" xml:space="preserve"><value>Time zone can be at most 50 characters.</value></data>
-  <data name="LanguageCodeRequired" xml:space="preserve"><value>Language code cannot be empty.</value></data>
-  <data name="LanguageCodeMaxLength" xml:space="preserve"><value>Language code can be at most 5 characters.</value></data>
-  <data name="Binding_ValueInvalid" xml:space="preserve"><value>The value '{0}' is invalid.</value></data>
-  <data name="Binding_ValueInvalidFor" xml:space="preserve"><value>The value '{0}' is not valid for {1}.</value></data>
-  <data name="Binding_UnknownValueInvalid" xml:space="preserve"><value>The supplied value is invalid.</value></data>
-  <data name="Binding_UnknownValueInvalidFor" xml:space="preserve"><value>The supplied value is invalid for {0}.</value></data>
-  <data name="Binding_MustBeNumber" xml:space="preserve"><value>The field must be a number.</value></data>
-  <data name="Binding_MustBeNumberFor" xml:space="preserve"><value>The field {0} must be a number.</value></data>
-  <data name="Binding_MissingValueFor" xml:space="preserve"><value>A value for '{0}' was not provided.</value></data>
-  <data name="Binding_ValueRequired" xml:space="preserve"><value>A value is required.</value></data>
-
-  <!-- ═══ 8 · Kargo takip (public ana sayfa) ═══ -->
-  <data name="TrackCargo" xml:space="preserve"><value>Track shipment</value></data>
-  <data name="TrackCode" xml:space="preserve"><value>Tracking code</value></data>
-  <data name="TrackAction" xml:space="preserve"><value>Track</value></data>
-  <data name="TrackNotice" xml:space="preserve"><value>The shipment module is not finished yet. Tracking will work once the shipment service is added.</value></data>
-
-  <!-- ═══ 9 · Kargo durumları ═══ -->
-  <data name="Status_Created" xml:space="preserve"><value>Created</value></data>
-  <data name="Status_AtOriginBranch" xml:space="preserve"><value>At origin branch</value></data>
-  <data name="Status_InTransferCenter" xml:space="preserve"><value>At transfer centre</value></data>
-  <data name="Status_AtDestinationBranch" xml:space="preserve"><value>At destination branch</value></data>
-  <data name="Status_OutForDelivery" xml:space="preserve"><value>Out for delivery</value></data>
-  <data name="Status_Delivered" xml:space="preserve"><value>Delivered</value></data>
-  <data name="Status_DeliveryFailed" xml:space="preserve"><value>Delivery failed</value></data>
-  <data name="Status_ReturnInProgress" xml:space="preserve"><value>Return in progress</value></data>
-  <data name="Status_ReturnedToSender" xml:space="preserve"><value>Returned to sender</value></data>
-  <!-- ═══ 10 · Hesap: giriş · çıkış · erişim engeli · Hesabım · rol adları ═══ -->
-  <data name="Login" xml:space="preserve"><value>Log in</value></data>
-  <data name="LoginTitle" xml:space="preserve"><value>Sign in to your account</value></data>
-  <data name="LoginSubtitle" xml:space="preserve"><value>Enter your email and password to continue.</value></data>
-  <data name="Email" xml:space="preserve"><value>Email</value></data>
-  <data name="Password" xml:space="preserve"><value>Password</value></data>
-  <data name="RememberMe" xml:space="preserve"><value>Remember me</value></data>
-  <data name="InvalidLogin" xml:space="preserve"><value>Invalid email or password.</value></data>
-  <data name="AccountLocked" xml:space="preserve"><value>Too many failed attempts. Your account is locked for 15 minutes.</value></data>
-  <data name="AccessDeniedTitle" xml:space="preserve"><value>Access denied</value></data>
-  <data name="AccessDeniedMessage" xml:space="preserve"><value>You do not have permission to view this page.</value></data>
-  <data name="BackToHome" xml:space="preserve"><value>Back to home</value></data>
-  <data name="ErrorTitle" xml:space="preserve"><value>Something went wrong</value></data>
-  <data name="ErrorMessage" xml:space="preserve"><value>An unexpected error occurred while processing your request. Please try again shortly.</value></data>
-  <data name="ErrorCode" xml:space="preserve"><value>Error code</value></data>
-  <data name="NotFoundTitle" xml:space="preserve"><value>Page not found</value></data>
-  <data name="NotFoundMessage" xml:space="preserve"><value>The page you are looking for may have been moved, deleted or never existed.</value></data>
-  <data name="HttpStatusTitle" xml:space="preserve"><value>The request could not be completed</value></data>
-  <data name="HttpStatusMessage" xml:space="preserve"><value>The server could not process the request (code {0}).</value></data>
-  <data name="MyAccount" xml:space="preserve"><value>My account</value></data>
-  <data name="FullName" xml:space="preserve"><value>Full name</value></data>
-  <data name="Role" xml:space="preserve"><value>Role</value></data>
-  <data name="Scope" xml:space="preserve"><value>Scope</value></data>
-  <data name="ScopeAllCountries" xml:space="preserve"><value>All countries</value></data>
-  <data name="CountryNotAssigned" xml:space="preserve"><value>No country assigned yet</value></data>
-  <data name="BranchNotAssigned" xml:space="preserve"><value>No branch assigned yet</value></data>
-  <data name="Role_Admin" xml:space="preserve"><value>System Administrator</value></data>
-  <data name="Role_Manager" xml:space="preserve"><value>Regional Operations Manager</value></data>
-  <data name="Role_Personel" xml:space="preserve"><value>Branch Officer</value></data>
-  <data name="Role_Courier" xml:space="preserve"><value>Courier</value></data>
-  <data name="Role_Customer" xml:space="preserve"><value>Customer</value></data>
-  <data name="EmailRequired" xml:space="preserve"><value>Email cannot be empty.</value></data>
-  <data name="EmailInvalid" xml:space="preserve"><value>Enter a valid email address.</value></data>
-  <data name="PasswordRequired" xml:space="preserve"><value>Password cannot be empty.</value></data>
-  <!-- ═══ 11 · Identity hata mesajları (LocalizedIdentityErrorDescriber) · anahtar = Identity_<Code> ═══ -->
-  <data name="Identity_DefaultError" xml:space="preserve"><value>An unexpected error occurred.</value></data>
-  <data name="Identity_ConcurrencyFailure" xml:space="preserve"><value>This record was changed by someone else in the meantime. Refresh the page and try again.</value></data>
-  <data name="Identity_PasswordMismatch" xml:space="preserve"><value>Incorrect password.</value></data>
-  <data name="Identity_InvalidToken" xml:space="preserve"><value>The link is invalid or has expired.</value></data>
-  <data name="Identity_RecoveryCodeRedemptionFailed" xml:space="preserve"><value>The recovery code could not be used.</value></data>
-  <data name="Identity_LoginAlreadyAssociated" xml:space="preserve"><value>This external login is already linked to another account.</value></data>
-  <data name="Identity_InvalidUserName" xml:space="preserve"><value>'{0}' cannot be used. Only unaccented letters, digits and - . _ @ + are allowed.</value></data>
-  <data name="Identity_InvalidEmail" xml:space="preserve"><value>'{0}' is not a valid email address.</value></data>
-  <data name="Identity_DuplicateUserName" xml:space="preserve"><value>The username '{0}' is already taken.</value></data>
-  <data name="Identity_DuplicateEmail" xml:space="preserve"><value>The email address '{0}' is already in use.</value></data>
-  <data name="Identity_InvalidRoleName" xml:space="preserve"><value>'{0}' is not a valid role name.</value></data>
-  <data name="Identity_DuplicateRoleName" xml:space="preserve"><value>The role '{0}' already exists.</value></data>
-  <data name="Identity_UserAlreadyHasPassword" xml:space="preserve"><value>This user already has a password.</value></data>
-  <data name="Identity_UserLockoutNotEnabled" xml:space="preserve"><value>Account lockout is not enabled for this user.</value></data>
-  <data name="Identity_UserAlreadyInRole" xml:space="preserve"><value>The user is already in the '{0}' role.</value></data>
-  <data name="Identity_UserNotInRole" xml:space="preserve"><value>The user is not in the '{0}' role.</value></data>
-  <data name="Identity_PasswordTooShort" xml:space="preserve"><value>Password must be at least {0} characters long.</value></data>
-  <data name="Identity_PasswordRequiresUniqueChars" xml:space="preserve"><value>Password must contain at least {0} different characters.</value></data>
-  <data name="Identity_PasswordRequiresNonAlphanumeric" xml:space="preserve"><value>Password must contain at least one special character (e.g. ! @ # ?).</value></data>
-  <data name="Identity_PasswordRequiresDigit" xml:space="preserve"><value>Password must contain at least one digit (0-9).</value></data>
-  <data name="Identity_PasswordRequiresLower" xml:space="preserve"><value>Password must contain at least one lowercase letter (a-z).</value></data>
-  <data name="Identity_PasswordRequiresUpper" xml:space="preserve"><value>Password must contain at least one uppercase letter (A-Z).</value></data>
-  <!-- ═══ 12 · Kullanıcı yönetimi (Admin): ekran · işlem · doğrulama ═══ -->
-  <data name="Users" xml:space="preserve"><value>Users</value></data>
-  <data name="UsersSubtitle" xml:space="preserve"><value>Manage staff accounts, their roles and areas of responsibility.</value></data>
-  <data name="NewUser" xml:space="preserve"><value>New user</value></data>
-  <data name="UpdateUser" xml:space="preserve"><value>Update user</value></data>
-  <data name="SearchUser" xml:space="preserve"><value>Search by first name, last name or email...</value></data>
-  <data name="FirstName" xml:space="preserve"><value>First name</value></data>
-  <data name="LastName" xml:space="preserve"><value>Last name</value></data>
-  <data name="ConfirmPassword" xml:space="preserve"><value>Confirm password</value></data>
-  <data name="NewPassword" xml:space="preserve"><value>New password</value></data>
-  <data name="ConfirmNewPassword" xml:space="preserve"><value>Confirm new password</value></data>
-  <data name="NewPasswordHint" xml:space="preserve"><value>Leave blank to keep the current password.</value></data>
-  <data name="PasswordRuleHint" xml:space="preserve"><value>At least {0} characters, including an uppercase letter, a lowercase letter and a digit.</value></data>
-  <data name="SelectRole" xml:space="preserve"><value>Select a role</value></data>
-  <data name="SelectCountry" xml:space="preserve"><value>Select a country</value></data>
-  <data name="Branch" xml:space="preserve"><value>Branch</value></data>
-  <data name="BranchComingSoon" xml:space="preserve"><value>Branch selection will be available once branches are added (phase 4).</value></data>
-  <data name="Status" xml:space="preserve"><value>Status</value></data>
-  <data name="Active" xml:space="preserve"><value>Active</value></data>
-  <data name="Inactive" xml:space="preserve"><value>Inactive</value></data>
-  <data name="Deactivate" xml:space="preserve"><value>Deactivate</value></data>
-  <data name="Activate" xml:space="preserve"><value>Activate</value></data>
-  <data name="ConfirmDeactivate" xml:space="preserve"><value>This user will be deactivated and will no longer be able to sign in. Are you sure?</value></data>
-  <data name="CurrentUserBadge" xml:space="preserve"><value>You</value></data>
-  <data name="UserNotFound" xml:space="preserve"><value>User not found.</value></data>
-  <data name="LastAdminProtected" xml:space="preserve"><value>At least one active System Administrator must remain. This action cannot be completed.</value></data>
-  <data name="CannotDeactivateSelf" xml:space="preserve"><value>You cannot deactivate your own account.</value></data>
-  <data name="CannotChangeOwnRole" xml:space="preserve"><value>You cannot change your own role.</value></data>
-  <data name="AccountDeactivated" xml:space="preserve"><value>Your account is inactive. Please contact your administrator.</value></data>
-  <data name="FirstNameRequired" xml:space="preserve"><value>First name cannot be empty.</value></data>
-  <data name="FirstNameMaxLength" xml:space="preserve"><value>First name can be at most 50 characters.</value></data>
-  <data name="LastNameRequired" xml:space="preserve"><value>Last name cannot be empty.</value></data>
-  <data name="LastNameMaxLength" xml:space="preserve"><value>Last name can be at most 50 characters.</value></data>
-  <data name="EmailMaxLength" xml:space="preserve"><value>Email can be at most 256 characters.</value></data>
-  <data name="ConfirmPasswordMismatch" xml:space="preserve"><value>Passwords do not match.</value></data>
-  <data name="RoleRequired" xml:space="preserve"><value>Please select a role.</value></data>
-  <data name="RoleInvalid" xml:space="preserve"><value>Invalid role.</value></data>
-  <data name="CountryRequiredForManager" xml:space="preserve"><value>Please select a country for the Regional Operations Manager role.</value></data>
-  <!-- ═══ 13 · Admin menüsü (TALP-32: sabit Türkçe menü metinleri) ═══ -->
-  <data name="Menu_Dashboard" xml:space="preserve"><value>Dashboard</value></data>
-  <data name="Menu_Shipments" xml:space="preserve"><value>Shipment management</value></data>
-  <data name="Menu_CourierDistribution" xml:space="preserve"><value>Couriers &amp; delivery</value></data>
-  <data name="Menu_BranchesWarehouses" xml:space="preserve"><value>Branches &amp; warehouses</value></data>
-  <data name="Menu_Customers" xml:space="preserve"><value>Customers</value></data>
-  <data name="Menu_Reports" xml:space="preserve"><value>Reports &amp; analytics</value></data>
-  <data name="Menu_SystemSettings" xml:space="preserve"><value>System settings</value></data>
-  <data name="Menu_UserSettings" xml:space="preserve"><value>Users &amp; access</value></data>
-  <!-- ═══ 14 · Müşteri kaydı (TALP-28): kayıt sayfası · doğrulama · servis · Hesabım ═══ -->
-  <data name="Register" xml:space="preserve"><value>Sign up</value></data>
-  <data name="RegisterTitle" xml:space="preserve"><value>Create a customer account</value></data>
-  <data name="RegisterSubtitle" xml:space="preserve"><value>Open your account in a few steps to track your shipments.</value></data>
-  <data name="NoAccountYet" xml:space="preserve"><value>Don't have an account?</value></data>
-  <data name="AlreadyHaveAccount" xml:space="preserve"><value>Already have an account?</value></data>
-  <data name="CustomerType" xml:space="preserve"><value>Customer type</value></data>
-  <data name="CustomerType_Individual" xml:space="preserve"><value>Individual</value></data>
-  <data name="CustomerType_Corporate" xml:space="preserve"><value>Corporate</value></data>
-  <data name="CorporateApprovalHint" xml:space="preserve"><value>Corporate applications become active after administrator approval.</value></data>
-  <data name="CompanyTitle" xml:space="preserve"><value>Company name</value></data>
-  <data name="AuthorizedPerson" xml:space="preserve"><value>Authorized person</value></data>
-  <data name="Phone" xml:space="preserve"><value>Phone</value></data>
-  <data name="IdentityNumber" xml:space="preserve"><value>Identity number</value></data>
-  <data name="TaxNumber" xml:space="preserve"><value>Tax number</value></data>
-  <data name="TaxOffice" xml:space="preserve"><value>Tax office</value></data>
-  <data name="TaxNumberHint" xml:space="preserve"><value>The number format is checked according to the selected country.</value></data>
-  <data name="CustomerTypeInvalid" xml:space="preserve"><value>Invalid customer type.</value></data>
-  <data name="CompanyTitleRequired" xml:space="preserve"><value>Company name cannot be empty.</value></data>
-  <data name="CompanyTitleMaxLength" xml:space="preserve"><value>Company name can be at most 200 characters.</value></data>
-  <data name="PhoneRequired" xml:space="preserve"><value>Phone cannot be empty.</value></data>
-  <data name="PhoneInvalid" xml:space="preserve"><value>Phone may contain only digits, spaces and a leading + (7–20 characters).</value></data>
-  <data name="IdentityNumberRequired" xml:space="preserve"><value>Identity number cannot be empty.</value></data>
-  <data name="TaxNumberRequired" xml:space="preserve"><value>Tax number cannot be empty.</value></data>
-  <data name="TaxOfficeRequired" xml:space="preserve"><value>Tax office cannot be empty.</value></data>
-  <data name="TaxOfficeMaxLength" xml:space="preserve"><value>Tax office can be at most 100 characters.</value></data>
-  <data name="CustomerEmailMaxLength" xml:space="preserve"><value>Email can be at most 100 characters.</value></data>
-  <data name="TaxIdFormat_TR_Individual" xml:space="preserve"><value>Turkish ID number (TCKN) must be 11 digits and cannot start with 0.</value></data>
-  <data name="TaxIdFormat_TR_Corporate" xml:space="preserve"><value>Turkish tax number (VKN) must be 10 digits.</value></data>
-  <data name="TaxIdFormat_BR_Individual" xml:space="preserve"><value>CPF must be 11 digits.</value></data>
-  <data name="TaxIdFormat_BR_Corporate" xml:space="preserve"><value>CNPJ must be 14 digits.</value></data>
-  <data name="TaxIdFormat_MT_Individual" xml:space="preserve"><value>Maltese ID card number must be 1–7 digits followed by a letter (e.g. 123456M).</value></data>
-  <data name="TaxIdFormat_MT_Corporate" xml:space="preserve"><value>Maltese VAT number must be 8 digits.</value></data>
-  <data name="TaxIdFormat_Other" xml:space="preserve"><value>The number must be 5–20 letters or digits.</value></data>
-  <data name="TaxNumberTaken" xml:space="preserve"><value>A customer with this identity / tax number already exists in this country.</value></data>
-  <data name="CustomerCode" xml:space="preserve"><value>Customer code</value></data>
-  <data name="AccountStatus" xml:space="preserve"><value>Account status</value></data>
-  <data name="AccountStatus_Active" xml:space="preserve"><value>Active</value></data>
-  <data name="AccountStatus_Suspended" xml:space="preserve"><value>Suspended</value></data>
-  <data name="AccountStatus_PendingApproval" xml:space="preserve"><value>Pending approval</value></data>
-  <data name="AccountStatus_Closed" xml:space="preserve"><value>Closed</value></data>
-  <data name="PendingApprovalNotice" xml:space="preserve"><value>Your corporate account is awaiting administrator approval.</value></data>
-  <data name="RegistrationCompleted" xml:space="preserve"><value>Your account has been created. Welcome!</value></data>
-  <!-- ═══ 15 · Sayfalama (TALP-41): liste ekranlarının sayfa çubuğu ═══ -->
-  <data name="Pagination_Previous" xml:space="preserve"><value>Previous</value></data>
-  <data name="Pagination_Next" xml:space="preserve"><value>Next</value></data>
-  <data name="Pagination_PageOf" xml:space="preserve"><value>Page {0} of {1}</value></data>
-  <data name="Pagination_Range" xml:space="preserve"><value>{0}–{1} of {2} records</value></data>
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdminPanel" xml:space="preserve">
+    <value>Admin Panel</value>
+  </data>
+  <data name="Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Countries" xml:space="preserve">
+    <value>Countries</value>
+  </data>
+  <data name="Cities" xml:space="preserve">
+    <value>Cities</value>
+  </data>
+  <data name="Branches" xml:space="preserve">
+    <value>Branches</value>
+  </data>
+  <data name="Couriers" xml:space="preserve">
+    <value>Couriers</value>
+  </data>
+  <data name="Cargos" xml:space="preserve">
+    <value>Shipments</value>
+  </data>
+  <data name="Payments" xml:space="preserve">
+    <value>Payments</value>
+  </data>
+  <data name="LocationSettings" xml:space="preserve">
+    <value>Location settings</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Create" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Actions" xml:space="preserve">
+    <value>Actions</value>
+  </data>
+  <data name="ConfirmDelete" xml:space="preserve">
+    <value>Are you sure you want to delete this record?</value>
+  </data>
+  <data name="NoRecords" xml:space="preserve">
+    <value>No records yet.</value>
+  </data>
+  <data name="ComingSoon" xml:space="preserve">
+    <value>Coming soon</value>
+  </data>
+  <data name="All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>No results found.</value>
+  </data>
+  <data name="ClearFilter" xml:space="preserve">
+    <value>Clear filter</value>
+  </data>
+  <data name="Logout" xml:space="preserve">
+    <value>Log out</value>
+  </data>
+  <data name="OpenMenu" xml:space="preserve">
+    <value>Open menu</value>
+  </data>
+  <data name="CloseMenu" xml:space="preserve">
+    <value>Close menu</value>
+  </data>
+  <data name="AccountMenu" xml:space="preserve">
+    <value>Account menu</value>
+  </data>
+  <data name="Notifications" xml:space="preserve">
+    <value>Notifications</value>
+  </data>
+  <data name="GlobalSearchPlaceholder" xml:space="preserve">
+    <value>Search tracking no., customer or branch...</value>
+  </data>
+  <data name="NewShipment" xml:space="preserve">
+    <value>Create shipment</value>
+  </data>
+  <data name="CityName" xml:space="preserve">
+    <value>City name</value>
+  </data>
+  <data name="NewCity" xml:space="preserve">
+    <value>New city</value>
+  </data>
+  <data name="UpdateCity" xml:space="preserve">
+    <value>Update city</value>
+  </data>
+  <data name="SearchCity" xml:space="preserve">
+    <value>Search city...</value>
+  </data>
+  <data name="Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
+  <data name="NewCountry" xml:space="preserve">
+    <value>New country</value>
+  </data>
+  <data name="UpdateCountry" xml:space="preserve">
+    <value>Update country</value>
+  </data>
+  <data name="IsoCode" xml:space="preserve">
+    <value>ISO code</value>
+  </data>
+  <data name="CurrencyCode" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="PhoneCode" xml:space="preserve">
+    <value>Phone code</value>
+  </data>
+  <data name="LanguageCode" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="TimeZone" xml:space="preserve">
+    <value>Time zone</value>
+  </data>
+  <data name="CityNotFound" xml:space="preserve">
+    <value>City not found.</value>
+  </data>
+  <data name="CountryNotFound" xml:space="preserve">
+    <value>Country not found.</value>
+  </data>
+  <data name="CityNameTaken" xml:space="preserve">
+    <value>This city is already registered in this country.</value>
+  </data>
+  <data name="IsoCodeTaken" xml:space="preserve">
+    <value>This ISO code is already used by another country.</value>
+  </data>
+  <data name="CountryHasDependents" xml:space="preserve">
+    <value>This country has linked cities, customers or users. Remove them first.</value>
+  </data>
+  <data name="CityHasDependents" xml:space="preserve">
+    <value>This city has linked branches. Remove them first.</value>
+  </data>
+  <data name="BranchNotFound" xml:space="preserve">
+    <value>Branch not found.</value>
+  </data>
+  <data name="BranchCodeTaken" xml:space="preserve">
+    <value>This facility code is already used by another branch.</value>
+  </data>
+  <data name="BranchHasDependents" xml:space="preserve">
+    <value>This branch has linked cargos, employees, payments or a manager. Remove them first.</value>
+  </data>
+  <data name="EmployeeNotFound" xml:space="preserve"><value>Employee not found.</value></data>
+  <data name="EmployeeHasDependents" xml:space="preserve"><value>This employee has linked cargos or payments and cannot be deleted. You can deactivate them instead.</value></data>
+  <data name="RecordIdRequired" xml:space="preserve">
+    <value>No record was specified for update.</value>
+  </data>
+  <data name="CityNameRequired" xml:space="preserve">
+    <value>City name cannot be empty.</value>
+  </data>
+  <data name="CityNameMinLength" xml:space="preserve">
+    <value>City name must be at least 2 characters.</value>
+  </data>
+  <data name="CityNameMaxLength" xml:space="preserve">
+    <value>City name can be at most 100 characters.</value>
+  </data>
+  <data name="CountryRequired" xml:space="preserve">
+    <value>Please select a country.</value>
+  </data>
+  <data name="CountryNameRequired" xml:space="preserve">
+    <value>Country name cannot be empty.</value>
+  </data>
+  <data name="CountryNameMaxLength" xml:space="preserve">
+    <value>Country name can be at most 100 characters.</value>
+  </data>
+  <data name="IsoCodeRequired" xml:space="preserve">
+    <value>ISO code cannot be empty.</value>
+  </data>
+  <data name="IsoCodeLength" xml:space="preserve">
+    <value>ISO code must be 2 letters. Example: TR, MT, BR</value>
+  </data>
+  <data name="CurrencyCodeRequired" xml:space="preserve">
+    <value>Currency code cannot be empty.</value>
+  </data>
+  <data name="CurrencyCodeLength" xml:space="preserve">
+    <value>Currency code must be 3 letters. Example: TRY, EUR, BRL</value>
+  </data>
+  <data name="PhoneCodeRequired" xml:space="preserve">
+    <value>Phone code cannot be empty.</value>
+  </data>
+  <data name="PhoneCodeMaxLength" xml:space="preserve">
+    <value>Phone code can be at most 6 characters.</value>
+  </data>
+  <data name="TimeZoneRequired" xml:space="preserve">
+    <value>Time zone cannot be empty.</value>
+  </data>
+  <data name="TimeZoneMaxLength" xml:space="preserve">
+    <value>Time zone can be at most 50 characters.</value>
+  </data>
+  <data name="LanguageCodeRequired" xml:space="preserve">
+    <value>Language code cannot be empty.</value>
+  </data>
+  <data name="LanguageCodeMaxLength" xml:space="preserve">
+    <value>Language code can be at most 5 characters.</value>
+  </data>
+  <data name="BranchNameRequired" xml:space="preserve">
+    <value>Branch name cannot be empty.</value>
+  </data>
+  <data name="BranchNameMinLength" xml:space="preserve">
+    <value>Branch name must be at least 2 characters.</value>
+  </data>
+  <data name="BranchNameMaxLength" xml:space="preserve">
+    <value>Branch name can be at most 100 characters.</value>
+  </data>
+  <data name="BranchCodeRequired" xml:space="preserve">
+    <value>Facility code cannot be empty.</value>
+  </data>
+  <data name="BranchCodeMaxLength" xml:space="preserve">
+    <value>Facility code can be at most 20 characters.</value>
+  </data>
+  <data name="BranchCodeFormat" xml:space="preserve">
+    <value>The facility code may contain only capital letters, digits and hyphens. Example: IST-01</value>
+  </data>
+  <data name="CityRequired" xml:space="preserve">
+    <value>A city must be selected.</value>
+  </data>
+  <data name="CapacityRange" xml:space="preserve">
+    <value>Capacity must be between 1 and 1,000,000.</value>
+  </data>
+  <data name="DockCountRange" xml:space="preserve">
+    <value>The number of loading docks must be between 0 and 1,000.</value>
+  </data>
+  <data name="BranchTypeInvalid" xml:space="preserve">
+    <value>A valid facility type must be selected.</value>
+  </data>
+  <data name="BranchRequired" xml:space="preserve"><value>A facility must be selected.</value></data>
+  <data name="JobTypeInvalid" xml:space="preserve"><value>A valid job must be selected.</value></data>
+  <data name="VehicleTypeRequired" xml:space="preserve"><value>A vehicle type is required for couriers.</value></data>
+  <data name="VehiclePlateRequired" xml:space="preserve"><value>A licence plate is required for couriers.</value></data>
+  <data name="VehiclePlateMaxLength" xml:space="preserve"><value>The licence plate can be at most 20 characters.</value></data>
+  <data name="RegionMaxLength" xml:space="preserve"><value>The delivery area can be at most 100 characters.</value></data>
+  <data name="AccountRoleInvalid" xml:space="preserve"><value>The account role must be Branch Officer or Courier.</value></data>
+  <data name="Binding_ValueInvalid" xml:space="preserve">
+    <value>The value '{0}' is invalid.</value>
+  </data>
+  <data name="Binding_ValueInvalidFor" xml:space="preserve">
+    <value>The value '{0}' is not valid for {1}.</value>
+  </data>
+  <data name="Binding_UnknownValueInvalid" xml:space="preserve">
+    <value>The supplied value is invalid.</value>
+  </data>
+  <data name="Binding_UnknownValueInvalidFor" xml:space="preserve">
+    <value>The supplied value is invalid for {0}.</value>
+  </data>
+  <data name="Binding_MustBeNumber" xml:space="preserve">
+    <value>The field must be a number.</value>
+  </data>
+  <data name="Binding_MustBeNumberFor" xml:space="preserve">
+    <value>The field {0} must be a number.</value>
+  </data>
+  <data name="Binding_MissingValueFor" xml:space="preserve">
+    <value>A value for '{0}' was not provided.</value>
+  </data>
+  <data name="Binding_ValueRequired" xml:space="preserve">
+    <value>A value is required.</value>
+  </data>
+  <data name="TrackCargo" xml:space="preserve">
+    <value>Track shipment</value>
+  </data>
+  <data name="TrackCode" xml:space="preserve">
+    <value>Tracking code</value>
+  </data>
+  <data name="TrackAction" xml:space="preserve">
+    <value>Track</value>
+  </data>
+  <data name="TrackNotice" xml:space="preserve">
+    <value>The shipment module is not finished yet. Tracking will work once the shipment service is added.</value>
+  </data>
+  <data name="Status_Created" xml:space="preserve">
+    <value>Created</value>
+  </data>
+  <data name="Status_AtOriginBranch" xml:space="preserve">
+    <value>At origin branch</value>
+  </data>
+  <data name="Status_InTransferCenter" xml:space="preserve">
+    <value>At transfer centre</value>
+  </data>
+  <data name="Status_AtDestinationBranch" xml:space="preserve">
+    <value>At destination branch</value>
+  </data>
+  <data name="Status_OutForDelivery" xml:space="preserve">
+    <value>Out for delivery</value>
+  </data>
+  <data name="Status_Delivered" xml:space="preserve">
+    <value>Delivered</value>
+  </data>
+  <data name="Status_DeliveryFailed" xml:space="preserve">
+    <value>Delivery failed</value>
+  </data>
+  <data name="Status_ReturnInProgress" xml:space="preserve">
+    <value>Return in progress</value>
+  </data>
+  <data name="Status_ReturnedToSender" xml:space="preserve">
+    <value>Returned to sender</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="LoginTitle" xml:space="preserve">
+    <value>Sign in to your account</value>
+  </data>
+  <data name="LoginSubtitle" xml:space="preserve">
+    <value>Enter your email and password to continue.</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>Remember me</value>
+  </data>
+  <data name="InvalidLogin" xml:space="preserve">
+    <value>Invalid email or password.</value>
+  </data>
+  <data name="AccountLocked" xml:space="preserve">
+    <value>Too many failed attempts. Your account is locked for 15 minutes.</value>
+  </data>
+  <data name="AccessDeniedTitle" xml:space="preserve">
+    <value>Access denied</value>
+  </data>
+  <data name="AccessDeniedMessage" xml:space="preserve">
+    <value>You do not have permission to view this page.</value>
+  </data>
+  <data name="BackToHome" xml:space="preserve">
+    <value>Back to home</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>Something went wrong</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>An unexpected error occurred while processing your request. Please try again shortly.</value>
+  </data>
+  <data name="ErrorCode" xml:space="preserve">
+    <value>Error code</value>
+  </data>
+  <data name="NotFoundTitle" xml:space="preserve">
+    <value>Page not found</value>
+  </data>
+  <data name="NotFoundMessage" xml:space="preserve">
+    <value>The page you are looking for may have been moved, deleted or never existed.</value>
+  </data>
+  <data name="HttpStatusTitle" xml:space="preserve">
+    <value>The request could not be completed</value>
+  </data>
+  <data name="HttpStatusMessage" xml:space="preserve">
+    <value>The server could not process the request (code {0}).</value>
+  </data>
+  <data name="MyAccount" xml:space="preserve">
+    <value>My account</value>
+  </data>
+  <data name="FullName" xml:space="preserve">
+    <value>Full name</value>
+  </data>
+  <data name="Role" xml:space="preserve">
+    <value>Role</value>
+  </data>
+  <data name="Scope" xml:space="preserve">
+    <value>Scope</value>
+  </data>
+  <data name="ScopeAllCountries" xml:space="preserve">
+    <value>All countries</value>
+  </data>
+  <data name="CountryNotAssigned" xml:space="preserve">
+    <value>No country assigned yet</value>
+  </data>
+  <data name="BranchNotAssigned" xml:space="preserve">
+    <value>No branch assigned yet</value>
+  </data>
+  <data name="Role_Admin" xml:space="preserve">
+    <value>System Administrator</value>
+  </data>
+  <data name="Role_Manager" xml:space="preserve">
+    <value>Regional Operations Manager</value>
+  </data>
+  <data name="Role_Personel" xml:space="preserve">
+    <value>Branch Officer</value>
+  </data>
+  <data name="Role_Courier" xml:space="preserve">
+    <value>Courier</value>
+  </data>
+  <data name="Role_Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+  <data name="EmailRequired" xml:space="preserve">
+    <value>Email cannot be empty.</value>
+  </data>
+  <data name="EmailInvalid" xml:space="preserve">
+    <value>Enter a valid email address.</value>
+  </data>
+  <data name="PasswordRequired" xml:space="preserve">
+    <value>Password cannot be empty.</value>
+  </data>
+  <data name="Identity_DefaultError" xml:space="preserve">
+    <value>An unexpected error occurred.</value>
+  </data>
+  <data name="Identity_ConcurrencyFailure" xml:space="preserve">
+    <value>This record was changed by someone else in the meantime. Refresh the page and try again.</value>
+  </data>
+  <data name="Identity_PasswordMismatch" xml:space="preserve">
+    <value>Incorrect password.</value>
+  </data>
+  <data name="Identity_InvalidToken" xml:space="preserve">
+    <value>The link is invalid or has expired.</value>
+  </data>
+  <data name="Identity_RecoveryCodeRedemptionFailed" xml:space="preserve">
+    <value>The recovery code could not be used.</value>
+  </data>
+  <data name="Identity_LoginAlreadyAssociated" xml:space="preserve">
+    <value>This external login is already linked to another account.</value>
+  </data>
+  <data name="Identity_InvalidUserName" xml:space="preserve">
+    <value>'{0}' cannot be used. Only unaccented letters, digits and - . _ @ + are allowed.</value>
+  </data>
+  <data name="Identity_InvalidEmail" xml:space="preserve">
+    <value>'{0}' is not a valid email address.</value>
+  </data>
+  <data name="Identity_DuplicateUserName" xml:space="preserve">
+    <value>The username '{0}' is already taken.</value>
+  </data>
+  <data name="Identity_DuplicateEmail" xml:space="preserve">
+    <value>The email address '{0}' is already in use.</value>
+  </data>
+  <data name="Identity_InvalidRoleName" xml:space="preserve">
+    <value>'{0}' is not a valid role name.</value>
+  </data>
+  <data name="Identity_DuplicateRoleName" xml:space="preserve">
+    <value>The role '{0}' already exists.</value>
+  </data>
+  <data name="Identity_UserAlreadyHasPassword" xml:space="preserve">
+    <value>This user already has a password.</value>
+  </data>
+  <data name="Identity_UserLockoutNotEnabled" xml:space="preserve">
+    <value>Account lockout is not enabled for this user.</value>
+  </data>
+  <data name="Identity_UserAlreadyInRole" xml:space="preserve">
+    <value>The user is already in the '{0}' role.</value>
+  </data>
+  <data name="Identity_UserNotInRole" xml:space="preserve">
+    <value>The user is not in the '{0}' role.</value>
+  </data>
+  <data name="Identity_PasswordTooShort" xml:space="preserve">
+    <value>Password must be at least {0} characters long.</value>
+  </data>
+  <data name="Identity_PasswordRequiresUniqueChars" xml:space="preserve">
+    <value>Password must contain at least {0} different characters.</value>
+  </data>
+  <data name="Identity_PasswordRequiresNonAlphanumeric" xml:space="preserve">
+    <value>Password must contain at least one special character (e.g. ! @ # ?).</value>
+  </data>
+  <data name="Identity_PasswordRequiresDigit" xml:space="preserve">
+    <value>Password must contain at least one digit (0-9).</value>
+  </data>
+  <data name="Identity_PasswordRequiresLower" xml:space="preserve">
+    <value>Password must contain at least one lowercase letter (a-z).</value>
+  </data>
+  <data name="Identity_PasswordRequiresUpper" xml:space="preserve">
+    <value>Password must contain at least one uppercase letter (A-Z).</value>
+  </data>
+  <data name="Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="UsersSubtitle" xml:space="preserve">
+    <value>Manage staff accounts, their roles and areas of responsibility.</value>
+  </data>
+  <data name="NewUser" xml:space="preserve">
+    <value>New user</value>
+  </data>
+  <data name="UpdateUser" xml:space="preserve">
+    <value>Update user</value>
+  </data>
+  <data name="SearchUser" xml:space="preserve">
+    <value>Search by first name, last name or email...</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirm password</value>
+  </data>
+  <data name="NewPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
+  <data name="ConfirmNewPassword" xml:space="preserve">
+    <value>Confirm new password</value>
+  </data>
+  <data name="NewPasswordHint" xml:space="preserve">
+    <value>Leave blank to keep the current password.</value>
+  </data>
+  <data name="PasswordRuleHint" xml:space="preserve">
+    <value>At least {0} characters, including an uppercase letter, a lowercase letter and a digit.</value>
+  </data>
+  <data name="SelectRole" xml:space="preserve">
+    <value>Select a role</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>Select a country</value>
+  </data>
+  <data name="Branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="BranchComingSoon" xml:space="preserve">
+    <value>Branch selection will be available once branches are added (phase 4).</value>
+  </data>
+  <data name="Status" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="Inactive" xml:space="preserve">
+    <value>Inactive</value>
+  </data>
+  <data name="Deactivate" xml:space="preserve">
+    <value>Deactivate</value>
+  </data>
+  <data name="Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="ConfirmDeactivate" xml:space="preserve">
+    <value>This user will be deactivated and will no longer be able to sign in. Are you sure?</value>
+  </data>
+  <data name="CurrentUserBadge" xml:space="preserve">
+    <value>You</value>
+  </data>
+  <data name="UserNotFound" xml:space="preserve">
+    <value>User not found.</value>
+  </data>
+  <data name="LastAdminProtected" xml:space="preserve">
+    <value>At least one active System Administrator must remain. This action cannot be completed.</value>
+  </data>
+  <data name="CannotDeactivateSelf" xml:space="preserve">
+    <value>You cannot deactivate your own account.</value>
+  </data>
+  <data name="CannotChangeOwnRole" xml:space="preserve">
+    <value>You cannot change your own role.</value>
+  </data>
+  <data name="AccountDeactivated" xml:space="preserve">
+    <value>Your account is inactive. Please contact your administrator.</value>
+  </data>
+  <data name="FirstNameRequired" xml:space="preserve">
+    <value>First name cannot be empty.</value>
+  </data>
+  <data name="FirstNameMaxLength" xml:space="preserve">
+    <value>First name can be at most 50 characters.</value>
+  </data>
+  <data name="LastNameRequired" xml:space="preserve">
+    <value>Last name cannot be empty.</value>
+  </data>
+  <data name="LastNameMaxLength" xml:space="preserve">
+    <value>Last name can be at most 50 characters.</value>
+  </data>
+  <data name="EmailMaxLength" xml:space="preserve">
+    <value>Email can be at most 256 characters.</value>
+  </data>
+  <data name="ConfirmPasswordMismatch" xml:space="preserve">
+    <value>Passwords do not match.</value>
+  </data>
+  <data name="RoleRequired" xml:space="preserve">
+    <value>Please select a role.</value>
+  </data>
+  <data name="RoleInvalid" xml:space="preserve">
+    <value>Invalid role.</value>
+  </data>
+  <data name="CountryRequiredForManager" xml:space="preserve">
+    <value>Please select a country for the Regional Operations Manager role.</value>
+  </data>
+  <data name="Menu_Dashboard" xml:space="preserve">
+    <value>Dashboard</value>
+  </data>
+  <data name="Menu_Shipments" xml:space="preserve">
+    <value>Shipment management</value>
+  </data>
+  <data name="Menu_CourierDistribution" xml:space="preserve">
+    <value>Couriers &amp; delivery</value>
+  </data>
+  <data name="Menu_BranchesWarehouses" xml:space="preserve">
+    <value>Branches &amp; warehouses</value>
+  </data>
+  <data name="Menu_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="Menu_Reports" xml:space="preserve">
+    <value>Reports &amp; analytics</value>
+  </data>
+  <data name="Menu_SystemSettings" xml:space="preserve">
+    <value>System settings</value>
+  </data>
+  <data name="Menu_UserSettings" xml:space="preserve">
+    <value>Users &amp; access</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Create a customer account</value>
+  </data>
+  <data name="RegisterSubtitle" xml:space="preserve">
+    <value>Open your account in a few steps to track your shipments.</value>
+  </data>
+  <data name="NoAccountYet" xml:space="preserve">
+    <value>Don't have an account?</value>
+  </data>
+  <data name="AlreadyHaveAccount" xml:space="preserve">
+    <value>Already have an account?</value>
+  </data>
+  <data name="CustomerType" xml:space="preserve">
+    <value>Customer type</value>
+  </data>
+  <data name="CustomerType_Individual" xml:space="preserve">
+    <value>Individual</value>
+  </data>
+  <data name="CustomerType_Corporate" xml:space="preserve">
+    <value>Corporate</value>
+  </data>
+  <data name="CorporateApprovalHint" xml:space="preserve">
+    <value>Corporate applications become active after administrator approval.</value>
+  </data>
+  <data name="CompanyTitle" xml:space="preserve">
+    <value>Company name</value>
+  </data>
+  <data name="AuthorizedPerson" xml:space="preserve">
+    <value>Authorized person</value>
+  </data>
+  <data name="Phone" xml:space="preserve">
+    <value>Phone</value>
+  </data>
+  <data name="IdentityNumber" xml:space="preserve">
+    <value>Identity number</value>
+  </data>
+  <data name="TaxNumber" xml:space="preserve">
+    <value>Tax number</value>
+  </data>
+  <data name="TaxOffice" xml:space="preserve">
+    <value>Tax office</value>
+  </data>
+  <data name="TaxNumberHint" xml:space="preserve">
+    <value>The number format is checked according to the selected country.</value>
+  </data>
+  <data name="CustomerTypeInvalid" xml:space="preserve">
+    <value>Invalid customer type.</value>
+  </data>
+  <data name="CompanyTitleRequired" xml:space="preserve">
+    <value>Company name cannot be empty.</value>
+  </data>
+  <data name="CompanyTitleMaxLength" xml:space="preserve">
+    <value>Company name can be at most 200 characters.</value>
+  </data>
+  <data name="PhoneRequired" xml:space="preserve">
+    <value>Phone cannot be empty.</value>
+  </data>
+  <data name="PhoneInvalid" xml:space="preserve">
+    <value>Phone may contain only digits, spaces and a leading + (7–20 characters).</value>
+  </data>
+  <data name="IdentityNumberRequired" xml:space="preserve">
+    <value>Identity number cannot be empty.</value>
+  </data>
+  <data name="TaxNumberRequired" xml:space="preserve">
+    <value>Tax number cannot be empty.</value>
+  </data>
+  <data name="TaxOfficeRequired" xml:space="preserve">
+    <value>Tax office cannot be empty.</value>
+  </data>
+  <data name="TaxOfficeMaxLength" xml:space="preserve">
+    <value>Tax office can be at most 100 characters.</value>
+  </data>
+  <data name="CustomerEmailMaxLength" xml:space="preserve">
+    <value>Email can be at most 100 characters.</value>
+  </data>
+  <data name="TaxIdFormat_TR_Individual" xml:space="preserve">
+    <value>Turkish ID number (TCKN) must be 11 digits and cannot start with 0.</value>
+  </data>
+  <data name="TaxIdFormat_TR_Corporate" xml:space="preserve">
+    <value>Turkish tax number (VKN) must be 10 digits.</value>
+  </data>
+  <data name="TaxIdFormat_BR_Individual" xml:space="preserve">
+    <value>CPF must be 11 digits.</value>
+  </data>
+  <data name="TaxIdFormat_BR_Corporate" xml:space="preserve">
+    <value>CNPJ must be 14 digits.</value>
+  </data>
+  <data name="TaxIdFormat_MT_Individual" xml:space="preserve">
+    <value>Maltese ID card number must be 1–7 digits followed by a letter (e.g. 123456M).</value>
+  </data>
+  <data name="TaxIdFormat_MT_Corporate" xml:space="preserve">
+    <value>Maltese VAT number must be 8 digits.</value>
+  </data>
+  <data name="TaxIdFormat_Other" xml:space="preserve">
+    <value>The number must be 5–20 letters or digits.</value>
+  </data>
+  <data name="TaxNumberTaken" xml:space="preserve">
+    <value>A customer with this identity / tax number already exists in this country.</value>
+  </data>
+  <data name="CustomerCode" xml:space="preserve">
+    <value>Customer code</value>
+  </data>
+  <data name="AccountStatus" xml:space="preserve">
+    <value>Account status</value>
+  </data>
+  <data name="AccountStatus_Active" xml:space="preserve">
+    <value>Active</value>
+  </data>
+  <data name="AccountStatus_Suspended" xml:space="preserve">
+    <value>Suspended</value>
+  </data>
+  <data name="AccountStatus_PendingApproval" xml:space="preserve">
+    <value>Pending approval</value>
+  </data>
+  <data name="AccountStatus_Closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="PendingApprovalNotice" xml:space="preserve">
+    <value>Your corporate account is awaiting administrator approval.</value>
+  </data>
+  <data name="RegistrationCompleted" xml:space="preserve">
+    <value>Your account has been created. Welcome!</value>
+  </data>
+  <data name="Pagination_Previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Pagination_Next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Pagination_PageOf" xml:space="preserve">
+    <value>Page {0} of {1}</value>
+  </data>
+  <data name="Pagination_Range" xml:space="preserve">
+    <value>{0}–{1} of {2} records</value>
+  </data>
+  <data name="NewBranch" xml:space="preserve">
+    <value>New branch</value>
+  </data>
+  <data name="BranchName" xml:space="preserve">
+    <value>Branch name</value>
+  </data>
+  <data name="BranchCode" xml:space="preserve">
+    <value>Facility code</value>
+  </data>
+  <data name="BranchType" xml:space="preserve">
+    <value>Facility type</value>
+  </data>
+  <data name="Capacity" xml:space="preserve">
+    <value>Capacity</value>
+  </data>
+  <data name="DockCount" xml:space="preserve">
+    <value>Number of loading docks</value>
+  </data>
+  <data name="SearchBranch" xml:space="preserve">
+    <value>Search branch, code or city</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>Select a city</value>
+  </data>
+  <data name="BranchType_Branch" xml:space="preserve">
+    <value>Branch</value>
+  </data>
+  <data name="BranchType_TransferCenter" xml:space="preserve">
+    <value>Transfer centre</value>
+  </data>
+  <data name="BranchType_MainWarehouse" xml:space="preserve">
+    <value>Main warehouse</value>
+  </data>
+  <data name="BranchType_LogisticsPark" xml:space="preserve">
+    <value>Logistics park</value>
+  </data>
+  <data name="TransferCenters" xml:space="preserve"><value>Transfer centres</value></data>
+  <data name="NewTransferCenter" xml:space="preserve"><value>New transfer centre</value></data>
+  <data name="SearchTransferCenter" xml:space="preserve"><value>Search transfer centre, code or city</value></data>
+  <data name="FieldRequired" xml:space="preserve"><value>This field is required.</value></data>
+  <!-- ═══ 17 · Personel (TALP-50): liste · form · görev ve araç türleri · giriş hesabı ═══ -->
+  <data name="Employees" xml:space="preserve"><value>Employees</value></data>
+  <data name="NewEmployee" xml:space="preserve"><value>New employee</value></data>
+  <data name="SearchEmployee" xml:space="preserve"><value>Search name, surname or phone</value></data>
+  <data name="JobType" xml:space="preserve"><value>Job</value></data>
+  <data name="JobType_Courier" xml:space="preserve"><value>Courier</value></data>
+  <data name="JobType_BranchStaff" xml:space="preserve"><value>Branch staff</value></data>
+  <data name="JobType_WarehouseStaff" xml:space="preserve"><value>Warehouse staff</value></data>
+  <data name="JobType_Driver" xml:space="preserve"><value>Driver</value></data>
+  <data name="SelectBranch" xml:space="preserve"><value>Select a facility</value></data>
+  <data name="CourierInfo" xml:space="preserve"><value>Courier details</value></data>
+  <data name="VehicleType" xml:space="preserve"><value>Vehicle type</value></data>
+  <data name="VehicleType_Motorcycle" xml:space="preserve"><value>Motorcycle</value></data>
+  <data name="VehicleType_Van" xml:space="preserve"><value>Van</value></data>
+  <data name="VehicleType_Truck" xml:space="preserve"><value>Light truck</value></data>
+  <data name="VehiclePlate" xml:space="preserve"><value>Licence plate</value></data>
+  <data name="Region" xml:space="preserve"><value>Delivery area</value></data>
+  <data name="Rating" xml:space="preserve"><value>Rating</value></data>
+  <data name="LoginAccount" xml:space="preserve"><value>Login account</value></data>
+  <data name="CreateLoginAccount" xml:space="preserve"><value>Create a login account for this employee</value></data>
+  <data name="HasLoginAccount" xml:space="preserve"><value>Has a login account</value></data>
+  <data name="ConfirmDeactivateEmployee" xml:space="preserve"><value>This employee will be deactivated; their login account, if any, will be locked too. Are you sure?</value></data>
 </root>

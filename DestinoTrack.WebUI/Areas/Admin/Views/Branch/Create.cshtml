@@ -1,0 +1,108 @@
+﻿@model CreateBranchDto
+@{
+    // Transfer merkezi ekranında tür kilitli: tür kutusu yerine gizli alan, başlık değişir
+    var locked = ViewBag.LockedType as BranchType?;
+    var title = locked == BranchType.TransferCenter ? L["NewTransferCenter"] : L["NewBranch"];
+    ViewData["Title"] = title.Value;
+}
+
+<div class="mx-auto max-w-3xl">
+    <!-- Başlık -->
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">add_business</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["Menu_BranchesWarehouses"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@title</h1>
+        </div>
+    </div>
+
+    <div class="m3-card p-6 sm:p-8">
+        <form asp-action="Create" method="post" class="flex flex-col gap-5">
+            <div asp-validation-summary="ModelOnly" class="field-error"></div>
+
+            <div>
+                <label asp-for="Name" class="field-label">@L["BranchName"]</label>
+                <input asp-for="Name" class="field-input" autocomplete="off" />
+                <span asp-validation-for="Name" class="field-error"></span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="Code" class="field-label">@L["BranchCode"]</label>
+                    <input asp-for="Code" class="field-input" autocomplete="off" placeholder="IST-01" />
+                    <span asp-validation-for="Code" class="field-error"></span>
+                </div>
+                @if (locked is null)
+                {
+                    <div>
+                        <label asp-for="BranchType" class="field-label">@L["BranchType"]</label>
+                        <select asp-for="BranchType" class="field-input cursor-pointer">
+                            @foreach (var type in Enum.GetValues<BranchType>())
+                            {
+                                <option value="@type">@L["BranchType_" + type]</option>
+                            }
+                        </select>
+                        <span asp-validation-for="BranchType" class="field-error"></span>
+                    </div>
+                }
+                else
+                {
+                    @* Tür kilitli: formda görünmez, gizli alanla taşınır (sunucu yine de kendi türünü yazar) *@
+                    <input type="hidden" asp-for="BranchType" />
+                }
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    @* Kayda yazılmaz; yalnızca şehir listesini süzmek için *@
+                    <label class="field-label">@L["Country"]</label>
+                    <select id="countrySelect" asp-items="ViewBag.Countries" class="field-input cursor-pointer">
+                        <option value="">— @L["SelectCountry"] —</option>
+                    </select>
+                </div>
+                <div>
+                    <label asp-for="CityId" class="field-label">@L["CityName"]</label>
+                    <select asp-for="CityId" data-cascade-from="countrySelect" class="field-input cursor-pointer">
+                        <option value="">— @L["SelectCity"] —</option>
+                        @foreach (var city in (List<CityLookupDto>)ViewBag.Cities)
+                        {
+                            <option value="@city.Id" data-parent="@city.CountryId">@city.Name</option>
+                        }
+                    </select>
+                    <span asp-validation-for="CityId" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="Capacity" class="field-label">@L["Capacity"]</label>
+                    <input asp-for="Capacity" class="field-input" />
+                    <span asp-validation-for="Capacity" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="DockCount" class="field-label">@L["DockCount"]</label>
+                    <input asp-for="DockCount" class="field-input" />
+                    <span asp-validation-for="DockCount" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button type="submit" class="btn-filled">
+                    <span class="material-symbols-outlined text-[20px]">save</span>
+                    <span>@L["Save"]</span>
+                </button>
+                <a asp-action="Index" class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    <span>@L["Cancel"]</span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <partial name="_CascadeSelectScript" />
+}
