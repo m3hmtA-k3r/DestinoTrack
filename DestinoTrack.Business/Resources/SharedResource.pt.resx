@@ -621,9 +621,6 @@
   <data name="Branch" xml:space="preserve">
     <value>Filial</value>
   </data>
-  <data name="BranchComingSoon" xml:space="preserve">
-    <value>A seleção de filial ficará disponível quando as filiais forem cadastradas (fase 4).</value>
-  </data>
   <data name="Status" xml:space="preserve">
     <value>Status</value>
   </data>
@@ -911,4 +908,7 @@
   <data name="CreateLoginAccount" xml:space="preserve"><value>Criar uma conta de acesso para este funcionário</value></data>
   <data name="HasLoginAccount" xml:space="preserve"><value>Possui conta de acesso</value></data>
   <data name="ConfirmDeactivateEmployee" xml:space="preserve"><value>Este funcionário será desativado; a conta de acesso, se houver, também será bloqueada. Tem certeza?</value></data>
+  <data name="TotalCapacity" xml:space="preserve"><value>Capacidade total</value></data>
+  <data name="TotalDockCount" xml:space="preserve"><value>Total de docas</value></data>
+  <data name="BranchLockedByEmployee" xml:space="preserve"><value>A filial é gerenciada na tela de Funcionários.</value></data>
 </root>

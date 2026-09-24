@@ -14,6 +14,9 @@ namespace DestinoTrack.Business.Services.Branches
 
         // Formlardaki tesis açılır listesi (sayfalama yok)
         Task<List<BranchLookupDto>> GetLookupAsync();
+        // VC kartı için: ekranın kapsamındaki toplamlar — null = tüm tesisler
+        Task<BranchSummaryDto> GetSummaryAsync(BranchType? branchType);
+
 
         Task<UpdateBranchDto> GetByIdAsync(Guid id);
         Task CreateAsync(CreateBranchDto createBranchDto);

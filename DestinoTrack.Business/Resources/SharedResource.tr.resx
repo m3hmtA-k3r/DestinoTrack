@@ -621,9 +621,6 @@
   <data name="Branch" xml:space="preserve">
     <value>Şube</value>
   </data>
-  <data name="BranchComingSoon" xml:space="preserve">
-    <value>Şube seçimi, şubeler eklendiğinde (4. aşama) açılacak.</value>
-  </data>
   <data name="Status" xml:space="preserve">
     <value>Durum</value>
   </data>
@@ -911,4 +908,7 @@
   <data name="CreateLoginAccount" xml:space="preserve"><value>Bu personel için giriş hesabı aç</value></data>
   <data name="HasLoginAccount" xml:space="preserve"><value>Giriş hesabı var</value></data>
   <data name="ConfirmDeactivateEmployee" xml:space="preserve"><value>Bu personel pasifleştirilecek; giriş hesabı varsa o da kilitlenecek. Emin misin?</value></data>
+  <data name="TotalCapacity" xml:space="preserve"><value>Toplam Kapasite</value></data>
+  <data name="TotalDockCount" xml:space="preserve"><value>Toplam Rampa</value></data>
+  <data name="BranchLockedByEmployee" xml:space="preserve"><value>Şubesi Personel ekranından değişir.</value></data>
 </root>

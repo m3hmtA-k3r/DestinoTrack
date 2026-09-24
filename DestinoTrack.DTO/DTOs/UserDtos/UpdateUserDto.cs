@@ -9,7 +9,12 @@
         public string Role { get; set; }
 
         public Guid? CountryId { get; set; }   // Manager için zorunlu
-        public Guid? BranchId { get; set; }    // Personel / Courier — şubeler  gelene kadar pasif
+        public Guid? BranchId { get; set; }    // Personel / Courier — atanmamış olabilir
+
+
+        // hesabın Employee kaydı varsa şube buradan değiştirilemez — form kutuyu kilitler, servis gelen değeri yok sayar
+        public bool HasEmployeeRecord { get; set; }
+
 
         // ikisi de boşsa şifre değişmez; doluysa kuralıyla yeni şifre atanır
         public string? NewPassword { get; set; }

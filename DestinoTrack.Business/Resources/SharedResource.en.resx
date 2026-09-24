@@ -621,9 +621,6 @@
   <data name="Branch" xml:space="preserve">
     <value>Branch</value>
   </data>
-  <data name="BranchComingSoon" xml:space="preserve">
-    <value>Branch selection will be available once branches are added (phase 4).</value>
-  </data>
   <data name="Status" xml:space="preserve">
     <value>Status</value>
   </data>
@@ -911,4 +908,7 @@
   <data name="CreateLoginAccount" xml:space="preserve"><value>Create a login account for this employee</value></data>
   <data name="HasLoginAccount" xml:space="preserve"><value>Has a login account</value></data>
   <data name="ConfirmDeactivateEmployee" xml:space="preserve"><value>This employee will be deactivated; their login account, if any, will be locked too. Are you sure?</value></data>
+  <data name="TotalCapacity" xml:space="preserve"><value>Total capacity</value></data>
+  <data name="TotalDockCount" xml:space="preserve"><value>Total loading docks</value></data>
+  <data name="BranchLockedByEmployee" xml:space="preserve"><value>The branch is managed on the Employees screen.</value></data>
 </root>

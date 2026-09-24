@@ -1,0 +1,47 @@
+﻿@model BranchSummaryDto
+
+@* VC BranchSummary · Default — şube ve transfer merkezi ekranlarının üstünde 
+   Tür çiplerindeki sayıları tekrar etmez: kadro ve toplam hacim gösterir. *@
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+
+    <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shrink-0">
+            <span class="material-symbols-outlined text-[20px]">badge</span>
+        </div>
+        <div class="min-w-0">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.EmployeeCount.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["Employees"]</div>
+        </div>
+    </div>
+
+    <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shrink-0">
+            <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+        </div>
+        <div class="min-w-0">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.CourierCount.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["Couriers"]</div>
+        </div>
+    </div>
+
+    <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shrink-0">
+            <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+        </div>
+        <div class="min-w-0">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.TotalCapacity.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["TotalCapacity"]</div>
+        </div>
+    </div>
+
+    <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shrink-0">
+            <span class="material-symbols-outlined text-[20px]">dock</span>
+        </div>
+        <div class="min-w-0">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.TotalDockCount.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["TotalDockCount"]</div>
+        </div>
+    </div>
+
+</div>

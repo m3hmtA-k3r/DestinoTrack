@@ -14,5 +14,9 @@ namespace DestinoTrack.DataAccess.Repositories.Employees
 
         // Silme öncesi: kurye olarak taşıdığı kargo ya da tahsil ettiği ödeme var mı
         Task<bool> HasDependentsAsync(Guid employeeId);
+
+        //hesabın personel kaydı var mı — varsa şubesi kullanıcı ekranından değil Personel ekranından yönetilir
+        Task<bool> HasEmployeeAsync(Guid appUserId);
+
     }
 }

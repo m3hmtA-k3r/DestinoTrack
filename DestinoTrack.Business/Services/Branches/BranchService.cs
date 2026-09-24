@@ -119,5 +119,20 @@ namespace DestinoTrack.Business.Services.Branches
 
             await _branchRepository.DeleteAsync(branch);
         }
+
+        public async Task<BranchSummaryDto> GetSummaryAsync(BranchType? branchType)
+        {
+            var (employeeCount, courierCount, totalCapacity, totalDockCount) = await _branchRepository.GetSummaryAsync(branchType);
+
+            return new BranchSummaryDto
+            {
+                BranchType = branchType,
+                EmployeeCount = employeeCount,
+                CourierCount = courierCount,
+                TotalCapacity = totalCapacity,
+                TotalDockCount = totalDockCount
+            };
+        }
+
     }
 }

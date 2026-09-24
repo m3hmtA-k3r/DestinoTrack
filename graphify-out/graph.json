@@ -1114,6 +1114,21 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
+      "label": ".GetSummaryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L123",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Branches",
+        "scope_chain": [
+          "s358"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_branches_branchservice_cs_branch",
       "label": "Branch",
       "file_type": "code",
@@ -1215,11 +1230,26 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getsummaryasync",
+      "label": ".GetSummaryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
+      "source_location": "L18",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Branches",
+        "scope_chain": [
+          "s126"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
       "label": ".GetByIdAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L18",
+      "source_location": "L21",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Branches",
         "scope_chain": [
@@ -1242,7 +1272,7 @@
       "label": ".CreateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L19",
+      "source_location": "L22",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Branches",
         "scope_chain": [
@@ -1257,7 +1287,7 @@
       "label": ".UpdateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L20",
+      "source_location": "L23",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Branches",
         "scope_chain": [
@@ -1272,7 +1302,7 @@
       "label": ".DeleteAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L21",
+      "source_location": "L24",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Branches",
         "scope_chain": [
@@ -2667,11 +2697,11 @@
       "label": "UserService",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2731,11 +2761,11 @@
       "label": ".GetPagedAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L20",
+      "source_location": "L25",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2754,11 +2784,11 @@
       "label": ".GetRoleCountsAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L85",
+      "source_location": "L90",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2777,11 +2807,11 @@
       "label": ".GetByIdAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L93",
+      "source_location": "L98",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2800,11 +2830,11 @@
       "label": ".CreateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L109",
+      "source_location": "L115",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2823,11 +2853,11 @@
       "label": ".UpdateAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L147",
+      "source_location": "L157",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2838,11 +2868,11 @@
       "label": ".SetActiveAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L219",
+      "source_location": "L236",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2853,11 +2883,11 @@
       "label": ".GetStaffRolesAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L258",
+      "source_location": "L275",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2868,26 +2898,41 @@
       "label": ".FindStaffAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L272",
+      "source_location": "L289",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
       "_origin": "ast"
     },
     {
-      "id": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
-      "label": ".CheckRoleAndCountryAsync()",
+      "id": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
+      "label": ".CheckRoleAndScopeAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L288",
+      "source_location": "L305",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_isbranchrole",
+      "label": ".IsBranchRole()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L333",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Users",
+        "scope_chain": [
+          "s483"
         ]
       },
       "_callable": true,
@@ -2898,11 +2943,11 @@
       "label": ".IsLastActiveAdminAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L311",
+      "source_location": "L337",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2913,11 +2958,11 @@
       "label": ".GetLockedOutMessageAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L317",
+      "source_location": "L343",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -2928,11 +2973,11 @@
       "label": ".Fail()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L334",
+      "source_location": "L360",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Users",
         "scope_chain": [
-          "s374"
+          "s483"
         ]
       },
       "_callable": true,
@@ -4188,6 +4233,108 @@
         "namespace": "DestinoTrack.DTO.DTOs.BranchDtos",
         "scope_chain": [
           "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "label": "BranchSummaryDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "label": "BranchSummaryDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.BranchDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_branchtype",
+      "label": "BranchType",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.BranchDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto_cs_branchtype",
+      "label": "BranchType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_employeecount",
+      "label": "EmployeeCount",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.BranchDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_couriercount",
+      "label": "CourierCount",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.BranchDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_totalcapacity",
+      "label": "TotalCapacity",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L14",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.BranchDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_totaldockcount",
+      "label": "TotalDockCount",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.BranchDtos",
+        "scope_chain": [
+          "s48"
         ]
       },
       "_origin": "ast"
@@ -6901,11 +7048,25 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dto_dtos_userdtos_updateuserdto_destinotrack_dto_dtos_userdtos_updateuserdto_hasemployeerecord",
+      "label": "HasEmployeeRecord",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/UserDtos/UpdateUserDto.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.UserDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dto_dtos_userdtos_updateuserdto_destinotrack_dto_dtos_userdtos_updateuserdto_newpassword",
       "label": "NewPassword",
       "file_type": "code",
       "source_file": "DestinoTrack.DTO/DTOs/UserDtos/UpdateUserDto.cs",
-      "source_location": "L15",
+      "source_location": "L20",
       "metadata": {
         "namespace": "DestinoTrack.DTO.DTOs.UserDtos",
         "scope_chain": [
@@ -6919,7 +7080,7 @@
       "label": "ConfirmNewPassword",
       "file_type": "code",
       "source_file": "DestinoTrack.DTO/DTOs/UserDtos/UpdateUserDto.cs",
-      "source_location": "L16",
+      "source_location": "L21",
       "metadata": {
         "namespace": "DestinoTrack.DTO.DTOs.UserDtos",
         "scope_chain": [
@@ -8787,6 +8948,53 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "label": ".GetSummaryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Branches",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_employeecount",
+      "label": "EmployeeCount",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_couriercount",
+      "label": "CourierCount",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_totalcapacity",
+      "label": "TotalCapacity",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_totaldockcount",
+      "label": "TotalDockCount",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dataaccess_repositories_branches_ibranchrepository",
       "label": "IBranchRepository.cs",
       "file_type": "code",
@@ -8947,6 +9155,53 @@
         ]
       },
       "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "label": ".GetSummaryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Branches",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_employeecount",
+      "label": "EmployeeCount",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_couriercount",
+      "label": "CourierCount",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_totalcapacity",
+      "label": "TotalCapacity",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_totaldockcount",
+      "label": "TotalDockCount",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -9986,6 +10241,21 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dataaccess_repositories_employees_employeerepository_destinotrack_dataaccess_repositories_employees_employeerepository_hasemployeeasync",
+      "label": ".HasEmployeeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/EmployeeRepository.cs",
+      "source_location": "L60",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Employees",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dataaccess_repositories_employees_iemployeerepository",
       "label": "IEmployeeRepository.cs",
       "file_type": "code",
@@ -10100,6 +10370,21 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
+      "label": ".HasEmployeeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/IEmployeeRepository.cs",
+      "source_location": "L19",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.Employees",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
       "_origin": "ast"
     },
     {
@@ -15105,11 +15390,11 @@
       "label": "UserController",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15129,11 +15414,11 @@
       "label": "CurrentUserId",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L18",
+      "source_location": "L21",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_origin": "ast"
@@ -15151,11 +15436,11 @@
       "label": ".Index()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L24",
+      "source_location": "L27",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15182,11 +15467,11 @@
       "label": ".Create()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L41",
+      "source_location": "L44",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15213,11 +15498,11 @@
       "label": ".Update()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L68",
+      "source_location": "L71",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15228,11 +15513,11 @@
       "label": ".SetActive()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L112",
+      "source_location": "L115",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15243,11 +15528,11 @@
       "label": ".AddErrors()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L133",
+      "source_location": "L136",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15266,11 +15551,11 @@
       "label": ".Filter()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L156",
+      "source_location": "L159",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15281,11 +15566,11 @@
       "label": ".LoadFormListsAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L184",
+      "source_location": "L187",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
         "scope_chain": [
-          "s484"
+          "s532"
         ]
       },
       "_callable": true,
@@ -15988,6 +16273,14 @@
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Employee/Update.cshtml",
       "source_location": "L82",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_shared_components_branchsummary_default",
+      "label": "Default.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/Shared/Components/BranchSummary/Default.cshtml",
+      "source_location": null,
       "_origin": "ast"
     },
     {
@@ -17370,6 +17663,61 @@
     },
     {
       "id": "destinotrack_webui_viewcomponents_adminusercardviewcomponent_cs_iviewcomponentresult",
+      "label": "IViewComponentResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "label": "BranchSummaryViewComponent.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "label": "BranchSummaryViewComponent",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.ViewComponents",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent_invokeasync",
+      "label": ".InvokeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.ViewComponents",
+        "scope_chain": [
+          "s129"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_cs_iviewcomponentresult",
       "label": "IViewComponentResult",
       "file_type": "code",
       "source_file": "",
@@ -20147,6 +20495,58 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice",
+      "target": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
+      "target": "destinotrack_business_services_branches_branchservice_cs_branchtype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "BranchType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
+      "target": "destinotrack_business_services_branches_branchservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L123",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "BranchSummaryDto"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getpagedasync",
       "target": "destinotrack_dto_dtos_common_pagedresult_destinotrack_dto_dtos_common_pagedresult",
       "relation": "calls",
@@ -20216,6 +20616,17 @@
       "metadata": {
         "ref_token": "Branch"
       },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L127",
+      "weight": 1.0,
       "_origin": "ast"
     },
     {
@@ -20458,7 +20869,7 @@
     },
     {
       "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice",
-      "target": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
+      "target": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getsummaryasync",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
@@ -20467,8 +20878,8 @@
       "_origin": "ast"
     },
     {
-      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
-      "target": "destinotrack_business_services_branches_ibranchservice_cs_guid",
+      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getsummaryasync",
+      "target": "destinotrack_business_services_branches_ibranchservice_cs_branchtype",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
@@ -20476,12 +20887,12 @@
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
-        "ref_token": "Guid"
+        "ref_token": "BranchType"
       },
       "_origin": "ast"
     },
     {
-      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
+      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getsummaryasync",
       "target": "destinotrack_business_services_branches_ibranchservice_cs_task",
       "relation": "references",
       "confidence": "EXTRACTED",
@@ -20495,12 +20906,64 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getsummaryasync",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "BranchSummaryDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice",
+      "target": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
+      "target": "destinotrack_business_services_branches_ibranchservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
+      "target": "destinotrack_business_services_branches_ibranchservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getbyidasync",
       "target": "destinotrack_dto_dtos_branchdtos_updatebranchdto_destinotrack_dto_dtos_branchdtos_updatebranchdto",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -20514,7 +20977,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -20524,7 +20987,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -20538,7 +21001,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -20552,7 +21015,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L20",
+      "source_location": "L23",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -20562,7 +21025,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L20",
+      "source_location": "L23",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -20576,7 +21039,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L20",
+      "source_location": "L23",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -20590,7 +21053,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L21",
+      "source_location": "L24",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -20600,7 +21063,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L21",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -20614,7 +21077,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Branches/IBranchService.cs",
-      "source_location": "L21",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24580,12 +25043,44 @@
     },
     {
       "source": "destinotrack_business_services_users_userservice",
-      "target": "csharp_namespace:4bf53c97117b8a03",
+      "target": "csharp_namespace:90f4f8d2f8b68170",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
       "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.Branches",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice",
+      "target": "csharp_namespace:527aaffde57969a2",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.Employees",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice",
+      "target": "csharp_namespace:4bf53c97117b8a03",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L3",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24601,7 +25096,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L2",
+      "source_location": "L4",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24617,7 +25112,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L3",
+      "source_location": "L5",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24633,7 +25128,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L4",
+      "source_location": "L6",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24649,7 +25144,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L5",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24665,7 +25160,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L6",
+      "source_location": "L8",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24681,7 +25176,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24697,7 +25192,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L8",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24713,7 +25208,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L9",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -24728,7 +25223,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24738,7 +25233,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24748,7 +25243,7 @@
       "relation": "implements",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "metadata": {
         "ref_token": "IUserService"
@@ -24761,7 +25256,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -24775,7 +25270,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -24789,7 +25284,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -24799,11 +25294,39 @@
     },
     {
       "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IBranchRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice",
+      "target": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IEmployeeRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice",
       "target": "destinotrack_business_services_users_userservice_cs_identityerrordescriber",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L15",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -24817,7 +25340,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L16",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -24831,7 +25354,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L16",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -24845,7 +25368,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L19",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -24859,7 +25382,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L20",
+      "source_location": "L25",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24869,7 +25392,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L20",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24883,7 +25406,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L20",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -24897,7 +25420,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L20",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -24911,7 +25434,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L85",
+      "source_location": "L90",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24921,7 +25444,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L85",
+      "source_location": "L90",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24935,7 +25458,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L85",
+      "source_location": "L90",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -24949,7 +25472,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L93",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -24959,7 +25482,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L93",
+      "source_location": "L98",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -24973,7 +25496,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L93",
+      "source_location": "L98",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -24987,7 +25510,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L93",
+      "source_location": "L98",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25001,7 +25524,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L109",
+      "source_location": "L115",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25011,7 +25534,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L109",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -25025,7 +25548,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L109",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25039,7 +25562,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L109",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25053,7 +25576,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L147",
+      "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25063,7 +25586,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L147",
+      "source_location": "L157",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -25077,7 +25600,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L147",
+      "source_location": "L157",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -25091,7 +25614,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L147",
+      "source_location": "L157",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25105,7 +25628,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L147",
+      "source_location": "L157",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25119,7 +25642,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L219",
+      "source_location": "L236",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25129,7 +25652,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L219",
+      "source_location": "L236",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -25143,7 +25666,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L219",
+      "source_location": "L236",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25157,7 +25680,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L219",
+      "source_location": "L236",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25171,7 +25694,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L258",
+      "source_location": "L275",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25181,7 +25704,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L258",
+      "source_location": "L275",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25195,7 +25718,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L258",
+      "source_location": "L275",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25209,7 +25732,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L258",
+      "source_location": "L275",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25223,7 +25746,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L272",
+      "source_location": "L289",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25233,7 +25756,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L272",
+      "source_location": "L289",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -25247,7 +25770,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L272",
+      "source_location": "L289",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25261,7 +25784,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L272",
+      "source_location": "L289",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25275,7 +25798,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L272",
+      "source_location": "L289",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25289,7 +25812,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L272",
+      "source_location": "L289",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25299,21 +25822,21 @@
     },
     {
       "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice",
-      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
+      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L288",
+      "source_location": "L305",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
       "target": "destinotrack_business_services_users_userservice_cs_guid",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L288",
+      "source_location": "L305",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -25322,12 +25845,12 @@
       "_origin": "ast"
     },
     {
-      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
       "target": "destinotrack_business_services_users_userservice_cs_task",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L288",
+      "source_location": "L305",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25336,12 +25859,12 @@
       "_origin": "ast"
     },
     {
-      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
       "target": "destinotrack_business_services_users_userservice_cs_identityresult",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L288",
+      "source_location": "L305",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -25351,11 +25874,21 @@
     },
     {
       "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice",
+      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_isbranchrole",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L333",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice",
       "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_islastactiveadminasync",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L311",
+      "source_location": "L337",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25365,7 +25898,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L311",
+      "source_location": "L337",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -25379,7 +25912,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L311",
+      "source_location": "L337",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25393,7 +25926,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L317",
+      "source_location": "L343",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25403,7 +25936,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L317",
+      "source_location": "L343",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25417,7 +25950,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L334",
+      "source_location": "L360",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25427,7 +25960,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L334",
+      "source_location": "L360",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -25442,7 +25975,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L24",
+      "source_location": "L29",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25453,7 +25986,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L65",
+      "source_location": "L70",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25464,7 +25997,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L67",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25475,7 +26008,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L87",
+      "source_location": "L92",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25486,7 +26019,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L95",
+      "source_location": "L100",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25497,18 +26030,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L97",
+      "source_location": "L102",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_createasync",
-      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
+      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L111",
+      "source_location": "L117",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25519,7 +26052,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L118",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_createasync",
+      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_isbranchrole",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L135",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25530,18 +26074,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L149",
+      "source_location": "L159",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
       "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_updateasync",
-      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
+      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L151",
+      "source_location": "L161",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25552,7 +26096,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L162",
+      "source_location": "L173",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25563,7 +26107,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L164",
+      "source_location": "L175",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_updateasync",
+      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_isbranchrole",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L211",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25574,7 +26129,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L221",
+      "source_location": "L238",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25585,7 +26140,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L228",
+      "source_location": "L245",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25596,7 +26151,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L230",
+      "source_location": "L247",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -25607,18 +26162,29 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L260",
+      "source_location": "L277",
       "weight": 1.0,
       "_origin": "ast"
     },
     {
-      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandcountryasync",
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
       "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_fail",
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L292",
+      "source_location": "L309",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_checkroleandscopeasync",
+      "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_isbranchrole",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L325",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -27968,6 +28534,111 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchLookupDto.cs",
       "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "csharp_namespace:9f9785f0da1cef69",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_branchtype",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_cs_branchtype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "BranchType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_employeecount",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_couriercount",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_totalcapacity",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto",
+      "target": "destinotrack_dto_dtos_branchdtos_branchsummarydto_destinotrack_dto_dtos_branchdtos_branchsummarydto_totaldockcount",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/BranchDtos/BranchSummaryDto.cs",
+      "source_location": "L15",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -30444,11 +31115,22 @@
     },
     {
       "source": "destinotrack_dto_dtos_userdtos_updateuserdto_destinotrack_dto_dtos_userdtos_updateuserdto",
+      "target": "destinotrack_dto_dtos_userdtos_updateuserdto_destinotrack_dto_dtos_userdtos_updateuserdto_hasemployeerecord",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/UserDtos/UpdateUserDto.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_userdtos_updateuserdto_destinotrack_dto_dtos_userdtos_updateuserdto",
       "target": "destinotrack_dto_dtos_userdtos_updateuserdto_destinotrack_dto_dtos_userdtos_updateuserdto_newpassword",
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DTO/DTOs/UserDtos/UpdateUserDto.cs",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -30459,7 +31141,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DTO/DTOs/UserDtos/UpdateUserDto.cs",
-      "source_location": "L16",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -34543,6 +35225,100 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_branchtype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "BranchType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_employeecount",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "EmployeeCount"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_couriercount",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CourierCount"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_totalcapacity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "TotalCapacity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_cs_totaldockcount",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L75",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "TotalDockCount"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository",
       "target": "csharp_namespace:1e60bb1d89ada22c",
       "relation": "imports",
@@ -34922,6 +35698,100 @@
       "context": "generic_arg",
       "metadata": {
         "ref_token": "Branch"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_branchtype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "BranchType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_employeecount",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "EmployeeCount"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_couriercount",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CourierCount"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_totalcapacity",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "TotalCapacity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_cs_totaldockcount",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/IBranchRepository.cs",
+      "source_location": "L24",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "TotalDockCount"
       },
       "_origin": "ast"
     },
@@ -37550,6 +38420,44 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_dataaccess_repositories_employees_employeerepository_destinotrack_dataaccess_repositories_employees_employeerepository",
+      "target": "destinotrack_dataaccess_repositories_employees_employeerepository_destinotrack_dataaccess_repositories_employees_employeerepository_hasemployeeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/EmployeeRepository.cs",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_employees_employeerepository_destinotrack_dataaccess_repositories_employees_employeerepository_hasemployeeasync",
+      "target": "destinotrack_dataaccess_repositories_employees_employeerepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/EmployeeRepository.cs",
+      "source_location": "L60",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_employees_employeerepository_destinotrack_dataaccess_repositories_employees_employeerepository_hasemployeeasync",
+      "target": "destinotrack_dataaccess_repositories_employees_employeerepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/EmployeeRepository.cs",
+      "source_location": "L60",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_dataaccess_repositories_employees_iemployeerepository",
       "target": "csharp_namespace:1e60bb1d89ada22c",
       "relation": "imports",
@@ -37821,6 +38729,44 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Repositories/Employees/IEmployeeRepository.cs",
       "source_location": "L16",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository",
+      "target": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/IEmployeeRepository.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
+      "target": "destinotrack_dataaccess_repositories_employees_iemployeerepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/IEmployeeRepository.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
+      "target": "destinotrack_dataaccess_repositories_employees_iemployeerepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/IEmployeeRepository.cs",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -46187,12 +47133,28 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_usercontroller",
-      "target": "csharp_namespace:54ea4b44f6196729",
+      "target": "csharp_namespace:8ab1b1047ceb77c7",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
       "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Branches",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_usercontroller",
+      "target": "csharp_namespace:54ea4b44f6196729",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
+      "source_location": "L4",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46208,7 +47170,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L4",
+      "source_location": "L5",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46224,7 +47186,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46240,7 +47202,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L6",
+      "source_location": "L7",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46256,7 +47218,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46272,7 +47234,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46288,7 +47250,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46304,7 +47266,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46320,7 +47282,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46336,7 +47298,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -46351,7 +47313,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46361,7 +47323,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46371,7 +47333,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "metadata": {
         "ref_token": "AdminBaseController"
@@ -46384,7 +47346,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -46398,7 +47360,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -46408,11 +47370,25 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_controllers_usercontroller_destinotrack_webui_areas_admin_controllers_usercontroller",
+      "target": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IBranchService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_usercontroller_destinotrack_webui_areas_admin_controllers_usercontroller",
       "target": "destinotrack_webui_areas_admin_controllers_usercontroller_cs_istringlocalizer",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -46426,7 +47402,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -46440,7 +47416,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -46451,7 +47427,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -46465,7 +47441,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46475,7 +47451,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -46489,7 +47465,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -46503,7 +47479,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L41",
+      "source_location": "L44",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46513,7 +47489,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L41",
+      "source_location": "L44",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -46527,7 +47503,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L41",
+      "source_location": "L44",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -46541,7 +47517,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L47",
+      "source_location": "L50",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -46555,7 +47531,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L47",
+      "source_location": "L50",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46569,7 +47545,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L47",
+      "source_location": "L50",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46583,7 +47559,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L68",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46593,7 +47569,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L68",
+      "source_location": "L71",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -46607,7 +47583,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L68",
+      "source_location": "L71",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -46621,7 +47597,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L68",
+      "source_location": "L71",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -46635,7 +47611,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L83",
+      "source_location": "L86",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -46649,7 +47625,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L83",
+      "source_location": "L86",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46663,7 +47639,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L83",
+      "source_location": "L86",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46677,7 +47653,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46687,7 +47663,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -46701,7 +47677,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -46715,7 +47691,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -46729,7 +47705,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46743,7 +47719,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46757,7 +47733,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L133",
+      "source_location": "L136",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46767,7 +47743,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L133",
+      "source_location": "L136",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -46781,7 +47757,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L156",
+      "source_location": "L159",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46791,7 +47767,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L156",
+      "source_location": "L159",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -46805,7 +47781,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L156",
+      "source_location": "L159",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46819,7 +47795,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L156",
+      "source_location": "L159",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -46833,7 +47809,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L184",
+      "source_location": "L187",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46843,7 +47819,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L184",
+      "source_location": "L187",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -46857,7 +47833,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L184",
+      "source_location": "L187",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -46872,7 +47848,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L43",
+      "source_location": "L46",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46883,7 +47859,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L60",
+      "source_location": "L63",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46894,7 +47870,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L73",
+      "source_location": "L76",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -46905,7 +47881,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L98",
+      "source_location": "L101",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -50860,6 +51836,153 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "csharp_namespace:8ab1b1047ceb77c7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Branches",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "microsoft_aspnetcore_mvc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "csharp_namespace:0e7d1a31bb52da18",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "viewcomponent",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "ViewComponent"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IBranchService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent",
+      "target": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent_invokeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent_invokeasync",
+      "target": "destinotrack_entity_entities_enums_branchtype_destinotrack_entity_entities_enums_branchtype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "BranchType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent_invokeasync",
+      "target": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent_invokeasync",
+      "target": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_cs_iviewcomponentresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IViewComponentResult"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_webui_viewcomponents_usermenuviewcomponent",
       "target": "csharp_namespace:3b3406be028aabd6",
       "relation": "imports",
@@ -51448,7 +52571,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L335",
+      "source_location": "L361",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -51532,7 +52655,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L29",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -51544,7 +52667,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L187",
+      "source_location": "L190",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -51681,6 +52804,18 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_cities_cityservice_destinotrack_business_services_cities_cityservice_getpagedasync",
       "target": "destinotrack_dataaccess_repositories_cities_icityrepository_destinotrack_dataaccess_repositories_cities_icityrepository_getpagedwithcountryasync",
       "relation": "calls",
@@ -51797,6 +52932,30 @@
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.Business/Services/Employees/EmployeeService.cs",
       "source_location": "L165",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_getbyidasync",
+      "target": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_updateasync",
+      "target": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
+      "source_location": "L209",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52168,7 +53327,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L31",
+      "source_location": "L34",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52180,7 +53339,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L32",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52192,7 +53351,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L57",
+      "source_location": "L60",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52204,7 +53363,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L72",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52216,7 +53375,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L95",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52228,7 +53387,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L118",
+      "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52240,7 +53399,19 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
-      "source_location": "L190",
+      "source_location": "L193",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_usercontroller_destinotrack_webui_areas_admin_controllers_usercontroller_loadformlistsasync",
+      "target": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getlookupasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/UserController.cs",
+      "source_location": "L197",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52325,6 +53496,18 @@
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/ViewComponents/AdminUserCardViewComponent.cs",
       "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_viewcomponents_branchsummaryviewcomponent_destinotrack_webui_viewcomponents_branchsummaryviewcomponent_invokeasync",
+      "target": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getsummaryasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/ViewComponents/BranchSummaryViewComponent.cs",
+      "source_location": "L14",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52427,6 +53610,18 @@
     {
       "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getlookupasync",
       "target": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getlookupasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Branches/BranchService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_branches_ibranchservice_destinotrack_business_services_branches_ibranchservice_getsummaryasync",
+      "target": "destinotrack_business_services_branches_branchservice_destinotrack_business_services_branches_branchservice_getsummaryasync",
       "relation": "dispatches_to",
       "context": "call",
       "confidence": "INFERRED",
@@ -52744,7 +53939,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52756,7 +53951,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52768,7 +53963,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52780,7 +53975,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52792,7 +53987,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52804,7 +53999,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52816,7 +54011,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Users/UserService.cs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -52871,6 +54066,18 @@
     {
       "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getlookupasync",
       "target": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getlookupasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getsummaryasync",
+      "target": "destinotrack_dataaccess_repositories_branches_branchrepository_destinotrack_dataaccess_repositories_branches_branchrepository_getsummaryasync",
       "relation": "dispatches_to",
       "context": "call",
       "confidence": "INFERRED",
@@ -53027,6 +54234,18 @@
     {
       "source": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasdependentsasync",
       "target": "destinotrack_dataaccess_repositories_employees_employeerepository_destinotrack_dataaccess_repositories_employees_employeerepository_hasdependentsasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/Employees/EmployeeRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
+      "target": "destinotrack_dataaccess_repositories_employees_employeerepository_destinotrack_dataaccess_repositories_employees_employeerepository_hasemployeeasync",
       "relation": "dispatches_to",
       "context": "call",
       "confidence": "INFERRED",

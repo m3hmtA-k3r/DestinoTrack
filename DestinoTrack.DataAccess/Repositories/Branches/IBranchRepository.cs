@@ -20,5 +20,8 @@ namespace DestinoTrack.DataAccess.Repositories.Branches
 
         // Açılır listeler: sayfasız, ada göre sıralı, şehriyle birlikte (ülke şehirden gelir)
         Task<List<Branch>> GetLookupAsync();
+        // VC kartı: kapsamdaki tesis ve personel toplamları (null = tüm tesisler)
+        Task<(int EmployeeCount, int CourierCount, int TotalCapacity, int TotalDockCount)> GetSummaryAsync(BranchType? branchType);
+
     }
 }

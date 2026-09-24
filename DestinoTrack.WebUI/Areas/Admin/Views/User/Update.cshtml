@@ -99,12 +99,25 @@
         </div>
 
         <div data-scope-for="Personel Courier">
-            <label for="BranchPlaceholder" class="field-label">@L["Branch"]</label>
-            <select id="BranchPlaceholder" class="field-input cursor-not-allowed" disabled>
-                <option>@L["BranchNotAssigned"]</option>
-            </select>
-            <p class="field-hint">@L["BranchComingSoon"]</p>
+            <label asp-for="BranchId" class="field-label">@L["Branch"]</label>
+
+            @if (Model.HasEmployeeRecord)
+            {
+                @* bu hesabın personel kaydı var — şubesi tek yerden, Personel ekranından yönetilir *@
+                <select asp-for="BranchId" asp-items="ViewBag.Branches" class="field-input cursor-not-allowed" disabled>
+                    <option value="">— @L["BranchNotAssigned"] —</option>
+                </select>
+                <p class="field-hint">@L["BranchLockedByEmployee"]</p>
+            }
+            else
+            {
+                <select asp-for="BranchId" asp-items="ViewBag.Branches" class="field-input cursor-pointer">
+                    <option value="">— @L["BranchNotAssigned"] —</option>
+                </select>
+                <span asp-validation-for="BranchId" class="field-error"></span>
+            }
         </div>
+
 
         <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
             <a asp-action="Index" class="btn-tonal">@L["Cancel"]</a>

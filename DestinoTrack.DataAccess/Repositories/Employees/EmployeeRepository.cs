@@ -56,5 +56,11 @@ namespace DestinoTrack.DataAccess.Repositories.Employees
             return await _context.Cargos.AnyAsync(c => c.CourierId == employeeId)
                 || await _context.Payments.AnyAsync(p => p.CollectedByCourierId == employeeId);
         }
+
+        public async Task<bool> HasEmployeeAsync(Guid appUserId)
+        {
+            return await _context.Employees.AnyAsync(e => e.AppUserId == appUserId);
+        }
+
     }
 }

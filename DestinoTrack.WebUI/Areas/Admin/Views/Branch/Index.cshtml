@@ -44,6 +44,10 @@
     </div>
 }
 
+@* VC · tesis özeti kartı: kapsamı ekrandan alır filtre değişince değişmez *@
+@await Component.InvokeAsync("BranchSummary", new { branchType = locked })
+
+
 <!-- Filtre: tür çipleri (yalnızca şube ekranında) + arama. İkisi de POST ile gider, seçim oturumda saklanır -->
 <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
 

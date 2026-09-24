@@ -71,5 +71,27 @@ namespace DestinoTrack.DataAccess.Repositories.Branches
                 .OrderBy(b => b.Name)
                 .ToListAsync();
         }
+
+        public async Task<(int EmployeeCount, int CourierCount, int TotalCapacity, int TotalDockCount)> GetSummaryAsync(BranchType? branchType)
+        {
+            IQueryable<Branch> branches = _context.Branches;
+            IQueryable<Employee> employees = _context.Employees.Where(e => e.IsActive);
+
+            // Tür verilmişse yalnız o tür; verilmemişse bütün tesisler 
+            if (branchType.HasValue)
+            {
+                branches = branches.Where(b => b.BranchType == branchType.Value);
+                employees = employees.Where(e => e.Branch.BranchType == branchType.Value);
+            }
+
+            // Kayıt yokken SumAsync 0 döner (EF Core boş toplamı 0'a çevirir)
+            var totalCapacity = await branches.SumAsync(b => b.Capacity);
+            var totalDockCount = await branches.SumAsync(b => b.DockCount);
+            var employeeCount = await employees.CountAsync();
+            var courierCount = await employees.CountAsync(e => e.JobType == EmployeeJobType.Courier);
+
+            return (employeeCount, courierCount, totalCapacity, totalDockCount);
+        }
+
     }
 }

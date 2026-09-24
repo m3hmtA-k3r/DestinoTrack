@@ -1,5 +1,6 @@
 ﻿using DestinoTrack.Business;
 using DestinoTrack.Business.Consts;
+using DestinoTrack.Business.Services.Branches;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Users;
 using DestinoTrack.DTO.DTOs.UserDtos;
@@ -13,7 +14,9 @@ using System.Security.Claims;
 
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
-    public class UserController(IUserService _userService, ICountryService _countryService, IStringLocalizer<SharedResource> _localizer) : AdminBaseController
+    public class UserController(IUserService _userService, ICountryService _countryService,
+                            IBranchService _branchService, IStringLocalizer<SharedResource> _localizer) : AdminBaseController
+
     {    // [Authorize] sayesinde burada her zaman giriş yapmış bir kullanıcı var
         private Guid CurrentUserId => Guid.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
 
@@ -189,6 +192,12 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 
             var countries = await _countryService.GetAllAsync();
             ViewBag.Countries = new SelectList(countries, "Id", "Name");
+
+            // Personel / Kurye rolünde şube seçilebilir — "Ad · Şehir" biçiminde
+            var branches = await _branchService.GetLookupAsync();
+            ViewBag.Branches = branches
+                .Select(b => new SelectListItem { Value = b.Id.ToString(), Text = $"{b.Name} · {b.CityName}" })
+                .ToList();
 
             //kendi kaydını düzenleyen Admin rol alanını kilitli görür
             ViewBag.IsSelf = editingUserId == CurrentUserId;

@@ -1,4 +1,6 @@
-﻿using DestinoTrack.Business.Consts;
+﻿using DestinoTrack.DataAccess.Repositories.Branches;
+using DestinoTrack.DataAccess.Repositories.Employees;
+using DestinoTrack.Business.Consts;
 using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DTO.DTOs.Common;
 using DestinoTrack.DTO.DTOs.UserDtos;
@@ -11,9 +13,12 @@ using System.ComponentModel.DataAnnotations;
 namespace DestinoTrack.Business.Services.Users
 {
     public class UserService(UserManager<AppUser> _userManager,
-                             ICountryRepository _countryRepository,
-                             IdentityErrorDescriber _errorDescriber,
-                             IStringLocalizer<SharedResource> _localizer) : IUserService
+                         ICountryRepository _countryRepository,
+                         IBranchRepository _branchRepository,
+                         IEmployeeRepository _employeeRepository,
+                         IdentityErrorDescriber _errorDescriber,
+                         IStringLocalizer<SharedResource> _localizer) : IUserService
+
     {
         // pasif kullanıcı = süresiz kilitli
         private static readonly DateTimeOffset DeactivatedUntil = DateTimeOffset.MaxValue;
@@ -102,13 +107,15 @@ namespace DestinoTrack.Business.Services.Users
                 Email = user.Email!,
                 Role = role,
                 CountryId = user.CountryId,
-                BranchId = user.BranchId
+                BranchId = user.BranchId,
+                HasEmployeeRecord = await _employeeRepository.HasEmployeeAsync(user.Id)
             };
         }
 
         public async Task<IdentityResult> CreateAsync(CreateUserDto createUserDto)
         {
-            var check = await CheckRoleAndCountryAsync(createUserDto.Role, createUserDto.CountryId);
+            var check = await CheckRoleAndScopeAsync(createUserDto.Role, createUserDto.CountryId, createUserDto.BranchId);
+
             if (!check.Succeeded)
             {
                 return check;
@@ -122,8 +129,11 @@ namespace DestinoTrack.Business.Services.Users
                 EmailConfirmed = true,     // Hesabı Admin açtığı için doğrulanmıs sayılır
                 FirstName = createUserDto.FirstName.Trim(),
                 LastName = createUserDto.LastName.Trim(),
-                CountryId = createUserDto.Role == RoleNames.Manager ? createUserDto.CountryId : null
-                 
+                CountryId = createUserDto.Role == RoleNames.Manager ? createUserDto.CountryId : null,
+
+                // Rol Personel/Kurye değilse şube taşınmaz: Admin'e şube atanmış gibi görünmesin
+                BranchId = IsBranchRole(createUserDto.Role) ? createUserDto.BranchId : null
+
             };
 
             // Şifre ve e-posta tekilliği burada denetlenir — hata varsa kayıt oluşmaz
@@ -148,7 +158,8 @@ namespace DestinoTrack.Business.Services.Users
         {
             var (user, currentRole) = await FindStaffAsync(updateUserDto.Id);
 
-            var check = await CheckRoleAndCountryAsync(updateUserDto.Role, updateUserDto.CountryId);
+            var check = await CheckRoleAndScopeAsync(updateUserDto.Role, updateUserDto.CountryId, updateUserDto.BranchId);
+
             if (!check.Succeeded)
             {
                 return check;
@@ -193,6 +204,12 @@ namespace DestinoTrack.Business.Services.Users
             user.Email = email;
             user.UserName = email;
             user.CountryId = updateUserDto.Role == RoleNames.Manager ? updateUserDto.CountryId : null;
+
+            //personel kaydı olan hesabın şubesi burada değişmez — Personel ekranından yönetilir
+            if (!await _employeeRepository.HasEmployeeAsync(user.Id))
+            {
+                user.BranchId = IsBranchRole(updateUserDto.Role) ? updateUserDto.BranchId : null;
+            }
 
             var result = await _userManager.UpdateAsync(user);
             if (!result.Succeeded)
@@ -285,7 +302,7 @@ namespace DestinoTrack.Business.Services.Users
         }
 
         // Validator'ı atlayan bir çağrıya karşı ikinci kontrol & ülkenin gerçekten var olması
-        private async Task<IdentityResult> CheckRoleAndCountryAsync(string role, Guid? countryId)
+        private async Task<IdentityResult> CheckRoleAndScopeAsync(string role, Guid? countryId, Guid? branchId)
         {
             if (!RoleNames.Staff.Contains(role))
             {
@@ -304,8 +321,17 @@ namespace DestinoTrack.Business.Services.Users
                 }
             }
 
+            // şube yalnız Personel ve Kurye'de anlamlı · zorunlu değil, ama seçilmişse gerçekten var olmalı
+            if (IsBranchRole(role) && branchId != null && await _branchRepository.GetByIdAsync(branchId.Value) == null)
+            {
+                return Fail("BranchNotFound");
+            }
+
             return IdentityResult.Success;
         }
+
+        private static bool IsBranchRole(string role) => role == RoleNames.Personel || role == RoleNames.Courier;
+
 
         // Bu kullanıcı dışında aktif Admin kalmıyor mu?
         private async Task<bool> IsLastActiveAdminAsync(Guid userId)
