@@ -6,6 +6,7 @@ using DestinoTrack.Business.Services.Cities;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Dashboard;
 using DestinoTrack.Business.Services.Employees;
+using DestinoTrack.Business.Services.Pricing;
 using DestinoTrack.Business.Services.Users;
 using DestinoTrack.DataAccess.Context;
 using DestinoTrack.DataAccess.Interceptors;
@@ -13,7 +14,9 @@ using DestinoTrack.DataAccess.Repositories.Abouts;
 using DestinoTrack.DataAccess.Repositories.Addresses;
 using DestinoTrack.DataAccess.Repositories.Branches;
 using DestinoTrack.DataAccess.Repositories.CargoMovements;
+using DestinoTrack.DataAccess.Repositories.CargoPrices;
 using DestinoTrack.DataAccess.Repositories.Cargos;
+using DestinoTrack.DataAccess.Repositories.CargoTypeRates;
 using DestinoTrack.DataAccess.Repositories.Cities;
 using DestinoTrack.DataAccess.Repositories.ContactInfos;
 using DestinoTrack.DataAccess.Repositories.Countries;
@@ -114,6 +117,9 @@ builder.Services.AddScoped<ICountryRepository, CountryRepository>();
 builder.Services.AddScoped<IPaymentsRepository, PaymentsRepository>();
 builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddScoped<ICargoPriceRepository, CargoPriceRepository>();
+builder.Services.AddScoped<ICargoTypeRateRepository, CargoTypeRateRepository>();
+
 
 
 // Servisler
@@ -124,6 +130,10 @@ builder.Services.AddScoped<ICountryService, CountryService>();
 builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<ICargoPricingService, CargoPricingService>();
+builder.Services.AddScoped<IPricingRuleService, PricingRuleService>();
+
+
 
 builder.Services.AddControllersWithViews(options =>
 {

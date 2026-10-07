@@ -1,8 +1,9 @@
-﻿using System.Linq.Expressions;
-using DestinoTrack.Entity.Entities;
+﻿using DestinoTrack.Entity.Entities;
 using DestinoTrack.Entity.Entities.Common;
+using DestinoTrack.Entity.Entities.Enums;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace DestinoTrack.DataAccess.Context
 {
@@ -24,6 +25,9 @@ namespace DestinoTrack.DataAccess.Context
         public DbSet<Customer> Customers { get; set; }
         public DbSet<AuditLog> AuditLogs { get; set; }
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<CargoPrice> CargoPrices { get; set; }
+        public DbSet<CargoTypeRate> CargoTypeRates { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -120,6 +124,15 @@ namespace DestinoTrack.DataAccess.Context
                 .WithMany()
                 .HasForeignKey(e => e.AppUserId)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            // Tarife => çıkış ülkesi: para birimi bu ülkeden okunur
+            // WithMany() boş: Country tarafında tarife listesi tutulmuyor
+            builder.Entity<CargoPrice>()
+                .HasOne(p => p.Country)
+                .WithMany()
+                .HasForeignKey(p => p.CountryId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             // Şube => Şehir
             builder.Entity<Branch>()
@@ -225,6 +238,18 @@ namespace DestinoTrack.DataAccess.Context
                 .IsUnique()
                 .HasFilter("[IsDeleted] = 0");
 
+            // Bir ülkenin bir kademesi için tek tarife olur
+            builder.Entity<CargoPrice>()
+                .HasIndex(p => new { p.CountryId, p.RouteScope })
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
+
+            // Her kargo tipi için tek çarpan satırı
+            builder.Entity<CargoTypeRate>()
+                .HasIndex(r => r.CargoType)
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
+
 
             // --- Para alanları: kuruş hassasiyeti ---
             builder.Entity<Cargo>()
@@ -244,6 +269,17 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(m => m.CreditLimit).HasPrecision(18, 2);
                 e.Property(m => m.CurrentBalance).HasPrecision(18, 2);
             });
+
+            builder.Entity<CargoPrice>(e =>
+            {
+                e.Property(p => p.BasePrice).HasPrecision(18, 2);
+                e.Property(p => p.PricePerDesi).HasPrecision(18, 2);
+            });
+
+            builder.Entity<CargoTypeRate>()
+                .Property(r => r.Multiplier)
+                .HasPrecision(5, 2);          // 1,50 = %150
+
 
 
             // --- Metin uzunlukları ---
@@ -389,6 +425,20 @@ namespace DestinoTrack.DataAccess.Context
                     LanguageCode = "pt",
                     CreatedDate = seedDate
                 });
+
+
+            // Kargo tipi çarpanları: sekiz tip, sekiz satır — Admin ekranından değiştirilebilir
+            builder.Entity<CargoTypeRate>().HasData(
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000001"), CargoType = CargoType.Standard, Multiplier = 1.00m, TransitDaysDelta = 0, CreatedDate = seedDate, IsDeleted = false },
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000002"), CargoType = CargoType.Urgent, Multiplier = 1.50m, TransitDaysDelta = -1, CreatedDate = seedDate, IsDeleted = false },
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000003"), CargoType = CargoType.Fragile, Multiplier = 1.30m, TransitDaysDelta = 0, CreatedDate = seedDate, IsDeleted = false },
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000004"), CargoType = CargoType.Heavy, Multiplier = 1.40m, TransitDaysDelta = 0, CreatedDate = seedDate, IsDeleted = false },
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000005"), CargoType = CargoType.Document, Multiplier = 0.80m, TransitDaysDelta = 0, CreatedDate = seedDate, IsDeleted = false },
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000006"), CargoType = CargoType.ColdChain, Multiplier = 1.80m, TransitDaysDelta = 0, CreatedDate = seedDate, IsDeleted = false },
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000007"), CargoType = CargoType.Valuable, Multiplier = 1.60m, TransitDaysDelta = 0, CreatedDate = seedDate, IsDeleted = false },
+                new CargoTypeRate { Id = Guid.Parse("cc000000-0000-0000-0000-000000000008"), CargoType = CargoType.Oversized, Multiplier = 1.70m, TransitDaysDelta = 1, CreatedDate = seedDate, IsDeleted = false }
+            );
+
 
             // --- Soft delete + tarihler  ---
             foreach (var entityType in builder.Model.GetEntityTypes().Where(t => typeof(BaseEntity).IsAssignableFrom(t.ClrType)).ToList())

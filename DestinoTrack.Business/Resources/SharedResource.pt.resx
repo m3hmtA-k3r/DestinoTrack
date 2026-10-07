@@ -260,6 +260,10 @@
   </data>
   <data name="EmployeeNotFound" xml:space="preserve"><value>Funcionário não encontrado.</value></data>
   <data name="EmployeeHasDependents" xml:space="preserve"><value>Este funcionário possui cargas ou pagamentos vinculados e não pode ser excluído. Você pode desativá-lo.</value></data>
+  <data name="PriceRuleNotFound" xml:space="preserve"><value>Nenhuma tarifa definida para esta rota. Adicione uma na tela de regras de preço.</value></data>
+  <data name="CargoTypeRateNotFound" xml:space="preserve"><value>Nenhuma taxa definida para este tipo de carga.</value></data>
+  <data name="MeasureInvalid" xml:space="preserve"><value>O peso e as dimensões devem ser maiores que zero.</value></data>
+  <data name="PriceRuleExists" xml:space="preserve"><value>Já existe uma tarifa para este país e escopo de rota.</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>Nenhum registro foi informado para atualização.</value>
   </data>
@@ -348,6 +352,11 @@
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>A placa pode ter no máximo 20 caracteres.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>A área de entrega pode ter no máximo 100 caracteres.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>A função da conta deve ser Responsável da filial ou Entregador.</value></data>
+  <data name="RouteScopeInvalid" xml:space="preserve"><value>Um escopo de rota válido deve ser selecionado.</value></data>
+  <data name="PriceRange" xml:space="preserve"><value>O preço deve estar entre 0 e 1.000.000.</value></data>
+  <data name="TransitDaysRange" xml:space="preserve"><value>O prazo de entrega deve estar entre 1 e 90 dias.</value></data>
+  <data name="MultiplierRange" xml:space="preserve"><value>O multiplicador deve estar entre 0,10 e 10,00.</value></data>
+  <data name="TransitDaysDeltaRange" xml:space="preserve"><value>O ajuste de dias deve estar entre -5 e 5.</value></data>
   <data name="Binding_ValueInvalid" xml:space="preserve">
     <value>O valor '{0}' é inválido.</value>
   </data>
@@ -911,4 +920,27 @@
   <data name="TotalCapacity" xml:space="preserve"><value>Capacidade total</value></data>
   <data name="TotalDockCount" xml:space="preserve"><value>Total de docas</value></data>
   <data name="BranchLockedByEmployee" xml:space="preserve"><value>A filial é gerenciada na tela de Funcionários.</value></data>
+  <!-- ═══ 18 · Fiyat kuralları (TALP-58): tarife listesi · güzergâh kademeleri · tip çarpanları ═══ -->
+  <data name="PriceRules" xml:space="preserve"><value>Regras de preço</value></data>
+  <data name="Tariffs" xml:space="preserve"><value>Tarifas</value></data>
+  <data name="NewTariff" xml:space="preserve"><value>Nova tarifa</value></data>
+  <data name="RouteScope" xml:space="preserve"><value>Rota</value></data>
+  <data name="RouteScope_SameCity" xml:space="preserve"><value>Mesma cidade</value></data>
+  <data name="RouteScope_SameCountry" xml:space="preserve"><value>Mesmo país</value></data>
+  <data name="RouteScope_International" xml:space="preserve"><value>Internacional</value></data>
+  <data name="BasePrice" xml:space="preserve"><value>Preço base</value></data>
+  <data name="PricePerDesi" xml:space="preserve"><value>Preço por unidade volumétrica</value></data>
+  <data name="TransitDays" xml:space="preserve"><value>Prazo de entrega (dias)</value></data>
+  <data name="CargoTypeRates" xml:space="preserve"><value>Taxas por tipo de carga</value></data>
+  <data name="TransitDaysDelta" xml:space="preserve"><value>Ajuste de dias</value></data>
+  <data name="CargoType" xml:space="preserve"><value>Tipo de carga</value></data>
+  <data name="Multiplier" xml:space="preserve"><value>Multiplicador</value></data>
+  <data name="CargoType_Standard" xml:space="preserve"><value>Padrão</value></data>
+  <data name="CargoType_Urgent" xml:space="preserve"><value>Urgente</value></data>
+  <data name="CargoType_Fragile" xml:space="preserve"><value>Frágil</value></data>
+  <data name="CargoType_Heavy" xml:space="preserve"><value>Carga pesada</value></data>
+  <data name="CargoType_Document" xml:space="preserve"><value>Documento</value></data>
+  <data name="CargoType_ColdChain" xml:space="preserve"><value>Cadeia de frio</value></data>
+  <data name="CargoType_Valuable" xml:space="preserve"><value>Valioso</value></data>
+  <data name="CargoType_Oversized" xml:space="preserve"><value>Volumoso</value></data>
 </root>

@@ -1,0 +1,78 @@
+﻿
+@model UpdateCargoPriceDto
+@{
+    ViewData["Title"] = L["Update"].Value;
+}
+
+<div class="mx-auto max-w-2xl">
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">payments</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["PriceRules"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["Update"]</h1>
+        </div>
+    </div>
+
+    <div class="m3-card p-6 sm:p-8">
+        <form asp-action="Update" method="post" class="flex flex-col gap-5">
+            <div asp-validation-summary="ModelOnly" class="field-error"></div>
+            <input type="hidden" asp-for="Id" />
+
+
+            <div>
+                <label asp-for="CountryId" class="field-label">@L["Country"]</label>
+                <select asp-for="CountryId" asp-items="ViewBag.Countries" class="field-input cursor-pointer">
+                    <option value="">— @L["SelectCountry"] —</option>
+                </select>
+                <span asp-validation-for="CountryId" class="field-error"></span>
+            </div>
+
+            <div>
+                <label asp-for="RouteScope" class="field-label">@L["RouteScope"]</label>
+                <select asp-for="RouteScope" class="field-input cursor-pointer">
+                    @foreach (var scope in Enum.GetValues<RouteScope>())
+                    {
+                        <option value="@scope">@L["RouteScope_" + scope]</option>
+                    }
+                </select>
+                <span asp-validation-for="RouteScope" class="field-error"></span>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="BasePrice" class="field-label">@L["BasePrice"]</label>
+                    <input asp-for="BasePrice" class="field-input" inputmode="decimal" />
+                    <span asp-validation-for="BasePrice" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="PricePerDesi" class="field-label">@L["PricePerDesi"]</label>
+                    <input asp-for="PricePerDesi" class="field-input" inputmode="decimal" />
+                    <span asp-validation-for="PricePerDesi" class="field-error"></span>
+                </div>
+            </div>
+
+            <div>
+                <label asp-for="TransitDays" class="field-label">@L["TransitDays"]</label>
+                <input asp-for="TransitDays" class="field-input" inputmode="numeric" />
+                <span asp-validation-for="TransitDays" class="field-error"></span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                <button type="submit" class="btn-filled">
+                    <span class="material-symbols-outlined text-[20px]">save</span>
+                    <span>@L["Save"]</span>
+                </button>
+                <a asp-action="Index" class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    <span>@L["Cancel"]</span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

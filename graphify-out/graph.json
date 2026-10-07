@@ -2511,6 +2511,160 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_pricing_cargopricingservice",
+      "label": "CargoPricingService.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:5ede9441ff7c1859",
+      "label": "DestinoTrack.Business.Services.Pricing",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L11",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.Business.Services.Pricing"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "label": "CargoPricingService",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s441"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_cs_istringlocalizer",
+      "label": "IStringLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_cs_sharedresource",
+      "label": "SharedResource",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "label": ".GetQuoteAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L22",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s441"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getroutescope",
+      "label": ".GetRouteScope()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L73",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s441"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_cs_branch",
+      "label": "Branch",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_cargopricingservice_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_icargopricingservice",
+      "label": "ICargoPricingService.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice",
+      "label": "ICargoPricingService",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L5",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice_getquoteasync",
+      "label": ".GetQuoteAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_icargopricingservice_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_users_iuserservice",
       "label": "IUserService.cs",
       "file_type": "code",
@@ -6617,6 +6771,359 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "label": "CargoQuoteDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:2e944db3b095e882",
+      "label": "DestinoTrack.DTO.DTOs.PricingDtos",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L3",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "label": "CargoQuoteDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_price",
+      "label": "Price",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_currencycode",
+      "label": "CurrencyCode",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_estimatedarrivaldate",
+      "label": "EstimatedArrivalDate",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_cs_datetime",
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_transitdays",
+      "label": "TransitDays",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_desi",
+      "label": "Desi",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_chargeableunit",
+      "label": "ChargeableUnit",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L17",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_baseprice",
+      "label": "BasePrice",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L18",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_priceperdesi",
+      "label": "PricePerDesi",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L19",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_typemultiplier",
+      "label": "TypeMultiplier",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L20",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "label": "CargoQuoteRequestDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "label": "CargoQuoteRequestDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_originbranchid",
+      "label": "OriginBranchId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinationbranchid",
+      "label": "DestinationBranchId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cs_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_weight",
+      "label": "Weight",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_width",
+      "label": "Width",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_height",
+      "label": "Height",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L17",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_length",
+      "label": "Length",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L18",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_shipmentdate",
+      "label": "ShipmentDate",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L21",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cs_datetime",
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dto_dtos_userdtos_createuserdto",
       "label": "CreateUserDto.cs",
       "file_type": "code",
@@ -7126,7 +7633,7 @@
       "label": "DestinoTrack.DataAccess.Context",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "type": "namespace",
       "metadata": {
         "kind": "csharp_namespace",
@@ -7139,11 +7646,11 @@
       "label": "AppDbContext",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_callable": true,
@@ -7171,11 +7678,11 @@
       "label": "Abouts",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L15",
+      "source_location": "L16",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7193,11 +7700,11 @@
       "label": "Addresses",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7207,13 +7714,21 @@
       "label": "Branches",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_context_appdbcontext_cs_branch",
+      "label": "Branch",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -7221,11 +7736,11 @@
       "label": "Cargos",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L18",
+      "source_location": "L19",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7235,11 +7750,11 @@
       "label": "CargoMovements",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L19",
+      "source_location": "L20",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7249,11 +7764,11 @@
       "label": "Cities",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L20",
+      "source_location": "L21",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7263,11 +7778,11 @@
       "label": "Contacts",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L21",
+      "source_location": "L22",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7277,11 +7792,11 @@
       "label": "Countries",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L22",
+      "source_location": "L23",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7299,11 +7814,11 @@
       "label": "Payments",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L23",
+      "source_location": "L24",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7313,11 +7828,11 @@
       "label": "Customers",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L24",
+      "source_location": "L25",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7327,11 +7842,11 @@
       "label": "AuditLogs",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L25",
+      "source_location": "L26",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7341,11 +7856,39 @@
       "label": "Employees",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L26",
+      "source_location": "L27",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_cargoprices",
+      "label": "CargoPrices",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L28",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Context",
+        "scope_chain": [
+          "s257"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_cargotyperates",
+      "label": "CargoTypeRates",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L29",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Context",
+        "scope_chain": [
+          "s257"
         ]
       },
       "_origin": "ast"
@@ -7355,11 +7898,11 @@
       "label": ".OnModelCreating()",
       "file_type": "code",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L29",
+      "source_location": "L33",
       "metadata": {
         "namespace": "DestinoTrack.DataAccess.Context",
         "scope_chain": [
-          "s214"
+          "s257"
         ]
       },
       "_callable": true,
@@ -8570,6 +9113,85 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price",
+      "label": "20260924030701_mig_cargo_price.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price",
+      "label": "mig_cargo_price",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L11",
+      "metadata": {
+        "is_partial": true,
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s170"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_up",
+      "label": ".Up()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L14",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s170"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_cs_migrationbuilder",
+      "label": "MigrationBuilder",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_down",
+      "label": ".Down()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L89",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Migrations",
+        "scope_chain": [
+          "s170"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_cs_datetime",
+      "label": "DateTime",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot",
       "label": "AppDbContextModelSnapshot.cs",
       "file_type": "code",
@@ -9263,6 +9885,360 @@
       },
       "_callable": true,
       "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "label": "CargoPriceRepository.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:78fd29617c44cd77",
+      "label": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L7",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoPrices"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "label": "CargoPriceRepository",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getbycountryandscopeasync",
+      "label": ".GetByCountryAndScopeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getallwithcountryasync",
+      "label": ".GetAllWithCountryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L20",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "label": "ICargoPriceRepository.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "label": "ICargoPriceRepository",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "label": ".GetByCountryAndScopeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L10",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getallwithcountryasync",
+      "label": ".GetAllWithCountryAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "label": "CargoTypeRateRepository.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:41b52e80362e48b2",
+      "label": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L7",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoTypeRates"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "label": "CargoTypeRateRepository",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getbytypeasync",
+      "label": ".GetByTypeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_cs_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getallorderedasync",
+      "label": ".GetAllOrderedAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L19",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_chain": [
+          "s228"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "label": "ICargoTypeRateRepository.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "label": "ICargoTypeRateRepository",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getbytypeasync",
+      "label": ".GetByTypeAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L10",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_cs_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "label": ".GetAllOrderedAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_chain": [
+          "s150"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
       "_origin": "ast"
     },
     {
@@ -11769,7 +12745,7 @@
       "_origin": "ast"
     },
     {
-      "id": "cargotype",
+      "id": "destinotrack_entity_entities_cargo_cs_cargotype",
       "label": "CargoType",
       "file_type": "code",
       "source_file": "",
@@ -12368,6 +13344,204 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice",
+      "label": "CargoPrice.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "label": "CargoPrice",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_countryid",
+      "label": "CountryId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_baseprice",
+      "label": "BasePrice",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_priceperdesi",
+      "label": "PricePerDesi",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L19",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_transitdays",
+      "label": "TransitDays",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L22",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_country",
+      "label": "Country",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L25",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargotyperate",
+      "label": "CargoTypeRate.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "label": "CargoTypeRate",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargotyperate_cs_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate_multiplier",
+      "label": "Multiplier",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate_transitdaysdelta",
+      "label": "TransitDaysDelta",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities",
+        "scope_chain": [
+          "s92"
+        ]
+      },
       "_origin": "ast"
     },
     {
@@ -14192,6 +15366,72 @@
       "file_type": "code",
       "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
       "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_routescope",
+      "label": "RouteScope.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L4",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope_samecity",
+      "label": "SameCity",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope_samecountry",
+      "label": "SameCountry",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.Entity.Entities.Enums",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope_international",
+      "label": "International",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L8",
       "metadata": {
         "namespace": "DestinoTrack.Entity.Entities.Enums",
         "scope_chain": [
@@ -24638,6 +25878,467 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:90f4f8d2f8b68170",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.Branches",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:78fd29617c44cd77",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:41b52e80362e48b2",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:1d30898fce1ac78b",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.Countries",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "system_componentmodel_dataannotations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.ComponentModel.DataAnnotations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "csharp_namespace:5ede9441ff7c1859",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "ICargoPricingService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IBranchRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_dataaccess_repositories_countries_icountryrepository_destinotrack_dataaccess_repositories_countries_icountryrepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICountryRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICargoPriceRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICargoTypeRateRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_cs_istringlocalizer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IStringLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_cs_sharedresource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "SharedResource"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CargoQuoteRequestDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoQuoteDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getroutescope",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getroutescope",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_cs_branch",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L73",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Branch"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getroutescope",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L73",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getroutescope",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_icargopricingservice",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_icargopricingservice",
+      "target": "csharp_namespace:5ede9441ff7c1859",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_icargopricingservice",
+      "target": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice",
+      "target": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice_getquoteasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice_getquoteasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CargoQuoteRequestDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice_getquoteasync",
+      "target": "destinotrack_business_services_pricing_icargopricingservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice_getquoteasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/ICargoPricingService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoQuoteDto"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_users_iuserservice",
       "target": "csharp_namespace:4a4b6e9735db1a29",
       "relation": "imports",
@@ -30759,6 +32460,346 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_price",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_currencycode",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_estimatedarrivaldate",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_cs_datetime",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_transitdays",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_routescope",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_desi",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_chargeableunit",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_baseprice",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_priceperdesi",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquotedto_destinotrack_dto_dtos_pricingdtos_cargoquotedto_typemultiplier",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteDto.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_originbranchid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinationbranchid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cargotype",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cs_cargotype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "CargoType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_weight",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_width",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_height",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_length",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_shipmentdate",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargoquoterequestdto_cs_datetime",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoQuoteRequestDto.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_dto_dtos_userdtos_createuserdto",
       "target": "csharp_namespace:fb51383a429b9096",
       "relation": "contains",
@@ -31175,28 +33216,12 @@
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext",
-      "target": "system_linq_expressions",
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L1",
-      "weight": 1.0,
-      "metadata": {
-        "using_kind": "namespace",
-        "target_fqn": "System.Linq.Expressions",
-        "scope_kind": "file"
-      },
-      "_origin": "ast"
-    },
-    {
-      "source": "destinotrack_dataaccess_context_appdbcontext",
       "target": "csharp_namespace:16bb917edc1a82d7",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L2",
+      "source_location": "L1",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -31212,11 +33237,27 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L3",
+      "source_location": "L2",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
         "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -31255,11 +33296,27 @@
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext",
+      "target": "system_linq_expressions",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.Linq.Expressions",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext",
       "target": "csharp_namespace:ae7894bd03fd865f",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L7",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -31269,7 +33326,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -31279,7 +33336,7 @@
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "ref_token": "IdentityDbContext"
@@ -31292,7 +33349,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31306,7 +33363,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31320,7 +33377,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L9",
+      "source_location": "L10",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31334,7 +33391,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31345,7 +33402,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "field",
       "metadata": {
@@ -31359,7 +33416,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31373,7 +33430,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31384,7 +33441,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31398,18 +33455,18 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
-      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_branch",
+      "target": "destinotrack_dataaccess_context_appdbcontext_cs_branch",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L17",
+      "source_location": "L18",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31423,7 +33480,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31434,7 +33491,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31448,7 +33505,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31459,7 +33516,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L19",
+      "source_location": "L20",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31473,7 +33530,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31484,7 +33541,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L20",
+      "source_location": "L21",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31498,7 +33555,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31509,7 +33566,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L21",
+      "source_location": "L22",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31523,7 +33580,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31534,7 +33591,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31548,7 +33605,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31559,7 +33616,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L23",
+      "source_location": "L24",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31573,7 +33630,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31584,7 +33641,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31598,7 +33655,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31609,7 +33666,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L25",
+      "source_location": "L26",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31623,7 +33680,7 @@
       "relation": "defines",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -31634,7 +33691,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L26",
+      "source_location": "L27",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31644,11 +33701,61 @@
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "target": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_cargoprices",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "target": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_cargotyperates",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
       "target": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L29",
+      "source_location": "L33",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -31658,7 +33765,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L29",
+      "source_location": "L33",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -31672,7 +33779,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L36",
+      "source_location": "L40",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31686,7 +33793,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L70",
+      "source_location": "L74",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31700,7 +33807,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L91",
+      "source_location": "L95",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31714,7 +33821,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L110",
+      "source_location": "L114",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31724,11 +33831,25 @@
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
-      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_branch",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L125",
+      "source_location": "L130",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
+      "target": "destinotrack_dataaccess_context_appdbcontext_cs_branch",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L138",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31742,7 +33863,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L132",
+      "source_location": "L145",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31756,7 +33877,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L139",
+      "source_location": "L152",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31770,7 +33891,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L146",
+      "source_location": "L159",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31784,7 +33905,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L167",
+      "source_location": "L180",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31798,7 +33919,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L198",
+      "source_location": "L211",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31808,11 +33929,25 @@
     },
     {
       "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L248",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
       "target": "destinotrack_entity_entities_contactinfo_destinotrack_entity_entities_contactinfo",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L304",
+      "source_location": "L340",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31826,7 +33961,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L320",
+      "source_location": "L356",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31840,7 +33975,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L340",
+      "source_location": "L376",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -31855,7 +33990,18 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
-      "source_location": "L359",
+      "source_location": "L395",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext_onmodelcreating",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Context/AppDbContext.cs",
+      "source_location": "L432",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -34186,6 +36332,147 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price",
+      "target": "system",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price",
+      "target": "microsoft_entityframeworkcore_migrations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore.Migrations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price",
+      "target": "csharp_namespace:00b9497d9b228753",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price",
+      "target": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price",
+      "target": "migration",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "Migration"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price",
+      "target": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_up",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_up",
+      "target": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price",
+      "target": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_down",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_down",
+      "target": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_cs_migrationbuilder",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L89",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "MigrationBuilder"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_up",
+      "target": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_destinotrack_dataaccess_migrations_mig_cargo_price_up",
+      "target": "destinotrack_dataaccess_migrations_20260924030701_mig_cargo_price_cs_datetime",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Migrations/20260924030701_mig_cargo_price.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "DateTime"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_dataaccess_migrations_appdbcontextmodelsnapshot",
       "target": "system",
       "relation": "imports",
@@ -35993,6 +38280,948 @@
       "context": "generic_arg",
       "metadata": {
         "ref_token": "CargoMovement"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "csharp_namespace:ae7894bd03fd865f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Context",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "csharp_namespace:1e60bb1d89ada22c",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "microsoft_entityframeworkcore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "csharp_namespace:78fd29617c44cd77",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_genericrepository_destinotrack_dataaccess_repositories_genericrepositories_genericrepository",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "GenericRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "ICargoPriceRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "AppDbContext"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getbycountryandscopeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getallwithcountryasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getallwithcountryasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getallwithcountryasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getallwithcountryasync",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "csharp_namespace:1e60bb1d89ada22c",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "csharp_namespace:78fd29617c44cd77",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_irepository_destinotrack_dataaccess_repositories_genericrepositories_irepository",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "IRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getallwithcountryasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getallwithcountryasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getallwithcountryasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getallwithcountryasync",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/ICargoPriceRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "csharp_namespace:ae7894bd03fd865f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Context",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "csharp_namespace:1e60bb1d89ada22c",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "microsoft_entityframeworkcore",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.EntityFrameworkCore",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "csharp_namespace:41b52e80362e48b2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_genericrepository_destinotrack_dataaccess_repositories_genericrepositories_genericrepository",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "GenericRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "ICargoTypeRateRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "destinotrack_dataaccess_context_appdbcontext_destinotrack_dataaccess_context_appdbcontext",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "AppDbContext"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getbytypeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getbytypeasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_cs_cargotype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CargoType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getbytypeasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getbytypeasync",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getallorderedasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getallorderedasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getallorderedasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getallorderedasync",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "csharp_namespace:1e60bb1d89ada22c",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.GenericRepositories",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "csharp_namespace:41b52e80362e48b2",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_genericrepositories_irepository_destinotrack_dataaccess_repositories_genericrepositories_irepository",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "IRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getbytypeasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getbytypeasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_cs_cargotype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CargoType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getbytypeasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getbytypeasync",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/ICargoTypeRateRepository.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRate"
       },
       "_origin": "ast"
     },
@@ -40843,7 +44072,7 @@
     },
     {
       "source": "destinotrack_entity_entities_cargo_destinotrack_entity_entities_cargo",
-      "target": "cargotype",
+      "target": "destinotrack_entity_entities_cargo_cs_cargotype",
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Entity/Entities/Cargo.cs",
@@ -41541,6 +44770,291 @@
       "metadata": {
         "ref_token": "DelayReason"
       },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_countryid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_routescope",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_baseprice",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_priceperdesi",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_transitdays",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice_country",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "target": "destinotrack_entity_entities_appuser_destinotrack_entity_entities_appuser_country",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoPrice.cs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Country"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate",
+      "target": "csharp_namespace:4d8cf7ad560befce",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Common",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "target": "destinotrack_entity_entities_common_baseentity_destinotrack_entity_entities_common_baseentity",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate_cargotype",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "target": "destinotrack_entity_entities_cargotyperate_cs_cargotype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "CargoType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate_multiplier",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate",
+      "target": "destinotrack_entity_entities_cargotyperate_destinotrack_entity_entities_cargotyperate_transitdaysdelta",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/CargoTypeRate.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
       "_origin": "ast"
     },
     {
@@ -43378,6 +46892,56 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Entity/Entities/Enums/PaymentType.cs",
       "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_routescope",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_routescope",
+      "target": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope",
+      "target": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope_samecity",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope",
+      "target": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope_samecountry",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope",
+      "target": "destinotrack_entity_entities_enums_routescope_destinotrack_entity_entities_enums_routescope_international",
+      "relation": "case_of",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Entity/Entities/Enums/RouteScope.cs",
+      "source_location": "L8",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -50924,12 +54488,28 @@
     },
     {
       "source": "destinotrack_webui_program",
-      "target": "csharp_namespace:ae9ba55dcab2fa08",
+      "target": "csharp_namespace:5ede9441ff7c1859",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
       "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Pricing",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_program",
+      "target": "csharp_namespace:ae9ba55dcab2fa08",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Program.cs",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -50945,7 +54525,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -50961,7 +54541,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -50977,7 +54557,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -50993,7 +54573,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51009,7 +54589,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51025,11 +54605,27 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
         "target_fqn": "DestinoTrack.DataAccess.Repositories.CargoMovements",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_program",
+      "target": "csharp_namespace:78fd29617c44cd77",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Program.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.CargoPrices",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -51041,11 +54637,27 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L16",
+      "source_location": "L18",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
         "target_fqn": "DestinoTrack.DataAccess.Repositories.Cargos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_program",
+      "target": "csharp_namespace:41b52e80362e48b2",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Program.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
         "scope_kind": "file"
       },
       "_origin": "ast"
@@ -51057,7 +54669,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L17",
+      "source_location": "L20",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51073,7 +54685,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51089,7 +54701,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L19",
+      "source_location": "L22",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51105,7 +54717,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L20",
+      "source_location": "L23",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51121,7 +54733,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L21",
+      "source_location": "L24",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51137,7 +54749,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L22",
+      "source_location": "L25",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51153,7 +54765,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L23",
+      "source_location": "L26",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51169,7 +54781,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L24",
+      "source_location": "L27",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51185,7 +54797,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L25",
+      "source_location": "L28",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51201,7 +54813,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L26",
+      "source_location": "L29",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51217,7 +54829,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L27",
+      "source_location": "L30",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51233,7 +54845,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L28",
+      "source_location": "L31",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -51249,7 +54861,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Program.cs",
-      "source_location": "L29",
+      "source_location": "L32",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52936,6 +56548,42 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_dataaccess_repositories_branches_ibranchrepository_destinotrack_dataaccess_repositories_branches_ibranchrepository_getwithcityasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getbytypeasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_getbyidasync",
       "target": "destinotrack_dataaccess_repositories_employees_iemployeerepository_destinotrack_dataaccess_repositories_employees_iemployeerepository_hasemployeeasync",
       "relation": "calls",
@@ -53932,6 +57580,18 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_services_pricing_icargopricingservice_destinotrack_business_services_pricing_icargopricingservice_getquoteasync",
+      "target": "destinotrack_business_services_pricing_cargopricingservice_destinotrack_business_services_pricing_cargopricingservice_getquoteasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_users_iuserservice_destinotrack_business_services_users_iuserservice_getpagedasync",
       "target": "destinotrack_business_services_users_userservice_destinotrack_business_services_users_userservice_getpagedasync",
       "relation": "dispatches_to",
@@ -54083,6 +57743,54 @@
       "confidence": "INFERRED",
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.DataAccess/Repositories/Branches/BranchRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getbycountryandscopeasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getallwithcountryasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_destinotrack_dataaccess_repositories_cargoprices_cargopricerepository_getallwithcountryasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoPrices/CargoPriceRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getbytypeasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getbytypeasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_cargotyperaterepository_getallorderedasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.DataAccess/Repositories/CargoTypeRates/CargoTypeRateRepository.cs",
       "source_location": "L9",
       "weight": 1.0,
       "_origin": "ast"

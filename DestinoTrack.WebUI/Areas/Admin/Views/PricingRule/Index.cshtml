@@ -1,0 +1,137 @@
+﻿@model PricingRuleIndexViewModel
+@{
+    ViewData["Title"] = L["PriceRules"].Value;
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">payments</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["Menu_SystemSettings"]</span>
+            <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["PriceRules"]</h1>
+        </div>
+    </div>
+    <a asp-action="Create" class="btn-filled h-11 w-full sm:w-auto">
+        <span class="material-symbols-outlined text-[20px]">add</span>
+        <span>@L["NewTariff"]</span>
+    </a>
+</div>
+
+@if (TempData["Error"] is string error)
+{
+    <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">
+        <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+        <span class="font-body-sm text-body-sm">@error</span>
+    </div>
+}
+
+<!--  tarifeler (ülke × güzergâh kademesi) -->
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3">@L["Tariffs"]</h2>
+<div class="m3-card overflow-hidden mb-10">
+    @if (Model.Tariffs.Count > 0)
+    {
+        <div class="overflow-x-auto">
+            <table class="m3-table font-body-sm text-body-sm">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-6">@L["Country"]</th>
+                        <th class="py-3.5 px-4">@L["RouteScope"]</th>
+                        <th class="py-3.5 px-4 text-right">@L["BasePrice"]</th>
+                        <th class="py-3.5 px-4 text-right">@L["PricePerDesi"]</th>
+                        <th class="py-3.5 px-4 text-right">@L["TransitDays"]</th>
+                        <th class="py-3.5 px-6 text-right">@L["Actions"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var tariff in Model.Tariffs)
+                    {
+                        <tr>
+                            <td class="py-4 px-6">
+                                <span class="font-bold text-on-surface">@tariff.CountryName</span>
+                                <span class="chip-neutral">@tariff.CurrencyCode</span>
+                            </td>
+                            <td class="py-4 px-4"><span class="chip-info">@L["RouteScope_" + tariff.RouteScope]</span></td>
+                            <td class="py-4 px-4 text-right text-on-surface">@tariff.BasePrice.ToString("N2")</td>
+                            <td class="py-4 px-4 text-right text-on-surface">@tariff.PricePerDesi.ToString("N2")</td>
+                            <td class="py-4 px-4 text-right text-on-surface">@tariff.TransitDays</td>
+                            <td class="py-4 px-6">
+                                <div class="flex items-center justify-end gap-2">
+                                    <a asp-action="Update" asp-route-id="@tariff.Id" title="@L["Update"]"
+                                       class="p-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-colors">
+                                        <span class="material-symbols-outlined text-[18px]">edit</span>
+                                    </a>
+                                    <form asp-action="Delete" asp-route-id="@tariff.Id" method="post"
+                                          onsubmit="return confirm('@L["ConfirmDelete"]');">
+                                        <button type="submit" title="@L["Delete"]"
+                                                class="p-2 rounded-xl bg-surface-container text-on-surface hover:bg-error-container hover:text-on-error-container transition-colors">
+                                            <span class="material-symbols-outlined text-[18px]">delete</span>
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">payments</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</p>
+            <a asp-action="Create" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">add</span>
+                <span>@L["NewTariff"]</span>
+            </a>
+        </div>
+    }
+</div>
+
+<!--  kargo tipi çarpanları — sekiz satır, tek kaydet -->
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-3">@L["CargoTypeRates"]</h2>
+<div class="m3-card overflow-hidden">
+    <form asp-action="UpdateRates" method="post">
+        <div class="overflow-x-auto">
+            <table class="m3-table font-body-sm text-body-sm">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-6">@L["CargoType"]</th>
+                        <th class="py-3.5 px-4">@L["Multiplier"]</th>
+                        <th class="py-3.5 px-4">@L["TransitDaysDelta"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (var i = 0; i < Model.Rates.Count; i++)
+                    {
+                        <tr>
+                            <td class="py-3 px-6 text-on-surface">
+                                @* Kimlik ve tip gizli gider: tipler enum'dan geliyor, ekranda değişmiyor *@
+                                <input type="hidden" name="rates[@i].Id" value="@Model.Rates[i].Id" />
+                                <input type="hidden" name="rates[@i].CargoType" value="@Model.Rates[i].CargoType" />
+                                @L["CargoType_" + Model.Rates[i].CargoType]
+                            </td>
+                            <td class="py-3 px-4">
+                                <input name="rates[@i].Multiplier" value="@Model.Rates[i].Multiplier.ToString("0.00")"
+                                       class="field-input w-28" inputmode="decimal" />
+                            </td>
+                            <td class="py-3 px-4">
+                                <input name="rates[@i].TransitDaysDelta" value="@Model.Rates[i].TransitDaysDelta"
+                                       class="field-input w-20" inputmode="numeric" />
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="flex justify-end p-4">
+            <button type="submit" class="btn-filled">
+                <span class="material-symbols-outlined text-[20px]">save</span>
+                <span>@L["Save"]</span>
+            </button>
+        </div>
+    </form>
+</div>

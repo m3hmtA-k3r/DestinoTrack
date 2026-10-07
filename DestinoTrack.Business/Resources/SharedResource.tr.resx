@@ -260,6 +260,10 @@
   </data>
   <data name="EmployeeNotFound" xml:space="preserve"><value>Personel bulunamadı.</value></data>
   <data name="EmployeeHasDependents" xml:space="preserve"><value>Bu personele bağlı kargo veya ödeme kaydı var, silinemez. Pasifleştirebilirsin.</value></data>
+  <data name="PriceRuleNotFound" xml:space="preserve"><value>Bu güzergâh için fiyat tarifesi tanımlı değil. Fiyat kuralları ekranından ekleyin.</value></data>
+  <data name="CargoTypeRateNotFound" xml:space="preserve"><value>Bu kargo tipi için çarpan tanımlı değil.</value></data>
+  <data name="MeasureInvalid" xml:space="preserve"><value>Ağırlık ve ölçüler sıfırdan büyük olmalıdır.</value></data>
+  <data name="PriceRuleExists" xml:space="preserve"><value>Bu ülke ve güzergâh kademesi için zaten bir tarife var.</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>Güncellenecek kayıt belirtilmedi.</value>
   </data>
@@ -348,6 +352,11 @@
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>Plaka en fazla 20 karakter olabilir.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>Dağıtım bölgesi en fazla 100 karakter olabilir.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>Hesap rolü Şube Yetkilisi ya da Kurye olmalıdır.</value></data>
+  <data name="RouteScopeInvalid" xml:space="preserve"><value>Geçerli bir güzergâh kademesi seçilmelidir.</value></data>
+  <data name="PriceRange" xml:space="preserve"><value>Ücret 0 ile 1.000.000 arasında olmalıdır.</value></data>
+  <data name="TransitDaysRange" xml:space="preserve"><value>Teslim süresi 1 ile 90 gün arasında olmalıdır.</value></data>
+  <data name="MultiplierRange" xml:space="preserve"><value>Çarpan 0,10 ile 10,00 arasında olmalıdır.</value></data>
+  <data name="TransitDaysDeltaRange" xml:space="preserve"><value>Gün farkı -5 ile 5 arasında olmalıdır.</value></data>
   <data name="Binding_ValueInvalid" xml:space="preserve">
     <value>'{0}' değeri geçersiz.</value>
   </data>
@@ -911,4 +920,27 @@
   <data name="TotalCapacity" xml:space="preserve"><value>Toplam Kapasite</value></data>
   <data name="TotalDockCount" xml:space="preserve"><value>Toplam Rampa</value></data>
   <data name="BranchLockedByEmployee" xml:space="preserve"><value>Şubesi Personel ekranından değişir.</value></data>
+  <!-- ═══ 18 · Fiyat kuralları (TALP-58): tarife listesi · güzergâh kademeleri · tip çarpanları ═══ -->
+  <data name="PriceRules" xml:space="preserve"><value>Fiyat Kuralları</value></data>
+  <data name="Tariffs" xml:space="preserve"><value>Tarifeler</value></data>
+  <data name="NewTariff" xml:space="preserve"><value>Yeni Tarife</value></data>
+  <data name="RouteScope" xml:space="preserve"><value>Güzergâh</value></data>
+  <data name="RouteScope_SameCity" xml:space="preserve"><value>Aynı şehir</value></data>
+  <data name="RouteScope_SameCountry" xml:space="preserve"><value>Aynı ülke</value></data>
+  <data name="RouteScope_International" xml:space="preserve"><value>Yurt dışı</value></data>
+  <data name="BasePrice" xml:space="preserve"><value>Taban Ücret</value></data>
+  <data name="PricePerDesi" xml:space="preserve"><value>Desi Başına Ücret</value></data>
+  <data name="TransitDays" xml:space="preserve"><value>Teslim Süresi (gün)</value></data>
+  <data name="CargoTypeRates" xml:space="preserve"><value>Kargo Tipi Çarpanları</value></data>
+  <data name="TransitDaysDelta" xml:space="preserve"><value>Gün Farkı</value></data>
+  <data name="CargoType" xml:space="preserve"><value>Kargo Tipi</value></data>
+  <data name="Multiplier" xml:space="preserve"><value>Çarpan</value></data>
+  <data name="CargoType_Standard" xml:space="preserve"><value>Standart</value></data>
+  <data name="CargoType_Urgent" xml:space="preserve"><value>Acil</value></data>
+  <data name="CargoType_Fragile" xml:space="preserve"><value>Kırılabilir</value></data>
+  <data name="CargoType_Heavy" xml:space="preserve"><value>Ağır Yük</value></data>
+  <data name="CargoType_Document" xml:space="preserve"><value>Dosya / Zarf</value></data>
+  <data name="CargoType_ColdChain" xml:space="preserve"><value>Soğuk Zincir</value></data>
+  <data name="CargoType_Valuable" xml:space="preserve"><value>Değerli</value></data>
+  <data name="CargoType_Oversized" xml:space="preserve"><value>Büyük Hacimli</value></data>
 </root>

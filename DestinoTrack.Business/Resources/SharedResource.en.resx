@@ -260,6 +260,10 @@
   </data>
   <data name="EmployeeNotFound" xml:space="preserve"><value>Employee not found.</value></data>
   <data name="EmployeeHasDependents" xml:space="preserve"><value>This employee has linked cargos or payments and cannot be deleted. You can deactivate them instead.</value></data>
+  <data name="PriceRuleNotFound" xml:space="preserve"><value>No price rule is defined for this route. Add one on the price rules screen.</value></data>
+  <data name="CargoTypeRateNotFound" xml:space="preserve"><value>No rate is defined for this cargo type.</value></data>
+  <data name="MeasureInvalid" xml:space="preserve"><value>Weight and dimensions must be greater than zero.</value></data>
+  <data name="PriceRuleExists" xml:space="preserve"><value>A price rule already exists for this country and route scope.</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>No record was specified for update.</value>
   </data>
@@ -348,6 +352,11 @@
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>The licence plate can be at most 20 characters.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>The delivery area can be at most 100 characters.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>The account role must be Branch Officer or Courier.</value></data>
+  <data name="RouteScopeInvalid" xml:space="preserve"><value>A valid route scope must be selected.</value></data>
+  <data name="PriceRange" xml:space="preserve"><value>The price must be between 0 and 1,000,000.</value></data>
+  <data name="TransitDaysRange" xml:space="preserve"><value>The transit time must be between 1 and 90 days.</value></data>
+  <data name="MultiplierRange" xml:space="preserve"><value>The multiplier must be between 0.10 and 10.00.</value></data>
+  <data name="TransitDaysDeltaRange" xml:space="preserve"><value>The day adjustment must be between -5 and 5.</value></data>
   <data name="Binding_ValueInvalid" xml:space="preserve">
     <value>The value '{0}' is invalid.</value>
   </data>
@@ -911,4 +920,27 @@
   <data name="TotalCapacity" xml:space="preserve"><value>Total capacity</value></data>
   <data name="TotalDockCount" xml:space="preserve"><value>Total loading docks</value></data>
   <data name="BranchLockedByEmployee" xml:space="preserve"><value>The branch is managed on the Employees screen.</value></data>
+  <!-- ═══ 18 · Fiyat kuralları (TALP-58): tarife listesi · güzergâh kademeleri · tip çarpanları ═══ -->
+  <data name="PriceRules" xml:space="preserve"><value>Price rules</value></data>
+  <data name="Tariffs" xml:space="preserve"><value>Tariffs</value></data>
+  <data name="NewTariff" xml:space="preserve"><value>New tariff</value></data>
+  <data name="RouteScope" xml:space="preserve"><value>Route</value></data>
+  <data name="RouteScope_SameCity" xml:space="preserve"><value>Same city</value></data>
+  <data name="RouteScope_SameCountry" xml:space="preserve"><value>Same country</value></data>
+  <data name="RouteScope_International" xml:space="preserve"><value>International</value></data>
+  <data name="BasePrice" xml:space="preserve"><value>Base price</value></data>
+  <data name="PricePerDesi" xml:space="preserve"><value>Price per volumetric unit</value></data>
+  <data name="TransitDays" xml:space="preserve"><value>Transit time (days)</value></data>
+  <data name="CargoTypeRates" xml:space="preserve"><value>Cargo type rates</value></data>
+  <data name="TransitDaysDelta" xml:space="preserve"><value>Day adjustment</value></data>
+  <data name="CargoType" xml:space="preserve"><value>Cargo type</value></data>
+  <data name="Multiplier" xml:space="preserve"><value>Multiplier</value></data>
+  <data name="CargoType_Standard" xml:space="preserve"><value>Standard</value></data>
+  <data name="CargoType_Urgent" xml:space="preserve"><value>Urgent</value></data>
+  <data name="CargoType_Fragile" xml:space="preserve"><value>Fragile</value></data>
+  <data name="CargoType_Heavy" xml:space="preserve"><value>Heavy load</value></data>
+  <data name="CargoType_Document" xml:space="preserve"><value>Document</value></data>
+  <data name="CargoType_ColdChain" xml:space="preserve"><value>Cold chain</value></data>
+  <data name="CargoType_Valuable" xml:space="preserve"><value>Valuable</value></data>
+  <data name="CargoType_Oversized" xml:space="preserve"><value>Oversized</value></data>
 </root>
