@@ -27,6 +27,9 @@ namespace DestinoTrack.DataAccess.Context
         public DbSet<Employee> Employees { get; set; }
         public DbSet<CargoPrice> CargoPrices { get; set; }
         public DbSet<CargoTypeRate> CargoTypeRates { get; set; }
+        public DbSet<Delivery> Deliveries { get; set; }
+        public DbSet<DeliveryException> DeliveryExceptions { get; set; }
+
 
 
 
@@ -67,6 +70,33 @@ namespace DestinoTrack.DataAccess.Context
                 .HasOne(c => c.Courier)
                 .WithMany(k => k.Cargos)
                 .HasForeignKey(c => c.CourierId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Teslimat : kargo başına tek başarılı teslim — bire bir ilişki
+            builder.Entity<Delivery>()
+                .HasOne(d => d.Cargo)
+                .WithOne(c => c.Delivery)
+                .HasForeignKey<Delivery>(d => d.CargoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Teslimi yapan personel: kayıt silinmez
+            builder.Entity<Delivery>()
+                .HasOne(d => d.DeliveredByEmployee)
+                .WithMany()
+                .HasForeignKey(d => d.DeliveredByEmployeeId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Başarısız denemeler : kargo başına birden çok satır
+            builder.Entity<DeliveryException>()
+                .HasOne(x => x.Cargo)
+                .WithMany(c => c.DeliveryExceptions)
+                .HasForeignKey(x => x.CargoId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<DeliveryException>()
+                .HasOne(x => x.AttemptedByEmployee)
+                .WithMany()
+                .HasForeignKey(x => x.AttemptedByEmployeeId)
                 .OnDelete(DeleteBehavior.Restrict);
 
             //CargoMovement
@@ -250,6 +280,18 @@ namespace DestinoTrack.DataAccess.Context
                 .IsUnique()
                 .HasFilter("[IsDeleted] = 0");
 
+            // Bir kargo bir kez teslim edilir
+            builder.Entity<Delivery>()
+                .HasIndex(d => d.CargoId)
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
+
+            // Aynı deneme numarası bir kargoda iki kez yazılamaz
+            builder.Entity<DeliveryException>()
+                .HasIndex(x => new { x.CargoId, x.AttemptNo })
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
+
 
             // --- Para alanları: kuruş hassasiyeti ---
             builder.Entity<Cargo>()
@@ -283,12 +325,6 @@ namespace DestinoTrack.DataAccess.Context
 
 
             // --- Metin uzunlukları ---
-            builder.Entity<Cargo>(e =>
-            {
-                e.Property(c => c.TrackCode).HasMaxLength(30);
-                e.Property(c => c.CurrencyCode).HasMaxLength(3);
-            });
-
             builder.Entity<Country>(e =>
             {
                 e.Property(c => c.Name).HasMaxLength(100);
@@ -320,12 +356,29 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(x => x.Region).HasMaxLength(100);
             });
 
+            // Kargo metinleri tek blokta: takip/barkod · teslimat kodu · gönderici ve alıcı bilgisi 
             builder.Entity<Cargo>(e =>
             {
                 e.Property(c => c.TrackCode).HasMaxLength(30);
                 e.Property(c => c.CurrencyCode).HasMaxLength(3);
                 e.Property(c => c.Barcode).HasMaxLength(50);
+                e.Property(c => c.DeliveryCode).HasMaxLength(6);     //  6 hane
+                e.Property(c => c.SenderName).HasMaxLength(100);
+                e.Property(c => c.SenderPhone).HasMaxLength(20);
+                e.Property(c => c.SenderAddress).HasMaxLength(500);
+                e.Property(c => c.ReceiverName).HasMaxLength(100);
+                e.Property(c => c.ReceiverPhone).HasMaxLength(20);
+                e.Property(c => c.ReceiverAddress).HasMaxLength(500);
             });
+
+            builder.Entity<Delivery>(e =>
+            {
+                e.Property(d => d.Code).HasMaxLength(6);
+                e.Property(d => d.RecipientName).HasMaxLength(100);
+            });
+
+            builder.Entity<DeliveryException>()
+                .Property(x => x.Description).HasMaxLength(500);
 
             builder.Entity<Customer>(e =>
             {
@@ -440,7 +493,7 @@ namespace DestinoTrack.DataAccess.Context
             );
 
 
-            // --- Soft delete + tarihler  ---
+            //  Soft delete + tarihler  
             foreach (var entityType in builder.Model.GetEntityTypes().Where(t => typeof(BaseEntity).IsAssignableFrom(t.ClrType)).ToList())
             {
                 // Silinmiş kayıt hiçbir sorguda görünmez:  
@@ -448,10 +501,10 @@ namespace DestinoTrack.DataAccess.Context
                 var notDeleted = Expression.Lambda(Expression.Not(Expression.Property(parameter, nameof(BaseEntity.IsDeleted))), parameter);
                 builder.Entity(entityType.ClrType).HasQueryFilter(notDeleted);
 
-                // Migration'da mevcut satırlar o anın tarihini alır; yeni kayıtta tarihi interceptor yazar
                 builder.Entity(entityType.ClrType).Property(nameof(BaseEntity.CreatedDate)).HasDefaultValueSql("SYSUTCDATETIME()");
             }
         }
+
 
 
     }

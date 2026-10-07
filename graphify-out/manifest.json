@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Entity/Entities/Cargo.cs": {
-    "mtime": 1789811305.5535762,
-    "seen": 1789813164.8771315,
-    "ast_hash": "3d8daf9a64839e0fae8c7a67f239ec01",
+    "mtime": 1791408489.7695498,
+    "seen": 1791409239.3011599,
+    "ast_hash": "9ed779ed7135609d80c5cce30e8a7f9b",
     "semantic_hash": ""
   },
   "DestinoTrack.Entity/Entities/CargoMovement.cs": {
@@ -294,9 +294,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Context/AppDbContext.cs": {
-    "mtime": 1790219166.9005237,
-    "seen": 1790220479.364843,
-    "ast_hash": "c129a8de0c67d2327002a2b4b451c827",
+    "mtime": 1791408919.6098256,
+    "seen": 1791409239.3011136,
+    "ast_hash": "f81fac88a4579e9a875f6de4b722af3c",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Migrations/20260907183549_mig_initial.cs": {
@@ -318,9 +318,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Migrations/AppDbContextModelSnapshot.cs": {
-    "mtime": 1790219222.017778,
-    "seen": 1790220479.3648593,
-    "ast_hash": "ade0c17391a47ece2c211b47802686e1",
+    "mtime": 1791409005.285666,
+    "seen": 1791409239.3011305,
+    "ast_hash": "eb7f3b4fa2ba10fc663a57cba44ef7d5",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Abouts/AboutRepository.cs": {
@@ -1395,6 +1395,30 @@
     "mtime": 1791400274.7717535,
     "seen": 1791406722.3966832,
     "ast_hash": "f83506c815a0eeb0871836f9f4b90d69",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Migrations/20261007213645_mig_delivery.cs": {
+    "mtime": 1791409005.2836607,
+    "seen": 1791409239.3011296,
+    "ast_hash": "49c3c2b4312eef43c3b572e15f59abbf",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Entity/Entities/Delivery.cs": {
+    "mtime": 1791408340.100489,
+    "seen": 1791409239.301166,
+    "ast_hash": "cd2a6099087ee10abff51410a815c437",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Entity/Entities/DeliveryException.cs": {
+    "mtime": 1791408418.039093,
+    "seen": 1791409239.3011668,
+    "ast_hash": "494a5630b96411ac16c13a85990d0b57",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Entity/Entities/Enums/DeliveryFailureReason.cs": {
+    "mtime": 1791407463.4299862,
+    "seen": 1791409239.301174,
+    "ast_hash": "eb18aa9cf5b2cda6f3f452ed76ddc777",
     "semantic_hash": ""
   }
 }

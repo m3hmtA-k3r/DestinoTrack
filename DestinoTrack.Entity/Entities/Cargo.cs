@@ -20,15 +20,15 @@ namespace DestinoTrack.Entity.Entities
         public PaymentType PaymentType { get; set; }
 
         // Foreign Keys
-        public Guid SenderId { get; set; }
-        public Guid ReceiverId { get; set; }
+        public Guid? SenderId { get; set; }
+        public Guid? ReceiverId { get; set; }
         public Guid OriginBranchId { get; set; }
         public Guid DestinationBranchId { get; set; }
         public Guid? CourierId { get; set; }
 
         // Navigation Properties
-        public virtual AppUser Sender { get; set; }
-        public virtual AppUser Receiver { get; set; }
+        public virtual AppUser? Sender { get; set; }
+        public virtual AppUser? Receiver { get; set; }
         public virtual Branch OriginBranch { get; set; }
         public virtual Branch DestinationBranch { get; set; }
 
@@ -45,6 +45,24 @@ namespace DestinoTrack.Entity.Entities
         public double Length { get; set; }   // cm
         public double Desi { get; set; }     // (W × H × L) / 3000
         public string Barcode { get; set; }  // takip kodundan ayrı barkod
+
+        // gönderici bilgisi — hesap bağlı olsa da kargo anındaki hâli burada saklanır
+        public string SenderName { get; set; }
+        public string SenderPhone { get; set; }
+        public string SenderAddress { get; set; }
+
+        // alıcı bilgisi
+        public string ReceiverName { get; set; }
+        public string ReceiverPhone { get; set; }
+        public string ReceiverAddress { get; set; }
+
+        // dağıtıma her çıkışta yeniden üretilen 6 haneli kod; teslim alınınca Delivery satırına kopyalanır
+        public string? DeliveryCode { get; set; }
+
+        // Teslimat ve başarısız denemeler
+        public virtual Delivery Delivery { get; set; }
+        public virtual IList<DeliveryException> DeliveryExceptions { get; set; }
+
 
         public Guid? CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
