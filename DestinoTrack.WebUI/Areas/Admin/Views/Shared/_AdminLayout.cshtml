@@ -81,6 +81,12 @@
                     <span class="material-symbols-outlined text-[20px]">monitoring</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_Reports"]</span>
                 </span>
+
+                <a asp-area="Admin" asp-controller="PricingRule" asp-action="Index" class="@(controller == "PricingRule" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">payments</span>
+                    <span class="font-body-sm text-body-sm">@L["PriceRules"]</span>
+                </a>
+
                 <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">settings</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_SystemSettings"]</span>

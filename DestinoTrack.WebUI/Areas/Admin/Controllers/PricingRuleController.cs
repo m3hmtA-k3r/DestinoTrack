@@ -1,17 +1,18 @@
-﻿using DestinoTrack.Business;
-using DestinoTrack.Business.Services.Countries;
+﻿using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Pricing;
 using DestinoTrack.DTO.DTOs.PricingDtos;
 using DestinoTrack.WebUI.Areas.Admin.Models;
+using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Localization;
 using System.ComponentModel.DataAnnotations;
+using ValidationException = System.ComponentModel.DataAnnotations.ValidationException;
+
 
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
     public class PricingRuleController(IPricingRuleService _pricingRuleService, ICountryService _countryService,
-                                       IStringLocalizer<SharedResource> _localizer) : AdminBaseController
+                                   IValidator<CargoTypeRateDto> _rateValidator) : AdminBaseController
     {
         public async Task<IActionResult> Index()
         {
@@ -108,21 +109,34 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // Sekiz çarpan satırı tek formda gelir, tek seferde kaydedilir 
+        // Sekiz çarpan satırı tek formda gelir, tek seferde kaydedilir (D39)
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> UpdateRates(List<CargoTypeRateDto> rates)
         {
+            // Bağlama hataları (sayı yerine harf girilmesi gibi)
             if (!ModelState.IsValid)
             {
-                // Satır içi düzenlemede ayrı form sayfası yok: hata bandıyla listeye dönülür
                 TempData["Error"] = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).FirstOrDefault();
                 return RedirectToAction(nameof(Index));
+            }
+
+            // FluentValidation'ın otomatik doğrulaması liste parametresinin satırlarına işlemiyor:
+            // kuralları burada elle çalıştırıyoruz, yoksa 50 gibi bir çarpan sessizce kaydedilir
+            foreach (var rate in rates)
+            {
+                var result = await _rateValidator.ValidateAsync(rate);
+                if (!result.IsValid)
+                {
+                    TempData["Error"] = result.Errors[0].ErrorMessage;
+                    return RedirectToAction(nameof(Index));
+                }
             }
 
             await _pricingRuleService.UpdateRatesAsync(rates);
             return RedirectToAction(nameof(Index));
         }
+
 
         private async Task YukleUlkeListesiAsync()
         {

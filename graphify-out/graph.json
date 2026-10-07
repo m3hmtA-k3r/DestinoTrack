@@ -2665,6 +2665,366 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice",
+      "label": "IPricingRuleService.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "label": "IPricingRuleService",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffsasync",
+      "label": ".GetTariffsAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffbyidasync",
+      "label": ".GetTariffByIdAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_createtariffasync",
+      "label": ".CreateTariffAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L10",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updatetariffasync",
+      "label": ".UpdateTariffAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_deletetariffasync",
+      "label": ".DeleteTariffAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_getratesasync",
+      "label": ".GetRatesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updateratesasync",
+      "label": ".UpdateRatesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice",
+      "label": "PricingRuleService.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "label": "PricingRuleService",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_cs_istringlocalizer",
+      "label": "IStringLocalizer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_cs_sharedresource",
+      "label": "SharedResource",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "label": ".GetTariffsAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffbyidasync",
+      "label": ".GetTariffByIdAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L33",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_createtariffasync",
+      "label": ".CreateTariffAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L39",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updatetariffasync",
+      "label": ".UpdateTariffAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L48",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_deletetariffasync",
+      "label": ".DeleteTariffAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L58",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_getratesasync",
+      "label": ".GetRatesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L65",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updateratesasync",
+      "label": ".UpdateRatesAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L71",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "label": ".EnsureUniqueAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L90",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "label": ".FindTariffAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L99",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Services.Pricing",
+        "scope_chain": [
+          "s348"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_business_services_users_iuserservice",
       "label": "IUserService.cs",
       "file_type": "code",
@@ -3638,6 +3998,91 @@
         "namespace": "DestinoTrack.Business.Validators.Employees",
         "scope_chain": [
           "s158"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "label": "CargoTypeRateValidator.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "csharp_namespace:0ec66ac2c34ba332",
+      "label": "DestinoTrack.Business.Validators.Pricing",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L5",
+      "type": "namespace",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "DestinoTrack.Business.Validators.Pricing"
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_validators_pricing_cargotyperatevalidator_destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "label": "CargoTypeRateValidator",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Validators.Pricing",
+        "scope_chain": [
+          "s114"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_validators_pricing_createcargopricevalidator",
+      "label": "CreateCargoPriceValidator.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_validators_pricing_createcargopricevalidator_destinotrack_business_validators_pricing_createcargopricevalidator",
+      "label": "CreateCargoPriceValidator",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Validators.Pricing",
+        "scope_chain": [
+          "s114"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "label": "UpdateCargoPriceValidator.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_business_validators_pricing_updatecargopricevalidator_destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "label": "UpdateCargoPriceValidator",
+      "file_type": "code",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.Business.Validators.Pricing",
+        "scope_chain": [
+          "s114"
         ]
       },
       "_callable": true,
@@ -7121,6 +7566,488 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "label": "CargoTypeRateDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "label": "CargoTypeRateDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_id",
+      "label": "Id",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_cs_cargotype",
+      "label": "CargoType",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_multiplier",
+      "label": "Multiplier",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_transitdaysdelta",
+      "label": "TransitDaysDelta",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "label": "CreateCargoPriceDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "label": "CreateCargoPriceDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L5",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_countryid",
+      "label": "CountryId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_baseprice",
+      "label": "BasePrice",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L10",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_priceperdesi",
+      "label": "PricePerDesi",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_transitdays",
+      "label": "TransitDays",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L14",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "label": "ResultCargoPriceDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "label": "ResultCargoPriceDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_id",
+      "label": "Id",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_countryid",
+      "label": "CountryId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L10",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_countryname",
+      "label": "CountryName",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L11",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_currencycode",
+      "label": "CurrencyCode",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L14",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_baseprice",
+      "label": "BasePrice",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L15",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_priceperdesi",
+      "label": "PricePerDesi",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_transitdays",
+      "label": "TransitDays",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L17",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "label": "UpdateCargoPriceDto.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "label": "UpdateCargoPriceDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L5",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_id",
+      "label": "Id",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L7",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_countryid",
+      "label": "CountryId",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L10",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_cs_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_baseprice",
+      "label": "BasePrice",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L12",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_priceperdesi",
+      "label": "PricePerDesi",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L13",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_transitdays",
+      "label": "TransitDays",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L14",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_chain": [
+          "s48"
+        ]
+      },
       "_origin": "ast"
     },
     {
@@ -16558,6 +17485,184 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "label": "PricingRuleController.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "label": "PricingRuleController",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L14",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s426"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "ivalidator",
+      "label": "IValidator",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_index",
+      "label": ".Index()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L17",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s426"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_task",
+      "label": "Task",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_iactionresult",
+      "label": "IActionResult",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "label": ".Create()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L26",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s426"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_createcargopricedto",
+      "label": "CreateCargoPriceDto",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_httppost",
+      "label": "HttpPost",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_validateantiforgerytoken",
+      "label": "ValidateAntiForgeryToken",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "label": ".Update()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L57",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s426"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_guid",
+      "label": "Guid",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "label": ".Delete()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L96",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s426"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "label": ".UpdateRates()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s426"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_yukleulkelistesiasync",
+      "label": ".YukleUlkeListesiAsync()",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L141",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Controllers",
+        "scope_chain": [
+          "s426"
+        ]
+      },
+      "_callable": true,
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_areas_admin_controllers_transfercentercontroller",
       "label": "TransferCenterController.cs",
       "file_type": "code",
@@ -17194,6 +18299,66 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "label": "PricingRuleIndexViewModel.cs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "label": "PricingRuleIndexViewModel",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L6",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_tariffs",
+      "label": "Tariffs",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L8",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_cs_list",
+      "label": "List",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_rates",
+      "label": "Rates",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_chain": [
+          "s47"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_areas_admin_models_userindexviewmodel",
       "label": "UserIndexViewModel.cs",
       "file_type": "code",
@@ -17516,6 +18681,62 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_webui_areas_admin_views_pricingrule_create",
+      "label": "Create.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Create.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_pricingrule_create_cshtml_createcargopricedto",
+      "label": "CreateCargoPriceDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Create.cshtml",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_pricingrule_create_cshtml_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Create.cshtml",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_pricingrule_index",
+      "label": "Index.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Index.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_pricingrule_update",
+      "label": "Update.cshtml",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Update.cshtml",
+      "source_location": null,
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_pricingrule_update_cshtml_updatecargopricedto",
+      "label": "UpdateCargoPriceDto",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Update.cshtml",
+      "source_location": "L2",
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_webui_areas_admin_views_pricingrule_update_cshtml_routescope",
+      "label": "RouteScope",
+      "file_type": "code",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Update.cshtml",
+      "source_location": "L35",
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_webui_areas_admin_views_shared_components_branchsummary_default",
       "label": "Default.cshtml",
       "file_type": "code",
@@ -17640,7 +18861,7 @@
       "label": "Microsoft.AspNetCore.Identity",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L14",
+      "source_location": "L15",
       "_origin": "ast"
     },
     {
@@ -17648,7 +18869,7 @@
       "label": "Microsoft.AspNetCore.Mvc.Rendering",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L15",
+      "source_location": "L16",
       "_origin": "ast"
     },
     {
@@ -17656,7 +18877,7 @@
       "label": "Microsoft.Extensions.Options",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L16",
+      "source_location": "L17",
       "_origin": "ast"
     },
     {
@@ -17672,7 +18893,7 @@
       "label": "SharedResource",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L18",
+      "source_location": "L19",
       "_origin": "ast"
     },
     {
@@ -19428,6 +20649,150 @@
       "node_kind": "page",
       "source_file": "DestinoTrack.WebUI/wwwroot/lib/jquery-validation/LICENSE.md",
       "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme",
+      "label": "README.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_destinotrack",
+      "label": "DestinoTrack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_features",
+      "label": "Features",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_accounts_and_roles",
+      "label": "Accounts and roles",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_company_structure",
+      "label": "Company structure",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_pricing",
+      "label": "Pricing",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_platform",
+      "label": "Platform",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_tech_stack",
+      "label": "Tech Stack",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_architecture",
+      "label": "Architecture",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L52",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_getting_started",
+      "label": "Getting Started",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_prerequisites",
+      "label": "Prerequisites",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L69",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_setup",
+      "label": "Setup",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_what_i_learned",
+      "label": "What I learned",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L99",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_status",
+      "label": "Status",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L107",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_acknowledgements",
+      "label": "Acknowledgements",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "_origin": "ast"
+    },
+    {
+      "id": "readme_about_me",
+      "label": "About me",
+      "file_type": "document",
+      "node_kind": "heading",
+      "source_file": "README.md",
+      "source_location": "L115",
       "_origin": "ast"
     }
   ],
@@ -26339,6 +27704,1087 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "csharp_namespace:5ede9441ff7c1859",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffsasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffsasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffsasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffsasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "ResultCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffbyidasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "UpdateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_createtariffasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_createtariffasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CreateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_createtariffasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updatetariffasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updatetariffasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "UpdateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updatetariffasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_deletetariffasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_deletetariffasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_deletetariffasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_getratesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_getratesasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_getratesasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_getratesasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updateratesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updateratesasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updateratesasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updateratesasync",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/IPricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "csharp_namespace:78fd29617c44cd77",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.CargoPrices",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "csharp_namespace:41b52e80362e48b2",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DataAccess.Repositories.CargoTypeRates",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "csharp_namespace:16bb917edc1a82d7",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "mapster",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Mapster",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "system_componentmodel_dataannotations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.ComponentModel.DataAnnotations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "csharp_namespace:5ede9441ff7c1859",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "IPricingRuleService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICargoPriceRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICargoTypeRateRepository"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_istringlocalizer",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IStringLocalizer"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_sharedresource",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "SharedResource"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "ResultCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffbyidasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L33",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "UpdateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_createtariffasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_createtariffasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CreateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_createtariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L39",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updatetariffasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updatetariffasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "UpdateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updatetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L48",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_deletetariffasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L58",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_deletetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L58",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_deletetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L58",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_getratesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_getratesasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_getratesasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_getratesasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L65",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updateratesasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updateratesasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L71",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updateratesasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L71",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updateratesasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L71",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L90",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L90",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L90",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L99",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L99",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L99",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_createtariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_createtariffasync",
+      "target": "destinotrack_entity_entities_cargoprice_destinotrack_entity_entities_cargoprice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoPrice"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updatetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updatetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_deletetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_findtariffasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_users_iuserservice",
       "target": "csharp_namespace:4a4b6e9735db1a29",
       "relation": "imports",
@@ -29308,6 +31754,291 @@
       "context": "generic_arg",
       "metadata": {
         "ref_token": "UpdateEmployeeDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "target": "fluentvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "FluentValidation",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "target": "csharp_namespace:0ec66ac2c34ba332",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "target": "destinotrack_business_validators_pricing_cargotyperatevalidator_destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_cargotyperatevalidator_destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "target": "abstractvalidator",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "AbstractValidator"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_cargotyperatevalidator_destinotrack_business_validators_pricing_cargotyperatevalidator",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CargoTypeRateValidator.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_createcargopricevalidator",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_createcargopricevalidator",
+      "target": "fluentvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "FluentValidation",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_createcargopricevalidator",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_createcargopricevalidator",
+      "target": "csharp_namespace:0ec66ac2c34ba332",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_createcargopricevalidator",
+      "target": "destinotrack_business_validators_pricing_createcargopricevalidator_destinotrack_business_validators_pricing_createcargopricevalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_createcargopricevalidator_destinotrack_business_validators_pricing_createcargopricevalidator",
+      "target": "abstractvalidator",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "AbstractValidator"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_createcargopricevalidator_destinotrack_business_validators_pricing_createcargopricevalidator",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/CreateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CreateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "target": "fluentvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "FluentValidation",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "target": "microsoft_extensions_localization",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Localization",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "target": "csharp_namespace:0ec66ac2c34ba332",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "target": "destinotrack_business_validators_pricing_updatecargopricevalidator_destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_updatecargopricevalidator_destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "target": "abstractvalidator",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "AbstractValidator"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_validators_pricing_updatecargopricevalidator_destinotrack_business_validators_pricing_updatecargopricevalidator",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.Business/Validators/Pricing/UpdateCargoPriceValidator.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "UpdateCargoPriceDto"
       },
       "_origin": "ast"
     },
@@ -32797,6 +35528,515 @@
       "metadata": {
         "ref_token": "DateTime"
       },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_id",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_cargotype",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_cs_cargotype",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "CargoType"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_multiplier",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto_transitdaysdelta",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CargoTypeRateDto.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_countryid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_routescope",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_baseprice",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_priceperdesi",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto_transitdays",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/CreateCargoPriceDto.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_id",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_countryid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_countryname",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L11",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_currencycode",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_routescope",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_baseprice",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_priceperdesi",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto_transitdays",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/ResultCargoPriceDto.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "csharp_namespace:3bafa95ce1a97488",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Entity.Entities.Enums",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_id",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_countryid",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_routescope",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_cs_routescope",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L10",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "RouteScope"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_baseprice",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_priceperdesi",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L13",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto_transitdays",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/PricingDtos/UpdateCargoPriceDto.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
       "_origin": "ast"
     },
     {
@@ -50429,6 +53669,683 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "csharp_namespace:54ea4b44f6196729",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Countries",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "csharp_namespace:5ede9441ff7c1859",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L2",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.Business.Services.Pricing",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "csharp_namespace:73772d8ed13bc437",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L4",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.WebUI.Areas.Admin.Models",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "fluentvalidation",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L5",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "FluentValidation",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "microsoft_aspnetcore_mvc",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "microsoft_aspnetcore_mvc_rendering",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L7",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Mvc.Rendering",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "system_componentmodel_dataannotations",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.ComponentModel.DataAnnotations",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "system_componentmodel_dataannotations_validationexception",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "alias",
+        "alias": "ValidationException",
+        "target_fqn": "System.ComponentModel.DataAnnotations.ValidationException",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "csharp_namespace:3a3e63d31d338c86",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_adminbasecontroller_destinotrack_webui_areas_admin_controllers_adminbasecontroller",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "metadata": {
+        "ref_token": "AdminBaseController"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IPricingRuleService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L14",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "ICountryService"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "ivalidator",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "IValidator"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L15",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_index",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_index",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_index",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L17",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L26",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_dto_dtos_pricingdtos_createcargopricedto_destinotrack_dto_dtos_pricingdtos_createcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "CreateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L32",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L57",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_dto_dtos_pricingdtos_updatecargopricedto_destinotrack_dto_dtos_pricingdtos_updatecargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L72",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "UpdateCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L72",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L72",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_guid",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L96",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "Guid"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L96",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L96",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L96",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L96",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_iactionresult",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "IActionResult"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_httppost",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "HttpPost"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_validateantiforgerytoken",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L113",
+      "weight": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "ValidateAntiForgeryToken"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_yukleulkelistesiasync",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_yukleulkelistesiasync",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_task",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L141",
+      "weight": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "Task"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_yukleulkelistesiasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_cs_createcargopricedto",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_yukleulkelistesiasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_webui_areas_admin_controllers_transfercentercontroller",
       "target": "csharp_namespace:38073f96d8e536d2",
       "relation": "imports",
@@ -52046,6 +55963,106 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "csharp_namespace:2e944db3b095e882",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L1",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "csharp_namespace:73772d8ed13bc437",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L6",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_tariffs",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_cs_list",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "List"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "destinotrack_dto_dtos_pricingdtos_resultcargopricedto_destinotrack_dto_dtos_pricingdtos_resultcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L8",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "ResultCargoPriceDto"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_rates",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "target": "destinotrack_dto_dtos_pricingdtos_cargotyperatedto_destinotrack_dto_dtos_pricingdtos_cargotyperatedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Models/PricingRuleIndexViewModel.cs",
+      "source_location": "L9",
+      "weight": 1.0,
+      "context": "generic_arg",
+      "metadata": {
+        "ref_token": "CargoTypeRateDto"
+      },
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_webui_areas_admin_models_userindexviewmodel",
       "target": "csharp_namespace:4a4b6e9735db1a29",
       "relation": "imports",
@@ -52341,6 +56358,46 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_webui_areas_admin_views_pricingrule_create",
+      "target": "destinotrack_webui_areas_admin_views_pricingrule_create_cshtml_createcargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Create.cshtml",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_pricingrule_create",
+      "target": "destinotrack_webui_areas_admin_views_pricingrule_create_cshtml_routescope",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Create.cshtml",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_pricingrule_update",
+      "target": "destinotrack_webui_areas_admin_views_pricingrule_update_cshtml_updatecargopricedto",
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Update.cshtml",
+      "source_location": "L2",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_pricingrule_update",
+      "target": "destinotrack_webui_areas_admin_views_pricingrule_update_cshtml_routescope",
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Update.cshtml",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_webui_areas_admin_views_user_create",
       "target": "destinotrack_webui_areas_admin_views_user_create_cshtml_ioptions",
       "relation": "references",
@@ -52512,12 +56569,28 @@
     },
     {
       "source": "destinotrack_webui_areas_admin_views_viewimports",
-      "target": "csharp_namespace:1203581e50ecc61f",
+      "target": "csharp_namespace:2e944db3b095e882",
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
       "source_location": "L9",
+      "weight": 1.0,
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "DestinoTrack.DTO.DTOs.PricingDtos",
+        "scope_kind": "file"
+      },
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_views_viewimports",
+      "target": "csharp_namespace:1203581e50ecc61f",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
+      "source_location": "L10",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52533,7 +56606,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L10",
+      "source_location": "L11",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52549,7 +56622,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L11",
+      "source_location": "L12",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52565,7 +56638,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L12",
+      "source_location": "L13",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52581,7 +56654,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L13",
+      "source_location": "L14",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52597,7 +56670,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52613,7 +56686,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L15",
+      "source_location": "L16",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52629,7 +56702,7 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L16",
+      "source_location": "L17",
       "weight": 1.0,
       "metadata": {
         "using_kind": "namespace",
@@ -52645,7 +56718,7 @@
       "context": "field",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "metadata": {
         "ref_token": "IHtmlLocalizer"
@@ -52658,7 +56731,7 @@
       "relation": "calls",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Views/_ViewImports.cshtml",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -56164,6 +60237,156 @@
       "_origin": "ast"
     },
     {
+      "source": "readme",
+      "target": "readme_destinotrack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_features",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_features",
+      "target": "readme_accounts_and_roles",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_features",
+      "target": "readme_company_structure",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_features",
+      "target": "readme_pricing",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_features",
+      "target": "readme_platform",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_tech_stack",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_architecture",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L52",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_getting_started",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_getting_started",
+      "target": "readme_prerequisites",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_getting_started",
+      "target": "readme_setup",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_what_i_learned",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L99",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_status",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L107",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_acknowledgements",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "readme_destinotrack",
+      "target": "readme_about_me",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_business_services_accounts_accountservice_destinotrack_business_services_accounts_accountservice_fail",
       "target": "identityerror",
       "relation": "calls",
@@ -56256,6 +60479,30 @@
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/EmployeeController.cs",
       "source_location": "L190",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_index",
+      "target": "destinotrack_webui_areas_admin_models_pricingruleindexviewmodel_destinotrack_webui_areas_admin_models_pricingruleindexviewmodel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_yukleulkelistesiasync",
+      "target": "selectlistitem",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L145",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -56580,6 +60827,54 @@
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
       "source_location": "L48",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getallwithcountryasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_getratesasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updateratesasync",
+      "target": "destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_destinotrack_dataaccess_repositories_cargotyperates_icargotyperaterepository_getallorderedasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_ensureuniqueasync",
+      "target": "destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_destinotrack_dataaccess_repositories_cargoprices_icargopricerepository_getbycountryandscopeasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L92",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -56964,6 +61259,102 @@
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/EmployeeController.cs",
       "source_location": "L193",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_index",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffsasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_index",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_getratesasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L22",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_create",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_createtariffasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffbyidasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_update",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updatetariffasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L84",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_delete",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_deletetariffasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L102",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_updaterates",
+      "target": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updateratesasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L136",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_webui_areas_admin_controllers_pricingrulecontroller_destinotrack_webui_areas_admin_controllers_pricingrulecontroller_yukleulkelistesiasync",
+      "target": "destinotrack_business_services_countries_icountryservice_destinotrack_business_services_countries_icountryservice_getallasync",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "DestinoTrack.WebUI/Areas/Admin/Controllers/PricingRuleController.cs",
+      "source_location": "L143",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -57588,6 +61979,90 @@
       "confidence_score": 0.9,
       "source_file": "DestinoTrack.Business/Services/Pricing/CargoPricingService.cs",
       "source_location": "L13",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffsasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffsasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_gettariffbyidasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_gettariffbyidasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_createtariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_createtariffasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updatetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updatetariffasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_deletetariffasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_deletetariffasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_getratesasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_getratesasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
+      "weight": 1.0,
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_business_services_pricing_ipricingruleservice_destinotrack_business_services_pricing_ipricingruleservice_updateratesasync",
+      "target": "destinotrack_business_services_pricing_pricingruleservice_destinotrack_business_services_pricing_pricingruleservice_updateratesasync",
+      "relation": "dispatches_to",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "DestinoTrack.Business/Services/Pricing/PricingRuleService.cs",
+      "source_location": "L12",
       "weight": 1.0,
       "_origin": "ast"
     },
