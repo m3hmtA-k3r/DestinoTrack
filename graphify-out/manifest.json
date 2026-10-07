@@ -1,13 +1,13 @@
 {
   "DestinoTrack.Business/DestinoTrack.Business.csproj": {
-    "mtime": 1790221704.9535935,
-    "seen": 1791406722.3964684,
+    "mtime": 1791413817.9343483,
+    "seen": 1791416040.8153563,
     "ast_hash": "147906a918e92b606b013c93942ca494",
     "semantic_hash": "147906a918e92b606b013c93942ca494"
   },
   "DestinoTrack.DTO/DestinoTrack.DTO.csproj": {
-    "mtime": 1790219336.9456303,
-    "seen": 1790220479.3648422,
+    "mtime": 1791413691.8076737,
+    "seen": 1791416040.8154378,
     "ast_hash": "5536c8a2aff17aea1c4c8e5a3b9818f1",
     "semantic_hash": "5536c8a2aff17aea1c4c8e5a3b9818f1"
   },
@@ -54,9 +54,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Entity/Entities/Cargo.cs": {
-    "mtime": 1791408489.7695498,
-    "seen": 1791409239.3011599,
-    "ast_hash": "9ed779ed7135609d80c5cce30e8a7f9b",
+    "mtime": 1791414268.026575,
+    "seen": 1791416040.8154833,
+    "ast_hash": "702280e998e95959d5431e335903dff5",
     "semantic_hash": ""
   },
   "DestinoTrack.Entity/Entities/CargoMovement.cs": {
@@ -120,9 +120,9 @@
     "semantic_hash": "b9535ae4dfd0e783ad85f4e7ad750b1e"
   },
   "DestinoTrack.WebUI/Program.cs": {
-    "mtime": 1790222244.9917648,
-    "seen": 1791406722.3966541,
-    "ast_hash": "ba0e8dd16f03607cfee43df36a45b585",
+    "mtime": 1791412532.7151134,
+    "seen": 1791413256.1069791,
+    "ast_hash": "c1966052724b3224249bca9210db660e",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Properties/launchSettings.json": {
@@ -180,9 +180,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/appsettings.json": {
-    "mtime": 1789635147.4982133,
-    "seen": 1789645443.443062,
-    "ast_hash": "de9f723aee5a242c38004e306b288589",
+    "mtime": 1791411296.120731,
+    "seen": 1791413256.1069982,
+    "ast_hash": "69fb86eede2e3ffe72ce88e84d007c9f",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/wwwroot/js/site.js": {
@@ -372,15 +372,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cargos/CargoRepository.cs": {
-    "mtime": 1789010796.8453953,
-    "seen": 1789245076.9154844,
-    "ast_hash": "a36593fc35ad7afb93a7666194ac2cf1",
+    "mtime": 1791411420.8523717,
+    "seen": 1791413256.1068966,
+    "ast_hash": "669decf2b151da42ccce139c877409db",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cargos/ICargoRepository.cs": {
-    "mtime": 1789010792.6913972,
-    "seen": 1789245076.915486,
-    "ast_hash": "b1581fad3188511e2bae4363d563ca12",
+    "mtime": 1791411405.6088507,
+    "seen": 1791413256.1068974,
+    "ast_hash": "c18a7f2c21fcab9a7cfacf07524fb928",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs": {
@@ -1380,9 +1380,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Index.cshtml": {
-    "mtime": 1790225349.1426954,
-    "seen": 1791406722.3966343,
-    "ast_hash": "5b434cbdf1dc1c50bb3757ea39d60595",
+    "mtime": 1791414268.0325708,
+    "seen": 1791416040.8155284,
+    "ast_hash": "5f40ae2684d76832a66b26653dd084e5",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Admin/Views/PricingRule/Update.cshtml": {
@@ -1419,6 +1419,48 @@
     "mtime": 1791407463.4299862,
     "seen": 1791409239.301174,
     "ast_hash": "eb18aa9cf5b2cda6f3f452ed76ddc777",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Options/CargoSettings.cs": {
+    "mtime": 1791411270.144675,
+    "seen": 1791413256.1067915,
+    "ast_hash": "0f23dcd0a7a3a893f0b7cc34f29d81f2",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Cargos/CargoService.cs": {
+    "mtime": 1791414153.1498644,
+    "seen": 1791416040.815366,
+    "ast_hash": "7b321a9f27e11822ccda26a6968e34d8",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Cargos/ICargoService.cs": {
+    "mtime": 1791415722.6735244,
+    "seen": 1791416040.8153672,
+    "ast_hash": "ebfd640dd16a174096ef2c258dee6c79",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Cargos/ITrackCodeGenerator.cs": {
+    "mtime": 1791411501.7910666,
+    "seen": 1791413256.1067998,
+    "ast_hash": "551124ef305fb2133f61f993e4b0ec49",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Services/Cargos/TrackCodeGenerator.cs": {
+    "mtime": 1791411521.2571895,
+    "seen": 1791413256.1068006,
+    "ast_hash": "857a4daa26b0c5e8aea35acaafd222bd",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.Business/Validators/Cargos/CreateCargoValidator.cs": {
+    "mtime": 1791413819.9045856,
+    "seen": 1791416040.8153923,
+    "ast_hash": "c0851a978ff29ae673d833870b2418b0",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DTO/DTOs/CargoDtos/CreateCargoDto.cs": {
+    "mtime": 1791414268.0245702,
+    "seen": 1791416040.8154159,
+    "ast_hash": "31205aafbcc57bd77662a632c8994917",
     "semantic_hash": ""
   }
 }

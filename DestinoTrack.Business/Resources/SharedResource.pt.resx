@@ -264,6 +264,12 @@
   <data name="CargoTypeRateNotFound" xml:space="preserve"><value>Nenhuma taxa definida para este tipo de carga.</value></data>
   <data name="MeasureInvalid" xml:space="preserve"><value>O peso e as dimensões devem ser maiores que zero.</value></data>
   <data name="PriceRuleExists" xml:space="preserve"><value>Já existe uma tarifa para este país e escopo de rota.</value></data>
+  <data name="CargoNotFound" xml:space="preserve"><value>Carga não encontrada.</value></data>
+  <data name="InvalidStatusTransition" xml:space="preserve"><value>Não é possível passar de {0} para {1}.</value></data>
+  <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Não foi possível gerar o número de rastreio, tente novamente.</value></data>
+  <data name="CustomerNotFound" xml:space="preserve"><value>Cliente não encontrado.</value></data>
+  <data name="CustomerNotActive" xml:space="preserve"><value>A conta do cliente não está ativa; não é possível criar uma carga para este cliente.</value></data>
+  <data name="CargoCreatedMovement" xml:space="preserve"><value>Registro de carga criado.</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>Nenhum registro foi informado para atualização.</value>
   </data>
@@ -357,6 +363,18 @@
   <data name="TransitDaysRange" xml:space="preserve"><value>O prazo de entrega deve estar entre 1 e 90 dias.</value></data>
   <data name="MultiplierRange" xml:space="preserve"><value>O multiplicador deve estar entre 0,10 e 10,00.</value></data>
   <data name="TransitDaysDeltaRange" xml:space="preserve"><value>O ajuste de dias deve estar entre -5 e 5.</value></data>
+  <data name="CargoTypeInvalid" xml:space="preserve"><value>Um tipo de carga válido deve ser selecionado.</value></data>
+  <data name="PaymentTypeInvalid" xml:space="preserve"><value>Um tipo de pagamento válido deve ser selecionado.</value></data>
+  <data name="WeightRange" xml:space="preserve"><value>O peso deve estar entre 0,01 e 1.000 kg.</value></data>
+  <data name="DimensionRange" xml:space="preserve"><value>As dimensões devem estar entre 0 e 500 cm.</value></data>
+  <data name="SenderNameRequired" xml:space="preserve"><value>O nome do remetente não pode estar vazio.</value></data>
+  <data name="SenderPhoneRequired" xml:space="preserve"><value>O telefone do remetente não pode estar vazio.</value></data>
+  <data name="SenderAddressRequired" xml:space="preserve"><value>O endereço do remetente não pode estar vazio.</value></data>
+  <data name="ReceiverNameRequired" xml:space="preserve"><value>O nome do destinatário não pode estar vazio.</value></data>
+  <data name="ReceiverPhoneRequired" xml:space="preserve"><value>O telefone do destinatário não pode estar vazio.</value></data>
+  <data name="ReceiverAddressRequired" xml:space="preserve"><value>O endereço do destinatário não pode estar vazio.</value></data>
+  <data name="NameMaxLength" xml:space="preserve"><value>O nome pode ter no máximo 100 caracteres.</value></data>
+  <data name="AddressMaxLength" xml:space="preserve"><value>O endereço pode ter no máximo 500 caracteres.</value></data>
   <data name="Binding_ValueInvalid" xml:space="preserve">
     <value>O valor '{0}' é inválido.</value>
   </data>
@@ -920,7 +938,7 @@
   <data name="TotalCapacity" xml:space="preserve"><value>Capacidade total</value></data>
   <data name="TotalDockCount" xml:space="preserve"><value>Total de docas</value></data>
   <data name="BranchLockedByEmployee" xml:space="preserve"><value>A filial é gerenciada na tela de Funcionários.</value></data>
-  <!-- ═══ 18 · Fiyat kuralları (TALP-58): tarife listesi · güzergâh kademeleri · tip çarpanları ═══ -->
+  <!-- ═══ 18 · Fiyat kuralları (TALP-58): tarife listesi · güzergah kademeleri · tip çarpanları ═══ -->
   <data name="PriceRules" xml:space="preserve"><value>Regras de preço</value></data>
   <data name="Tariffs" xml:space="preserve"><value>Tarifas</value></data>
   <data name="NewTariff" xml:space="preserve"><value>Nova tarifa</value></data>
@@ -943,4 +961,14 @@
   <data name="CargoType_ColdChain" xml:space="preserve"><value>Cadeia de frio</value></data>
   <data name="CargoType_Valuable" xml:space="preserve"><value>Valioso</value></data>
   <data name="CargoType_Oversized" xml:space="preserve"><value>Volumoso</value></data>
+  <!-- ═══ 19 · Kargo durumları (TALP-62): dokuz durum · durum makinesi mesajlarında da kullanılır ═══ -->
+  <data name="CargoStatus_Created" xml:space="preserve"><value>Criado</value></data>
+  <data name="CargoStatus_AtOriginBranch" xml:space="preserve"><value>Na filial de origem</value></data>
+  <data name="CargoStatus_InTransferCenter" xml:space="preserve"><value>No centro de transferência</value></data>
+  <data name="CargoStatus_AtDestinationBranch" xml:space="preserve"><value>Na filial de destino</value></data>
+  <data name="CargoStatus_OutForDelivery" xml:space="preserve"><value>Saiu para entrega</value></data>
+  <data name="CargoStatus_Delivered" xml:space="preserve"><value>Entregue</value></data>
+  <data name="CargoStatus_DeliveryFailed" xml:space="preserve"><value>Entrega não realizada</value></data>
+  <data name="CargoStatus_ReturnInProgress" xml:space="preserve"><value>Devolução em andamento</value></data>
+  <data name="CargoStatus_ReturnedToSender" xml:space="preserve"><value>Devolvido ao remetente</value></data>
 </root>

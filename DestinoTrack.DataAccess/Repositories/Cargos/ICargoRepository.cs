@@ -1,4 +1,4 @@
-using DestinoTrack.DataAccess.Repositories.GenericRepositories;
+﻿using DestinoTrack.DataAccess.Repositories.GenericRepositories;
 using DestinoTrack.Entity.Entities;
 using DestinoTrack.Entity.Entities.Enums;
 
@@ -8,5 +8,9 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
     {
         Task<Cargo> GetByTrackCodeAsync(string trackCode);
         Task<int> CountByStatusAsync(CargoStatus status);
+
+        // üretilen takip no daha önce kullanılmış mı (silinmişler dahil — numara geri dönüşmez)
+        Task<bool> TrackCodeExistsAsync(string trackCode);
+
     }
 }

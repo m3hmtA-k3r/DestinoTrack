@@ -260,10 +260,16 @@
   </data>
   <data name="EmployeeNotFound" xml:space="preserve"><value>Personel bulunamadı.</value></data>
   <data name="EmployeeHasDependents" xml:space="preserve"><value>Bu personele bağlı kargo veya ödeme kaydı var, silinemez. Pasifleştirebilirsin.</value></data>
-  <data name="PriceRuleNotFound" xml:space="preserve"><value>Bu güzergâh için fiyat tarifesi tanımlı değil. Fiyat kuralları ekranından ekleyin.</value></data>
+  <data name="PriceRuleNotFound" xml:space="preserve"><value>Bu güzergah için fiyat tarifesi tanımlı değil. Fiyat kuralları ekranından ekleyin.</value></data>
   <data name="CargoTypeRateNotFound" xml:space="preserve"><value>Bu kargo tipi için çarpan tanımlı değil.</value></data>
   <data name="MeasureInvalid" xml:space="preserve"><value>Ağırlık ve ölçüler sıfırdan büyük olmalıdır.</value></data>
-  <data name="PriceRuleExists" xml:space="preserve"><value>Bu ülke ve güzergâh kademesi için zaten bir tarife var.</value></data>
+  <data name="PriceRuleExists" xml:space="preserve"><value>Bu ülke ve güzergah kademesi için zaten bir tarife var.</value></data>
+  <data name="CargoNotFound" xml:space="preserve"><value>Kargo bulunamadı.</value></data>
+  <data name="InvalidStatusTransition" xml:space="preserve"><value>{0} durumundan {1} durumuna geçilemez.</value></data>
+  <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Takip numarası üretilemedi, lütfen yeniden deneyin.</value></data>
+  <data name="CustomerNotFound" xml:space="preserve"><value>Müşteri bulunamadı.</value></data>
+  <data name="CustomerNotActive" xml:space="preserve"><value>Müşteri hesabı aktif değil, bu müşteri adına kargo açılamaz.</value></data>
+  <data name="CargoCreatedMovement" xml:space="preserve"><value>Kargo kaydı oluşturuldu.</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>Güncellenecek kayıt belirtilmedi.</value>
   </data>
@@ -352,11 +358,23 @@
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>Plaka en fazla 20 karakter olabilir.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>Dağıtım bölgesi en fazla 100 karakter olabilir.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>Hesap rolü Şube Yetkilisi ya da Kurye olmalıdır.</value></data>
-  <data name="RouteScopeInvalid" xml:space="preserve"><value>Geçerli bir güzergâh kademesi seçilmelidir.</value></data>
+  <data name="RouteScopeInvalid" xml:space="preserve"><value>Geçerli bir güzergah kademesi seçilmelidir.</value></data>
   <data name="PriceRange" xml:space="preserve"><value>Ücret 0 ile 1.000.000 arasında olmalıdır.</value></data>
   <data name="TransitDaysRange" xml:space="preserve"><value>Teslim süresi 1 ile 90 gün arasında olmalıdır.</value></data>
   <data name="MultiplierRange" xml:space="preserve"><value>Çarpan 0,10 ile 10,00 arasında olmalıdır.</value></data>
   <data name="TransitDaysDeltaRange" xml:space="preserve"><value>Gün farkı -5 ile 5 arasında olmalıdır.</value></data>
+  <data name="CargoTypeInvalid" xml:space="preserve"><value>Geçerli bir kargo tipi seçilmelidir.</value></data>
+  <data name="PaymentTypeInvalid" xml:space="preserve"><value>Geçerli bir ödeme şekli seçilmelidir.</value></data>
+  <data name="WeightRange" xml:space="preserve"><value>Ağırlık 0,01 ile 1.000 kg arasında olmalıdır.</value></data>
+  <data name="DimensionRange" xml:space="preserve"><value>Ölçüler 0 ile 500 cm arasında olmalıdır.</value></data>
+  <data name="SenderNameRequired" xml:space="preserve"><value>Gönderici adı boş olamaz.</value></data>
+  <data name="SenderPhoneRequired" xml:space="preserve"><value>Gönderici telefonu boş olamaz.</value></data>
+  <data name="SenderAddressRequired" xml:space="preserve"><value>Gönderici adresi boş olamaz.</value></data>
+  <data name="ReceiverNameRequired" xml:space="preserve"><value>Alıcı adı boş olamaz.</value></data>
+  <data name="ReceiverPhoneRequired" xml:space="preserve"><value>Alıcı telefonu boş olamaz.</value></data>
+  <data name="ReceiverAddressRequired" xml:space="preserve"><value>Alıcı adresi boş olamaz.</value></data>
+  <data name="NameMaxLength" xml:space="preserve"><value>Ad en fazla 100 karakter olabilir.</value></data>
+  <data name="AddressMaxLength" xml:space="preserve"><value>Adres en fazla 500 karakter olabilir.</value></data>
   <data name="Binding_ValueInvalid" xml:space="preserve">
     <value>'{0}' değeri geçersiz.</value>
   </data>
@@ -920,11 +938,11 @@
   <data name="TotalCapacity" xml:space="preserve"><value>Toplam Kapasite</value></data>
   <data name="TotalDockCount" xml:space="preserve"><value>Toplam Rampa</value></data>
   <data name="BranchLockedByEmployee" xml:space="preserve"><value>Şubesi Personel ekranından değişir.</value></data>
-  <!-- ═══ 18 · Fiyat kuralları (TALP-58): tarife listesi · güzergâh kademeleri · tip çarpanları ═══ -->
+  <!-- ═══ 18 · Fiyat kuralları (TALP-58): tarife listesi · güzergah kademeleri · tip çarpanları ═══ -->
   <data name="PriceRules" xml:space="preserve"><value>Fiyat Kuralları</value></data>
   <data name="Tariffs" xml:space="preserve"><value>Tarifeler</value></data>
   <data name="NewTariff" xml:space="preserve"><value>Yeni Tarife</value></data>
-  <data name="RouteScope" xml:space="preserve"><value>Güzergâh</value></data>
+  <data name="RouteScope" xml:space="preserve"><value>Güzergah</value></data>
   <data name="RouteScope_SameCity" xml:space="preserve"><value>Aynı şehir</value></data>
   <data name="RouteScope_SameCountry" xml:space="preserve"><value>Aynı ülke</value></data>
   <data name="RouteScope_International" xml:space="preserve"><value>Yurt dışı</value></data>
@@ -943,4 +961,14 @@
   <data name="CargoType_ColdChain" xml:space="preserve"><value>Soğuk Zincir</value></data>
   <data name="CargoType_Valuable" xml:space="preserve"><value>Değerli</value></data>
   <data name="CargoType_Oversized" xml:space="preserve"><value>Büyük Hacimli</value></data>
+  <!-- ═══ 19 · Kargo durumları (TALP-62): dokuz durum · durum makinesi mesajlarında da kullanılır ═══ -->
+  <data name="CargoStatus_Created" xml:space="preserve"><value>Oluşturuldu</value></data>
+  <data name="CargoStatus_AtOriginBranch" xml:space="preserve"><value>Gönderici Şubesinde</value></data>
+  <data name="CargoStatus_InTransferCenter" xml:space="preserve"><value>Transfer Merkezinde</value></data>
+  <data name="CargoStatus_AtDestinationBranch" xml:space="preserve"><value>Varış Şubesinde</value></data>
+  <data name="CargoStatus_OutForDelivery" xml:space="preserve"><value>Dağıtıma Çıktı</value></data>
+  <data name="CargoStatus_Delivered" xml:space="preserve"><value>Teslim Edildi</value></data>
+  <data name="CargoStatus_DeliveryFailed" xml:space="preserve"><value>Teslim Edilemedi</value></data>
+  <data name="CargoStatus_ReturnInProgress" xml:space="preserve"><value>İade Sürecinde</value></data>
+  <data name="CargoStatus_ReturnedToSender" xml:space="preserve"><value>Göndericiye İade Edildi</value></data>
 </root>

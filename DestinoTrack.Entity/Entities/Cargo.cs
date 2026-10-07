@@ -46,7 +46,7 @@ namespace DestinoTrack.Entity.Entities
         public double Desi { get; set; }     // (W × H × L) / 3000
         public string Barcode { get; set; }  // takip kodundan ayrı barkod
 
-        // gönderici bilgisi — hesap bağlı olsa da kargo anındaki hâli burada saklanır
+        // gönderici bilgisi — hesap bağlı olsa da kargo anındaki hali burada saklanır
         public string SenderName { get; set; }
         public string SenderPhone { get; set; }
         public string SenderAddress { get; set; }

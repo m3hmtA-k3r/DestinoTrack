@@ -1,4 +1,4 @@
-using DestinoTrack.DataAccess.Context;
+﻿using DestinoTrack.DataAccess.Context;
 using DestinoTrack.DataAccess.Repositories.GenericRepositories;
 using DestinoTrack.Entity.Entities;
 using DestinoTrack.Entity.Entities.Enums;
@@ -21,5 +21,15 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
         {
             return await _context.Cargos.CountAsync(c => c.CargoStatus == status);
         }
+
+        public async Task<bool> TrackCodeExistsAsync(string trackCode)
+        {
+            // IgnoreQueryFilters: silinmiş bir kargonun numarası yeniden verilmemeli,
+            // yoksa eski takip bağlantısı başka bir gönderiyi gösterir
+            return await _context.Cargos
+                .IgnoreQueryFilters()
+                .AnyAsync(c => c.TrackCode == trackCode);
+        }
+
     }
 }
