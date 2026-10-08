@@ -23,6 +23,8 @@ using DestinoTrack.DataAccess.Repositories.Cities;
 using DestinoTrack.DataAccess.Repositories.ContactInfos;
 using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DataAccess.Repositories.Customers;
+using DestinoTrack.DataAccess.Repositories.Deliveries;
+using DestinoTrack.DataAccess.Repositories.DeliveryExceptions;
 using DestinoTrack.DataAccess.Repositories.Employees;
 using DestinoTrack.DataAccess.Repositories.Payments;
 using DestinoTrack.Entity.Entities;
@@ -121,6 +123,8 @@ builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<ICargoPriceRepository, CargoPriceRepository>();
 builder.Services.AddScoped<ICargoTypeRateRepository, CargoTypeRateRepository>();
+builder.Services.AddScoped<IDeliveryRepository, DeliveryRepository>();
+builder.Services.AddScoped<IDeliveryExceptionRepository, DeliveryExceptionRepository>();
 
 
 

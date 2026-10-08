@@ -270,6 +270,11 @@
   <data name="CustomerNotFound" xml:space="preserve"><value>Customer not found.</value></data>
   <data name="CustomerNotActive" xml:space="preserve"><value>The customer account is not active; a cargo cannot be created for this customer.</value></data>
   <data name="CargoCreatedMovement" xml:space="preserve"><value>Cargo record created.</value></data>
+  <data name="CourierInvalid" xml:space="preserve"><value>The selected employee is not an active courier.</value></data>
+  <data name="CargoNotAssignedToCourier" xml:space="preserve"><value>This cargo is assigned to another courier.</value></data>
+  <data name="DeliveryCodeInvalid" xml:space="preserve"><value>The delivery code is incorrect; the delivery cannot be completed.</value></data>
+  <data name="RecipientNameRequired" xml:space="preserve"><value>The name of the person receiving the cargo is required.</value></data>
+  <data name="FailureDescriptionRequired" xml:space="preserve"><value>A description is required when the reason is "Other".</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>No record was specified for update.</value>
   </data>
@@ -971,4 +976,14 @@
   <data name="CargoStatus_DeliveryFailed" xml:space="preserve"><value>Delivery failed</value></data>
   <data name="CargoStatus_ReturnInProgress" xml:space="preserve"><value>Return in progress</value></data>
   <data name="CargoStatus_ReturnedToSender" xml:space="preserve"><value>Returned to sender</value></data>
+  <!-- ═══ 20 · Teslimat (TALP-64): hareket açıklamaları · başarısızlık gerekçeleri ═══ -->
+  <data name="CargoDispatchedMovement" xml:space="preserve"><value>Out for delivery. Courier: {0}</value></data>
+  <data name="CargoDeliveredMovement" xml:space="preserve"><value>Delivered. Received by: {0}</value></data>
+  <data name="DeliveryFailedMovement" xml:space="preserve"><value>Delivery failed. Reason: {0}</value></data>
+  <data name="ReturnStartedMovement" xml:space="preserve"><value>The return process started after {0} failed attempts.</value></data>
+  <data name="DeliveryFailureReason_AddressNotFound" xml:space="preserve"><value>Address not found</value></data>
+  <data name="DeliveryFailureReason_RecipientUnavailable" xml:space="preserve"><value>Recipient unavailable</value></data>
+  <data name="DeliveryFailureReason_RecipientRefused" xml:space="preserve"><value>Recipient refused</value></data>
+  <data name="DeliveryFailureReason_Damaged" xml:space="preserve"><value>Cargo damaged</value></data>
+  <data name="DeliveryFailureReason_Other" xml:space="preserve"><value>Other</value></data>
 </root>

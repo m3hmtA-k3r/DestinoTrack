@@ -270,6 +270,11 @@
   <data name="CustomerNotFound" xml:space="preserve"><value>Cliente não encontrado.</value></data>
   <data name="CustomerNotActive" xml:space="preserve"><value>A conta do cliente não está ativa; não é possível criar uma carga para este cliente.</value></data>
   <data name="CargoCreatedMovement" xml:space="preserve"><value>Registro de carga criado.</value></data>
+  <data name="CourierInvalid" xml:space="preserve"><value>O funcionário selecionado não é um entregador ativo.</value></data>
+  <data name="CargoNotAssignedToCourier" xml:space="preserve"><value>Esta carga está atribuída a outro entregador.</value></data>
+  <data name="DeliveryCodeInvalid" xml:space="preserve"><value>O código de entrega está incorreto; a entrega não pode ser concluída.</value></data>
+  <data name="RecipientNameRequired" xml:space="preserve"><value>O nome de quem recebe a carga é obrigatório.</value></data>
+  <data name="FailureDescriptionRequired" xml:space="preserve"><value>Uma descrição é obrigatória quando o motivo é "Outro".</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>Nenhum registro foi informado para atualização.</value>
   </data>
@@ -971,4 +976,14 @@
   <data name="CargoStatus_DeliveryFailed" xml:space="preserve"><value>Entrega não realizada</value></data>
   <data name="CargoStatus_ReturnInProgress" xml:space="preserve"><value>Devolução em andamento</value></data>
   <data name="CargoStatus_ReturnedToSender" xml:space="preserve"><value>Devolvido ao remetente</value></data>
+  <!-- ═══ 20 · Teslimat (TALP-64): hareket açıklamaları · başarısızlık gerekçeleri ═══ -->
+  <data name="CargoDispatchedMovement" xml:space="preserve"><value>Saiu para entrega. Entregador: {0}</value></data>
+  <data name="CargoDeliveredMovement" xml:space="preserve"><value>Entregue. Recebido por: {0}</value></data>
+  <data name="DeliveryFailedMovement" xml:space="preserve"><value>Entrega não realizada. Motivo: {0}</value></data>
+  <data name="ReturnStartedMovement" xml:space="preserve"><value>O processo de devolução começou após {0} tentativas malsucedidas.</value></data>
+  <data name="DeliveryFailureReason_AddressNotFound" xml:space="preserve"><value>Endereço não encontrado</value></data>
+  <data name="DeliveryFailureReason_RecipientUnavailable" xml:space="preserve"><value>Destinatário ausente</value></data>
+  <data name="DeliveryFailureReason_RecipientRefused" xml:space="preserve"><value>Destinatário recusou</value></data>
+  <data name="DeliveryFailureReason_Damaged" xml:space="preserve"><value>Carga danificada</value></data>
+  <data name="DeliveryFailureReason_Other" xml:space="preserve"><value>Outro</value></data>
 </root>

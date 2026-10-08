@@ -12,8 +12,8 @@
     "semantic_hash": "5536c8a2aff17aea1c4c8e5a3b9818f1"
   },
   "DestinoTrack.DataAccess/DestinoTrack.DataAccess.csproj": {
-    "mtime": 1790219669.7638416,
-    "seen": 1790220479.3648438,
+    "mtime": 1791420488.1660066,
+    "seen": 1791422262.7645133,
     "ast_hash": "fa43840b4642b3ece6aa09d24c348cf2",
     "semantic_hash": "fa43840b4642b3ece6aa09d24c348cf2"
   },
@@ -120,9 +120,9 @@
     "semantic_hash": "b9535ae4dfd0e783ad85f4e7ad750b1e"
   },
   "DestinoTrack.WebUI/Program.cs": {
-    "mtime": 1791412532.7151134,
-    "seen": 1791413256.1069791,
-    "ast_hash": "c1966052724b3224249bca9210db660e",
+    "mtime": 1791420556.2705731,
+    "seen": 1791422262.7646325,
+    "ast_hash": "52fd3f19f7c7d5e06e55a04284f0b069",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Properties/launchSettings.json": {
@@ -1428,15 +1428,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cargos/CargoService.cs": {
-    "mtime": 1791414153.1498644,
-    "seen": 1791416040.815366,
-    "ast_hash": "7b321a9f27e11822ccda26a6968e34d8",
+    "mtime": 1791421845.3806543,
+    "seen": 1791422262.7644365,
+    "ast_hash": "1b2a1ec3c32d07eb2689dbe7b56f52a9",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cargos/ICargoService.cs": {
-    "mtime": 1791415722.6735244,
-    "seen": 1791416040.8153672,
-    "ast_hash": "ebfd640dd16a174096ef2c258dee6c79",
+    "mtime": 1791420774.0022857,
+    "seen": 1791422262.764439,
+    "ast_hash": "51e9d7c50b427c4fcfb91b99f31093a0",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cargos/ITrackCodeGenerator.cs": {
@@ -1461,6 +1461,30 @@
     "mtime": 1791414268.0245702,
     "seen": 1791416040.8154159,
     "ast_hash": "31205aafbcc57bd77662a632c8994917",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Repositories/Deliveries/DeliveryRepository.cs": {
+    "mtime": 1791420446.4001904,
+    "seen": 1791422262.7645488,
+    "ast_hash": "7f0755fbe2ef1a164a9df5b439bfe266",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Repositories/Deliveries/IDeliveryRepository.cs": {
+    "mtime": 1791420435.3505802,
+    "seen": 1791422262.7645502,
+    "ast_hash": "21ad33ec6ad0f05c8747db558e917bdc",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Repositories/DeliveryExceptions/DeliveryExceptionRepository.cs": {
+    "mtime": 1791420506.5690331,
+    "seen": 1791422262.764551,
+    "ast_hash": "c5a2ea6b64bfe41a6d3daede7d16dba5",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.DataAccess/Repositories/DeliveryExceptions/IDeliveryExceptionRepository.cs": {
+    "mtime": 1791420500.2611897,
+    "seen": 1791422262.7645514,
+    "ast_hash": "bd8669f60378285c39b846b267c1fe6c",
     "semantic_hash": ""
   }
 }

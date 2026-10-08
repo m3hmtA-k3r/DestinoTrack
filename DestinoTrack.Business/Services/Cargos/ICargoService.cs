@@ -12,6 +12,17 @@ namespace DestinoTrack.Business.Services.Cargos
         Task ChangeStatusAsync(Guid cargoId, CargoStatus newStatus, Guid branchId, Guid performedByUserId,
                                string? description = null, DelayReason? delayReason = null);
 
+        // kargoyu kuryeye atar, kodu üretir (ilk çıkışta) ve dağıtıma çıkarır — üretilen kodu döner
+        Task<string> DispatchAsync(Guid cargoId, Guid courierEmployeeId, Guid branchId, Guid performedByUserId);
+
+        // kod doğrulanmadan teslim yok · teslim alan kişi ve kurye Delivery'ye yazılır
+        Task DeliverAsync(Guid cargoId, string deliveryCode, string recipientName, Guid courierEmployeeId,
+                          Guid branchId, Guid performedByUserId);
+
+        // başarısız denemeyi yazar; sınıra ulaşılınca iade sürecini kendiliğinden başlatır
+        Task FailDeliveryAsync(Guid cargoId, DeliveryFailureReason reason, string? description, Guid courierEmployeeId,
+                               Guid branchId, Guid performedByUserId);
+
 
         //fiyat, tahmini teslim ve takip no servis tarafından üretilir; ilk hareket de burada yazılır
         Task<Guid> CreateAsync(CreateCargoDto createCargoDto, Guid performedByUserId);
