@@ -1,5 +1,7 @@
-﻿using DestinoTrack.Business.Options;
+﻿using DestinoTrack.Business.Consts;
+using DestinoTrack.Business.Options;
 using DestinoTrack.Business.Services.Pricing;
+using DestinoTrack.DataAccess.Interceptors;
 using DestinoTrack.DataAccess.Repositories.CargoMovements;
 using DestinoTrack.DataAccess.Repositories.Cargos;
 using DestinoTrack.DataAccess.Repositories.Customers;
@@ -7,11 +9,13 @@ using DestinoTrack.DataAccess.Repositories.Deliveries;
 using DestinoTrack.DataAccess.Repositories.DeliveryExceptions;
 using DestinoTrack.DataAccess.Repositories.Employees;
 using DestinoTrack.DTO.DTOs.CargoDtos;
+using DestinoTrack.DTO.DTOs.Common;
 using DestinoTrack.DTO.DTOs.PricingDtos;
 using DestinoTrack.Entity.Entities;
 using DestinoTrack.Entity.Entities.Enums;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using System.Collections.Frozen;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
 
@@ -25,14 +29,13 @@ namespace DestinoTrack.Business.Services.Cargos
                           IDeliveryExceptionRepository _deliveryExceptionRepository,
                           ICargoPricingService _cargoPricingService,
                           ITrackCodeGenerator _trackCodeGenerator,
+                          ICurrentUserAccessor _currentUser,
                           IOptions<CargoSettings> _cargoSettings,
                           IStringLocalizer<SharedResource> _localizer) : ICargoService
-
-
     {
         // izin verilen geçisler Kural kodda durur, veritabanından deghiştirilemez.
         // Listede olmayan her geçiş yasaktır — Teslim Edildi ve İade Edildi son durumlardır.
-        private static readonly IReadOnlyDictionary<CargoStatus, CargoStatus[]> AllowedTransitions =
+        private static readonly FrozenDictionary<CargoStatus, CargoStatus[]> AllowedTransitions =
             new Dictionary<CargoStatus, CargoStatus[]>
             {
                 [CargoStatus.Created] = [CargoStatus.AtOriginBranch],
@@ -44,7 +47,7 @@ namespace DestinoTrack.Business.Services.Cargos
                 [CargoStatus.ReturnInProgress] = [CargoStatus.ReturnedToSender],
                 [CargoStatus.Delivered] = [],
                 [CargoStatus.ReturnedToSender] = []
-            };
+            }.ToFrozenDictionary();
 
 
         public async Task<Guid> CreateAsync(CreateCargoDto createCargoDto, Guid performedByUserId)
@@ -100,7 +103,7 @@ namespace DestinoTrack.Business.Services.Cargos
                 OriginBranchId = createCargoDto.OriginBranchId,
                 DestinationBranchId = createCargoDto.DestinationBranchId,
 
-                // D40: bilgi kargoda, hesap bağı isteğe bağlı
+                //  bilgi kargoda, hesap bağı isteğe bağlı
                 SenderName = createCargoDto.SenderName.Trim(),
                 SenderPhone = createCargoDto.SenderPhone.Trim(),
                 SenderAddress = createCargoDto.SenderAddress.Trim(),
@@ -116,7 +119,7 @@ namespace DestinoTrack.Business.Services.Cargos
 
             await _cargoRepository.CreateAsync(cargo);
 
-            // L3: ilk hareket — önceki durum yok, kargo çıkış şubesinde doğuyor
+            // ilk hareket — önceki durum yok, kargo çıkış şubesinde doğuyor
             await _cargoMovementRepository.CreateAsync(new CargoMovement
             {
                 CargoId = cargo.Id,
@@ -131,6 +134,48 @@ namespace DestinoTrack.Business.Services.Cargos
             return cargo.Id;
         }
 
+        public async Task<PagedResult<ResultCargoDto>> GetPagedAsync(CargoStatus? status = null, string? search = null, int page = 1)
+        {
+            page = page < 1 ? 1 : page;
+            var scope = GetScope();
+
+            var (cargos, totalCount) = await _cargoRepository.GetPagedScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.IsUnrestricted,
+                status, search, page, Paging.PageSize);
+
+            // Son sayfadaki tek kayıt silinince o sayfa boş kalır → varsa yeni son sayfa gösterilir
+            if (cargos.Count == 0 && totalCount > 0)
+            {
+                page = (int)Math.Ceiling(totalCount / (double)Paging.PageSize);
+                (cargos, totalCount) = await _cargoRepository.GetPagedScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.IsUnrestricted,
+                    status, search, page, Paging.PageSize);
+            }
+
+            return new PagedResult<ResultCargoDto>
+            {
+                Items = cargos.Select(c => new ResultCargoDto
+                {
+                    Id = c.Id,
+                    TrackCode = c.TrackCode,
+                    CargoStatus = c.CargoStatus,
+                    CargoType = c.CargoType,
+                    SenderName = c.SenderName,
+                    ReceiverName = c.ReceiverName,
+                    OriginBranchName = c.OriginBranch?.Name,
+                    DestinationBranchName = c.DestinationBranch?.Name,
+                    Price = c.Price,
+                    CurrencyCode = c.CurrencyCode,
+                    IsPaid = c.IsPaid,
+                    ShipmentDate = c.ShipmentDate,
+                    EstimatedArrivalDate = c.EstimatedArrivalDate
+                }).ToList(),
+                Page = page,
+                PageSize = Paging.PageSize,
+                TotalCount = totalCount
+            };
+        }
+
 
         public bool CanTransition(CargoStatus from, CargoStatus to)
         {
@@ -140,8 +185,8 @@ namespace DestinoTrack.Business.Services.Cargos
         public async Task ChangeStatusAsync(Guid cargoId, CargoStatus newStatus, Guid branchId, Guid performedByUserId,
                                             string? description = null, DelayReason? delayReason = null)
         {
-            var cargo = await _cargoRepository.GetByIdAsync(cargoId)
-                        ?? throw new ValidationException(_localizer["CargoNotFound"].Value);
+            var cargo = await FindInScopeAsync(cargoId);
+
 
             if (!CanTransition(cargo.CargoStatus, newStatus))
             {
@@ -171,8 +216,8 @@ namespace DestinoTrack.Business.Services.Cargos
 
         public async Task<string> DispatchAsync(Guid cargoId, Guid courierEmployeeId, Guid branchId, Guid performedByUserId)
         {
-            var cargo = await _cargoRepository.GetByIdAsync(cargoId)
-                        ?? throw new ValidationException(_localizer["CargoNotFound"].Value);
+            var cargo = await FindInScopeAsync(cargoId);
+
 
             // Kurye gerçekten var mı, aktif mi, kurye görevinde mi
             var courier = await _employeeRepository.GetByIdAsync(courierEmployeeId)
@@ -201,8 +246,7 @@ namespace DestinoTrack.Business.Services.Cargos
         public async Task DeliverAsync(Guid cargoId, string deliveryCode, string recipientName, Guid courierEmployeeId,
                                Guid branchId, Guid performedByUserId)
         {
-            var cargo = await _cargoRepository.GetByIdAsync(cargoId)
-                        ?? throw new ValidationException(_localizer["CargoNotFound"].Value);
+            var cargo = await FindInScopeAsync(cargoId);
 
             //kargo kime atandıysa teslimi o yapar — başka kurye kapatamaz
             if (cargo.CourierId != courierEmployeeId)
@@ -239,8 +283,8 @@ namespace DestinoTrack.Business.Services.Cargos
         public async Task FailDeliveryAsync(Guid cargoId, DeliveryFailureReason reason, string? description,
                                     Guid courierEmployeeId, Guid branchId, Guid performedByUserId)
         {
-            var cargo = await _cargoRepository.GetByIdAsync(cargoId)
-                        ?? throw new ValidationException(_localizer["CargoNotFound"].Value);
+            var cargo = await FindInScopeAsync(cargoId);
+
 
             //denemeyi de kargonun kuryesi bildirir
             if (cargo.CourierId != courierEmployeeId)
@@ -279,5 +323,44 @@ namespace DestinoTrack.Business.Services.Cargos
             }
 
         }
+
+        // kapsam roldan ve kullanıcının şube/ülke/müşteri bilgisinden çıkar
+        private CargoScope GetScope()
+        {
+            return _currentUser.Role switch
+            {
+                RoleNames.Admin => new CargoScope { IsUnrestricted = true },
+                RoleNames.Manager => new CargoScope { CountryId = _currentUser.CountryId },
+                RoleNames.Personel or RoleNames.Courier => new CargoScope { BranchId = _currentUser.BranchId },
+
+                // Kurumsal çalışanı şirketinin kargolarını, bireysel müşteri kendi gönderdiklerini görür
+                RoleNames.Customer => new CargoScope
+                {
+                    CustomerId = _currentUser.CustomerId,
+                    UserId = _currentUser.CustomerId is null ? _currentUser.UserId : null
+                },
+
+                // Tanımsız rol ya da girişsiz istek: hiçbir şey görmez
+                _ => new CargoScope()
+            };
+        }
+
+        // D49: kapsam dışındaki kayda dokunulamaz — kargo var ama bu kullanıcının değil
+        private async Task<Cargo> FindInScopeAsync(Guid cargoId)
+        {
+            var scope = GetScope();
+
+            var cargo = await _cargoRepository.GetScopedAsync(cargoId, scope.BranchId, scope.CountryId,
+                                                              scope.CustomerId, scope.UserId, scope.IsUnrestricted);
+            if (cargo != null)
+            {
+                return cargo;
+            }
+
+            // Kargo gerçekten yok mu, yoksa kapsam dışında mı — iki durum ayrı mesaj alır
+            var exists = await _cargoRepository.GetByIdAsync(cargoId) != null;
+            throw new ValidationException(_localizer[exists ? "UnauthorizedRecord" : "CargoNotFound"].Value);
+        }
+
     }
 }

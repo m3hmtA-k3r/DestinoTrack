@@ -1,4 +1,5 @@
 ﻿using DestinoTrack.DTO.DTOs.CargoDtos;
+using DestinoTrack.DTO.DTOs.Common;
 using DestinoTrack.Entity.Entities.Enums;
 
 namespace DestinoTrack.Business.Services.Cargos
@@ -26,6 +27,10 @@ namespace DestinoTrack.Business.Services.Cargos
 
         //fiyat, tahmini teslim ve takip no servis tarafından üretilir; ilk hareket de burada yazılır
         Task<Guid> CreateAsync(CreateCargoDto createCargoDto, Guid performedByUserId);
+
+        // yalnızca kullanıcının kapsamındaki kargolar
+        Task<PagedResult<ResultCargoDto>> GetPagedAsync(CargoStatus? status = null, string? search = null, int page = 1);
+
 
 
     }

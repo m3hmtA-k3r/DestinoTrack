@@ -275,6 +275,7 @@
   <data name="DeliveryCodeInvalid" xml:space="preserve"><value>The delivery code is incorrect; the delivery cannot be completed.</value></data>
   <data name="RecipientNameRequired" xml:space="preserve"><value>The name of the person receiving the cargo is required.</value></data>
   <data name="FailureDescriptionRequired" xml:space="preserve"><value>A description is required when the reason is "Other".</value></data>
+  <data name="UnauthorizedRecord" xml:space="preserve"><value>You are not authorized to access this record.</value></data>
   <data name="RecordIdRequired" xml:space="preserve">
     <value>No record was specified for update.</value>
   </data>
