@@ -18,6 +18,7 @@ using Microsoft.Extensions.Options;
 using System.Collections.Frozen;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 
 namespace DestinoTrack.Business.Services.Cargos
 {
@@ -30,6 +31,8 @@ namespace DestinoTrack.Business.Services.Cargos
                           ICargoPricingService _cargoPricingService,
                           ITrackCodeGenerator _trackCodeGenerator,
                           ICurrentUserAccessor _currentUser,
+                          IBarcodeService _barcodeService,
+                          IPublicTrackingUrl _publicTrackingUrl,
                           IOptions<CargoSettings> _cargoSettings,
                           IStringLocalizer<SharedResource> _localizer) : ICargoService
     {
@@ -176,6 +179,189 @@ namespace DestinoTrack.Business.Services.Cargos
             };
         }
 
+
+        public async Task<CargoDetailDto> GetDetailAsync(Guid id)
+        {
+            var scope = GetScope();
+
+            var cargo = await _cargoRepository.GetDetailScopedAsync(id, scope.BranchId, scope.CountryId,
+                                                                    scope.CustomerId, scope.UserId, scope.IsUnrestricted);
+            if (cargo == null)
+            {
+                // kayıt var ama kapsam dışıysa yetki hatası, hiç yoksa bulunamadı
+                var exists = await _cargoRepository.GetByIdAsync(id) != null;
+                throw new ValidationException(_localizer[exists ? "UnauthorizedRecord" : "CargoNotFound"].Value);
+            }
+
+            return new CargoDetailDto
+            {
+                Id = cargo.Id,
+                TrackCode = cargo.TrackCode,
+                Barcode = cargo.Barcode,
+                CargoStatus = cargo.CargoStatus,
+                CargoType = cargo.CargoType,
+
+                SenderName = cargo.SenderName,
+                SenderPhone = cargo.SenderPhone,
+                SenderAddress = cargo.SenderAddress,
+                ReceiverName = cargo.ReceiverName,
+                ReceiverPhone = cargo.ReceiverPhone,
+                ReceiverAddress = cargo.ReceiverAddress,
+                CustomerTitle = cargo.Customer?.Title,
+
+                OriginBranchName = cargo.OriginBranch?.Name,
+                DestinationBranchName = cargo.DestinationBranch?.Name,
+                Weight = cargo.Weight,
+                Desi = cargo.Desi,
+
+                Price = cargo.Price,
+                CurrencyCode = cargo.CurrencyCode,
+                IsPaid = cargo.IsPaid,
+                PaymentType = cargo.PaymentType,
+                ShipmentDate = cargo.ShipmentDate,
+                EstimatedArrivalDate = cargo.EstimatedArrivalDate,
+
+                CourierName = cargo.Courier == null ? null : $"{cargo.Courier.FirstName} {cargo.Courier.LastName}",
+                DeliveryCode = cargo.DeliveryCode,
+                RecipientName = cargo.Delivery?.RecipientName,
+                DeliveredAt = cargo.Delivery?.DeliveredAt,
+                FailedAttemptCount = cargo.DeliveryExceptions?.Count ?? 0,
+
+                // çizelge eskiden yeniye — ilk satır "Oluşturuldu", son satır güncel durum
+                Movements = (cargo.Movements ?? new List<CargoMovement>())
+                    .OrderBy(m => m.MovementDate)
+                    .ThenBy(m => m.CargoStatus)
+                    .Select(m => new CargoMovementDto
+                    {
+                        MovementDate = m.MovementDate,
+                        OldStatus = m.OldStatus,
+                        CargoStatus = m.CargoStatus,
+                        Description = m.Description,
+                        DelayReason = m.DelayReason,
+                        BranchName = m.Branch?.Name,
+                        PerformedByName = m.PerformedByUser == null
+                            ? null
+                            : $"{m.PerformedByUser.FirstName} {m.PerformedByUser.LastName}"
+                    }).ToList()
+            };
+        }
+
+        public async Task<CargoLabelDto> GetLabelAsync(Guid id)
+        {
+            var scope = GetScope();
+
+            var cargo = await _cargoRepository.GetLabelScopedAsync(id, scope.BranchId, scope.CountryId,
+                                                                   scope.CustomerId, scope.UserId, scope.IsUnrestricted);
+            if (cargo == null)
+            {
+                // detayda olduğu gibi: kayıt var ama kapsam dışıysa yetki hatası, hiç yoksa bulunamadı
+                var exists = await _cargoRepository.GetByIdAsync(id) != null;
+                throw new ValidationException(_localizer[exists ? "UnauthorizedRecord" : "CargoNotFound"].Value);
+            }
+
+            // QR takip sayfasının adresini taşır. Adres üretilemiyorsa (istek yoksa)
+            // eskisi gibi takip numarasının kendisi yazılır — etiket her koşulda basılabilir
+            var qrContent = _publicTrackingUrl.For(cargo.TrackCode) ?? cargo.TrackCode;
+
+
+            return new CargoLabelDto
+            {
+                Id = cargo.Id,
+                TrackCode = cargo.TrackCode,
+                Barcode = cargo.Barcode,
+                BarcodeSvg = _barcodeService.Code128Svg(cargo.Barcode),
+                QrSvg = _barcodeService.QrSvg(qrContent),
+                QrContent = qrContent,
+                CargoType = cargo.CargoType,
+
+                SenderName = cargo.SenderName,
+                SenderPhone = cargo.SenderPhone,
+                SenderAddress = cargo.SenderAddress,
+                CustomerTitle = cargo.Customer?.Title,
+                ReceiverName = cargo.ReceiverName,
+                ReceiverPhone = cargo.ReceiverPhone,
+                ReceiverAddress = cargo.ReceiverAddress,
+
+                OriginBranchName = cargo.OriginBranch?.Name,
+                OriginBranchCode = cargo.OriginBranch?.Code,
+                OriginCityName = cargo.OriginBranch?.City?.Name,
+                DestinationBranchName = cargo.DestinationBranch?.Name,
+                DestinationBranchCode = cargo.DestinationBranch?.Code,
+                DestinationCityName = cargo.DestinationBranch?.City?.Name,
+                DestinationCountryName = cargo.DestinationBranch?.City?.Country?.Name,
+
+                Weight = cargo.Weight,
+                Width = cargo.Width,
+                Height = cargo.Height,
+                Length = cargo.Length,
+                Desi = cargo.Desi,
+
+                Price = cargo.Price,
+                CurrencyCode = cargo.CurrencyCode,
+                PaymentType = cargo.PaymentType,
+                IsPaid = cargo.IsPaid,
+
+                ShipmentDate = cargo.ShipmentDate,
+                EstimatedArrivalDate = cargo.EstimatedArrivalDate,
+                PrintedAt = DateTime.UtcNow
+            };
+        }
+
+        public async Task<PublicTrackingDto?> GetPublicTrackingAsync(string trackCode)
+        {
+            // Biçim denetimi önce: hatalı metin için sorgu açılmaz
+            trackCode = (trackCode ?? string.Empty).Trim().ToUpperInvariant();
+            if (!TrackCodePattern.IsMatch(trackCode))
+            {
+                return null;
+            }
+
+            var cargo = await _cargoRepository.GetPublicByTrackCodeAsync(trackCode);
+            if (cargo == null)
+            {
+                return null;
+            }
+
+            var movements = (cargo.Movements ?? new List<CargoMovement>())
+                .OrderBy(m => m.MovementDate)
+                .ThenBy(m => m.CargoStatus)
+                .ToList();
+
+            // tutar yalnız kapıda ödenecekse görünür
+            var kapidaOdenecek = cargo.PaymentType == PaymentType.ReceiverPays && !cargo.IsPaid;
+
+            return new PublicTrackingDto
+            {
+                TrackCode = cargo.TrackCode,
+                CargoStatus = cargo.CargoStatus,
+                CargoType = cargo.CargoType,
+
+                ShipmentDate = cargo.ShipmentDate,
+                EstimatedArrivalDate = cargo.EstimatedArrivalDate,
+
+                // Teslim zamanı hareketten: Delivery satırında teslim alan kişinin adı var, oraya hiç dokunmuyoruz
+                DeliveredAt = movements.LastOrDefault(m => m.CargoStatus == CargoStatus.Delivered)?.MovementDate,
+
+                OriginCityName = cargo.OriginBranch?.City?.Name,
+                DestinationCityName = cargo.DestinationBranch?.City?.Name,
+
+                AmountDueOnDelivery = kapidaOdenecek ? cargo.Price : null,
+                CurrencyCode = kapidaOdenecek ? cargo.CurrencyCode : null,
+
+                Movements = movements.Select(m => new PublicMovementDto
+                {
+                    MovementDate = m.MovementDate,
+                    CargoStatus = m.CargoStatus,
+                    BranchName = m.Branch?.Name,
+                    CityName = m.Branch?.City?.Name,
+                    DelayReason = m.DelayReason
+                }).ToList()
+            };
+        }
+
+
+        // {Önek}-{Yıl}-{6 rakam}. Uymayan metin veritabanına hiç gitmez
+        private static readonly Regex TrackCodePattern = new(@"^[A-Z]{2,5}-\d{4}-\d{6}$", RegexOptions.Compiled);
 
         public bool CanTransition(CargoStatus from, CargoStatus to)
         {
@@ -345,7 +531,7 @@ namespace DestinoTrack.Business.Services.Cargos
             };
         }
 
-        // D49: kapsam dışındaki kayda dokunulamaz — kargo var ama bu kullanıcının değil
+        // kapsam dışındaki kayda dokunulamaz — kargo var ama bu kullanıcının değil
         private async Task<Cargo> FindInScopeAsync(Guid cargoId)
         {
             var scope = GetScope();

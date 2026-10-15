@@ -1,0 +1,113 @@
+﻿@using DestinoTrack.DTO.DTOs.CargoDtos
+@model PublicTrackingDto
+@{
+    ViewData["Title"] = Model.TrackCode;
+
+    // Admin detayıyla aynı kural: teslim edildi yeşil, iade/başarısız kırmızı, diğerleri bilgi
+    string DurumSinifi(CargoStatus s) => s switch
+    {
+        CargoStatus.Delivered => "chip-active",
+        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
+        _ => "chip-info"
+    };
+}
+
+<!-- Başlık bandı: takip no + güncel durum -->
+<section class="bg-inverse-surface">
+    <div class="mx-auto max-w-7xl px-margin-mobile lg:px-margin-desktop py-12 lg:py-16">
+        <span class="font-label-md text-label-md uppercase tracking-wider text-inverse-on-surface/60">@L["TrackCode"]</span>
+        <div class="mt-2 flex flex-wrap items-center gap-4">
+            <h1 class="font-mono font-headline-lg-mobile text-headline-lg-mobile sm:font-headline-lg sm:text-headline-lg text-inverse-on-surface">@Model.TrackCode</h1>
+            <span class="@DurumSinifi(Model.CargoStatus)">@L["CargoStatus_" + Model.CargoStatus]</span>
+        </div>
+        <a asp-controller="Home" asp-action="Index"
+           class="mt-6 inline-flex items-center gap-2 font-body-sm text-body-sm text-inverse-on-surface/70 hover:text-inverse-on-surface transition-colors">
+            <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+            <span>@L["TrackAnother"]</span>
+        </a>
+    </div>
+</section>
+
+<div class="mx-auto grid max-w-7xl gap-6 px-margin-mobile lg:px-margin-desktop py-10 lg:grid-cols-3">
+
+    <!-- Özet -->
+    <div class="m3-card p-6 flex flex-col gap-5">
+        <div>
+            <span class="font-label-md text-label-md uppercase text-primary">@L["Route"]</span>
+            <div class="mt-2 flex items-center gap-3">
+                <span class="font-headline-sm text-headline-sm text-on-surface">@Model.OriginCityName</span>
+                <span class="material-symbols-outlined text-[20px] text-on-surface-variant">arrow_forward</span>
+                <span class="font-headline-sm text-headline-sm text-on-surface">@Model.DestinationCityName</span>
+            </div>
+        </div>
+
+        <dl class="flex flex-col gap-2 border-t border-outline-variant pt-4 font-body-sm text-body-sm">
+            <div class="flex justify-between gap-4">
+                <dt class="text-on-surface-variant">@L["CargoType"]</dt>
+                <dd class="text-on-surface">@L["CargoType_" + Model.CargoType]</dd>
+            </div>
+            <div class="flex justify-between gap-4">
+                <dt class="text-on-surface-variant">@L["ShipmentDate"]</dt>
+                <dd class="text-on-surface">@Model.ShipmentDate.ToLocalTime().ToString("dd.MM.yyyy")</dd>
+            </div>
+            <div class="flex justify-between gap-4">
+                <dt class="text-on-surface-variant">@L["EstimatedArrival"]</dt>
+                <dd class="text-on-surface">@Model.EstimatedArrivalDate.ToLocalTime().ToString("dd.MM.yyyy")</dd>
+            </div>
+            @if (Model.DeliveredAt.HasValue)
+            {
+                <div class="flex justify-between gap-4">
+                    <dt class="text-on-surface-variant">@L["DeliveredAt"]</dt>
+                    <dd class="text-on-surface">@Model.DeliveredAt.Value.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</dd>
+                </div>
+            }
+        </dl>
+
+        @* Tutarı doldurma kararını servis verdi: yalnız alıcı ödemeli ve ödenmemiş gönderide dolu *@
+        @if (Model.AmountDueOnDelivery.HasValue)
+        {
+            <div class="flex items-center justify-between gap-4 rounded-xl bg-secondary-container px-4 py-3">
+                <span class="flex items-center gap-2 font-label-md text-label-md text-on-secondary-fixed">
+                    <span class="material-symbols-outlined text-[20px]">payments</span>
+                    @L["AmountDueOnDelivery"]
+                </span>
+                <span class="font-headline-sm text-headline-sm text-on-secondary-fixed">@Model.AmountDueOnDelivery.Value.ToString("N2") @Model.CurrencyCode</span>
+            </div>
+        }
+    </div>
+
+    <!-- Hareket çizelgesi: eskiden yeniye, son satır güncel durum -->
+    <div class="m3-card p-6 lg:col-span-2">
+        <h2 class="mb-4 font-headline-sm text-headline-sm text-on-surface">@L["Movements"]</h2>
+        <ol class="flex flex-col">
+            @for (var i = 0; i < Model.Movements.Count; i++)
+            {
+                var m = Model.Movements[i];
+                var sonuncu = i == Model.Movements.Count - 1;
+                <li class="flex gap-4">
+                    <div class="flex flex-col items-center shrink-0">
+                        <span class="mt-1.5 h-3 w-3 rounded-full @(sonuncu ? "bg-primary" : "bg-outline")"></span>
+                        @if (!sonuncu)
+                        {
+                            <span class="w-px flex-1 bg-outline-variant"></span>
+                        }
+                    </div>
+                    <div class="min-w-0 pb-6">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="@DurumSinifi(m.CargoStatus)">@L["CargoStatus_" + m.CargoStatus]</span>
+                            <span class="font-body-sm text-body-sm text-on-surface-variant">@m.MovementDate.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
+                        </div>
+                        <p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
+                            @(string.IsNullOrEmpty(m.CityName) ? m.BranchName : $"{m.BranchName}, {m.CityName}")
+                        </p>
+                        @if (m.DelayReason.HasValue)
+                        {
+                            <p class="mt-1 font-body-sm text-body-sm text-on-surface">@L["DelayReason_" + m.DelayReason.Value]</p>
+                        }
+                    </div>
+                </li>
+            }
+        </ol>
+    </div>
+
+</div>

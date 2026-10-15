@@ -34,6 +34,7 @@ using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Threading.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -140,6 +141,10 @@ builder.Services.AddScoped<ICargoPricingService, CargoPricingService>();
 builder.Services.AddScoped<IPricingRuleService, PricingRuleService>();
 builder.Services.AddScoped<ITrackCodeGenerator, TrackCodeGenerator>();
 builder.Services.AddScoped<ICargoService, CargoService>();
+builder.Services.AddScoped<IBarcodeService, BarcodeService>();
+builder.Services.AddScoped<IPublicTrackingUrl, HttpPublicTrackingUrl>();
+
+
 
 
 
@@ -166,6 +171,24 @@ builder.Services.AddSession(options =>
     options.Cookie.Name = ".DestinoTrack.Session";
     options.Cookie.IsEssential = true;           
     options.IdleTimeout = TimeSpan.FromMinutes(30);
+});
+
+//girişsiz takip ucu — aynı IP dakikada 20 sorgu.
+// Kota aşılırsa 429 döner, UseStatusCodePagesWithReExecute bunu durum sayfasına çevirir
+builder.Services.AddRateLimiter(options =>
+{
+    options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;
+
+    options.AddPolicy("track", context =>
+        RateLimitPartition.GetFixedWindowLimiter(
+            // Her IP kendi kotasını alır; tek havuz olsaydı bir kişi herkesi kilitlerdi
+            partitionKey: context.Connection.RemoteIpAddress?.ToString() ?? "bilinmeyen",
+            factory: _ => new FixedWindowRateLimiterOptions
+            {
+                PermitLimit = 20,
+                Window = TimeSpan.FromMinutes(1),
+                QueueLimit = 0
+            }));
 });
 
 
@@ -199,6 +222,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseRateLimiter();
 app.UseSession();
 
 // Dil seçimi çerezden okunur — Authentication'dan önce çalışmalı

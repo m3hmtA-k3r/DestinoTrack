@@ -267,6 +267,7 @@
   <data name="CargoNotFound" xml:space="preserve"><value>Kargo bulunamadı.</value></data>
   <data name="InvalidStatusTransition" xml:space="preserve"><value>{0} durumundan {1} durumuna geçilemez.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Takip numarası üretilemedi, lütfen yeniden deneyin.</value></data>
+  <data name="BarcodeValueInvalid" xml:space="preserve"><value>Barkod üretilecek değer geçersiz.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Müşteri bulunamadı.</value></data>
   <data name="CustomerNotActive" xml:space="preserve"><value>Müşteri hesabı aktif değil, bu müşteri adına kargo açılamaz.</value></data>
   <data name="CargoCreatedMovement" xml:space="preserve"><value>Kargo kaydı oluşturuldu.</value></data>
@@ -414,9 +415,9 @@
   <data name="TrackAction" xml:space="preserve">
     <value>Sorgula</value>
   </data>
-  <data name="TrackNotice" xml:space="preserve">
-    <value>Kargo modülü henüz tamamlanmadı. Takip sorgusu Cargo servisi eklendiğinde çalışacak.</value>
-  </data>
+  <data name="TrackNotFound" xml:space="preserve"><value>Bu takip numarasıyla bir gönderi bulunamadı. Numarayı kontrol edip yeniden deneyin.</value></data>
+  <data name="AmountDueOnDelivery" xml:space="preserve"><value>Kapıda Ödenecek</value></data>
+  <data name="TrackAnother" xml:space="preserve"><value>Başka bir gönderi sorgula</value></data>
   <data name="Status_Created" xml:space="preserve">
     <value>Oluşturuldu</value>
   </data>
@@ -987,4 +988,34 @@
   <data name="DeliveryFailureReason_RecipientRefused" xml:space="preserve"><value>Alıcı teslim almadı</value></data>
   <data name="DeliveryFailureReason_Damaged" xml:space="preserve"><value>Kargo hasarlı</value></data>
   <data name="DeliveryFailureReason_Other" xml:space="preserve"><value>Diğer</value></data>
+  <!-- ═══ 21 · Kargo ekranı (TALP-66): liste sütunları · arama · detay ═══ -->
+  <data name="SearchCargo" xml:space="preserve"><value>Takip no, gönderici veya alıcı ara</value></data>
+  <data name="Route" xml:space="preserve"><value>Güzergah</value></data>
+  <data name="SenderReceiver" xml:space="preserve"><value>Gönderici / Alıcı</value></data>
+  <data name="EstimatedArrival" xml:space="preserve"><value>Tahmini Teslim</value></data>
+  <data name="Unpaid" xml:space="preserve"><value>Ödenmedi</value></data>
+  <data name="Detail" xml:space="preserve"><value>Detay</value></data>
+  <data name="Price" xml:space="preserve"><value>Ücret</value></data>
+  <data name="Back" xml:space="preserve"><value>Geri</value></data>
+  <data name="Sender" xml:space="preserve"><value>Gönderici</value></data>
+  <data name="Receiver" xml:space="preserve"><value>Alıcı</value></data>
+  <data name="Movements" xml:space="preserve"><value>Hareketler</value></data>
+  <data name="Weight" xml:space="preserve"><value>Ağırlık</value></data>
+  <data name="Desi" xml:space="preserve"><value>Desi</value></data>
+  <data name="ShipmentDate" xml:space="preserve"><value>Gönderi Tarihi</value></data>
+  <data name="PaymentType" xml:space="preserve"><value>Ödeme Şekli</value></data>
+  <data name="PaymentType_SenderPays" xml:space="preserve"><value>Gönderici öder</value></data>
+  <data name="PaymentType_ReceiverPays" xml:space="preserve"><value>Alıcı öder (kapıda tahsilat)</value></data>
+  <data name="Paid" xml:space="preserve"><value>Ödendi</value></data>
+  <data name="Delivery" xml:space="preserve"><value>Teslimat</value></data>
+  <data name="NotDispatchedYet" xml:space="preserve"><value>Kargo henüz dağıtıma çıkmadı.</value></data>
+  <data name="DeliveryCode" xml:space="preserve"><value>Teslimat Kodu</value></data>
+  <data name="RecipientName" xml:space="preserve"><value>Teslim Alan</value></data>
+  <data name="DeliveredAt" xml:space="preserve"><value>Teslim Zamanı</value></data>
+  <data name="FailedAttempts" xml:space="preserve"><value>{0} başarısız teslim denemesi</value></data>
+  <data name="DelayReason_Traffic" xml:space="preserve"><value>Trafik</value></data>
+  <data name="DelayReason_Weather" xml:space="preserve"><value>Hava koşulları</value></data>
+  <data name="DelayReason_AddressNotFound" xml:space="preserve"><value>Adres bulunamadı</value></data>
+  <data name="DelayReason_RecipientUnavailable" xml:space="preserve"><value>Alıcı adreste yok</value></data>
+  <data name="DelayReason_Customs" xml:space="preserve"><value>Gümrük işlemleri</value></data>
 </root>

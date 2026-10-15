@@ -10,7 +10,7 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
     {
         private readonly AppDbContext _context = context;
 
-        public async Task<Cargo> GetByTrackCodeAsync(string trackCode)
+        public async Task<Cargo?> GetByTrackCodeAsync(string trackCode)
         {
             return await _context.Cargos
                 .FirstOrDefaultAsync(c => c.TrackCode == trackCode);
@@ -68,7 +68,7 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        // R3 · R4: kapsamın sorgu karşılığı — iki metot da aynı kuralı kullanır, kural tek yerde durur
+        // kapsamın sorgu karşılığı — iki metot da aynı kuralı kullanır, kural tek yerde durur
         private IQueryable<Cargo> Scoped(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted)
         {
             IQueryable<Cargo> query = _context.Cargos;
@@ -106,5 +106,55 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
         }
 
 
-    }
+        public async Task<Cargo?> GetDetailScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted)
+        {
+            return await Scoped(branchId, countryId, customerId, userId, unrestricted)
+                .Include(c => c.OriginBranch)
+                .Include(c => c.DestinationBranch)
+                .Include(c => c.Courier)
+                .Include(c => c.Customer)
+                .Include(c => c.Delivery)
+                    .ThenInclude(d => d.DeliveredByEmployee)
+                .Include(c => c.DeliveryExceptions)
+                .Include(c => c.Movements)
+                    .ThenInclude(m => m.Branch)
+                .Include(c => c.Movements)
+                    .ThenInclude(m => m.PerformedByUser)
+                .AsSplitQuery()
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+
+        public async Task<Cargo?> GetLabelScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId,
+                                              Guid? userId, bool unrestricted)
+        {
+            // Etikette yalnız şube adı değil, şube + şehir + varış ülkesi yazar — zincirli Include bu yüzden.
+            return await Scoped(branchId, countryId, customerId, userId, unrestricted)
+                .Include(c => c.OriginBranch)
+                    .ThenInclude(b => b.City)
+                .Include(c => c.DestinationBranch)
+                    .ThenInclude(b => b.City)
+                        .ThenInclude(ct => ct.Country)
+                .Include(c => c.Customer)
+                .FirstOrDefaultAsync(c => c.Id == id);
+        }
+
+        public async Task<Cargo?> GetPublicByTrackCodeAsync(string trackCode)
+        {
+            // Scoped(...) YOK — gerekçe arayüzde. Silinmiş kargo global süzgeçle zaten dışarıda.
+            // Çizelgede "şube adı, şehir" yazacağı için hareketin şubesi ve şehri de çekilir  
+            return await _context.Cargos
+                .Include(c => c.OriginBranch)
+                    .ThenInclude(b => b.City)
+                .Include(c => c.DestinationBranch)
+                    .ThenInclude(b => b.City)
+                .Include(c => c.Movements)
+                    .ThenInclude(m => m.Branch)
+                        .ThenInclude(b => b.City)
+                .FirstOrDefaultAsync(c => c.TrackCode == trackCode);
+        }
+
+
+
+    } 
 }

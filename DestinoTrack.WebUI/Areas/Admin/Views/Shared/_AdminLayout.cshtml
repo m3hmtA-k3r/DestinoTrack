@@ -51,11 +51,13 @@
                     <span class="material-symbols-outlined text-[20px]">dashboard</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_Dashboard"]</span>
                 </span>
-                <span class="@navDisabled" title="@L["ComingSoon"]">
+                <a asp-area="Admin" asp-controller="Cargo" asp-action="Index" class="@(controller == "Cargo" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">inventory_2</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_Shipments"]</span>
-                </span>
-                <span class="@navDisabled" title="@L["ComingSoon"]">
+                </a>
+        
+
+iö                <span class="@navDisabled" title="@L["ComingSoon"]">
                     <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_CourierDistribution"]</span>
                 </span>

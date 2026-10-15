@@ -1,0 +1,163 @@
+﻿@model CargoIndexViewModel
+@{
+    ViewData["Title"] = L["Menu_Shipments"].Value;
+
+    var chipBase = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-label-md text-label-md transition-colors";
+    var chipOn = chipBase + " bg-primary-container text-on-primary";
+    var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
+
+    // Durum rozetinin rengi: teslim yeşil, iade/başarısız kırmızı, yolda olan nötr
+    string DurumSinifi(CargoStatus s) => s switch
+    {
+        CargoStatus.Delivered => "chip-success",
+        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
+        _ => "chip-info"
+    };
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">inventory_2</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["AdminPanel"]</span>
+            <div class="flex items-center gap-2">
+                <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Menu_Shipments"]</h1>
+                <span class="chip-neutral">@Model.Cargos.TotalCount</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+@if (TempData["Error"] is string error)
+{
+    <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">
+        <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+        <span class="font-body-sm text-body-sm">@error</span>
+    </div>
+}
+
+<!-- Filtre: durum çipleri + arama : POST → oturum → yönlendirme) -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+    <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2">
+        <input type="hidden" name="q" value="@Model.Search" />
+
+        <button type="submit" name="status" value="" class="@(Model.SelectedStatus == null ? chipOn : chipOff)">@L["All"]</button>
+
+        @foreach (var status in Enum.GetValues<CargoStatus>())
+        {
+            <button type="submit" name="status" value="@status"
+                    class="@(Model.SelectedStatus == status ? chipOn : chipOff)">
+                @L["CargoStatus_" + status]
+            </button>
+        }
+    </form>
+
+    <form asp-action="Filter" method="post" class="flex items-center gap-2 w-full lg:w-auto">
+        <input type="hidden" name="status" value="@Model.SelectedStatus" />
+        <div class="relative flex-1 lg:w-72">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
+            <input type="search" name="q" value="@Model.Search" placeholder="@L["SearchCargo"]"
+                   class="field-input pl-10" autocomplete="off" data-clear-submit />
+        </div>
+        <button type="submit" class="btn-tonal shrink-0">@L["Search"]</button>
+    </form>
+</div>
+
+<!-- Liste -->
+<div class="m3-card overflow-hidden">
+    @if (Model.Cargos.Items.Count > 0)
+    {
+        <div class="overflow-x-auto">
+            <table class="m3-table font-body-sm text-body-sm">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-6">@L["TrackCode"]</th>
+                        <th class="py-3.5 px-4">@L["Status"]</th>
+                        <th class="py-3.5 px-4">@L["Route"]</th>
+                        <th class="py-3.5 px-4">@L["SenderReceiver"]</th>
+                        <th class="py-3.5 px-4 text-right">@L["Price"]</th>
+                        <th class="py-3.5 px-4">@L["EstimatedArrival"]</th>
+                        <th class="py-3.5 px-6 text-right">@L["Actions"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cargo in Model.Cargos.Items)
+                    {
+                        <tr>
+                            <td class="py-4 px-6">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-on-surface">@cargo.TrackCode</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">@L["CargoType_" + cargo.CargoType]</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4"><span class="@DurumSinifi(cargo.CargoStatus)">@L["CargoStatus_" + cargo.CargoStatus]</span></td>
+                            <td class="py-4 px-4 text-on-surface">@cargo.OriginBranchName → @cargo.DestinationBranchName</td>
+                            <td class="py-4 px-4">
+                                <div class="flex flex-col">
+                                    <span class="text-on-surface">@cargo.SenderName</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">→ @cargo.ReceiverName</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4 text-right text-on-surface">
+                                @cargo.Price.ToString("N2") @cargo.CurrencyCode
+                                @if (!cargo.IsPaid)
+                                {
+                                    <span class="chip-neutral">@L["Unpaid"]</span>
+                                }
+                            </td>
+                            <td class="py-4 px-4 text-on-surface">@cargo.EstimatedArrivalDate.ToString("dd.MM.yyyy")</td>
+                            <td class="py-4 px-6">
+                                <div class="flex items-center justify-end gap-2">
+                                    <a asp-action="Detail" asp-route-id="@cargo.Id" title="@L["Detail"]"
+                                       class="p-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-colors">
+                                        <span class="material-symbols-outlined text-[18px]">visibility</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @await Html.PartialAsync("_Pagination", Model.Cargos)
+    }
+    else if (Model.IsFiltered)
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+            <form asp-action="Filter" method="post">
+                <input type="hidden" name="status" value="" />
+                <input type="hidden" name="q" value="" />
+                <button type="submit" class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+                    <span>@L["ClearFilter"]</span>
+                </button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">inventory_2</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</p>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Arama kutusu boşaltılınca filtre kendiliğinden kalkar
+        document.querySelectorAll('[data-clear-submit]').forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value === '') {
+                    input.form.submit();
+                }
+            });
+        });
+    </script>
+}

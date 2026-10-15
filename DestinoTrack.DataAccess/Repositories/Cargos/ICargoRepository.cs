@@ -6,7 +6,8 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 {
     public interface ICargoRepository : IRepository<Cargo>
     {
-        Task<Cargo> GetByTrackCodeAsync(string trackCode);
+       
+        Task<Cargo?> GetByTrackCodeAsync(string trackCode);
         Task<int> CountByStatusAsync(CargoStatus status);
 
         // üretilen takip no daha önce kullanılmış mı (silinmişler dahil — numara geri dönüşmez)
@@ -19,6 +20,18 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 
         // Tek kargo, kapsam içindeyse — kapsam dışındaysa null
         Task<Cargo?> GetScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted);
+
+
+        // detay sayfası — hareketler, teslimat, başarısız denemeler ve şubelerle birlikte  
+        Task<Cargo?> GetDetailScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted);
+
+        // etiket — şube + şehir + ülke ile birlikte; hareketler gerekmez 
+        Task<Cargo?> GetLabelScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted);
+
+        // korumayı tahmin edilemez takip numarası sağlar. Çizelge için hareketler de gelir
+        Task<Cargo?> GetPublicByTrackCodeAsync(string trackCode);
+
+
 
     }
 }

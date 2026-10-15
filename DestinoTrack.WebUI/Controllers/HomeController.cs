@@ -12,29 +12,37 @@ namespace DestinoTrack.WebUI.Controllers
             return View();
         }
 
-        // Takip sorgusu. Cargo servisi yazıldığında burada gerçek arama yapılacak
+        // Takip sorgusu: aramayı TrackController yapar, burası yalnız adrese çevirir 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Track(string code)
         {
-            TempData["TrackCode"] = code;
-            TempData["TrackNotice"] = _localizer["TrackNotice"].Value;
+            code = (code ?? string.Empty).Trim().ToUpperInvariant();
 
-            return RedirectToAction(nameof(Index));
+            if (string.IsNullOrEmpty(code))
+            {
+                TempData["TrackNotice"] = _localizer["TrackNotFound"].Value;
+
+                return RedirectToAction(nameof(Index));
+            }
+
+            return RedirectToAction("Index", "Track", new { code });
         }
+
 
         public IActionResult Privacy()
         {
             return View();
         }
 
-        // Beklenmeyen hata (500) · UseExceptionHandler isteği buraya yeniden çalıştırır
+        // Beklenmeyen hata UseExceptionHandler isteği buraya yeniden çalıştırır
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = HttpContext.TraceIdentifier });
         }
 
-        // Gövdesi boş hata kodları (404 · 400 · 405 …) · UseStatusCodePagesWithReExecute isteği buraya yeniden çalıştırır
+        // Gövdesi boş hata kodları UseStatusCodePagesWithReExecute isteği buraya yeniden çalıştırır
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult HttpStatus(int id)
         {

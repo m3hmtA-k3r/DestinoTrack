@@ -1,0 +1,184 @@
+﻿@using DestinoTrack.DTO.DTOs.CargoDtos
+@model CargoDetailDto
+@{
+    ViewData["Title"] = Model.TrackCode;
+
+    string DurumSinifi(CargoStatus s) => s switch
+    {
+        CargoStatus.Delivered => "chip-active",
+        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
+        _ => "chip-info"
+    };
+}
+
+<!-- Başlık: takip no + güncel durum -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">inventory_2</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["Menu_Shipments"]</span>
+            <div class="flex items-center gap-2">
+                <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@Model.TrackCode</h1>
+                <span class="@DurumSinifi(Model.CargoStatus)">@L["CargoStatus_" + Model.CargoStatus]</span>
+            </div>
+        </div>
+    </div>
+    <a asp-action="Index" class="btn-tonal h-11 w-full sm:w-auto">
+        <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+        <span>@L["Back"]</span>
+    </a>
+</div>
+
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+    <!-- Sol: taraflar ve gönderi bilgileri -->
+    <div class="lg:col-span-2 flex flex-col gap-6">
+
+        <div class="m3-card p-6">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["SenderReceiver"]</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-1">
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase">@L["Sender"]</span>
+                    <span class="font-bold text-on-surface">@Model.SenderName</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">@Model.SenderPhone</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">@Model.SenderAddress</span>
+                    @if (!string.IsNullOrEmpty(Model.CustomerTitle))
+                    {
+                        <span class="chip-info">@Model.CustomerTitle</span>
+                    }
+                </div>
+                <div class="flex flex-col gap-1">
+                    <span class="font-label-md text-label-md text-on-surface-variant uppercase">@L["Receiver"]</span>
+                    <span class="font-bold text-on-surface">@Model.ReceiverName</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">@Model.ReceiverPhone</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">@Model.ReceiverAddress</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- hareket zaman çizelgesi -->
+        <div class="m3-card p-6">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["Movements"]</h2>
+            <ol class="flex flex-col">
+                @for (var i = 0; i < Model.Movements.Count; i++)
+                {
+                    var m = Model.Movements[i];
+                    var sonuncu = i == Model.Movements.Count - 1;
+                    <li class="flex gap-4">
+                        <!-- Nokta ve çizgi: son satırda çizgi yok -->
+                        <div class="flex flex-col items-center shrink-0">
+                            <span class="w-3 h-3 rounded-full @(sonuncu ? "bg-primary" : "bg-outline") mt-1.5"></span>
+                            @if (!sonuncu)
+                            {
+                                <span class="w-px flex-1 bg-outline-variant"></span>
+                            }
+                        </div>
+                        <div class="pb-6 min-w-0">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="@DurumSinifi(m.CargoStatus)">@L["CargoStatus_" + m.CargoStatus]</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">@m.MovementDate.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
+                            </div>
+                            @if (!string.IsNullOrEmpty(m.Description))
+                            {
+                                <p class="font-body-sm text-body-sm text-on-surface mt-1">@m.Description</p>
+                            }
+                            <p class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                                @m.BranchName
+                                @if (!string.IsNullOrEmpty(m.PerformedByName))
+                                {
+                                    <span>· @m.PerformedByName</span>
+                                }
+                                @if (m.DelayReason.HasValue)
+                                {
+                                    <span class="chip-neutral">@L["DelayReason_" + m.DelayReason]</span>
+                                }
+                            </p>
+                        </div>
+                    </li>
+                }
+            </ol>
+        </div>
+    </div>
+
+    <!-- Sağ: güzergah, ölçü, ücret, teslimat -->
+    <div class="flex flex-col gap-6">
+
+        <div class="m3-card p-6 flex flex-col gap-3">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["Route"]</h2>
+            <div class="flex items-center gap-2 font-body-sm text-body-sm text-on-surface">
+                <span class="chip-neutral">@Model.OriginBranchName</span>
+                <span class="material-symbols-outlined text-[18px] text-on-surface-variant">arrow_forward</span>
+                <span class="chip-neutral">@Model.DestinationBranchName</span>
+            </div>
+            <div class="flex justify-between font-body-sm text-body-sm">
+                <span class="text-on-surface-variant">@L["CargoType"]</span>
+                <span class="text-on-surface">@L["CargoType_" + Model.CargoType]</span>
+            </div>
+            <div class="flex justify-between font-body-sm text-body-sm">
+                <span class="text-on-surface-variant">@L["Weight"] / @L["Desi"]</span>
+                <span class="text-on-surface">@Model.Weight.ToString("N2") kg · @Model.Desi.ToString("N2")</span>
+            </div>
+            <div class="flex justify-between font-body-sm text-body-sm">
+                <span class="text-on-surface-variant">@L["ShipmentDate"]</span>
+                <span class="text-on-surface">@Model.ShipmentDate.ToLocalTime().ToString("dd.MM.yyyy")</span>
+            </div>
+            <div class="flex justify-between font-body-sm text-body-sm">
+                <span class="text-on-surface-variant">@L["EstimatedArrival"]</span>
+                <span class="text-on-surface">@Model.EstimatedArrivalDate.ToLocalTime().ToString("dd.MM.yyyy")</span>
+            </div>
+        </div>
+
+        <div class="m3-card p-6 flex flex-col gap-3">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["Price"]</h2>
+            <div class="flex items-baseline gap-2">
+                <span class="font-headline-md text-headline-md text-on-surface">@Model.Price.ToString("N2")</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">@Model.CurrencyCode</span>
+            </div>
+            <div class="flex justify-between font-body-sm text-body-sm">
+                <span class="text-on-surface-variant">@L["PaymentType"]</span>
+                <span class="text-on-surface">@L["PaymentType_" + Model.PaymentType]</span>
+            </div>
+            <span class="@(Model.IsPaid ? "chip-active" : "chip-neutral")">@(Model.IsPaid? L["Paid"] : L["Unpaid"])</span>
+        </div>
+
+        <!-- dağıtım ve teslimat -->
+        <div class="m3-card p-6 flex flex-col gap-3">
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["Delivery"]</h2>
+
+            @if (string.IsNullOrEmpty(Model.CourierName))
+            {
+                <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NotDispatchedYet"]</p>
+            }
+            else
+            {
+                <div class="flex justify-between font-body-sm text-body-sm">
+                    <span class="text-on-surface-variant">@L["JobType_Courier"]</span>
+                    <span class="text-on-surface">@Model.CourierName</span>
+                </div>
+                <div class="flex justify-between font-body-sm text-body-sm">
+                    <span class="text-on-surface-variant">@L["DeliveryCode"]</span>
+                    <span class="font-bold text-on-surface tracking-widest">@Model.DeliveryCode</span>
+                </div>
+            }
+
+            @if (Model.DeliveredAt.HasValue)
+            {
+                <div class="flex justify-between font-body-sm text-body-sm">
+                    <span class="text-on-surface-variant">@L["RecipientName"]</span>
+                    <span class="text-on-surface">@Model.RecipientName</span>
+                </div>
+                <div class="flex justify-between font-body-sm text-body-sm">
+                    <span class="text-on-surface-variant">@L["DeliveredAt"]</span>
+                    <span class="text-on-surface">@Model.DeliveredAt.Value.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
+                </div>
+            }
+
+            @if (Model.FailedAttemptCount > 0)
+            {
+                <span class="chip-error">@L["FailedAttempts", Model.FailedAttemptCount]</span>
+            }
+        </div>
+    </div>
+</div>

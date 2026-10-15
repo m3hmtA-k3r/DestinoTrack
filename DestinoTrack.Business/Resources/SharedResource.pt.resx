@@ -267,6 +267,7 @@
   <data name="CargoNotFound" xml:space="preserve"><value>Carga não encontrada.</value></data>
   <data name="InvalidStatusTransition" xml:space="preserve"><value>Não é possível passar de {0} para {1}.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Não foi possível gerar o número de rastreio, tente novamente.</value></data>
+  <data name="BarcodeValueInvalid" xml:space="preserve"><value>O valor a codificar como código de barras não é válido.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Cliente não encontrado.</value></data>
   <data name="CustomerNotActive" xml:space="preserve"><value>A conta do cliente não está ativa; não é possível criar uma carga para este cliente.</value></data>
   <data name="CargoCreatedMovement" xml:space="preserve"><value>Registro de carga criado.</value></data>
@@ -414,9 +415,9 @@
   <data name="TrackAction" xml:space="preserve">
     <value>Rastrear</value>
   </data>
-  <data name="TrackNotice" xml:space="preserve">
-    <value>O módulo de encomendas ainda não foi concluído. O rastreio funcionará quando o serviço de encomendas for adicionado.</value>
-  </data>
+  <data name="TrackNotFound" xml:space="preserve"><value>Nenhum envio encontrado com este número de rastreio. Verifique o número e tente novamente.</value></data>
+  <data name="AmountDueOnDelivery" xml:space="preserve"><value>A pagar na entrega</value></data>
+  <data name="TrackAnother" xml:space="preserve"><value>Rastrear outro envio</value></data>
   <data name="Status_Created" xml:space="preserve">
     <value>Criada</value>
   </data>
@@ -987,4 +988,34 @@
   <data name="DeliveryFailureReason_RecipientRefused" xml:space="preserve"><value>Destinatário recusou</value></data>
   <data name="DeliveryFailureReason_Damaged" xml:space="preserve"><value>Carga danificada</value></data>
   <data name="DeliveryFailureReason_Other" xml:space="preserve"><value>Outro</value></data>
+  <!-- ═══ 21 · Kargo ekranı (TALP-66): liste sütunları · arama · detay ═══ -->
+  <data name="SearchCargo" xml:space="preserve"><value>Buscar número de rastreio, remetente ou destinatário</value></data>
+  <data name="Route" xml:space="preserve"><value>Rota</value></data>
+  <data name="SenderReceiver" xml:space="preserve"><value>Remetente / Destinatário</value></data>
+  <data name="EstimatedArrival" xml:space="preserve"><value>Entrega estimada</value></data>
+  <data name="Unpaid" xml:space="preserve"><value>Não pago</value></data>
+  <data name="Detail" xml:space="preserve"><value>Detalhe</value></data>
+  <data name="Price" xml:space="preserve"><value>Preço</value></data>
+  <data name="Back" xml:space="preserve"><value>Voltar</value></data>
+  <data name="Sender" xml:space="preserve"><value>Remetente</value></data>
+  <data name="Receiver" xml:space="preserve"><value>Destinatário</value></data>
+  <data name="Movements" xml:space="preserve"><value>Movimentações</value></data>
+  <data name="Weight" xml:space="preserve"><value>Peso</value></data>
+  <data name="Desi" xml:space="preserve"><value>Unidade volumétrica</value></data>
+  <data name="ShipmentDate" xml:space="preserve"><value>Data de envio</value></data>
+  <data name="PaymentType" xml:space="preserve"><value>Tipo de pagamento</value></data>
+  <data name="PaymentType_SenderPays" xml:space="preserve"><value>Remetente paga</value></data>
+  <data name="PaymentType_ReceiverPays" xml:space="preserve"><value>Destinatário paga (na entrega)</value></data>
+  <data name="Paid" xml:space="preserve"><value>Pago</value></data>
+  <data name="Delivery" xml:space="preserve"><value>Entrega</value></data>
+  <data name="NotDispatchedYet" xml:space="preserve"><value>A carga ainda não saiu para entrega.</value></data>
+  <data name="DeliveryCode" xml:space="preserve"><value>Código de entrega</value></data>
+  <data name="RecipientName" xml:space="preserve"><value>Recebido por</value></data>
+  <data name="DeliveredAt" xml:space="preserve"><value>Entregue em</value></data>
+  <data name="FailedAttempts" xml:space="preserve"><value>{0} tentativas de entrega malsucedidas</value></data>
+  <data name="DelayReason_Traffic" xml:space="preserve"><value>Trânsito</value></data>
+  <data name="DelayReason_Weather" xml:space="preserve"><value>Condições meteorológicas</value></data>
+  <data name="DelayReason_AddressNotFound" xml:space="preserve"><value>Endereço não encontrado</value></data>
+  <data name="DelayReason_RecipientUnavailable" xml:space="preserve"><value>Destinatário ausente</value></data>
+  <data name="DelayReason_Customs" xml:space="preserve"><value>Alfândega</value></data>
 </root>
