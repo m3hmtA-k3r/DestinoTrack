@@ -1,0 +1,28 @@
+﻿@model PersonelHomeViewModel
+@{
+    ViewData["Title"] = L["BranchPanel"].Value;
+}
+
+<div class="mt-4 flex flex-col gap-6">
+
+    <div class="m3-card p-6 flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">insights</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["BranchPanel"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["Menu_DailySummary"]</h1>
+        </div>
+    </div>
+
+    <div class="m3-card p-6 flex flex-col gap-3">
+        @foreach (var ekran in Model.UpcomingScreens)
+        {
+            <div class="flex items-center justify-between gap-4 border-b border-outline-variant pb-3 last:border-0 last:pb-0">
+                <span class="font-body-md text-body-md text-on-surface">@ekran</span>
+                <span class="chip-neutral">@L["ComingSoon"]</span>
+            </div>
+        }
+    </div>
+
+</div>

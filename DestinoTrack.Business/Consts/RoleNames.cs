@@ -1,7 +1,5 @@
 ﻿namespace DestinoTrack.Business.Consts
 {
-   
-    // Business'ta duruyor: kullanıcı servisi (Business) de yaptım, controller'lar (WebUI) da görebilsin diye.
     public static class RoleNames
     {
         public const string Admin = "Admin";
@@ -15,5 +13,9 @@
 
         // Admin kullanıcı yönetiminde seçilebilen roller — Customer yalnızca kayıt formundan açılır 
         public static readonly string[] Staff = { Admin, Manager, Personel, Courier };
+
+        // Şube paneline giren roller. Authorize özniteliği derleme zamanı sabiti istediği için
+        // birleştirme burada yapılır — "bu panele kimler girer" sorusunun cevabı tek yerde
+        public const string BranchPanel = Personel + "," + Courier;
     }
 }

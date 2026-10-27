@@ -1,0 +1,134 @@
+﻿@model MovementViewModel
+@{
+    ViewData["Title"] = L["Menu_NewMovement"].Value;
+
+    // Durum rozetinin rengi: şube kargoları ekranındakiyle aynı okuma
+    string DurumSinifi(CargoStatus s) => s switch
+    {
+        CargoStatus.Delivered => "chip-active",
+        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
+        _ => "chip-info"
+    };
+}
+
+<div class="mx-auto max-w-3xl">
+    <!-- Sayfa başlığı -->
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">timeline</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["BranchPanel"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["Menu_NewMovement"]</h1>
+        </div>
+    </div>
+
+    @if (TempData["Error"] is string error)
+    {
+        <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">
+            <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+            <span class="font-body-sm text-body-sm">@error</span>
+        </div>
+    }
+
+    <!-- Birinci adım: takip numarası -->
+    <div class="m3-card p-6 sm:p-8 mb-6">
+        <form asp-action="Find" method="post" class="flex flex-col sm:flex-row sm:items-end gap-4">
+            <div class="grow">
+                <label asp-for="TrackCode" class="field-label">@L["TrackCode"]</label>
+                <input asp-for="TrackCode" class="field-input" autocomplete="off" placeholder="MYC-2026-000000" />
+                <span asp-validation-for="TrackCode" class="field-error"></span>
+            </div>
+            <button type="submit" class="btn-filled h-11 w-full sm:w-auto">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+                <span>@L["Search"]</span>
+            </button>
+        </form>
+    </div>
+
+    @* İkinci adım yalnız kargo bulunduysa çiziliyor — Target iki hâli ayıran tek işaret *@
+    @if (Model.Target is not null)
+    {
+        <div class="m3-card p-6 sm:p-8">
+            <!-- Kargonun künyesi: personel doğru kargoya yazdığını görsün -->
+            <div class="flex flex-wrap items-start justify-between gap-4 pb-5 mb-6 border-b border-outline-variant">
+                <div class="flex flex-col gap-1">
+                    <span class="font-headline-sm text-headline-sm text-on-surface">@Model.Target.TrackCode</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">
+                        @L["Route"]: @Model.Target.OriginBranchName → @Model.Target.DestinationBranchName
+                    </span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">
+                        @L["Receiver"]: @Model.Target.ReceiverName
+                    </span>
+                </div>
+                <div class="flex flex-col items-start sm:items-end gap-2">
+                    <div class="flex items-center gap-2">
+                        <span class="font-label-md text-label-md text-secondary uppercase">@L["CurrentStatus"]</span>
+                        <span class="@DurumSinifi(Model.Target.CurrentStatus)">@L["CargoStatus_" + Model.Target.CurrentStatus]</span>
+                    </div>
+                    @if (Model.Target.LastMovementDate is not null)
+                    {
+                        @* Veritabanında UTC duruyor: yerel saate çevirmeden basarsak personel ileri bir saat görür *@
+                        <span class="font-label-md text-label-md text-secondary">
+                            @L["LastMovement"]: @Model.Target.LastMovementDate.Value.ToLocalTime().ToString("dd.MM.yyyy HH:mm")
+                        </span>
+                    }
+                    <a asp-controller="Cargo" asp-action="Detail" asp-route-id="@Model.Target.Id"
+                       class="font-label-md text-label-md text-primary hover:underline">@L["Detail"]</a>
+                </div>
+            </div>
+
+            @* Servisin reddi (yasak geçiş · kapılı durum · kapsam dışı kargo) formun dışında:
+               liste boşken form çizilmediği için ileti yoksa sessizce kaybolurdu *@
+            <div asp-validation-summary="ModelOnly" class="field-error mb-4"></div>
+
+            @if (Model.Target.AllowedStatuses.Count == 0)
+            {
+                @* Liste boş: ya son durum (Teslim Edildi · İade Edildi) ya da kalan geçişlerin kendi ekranı var *@
+                <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container text-on-surface-variant">
+                    <span class="material-symbols-outlined text-[22px] shrink-0">lock</span>
+                    <span class="font-body-sm text-body-sm">
+                        @(Model.Target.HandledInDeliveryScreen ? L["MovementInDeliveryScreen"] : L["NoTransitionAvailable"])
+                    </span>
+                </div>
+            }
+            else
+            {
+                <form asp-action="Save" method="post" class="flex flex-col gap-6">
+                    @* Numara taşınıyor: sunucu kargoyu her çizişte bu numarayla baştan buluyor *@
+                    <input type="hidden" asp-for="TrackCode" />
+                    <input type="hidden" asp-for="Movement.CargoId" />
+
+                    <div>
+                        <label asp-for="Movement.NewStatus" class="field-label">@L["NewStatus"]</label>
+                        <select asp-for="Movement.NewStatus" class="field-input cursor-pointer">
+                            @* Seçenekler durum makinesinden geliyor, burada elle yazılmıyor *@
+                            @foreach (var durum in Model.Target.AllowedStatuses)
+                            {
+                                <option value="@durum">@L["CargoStatus_" + durum]</option>
+                            }
+                        </select>
+                        <span asp-validation-for="Movement.NewStatus" class="field-error"></span>
+                    </div>
+
+                    <div>
+                        <label asp-for="Movement.Description" class="field-label">@L["Description"]</label>
+                        <textarea asp-for="Movement.Description" class="field-input" rows="3" autocomplete="off"></textarea>
+                        <span asp-validation-for="Movement.Description" class="field-error"></span>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row sm:justify-end gap-3">
+                        <a asp-action="Index" class="btn-tonal h-11 w-full sm:w-auto">
+                            <span class="material-symbols-outlined text-[20px]">close</span>
+                            <span>@L["Cancel"]</span>
+                        </a>
+                        <button type="submit" class="btn-filled h-11 w-full sm:w-auto">
+                            <span class="material-symbols-outlined text-[20px]">check</span>
+                            <span>@L["SaveMovement"]</span>
+                        </button>
+                    </div>
+                </form>
+            }
+        </div>
+    }
+</div>

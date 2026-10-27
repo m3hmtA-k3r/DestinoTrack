@@ -62,5 +62,24 @@ namespace DestinoTrack.DataAccess.Repositories.Employees
             return await _context.Employees.AnyAsync(e => e.AppUserId == appUserId);
         }
 
+
+        public async Task<Employee?> GetByAppUserAsync(Guid appUserId)
+        {
+            // Giriş yapmayan personelde AppUserId boş; eşleşen tek kayıt beklenir
+            return await _context.Employees
+                .FirstOrDefaultAsync(e => e.AppUserId == appUserId);
+        }
+
+        public async Task<List<Employee>> GetActiveCouriersAsync(Guid branchId)
+        {
+            // Pasif kurye listede çıkmaz: DispatchAsync onu reddediyor, boşuna seçenek göstermeyelim
+            return await _context.Employees
+                .Where(e => e.BranchId == branchId && e.JobType == EmployeeJobType.Courier && e.IsActive)
+                .OrderBy(e => e.FirstName)
+                .ThenBy(e => e.LastName)
+                .ToListAsync();
+        }
+
+
     }
 }

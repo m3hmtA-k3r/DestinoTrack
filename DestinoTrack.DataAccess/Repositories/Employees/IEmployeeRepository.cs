@@ -18,5 +18,14 @@ namespace DestinoTrack.DataAccess.Repositories.Employees
         //hesabın personel kaydı var mı — varsa şubesi kullanıcı ekranından değil Personel ekranından yönetilir
         Task<bool> HasEmployeeAsync(Guid appUserId);
 
+
+        // Giriş yapan kullanıcının personel kaydı — kurye kendi kargolarını bu kimlikle görür,
+        // teslim/iade de bu kimlikle yazılır 
+        Task<Employee?> GetByAppUserAsync(Guid appUserId);
+
+        // Dağıtıma çıkarma listesindeki kurye seçimi: yalnız o şubenin aktif kuryeleri
+        Task<List<Employee>> GetActiveCouriersAsync(Guid branchId);
+
+
     }
 }

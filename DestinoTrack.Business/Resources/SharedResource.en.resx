@@ -266,6 +266,7 @@
   <data name="PriceRuleExists" xml:space="preserve"><value>A price rule already exists for this country and route scope.</value></data>
   <data name="CargoNotFound" xml:space="preserve"><value>Cargo not found.</value></data>
   <data name="InvalidStatusTransition" xml:space="preserve"><value>A cargo cannot move from {0} to {1}.</value></data>
+  <data name="StatusRequiresOwnFlow" xml:space="preserve"><value>The status {0} cannot be set from this screen; it must be done from its own operation screen.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>The tracking number could not be generated, please try again.</value></data>
   <data name="BarcodeValueInvalid" xml:space="preserve"><value>The value to encode as a barcode is not valid.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Customer not found.</value></data>
@@ -371,6 +372,7 @@
   <data name="MultiplierRange" xml:space="preserve"><value>The multiplier must be between 0.10 and 10.00.</value></data>
   <data name="TransitDaysDeltaRange" xml:space="preserve"><value>The day adjustment must be between -5 and 5.</value></data>
   <data name="CargoTypeInvalid" xml:space="preserve"><value>A valid cargo type must be selected.</value></data>
+  <data name="CargoStatusInvalid" xml:space="preserve"><value>A valid shipment status must be selected.</value></data>
   <data name="PaymentTypeInvalid" xml:space="preserve"><value>A valid payment type must be selected.</value></data>
   <data name="WeightRange" xml:space="preserve"><value>The weight must be between 0.01 and 1,000 kg.</value></data>
   <data name="DimensionRange" xml:space="preserve"><value>Dimensions must be between 0 and 500 cm.</value></data>
@@ -724,6 +726,15 @@
   <data name="Menu_Shipments" xml:space="preserve">
     <value>Shipment management</value>
   </data>
+  <data name="BranchPanel" xml:space="preserve"><value>Branch panel</value></data>
+  <data name="Menu_DailySummary" xml:space="preserve"><value>Daily summary</value></data>
+  <data name="Menu_BranchCargos" xml:space="preserve"><value>Branch shipments</value></data>
+  <data name="CargoDirection_Incoming" xml:space="preserve"><value>Incoming</value></data>
+  <data name="CargoDirection_Outgoing" xml:space="preserve"><value>Outgoing</value></data>
+  <data name="Menu_NewMovement" xml:space="preserve"><value>New movement</value></data>
+  <data name="Menu_DeliveryList" xml:space="preserve"><value>Delivery list</value></data>
+  <data name="Menu_MyDeliveryList" xml:space="preserve"><value>My deliveries</value></data>
+  <data name="Menu_IssueCargos" xml:space="preserve"><value>Problem shipments</value></data>
   <data name="Menu_CourierDistribution" xml:space="preserve">
     <value>Couriers &amp; delivery</value>
   </data>
@@ -1000,8 +1011,26 @@
   <data name="Sender" xml:space="preserve"><value>Sender</value></data>
   <data name="Receiver" xml:space="preserve"><value>Receiver</value></data>
   <data name="Movements" xml:space="preserve"><value>Movements</value></data>
+  <data name="CurrentStatus" xml:space="preserve"><value>Current status</value></data>
+  <data name="NewStatus" xml:space="preserve"><value>New status</value></data>
+  <data name="LastMovement" xml:space="preserve"><value>Last movement</value></data>
+  <data name="Description" xml:space="preserve"><value>Description</value></data>
+  <data name="DescriptionMaxLength" xml:space="preserve"><value>The description can be at most 500 characters.</value></data>
+  <data name="SaveMovement" xml:space="preserve"><value>Save movement</value></data>
+  <data name="NoTransitionAvailable" xml:space="preserve"><value>This shipment is in its final status; no new movement can be recorded.</value></data>
+  <data name="MovementInDeliveryScreen" xml:space="preserve"><value>The next step for this shipment is handled in the delivery list: courier assignment, delivery, return.</value></data>
+  <data name="MovementSaved" xml:space="preserve"><value>Movement recorded.</value></data>
   <data name="Weight" xml:space="preserve"><value>Weight</value></data>
   <data name="Desi" xml:space="preserve"><value>Volumetric unit</value></data>
+  <data name="OriginBranch" xml:space="preserve"><value>Origin branch</value></data>
+  <data name="DestinationBranch" xml:space="preserve"><value>Destination branch</value></data>
+  <data name="Width" xml:space="preserve"><value>Width (cm)</value></data>
+  <data name="Height" xml:space="preserve"><value>Height (cm)</value></data>
+  <data name="Length" xml:space="preserve"><value>Length (cm)</value></data>
+  <data name="Address" xml:space="preserve"><value>Address</value></data>
+  <data name="CalculatePrice" xml:space="preserve"><value>Calculate price</value></data>
+  <data name="AcceptCargo" xml:space="preserve"><value>Accept shipment</value></data>
+  <data name="ChargeableUnit" xml:space="preserve"><value>Chargeable unit</value></data>
   <data name="ShipmentDate" xml:space="preserve"><value>Shipment date</value></data>
   <data name="PaymentType" xml:space="preserve"><value>Payment type</value></data>
   <data name="PaymentType_SenderPays" xml:space="preserve"><value>Sender pays</value></data>
@@ -1010,6 +1039,15 @@
   <data name="Delivery" xml:space="preserve"><value>Delivery</value></data>
   <data name="NotDispatchedYet" xml:space="preserve"><value>The cargo has not been dispatched yet.</value></data>
   <data name="DeliveryCode" xml:space="preserve"><value>Delivery code</value></data>
+  <data name="ReadyForDispatch" xml:space="preserve"><value>Ready for dispatch</value></data>
+  <data name="OnDelivery" xml:space="preserve"><value>Out for delivery</value></data>
+  <data name="Courier" xml:space="preserve"><value>Courier</value></data>
+  <data name="DispatchCargo" xml:space="preserve"><value>Send out for delivery</value></data>
+  <data name="CargoDispatched" xml:space="preserve"><value>The shipment is out for delivery.</value></data>
+  <data name="MarkDelivered" xml:space="preserve"><value>Mark as delivered</value></data>
+  <data name="MarkFailed" xml:space="preserve"><value>Delivery failed</value></data>
+  <data name="FailureReason" xml:space="preserve"><value>Reason</value></data>
+  <data name="Attempt" xml:space="preserve"><value>Attempt</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Received by</value></data>
   <data name="DeliveredAt" xml:space="preserve"><value>Delivered at</value></data>
   <data name="FailedAttempts" xml:space="preserve"><value>{0} failed delivery attempts</value></data>

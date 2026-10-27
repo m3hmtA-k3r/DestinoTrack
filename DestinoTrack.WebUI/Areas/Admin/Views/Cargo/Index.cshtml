@@ -9,7 +9,7 @@
     // Durum rozetinin rengi: teslim yeşil, iade/başarısız kırmızı, yolda olan nötr
     string DurumSinifi(CargoStatus s) => s switch
     {
-        CargoStatus.Delivered => "chip-success",
+        CargoStatus.Delivered => "chip-active",
         CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
         _ => "chip-info"
     };

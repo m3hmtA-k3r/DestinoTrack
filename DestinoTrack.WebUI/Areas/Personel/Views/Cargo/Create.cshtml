@@ -1,0 +1,177 @@
+﻿@model CargoCreateViewModel
+@{
+    ViewData["Title"] = L["NewShipment"].Value;
+}
+
+<div class="mx-auto max-w-4xl">
+    <!-- Başlık -->
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">add_box</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["BranchPanel"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["NewShipment"]</h1>
+        </div>
+    </div>
+
+    <div class="m3-card p-6 sm:p-8">
+        <form asp-action="Create" method="post" class="flex flex-col gap-6">
+            <div asp-validation-summary="ModelOnly" class="field-error"></div>
+
+            <!-- Güzergah -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    @* Çıkış şubesi seçilmez: personelin kendi şubesi, sunucuda yazılıyor *@
+                    <label class="field-label">@L["OriginBranch"]</label>
+                    <input class="field-input" value="@Model.OriginBranchName" disabled />
+                </div>
+                <div>
+                    <label asp-for="Cargo.DestinationBranchId" class="field-label">@L["DestinationBranch"]</label>
+                    <select asp-for="Cargo.DestinationBranchId" class="field-input cursor-pointer">
+                        <option value="">—</option>
+                        @foreach (var sube in Model.DestinationBranches)
+                        {
+                            <option value="@sube.Id">@sube.Name (@sube.CityName)</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Cargo.DestinationBranchId" class="field-error"></span>
+                </div>
+            </div>
+
+            <!-- Gönderi bilgileri -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                    <label asp-for="Cargo.CargoType" class="field-label">@L["CargoType"]</label>
+                    <select asp-for="Cargo.CargoType" class="field-input cursor-pointer">
+                        @foreach (var tip in Enum.GetValues<CargoType>())
+                        {
+                            <option value="@tip">@L["CargoType_" + tip]</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Cargo.CargoType" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="Cargo.PaymentType" class="field-label">@L["PaymentType"]</label>
+                    <select asp-for="Cargo.PaymentType" class="field-input cursor-pointer">
+                        @foreach (var odeme in Enum.GetValues<PaymentType>())
+                        {
+                            <option value="@odeme">@L["PaymentType_" + odeme]</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Cargo.PaymentType" class="field-error"></span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-5">
+                <div>
+                    <label asp-for="Cargo.Weight" class="field-label">@L["Weight"] (kg)</label>
+                    <input asp-for="Cargo.Weight" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="Cargo.Weight" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="Cargo.Width" class="field-label">@L["Width"]</label>
+                    <input asp-for="Cargo.Width" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="Cargo.Width" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="Cargo.Length" class="field-label">@L["Length"]</label>
+                    <input asp-for="Cargo.Length" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="Cargo.Length" class="field-error"></span>
+                </div>
+                <div>
+                    <label asp-for="Cargo.Height" class="field-label">@L["Height"]</label>
+                    <input asp-for="Cargo.Height" class="field-input" autocomplete="off" />
+                    <span asp-validation-for="Cargo.Height" class="field-error"></span>
+                </div>
+            </div>
+
+            <!-- Fiyat önizlemesi: yalnız "Fiyatı Hesapla" basıldıysa -->
+            @if (Model.Quote is not null)
+            {
+                <div class="rounded-xl bg-secondary-container p-6 flex flex-col gap-3">
+                    <div class="flex flex-wrap items-baseline justify-between gap-2">
+                        <span class="font-label-md text-label-md text-on-secondary-fixed uppercase">@L["Price"]</span>
+                        <div class="flex items-baseline gap-2">
+                            <span class="font-headline-md text-headline-md text-on-secondary-fixed">@Model.Quote.Price.ToString("N2")</span>
+                            <span class="font-body-sm text-body-sm text-on-secondary-fixed">@Model.Quote.CurrencyCode</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between font-body-sm text-body-sm text-on-secondary-fixed">
+                        <span>@L["EstimatedArrival"]</span>
+                        <span>@Model.Quote.EstimatedArrivalDate.ToLocalTime().ToString("dd.MM.yyyy") · @L["TransitDays"]: @Model.Quote.TransitDays</span>
+                    </div>
+                    @* Hesabın dökümü: müşteri "neden bu kadar" derse personel gösterebilsin *@
+                    <div class="flex flex-wrap gap-x-6 gap-y-1 border-t border-on-secondary-fixed/20 pt-3 font-body-sm text-body-sm text-on-secondary-fixed">
+                        <span>@L["Desi"]: @Model.Quote.Desi.ToString("N2")</span>
+                        <span>@L["ChargeableUnit"]: @Model.Quote.ChargeableUnit.ToString("N2")</span>
+                        <span>@L["BasePrice"]: @Model.Quote.BasePrice.ToString("N2")</span>
+                        <span>@L["PricePerDesi"]: @Model.Quote.PricePerDesi.ToString("N2")</span>
+                        <span>@L["Multiplier"]: ×@Model.Quote.TypeMultiplier.ToString("N2")</span>
+                    </div>
+                </div>
+            }
+
+            <!-- Taraflar -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="flex flex-col gap-5">
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["Sender"]</h2>
+                    <div>
+                        <label asp-for="Cargo.SenderName" class="field-label">@L["Sender"]</label>
+                        <input asp-for="Cargo.SenderName" class="field-input" autocomplete="off" />
+                        <span asp-validation-for="Cargo.SenderName" class="field-error"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Cargo.SenderPhone" class="field-label">@L["Phone"]</label>
+                        <input asp-for="Cargo.SenderPhone" class="field-input" autocomplete="off" placeholder="+90 555 000 00 00" />
+                        <span asp-validation-for="Cargo.SenderPhone" class="field-error"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Cargo.SenderAddress" class="field-label">@L["Address"]</label>
+                        <input asp-for="Cargo.SenderAddress" class="field-input" autocomplete="off" />
+                        <span asp-validation-for="Cargo.SenderAddress" class="field-error"></span>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-5">
+                    <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["Receiver"]</h2>
+                    <div>
+                        <label asp-for="Cargo.ReceiverName" class="field-label">@L["Receiver"]</label>
+                        <input asp-for="Cargo.ReceiverName" class="field-input" autocomplete="off" />
+                        <span asp-validation-for="Cargo.ReceiverName" class="field-error"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Cargo.ReceiverPhone" class="field-label">@L["Phone"]</label>
+                        <input asp-for="Cargo.ReceiverPhone" class="field-input" autocomplete="off" placeholder="+90 555 000 00 00" />
+                        <span asp-validation-for="Cargo.ReceiverPhone" class="field-error"></span>
+                    </div>
+                    <div>
+                        <label asp-for="Cargo.ReceiverAddress" class="field-label">@L["Address"]</label>
+                        <input asp-for="Cargo.ReceiverAddress" class="field-input" autocomplete="off" />
+                        <span asp-validation-for="Cargo.ReceiverAddress" class="field-error"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 pt-2">
+                @* formnovalidate: fiyat sormak için taraf bilgilerinin dolu olması gerekmiyor *@
+                <button type="submit" formaction="@Url.Action("Quote")" formnovalidate class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">calculate</span>
+                    <span>@L["CalculatePrice"]</span>
+                </button>
+                <button type="submit" class="btn-filled">
+                    <span class="material-symbols-outlined text-[20px]">check</span>
+                    <span>@L["AcceptCargo"]</span>
+                </button>
+                <a asp-action="Index" class="btn-tonal sm:ml-auto">
+                    <span class="material-symbols-outlined text-[20px]">arrow_back</span>
+                    <span>@L["Cancel"]</span>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

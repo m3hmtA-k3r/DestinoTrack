@@ -1,0 +1,10 @@
+﻿@using DestinoTrack.DTO.DTOs.CargoDtos
+@model CargoDetailDto
+@{
+    ViewData["Title"] = Model.TrackCode;
+
+    // Üst etiket: şube panelinde "Şube Kargoları" yazar
+    ViewData["Caption"] = L["Menu_BranchCargos"].Value;
+}
+
+@await Html.PartialAsync("_CargoDetail", Model)

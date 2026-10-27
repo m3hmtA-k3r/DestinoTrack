@@ -1,0 +1,182 @@
+﻿@model DeliveryIndexViewModel
+@{
+    ViewData["Title"] = L["Menu_DeliveryList"].Value;
+}
+
+<div class="w-full">
+    <!-- Sayfa başlığı -->
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">two_wheeler</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["BranchPanel"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["Menu_DeliveryList"]</h1>
+        </div>
+    </div>
+
+    @if (TempData["Success"] is string basarili)
+    {
+        <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-primary-container text-on-primary">
+            <span class="material-symbols-outlined text-[22px] shrink-0">check_circle</span>
+            <span class="font-body-sm text-body-sm">@basarili</span>
+        </div>
+    }
+
+    @if (TempData["Error"] is string hata)
+    {
+        <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">
+            <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+            <span class="font-body-sm text-body-sm">@hata</span>
+        </div>
+    }
+
+    @* Üst bölüm yalnız personelde: kurye kendine kargo atamaz (D72) *@
+    @if (Model.CanDispatch)
+    {
+        <div class="m3-card p-6 mb-8">
+            <div class="flex items-center gap-2 mb-5">
+                <span class="material-symbols-outlined text-[22px] text-secondary">inventory</span>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["ReadyForDispatch"]</h2>
+                <span class="chip-neutral">@Model.ReadyForDispatch!.TotalCount</span>
+            </div>
+
+            @if (Model.ReadyForDispatch.Items.Count == 0)
+            {
+                <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+            }
+            else
+            {
+                <div class="flex flex-col gap-4">
+                    @foreach (var satir in Model.ReadyForDispatch.Items)
+                    {
+                        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 p-4 rounded-xl bg-surface">
+                            <div class="flex flex-col gap-1">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">@satir.TrackCode</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">
+                                    @L["Receiver"]: @satir.ReceiverName · @satir.ReceiverPhone
+                                </span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">@satir.ReceiverAddress</span>
+                                @if (satir.AttemptCount > 0)
+                                {
+                                    @* Daha önce denenmiş: kurye bunu bilerek çıksın *@
+                                    <span class="chip-error w-fit">@L["Attempt"]: @(satir.AttemptCount + 1)</span>
+                                }
+                            </div>
+
+                            @* Kurye seçimi ve kargo kimliği; şube ve işlemi yapan sunucuda yazılıyor *@
+                            <form asp-action="Dispatch" method="post" class="flex flex-col sm:flex-row sm:items-end gap-3">
+                                <input type="hidden" name="cargoId" value="@satir.Id" />
+                                <div>
+                                    <label class="field-label">@L["Courier"]</label>
+                                    <select name="courierId" class="field-input cursor-pointer" required>
+                                        <option value="">—</option>
+                                        @foreach (var kurye in Model.Couriers)
+                                        {
+                                            <option value="@kurye.Id">@kurye.FullName</option>
+                                        }
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn-filled h-11">
+                                    <span class="material-symbols-outlined text-[20px]">local_shipping</span>
+                                    <span>@L["DispatchCargo"]</span>
+                                </button>
+                            </form>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    }
+
+    <!-- Alt bölüm: dağıtımdaki kargolar, satır içi teslim / teslim edilemedi -->
+    <div class="m3-card p-6">
+        <div class="flex items-center gap-2 mb-5">
+            <span class="material-symbols-outlined text-[22px] text-secondary">two_wheeler</span>
+            <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["OnDelivery"]</h2>
+            <span class="chip-neutral">@Model.OnDelivery.TotalCount</span>
+        </div>
+
+        @if (Model.OnDelivery.Items.Count == 0)
+        {
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+        }
+        else
+        {
+            <div class="flex flex-col gap-5">
+                @foreach (var satir in Model.OnDelivery.Items)
+                {
+                    <div class="flex flex-col gap-4 p-4 rounded-xl bg-surface">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div class="flex flex-col gap-1">
+                                <span class="font-headline-sm text-headline-sm text-on-surface">@satir.TrackCode</span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">
+                                    @L["Receiver"]: @satir.ReceiverName · @satir.ReceiverPhone
+                                </span>
+                                <span class="font-body-sm text-body-sm text-on-surface-variant">@satir.ReceiverAddress</span>
+                            </div>
+                            <div class="flex flex-col items-start sm:items-end gap-2">
+                                @if (satir.CourierName is not null)
+                                {
+                                    <span class="chip-info">@L["Courier"]: @satir.CourierName</span>
+                                }
+                                @* Kapıda ödeme: kurye tahsil etmeden teslim etmesin *@
+                                @if (satir.PaymentType == PaymentType.ReceiverPays && !satir.IsPaid)
+                                {
+                                    <span class="chip-error">@L["AmountDueOnDelivery"]: @satir.Price.ToString("N2") @satir.CurrencyCode</span>
+                                }
+                                @if (satir.AttemptCount > 0)
+                                {
+                                    <span class="chip-error">@L["Attempt"]: @(satir.AttemptCount + 1)</span>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 border-t border-outline-variant pt-4">
+                            @* Teslim: kodu alıcı söyler, kurye yazar — ekranda hiçbir yerde yazmıyor (T4) *@
+                            <form asp-action="Deliver" method="post" class="flex flex-col sm:flex-row sm:items-end gap-3">
+                                <input type="hidden" name="cargoId" value="@satir.Id" />
+                                <input type="hidden" name="courierId" value="@satir.CourierId" />
+                                <div class="grow">
+                                    <label class="field-label">@L["DeliveryCode"]</label>
+                                    <input name="code" class="field-input" autocomplete="off" inputmode="numeric" maxlength="6" required />
+                                </div>
+                                <div class="grow">
+                                    <label class="field-label">@L["RecipientName"]</label>
+                                    <input name="recipientName" class="field-input" autocomplete="off" required />
+                                </div>
+                                <button type="submit" class="btn-filled h-11">
+                                    <span class="material-symbols-outlined text-[20px]">check</span>
+                                    <span>@L["MarkDelivered"]</span>
+                                </button>
+                            </form>
+
+                            @* Teslim edilemedi: gerekçe zorunlu, "Diğer" ise açıklama da (servis denetliyor) *@
+                            <form asp-action="Fail" method="post" class="flex flex-col sm:flex-row sm:items-end gap-3">
+                                <input type="hidden" name="cargoId" value="@satir.Id" />
+                                <input type="hidden" name="courierId" value="@satir.CourierId" />
+                                <div class="grow">
+                                    <label class="field-label">@L["FailureReason"]</label>
+                                    <select name="reason" class="field-input cursor-pointer" required>
+                                        @foreach (var sebep in Enum.GetValues<DeliveryFailureReason>())
+                                        {
+                                            <option value="@sebep">@L["DeliveryFailureReason_" + sebep]</option>
+                                        }
+                                    </select>
+                                </div>
+                                <div class="grow">
+                                    <label class="field-label">@L["Description"]</label>
+                                    <input name="description" class="field-input" autocomplete="off" />
+                                </div>
+                                <button type="submit" class="btn-tonal h-11">
+                                    <span class="material-symbols-outlined text-[20px]">close</span>
+                                    <span>@L["MarkFailed"]</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>

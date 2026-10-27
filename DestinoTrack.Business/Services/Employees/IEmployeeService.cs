@@ -12,6 +12,10 @@ namespace DestinoTrack.Business.Services.Employees
         // Görev çipleri: dört görev + her birinin sayısı (0 olanlar dahil)
         Task<List<EmployeeJobTypeFilterDto>> GetJobTypeFiltersAsync();
 
+        // Dağıtıma çıkarma formundaki kurye seçimi: o şubenin yalnız AKTİF kuryeleri.
+        // Pasif kuryeyi listelemek anlamsız — DispatchAsync onu zaten reddediyor
+        Task<List<EmployeeLookupDto>> GetCourierLookupAsync(Guid branchId);
+
         Task<UpdateEmployeeDto> GetByIdAsync(Guid id);
 
         // Hesap da açılıyorsa Identity hataları (aynı e-posta, şifre kuralı) forma dönmek üzere döner

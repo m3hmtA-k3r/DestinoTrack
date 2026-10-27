@@ -1,0 +1,148 @@
+﻿@{
+    var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+
+    // kurye yalnız dağıtım ekranlarını görür.
+    // Hem Personel hem Kurye rolü taşıyan kişi tam menüyü görür — daraltma yalnız "sadece kurye" olanda
+    var sadeceKurye = User.IsInRole(RoleNames.Courier) && !User.IsInRole(RoleNames.Personel);
+
+    var currentLang = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+    var returnUrl = Context.Request.Path + Context.Request.QueryString;
+
+    var navBase = "flex items-center gap-3 px-4 py-3 rounded-xl transition-all";
+    var navPassive = navBase + " text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface";
+    var navActive = navBase + " bg-primary-container text-on-primary font-headline-sm";
+    var navDisabled = navBase + " text-on-surface-variant opacity-40 cursor-not-allowed";
+}
+<!DOCTYPE html>
+<html lang="@currentLang">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] · DestinoTrack @L["BranchPanel"]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/app.css" asp-append-version="true" />
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface">
+
+    <!-- KENAR MENÜ -->
+    <aside id="sidebar" class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between -translate-x-full lg:translate-x-0 transition-transform duration-300">
+        <div class="flex flex-col min-h-0 overflow-y-auto">
+
+            <div class="px-6 pt-6 pb-4 flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-primary-container flex items-center justify-center text-on-primary shadow-sm">
+                        <span class="material-symbols-outlined text-[24px]">local_shipping</span>
+                    </div>
+                    <div>
+                        <div class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">DestinoTrack</div>
+                        <span class="inline-block mt-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed text-label-md font-label-md uppercase tracking-wider">@L["BranchPanel"]</span>
+                    </div>
+                </div>
+                <button type="button" id="sidebarClose" class="lg:hidden p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high transition-colors" aria-label="@L["CloseMenu"]">
+                    <span class="material-symbols-outlined text-[22px]">close</span>
+                </button>
+            </div>
+
+            <nav class="px-4 pb-6 flex flex-col gap-1">
+                @if (sadeceKurye)
+                {
+                    <a asp-area="Personel" asp-controller="Delivery" asp-action="Index" class="@(controller == "Delivery" ? navActive : navPassive)">
+                        <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+                        <span class="font-body-sm text-body-sm">@L["Menu_MyDeliveryList"]</span>
+                    </a>
+
+                }
+                else
+                {
+                    <a asp-area="Personel" asp-controller="Home" asp-action="Index" class="@(controller == "Home" ? navActive : navPassive)">
+                        <span class="material-symbols-outlined text-[20px]">insights</span>
+                        <span class="font-body-sm text-body-sm">@L["Menu_DailySummary"]</span>
+                    </a>
+                    <a asp-area="Personel" asp-controller="Cargo" asp-action="Index" class="@(controller == "Cargo" ? navActive : navPassive)">
+                        <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                        <span class="font-body-sm text-body-sm">@L["Menu_BranchCargos"]</span>
+                    </a>
+
+
+                    <a asp-area="Personel" asp-controller="Movement" asp-action="Index" class="@(controller == "Movement" ? navActive : navPassive)">
+                        <span class="material-symbols-outlined text-[20px]">timeline</span>
+                        <span class="font-body-sm text-body-sm">@L["Menu_NewMovement"]</span>
+                    </a>
+
+                    <a asp-area="Personel" asp-controller="Delivery" asp-action="Index" class="@(controller == "Delivery" ? navActive : navPassive)">
+                        <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
+                        <span class="font-body-sm text-body-sm">@L["Menu_DeliveryList"]</span>
+                    </a>
+
+                    <span class="@navDisabled" title="@L["ComingSoon"]">
+                        <span class="material-symbols-outlined text-[20px]">warning</span>
+                        <span class="font-body-sm text-body-sm">@L["Menu_IssueCargos"]</span>
+                    </span>
+                }
+            </nav>
+
+        </div>
+
+        <!-- Kullanıcı kartı — Admin paneliyle aynı bileşen -->
+        @await Component.InvokeAsync("AdminUserCard")
+
+    </aside>
+
+    <div id="sidebarOverlay" class="fixed inset-0 z-40 bg-on-surface/40 hidden lg:hidden"></div>
+
+    <div class="lg:pl-72 min-h-screen flex flex-col">
+
+        <header class="fixed top-0 left-0 lg:left-72 right-0 h-20 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-30 px-margin-mobile lg:px-gutter flex items-center justify-between gap-3 lg:gap-6">
+
+            <button type="button" id="sidebarOpen" class="lg:hidden p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors" aria-label="@L["OpenMenu"]">
+                <span class="material-symbols-outlined text-[22px]">menu</span>
+            </button>
+
+            <div class="flex items-center gap-2 lg:gap-4 ml-auto shrink-0">
+                <div class="flex items-center p-1 rounded-xl bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+                    @foreach (var lang in new[] { "tr", "en", "pt" })
+                    {
+                        <a asp-area="" asp-controller="Language" asp-action="Change" asp-route-culture="@lang" asp-route-returnUrl="@returnUrl"
+                           class="px-2.5 py-1.5 rounded-lg text-label-md font-label-md uppercase transition-colors @(lang == currentLang ? "bg-secondary-container text-on-secondary-fixed" : "text-on-surface-variant hover:bg-surface-container-high")">@lang</a>
+                    }
+                </div>
+
+                @await Component.InvokeAsync("AdminUserCard", new { view = "Avatar" })
+            </div>
+        </header>
+
+        <main class="relative pt-20 bg-surface flex-1 w-full px-margin-mobile lg:px-gutter">
+            <div class="flex flex-col w-full pb-12">
+                @RenderBody()
+            </div>
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script>
+        (function () {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('sidebarOverlay');
+
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+            }
+
+            document.getElementById('sidebarOpen').addEventListener('click', openSidebar);
+            document.getElementById('sidebarClose').addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSidebar(); });
+        })();
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

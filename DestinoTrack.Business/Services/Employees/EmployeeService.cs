@@ -65,6 +65,19 @@ namespace DestinoTrack.Business.Services.Employees
                 .ToList();
         }
 
+
+        public async Task<List<EmployeeLookupDto>> GetCourierLookupAsync(Guid branchId)
+        {
+            var couriers = await _employeeRepository.GetActiveCouriersAsync(branchId);
+
+            return couriers.Select(e => new EmployeeLookupDto
+            {
+                Id = e.Id,
+                FullName = $"{e.FirstName} {e.LastName}"
+            }).ToList();
+        }
+
+
         public async Task<UpdateEmployeeDto> GetByIdAsync(Guid id)
         {
             var employee = await FindAsync(id);

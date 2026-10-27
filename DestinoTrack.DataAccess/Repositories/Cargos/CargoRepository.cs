@@ -16,7 +16,6 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                 .FirstOrDefaultAsync(c => c.TrackCode == trackCode);
         }
 
-        // Gösterge panelinde durum kırılımı için (dağıtımda / teslim edildi ...)
         public async Task<int> CountByStatusAsync(CargoStatus status)
         {
             return await _context.Cargos.CountAsync(c => c.CargoStatus == status);
@@ -25,20 +24,19 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
         public async Task<bool> TrackCodeExistsAsync(string trackCode)
         {
             // IgnoreQueryFilters: silinmiş bir kargonun numarası yeniden verilmemeli,
-            // yoksa eski takip bağlantısı başka bir gönderiyi gösterir
             return await _context.Cargos
                 .IgnoreQueryFilters()
                 .AnyAsync(c => c.TrackCode == trackCode);
         }
 
         public async Task<(List<Cargo> Items, int TotalCount)> GetPagedScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId,
-                                                                           Guid? userId, bool unrestricted,
-                                                                           CargoStatus? status, string? search, int page, int pageSize)
+                                                                   Guid? userId, Guid? courierEmployeeId, bool unrestricted,
+                                                                   CargoStatus? status, string? search, int page, int pageSize,
+                                                                   CargoDirection? direction = null)
         {
-            IQueryable<Cargo> query = Scoped(branchId, countryId, customerId, userId, unrestricted)
+            IQueryable<Cargo> query = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted, direction)
                         .Include(c => c.OriginBranch)
                         .Include(c => c.DestinationBranch);
-
 
             if (status.HasValue)
             {
@@ -62,26 +60,76 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
             return (items, totalCount);
         }
 
-        public async Task<Cargo?> GetScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted)
+        public async Task<Cargo?> GetScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                                 Guid? courierEmployeeId, bool unrestricted)
         {
-            return await Scoped(branchId, countryId, customerId, userId, unrestricted)
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-        // kapsamın sorgu karşılığı — iki metot da aynı kuralı kullanır, kural tek yerde durur
-        private IQueryable<Cargo> Scoped(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted)
+
+        public async Task<Cargo?> GetByTrackCodeScopedAsync(string trackCode, Guid? branchId, Guid? countryId,
+                                                            Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted)
+        {
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .Include(c => c.OriginBranch)
+                .Include(c => c.DestinationBranch)
+                .Include(c => c.Movements)
+                .FirstOrDefaultAsync(c => c.TrackCode == trackCode);
+        }
+
+
+        public async Task<(List<Cargo> Items, int TotalCount)> GetDeliveryListScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId,
+                                                                             Guid? userId, Guid? courierEmployeeId, bool unrestricted,
+                                                                             CargoStatus status, int page, int pageSize,
+                                                                             CargoDirection? direction = null)
+        {
+            var query = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted, direction)
+                .Where(c => c.CargoStatus == status)
+                .Include(c => c.DestinationBranch)
+                .Include(c => c.Courier)
+                .Include(c => c.DeliveryExceptions);
+
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+                .OrderBy(c => c.EstimatedArrivalDate)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .AsSplitQuery()
+                .ToListAsync();
+
+            return (items, totalCount);
+        }
+
+
+        private IQueryable<Cargo> Scoped(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                         Guid? courierEmployeeId, bool unrestricted,
+                                         CargoDirection? direction = null)
         {
             IQueryable<Cargo> query = _context.Cargos;
 
             if (unrestricted)
             {
-                return query;   // Admin
+                return query;
+            }
+
+            if (courierEmployeeId.HasValue)
+            {
+                // Kurye şubesinin tamamını değil, yalnız kendisine atanmış kargoları görür ().
+                // Önce bakılıyor: kuryenin şubesi de olsa kapsamı bu daha dar kural belirler
+                return query.Where(c => c.CourierId == courierEmployeeId.Value);
             }
 
             if (branchId.HasValue)
             {
-                // Personel / Kurye: şubesinden çıkan ya da şubesine gelen
-                return query.Where(c => c.OriginBranchId == branchId.Value || c.DestinationBranchId == branchId.Value);
+                // Yön verilmişse liste tek tarafa daralır — şube panelindeki "Gelen / Çıkan" çipleri
+                return direction switch
+                {
+                    CargoDirection.Incoming => query.Where(c => c.DestinationBranchId == branchId.Value),
+                    CargoDirection.Outgoing => query.Where(c => c.OriginBranchId == branchId.Value),
+                    _ => query.Where(c => c.OriginBranchId == branchId.Value || c.DestinationBranchId == branchId.Value)
+                };
             }
 
             if (countryId.HasValue)
@@ -101,14 +149,13 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                 return query.Where(c => c.SenderId == userId.Value || c.ReceiverId == userId.Value);
             }
 
-            // Kapsamı belirsiz kullanıcı hiçbir şey görmez
             return query.Where(c => false);
         }
 
-
-        public async Task<Cargo?> GetDetailScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId, bool unrestricted)
+        public async Task<Cargo?> GetDetailScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                                       Guid? courierEmployeeId, bool unrestricted)
         {
-            return await Scoped(branchId, countryId, customerId, userId, unrestricted)
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
                 .Include(c => c.OriginBranch)
                 .Include(c => c.DestinationBranch)
                 .Include(c => c.Courier)
@@ -124,12 +171,10 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                 .FirstOrDefaultAsync(c => c.Id == id);
         }
 
-
         public async Task<Cargo?> GetLabelScopedAsync(Guid id, Guid? branchId, Guid? countryId, Guid? customerId,
-                                              Guid? userId, bool unrestricted)
+                                              Guid? userId, Guid? courierEmployeeId, bool unrestricted)
         {
-            // Etikette yalnız şube adı değil, şube + şehir + varış ülkesi yazar — zincirli Include bu yüzden.
-            return await Scoped(branchId, countryId, customerId, userId, unrestricted)
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
                 .Include(c => c.OriginBranch)
                     .ThenInclude(b => b.City)
                 .Include(c => c.DestinationBranch)
@@ -141,8 +186,7 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 
         public async Task<Cargo?> GetPublicByTrackCodeAsync(string trackCode)
         {
-            // Scoped(...) YOK — gerekçe arayüzde. Silinmiş kargo global süzgeçle zaten dışarıda.
-            // Çizelgede "şube adı, şehir" yazacağı için hareketin şubesi ve şehri de çekilir  
+            //YOK — gerekçe arayüzde. Silinmiş kargo global süzgeçle zaten dışarıda.
             return await _context.Cargos
                 .Include(c => c.OriginBranch)
                     .ThenInclude(b => b.City)
@@ -153,8 +197,5 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                         .ThenInclude(b => b.City)
                 .FirstOrDefaultAsync(c => c.TrackCode == trackCode);
         }
-
-
-
-    } 
+    }
 }

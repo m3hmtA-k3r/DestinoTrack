@@ -10,6 +10,10 @@ namespace DestinoTrack.Business.Services.Cargos
         bool CanTransition(CargoStatus from, CargoStatus to);
 
 
+        // Yeni hareket ekranının birinci adımı: numarayla kargoyu bul, o an gidilebilecek durumları da getir
+        Task<CargoMovementTargetDto> FindForMovementAsync(string trackCode);
+
+
         //tek kapı — geçişi doğrular, CargoMovement yazar, kargoyu günceller
         Task ChangeStatusAsync(Guid cargoId, CargoStatus newStatus, Guid branchId, Guid performedByUserId,
                                string? description = null, DelayReason? delayReason = null);
@@ -33,8 +37,15 @@ namespace DestinoTrack.Business.Services.Cargos
         //fiyat, tahmini teslim ve takip no servis tarafından üretilir; ilk hareket de burada yazılır
         Task<Guid> CreateAsync(CreateCargoDto createCargoDto, Guid performedByUserId);
 
-        // yalnızca kullanıcının kapsamındaki kargolar
-        Task<PagedResult<ResultCargoDto>> GetPagedAsync(CargoStatus? status = null, string? search = null, int page = 1);
+        // yalnızca kullanıcının kapsamındaki kargolar · direction yalnız şube kapsamında anlamlı (gelen / çıkan)
+        Task<PagedResult<ResultCargoDto>> GetPagedAsync(CargoStatus? status = null, string? search = null, int page = 1,
+                                                        CargoDirection? direction = null);
+
+
+        // Dağıtım ekranının iki listesi: dağıtıma hazır olanlar ve dağıtımdakiler.
+        // Kapsam servis tarafından uygulanıyor — kurye yalnız kendi kargolarını görür 
+        Task<PagedResult<DeliveryRowDto>> GetReadyForDispatchAsync(int page = 1);
+        Task<PagedResult<DeliveryRowDto>> GetOnDeliveryAsync(int page = 1);
 
 
         // detay + hareket çizelgesi (kapsam dışındaysa yetki hatası)

@@ -266,6 +266,7 @@
   <data name="PriceRuleExists" xml:space="preserve"><value>Já existe uma tarifa para este país e escopo de rota.</value></data>
   <data name="CargoNotFound" xml:space="preserve"><value>Carga não encontrada.</value></data>
   <data name="InvalidStatusTransition" xml:space="preserve"><value>Não é possível passar de {0} para {1}.</value></data>
+  <data name="StatusRequiresOwnFlow" xml:space="preserve"><value>O estado {0} não pode ser definido neste ecrã; deve ser feito no ecrã da operação correspondente.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Não foi possível gerar o número de rastreio, tente novamente.</value></data>
   <data name="BarcodeValueInvalid" xml:space="preserve"><value>O valor a codificar como código de barras não é válido.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Cliente não encontrado.</value></data>
@@ -371,6 +372,7 @@
   <data name="MultiplierRange" xml:space="preserve"><value>O multiplicador deve estar entre 0,10 e 10,00.</value></data>
   <data name="TransitDaysDeltaRange" xml:space="preserve"><value>O ajuste de dias deve estar entre -5 e 5.</value></data>
   <data name="CargoTypeInvalid" xml:space="preserve"><value>Um tipo de carga válido deve ser selecionado.</value></data>
+  <data name="CargoStatusInvalid" xml:space="preserve"><value>Deve ser selecionado um estado de encomenda válido.</value></data>
   <data name="PaymentTypeInvalid" xml:space="preserve"><value>Um tipo de pagamento válido deve ser selecionado.</value></data>
   <data name="WeightRange" xml:space="preserve"><value>O peso deve estar entre 0,01 e 1.000 kg.</value></data>
   <data name="DimensionRange" xml:space="preserve"><value>As dimensões devem estar entre 0 e 500 cm.</value></data>
@@ -724,6 +726,15 @@
   <data name="Menu_Shipments" xml:space="preserve">
     <value>Gestão de encomendas</value>
   </data>
+  <data name="BranchPanel" xml:space="preserve"><value>Painel da filial</value></data>
+  <data name="Menu_DailySummary" xml:space="preserve"><value>Resumo diário</value></data>
+  <data name="Menu_BranchCargos" xml:space="preserve"><value>Encomendas da filial</value></data>
+  <data name="CargoDirection_Incoming" xml:space="preserve"><value>Recebidas</value></data>
+  <data name="CargoDirection_Outgoing" xml:space="preserve"><value>Enviadas</value></data>
+  <data name="Menu_NewMovement" xml:space="preserve"><value>Nova movimentação</value></data>
+  <data name="Menu_DeliveryList" xml:space="preserve"><value>Lista de entregas</value></data>
+  <data name="Menu_MyDeliveryList" xml:space="preserve"><value>Minhas entregas</value></data>
+  <data name="Menu_IssueCargos" xml:space="preserve"><value>Encomendas com problema</value></data>
   <data name="Menu_CourierDistribution" xml:space="preserve">
     <value>Entregadores e distribuição</value>
   </data>
@@ -1000,8 +1011,26 @@
   <data name="Sender" xml:space="preserve"><value>Remetente</value></data>
   <data name="Receiver" xml:space="preserve"><value>Destinatário</value></data>
   <data name="Movements" xml:space="preserve"><value>Movimentações</value></data>
+  <data name="CurrentStatus" xml:space="preserve"><value>Estado atual</value></data>
+  <data name="NewStatus" xml:space="preserve"><value>Novo estado</value></data>
+  <data name="LastMovement" xml:space="preserve"><value>Último movimento</value></data>
+  <data name="Description" xml:space="preserve"><value>Descrição</value></data>
+  <data name="DescriptionMaxLength" xml:space="preserve"><value>A descrição pode ter no máximo 500 caracteres.</value></data>
+  <data name="SaveMovement" xml:space="preserve"><value>Guardar movimento</value></data>
+  <data name="NoTransitionAvailable" xml:space="preserve"><value>Esta encomenda está no estado final; não é possível registar novos movimentos.</value></data>
+  <data name="MovementInDeliveryScreen" xml:space="preserve"><value>O próximo passo desta encomenda é tratado na lista de distribuição: atribuição de estafeta, entrega, devolução.</value></data>
+  <data name="MovementSaved" xml:space="preserve"><value>Movimento registado.</value></data>
   <data name="Weight" xml:space="preserve"><value>Peso</value></data>
   <data name="Desi" xml:space="preserve"><value>Unidade volumétrica</value></data>
+  <data name="OriginBranch" xml:space="preserve"><value>Filial de origem</value></data>
+  <data name="DestinationBranch" xml:space="preserve"><value>Filial de destino</value></data>
+  <data name="Width" xml:space="preserve"><value>Largura (cm)</value></data>
+  <data name="Height" xml:space="preserve"><value>Altura (cm)</value></data>
+  <data name="Length" xml:space="preserve"><value>Comprimento (cm)</value></data>
+  <data name="Address" xml:space="preserve"><value>Endereço</value></data>
+  <data name="CalculatePrice" xml:space="preserve"><value>Calcular preço</value></data>
+  <data name="AcceptCargo" xml:space="preserve"><value>Aceitar encomenda</value></data>
+  <data name="ChargeableUnit" xml:space="preserve"><value>Unidade cobrada</value></data>
   <data name="ShipmentDate" xml:space="preserve"><value>Data de envio</value></data>
   <data name="PaymentType" xml:space="preserve"><value>Tipo de pagamento</value></data>
   <data name="PaymentType_SenderPays" xml:space="preserve"><value>Remetente paga</value></data>
@@ -1010,6 +1039,15 @@
   <data name="Delivery" xml:space="preserve"><value>Entrega</value></data>
   <data name="NotDispatchedYet" xml:space="preserve"><value>A carga ainda não saiu para entrega.</value></data>
   <data name="DeliveryCode" xml:space="preserve"><value>Código de entrega</value></data>
+  <data name="ReadyForDispatch" xml:space="preserve"><value>Pronto para distribuição</value></data>
+  <data name="OnDelivery" xml:space="preserve"><value>Em distribuição</value></data>
+  <data name="Courier" xml:space="preserve"><value>Estafeta</value></data>
+  <data name="DispatchCargo" xml:space="preserve"><value>Enviar para distribuição</value></data>
+  <data name="CargoDispatched" xml:space="preserve"><value>A encomenda está em distribuição.</value></data>
+  <data name="MarkDelivered" xml:space="preserve"><value>Marcar como entregue</value></data>
+  <data name="MarkFailed" xml:space="preserve"><value>Entrega falhou</value></data>
+  <data name="FailureReason" xml:space="preserve"><value>Motivo</value></data>
+  <data name="Attempt" xml:space="preserve"><value>Tentativa</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Recebido por</value></data>
   <data name="DeliveredAt" xml:space="preserve"><value>Entregue em</value></data>
   <data name="FailedAttempts" xml:space="preserve"><value>{0} tentativas de entrega malsucedidas</value></data>

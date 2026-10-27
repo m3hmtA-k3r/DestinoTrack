@@ -266,6 +266,7 @@
   <data name="PriceRuleExists" xml:space="preserve"><value>Bu ülke ve güzergah kademesi için zaten bir tarife var.</value></data>
   <data name="CargoNotFound" xml:space="preserve"><value>Kargo bulunamadı.</value></data>
   <data name="InvalidStatusTransition" xml:space="preserve"><value>{0} durumundan {1} durumuna geçilemez.</value></data>
+  <data name="StatusRequiresOwnFlow" xml:space="preserve"><value>{0} durumu bu ekrandan yazılamaz; kendi işlem ekranından yapılmalıdır.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Takip numarası üretilemedi, lütfen yeniden deneyin.</value></data>
   <data name="BarcodeValueInvalid" xml:space="preserve"><value>Barkod üretilecek değer geçersiz.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Müşteri bulunamadı.</value></data>
@@ -371,6 +372,7 @@
   <data name="MultiplierRange" xml:space="preserve"><value>Çarpan 0,10 ile 10,00 arasında olmalıdır.</value></data>
   <data name="TransitDaysDeltaRange" xml:space="preserve"><value>Gün farkı -5 ile 5 arasında olmalıdır.</value></data>
   <data name="CargoTypeInvalid" xml:space="preserve"><value>Geçerli bir kargo tipi seçilmelidir.</value></data>
+  <data name="CargoStatusInvalid" xml:space="preserve"><value>Geçerli bir kargo durumu seçilmelidir.</value></data>
   <data name="PaymentTypeInvalid" xml:space="preserve"><value>Geçerli bir ödeme şekli seçilmelidir.</value></data>
   <data name="WeightRange" xml:space="preserve"><value>Ağırlık 0,01 ile 1.000 kg arasında olmalıdır.</value></data>
   <data name="DimensionRange" xml:space="preserve"><value>Ölçüler 0 ile 500 cm arasında olmalıdır.</value></data>
@@ -724,6 +726,15 @@
   <data name="Menu_Shipments" xml:space="preserve">
     <value>Gönderi Yönetimi</value>
   </data>
+  <data name="BranchPanel" xml:space="preserve"><value>Şube Paneli</value></data>
+  <data name="Menu_DailySummary" xml:space="preserve"><value>Günlük Özet</value></data>
+  <data name="Menu_BranchCargos" xml:space="preserve"><value>Şube Kargoları</value></data>
+  <data name="CargoDirection_Incoming" xml:space="preserve"><value>Gelen</value></data>
+  <data name="CargoDirection_Outgoing" xml:space="preserve"><value>Çıkan</value></data>
+  <data name="Menu_NewMovement" xml:space="preserve"><value>Yeni Hareket</value></data>
+  <data name="Menu_DeliveryList" xml:space="preserve"><value>Dağıtım Listesi</value></data>
+  <data name="Menu_MyDeliveryList" xml:space="preserve"><value>Dağıtım Listem</value></data>
+  <data name="Menu_IssueCargos" xml:space="preserve"><value>Sorunlu Kargolar</value></data>
   <data name="Menu_CourierDistribution" xml:space="preserve">
     <value>Kurye &amp; Dağıtım</value>
   </data>
@@ -1000,8 +1011,26 @@
   <data name="Sender" xml:space="preserve"><value>Gönderici</value></data>
   <data name="Receiver" xml:space="preserve"><value>Alıcı</value></data>
   <data name="Movements" xml:space="preserve"><value>Hareketler</value></data>
+  <data name="CurrentStatus" xml:space="preserve"><value>Mevcut Durum</value></data>
+  <data name="NewStatus" xml:space="preserve"><value>Yeni Durum</value></data>
+  <data name="LastMovement" xml:space="preserve"><value>Son Hareket</value></data>
+  <data name="Description" xml:space="preserve"><value>Açıklama</value></data>
+  <data name="DescriptionMaxLength" xml:space="preserve"><value>Açıklama en fazla 500 karakter olabilir.</value></data>
+  <data name="SaveMovement" xml:space="preserve"><value>Hareketi Kaydet</value></data>
+  <data name="NoTransitionAvailable" xml:space="preserve"><value>Bu kargo son durumunda, yeni hareket yazılamaz.</value></data>
+  <data name="MovementInDeliveryScreen" xml:space="preserve"><value>Bu kargonun sıradaki işlemi dağıtım listesinden yapılır: kurye ataması · teslim · iade.</value></data>
+  <data name="MovementSaved" xml:space="preserve"><value>Hareket kaydedildi.</value></data>
   <data name="Weight" xml:space="preserve"><value>Ağırlık</value></data>
   <data name="Desi" xml:space="preserve"><value>Desi</value></data>
+  <data name="OriginBranch" xml:space="preserve"><value>Çıkış Şubesi</value></data>
+  <data name="DestinationBranch" xml:space="preserve"><value>Varış Şubesi</value></data>
+  <data name="Width" xml:space="preserve"><value>En (cm)</value></data>
+  <data name="Height" xml:space="preserve"><value>Yükseklik (cm)</value></data>
+  <data name="Length" xml:space="preserve"><value>Boy (cm)</value></data>
+  <data name="Address" xml:space="preserve"><value>Adres</value></data>
+  <data name="CalculatePrice" xml:space="preserve"><value>Fiyatı Hesapla</value></data>
+  <data name="AcceptCargo" xml:space="preserve"><value>Kargoyu Kabul Et</value></data>
+  <data name="ChargeableUnit" xml:space="preserve"><value>Ücretlendirilen Birim</value></data>
   <data name="ShipmentDate" xml:space="preserve"><value>Gönderi Tarihi</value></data>
   <data name="PaymentType" xml:space="preserve"><value>Ödeme Şekli</value></data>
   <data name="PaymentType_SenderPays" xml:space="preserve"><value>Gönderici öder</value></data>
@@ -1010,6 +1039,15 @@
   <data name="Delivery" xml:space="preserve"><value>Teslimat</value></data>
   <data name="NotDispatchedYet" xml:space="preserve"><value>Kargo henüz dağıtıma çıkmadı.</value></data>
   <data name="DeliveryCode" xml:space="preserve"><value>Teslimat Kodu</value></data>
+  <data name="ReadyForDispatch" xml:space="preserve"><value>Dağıtıma Hazır</value></data>
+  <data name="OnDelivery" xml:space="preserve"><value>Dağıtımda</value></data>
+  <data name="Courier" xml:space="preserve"><value>Kurye</value></data>
+  <data name="DispatchCargo" xml:space="preserve"><value>Dağıtıma Çıkar</value></data>
+  <data name="CargoDispatched" xml:space="preserve"><value>Kargo dağıtıma çıkarıldı.</value></data>
+  <data name="MarkDelivered" xml:space="preserve"><value>Teslim Et</value></data>
+  <data name="MarkFailed" xml:space="preserve"><value>Teslim Edilemedi</value></data>
+  <data name="FailureReason" xml:space="preserve"><value>Sebep</value></data>
+  <data name="Attempt" xml:space="preserve"><value>Deneme</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Teslim Alan</value></data>
   <data name="DeliveredAt" xml:space="preserve"><value>Teslim Zamanı</value></data>
   <data name="FailedAttempts" xml:space="preserve"><value>{0} başarısız teslim denemesi</value></data>
