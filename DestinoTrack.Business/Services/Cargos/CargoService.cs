@@ -630,6 +630,8 @@ namespace DestinoTrack.Business.Services.Cargos
         }
 
 
+
+
         // İki listenin ortak gövdesi: yalnız durum ve yön değişiyor
         private async Task<PagedResult<DeliveryRowDto>> DeliveryListAsync(CargoStatus status, int page,
                                                                           CargoDirection? direction = null)
@@ -673,6 +675,113 @@ namespace DestinoTrack.Business.Services.Cargos
             };
         }
 
+
+
+        public async Task<PagedResult<CargoIssueRowDto>> GetIssuesAsync(CargoIssue? issue = null, int page = 1)
+        {
+            page = page < 1 ? 1 : page;
+            var scope = await GetScopeAsync();
+
+            var (cargos, totalCount) = await _cargoRepository.GetIssuesScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId, scope.IsUnrestricted,
+                issue, page, Paging.PageSize);
+
+            return new PagedResult<CargoIssueRowDto>
+            {
+                Items = cargos.Select(c => new CargoIssueRowDto
+                {
+                    Id = c.Id,
+                    TrackCode = c.TrackCode,
+                    CargoStatus = c.CargoStatus,
+
+                    ReceiverName = c.ReceiverName,
+                    DestinationBranchName = c.DestinationBranch?.Name,
+                    EstimatedArrivalDate = c.EstimatedArrivalDate,
+
+                    AttemptCount = c.DeliveryExceptions?.Count ?? 0,
+
+                    // Son deneme neden başarısız oldu: satır "neden sorunlu" sorusunu kendi yanıtlasın
+                    LastFailureReason = c.DeliveryExceptions == null || c.DeliveryExceptions.Count == 0
+                        ? null
+                        : c.DeliveryExceptions.OrderByDescending(d => d.AttemptNo).First().Reason,
+
+                    CourierName = c.Courier == null ? null : $"{c.Courier.FirstName} {c.Courier.LastName}"
+                }).ToList(),
+                Page = page,
+                PageSize = Paging.PageSize,
+                TotalCount = totalCount
+            };
+        }
+
+
+        public async Task<BranchDailySummaryDto?> GetBranchDailySummaryAsync()
+        {
+            // Özet bir ŞUBENİN günü — şubesi olmayan kullanıcı için üretilecek sayı yok.
+            // Diğer ekranlar bu durumda uyarıp geri çeviriyor, görünüm bileşeni yönlendiremez
+            if (_currentUser.BranchId is null)
+            {
+                return null;
+            }
+
+            var scope = await GetScopeAsync();
+
+            // Tek sorgu, tek tur: üç "bugün" kartı aynı sözlükten okunuyor
+            var bugun = await _cargoMovementRepository.CountTodayByNewStatusAsync(_currentUser.BranchId.Value);
+
+            return new BranchDailySummaryDto
+            {
+                ArrivedToday = Adet(bugun, CargoStatus.AtDestinationBranch),
+                DispatchedToday = Adet(bugun, CargoStatus.AtOriginBranch),
+                DeliveredToday = Adet(bugun, CargoStatus.Delivered),
+
+                OnDelivery = await _cargoRepository.CountByStatusScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted, CargoStatus.OutForDelivery),
+
+                // İki kart da sorunlu kargolar listesiyle aynı metottan geçiyor:
+                // kart 5 derse listede de 5 satır olur
+                Delayed = await _cargoRepository.CountIssuesScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted, CargoIssue.Delayed),
+
+                Issues = await _cargoRepository.CountIssuesScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted, null)
+            };
+        }
+
+
+        // O durumdan bugün hiç hareket yazılmadıysa sözlükte anahtar yoktur — kart sıfır gösterir
+        private static int Adet(Dictionary<CargoStatus, int> sayim, CargoStatus durum)
+        {
+            return sayim.TryGetValue(durum, out var adet) ? adet : 0;
+        }
+
+
+        public async Task<List<RecentMovementDto>> GetRecentMovementsAsync(int count = 8)
+        {
+            if (_currentUser.BranchId is null)
+            {
+                return [];
+            }
+
+            var movements = await _cargoMovementRepository.GetRecentByBranchAsync(_currentUser.BranchId.Value, count);
+
+            return movements.Select(m => new RecentMovementDto
+            {
+                CargoId = m.CargoId,
+                TrackCode = m.Cargo.TrackCode,
+
+                OldStatus = m.OldStatus,
+                CargoStatus = m.CargoStatus,
+
+                MovementDate = m.MovementDate,
+                PerformedByName = m.PerformedByUser == null
+                    ? null
+                    : $"{m.PerformedByUser.FirstName} {m.PerformedByUser.LastName}",
+                Description = m.Description
+            }).ToList();
+        }
 
         // kapsam dışındaki kayda dokunulamaz — kargo var ama bu kullanıcının değil
         private async Task<Cargo> FindInScopeAsync(Guid cargoId)

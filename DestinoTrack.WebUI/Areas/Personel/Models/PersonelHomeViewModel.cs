@@ -2,7 +2,7 @@
 {
     public class PersonelHomeViewModel
     {
-        // Henüz açılmamış ekranların adları — çevrilmiş hâlleriyle gelir ( kurye yalnız kendi ekranını görür)
-        public List<string> UpcomingScreens { get; set; } = new();
+        // Kurye mi: şube özeti onun işi değil, kendi dağıtım turuna kısayol görür
+        public bool OnlyCourier { get; set; }
     }
 }

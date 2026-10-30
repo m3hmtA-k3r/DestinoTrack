@@ -1047,6 +1047,14 @@
   <data name="MarkDelivered" xml:space="preserve"><value>Marcar como entregue</value></data>
   <data name="MarkFailed" xml:space="preserve"><value>Entrega falhou</value></data>
   <data name="FailureReason" xml:space="preserve"><value>Motivo</value></data>
+  <data name="CargoIssue_FailedAttempt" xml:space="preserve"><value>Tentativas falhadas</value></data>
+  <data name="CargoIssue_ReturnInProgress" xml:space="preserve"><value>Devolução em curso</value></data>
+  <data name="CargoIssue_Delayed" xml:space="preserve"><value>Atrasado</value></data>
+  <data name="Summary_ArrivedToday" xml:space="preserve"><value>Chegaram hoje</value></data>
+  <data name="Summary_DispatchedToday" xml:space="preserve"><value>Expedidos hoje</value></data>
+  <data name="Summary_DeliveredToday" xml:space="preserve"><value>Entregues hoje</value></data>
+  <data name="Summary_Issues" xml:space="preserve"><value>Com problemas</value></data>
+  <data name="RecentMovements" xml:space="preserve"><value>Movimentos recentes</value></data>
   <data name="Attempt" xml:space="preserve"><value>Tentativa</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Recebido por</value></data>
   <data name="DeliveredAt" xml:space="preserve"><value>Entregue em</value></data>

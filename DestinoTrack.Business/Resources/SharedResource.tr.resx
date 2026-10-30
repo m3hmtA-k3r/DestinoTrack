@@ -1047,6 +1047,14 @@
   <data name="MarkDelivered" xml:space="preserve"><value>Teslim Et</value></data>
   <data name="MarkFailed" xml:space="preserve"><value>Teslim Edilemedi</value></data>
   <data name="FailureReason" xml:space="preserve"><value>Sebep</value></data>
+  <data name="CargoIssue_FailedAttempt" xml:space="preserve"><value>Başarısız Denemeli</value></data>
+  <data name="CargoIssue_ReturnInProgress" xml:space="preserve"><value>İade Sürecinde</value></data>
+  <data name="CargoIssue_Delayed" xml:space="preserve"><value>Geciken</value></data>
+  <data name="Summary_ArrivedToday" xml:space="preserve"><value>Bugün Gelen</value></data>
+  <data name="Summary_DispatchedToday" xml:space="preserve"><value>Bugün Çıkan</value></data>
+  <data name="Summary_DeliveredToday" xml:space="preserve"><value>Bugün Teslim Edilen</value></data>
+  <data name="Summary_Issues" xml:space="preserve"><value>Sorunlu</value></data>
+  <data name="RecentMovements" xml:space="preserve"><value>Son Hareketler</value></data>
   <data name="Attempt" xml:space="preserve"><value>Deneme</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Teslim Alan</value></data>
   <data name="DeliveredAt" xml:space="preserve"><value>Teslim Zamanı</value></data>

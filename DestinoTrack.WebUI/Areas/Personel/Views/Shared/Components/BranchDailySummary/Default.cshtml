@@ -1,0 +1,33 @@
+﻿@model BranchDailySummaryDto
+
+@* VC8 · BranchDailySummary — Default.
+   Üst sıra: bugün BU gişede yazılan hareketler. Alt sıra: kargoların şu anki hâli.
+   "Geciken" ve "Sorunlu", sorunlu kargolar listesiyle aynı kuraldan geliyor —
+   kartla liste iki farklı sayı veremez. *@
+@{
+    var kartlar = new (string Etiket, int Sayi, string Ikon, bool Uyari)[]
+    {
+        (L["Summary_ArrivedToday"].Value,    Model.ArrivedToday,    "move_to_inbox",  false),
+        (L["Summary_DispatchedToday"].Value, Model.DispatchedToday, "outbox",         false),
+        (L["Summary_DeliveredToday"].Value,  Model.DeliveredToday,  "task_alt",       false),
+
+        (L["OnDelivery"].Value,              Model.OnDelivery,      "local_shipping", false),
+        (L["CargoIssue_Delayed"].Value,      Model.Delayed,         "schedule",       true),
+        (L["Summary_Issues"].Value,          Model.Issues,          "warning",        true)
+    };
+}
+
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+    @foreach (var kart in kartlar)
+    {
+        <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 @(kart.Uyari ? "bg-error-container text-on-error-container" : "bg-primary-container text-on-primary")">
+                <span class="material-symbols-outlined text-[20px]">@kart.Ikon</span>
+            </div>
+            <div class="min-w-0">
+                <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@kart.Sayi.ToString("N0")</div>
+                <div class="font-label-md text-label-md text-on-surface-variant truncate">@kart.Etiket</div>
+            </div>
+        </div>
+    }
+</div>

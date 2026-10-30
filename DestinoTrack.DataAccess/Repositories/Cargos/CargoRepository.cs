@@ -103,6 +103,76 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
         }
 
 
+        public async Task<(List<Cargo> Items, int TotalCount)> GetIssuesScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId,
+                                                                        Guid? userId, Guid? courierEmployeeId, bool unrestricted,
+                                                                        CargoIssue? issue, int page, int pageSize)
+        {
+            var query = WithIssue(Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted), issue)
+                .Include(c => c.DestinationBranch)
+                .Include(c => c.Courier)
+                .Include(c => c.DeliveryExceptions);
+
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+                .OrderBy(c => c.EstimatedArrivalDate)   // en çok geciken üstte
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .AsSplitQuery()
+                .ToListAsync();
+
+            return (items, totalCount);
+        }
+
+
+
+        public async Task<int> CountIssuesScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                                      Guid? courierEmployeeId, bool unrestricted, CargoIssue? issue)
+        {
+            // Aynı kural, aynı metot — yalnız sonu farklı: liste yerine sayı
+            return await WithIssue(Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted), issue)
+                .CountAsync();
+        }
+
+
+        public async Task<int> CountByStatusScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                                        Guid? courierEmployeeId, bool unrestricted, CargoStatus status)
+        {
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .CountAsync(c => c.CargoStatus == status);
+        }
+
+
+
+        //iki kardeşi BURADA tanımlı. Başka hiçbir yerde "geciken" hesabı yazılmayacak:
+        // sorunlu kargolar listesi de, günlük özetteki sayı da bu metottan geçer
+        private static IQueryable<Cargo> WithIssue(IQueryable<Cargo> query, CargoIssue? issue)
+        {
+            var simdi = DateTime.UtcNow;
+
+            return issue switch
+            {
+                CargoIssue.FailedAttempt => query.Where(c => c.DeliveryExceptions.Any()),
+
+                CargoIssue.ReturnInProgress => query.Where(c => c.CargoStatus == CargoStatus.ReturnInProgress),
+
+                //tahmini teslim tarihi geçmiş VE hâlâ teslim/iade edilmemiş
+                CargoIssue.Delayed => query.Where(c => c.EstimatedArrivalDate < simdi
+                                                       && c.CargoStatus != CargoStatus.Delivered
+                                                       && c.CargoStatus != CargoStatus.ReturnedToSender),
+
+                // Çip seçilmemiş: üç kümeden herhangi birine giren. Bir kargo aynı anda
+                // birkaçına girebilir, liste onu bir kez gösterir
+                _ => query.Where(c => c.DeliveryExceptions.Any()
+                                      || c.CargoStatus == CargoStatus.ReturnInProgress
+                                      || (c.EstimatedArrivalDate < simdi
+                                          && c.CargoStatus != CargoStatus.Delivered
+                                          && c.CargoStatus != CargoStatus.ReturnedToSender))
+            };
+        }
+
+
+
         private IQueryable<Cargo> Scoped(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
                                          Guid? courierEmployeeId, bool unrestricted,
                                          CargoDirection? direction = null)

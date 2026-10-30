@@ -1,0 +1,115 @@
+﻿@model CargoIssueIndexViewModel
+@{
+    ViewData["Title"] = L["Menu_IssueCargos"].Value;
+
+    var chipBase = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-label-md text-label-md transition-colors";
+    var chipOn = chipBase + " bg-primary-container text-on-primary";
+    var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
+
+    // Durum rozeti: diğer ekranlarla aynı okuma
+    string DurumSinifi(CargoStatus s) => s switch
+    {
+        CargoStatus.Delivered => "chip-active",
+        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
+        _ => "chip-info"
+    };
+}
+
+<div class="w-full">
+    <!-- Sayfa başlığı -->
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">warning</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["BranchPanel"]</span>
+            <div class="flex items-center gap-2">
+                <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["Menu_IssueCargos"]</h1>
+                <span class="chip-neutral">@Model.Cargos.TotalCount</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Küme çipleri: seçenekler enum'dan geliyor -->
+    <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2 mb-6">
+        <button type="submit" name="issue" value="" class="@(Model.SelectedIssue == null ? chipOn : chipOff)">@L["All"]</button>
+        @foreach (var kume in Enum.GetValues<CargoIssue>())
+        {
+            <button type="submit" name="issue" value="@kume" class="@(Model.SelectedIssue == kume ? chipOn : chipOff)">
+                @L["CargoIssue_" + kume]
+            </button>
+        }
+    </form>
+
+    <div class="m3-card overflow-x-auto">
+        @if (Model.Cargos.Items.Count == 0)
+        {
+            <div class="empty-state">
+                <span class="material-symbols-outlined text-[40px] text-on-surface-variant">check_circle</span>
+                <span class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</span>
+            </div>
+        }
+        else
+        {
+            <table class="m3-table">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-4">@L["TrackCode"]</th>
+                        <th class="py-3.5 px-4">@L["Status"]</th>
+                        <th class="py-3.5 px-4">@L["Receiver"]</th>
+                        <th class="py-3.5 px-4">@L["DestinationBranch"]</th>
+                        <th class="py-3.5 px-4">@L["EstimatedArrival"]</th>
+                        <th class="py-3.5 px-4">@L["Attempt"]</th>
+                        <th class="py-3.5 px-4">@L["Courier"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var kargo in Model.Cargos.Items)
+                    {
+                        <tr>
+                            <td class="py-4 px-4">
+                                <a asp-controller="Cargo" asp-action="Detail" asp-route-id="@kargo.Id"
+                                   class="font-headline-sm text-body-sm text-primary hover:underline">@kargo.TrackCode</a>
+                            </td>
+                            <td class="py-4 px-4"><span class="@DurumSinifi(kargo.CargoStatus)">@L["CargoStatus_" + kargo.CargoStatus]</span></td>
+                            <td class="py-4 px-4 font-body-sm text-body-sm">@kargo.ReceiverName</td>
+                            <td class="py-4 px-4 font-body-sm text-body-sm">@kargo.DestinationBranchName</td>
+                            <td class="py-4 px-4">
+                                @* Gecikme kararı serviste verildi; burada yalnız boyanıyor *@
+                                <span class="@(kargo.EstimatedArrivalDate < Model.Now ? "chip-error" : "chip-neutral")">
+                                    @kargo.EstimatedArrivalDate.ToLocalTime().ToString("dd.MM.yyyy")
+                                </span>
+                            </td>
+                            <td class="py-4 px-4">
+                                @if (kargo.AttemptCount > 0)
+                                {
+                                    <div class="flex flex-col gap-1">
+                                        <span class="chip-error w-fit">@kargo.AttemptCount</span>
+                                        @if (kargo.LastFailureReason is not null)
+                                        {
+                                            <span class="font-label-md text-label-md text-on-surface-variant">
+                                                @L["DeliveryFailureReason_" + kargo.LastFailureReason]
+                                            </span>
+                                        }
+                                    </div>
+                                }
+                                else
+                                {
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">—</span>
+                                }
+                            </td>
+                            <td class="py-4 px-4 font-body-sm text-body-sm">@(kargo.CourierName ?? "—")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    </div>
+
+    @if (Model.Cargos.TotalPages > 1)
+    {
+        <div class="mt-6">
+            @await Html.PartialAsync("_Pagination", Model.Cargos)
+        </div>
+    }
+</div>

@@ -77,10 +77,10 @@
                         <span class="font-body-sm text-body-sm">@L["Menu_DeliveryList"]</span>
                     </a>
 
-                    <span class="@navDisabled" title="@L["ComingSoon"]">
+                    <a asp-area="Personel" asp-controller="Issue" asp-action="Index" class="@(controller == "Issue" ? navActive : navPassive)">
                         <span class="material-symbols-outlined text-[20px]">warning</span>
                         <span class="font-body-sm text-body-sm">@L["Menu_IssueCargos"]</span>
-                    </span>
+                    </a>
                 }
             </nav>
 

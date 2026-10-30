@@ -48,6 +48,18 @@ namespace DestinoTrack.Business.Services.Cargos
         Task<PagedResult<DeliveryRowDto>> GetOnDeliveryAsync(int page = 1);
 
 
+        // Sorunlu kargolar: çip seçilmemişse üç kümenin birleşimi, seçilmişse o küme.
+        // Gecikme kuralı repository'de tek yerde duruyor, servis onu yeniden yazmıyor
+        Task<PagedResult<CargoIssueRowDto>> GetIssuesAsync(CargoIssue? issue = null, int page = 1);
+
+        // VC8 — şube panelinin günlük özeti. "Bugün" sayıları hareket kaydından sayılır:
+        // bugün bu gişede ne yazıldıysa o. Geciken ve sorunlu, sorunlu kargolar listesinin
+        // kullandığı AYNI kuraldan geçer. Şubesi atanmamış kullanıcı için null döner
+        Task<BranchDailySummaryDto?> GetBranchDailySummaryAsync();
+
+        // VC — şubede en son yazılan hareketler
+        Task<List<RecentMovementDto>> GetRecentMovementsAsync(int count = 8);
+
         // detay + hareket çizelgesi (kapsam dışındaysa yetki hatası)
         Task<CargoDetailDto> GetDetailAsync(Guid id);
 

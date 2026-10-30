@@ -1,0 +1,71 @@
+﻿@model List<RecentMovementDto>
+
+@* VC · BranchRecentMovements — şubede en son yazılan hareketler.
+   Tablo değil çizelge: detay sayfasındaki hareket okumasıyla aynı (durum · kim · not),
+   ama tek kargo değil tüm şube.
+   Saat yerel gösteriliyor; "bugün" kartlarının sayısı ise UTC günü üzerinden sayılıyor. *@
+@{
+    // Durum rozeti: diğer ekranlarla aynı okuma
+    string DurumSinifi(CargoStatus s) => s switch
+    {
+        CargoStatus.Delivered => "chip-active",
+        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
+        _ => "chip-info"
+    };
+}
+
+<div class="m3-card p-6">
+
+    <div class="flex items-center gap-3 mb-4">
+        <span class="material-symbols-outlined text-[22px] text-primary">history</span>
+        <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["RecentMovements"]</h2>
+    </div>
+
+    @if (Model.Count == 0)
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[40px] text-on-surface-variant">inbox</span>
+            <span class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</span>
+        </div>
+    }
+    else
+    {
+        <ol class="flex flex-col">
+            @foreach (var hareket in Model)
+            {
+                <li class="flex items-start gap-4 py-3 border-b border-outline-variant last:border-0 last:pb-0">
+
+                    <span class="font-label-md text-label-md text-on-surface-variant whitespace-nowrap pt-1 w-24 shrink-0">
+                        @hareket.MovementDate.ToLocalTime().ToString("dd.MM HH:mm")
+                    </span>
+
+                    <div class="flex flex-col gap-1 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <a asp-controller="Cargo" asp-action="Detail" asp-route-id="@hareket.CargoId"
+                               class="font-headline-sm text-body-sm text-primary hover:underline">@hareket.TrackCode</a>
+
+                            @* İlk harekette önceki durum yok: kargo o anda doğmuş *@
+                            @if (hareket.OldStatus.HasValue)
+                            {
+                                <span class="chip-neutral">@L["CargoStatus_" + hareket.OldStatus]</span>
+                                <span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_forward</span>
+                            }
+                            <span class="@DurumSinifi(hareket.CargoStatus)">@L["CargoStatus_" + hareket.CargoStatus]</span>
+                        </div>
+
+                        @if (!string.IsNullOrEmpty(hareket.PerformedByName) || !string.IsNullOrEmpty(hareket.Description))
+                        {
+                            <p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                                @hareket.PerformedByName
+                                @if (!string.IsNullOrEmpty(hareket.Description))
+                                {
+                                    <span>· @hareket.Description</span>
+                                }
+                            </p>
+                        }
+                    </div>
+                </li>
+            }
+        </ol>
+    }
+</div>
