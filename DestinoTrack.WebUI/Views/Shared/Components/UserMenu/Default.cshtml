@@ -23,6 +23,14 @@
             </a>
         }
 
+        @if (Model.IsBranchStaff)
+        {
+            <a asp-area="Personel" asp-controller="Home" asp-action="Index" class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors">
+                <span class="material-symbols-outlined text-[20px]">local_shipping</span>
+                <span>@L["BranchPanel"]</span>
+            </a>
+        }
+
         <!-- Çıkış: POST + antiforgery (form tag helper token'ı kendisi ekler) -->
         <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
             <button type="submit" class="w-full flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-error-container hover:text-on-error-container transition-colors">

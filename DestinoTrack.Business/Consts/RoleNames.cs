@@ -17,5 +17,9 @@
         // Şube paneline giren roller. Authorize özniteliği derleme zamanı sabiti istediği için
         // birleştirme burada yapılır — "bu panele kimler girer" sorusunun cevabı tek yerde
         public const string BranchPanel = Personel + "," + Courier;
+
+        // İkisi yan yana duruyor ki "kim girer" cevabı tek yerde kalsın
+        public static readonly string[] BranchPanelRoles = { Personel, Courier };
+
     }
 }

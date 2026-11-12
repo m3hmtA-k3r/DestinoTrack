@@ -1,8 +1,11 @@
 ﻿@{
     var controller = ViewContext.RouteData.Values["controller"]?.ToString();
+    var action = ViewContext.RouteData.Values["action"]?.ToString();
 
-    // kurye yalnız dağıtım ekranlarını görür.
-    // Hem Personel hem Kurye rolü taşıyan kişi tam menüyü görür — daraltma yalnız "sadece kurye" olanda
+    // Kargo kabul ekranı "Şube Kargoları" ile AYNI controller'da duruyor; vurgu yalnız
+    // controller'a bakarsa iki menü öğesi birden yanar. Fiyat sorgusu da o ekranın parçası
+    var kabulEkrani = controller == "Cargo" && (action == "Create" || action == "Quote");
+
     var sadeceKurye = User.IsInRole(RoleNames.Courier) && !User.IsInRole(RoleNames.Personel);
 
     var currentLang = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
@@ -61,11 +64,16 @@
                         <span class="material-symbols-outlined text-[20px]">insights</span>
                         <span class="font-body-sm text-body-sm">@L["Menu_DailySummary"]</span>
                     </a>
-                    <a asp-area="Personel" asp-controller="Cargo" asp-action="Index" class="@(controller == "Cargo" ? navActive : navPassive)">
+
+                    <a asp-area="Personel" asp-controller="Cargo" asp-action="Index" class="@(controller == "Cargo" && !kabulEkrani ? navActive : navPassive)">
                         <span class="material-symbols-outlined text-[20px]">inventory_2</span>
                         <span class="font-body-sm text-body-sm">@L["Menu_BranchCargos"]</span>
                     </a>
 
+                    <a asp-area="Personel" asp-controller="Cargo" asp-action="Create" class="@(kabulEkrani ? navActive : navPassive)">
+                        <span class="material-symbols-outlined text-[20px]">add_box</span>
+                        <span class="font-body-sm text-body-sm">@L["Menu_NewCargo"]</span>
+                    </a>
 
                     <a asp-area="Personel" asp-controller="Movement" asp-action="Index" class="@(controller == "Movement" ? navActive : navPassive)">
                         <span class="material-symbols-outlined text-[20px]">timeline</span>

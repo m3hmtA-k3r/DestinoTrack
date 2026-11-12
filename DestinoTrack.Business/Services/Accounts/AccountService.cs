@@ -38,11 +38,19 @@ namespace DestinoTrack.Business.Services.Accounts
             }
 
             var user = await _userManager.FindByEmailAsync(loginDto.Email);
+
+            // Rolleri bir kez okuyoruz: her bayrak için ayrı sorgu atmak gereksiz
+            IList<string> roles = user is null ? [] : await _userManager.GetRolesAsync(user);
+
             return new LoginResultDto
             {
                 Succeeded = true,
-                IsAdmin = user != null && await _userManager.IsInRoleAsync(user, RoleNames.Admin)
+                IsAdmin = roles.Contains(RoleNames.Admin),
+
+                // Panelin kapısıyla aynı küme: kim giriyorsa giriş de oraya bırakır
+                IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains)
             };
+
         }
 
         public async Task LogoutAsync()
@@ -208,7 +216,8 @@ namespace DestinoTrack.Business.Services.Accounts
                 FullName = $"{user.FirstName} {user.LastName}",
                 Initials = FirstLetter(user.FirstName) + FirstLetter(user.LastName),
                 Role = RoleNames.All.FirstOrDefault(roles.Contains) ?? string.Empty,
-                IsAdmin = roles.Contains(RoleNames.Admin)
+                IsAdmin = roles.Contains(RoleNames.Admin),
+                IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains)
             };
         }
 

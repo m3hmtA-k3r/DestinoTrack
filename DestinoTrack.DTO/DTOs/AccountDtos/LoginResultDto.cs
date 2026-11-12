@@ -10,5 +10,10 @@
 
         // Admin → Admin paneli, diğer roller → Hesabım 
         public bool IsAdmin { get; set; }
+
+        // Personel · Kurye → şube paneli (RoleNames.BranchPanel ile aynı küme).
+        // Kararı servis veriyor; controller yalnızca nereye gideceğine bakar
+        public bool IsBranchStaff { get; set; }
+
     }
 }

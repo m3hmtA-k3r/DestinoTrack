@@ -819,7 +819,7 @@
       "label": ".LogoutAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L48",
+      "source_location": "L56",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -834,7 +834,7 @@
       "label": ".RegisterCustomerAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L53",
+      "source_location": "L61",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -857,7 +857,7 @@
       "label": ".GetProfileAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L148",
+      "source_location": "L156",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -880,7 +880,7 @@
       "label": ".GenerateCustomerCodeAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L175",
+      "source_location": "L183",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -895,7 +895,7 @@
       "label": ".GetUserCardAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L195",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -910,7 +910,7 @@
       "label": ".Fail()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L217",
+      "source_location": "L226",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -925,7 +925,7 @@
       "label": ".FirstLetter()",
       "file_type": "code",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L221",
+      "source_location": "L230",
       "metadata": {
         "namespace": "DestinoTrack.Business.Services.Accounts",
         "scope_chain": [
@@ -5748,6 +5748,20 @@
       "_origin": "ast"
     },
     {
+      "id": "destinotrack_dto_dtos_accountdtos_loginresultdto_destinotrack_dto_dtos_accountdtos_loginresultdto_isbranchstaff",
+      "label": "IsBranchStaff",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/LoginResultDto.cs",
+      "source_location": "L16",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
       "id": "destinotrack_dto_dtos_accountdtos_profiledto",
       "label": "ProfileDto.cs",
       "file_type": "code",
@@ -6179,6 +6193,20 @@
       "file_type": "code",
       "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
       "source_location": "L9",
+      "metadata": {
+        "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
+        "scope_chain": [
+          "s3"
+        ]
+      },
+      "_origin": "ast"
+    },
+    {
+      "id": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_isbranchstaff",
+      "label": "IsBranchStaff",
+      "file_type": "code",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L10",
       "metadata": {
         "namespace": "DestinoTrack.DTO.DTOs.AccountDtos",
         "scope_chain": [
@@ -26754,7 +26782,7 @@
       "label": ".Register()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L62",
+      "source_location": "L67",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
@@ -26769,7 +26797,7 @@
       "label": ".Logout()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L101",
+      "source_location": "L106",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
@@ -26784,7 +26812,7 @@
       "label": ".AccessDenied()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L109",
+      "source_location": "L114",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
@@ -26799,7 +26827,7 @@
       "label": ".Profile()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L114",
+      "source_location": "L119",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
@@ -26822,7 +26850,7 @@
       "label": ".AddErrors()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L128",
+      "source_location": "L133",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
@@ -26845,7 +26873,7 @@
       "label": ".LoadCountriesAsync()",
       "file_type": "code",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L152",
+      "source_location": "L157",
       "metadata": {
         "namespace": "DestinoTrack.WebUI.Controllers",
         "scope_chain": [
@@ -30128,7 +30156,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L48",
+      "source_location": "L56",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30138,7 +30166,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L48",
+      "source_location": "L56",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -30152,7 +30180,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L53",
+      "source_location": "L61",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30162,7 +30190,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L53",
+      "source_location": "L61",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -30176,7 +30204,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L53",
+      "source_location": "L61",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -30190,7 +30218,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L53",
+      "source_location": "L61",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -30204,7 +30232,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L148",
+      "source_location": "L156",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30214,7 +30242,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L148",
+      "source_location": "L156",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -30228,7 +30256,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L148",
+      "source_location": "L156",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -30242,7 +30270,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L148",
+      "source_location": "L156",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -30256,7 +30284,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L175",
+      "source_location": "L183",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30266,7 +30294,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L175",
+      "source_location": "L183",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -30280,7 +30308,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L195",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30290,7 +30318,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L195",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -30304,7 +30332,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L195",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -30318,7 +30346,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L187",
+      "source_location": "L195",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -30332,7 +30360,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L217",
+      "source_location": "L226",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30342,7 +30370,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L217",
+      "source_location": "L226",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -30356,7 +30384,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L221",
+      "source_location": "L230",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30378,7 +30406,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L59",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30389,7 +30417,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L79",
+      "source_location": "L87",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30400,7 +30428,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L113",
+      "source_location": "L121",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30411,7 +30439,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L160",
+      "source_location": "L168",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30422,7 +30450,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L206",
+      "source_location": "L214",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -30433,7 +30461,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L209",
+      "source_location": "L217",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -44663,6 +44691,17 @@
       "_origin": "ast"
     },
     {
+      "source": "destinotrack_dto_dtos_accountdtos_loginresultdto_destinotrack_dto_dtos_accountdtos_loginresultdto",
+      "target": "destinotrack_dto_dtos_accountdtos_loginresultdto_destinotrack_dto_dtos_accountdtos_loginresultdto_isbranchstaff",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/LoginResultDto.cs",
+      "source_location": "L16",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
       "source": "destinotrack_dto_dtos_accountdtos_profiledto",
       "target": "csharp_namespace:3bafa95ce1a97488",
       "relation": "imports",
@@ -45084,6 +45123,17 @@
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
       "source_location": "L9",
+      "weight": 1.0,
+      "context": "field",
+      "_origin": "ast"
+    },
+    {
+      "source": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto",
+      "target": "destinotrack_dto_dtos_accountdtos_usercarddto_destinotrack_dto_dtos_accountdtos_usercarddto_isbranchstaff",
+      "relation": "defines",
+      "confidence": "EXTRACTED",
+      "source_file": "DestinoTrack.DTO/DTOs/AccountDtos/UserCardDto.cs",
+      "source_location": "L10",
       "weight": 1.0,
       "context": "field",
       "_origin": "ast"
@@ -80114,7 +80164,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L62",
+      "source_location": "L67",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80124,7 +80174,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L62",
+      "source_location": "L67",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -80138,7 +80188,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L62",
+      "source_location": "L67",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -80152,7 +80202,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L73",
+      "source_location": "L78",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -80166,7 +80216,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L73",
+      "source_location": "L78",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -80180,7 +80230,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L73",
+      "source_location": "L78",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -80194,7 +80244,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L101",
+      "source_location": "L106",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80204,7 +80254,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L101",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -80218,7 +80268,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L101",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -80232,7 +80282,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L101",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -80246,7 +80296,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L101",
+      "source_location": "L106",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -80260,7 +80310,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L109",
+      "source_location": "L114",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80270,7 +80320,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L109",
+      "source_location": "L114",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -80284,7 +80334,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L114",
+      "source_location": "L119",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80294,7 +80344,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L114",
+      "source_location": "L119",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -80308,7 +80358,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L114",
+      "source_location": "L119",
       "weight": 1.0,
       "context": "generic_arg",
       "metadata": {
@@ -80322,7 +80372,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L114",
+      "source_location": "L119",
       "weight": 1.0,
       "context": "attribute",
       "metadata": {
@@ -80336,7 +80386,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L128",
+      "source_location": "L133",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80346,7 +80396,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L128",
+      "source_location": "L133",
       "weight": 1.0,
       "context": "parameter_type",
       "metadata": {
@@ -80360,7 +80410,7 @@
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L152",
+      "source_location": "L157",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80370,7 +80420,7 @@
       "relation": "references",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L152",
+      "source_location": "L157",
       "weight": 1.0,
       "context": "return_type",
       "metadata": {
@@ -80385,7 +80435,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L69",
+      "source_location": "L74",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80396,7 +80446,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L70",
+      "source_location": "L75",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -80407,7 +80457,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L91",
+      "source_location": "L96",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -84284,7 +84334,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L218",
+      "source_location": "L227",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -84644,7 +84694,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L63",
+      "source_location": "L71",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -84656,7 +84706,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L64",
+      "source_location": "L72",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -84668,7 +84718,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L70",
+      "source_location": "L78",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -84680,7 +84730,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.Business/Services/Accounts/AccountService.cs",
-      "source_location": "L182",
+      "source_location": "L190",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -85988,7 +86038,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L88",
+      "source_location": "L93",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -86000,7 +86050,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L105",
+      "source_location": "L110",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -86012,7 +86062,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L117",
+      "source_location": "L122",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -86024,7 +86074,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L121",
+      "source_location": "L126",
       "weight": 1.0,
       "_origin": "ast"
     },
@@ -86036,7 +86086,7 @@
       "confidence": "INFERRED",
       "confidence_score": 0.8,
       "source_file": "DestinoTrack.WebUI/Controllers/AccountController.cs",
-      "source_location": "L154",
+      "source_location": "L159",
       "weight": 1.0,
       "_origin": "ast"
     },

@@ -729,6 +729,7 @@
   <data name="BranchPanel" xml:space="preserve"><value>Painel da filial</value></data>
   <data name="Menu_DailySummary" xml:space="preserve"><value>Resumo diário</value></data>
   <data name="Menu_BranchCargos" xml:space="preserve"><value>Encomendas da filial</value></data>
+  <data name="Menu_NewCargo" xml:space="preserve"><value>Nova encomenda</value></data>
   <data name="CargoDirection_Incoming" xml:space="preserve"><value>Recebidas</value></data>
   <data name="CargoDirection_Outgoing" xml:space="preserve"><value>Enviadas</value></data>
   <data name="Menu_NewMovement" xml:space="preserve"><value>Nova movimentação</value></data>

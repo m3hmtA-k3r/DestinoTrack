@@ -55,8 +55,13 @@ namespace DestinoTrack.WebUI.Controllers
                 return RedirectToAction("Index", "City", new { area = AreaNames.Admin });
             }
 
-            // Manager · Personel · Courier · Customer: paneller yazılana kadar Hesabım
+            if (result.IsBranchStaff)
+            {
+                return RedirectToAction("Index", "Home", new { area = AreaNames.Personel });
+            }
+
             return RedirectToAction(nameof(Profile));
+
         }
 
         public async Task<IActionResult> Register()
