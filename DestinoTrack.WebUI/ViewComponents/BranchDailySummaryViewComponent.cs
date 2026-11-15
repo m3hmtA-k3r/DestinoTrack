@@ -9,10 +9,8 @@ namespace DestinoTrack.WebUI.ViewComponents
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
-            var summary = await _cargoService.GetBranchDailySummaryAsync();
+            var summary = await _cargoService.GetDailySummaryAsync();
 
-            // Şubesi atanmamış kullanıcı: görünüm bileşeni yönlendirme yapamaz,
-            // bu yüzden sıfır göstermek yerine durumu söyleyen ikinci görünüme geçiyor
             if (summary is null)
             {
                 return View("NoBranch");

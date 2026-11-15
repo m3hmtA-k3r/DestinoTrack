@@ -6,13 +6,17 @@ namespace DestinoTrack.DataAccess.Repositories.CargoMovements
 {
     public interface ICargoMovementRepository: IRepository<CargoMovement>
     {
-        // Günlük özet: "bugün gelen / çıkan / teslim edilen" kargonun kendi tarihlerinden değil,
-        // bugün BU ŞUBEDE yazılan hareketlerden sayılıyor — gişede bugün ne olduğunun tek dgru kaynagı.
-        // Tek sorguda gruplanıp sozluk döner, üç kart için üç tur atılmıyor;
-        // o gün hiç yazılmamış bir durum sözlükte hiç bulunmaz
         Task<Dictionary<CargoStatus, int>> CountTodayByNewStatusAsync(Guid branchId);
-
-        // VC: şubede en son yazılan hareketler. Takip numarası için kargo,"kim yaptı" için kullanıcı birlikte gelir
         Task<List<CargoMovement>> GetRecentByBranchAsync(Guid branchId, int count);
+
+
+        // Ülke kapsamı (Manager paneli): hareketin yazıldığı şube bu ülkede mi.
+        // Transfer merkezleri de dahil — onlar da şube türünde ve ülkenin hareketini taşıyor
+        Task<Dictionary<CargoStatus, int>> CountTodayByCountryAsync(Guid countryId);
+
+        // Ülkedeki en son hareketler. Şube sürümünden farkı: satırda HANGİ ŞUBE
+        // olduğu da gerekiyor, Manager birden çok şubeye bakabiir
+        Task<List<CargoMovement>> GetRecentByCountryAsync(Guid countryId, int count);
+
     }
 }

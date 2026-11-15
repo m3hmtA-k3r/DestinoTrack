@@ -19,6 +19,11 @@ namespace DestinoTrack.DTO.DTOs.CargoDtos
         public string ReceiverName { get; set; }
         public DateTime? LastMovementDate { get; set; }
 
+        // Dağıtımdaki kargonun kuryesi — teslim formu bunu gizli alanda taşıyor.
+        // Boş olabilir: kargo henüz kuryeye verilmemişse form zaten çizilmiyor
+        public Guid? CourierId { get; set; }
+
+
         // kendi ekranı mı var (kurye ataması · teslim · iade)? Ekran doğru şeyi söylesin diye
         public bool HandledInDeliveryScreen { get; set; }
 

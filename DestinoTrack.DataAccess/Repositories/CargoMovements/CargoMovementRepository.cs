@@ -37,5 +37,35 @@ namespace DestinoTrack.DataAccess.Repositories.CargoMovements
                 .Take(count)
                 .ToListAsync();
         }
+
+
+        public async Task<Dictionary<CargoStatus, int>> CountTodayByCountryAsync(Guid countryId)
+        {
+            // Gün sınırı yine UTC — şube sürümüyle aynı saat, iki panel aynı "bugün"ü görsün
+            var bugun = DateTime.UtcNow.Date;
+            var yarin = bugun.AddDays(1);
+
+            return await _context.CargoMovements
+                .Where(m => m.Branch.City.CountryId == countryId
+                            && m.MovementDate >= bugun
+                            && m.MovementDate < yarin)
+                .GroupBy(m => m.CargoStatus)
+                .Select(g => new { Durum = g.Key, Adet = g.Count() })
+                .ToDictionaryAsync(x => x.Durum, x => x.Adet);
+        }
+
+
+        public async Task<List<CargoMovement>> GetRecentByCountryAsync(Guid countryId, int count)
+        {
+            return await _context.CargoMovements
+                .Where(m => m.Branch.City.CountryId == countryId)
+                .Include(m => m.Cargo)
+                .Include(m => m.PerformedByUser)
+                .Include(m => m.Branch)
+                .OrderByDescending(m => m.MovementDate)
+                .Take(count)
+                .ToListAsync();
+        }
+
     }
 }

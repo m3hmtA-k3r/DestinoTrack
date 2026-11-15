@@ -15,6 +15,7 @@ using DestinoTrack.Entity.Entities;
 using DestinoTrack.Entity.Entities.Enums;
 using Microsoft.Extensions.Localization;
 using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Frozen;
 using System.ComponentModel.DataAnnotations;
 using System.Security.Cryptography;
@@ -109,7 +110,7 @@ namespace DestinoTrack.Business.Services.Cargos
                 Price = quote.Price,
                 CurrencyCode = quote.CurrencyCode,
                 EstimatedArrivalDate = quote.EstimatedArrivalDate,
-                IsPaid = false,
+                IsPaid = createCargoDto.PaymentType == PaymentType.SenderPays,
 
                 OriginBranchId = createCargoDto.OriginBranchId,
                 DestinationBranchId = createCargoDto.DestinationBranchId,
@@ -408,13 +409,9 @@ namespace DestinoTrack.Business.Services.Cargos
                 Id = cargo.Id,
                 TrackCode = cargo.TrackCode,
                 CurrentStatus = cargo.CargoStatus,
-
                 AllowedStatuses = serbest,
-
-                // Liste boş ama haritada hedef varsa: kargo son durumunda değil, sıradaki işlem dağıtım ekranında
                 HandledInDeliveryScreen = serbest.Count == 0 && hedefler.Length > 0,
-
-
+                CourierId = cargo.CourierId,
                 OriginBranchName = cargo.OriginBranch.Name,
                 DestinationBranchName = cargo.DestinationBranch.Name,
                 ReceiverName = cargo.ReceiverName,
@@ -504,13 +501,11 @@ namespace DestinoTrack.Business.Services.Cargos
         {
             var cargo = await FindInScopeAsync(cargoId);
 
-            //kargo kime atandıysa teslimi o yapar — başka kurye kapatamaz
             if (cargo.CourierId != courierEmployeeId)
             {
                 throw new ValidationException(_localizer["CargoNotAssignedToCourier"].Value);
             }
 
-            //  kod doğrulanmadan teslim yok. Boşluklar temizlenir ama hane hane aynı olmalı
             if (string.IsNullOrWhiteSpace(cargo.DeliveryCode) || cargo.DeliveryCode != deliveryCode?.Trim())
             {
                 throw new ValidationException(_localizer["DeliveryCodeInvalid"].Value);
@@ -521,11 +516,9 @@ namespace DestinoTrack.Business.Services.Cargos
                 throw new ValidationException(_localizer["RecipientNameRequired"].Value);
             }
 
-            // Önce durum geçişi: Dağıtıma Çıktı değilse zaten buraya gelinemez
             await WriteTransitionAsync(cargoId, CargoStatus.Delivered, branchId, performedByUserId,
                                     _localizer["CargoDeliveredMovement", recipientName.Trim()].Value);
 
-            //teslimin kanıtı — hangi kodla, kime, kim tarafından, ne zaman
             await _deliveryRepository.CreateAsync(new Delivery
             {
                 CargoId = cargo.Id,
@@ -534,6 +527,11 @@ namespace DestinoTrack.Business.Services.Cargos
                 DeliveredByEmployeeId = courierEmployeeId,
                 DeliveredAt = DateTime.UtcNow
             });
+            if (cargo.PaymentType == PaymentType.ReceiverPays && !cargo.IsPaid)
+            {
+                cargo.IsPaid = true;
+                await _cargoRepository.UpdateAsync(cargo);
+            }
         }
 
         public async Task FailDeliveryAsync(Guid cargoId, DeliveryFailureReason reason, string? description,
@@ -618,22 +616,24 @@ namespace DestinoTrack.Business.Services.Cargos
         // Yön "gelen": kargonun çıkış şubesi değil, VARIŞ şubesi bizim şubemiz olmalı
         public Task<PagedResult<DeliveryRowDto>> GetReadyForDispatchAsync(int page = 1)
         {
-            return DeliveryListAsync(CargoStatus.AtDestinationBranch, page, CargoDirection.Incoming);
+            return DeliveryListAsync([CargoStatus.AtDestinationBranch, CargoStatus.DeliveryFailed],
+                                     page, CargoDirection.Incoming);
         }
+
 
 
         // Dağıtımda: kuryenin üzerindeki kargolar. Kurye kendi kapsamıyla girdiği için
         // burada ek bir süzgeç yok — kuralı kapsam uyguluyor, ekran değil
         public Task<PagedResult<DeliveryRowDto>> GetOnDeliveryAsync(int page = 1)
         {
-            return DeliveryListAsync(CargoStatus.OutForDelivery, page);
+            return DeliveryListAsync([CargoStatus.OutForDelivery], page);
         }
 
 
 
 
         // İki listenin ortak gövdesi: yalnız durum ve yön değişiyor
-        private async Task<PagedResult<DeliveryRowDto>> DeliveryListAsync(CargoStatus status, int page,
+        private async Task<PagedResult<DeliveryRowDto>> DeliveryListAsync(CargoStatus[] statuses, int page,
                                                                           CargoDirection? direction = null)
         {
             page = page < 1 ? 1 : page;
@@ -641,7 +641,7 @@ namespace DestinoTrack.Business.Services.Cargos
 
             var (cargos, totalCount) = await _cargoRepository.GetDeliveryListScopedAsync(
                 scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId, scope.IsUnrestricted,
-                status, page, Paging.PageSize, direction);
+                statuses, page, Paging.PageSize, direction);
 
             return new PagedResult<DeliveryRowDto>
             {
@@ -713,22 +713,28 @@ namespace DestinoTrack.Business.Services.Cargos
             };
         }
 
-
-        public async Task<BranchDailySummaryDto?> GetBranchDailySummaryAsync()
+        public async Task<DailySummaryDto?> GetDailySummaryAsync()
         {
-            // Özet bir ŞUBENİN günü — şubesi olmayan kullanıcı için üretilecek sayı yok.
-            // Diğer ekranlar bu durumda uyarıp geri çeviriyor, görünüm bileşeni yönlendiremez
-            if (_currentUser.BranchId is null)
+            var scope = await GetScopeAsync();
+
+            // Kapsam sırası: şube daha dar, varsa o kazanır. Şubesi olmayan ama ülkesi
+            // olan kullanıcı (Manager) ülke toplamını görür. İkisi de yoksa üretilecek sayı yok
+            Dictionary<CargoStatus, int> bugun;
+
+            if (_currentUser.BranchId is not null)
+            {
+                bugun = await _cargoMovementRepository.CountTodayByNewStatusAsync(_currentUser.BranchId.Value);
+            }
+            else if (scope.CountryId is not null)
+            {
+                bugun = await _cargoMovementRepository.CountTodayByCountryAsync(scope.CountryId.Value);
+            }
+            else
             {
                 return null;
             }
 
-            var scope = await GetScopeAsync();
-
-            // Tek sorgu, tek tur: üç "bugün" kartı aynı sözlükten okunuyor
-            var bugun = await _cargoMovementRepository.CountTodayByNewStatusAsync(_currentUser.BranchId.Value);
-
-            return new BranchDailySummaryDto
+            return new DailySummaryDto
             {
                 ArrivedToday = Adet(bugun, CargoStatus.AtDestinationBranch),
                 DispatchedToday = Adet(bugun, CargoStatus.AtOriginBranch),
@@ -738,8 +744,6 @@ namespace DestinoTrack.Business.Services.Cargos
                     scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
                     scope.IsUnrestricted, CargoStatus.OutForDelivery),
 
-                // İki kart da sorunlu kargolar listesiyle aynı metottan geçiyor:
-                // kart 5 derse listede de 5 satır olur
                 Delayed = await _cargoRepository.CountIssuesScopedAsync(
                     scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
                     scope.IsUnrestricted, CargoIssue.Delayed),
@@ -751,7 +755,6 @@ namespace DestinoTrack.Business.Services.Cargos
         }
 
 
-        // O durumdan bugün hiç hareket yazılmadıysa sözlükte anahtar yoktur — kart sıfır gösterir
         private static int Adet(Dictionary<CargoStatus, int> sayim, CargoStatus durum)
         {
             return sayim.TryGetValue(durum, out var adet) ? adet : 0;
@@ -760,12 +763,23 @@ namespace DestinoTrack.Business.Services.Cargos
 
         public async Task<List<RecentMovementDto>> GetRecentMovementsAsync(int count = 8)
         {
-            if (_currentUser.BranchId is null)
+            var scope = await GetScopeAsync();
+
+            // Günlük özetle aynı kapsam sırası: şube daha dar, varsa o kazanır
+            List<CargoMovement> movements;
+
+            if (_currentUser.BranchId is not null)
+            {
+                movements = await _cargoMovementRepository.GetRecentByBranchAsync(_currentUser.BranchId.Value, count);
+            }
+            else if (scope.CountryId is not null)
+            {
+                movements = await _cargoMovementRepository.GetRecentByCountryAsync(scope.CountryId.Value, count);
+            }
+            else
             {
                 return [];
             }
-
-            var movements = await _cargoMovementRepository.GetRecentByBranchAsync(_currentUser.BranchId.Value, count);
 
             return movements.Select(m => new RecentMovementDto
             {
@@ -779,9 +793,13 @@ namespace DestinoTrack.Business.Services.Cargos
                 PerformedByName = m.PerformedByUser == null
                     ? null
                     : $"{m.PerformedByUser.FirstName} {m.PerformedByUser.LastName}",
-                Description = m.Description
+                Description = m.Description,
+
+                // Yalnız ülke sürümünde dolu veri gelir, şube sürümünde boş olabilir
+                BranchName = m.Branch?.Name
             }).ToList();
         }
+
 
         // kapsam dışındaki kayda dokunulamaz — kargo var ama bu kullanıcının değil
         private async Task<Cargo> FindInScopeAsync(Guid cargoId)

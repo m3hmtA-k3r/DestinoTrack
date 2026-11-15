@@ -14,21 +14,17 @@ namespace DestinoTrack.Business.Services.Cargos
         Task<CargoMovementTargetDto> FindForMovementAsync(string trackCode);
 
 
-        //tek kapı — geçişi doğrular, CargoMovement yazar, kargoyu günceller
         Task ChangeStatusAsync(Guid cargoId, CargoStatus newStatus, Guid branchId, Guid performedByUserId,
                                string? description = null, DelayReason? delayReason = null);
 
 
-        // kargoyu kuryeye atar, kodu üretir (ilk çıkışta) ve dağıtıma çıkarır — üretilen kodu döner
         Task<string> DispatchAsync(Guid cargoId, Guid courierEmployeeId, Guid branchId, Guid performedByUserId);
 
 
-        // kod doğrulanmadan teslim yok · teslim alan kişi ve kurye Delivery'ye yazılır
         Task DeliverAsync(Guid cargoId, string deliveryCode, string recipientName, Guid courierEmployeeId,
                           Guid branchId, Guid performedByUserId);
 
 
-        // başarısız denemeyi yazar; sınıra ulaşılınca iade sürecini kendiliğinden başlatır
         Task FailDeliveryAsync(Guid cargoId, DeliveryFailureReason reason, string? description, Guid courierEmployeeId,
                                Guid branchId, Guid performedByUserId);
 
@@ -41,23 +37,14 @@ namespace DestinoTrack.Business.Services.Cargos
         Task<PagedResult<ResultCargoDto>> GetPagedAsync(CargoStatus? status = null, string? search = null, int page = 1,
                                                         CargoDirection? direction = null);
 
-
-        // Dağıtım ekranının iki listesi: dağıtıma hazır olanlar ve dağıtımdakiler.
-        // Kapsam servis tarafından uygulanıyor — kurye yalnız kendi kargolarını görür 
         Task<PagedResult<DeliveryRowDto>> GetReadyForDispatchAsync(int page = 1);
         Task<PagedResult<DeliveryRowDto>> GetOnDeliveryAsync(int page = 1);
 
-
-        // Sorunlu kargolar: çip seçilmemişse üç kümenin birleşimi, seçilmişse o küme.
-        // Gecikme kuralı repository'de tek yerde duruyor, servis onu yeniden yazmıyor
         Task<PagedResult<CargoIssueRowDto>> GetIssuesAsync(CargoIssue? issue = null, int page = 1);
 
-        // VC8 — şube panelinin günlük özeti. "Bugün" sayıları hareket kaydından sayılır:
-        // bugün bu gişede ne yazıldıysa o. Geciken ve sorunlu, sorunlu kargolar listesinin
-        // kullandığı AYNI kuraldan geçer. Şubesi atanmamış kullanıcı için null döner
-        Task<BranchDailySummaryDto?> GetBranchDailySummaryAsync();
 
-        // VC — şubede en son yazılan hareketler
+        Task<DailySummaryDto?> GetDailySummaryAsync();
+
         Task<List<RecentMovementDto>> GetRecentMovementsAsync(int count = 8);
 
         // detay + hareket çizelgesi (kapsam dışındaysa yetki hatası)

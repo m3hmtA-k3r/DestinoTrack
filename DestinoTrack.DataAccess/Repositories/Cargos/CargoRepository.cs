@@ -80,12 +80,12 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 
 
         public async Task<(List<Cargo> Items, int TotalCount)> GetDeliveryListScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId,
-                                                                             Guid? userId, Guid? courierEmployeeId, bool unrestricted,
-                                                                             CargoStatus status, int page, int pageSize,
-                                                                             CargoDirection? direction = null)
+                                                                      Guid? userId, Guid? courierEmployeeId, bool unrestricted,
+                                                                      CargoStatus[] statuses, int page, int pageSize,
+                                                                      CargoDirection? direction = null)
         {
             var query = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted, direction)
-                .Where(c => c.CargoStatus == status)
+                .Where(c => statuses.Contains(c.CargoStatus))
                 .Include(c => c.DestinationBranch)
                 .Include(c => c.Courier)
                 .Include(c => c.DeliveryExceptions);
@@ -150,26 +150,23 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
         {
             var simdi = DateTime.UtcNow;
 
+            query = query.Where(c => c.CargoStatus != CargoStatus.Delivered
+                                     && c.CargoStatus != CargoStatus.ReturnedToSender);
+
             return issue switch
             {
                 CargoIssue.FailedAttempt => query.Where(c => c.DeliveryExceptions.Any()),
 
                 CargoIssue.ReturnInProgress => query.Where(c => c.CargoStatus == CargoStatus.ReturnInProgress),
 
-                //tahmini teslim tarihi geçmiş VE hâlâ teslim/iade edilmemiş
-                CargoIssue.Delayed => query.Where(c => c.EstimatedArrivalDate < simdi
-                                                       && c.CargoStatus != CargoStatus.Delivered
-                                                       && c.CargoStatus != CargoStatus.ReturnedToSender),
+                CargoIssue.Delayed => query.Where(c => c.EstimatedArrivalDate < simdi),
 
-                // Çip seçilmemiş: üç kümeden herhangi birine giren. Bir kargo aynı anda
-                // birkaçına girebilir, liste onu bir kez gösterir
                 _ => query.Where(c => c.DeliveryExceptions.Any()
                                       || c.CargoStatus == CargoStatus.ReturnInProgress
-                                      || (c.EstimatedArrivalDate < simdi
-                                          && c.CargoStatus != CargoStatus.Delivered
-                                          && c.CargoStatus != CargoStatus.ReturnedToSender))
+                                      || c.EstimatedArrivalDate < simdi)
             };
         }
+
 
 
 

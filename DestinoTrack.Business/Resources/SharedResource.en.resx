@@ -727,6 +727,7 @@
     <value>Shipment management</value>
   </data>
   <data name="BranchPanel" xml:space="preserve"><value>Branch panel</value></data>
+  <data name="CountryPanel" xml:space="preserve"><value>Country panel</value></data>
   <data name="Menu_DailySummary" xml:space="preserve"><value>Daily summary</value></data>
   <data name="Menu_BranchCargos" xml:space="preserve"><value>Branch shipments</value></data>
   <data name="Menu_NewCargo" xml:space="preserve"><value>New cargo</value></data>

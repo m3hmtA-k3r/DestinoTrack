@@ -727,6 +727,7 @@
     <value>Gönderi Yönetimi</value>
   </data>
   <data name="BranchPanel" xml:space="preserve"><value>Şube Paneli</value></data>
+  <data name="CountryPanel" xml:space="preserve"><value>Ülke Paneli</value></data>
   <data name="Menu_DailySummary" xml:space="preserve"><value>Günlük Özet</value></data>
   <data name="Menu_BranchCargos" xml:space="preserve"><value>Şube Kargoları</value></data>
   <data name="Menu_NewCargo" xml:space="preserve"><value>Yeni Kargo</value></data>

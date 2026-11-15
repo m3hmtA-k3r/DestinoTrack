@@ -29,10 +29,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Areas\Manager\Controllers\" />
     <Folder Include="Areas\Manager\Data\" />
-    <Folder Include="Areas\Manager\Models\" />
-    <Folder Include="Areas\Manager\Views\" />
+    <Folder Include="Areas\Manager\Views\Shared\" />
     <Folder Include="Areas\Personel\Data\" />
   </ItemGroup>
 

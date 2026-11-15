@@ -162,9 +162,9 @@
     "semantic_hash": "04c9739bd41a158c3fb95b9ec3020c94"
   },
   "DestinoTrack.WebUI/Views/_ViewImports.cshtml": {
-    "mtime": 1793316999.3854697,
-    "seen": 1793321822.7932534,
-    "ast_hash": "9b207fd549ea5594d3e816aa2cd61a20",
+    "mtime": 1794519633.7031147,
+    "seen": 1794534485.5627887,
+    "ast_hash": "00f4533a34c88e7b6367f646eed98def",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Views/_ViewStart.cshtml": {
@@ -372,15 +372,15 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cargos/CargoRepository.cs": {
-    "mtime": 1793316089.3188233,
-    "seen": 1793321822.793114,
-    "ast_hash": "f36697292c74dbef02b5845399beca7b",
+    "mtime": 1794693890.9785607,
+    "seen": 1794698030.0992424,
+    "ast_hash": "f0d37a4ecc91ea347c099ef45191b63d",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cargos/ICargoRepository.cs": {
-    "mtime": 1793316020.7825806,
-    "seen": 1793321822.7931147,
-    "ast_hash": "7fcaa1dece18bd2df45f1d3d073dd2ff",
+    "mtime": 1794531941.6386828,
+    "seen": 1794534485.5626416,
+    "ast_hash": "0587923da228a076e10d27acb65d3afc",
     "semantic_hash": ""
   },
   "DestinoTrack.DataAccess/Repositories/Cities/CityRepository.cs": {
@@ -1422,9 +1422,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cargos/CargoService.cs": {
-    "mtime": 1793316340.978329,
-    "seen": 1793321822.792983,
-    "ast_hash": "26ccafe94ed8a095a8af69c2943842e1",
+    "mtime": 1794697245.000205,
+    "seen": 1794698030.0990696,
+    "ast_hash": "0413d48b61106664db041ef650dec714",
     "semantic_hash": ""
   },
   "DestinoTrack.Business/Services/Cargos/ICargoService.cs": {
@@ -1614,9 +1614,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Personel/Views/Shared/_PersonelLayout.cshtml": {
-    "mtime": 1793308216.8290434,
-    "seen": 1793309305.830726,
-    "ast_hash": "b62978a8bb2f102a896fcc9b5d3c7798",
+    "mtime": 1794522120.1765149,
+    "seen": 1794534485.5627522,
+    "ast_hash": "ac0d46a858ff4c77ce36b640351c83f3",
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Personel/Views/_ViewImports.cshtml": {
@@ -1686,9 +1686,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.DTO/DTOs/CargoDtos/CargoMovementTargetDto.cs": {
-    "mtime": 1793025959.8444047,
-    "seen": 1793054378.0496023,
-    "ast_hash": "b3910d75a20d5ccc5084f023ce557343",
+    "mtime": 1794692661.8477256,
+    "seen": 1794698030.0991662,
+    "ast_hash": "e09ec59eb35687b94253df7a627370f3",
     "semantic_hash": ""
   },
   "DestinoTrack.DTO/DTOs/CargoDtos/CreateMovementDto.cs": {
@@ -1710,9 +1710,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Personel/Views/Movement/Index.cshtml": {
-    "mtime": 1793053204.5270462,
-    "seen": 1793054378.0500042,
-    "ast_hash": "b3775807eff3102735fdd04af55efb50",
+    "mtime": 1794693638.2428372,
+    "seen": 1794698030.0993602,
+    "ast_hash": "1e8f8a2120c3472a4686232a004f7d08",
     "semantic_hash": ""
   },
   "DestinoTrack.DTO/DTOs/CargoDtos/DeliveryRowDto.cs": {
@@ -1740,9 +1740,9 @@
     "semantic_hash": ""
   },
   "DestinoTrack.WebUI/Areas/Personel/Views/Delivery/Index.cshtml": {
-    "mtime": 1793064632.6790583,
-    "seen": 1793064815.12093,
-    "ast_hash": "588df9534e41763bf292f15f5212cd9a",
+    "mtime": 1794692524.3052769,
+    "seen": 1794698030.0993571,
+    "ast_hash": "5927fef6bf0a51ffa35cc29b509c8d24",
     "semantic_hash": ""
   },
   "DestinoTrack.DTO/DTOs/CargoDtos/CargoIssueRowDto.cs": {
@@ -1815,6 +1815,18 @@
     "mtime": 1793317386.415057,
     "seen": 1793321822.7932358,
     "ast_hash": "b7037796127b008059c0a478507e305f",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Personel/Models/DeliveryActionsViewModel.cs": {
+    "mtime": 1794619083.9359818,
+    "seen": 1794698030.099348,
+    "ast_hash": "a2f822a8595cad289a490e16d6501588",
+    "semantic_hash": ""
+  },
+  "DestinoTrack.WebUI/Areas/Personel/Views/Shared/_DeliveryActions.cshtml": {
+    "mtime": 1794619126.5457206,
+    "seen": 1794698030.0993643,
+    "ast_hash": "2dcd20a3761fe9eb186ed0edb5468c5f",
     "semantic_hash": ""
   }
 }

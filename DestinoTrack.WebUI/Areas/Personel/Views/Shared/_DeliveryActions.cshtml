@@ -1,0 +1,51 @@
+﻿@model DeliveryActionsViewModel
+
+@* Teslim ve iade formları — iki ekran da bunu çağırıyor (dağıtım listesi · yeni hareket).
+   Eylemler açıkça Delivery controller'ına gidiyor: partial hangi ekranda çizilirse çizilsin
+   aynı kapıya düşsün. Servis kodu doğruluyor, teslim alanı kaydediyor, deneme sayacını işletiyor *@
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-4 border-t border-outline-variant pt-4">
+
+    @* Teslim: kodu alıcı söyler, personel/kurye yazar — ekranda hiçbir yerde yazmıyor *@
+    <form asp-area="Personel" asp-controller="Delivery" asp-action="Deliver" method="post"
+          class="flex flex-col sm:flex-row sm:items-end gap-3">
+        <input type="hidden" name="cargoId" value="@Model.CargoId" />
+        <input type="hidden" name="courierId" value="@Model.CourierId" />
+        <div class="grow">
+            <label class="field-label">@L["DeliveryCode"]</label>
+            <input name="code" class="field-input" autocomplete="off" inputmode="numeric" maxlength="6" required />
+        </div>
+        <div class="grow">
+            <label class="field-label">@L["RecipientName"]</label>
+            <input name="recipientName" class="field-input" autocomplete="off" required />
+        </div>
+        <button type="submit" class="btn-filled h-11">
+            <span class="material-symbols-outlined text-[20px]">check</span>
+            <span>@L["MarkDelivered"]</span>
+        </button>
+    </form>
+
+    @* Teslim edilemedi: gerekçe zorunlu, "Diğer" ise açıklama da (servis denetliyor) *@
+    <form asp-area="Personel" asp-controller="Delivery" asp-action="Fail" method="post"
+          class="flex flex-col sm:flex-row sm:items-end gap-3">
+        <input type="hidden" name="cargoId" value="@Model.CargoId" />
+        <input type="hidden" name="courierId" value="@Model.CourierId" />
+        <div class="grow">
+            <label class="field-label">@L["FailureReason"]</label>
+            <select name="reason" class="field-input cursor-pointer" required>
+                @foreach (var sebep in Enum.GetValues<DeliveryFailureReason>())
+                {
+                    <option value="@sebep">@L["DeliveryFailureReason_" + sebep]</option>
+                }
+            </select>
+        </div>
+        <div class="grow">
+            <label class="field-label">@L["Description"]</label>
+            <input name="description" class="field-input" autocomplete="off" />
+        </div>
+        <button type="submit" class="btn-tonal h-11">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+            <span>@L["MarkFailed"]</span>
+        </button>
+    </form>
+
+</div>

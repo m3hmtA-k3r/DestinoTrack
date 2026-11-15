@@ -53,9 +53,16 @@
                             <span class="@DurumSinifi(hareket.CargoStatus)">@L["CargoStatus_" + hareket.CargoStatus]</span>
                         </div>
 
-                        @if (!string.IsNullOrEmpty(hareket.PerformedByName) || !string.IsNullOrEmpty(hareket.Description))
+                        @if (!string.IsNullOrEmpty(hareket.BranchName) || !string.IsNullOrEmpty(hareket.PerformedByName)
+                                        || !string.IsNullOrEmpty(hareket.Description))
                         {
                             <p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                                @* Şube adı yalnız ülke panelinde dolu geliyor: Manager birden çok şubeye
+                                   bakıyor, hareketin nerede yazıldığını görmeli. Şube panelinde boş kalır *@
+                                @if (!string.IsNullOrEmpty(hareket.BranchName))
+                                {
+                                    <span class="chip-neutral">@hareket.BranchName</span>
+                                }
                                 @hareket.PerformedByName
                                 @if (!string.IsNullOrEmpty(hareket.Description))
                                 {
@@ -63,6 +70,7 @@
                                 }
                             </p>
                         }
+
                     </div>
                 </li>
             }

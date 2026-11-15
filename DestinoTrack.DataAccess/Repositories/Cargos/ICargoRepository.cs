@@ -39,11 +39,14 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 
         // Dağıtım ekranı: satırda kurye adı ve deneme sayısı da gerekiyor, o yüzden genel liste
         // sorgusundan ayrı duruyor — oradaki birleştirmeleri bu ekran için şişirmiyoruz.
+        // Birden çok durum alır: "dağıtıma hazır" hem ilk kez gelenleri hem de
+        // teslim edilemeyip YENİ DENEME bekleyenleri gösterir (case: "Teslim Edilemedi → yeniden dağıtım").
         // Teslime en yakın tarih üstte: dağıtım turu buna göre kuruluyor
         Task<(List<Cargo> Items, int TotalCount)> GetDeliveryListScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId,
                                                                              Guid? userId, Guid? courierEmployeeId, bool unrestricted,
-                                                                             CargoStatus status, int page, int pageSize,
+                                                                             CargoStatus[] statuses, int page, int pageSize,
                                                                              CargoDirection? direction = null);
+
 
 
         // Sorunlu kargolar: başarısız denemeli · iade sürecinde · geciken (D66).

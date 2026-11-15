@@ -31,7 +31,7 @@
         </div>
     }
 
-    @* Üst bölüm yalnız personelde: kurye kendine kargo atamaz (D72) *@
+    @* Üst bölüm yalnız personelde: kurye kendine kargo atamaz *@
     @if (Model.CanDispatch)
     {
         <div class="m3-card p-6 mb-8">
@@ -132,48 +132,8 @@
                             </div>
                         </div>
 
-                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 border-t border-outline-variant pt-4">
-                            @* Teslim: kodu alıcı söyler, kurye yazar — ekranda hiçbir yerde yazmıyor (T4) *@
-                            <form asp-action="Deliver" method="post" class="flex flex-col sm:flex-row sm:items-end gap-3">
-                                <input type="hidden" name="cargoId" value="@satir.Id" />
-                                <input type="hidden" name="courierId" value="@satir.CourierId" />
-                                <div class="grow">
-                                    <label class="field-label">@L["DeliveryCode"]</label>
-                                    <input name="code" class="field-input" autocomplete="off" inputmode="numeric" maxlength="6" required />
-                                </div>
-                                <div class="grow">
-                                    <label class="field-label">@L["RecipientName"]</label>
-                                    <input name="recipientName" class="field-input" autocomplete="off" required />
-                                </div>
-                                <button type="submit" class="btn-filled h-11">
-                                    <span class="material-symbols-outlined text-[20px]">check</span>
-                                    <span>@L["MarkDelivered"]</span>
-                                </button>
-                            </form>
+                        <partial name="_DeliveryActions" model="new DeliveryActionsViewModel { CargoId = satir.Id, CourierId = satir.CourierId ?? Guid.Empty }" />
 
-                            @* Teslim edilemedi: gerekçe zorunlu, "Diğer" ise açıklama da (servis denetliyor) *@
-                            <form asp-action="Fail" method="post" class="flex flex-col sm:flex-row sm:items-end gap-3">
-                                <input type="hidden" name="cargoId" value="@satir.Id" />
-                                <input type="hidden" name="courierId" value="@satir.CourierId" />
-                                <div class="grow">
-                                    <label class="field-label">@L["FailureReason"]</label>
-                                    <select name="reason" class="field-input cursor-pointer" required>
-                                        @foreach (var sebep in Enum.GetValues<DeliveryFailureReason>())
-                                        {
-                                            <option value="@sebep">@L["DeliveryFailureReason_" + sebep]</option>
-                                        }
-                                    </select>
-                                </div>
-                                <div class="grow">
-                                    <label class="field-label">@L["Description"]</label>
-                                    <input name="description" class="field-input" autocomplete="off" />
-                                </div>
-                                <button type="submit" class="btn-tonal h-11">
-                                    <span class="material-symbols-outlined text-[20px]">close</span>
-                                    <span>@L["MarkFailed"]</span>
-                                </button>
-                            </form>
-                        </div>
                     </div>
                 }
             </div>
