@@ -30,11 +30,13 @@
     }
     else
     {
-        @* Günlük özet kartları — sayıları servisten kendi alıyor *@
-        @await Component.InvokeAsync("BranchDailySummary")
+        @* Günlük özet kartları — sayıları servisten kendi alıyor, kapsamı servis seçiyor *@
+        @await Component.InvokeAsync("DailySummary")
 
         @* Şubede en son yazılan hareketler *@
-        @await Component.InvokeAsync("BranchRecentMovements")
+        @await Component.InvokeAsync("RecentMovements")
     }
+
+
 
 </div>

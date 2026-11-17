@@ -1,0 +1,213 @@
+﻿@model CargoLabelDto
+@{
+    Layout = null;
+
+    var lang = System.Globalization.CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
+}
+<!DOCTYPE html>
+<html lang="@lang">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@Model.TrackCode</title>
+    <style>
+        
+        @@page {
+            size: 100mm 150mm;
+            margin: 0;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: #eceff1;
+            font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+            color: #000;
+        }
+
+        .araclar {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .dugme {
+            padding: 8px 18px;
+            border: 1px solid #455a64;
+            border-radius: 6px;
+            background: #fff;
+            color: #263238;
+            font: inherit;
+            font-size: 14px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .dugme-ana { background: #263238; color: #fff; }
+
+        .etiket {
+            width: 100mm;
+            height: 150mm;
+            margin: 0 auto 24px;
+            padding: 4mm;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .marka {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            border-bottom: 0.6mm solid #000;
+            padding-bottom: 1mm;
+        }
+
+        .marka-ad { font-size: 4.2mm; font-weight: 800; letter-spacing: 0.2mm; }
+        .tur { font-size: 3mm; font-weight: 700; text-transform: uppercase; }
+
+        .barkod { text-align: center; padding: 1.5mm 0; }
+        .barkod svg { width: 90mm; height: 16mm; }
+
+        .takip {
+            font-family: "Consolas", "Courier New", monospace;
+            font-size: 4.4mm;
+            font-weight: 700;
+            letter-spacing: 0.6mm;
+        }
+
+        .taraf { border-top: 0.3mm solid #000; padding: 1.2mm 0; }
+        .taraf-baslik { font-size: 2.6mm; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3mm; }
+        .taraf-ad { font-size: 3.6mm; font-weight: 700; }
+        .taraf-satir { font-size: 3mm; line-height: 1.25; }
+        .alici .taraf-ad { font-size: 4.4mm; }
+        .alici .taraf-satir { font-size: 3.4mm; }
+
+        /* Ayrıştırma bandı: transfer merkezinde ilk bakılan yer, en büyük yazı burada */
+        .varis {
+            margin-top: 1.5mm;
+            padding: 2mm;
+            background: #000;
+            color: #fff;
+        }
+
+        .varis-kod { font-size: 6mm; font-weight: 800; letter-spacing: 0.4mm; }
+        .varis-ad { font-size: 3.2mm; }
+
+        .alt {
+            margin-top: auto;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 2mm;
+            border-top: 0.6mm solid #000;
+            padding-top: 1.5mm;
+        }
+
+        .olcu { font-size: 3mm; line-height: 1.4; }
+        .ucret { font-size: 4.6mm; font-weight: 800; }
+        .tahsilat { font-size: 3mm; font-weight: 700; }
+        .qr svg { width: 22mm; height: 22mm; }
+
+        .basim {
+            margin-top: 1mm;
+            font-size: 2.4mm;
+            color: #37474f;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @@media print {
+            body { background: #fff; }
+            .araclar { display: none; }
+            .etiket { margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Yalnız ekranda görünür, kâğıda çıkmaz -->
+    <div class="araclar">
+        <button type="button" class="dugme dugme-ana" onclick="window.print()">@L["Print"]</button>
+        <a class="dugme" asp-action="Detail" asp-route-id="@Model.Id">@L["Back"]</a>
+    </div>
+
+    <div class="etiket">
+
+        <div class="marka">
+            <span class="marka-ad">DestinoTrack</span>
+            <span class="tur">@L["CargoType_" + Model.CargoType]</span>
+        </div>
+
+        <div class="barkod">
+            @Html.Raw(Model.BarcodeSvg)
+            <div class="takip">@Model.TrackCode</div>
+        </div>
+
+        <div class="taraf">
+            <div class="taraf-baslik">@L["Sender"]</div>
+            <div class="taraf-ad">@Model.SenderName</div>
+            @if (!string.IsNullOrEmpty(Model.CustomerTitle))
+            {
+                <div class="taraf-satir">@Model.CustomerTitle</div>
+            }
+            <div class="taraf-satir">@Model.SenderPhone</div>
+            <div class="taraf-satir">@Model.SenderAddress</div>
+            <div class="taraf-satir">@Model.OriginBranchCode · @Model.OriginCityName</div>
+        </div>
+
+        <div class="taraf alici">
+            <div class="taraf-baslik">@L["Receiver"]</div>
+            <div class="taraf-ad">@Model.ReceiverName</div>
+            <div class="taraf-satir">@Model.ReceiverPhone</div>
+            <div class="taraf-satir">@Model.ReceiverAddress</div>
+        </div>
+
+        <div class="varis">
+            <div class="varis-kod">@Model.DestinationBranchCode</div>
+            <div class="varis-ad">@Model.DestinationBranchName · @Model.DestinationCityName / @Model.DestinationCountryName</div>
+        </div>
+
+        <div class="alt">
+            <div>
+                <div class="olcu">
+                    @L["Weight"]: @Model.Weight.ToString("N1") kg ·
+                    @L["Desi"]: @Model.Desi.ToString("N0")
+                </div>
+                <div class="olcu">
+                    @Model.Width.ToString("N0") × @Model.Height.ToString("N0") × @Model.Length.ToString("N0") cm
+                </div>
+                <div class="ucret">@Model.Price.ToString("N2") @Model.CurrencyCode</div>
+                <div class="tahsilat">
+                    @if (Model.IsPaid)
+                    {
+                        @L["Paid"]
+                    }
+                    else
+                    {
+                        @L["PaymentType_" + Model.PaymentType]
+                    }
+                </div>
+            </div>
+
+            <div class="qr">
+                @Html.Raw(Model.QrSvg)
+            </div>
+        </div>
+
+        <div class="basim">
+            <span>@L["PrintedAt"]: @Model.PrintedAt.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
+            <span>@Model.EstimatedArrivalDate.ToString("dd.MM.yyyy")</span>
+        </div>
+
+    </div>
+
+    <script>
+        window.addEventListener('load', function () { window.print(); });
+    </script>
+
+</body>
+</html>

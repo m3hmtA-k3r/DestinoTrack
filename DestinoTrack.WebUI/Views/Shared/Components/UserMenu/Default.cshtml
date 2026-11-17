@@ -1,7 +1,6 @@
 ﻿@model UserCardDto
 
 <!-- Hesap menüsü — UserMenuViewComponent · Default -->
-<!-- <details>: JavaScript'siz açılır menü — düğmeye tıklayınca açılır / kapanır -->
 <details class="relative">
     <summary class="flex items-center gap-2 p-1 sm:pr-3 rounded-xl cursor-pointer list-none [&::-webkit-details-marker]:hidden hover:bg-surface-container-high transition-colors" aria-label="@L["AccountMenu"]">
         <span class="w-8 h-8 rounded-full bg-primary flex items-center justify-center font-headline-sm text-label-md text-on-primary">@Model.Initials</span>
@@ -23,6 +22,14 @@
             </a>
         }
 
+        @if (Model.IsManager)
+        {
+            <a asp-area="Manager" asp-controller="Home" asp-action="Index" class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors">
+                <span class="material-symbols-outlined text-[20px]">public</span>
+                <span>@L["CountryPanel"]</span>
+            </a>
+        }
+
         @if (Model.IsBranchStaff)
         {
             <a asp-area="Personel" asp-controller="Home" asp-action="Index" class="flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-high transition-colors">
@@ -31,7 +38,7 @@
             </a>
         }
 
-        <!-- Çıkış: POST + antiforgery (form tag helper token'ı kendisi ekler) -->
+
         <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
             <button type="submit" class="w-full flex items-center gap-3 px-3 py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-error-container hover:text-on-error-container transition-colors">
                 <span class="material-symbols-outlined text-[20px]">logout</span>

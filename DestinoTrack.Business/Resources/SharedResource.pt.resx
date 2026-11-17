@@ -1024,6 +1024,9 @@
   <data name="MovementSaved" xml:space="preserve"><value>Movimento registado.</value></data>
   <data name="Weight" xml:space="preserve"><value>Peso</value></data>
   <data name="Desi" xml:space="preserve"><value>Unidade volumétrica</value></data>
+  <data name="PrintLabel" xml:space="preserve"><value>Imprimir etiqueta</value></data>
+  <data name="Print" xml:space="preserve"><value>Imprimir</value></data>
+  <data name="PrintedAt" xml:space="preserve"><value>Impresso</value></data>
   <data name="OriginBranch" xml:space="preserve"><value>Filial de origem</value></data>
   <data name="DestinationBranch" xml:space="preserve"><value>Filial de destino</value></data>
   <data name="Width" xml:space="preserve"><value>Largura (cm)</value></data>

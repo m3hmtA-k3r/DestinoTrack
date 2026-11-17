@@ -55,12 +55,19 @@ namespace DestinoTrack.WebUI.Controllers
                 return RedirectToAction("Index", "City", new { area = AreaNames.Admin });
             }
 
+            // Manager kendi ülke paneline düşer (daha önce Hesabım'a düşüyordu)
+            if (result.IsManager)
+            {
+                return RedirectToAction("Index", "Home", new { area = AreaNames.Manager });
+            }
+
             if (result.IsBranchStaff)
             {
                 return RedirectToAction("Index", "Home", new { area = AreaNames.Personel });
             }
 
             return RedirectToAction(nameof(Profile));
+
 
         }
 
@@ -98,7 +105,6 @@ namespace DestinoTrack.WebUI.Controllers
                 return View(registerDto);
             }
 
-            // servis kullanıcıyı giriş de yaptırdı
             TempData["Success"] = _localizer["RegistrationCompleted"].Value;
             return RedirectToAction(nameof(Profile));
         }

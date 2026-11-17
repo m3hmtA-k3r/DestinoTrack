@@ -3,9 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DestinoTrack.WebUI.ViewComponents
 {
-    // VC — şube panelinin günlük özeti. Veriyi controller'dan değil servisten alıyor:
-    // sayıların hangi kapsamda üretileceğine servis karar veriyor (BranchSummary'deki kalıp)
-    public class BranchDailySummaryViewComponent(ICargoService _cargoService) : ViewComponent
+    //Manager ve Brancher panelinde günlük özet bilgilerini göstermek için kullanılan ViewComponent
+    public class DailySummaryViewComponent(ICargoService _cargoService) : ViewComponent
     {
         public async Task<IViewComponentResult> InvokeAsync()
         {
@@ -13,7 +12,7 @@ namespace DestinoTrack.WebUI.ViewComponents
 
             if (summary is null)
             {
-                return View("NoBranch");
+                return View("NoScope");
             }
 
             return View(summary);

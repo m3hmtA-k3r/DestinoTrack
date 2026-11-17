@@ -1,4 +1,5 @@
 ﻿using DestinoTrack.Business.Consts;
+using DestinoTrack.DataAccess.Interceptors;
 using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DTO.DTOs.Common;
 using DestinoTrack.DTO.DTOs.CountryDtos;
@@ -9,7 +10,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace DestinoTrack.Business.Services.Countries
 {
-    public class CountryService(ICountryRepository _countryRepository, IStringLocalizer<SharedResource> _localizer) : ICountryService
+    public class CountryService(ICountryRepository _countryRepository, 
+                                ICurrentUserAccessor _currentUser, IStringLocalizer<SharedResource> _localizer) : ICountryService
     {
         public async Task<List<ResultCountryDto>> GetAllAsync()
         {
@@ -85,5 +87,30 @@ namespace DestinoTrack.Business.Services.Countries
             await _countryRepository.DeleteAsync(country);
         }
 
+
+        // Manager paneli için
+        // Ülke panelinin başlığı — kimlik oturumdan okunur, çağırandan alınmaz
+        public async Task<CountryHeaderDto?> GetMyPanelHeaderAsync()
+        {
+            // Ülkesi atanmamış kullanıcı ya da girişsiz istek: veritabanına hiç gidilmez
+            if (_currentUser.CountryId is null)
+            {
+                return null;
+            }
+
+            var header = await _countryRepository.GetPanelHeaderAsync(_currentUser.CountryId.Value);
+
+            // Ülkesi atanmış ama kayıt silinmiş: ekran "atanmamış" hâliyle aynı davranır
+            if (header is null)
+            {
+                return null;
+            }
+
+            return new CountryHeaderDto
+            {
+                Name = header.Value.Name,
+                BranchCount = header.Value.BranchCount
+            };
+        }
     }
 }

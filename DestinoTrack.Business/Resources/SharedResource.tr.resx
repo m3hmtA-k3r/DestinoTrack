@@ -1024,6 +1024,9 @@
   <data name="MovementSaved" xml:space="preserve"><value>Hareket kaydedildi.</value></data>
   <data name="Weight" xml:space="preserve"><value>Ağırlık</value></data>
   <data name="Desi" xml:space="preserve"><value>Desi</value></data>
+  <data name="PrintLabel" xml:space="preserve"><value>Etiket Yazdır</value></data>
+  <data name="Print" xml:space="preserve"><value>Yazdır</value></data>
+  <data name="PrintedAt" xml:space="preserve"><value>Basım</value></data>
   <data name="OriginBranch" xml:space="preserve"><value>Çıkış Şubesi</value></data>
   <data name="DestinationBranch" xml:space="preserve"><value>Varış Şubesi</value></data>
   <data name="Width" xml:space="preserve"><value>En (cm)</value></data>

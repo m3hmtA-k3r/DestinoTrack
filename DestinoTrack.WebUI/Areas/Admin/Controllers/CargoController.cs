@@ -68,5 +68,21 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
                 return RedirectToAction(nameof(Index));
             }
         }
+
+        // Admin kapsamsız olduğu için her kargonun etiketini basabilir
+        public async Task<IActionResult> Label(Guid id)
+        {
+            try
+            {
+                return View("CargoLabel", await _cargoService.GetLabelAsync(id));
+            }
+            catch (ValidationException ex)
+            {
+                TempData["Error"] = ex.Message;
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+
     }
 }

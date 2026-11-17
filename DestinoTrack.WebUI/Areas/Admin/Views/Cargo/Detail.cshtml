@@ -5,6 +5,9 @@
 
     // Üst etiket: Admin tarafında "Gönderiler" yazar
     ViewData["Caption"] = L["Menu_Shipments"].Value;
+
+    // Admin de etiket basabilir (kapsamsız: her kargo)
+    ViewData["CanPrintLabel"] = true;
 }
 
 @await Html.PartialAsync("_CargoDetail", Model)

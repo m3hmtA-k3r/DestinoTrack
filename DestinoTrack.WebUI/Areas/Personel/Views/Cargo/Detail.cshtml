@@ -5,6 +5,9 @@
 
     // Üst etiket: şube panelinde "Şube Kargoları" yazar
     ViewData["Caption"] = L["Menu_BranchCargos"].Value;
+
+    // Etiketi basan şubedir: düğme bu ekranda açılıyor
+    ViewData["CanPrintLabel"] = true;
 }
 
 @await Html.PartialAsync("_CargoDetail", Model)

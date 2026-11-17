@@ -33,5 +33,21 @@ namespace DestinoTrack.DataAccess.Repositories.Countries
             return (items, totalCount);
         }
 
+        // Ülke paneli başlığı net bilgi vermesi için ülke adı ve şube sayısı döndürülür
+        public async Task<(string Name, int BranchCount)?> GetPanelHeaderAsync(Guid countryId)
+        {
+            var row = await _context.Countries
+                .Where(c => c.Id == countryId)
+                .Select(c => new
+                {
+                    c.Name,
+                    BranchCount = c.Cities.SelectMany(city => city.Branches).Count()
+                })
+                .FirstOrDefaultAsync();
+
+            return row is null ? null : (row.Name, row.BranchCount);
+        }
+
+
     }
 }

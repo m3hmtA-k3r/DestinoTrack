@@ -768,6 +768,9 @@ namespace DestinoTrack.Business.Services.Cargos
             // Günlük özetle aynı kapsam sırası: şube daha dar, varsa o kazanır
             List<CargoMovement> movements;
 
+            // Şube adı yalnız ülke panelinde anlamlı — hangi kapsamdan geldiğimizi hatırlıyoruz
+            bool ulkeKapsami = false;
+
             if (_currentUser.BranchId is not null)
             {
                 movements = await _cargoMovementRepository.GetRecentByBranchAsync(_currentUser.BranchId.Value, count);
@@ -775,6 +778,7 @@ namespace DestinoTrack.Business.Services.Cargos
             else if (scope.CountryId is not null)
             {
                 movements = await _cargoMovementRepository.GetRecentByCountryAsync(scope.CountryId.Value, count);
+                ulkeKapsami = true;
             }
             else
             {
@@ -795,10 +799,10 @@ namespace DestinoTrack.Business.Services.Cargos
                     : $"{m.PerformedByUser.FirstName} {m.PerformedByUser.LastName}",
                 Description = m.Description,
 
-                // Yalnız ülke sürümünde dolu veri gelir, şube sürümünde boş olabilir
-                BranchName = m.Branch?.Name
+                BranchName = ulkeKapsami ? m.Branch?.Name : null
             }).ToList();
         }
+
 
 
         // kapsam dışındaki kayda dokunulamaz — kargo var ama bu kullanıcının değil

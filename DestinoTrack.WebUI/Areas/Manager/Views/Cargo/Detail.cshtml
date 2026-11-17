@@ -1,0 +1,13 @@
+﻿@model CargoDetailDto
+@{
+    ViewData["Title"] = Model.TrackCode;
+
+    // Üst etiket: ülke panelinde kargo listesi yok, detaya günlük özetten giriliyor
+    ViewData["Caption"] = L["Menu_DailySummary"].Value;
+
+    // "Geri" butonunun hedefi: bu area'da kargo listesi olmadığı için günlük özete döner
+    ViewData["BackController"] = "Home";
+    ViewData["BackAction"] = "Index";
+}
+
+@await Html.PartialAsync("_CargoDetail", Model)

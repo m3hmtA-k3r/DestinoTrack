@@ -1,0 +1,38 @@
+﻿@model ManagerHomeViewModel
+@{
+    ViewData["Title"] = L["Menu_DailySummary"].Value;
+}
+
+<div class="w-full">
+
+    <!-- Sayfa başlığı: hangi ülkenin sayıları görünüyor -->
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">insights</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["CountryPanel"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["Menu_DailySummary"]</h1>
+
+            @if (!string.IsNullOrEmpty(Model.CountryName))
+            {
+                <span class="font-body-sm text-body-sm text-on-surface-variant">
+                    @Model.CountryName · @L["Branches"]: @Model.BranchCount
+                </span>
+            }
+        </div>
+    </div>
+
+    @if (TempData["Error"] is string error)
+    {
+        <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">
+            <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+            <span class="font-body-sm text-body-sm">@error</span>
+        </div>
+    }
+
+    @await Component.InvokeAsync("DailySummary")
+
+    @await Component.InvokeAsync("RecentMovements")
+
+</div>

@@ -78,6 +78,23 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
             }
         }
 
+        // Barkod ve QR servisten hazır SVG olarak geliyor; sayfa hesap yapmaz, yalnız yerleştirir.
+     
+        public async Task<IActionResult> Label(Guid id)
+        {
+            try
+            {
+                return View("CargoLabel", await _cargoService.GetLabelAsync(id));
+            }
+            catch (ValidationException ex)
+            {
+                TempData["Error"] = ex.Message;
+
+                return RedirectToAction(nameof(Index));
+            }
+        }
+
+
 
         // kargo kabul formu. Çıkış şubesi seçilmez, personelin kendi şubesidir
         public async Task<IActionResult> Create()
@@ -86,7 +103,6 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
         }
 
 
-        //  kaydetmeden fiyat sorar — kayıt açılmaz, aynı sayfa dolu form ve tutarla yeniden çizilir
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Quote(CreateCargoDto cargo)

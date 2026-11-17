@@ -21,25 +21,21 @@ namespace DestinoTrack.Business.Services.Accounts
     {
         public async Task<LoginResultDto> LoginAsync(LoginDto loginDto)
         {
-            // lockoutOnFailure: true → 5 hatalı denemede 15 dakika kilit alır
             var result = await _signInManager.PasswordSignInAsync(
                 loginDto.Email, loginDto.Password, loginDto.RememberMe, lockoutOnFailure: true);
 
             if (result.IsLockedOut)
             {
-                //pasif hesap mı, süreli kilitli mi 
                 return new LoginResultDto { ErrorMessage = await _userService.GetLockedOutMessageAsync(loginDto.Email, loginDto.Password) };
             }
 
             if (!result.Succeeded)
             {
-                // Hangi alanın yanlış olduğu söylenmez — e-postanın kayıtlı olup olmadığı bilgisini vermesin
                 return new LoginResultDto { ErrorMessage = _localizer["InvalidLogin"].Value };
             }
 
             var user = await _userManager.FindByEmailAsync(loginDto.Email);
 
-            // Rolleri bir kez okuyoruz: her bayrak için ayrı sorgu atmak gereksiz
             IList<string> roles = user is null ? [] : await _userManager.GetRolesAsync(user);
 
             return new LoginResultDto
@@ -47,9 +43,11 @@ namespace DestinoTrack.Business.Services.Accounts
                 Succeeded = true,
                 IsAdmin = roles.Contains(RoleNames.Admin),
 
-                // Panelin kapısıyla aynı küme: kim giriyorsa giriş de oraya bırakır
+                IsManager = roles.Contains(RoleNames.Manager),
+
                 IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains)
             };
+
 
         }
 
@@ -60,14 +58,12 @@ namespace DestinoTrack.Business.Services.Accounts
 
         public async Task<IdentityResult> RegisterCustomerAsync(RegisterDto registerDto)
         {
-            // Ülke gercekten var mı — numara kuralı ülkenin ISO koduna bağlı
             var country = registerDto.CountryId == null ? null : await _countryRepository.GetByIdAsync(registerDto.CountryId.Value);
             if (country == null)
             {
                 return Fail("CountryNotFound");
             }
 
-            // numara bicimi ülkeye ve türe göre; kayıt normalize edilmiş haliyle tutulur
             var taxNumber = TaxIdentityRules.Normalize(registerDto.TaxNumber);
             var formatErrorKey = TaxIdentityRules.GetFormatErrorKey(country.IsoCode, registerDto.CustomerType, taxNumber);
             if (formatErrorKey != null)
@@ -80,22 +76,18 @@ namespace DestinoTrack.Business.Services.Accounts
                 return Fail("TaxNumberTaken");
             }
 
-            // Hesap bilgileri. Mapster (Adapt) bilerek kullanılmadı: RegisterDto.CountryId, adı aynı olduğu için
-            //    AppUser.CountryId'ye eşlendi. 
             var email = registerDto.Email.Trim();
             var phone = registerDto.PhoneNumber.Trim();
             var user = new AppUser
             {
-                UserName = email,          // Giriş e-postayla yapılır: kullanıcı adı = e-posta
+                UserName = email,         
                 Email = email,
-                EmailConfirmed = true,     // K11: e-posta doğrulaması yok
+                EmailConfirmed = true,      
                 FirstName = registerDto.FirstName.Trim(),
                 LastName = registerDto.LastName.Trim(),
                 PhoneNumber = phone
             };
 
-            //Önce denetle, sonra yaz: e-posta tekilliği, kullanıcı adı karakterleri, şifre.
-            //    Hata varsa hiçbir kayıt açılmaz.
             foreach (var validator in _userManager.UserValidators)
             {
                 var userCheck = await validator.ValidateAsync(_userManager, user);
@@ -114,7 +106,6 @@ namespace DestinoTrack.Business.Services.Accounts
                 }
             }
 
-            // Cari hesap : bireysel Aktif, kurumsal Onay bekliyor
             var individual = registerDto.CustomerType == CustomerType.Individual;
             var customer = new Customer
             {
@@ -130,7 +121,6 @@ namespace DestinoTrack.Business.Services.Accounts
             };
             await _customerRepository.CreateAsync(customer);
 
-            //Kullanıcı + rol; biri başarısız olursa açılan kayıtlar geri silinir — yarım kayıt kalmaz
             user.CustomerId = customer.Id;
             var created = await _userManager.CreateAsync(user, registerDto.Password);
             if (!created.Succeeded)
@@ -148,7 +138,6 @@ namespace DestinoTrack.Business.Services.Accounts
                 return roleResult;
             }
 
-            // otomatik giriş — oturum çerezi, "Beni hatırla" yok
             await _signInManager.SignInAsync(user, isPersistent: false);
             return IdentityResult.Success;
         }
@@ -158,7 +147,6 @@ namespace DestinoTrack.Business.Services.Accounts
             var user = await _userManager.GetUserAsync(principal);
             if (user == null)
             {
-                // Çerez var ama kullanıcı artık yok
                 return null;
             }
 
@@ -179,7 +167,6 @@ namespace DestinoTrack.Business.Services.Accounts
             };
         }
 
-        // CUK-yyMMdd-12345 (16 karakter, Code tekil) — nadir çakışmada yeniden üretilir
         private async Task<string> GenerateCustomerCodeAsync()
         {
             string code;
@@ -194,7 +181,6 @@ namespace DestinoTrack.Business.Services.Accounts
 
         public async Task<UserCardDto?> GetUserCardAsync(ClaimsPrincipal principal)
         {
-            // Girişsiz talep varsa veritabanına hiç gidemez
             if (principal.Identity?.IsAuthenticated != true)
             {
                 return null;
@@ -203,22 +189,21 @@ namespace DestinoTrack.Business.Services.Accounts
             var user = await _userManager.GetUserAsync(principal);
             if (user == null)
             {
-                // Çerez var ama kullanıcı artık yok
                 return null;
             }
 
-            // Roller çerezden değil veritabanından: Admin rolü değiştirirse kart hemen doğru rolü gösterir
             var roles = await _userManager.GetRolesAsync(user);
 
-            // Ülke, şube, cari (lazy loading) okunmaz — her sayfada yalnızca 2 sorgu: kullanıcı + roller
             return new UserCardDto
             {
                 FullName = $"{user.FirstName} {user.LastName}",
                 Initials = FirstLetter(user.FirstName) + FirstLetter(user.LastName),
                 Role = RoleNames.All.FirstOrDefault(roles.Contains) ?? string.Empty,
                 IsAdmin = roles.Contains(RoleNames.Admin),
+                IsManager = roles.Contains(RoleNames.Manager),
                 IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains)
             };
+
         }
 
 
@@ -226,7 +211,6 @@ namespace DestinoTrack.Business.Services.Accounts
         private IdentityResult Fail(string key) =>
             IdentityResult.Failed(new IdentityError { Code = key, Description = _localizer[key].Value });
 
-        // Avatar harfi — ad boşsa boş döner
         private static string FirstLetter(string? value) =>
             string.IsNullOrWhiteSpace(value) ? string.Empty : char.ToUpperInvariant(value.Trim()[0]).ToString();
 
