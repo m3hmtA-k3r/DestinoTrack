@@ -1,0 +1,10 @@
+﻿@model CargoDetailDto
+@{
+    ViewData["Title"] = Model.TrackCode;
+
+    // Üst etiket: müşteri panelinde "Kargolarım" yazar
+    ViewData["Caption"] = L["Menu_MyCargos"].Value;
+
+}
+
+@await Html.PartialAsync("_CargoDetail", Model)

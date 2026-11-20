@@ -728,7 +728,16 @@
   </data>
   <data name="BranchPanel" xml:space="preserve"><value>Branch panel</value></data>
   <data name="CountryPanel" xml:space="preserve"><value>Country panel</value></data>
+  <data name="CustomerPanel" xml:space="preserve"><value>Customer panel</value></data>
+  <data name="Welcome" xml:space="preserve"><value>Welcome</value></data>
+  <data name="Menu_Overview" xml:space="preserve"><value>Overview</value></data>
+  <data name="Menu_MyCargos" xml:space="preserve"><value>My shipments</value></data>
+  <data name="MyActiveCargos" xml:space="preserve"><value>My active shipments</value></data>
+  <data name="PastDeliveries" xml:space="preserve"><value>Past deliveries</value></data>
+  <data name="LatestStatus" xml:space="preserve"><value>Latest status</value></data>
+  <data name="NoCargoYet" xml:space="preserve"><value>You have no shipments yet</value></data>
   <data name="Menu_DailySummary" xml:space="preserve"><value>Daily summary</value></data>
+  <data name="Menu_CountryCargos" xml:space="preserve"><value>Country shipments</value></data>
   <data name="Menu_BranchCargos" xml:space="preserve"><value>Branch shipments</value></data>
   <data name="Menu_NewCargo" xml:space="preserve"><value>New cargo</value></data>
   <data name="CargoDirection_Incoming" xml:space="preserve"><value>Incoming</value></data>

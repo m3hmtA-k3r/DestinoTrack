@@ -47,6 +47,8 @@ namespace DestinoTrack.Business.Services.Cargos
 
         Task<List<RecentMovementDto>> GetRecentMovementsAsync(int count = 8);
 
+        Task<CustomerSummaryDto?> GetCustomerSummaryAsync();
+
         // detay + hareket çizelgesi (kapsam dışındaysa yetki hatası)
         Task<CargoDetailDto> GetDetailAsync(Guid id);
 

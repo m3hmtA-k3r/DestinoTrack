@@ -15,6 +15,7 @@
         // Personel · Kurye → şube paneli (RoleNames.BranchPanel ile aynı küme).
         // Kararı servis veriyor; controller yalnızca nereye gideceğine bakar
         public bool IsBranchStaff { get; set; }
+        public bool IsCustomer { get; set; }
         public bool Succeeded { get; set; }
 
     }

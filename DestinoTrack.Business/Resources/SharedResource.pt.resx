@@ -728,7 +728,16 @@
   </data>
   <data name="BranchPanel" xml:space="preserve"><value>Painel da filial</value></data>
   <data name="CountryPanel" xml:space="preserve"><value>Painel do país</value></data>
+  <data name="CustomerPanel" xml:space="preserve"><value>Painel do cliente</value></data>
+  <data name="Welcome" xml:space="preserve"><value>Bem-vindo</value></data>
+  <data name="Menu_Overview" xml:space="preserve"><value>Visão geral</value></data>
+  <data name="Menu_MyCargos" xml:space="preserve"><value>Minhas encomendas</value></data>
+  <data name="MyActiveCargos" xml:space="preserve"><value>Minhas encomendas ativas</value></data>
+  <data name="PastDeliveries" xml:space="preserve"><value>Entregas anteriores</value></data>
+  <data name="LatestStatus" xml:space="preserve"><value>Estado mais recente</value></data>
+  <data name="NoCargoYet" xml:space="preserve"><value>Ainda não tem encomendas</value></data>
   <data name="Menu_DailySummary" xml:space="preserve"><value>Resumo diário</value></data>
+  <data name="Menu_CountryCargos" xml:space="preserve"><value>Encomendas do país</value></data>
   <data name="Menu_BranchCargos" xml:space="preserve"><value>Encomendas da filial</value></data>
   <data name="Menu_NewCargo" xml:space="preserve"><value>Nova encomenda</value></data>
   <data name="CargoDirection_Incoming" xml:space="preserve"><value>Recebidas</value></data>

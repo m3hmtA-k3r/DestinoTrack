@@ -66,6 +66,11 @@ namespace DestinoTrack.WebUI.Controllers
                 return RedirectToAction("Index", "Home", new { area = AreaNames.Personel });
             }
 
+            if (result.IsCustomer)
+            {
+                return RedirectToAction("Index", "Home", new { area = AreaNames.Customer });
+            }
+
             return RedirectToAction(nameof(Profile));
 
 

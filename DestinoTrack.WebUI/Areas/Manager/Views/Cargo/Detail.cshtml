@@ -1,13 +1,14 @@
-﻿@model CargoDetailDto
+﻿@using DestinoTrack.DTO.DTOs.CargoDtos
+@model CargoDetailDto
 @{
     ViewData["Title"] = Model.TrackCode;
 
-    // Üst etiket: ülke panelinde kargo listesi yok, detaya günlük özetten giriliyor
-    ViewData["Caption"] = L["Menu_DailySummary"].Value;
+    // Üst etiket: ülke panelinde "Ülke Kargoları" yazar
+    ViewData["Caption"] = L["Menu_CountryCargos"].Value;
 
-    // "Geri" butonunun hedefi: bu area'da kargo listesi olmadığı için günlük özete döner
-    ViewData["BackController"] = "Home";
-    ViewData["BackAction"] = "Index";
+    // BackController/BackAction bilerek yok: null gelince _CargoDetail'in
+    // bağlantısı bulunduğu controller'a çözülür → Cargo/Index.
+    // CanPrintLabel de yok: etiketi kargoya dokunan basar (şube) ya da Admin.
 }
 
 @await Html.PartialAsync("_CargoDetail", Model)

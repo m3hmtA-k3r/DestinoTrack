@@ -43,12 +43,24 @@
 
             <nav class="px-4 pb-6 flex flex-col gap-1">
                 <a asp-area="Manager" asp-controller="Home" asp-action="Index"
-                   class="@(controller == "Home" || controller == "Cargo" ? navActive : navPassive)">
+                   class="@(controller == "Home" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">insights</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_DailySummary"]</span>
                 </a>
-            </nav>
 
+                <a asp-area="Manager" asp-controller="Cargo" asp-action="Index"
+                   class="@(controller == "Cargo" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">inventory_2</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_CountryCargos"]</span>
+                </a>
+
+                <a asp-area="Manager" asp-controller="Issue" asp-action="Index"
+                   class="@(controller == "Issue" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">warning</span>
+                    <span class="font-body-sm text-body-sm">@L["Menu_IssueCargos"]</span>
+                </a>
+
+            </nav>
 
         </div>
 

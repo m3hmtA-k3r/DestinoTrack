@@ -1,0 +1,60 @@
+﻿@model CustomerSummaryDto
+
+@* VC11 · müşteri panosu — aktif kargolar · geçmiş teslimatlar · son durum.
+   Kart düzeni DailySummary ile aynı: aynı sistemin iki panosu iki ayrı dil konuşmasın.
+
+   Durum rozetinin RENK kuralı burada BİLEREK tekrarlanmadı. O kural _CargoList ve
+   _CargoDetail'de duruyor; üçüncü bir kopya çıkarsa akışa bir durum eklendiğinde üç yer
+   güncellenmek zorunda kalır. Renk buraya da gerekirse doğru hamle yardımcıyı ortak bir
+   yere ÇIKARMAK, buraya kopyalamak değil. *@
+@{
+    var kartlar = new (string Etiket, int Sayi, string Ikon)[]
+    {
+        (L["MyActiveCargos"].Value, Model.Active,    "local_shipping"),
+        (L["PastDeliveries"].Value, Model.Delivered, "task_alt")
+    };
+}
+
+@if (Model.LatestId is null)
+{
+    @* Hiç kargosu olmayan müşteri: sıfırlarla dolu üç kutu yanlış bir doluluk hissi verir *@
+    <div class="m3-card empty-state mb-8">
+        <span class="material-symbols-outlined text-[32px] text-on-surface-variant">inventory_2</span>
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["NoCargoYet"]</p>
+    </div>
+}
+else
+{
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+        @foreach (var kart in kartlar)
+        {
+            <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+                <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">@kart.Ikon</span>
+                </div>
+                <div class="min-w-0">
+                    <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@kart.Sayi.ToString("N0")</div>
+                    <div class="font-label-md text-label-md text-on-surface-variant truncate">@kart.Etiket</div>
+                </div>
+            </div>
+        }
+
+        <a asp-area="Customer" asp-controller="Cargo" asp-action="Detail" asp-route-id="@Model.LatestId"
+           class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">history</span>
+            </div>
+            <div class="min-w-0">
+                <div class="font-label-md text-label-md text-on-surface-variant">@L["LatestStatus"]</div>
+                <div class="flex items-center gap-2 min-w-0">
+                    <span class="font-headline-sm text-headline-sm text-on-surface truncate">@Model.LatestTrackCode</span>
+                    <span class="chip-neutral shrink-0">@L["CargoStatus_" + Model.LatestStatus]</span>
+                </div>
+                @if (Model.LatestMovementDate is not null)
+                {
+                    <div class="font-body-sm text-body-sm text-on-surface-variant">@Model.LatestMovementDate.Value.ToString("dd.MM HH:mm")</div>
+                }
+            </div>
+        </a>
+    </div>
+}

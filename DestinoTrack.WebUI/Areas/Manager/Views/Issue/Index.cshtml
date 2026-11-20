@@ -1,0 +1,7 @@
+﻿@model CargoIssueListViewModel
+@{
+    ViewData["Title"] = L["Menu_IssueCargos"].Value;
+    ViewData["PanelLabel"] = L["CountryPanel"].Value;
+}
+
+@await Html.PartialAsync("_CargoIssueList", Model)

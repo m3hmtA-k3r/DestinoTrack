@@ -136,12 +136,21 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 
 
         public async Task<int> CountByStatusScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
-                                                        Guid? courierEmployeeId, bool unrestricted, CargoStatus status)
+                                                 Guid? courierEmployeeId, bool unrestricted, params CargoStatus[] statuses)
         {
             return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
-                .CountAsync(c => c.CargoStatus == status);
+                .CountAsync(c => statuses.Contains(c.CargoStatus));
         }
 
+        public async Task<Cargo?> GetLatestScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                                Guid? courierEmployeeId, bool unrestricted)
+        {
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .Include(c => c.Movements)
+                .OrderByDescending(c => c.Movements.Max(m => (DateTime?)m.MovementDate) ?? c.CreatedDate)
+                .ThenByDescending(c => c.CreatedDate)
+                .FirstOrDefaultAsync();
+        }
 
 
         //iki kardeşi BURADA tanımlı. Başka hiçbir yerde "geciken" hesabı yazılmayacak:
@@ -166,8 +175,6 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                                       || c.EstimatedArrivalDate < simdi)
             };
         }
-
-
 
 
         private IQueryable<Cargo> Scoped(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
@@ -213,8 +220,15 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 
             if (userId.HasValue)
             {
-                return query.Where(c => c.SenderId == userId.Value || c.ReceiverId == userId.Value);
+                // Bireysel
+                return direction switch
+                {
+                    CargoDirection.Incoming => query.Where(c => c.ReceiverId == userId.Value),
+                    CargoDirection.Outgoing => query.Where(c => c.SenderId == userId.Value),
+                    _ => query.Where(c => c.SenderId == userId.Value || c.ReceiverId == userId.Value)
+                };
             }
+
 
             return query.Where(c => false);
         }

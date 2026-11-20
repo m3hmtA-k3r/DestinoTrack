@@ -54,6 +54,8 @@ namespace DestinoTrack.Business.Services.Cargos
             }.ToFrozenDictionary();
 
 
+        private static readonly CargoStatus[] ActiveStatuses = AllowedTransitions.Where(g => g.Value.Length > 0).Select(g => g.Key).ToArray();
+
         // Bu üç durumun kendi akışı var: kurye ataması (Dispatch) · teslim kodu (Deliver) ·
         // iade gerekçesi (FailDelivery). Genel hareket ekranı bunları yazamaz — yazabilse
         // kurye atanmadan dağıtıma çıkan, kodu doğrulanmadan teslim görünen kargo olurdu 
@@ -233,7 +235,7 @@ namespace DestinoTrack.Business.Services.Cargos
                 EstimatedArrivalDate = cargo.EstimatedArrivalDate,
 
                 CourierName = cargo.Courier == null ? null : $"{cargo.Courier.FirstName} {cargo.Courier.LastName}",
-                DeliveryCode = cargo.DeliveryCode,
+                DeliveryCode = _currentUser.Role == RoleNames.Admin ? cargo.DeliveryCode : null,
                 RecipientName = cargo.Delivery?.RecipientName,
                 DeliveredAt = cargo.Delivery?.DeliveredAt,
                 FailedAttemptCount = cargo.DeliveryExceptions?.Count ?? 0,
@@ -754,7 +756,39 @@ namespace DestinoTrack.Business.Services.Cargos
             };
         }
 
+        public async Task<CustomerSummaryDto?> GetCustomerSummaryAsync()
+        {
+            var scope = await GetScopeAsync();
 
+            // Pano "benim kargolarım" diyor: bu soruyu yalnız müşteri kapsamı yanıtlayabilir.
+            // Şube ya da ülke kapsamıyla gelen birine o toplamı basmak yanlış sayı olurdu —
+            // D84'ün aynadaki hali: kapsamı olmayan ekrana sayı uydurulmaz
+            if (scope.CustomerId is null && scope.UserId is null)
+            {
+                return null;
+            }
+
+            var latest = await _cargoRepository.GetLatestScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId, scope.IsUnrestricted);
+
+            return new CustomerSummaryDto
+            {
+                Active = await _cargoRepository.CountByStatusScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted, ActiveStatuses),
+
+                Delivered = await _cargoRepository.CountByStatusScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted, CargoStatus.Delivered),
+
+                LatestTrackCode = latest?.TrackCode,
+                LatestId = latest?.Id,
+                LatestStatus = latest?.CargoStatus,
+
+                // Hareketler sorguda Include edildi: burada ek sorgu açılmıyor
+                LatestMovementDate = latest?.Movements.Max(m => (DateTime?)m.MovementDate)
+            };
+        }
         private static int Adet(Dictionary<CargoStatus, int> sayim, CargoStatus durum)
         {
             return sayim.TryGetValue(durum, out var adet) ? adet : 0;

@@ -193,10 +193,15 @@
                     <span class="text-on-surface-variant">@L["JobType_Courier"]</span>
                     <span class="text-on-surface">@Model.CourierName</span>
                 </div>
-                <div class="flex justify-between font-body-sm text-body-sm">
-                    <span class="text-on-surface-variant">@L["DeliveryCode"]</span>
-                    <span class="font-bold text-on-surface tracking-widest">@Model.DeliveryCode</span>
-                </div>
+                
+                @if (!string.IsNullOrEmpty(Model.DeliveryCode))
+                {
+                    <div class="flex justify-between font-body-sm text-body-sm">
+                        <span class="text-on-surface-variant">@L["DeliveryCode"]</span>
+                        <span class="font-bold text-on-surface tracking-widest">@Model.DeliveryCode</span>
+                    </div>
+                }
+
             }
 
             @if (Model.DeliveredAt.HasValue)

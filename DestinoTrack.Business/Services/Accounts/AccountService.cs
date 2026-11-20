@@ -42,14 +42,14 @@ namespace DestinoTrack.Business.Services.Accounts
             {
                 Succeeded = true,
                 IsAdmin = roles.Contains(RoleNames.Admin),
-
                 IsManager = roles.Contains(RoleNames.Manager),
-
-                IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains)
+                IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains),
+                IsCustomer = roles.Contains(RoleNames.Customer)
             };
 
 
         }
+        
 
         public async Task LogoutAsync()
         {
@@ -201,7 +201,8 @@ namespace DestinoTrack.Business.Services.Accounts
                 Role = RoleNames.All.FirstOrDefault(roles.Contains) ?? string.Empty,
                 IsAdmin = roles.Contains(RoleNames.Admin),
                 IsManager = roles.Contains(RoleNames.Manager),
-                IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains)
+                IsBranchStaff = RoleNames.BranchPanelRoles.Any(roles.Contains),
+                IsCustomer = roles.Contains(RoleNames.Customer)
             };
 
         }

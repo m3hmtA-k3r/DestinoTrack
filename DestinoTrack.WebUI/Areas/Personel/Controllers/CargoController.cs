@@ -7,6 +7,7 @@ using DestinoTrack.DTO.DTOs.CargoDtos;
 using DestinoTrack.DTO.DTOs.PricingDtos;
 using DestinoTrack.Entity.Entities.Enums;
 using DestinoTrack.WebUI.Areas.Personel.Models;
+using DestinoTrack.WebUI.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
@@ -38,7 +39,7 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
             var status = StatusFromSession();
             var search = HttpContext.Session.GetString(SearchKey);
 
-            var model = new CargoIndexViewModel
+            var model = new CargoListViewModel
             {
                 // Kapsamı servis uyguluyor: personel yalnız kendi şubesine değen kargoları görür 
                 Cargos = await _cargoService.GetPagedAsync(status, search, page, direction),
@@ -126,7 +127,6 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
-            //  çıkış şubesi formdan GELMEZ, sunucuda yazılır — kullanıcı başka şube adına kargo açamasın
             cargo.OriginBranchId = _currentUser.BranchId.Value;
 
             // Doğrulama eylemden önce koştuğu için çıkış şubesi o anda boştu ve model geçersiz sayılıyordu.
@@ -147,7 +147,6 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
             }
             catch (ValidationException ex)
             {
-                // Servisin kuralı (tarife yok · müşteri onaysız · ölçü geçersiz) forma döner
                 ModelState.AddModelError(string.Empty, ex.Message);
 
                 return await FormView(cargo);

@@ -1,7 +1,6 @@
-﻿using DestinoTrack.Business;
-using DestinoTrack.Business.Services.Cargos;
+﻿using DestinoTrack.Business.Services.Cargos;
 using DestinoTrack.Entity.Entities.Enums;
-using DestinoTrack.WebUI.Areas.Admin.Models;
+using DestinoTrack.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using System.ComponentModel.DataAnnotations;
@@ -20,7 +19,7 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
             var status = Enum.TryParse<CargoStatus>(HttpContext.Session.GetString(StatusKey), out var s) ? s : (CargoStatus?)null;
             var search = HttpContext.Session.GetString(SearchKey);
 
-            return View(new CargoIndexViewModel
+            return View(new CargoListViewModel
             {
                 //servis kapsamı kendisi uyguluyor, controller'ın ek denetim yapmasına gerek yok
                 Cargos = await _cargoService.GetPagedAsync(status, search, page),

@@ -1,7 +1,7 @@
 ﻿using DestinoTrack.Business.Consts;
 using DestinoTrack.Business.Services.Cargos;
 using DestinoTrack.Entity.Entities.Enums;
-using DestinoTrack.WebUI.Areas.Personel.Models;
+using DestinoTrack.WebUI.Models;                   
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,7 +17,7 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
         {
             var issue = IssueFromSession();
 
-            var model = new CargoIssueIndexViewModel
+            var model = new CargoIssueListViewModel
             {
                 // Kapsamı servis uyguluyor: personel yalnız kendi şubesine değen kargoları görür
                 Cargos = await _cargoService.GetIssuesAsync(issue, page),

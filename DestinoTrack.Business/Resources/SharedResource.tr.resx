@@ -728,7 +728,16 @@
   </data>
   <data name="BranchPanel" xml:space="preserve"><value>Şube Paneli</value></data>
   <data name="CountryPanel" xml:space="preserve"><value>Ülke Paneli</value></data>
+  <data name="CustomerPanel" xml:space="preserve"><value>Müşteri Paneli</value></data>
+  <data name="Welcome" xml:space="preserve"><value>Hoş geldiniz</value></data>
+  <data name="Menu_Overview" xml:space="preserve"><value>Genel Bakış</value></data>
+  <data name="Menu_MyCargos" xml:space="preserve"><value>Kargolarım</value></data>
+  <data name="MyActiveCargos" xml:space="preserve"><value>Aktif Kargolarım</value></data>
+  <data name="PastDeliveries" xml:space="preserve"><value>Geçmiş Teslimatlar</value></data>
+  <data name="LatestStatus" xml:space="preserve"><value>Son Durum</value></data>
+  <data name="NoCargoYet" xml:space="preserve"><value>Henüz kargonuz yok</value></data>
   <data name="Menu_DailySummary" xml:space="preserve"><value>Günlük Özet</value></data>
+  <data name="Menu_CountryCargos" xml:space="preserve"><value>Ülke Kargoları</value></data>
   <data name="Menu_BranchCargos" xml:space="preserve"><value>Şube Kargoları</value></data>
   <data name="Menu_NewCargo" xml:space="preserve"><value>Yeni Kargo</value></data>
   <data name="CargoDirection_Incoming" xml:space="preserve"><value>Gelen</value></data>
