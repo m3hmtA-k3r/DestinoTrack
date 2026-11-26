@@ -1085,13 +1085,6 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Property<Guid?>("VehicleId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("VehiclePlate")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<int?>("VehicleType")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId");

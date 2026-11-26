@@ -37,13 +37,8 @@ namespace DestinoTrack.Business.Validators.Employees
             // Kurye alanları: yalnızca kuryede zorunlu
             When(x => x.JobType == EmployeeJobType.Courier, () =>
             {
-                RuleFor(x => x.VehicleType)
-                    .NotNull().WithMessage(localizer["VehicleTypeRequired"].Value)
-                    .IsInEnum().WithMessage(localizer["VehicleTypeRequired"].Value);
-
-                RuleFor(x => x.VehiclePlate)
-                    .NotEmpty().WithMessage(localizer["VehiclePlateRequired"].Value)
-                    .MaximumLength(20).WithMessage(localizer["VehiclePlateMaxLength"].Value);
+                RuleFor(x => x.VehicleId)
+                    .NotEmpty().WithMessage(localizer["CourierVehicleRequired"].Value);
             });
 
             RuleFor(x => x.Region)

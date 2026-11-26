@@ -9,8 +9,8 @@ namespace DestinoTrack.Business.Services.Vehicles
         Task<PagedResult<ResultVehicleDto>> GetPagedAsync(Guid? branchId = null, VehicleType? vehicleType = null,
                                                           bool? isActive = null, string? search = null, int page = 1);
 
-        // Kurye formu için: şubenin aktif araçları (D104)
-        Task<List<VehicleLookupDto>> GetLookupAsync(Guid branchId);
+        // branchId null → bütün şubelerin aktif araçları 
+        Task<List<VehicleLookupDto>> GetLookupAsync(Guid? branchId = null);
 
         Task<UpdateVehicleDto> GetByIdAsync(Guid id);
         Task CreateAsync(CreateVehicleDto createVehicleDto);

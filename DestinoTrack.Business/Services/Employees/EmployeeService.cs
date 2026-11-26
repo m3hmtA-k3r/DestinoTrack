@@ -1,5 +1,6 @@
 ﻿using DestinoTrack.Business.Consts;
 using DestinoTrack.DataAccess.Repositories.Employees;
+using DestinoTrack.DataAccess.Repositories.Vehicles;
 using DestinoTrack.DTO.DTOs.Common;
 using DestinoTrack.DTO.DTOs.EmployeeDtos;
 using DestinoTrack.Entity.Entities;
@@ -12,6 +13,7 @@ using System.ComponentModel.DataAnnotations;
 namespace DestinoTrack.Business.Services.Employees
 {
     public class EmployeeService(IEmployeeRepository _employeeRepository,
+                                 IVehicleRepository _vehicleRepository,
                                  UserManager<AppUser> _userManager,
                                  IdentityErrorDescriber _errorDescriber,
                                  IStringLocalizer<SharedResource> _localizer) : IEmployeeService
@@ -45,10 +47,50 @@ namespace DestinoTrack.Business.Services.Employees
                     BranchId = e.BranchId,
                     BranchName = e.Branch?.Name,
                     CityName = e.Branch?.City?.Name,
-                    VehicleType = e.VehicleType,
-                    VehiclePlate = e.VehiclePlate,
+                    VehicleType = e.Vehicle?.VehicleType,
+                    VehiclePlate = e.Vehicle?.Plate,
                     Rating = e.Rating,
                     HasLoginAccount = e.AppUserId != null
+                }).ToList(),
+                Page = page,
+                PageSize = Paging.PageSize,
+                TotalCount = totalCount
+            };
+        }
+
+        public async Task<PagedResult<CourierOverviewDto>> GetCourierOverviewAsync(Guid? branchId = null, VehicleType? vehicleType = null,
+                                                                            bool? isActive = null, string? search = null, int page = 1)
+        {
+            page = page < 1 ? 1 : page;
+
+            var (couriers, totalCount) = await _employeeRepository.GetCourierOverviewAsync(branchId, vehicleType, isActive, search, page, Paging.PageSize);
+
+            if (couriers.Count == 0 && totalCount > 0)
+            {
+                page = (int)Math.Ceiling(totalCount / (double)Paging.PageSize);
+                (couriers, totalCount) = await _employeeRepository.GetCourierOverviewAsync(branchId, vehicleType, isActive, search, page, Paging.PageSize);
+            }
+
+            // İki sayım tek sorguyla: kurye başına ayrı sorgu açılmaz
+            var onDelivery = await _employeeRepository.GetOnDeliveryCountsAsync();
+            var deliveredToday = await _employeeRepository.GetDeliveredTodayCountsAsync();
+
+            return new PagedResult<CourierOverviewDto>
+            {
+                Items = couriers.Select(e => new CourierOverviewDto
+                {
+                    Id = e.Id,
+                    FirstName = e.FirstName,
+                    LastName = e.LastName,
+                    IsActive = e.IsActive,
+                    BranchId = e.BranchId,
+                    BranchName = e.Branch?.Name,
+                    VehicleType = e.Vehicle?.VehicleType,
+                    VehiclePlate = e.Vehicle?.Plate,
+                    Region = e.Region,
+                    Rating = e.Rating,
+                    OnDeliveryCount = onDelivery.GetValueOrDefault(e.Id),
+                    DeliveredTodayCount = deliveredToday.GetValueOrDefault(e.Id)
                 }).ToList(),
                 Page = page,
                 PageSize = Paging.PageSize,
@@ -97,6 +139,18 @@ namespace DestinoTrack.Business.Services.Employees
                 return IdentityResult.Failed(_errorDescriber.DuplicateEmail(email!));
             }
 
+            // Seçilen araç personelin şubesine ait olmalı. Cascade script istemcide gizliyor,
+            // ama gizlemek engellemek değil: kural burada
+            if (createEmployeeDto.JobType == EmployeeJobType.Courier && createEmployeeDto.VehicleId.HasValue
+                && !await _vehicleRepository.BelongsToBranchAsync(createEmployeeDto.VehicleId.Value, createEmployeeDto.BranchId))
+            {
+                return IdentityResult.Failed(new IdentityError
+                {
+                    Code = nameof(createEmployeeDto.VehicleId),
+                    Description = _localizer["VehicleBranchMismatch"].Value
+                });
+            }
+
             var employee = createEmployeeDto.Adapt<Employee>();
             employee.IsActive = true;
             ClearCourierFieldsIfNotCourier(employee);
@@ -143,6 +197,13 @@ namespace DestinoTrack.Business.Services.Employees
         public async Task UpdateAsync(UpdateEmployeeDto updateEmployeeDto)
         {
             var employee = await FindAsync(updateEmployeeDto.Id);
+
+
+            if (updateEmployeeDto.JobType == EmployeeJobType.Courier && updateEmployeeDto.VehicleId.HasValue
+                && !await _vehicleRepository.BelongsToBranchAsync(updateEmployeeDto.VehicleId.Value, updateEmployeeDto.BranchId))
+            {
+                throw new ValidationException(_localizer["VehicleBranchMismatch"].Value);
+            }
 
             // Mevcut kayda yazılır: IsActive · AppUserId · Rating · CreatedDate korunur (DTO'da yoklar)
             updateEmployeeDto.Adapt(employee);
@@ -228,8 +289,7 @@ namespace DestinoTrack.Business.Services.Employees
         {
             if (employee.JobType != EmployeeJobType.Courier)
             {
-                employee.VehicleType = null;
-                employee.VehiclePlate = null;
+                employee.VehicleId = null;
                 employee.Region = null;
             }
         }

@@ -16,6 +16,10 @@ namespace DestinoTrack.Business.Services.Employees
         // Pasif kuryeyi listelemek anlamsız — DispatchAsync onu zaten reddediyor
         Task<List<EmployeeLookupDto>> GetCourierLookupAsync(Guid branchId);
 
+        // Admin → Kurye & Dağıtım: salt okunur genel bakış, araç sütunuyla 
+        Task<PagedResult<CourierOverviewDto>> GetCourierOverviewAsync(Guid? branchId = null, VehicleType? vehicleType = null,
+                                                                      bool? isActive = null, string? search = null, int page = 1);
+
         Task<UpdateEmployeeDto> GetByIdAsync(Guid id);
 
         // Hesap da açılıyorsa Identity hataları (aynı e-posta, şifre kuralı) forma dönmek üzere döner

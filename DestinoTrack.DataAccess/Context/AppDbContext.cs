@@ -373,7 +373,6 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(x => x.FirstName).HasMaxLength(50);
                 e.Property(x => x.LastName).HasMaxLength(50);
                 e.Property(x => x.PhoneNumber).HasMaxLength(20);
-                e.Property(x => x.VehiclePlate).HasMaxLength(20);
                 e.Property(x => x.Region).HasMaxLength(100);
             });
 

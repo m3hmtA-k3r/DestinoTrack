@@ -13,9 +13,12 @@ namespace DestinoTrack.DataAccess.Repositories.Employees
         public async Task<(List<Employee> Items, int TotalCount)> GetPagedWithBranchAsync(EmployeeJobType? jobType, string? search, int page, int pageSize)
         {
             // Branch.City: listede "reyhanlı Şubesi · Hatay" yazılacak
+            // Vehicle: araç bilgisi artık Employee'de değil, havuzda (D98) — include olmazsa
+            // lazy loading sayfadaki her personel için ayrı sorgu açar
             IQueryable<Employee> query = _context.Employees
                 .Include(e => e.Branch)
-                    .ThenInclude(b => b.City);
+                    .ThenInclude(b => b.City)
+                .Include(e => e.Vehicle);
 
             if (jobType.HasValue)
             {
@@ -80,6 +83,70 @@ namespace DestinoTrack.DataAccess.Repositories.Employees
                 .ToListAsync();
         }
 
+        public async Task<(List<Employee> Items, int TotalCount)> GetCourierOverviewAsync(Guid? branchId, VehicleType? vehicleType,
+                                                                                  bool? isActive, string? search, int page, int pageSize)
+        {
+            // Yalnız kuryeler. Araç havuzdan geldiği için Vehicle include ediliyor 
+            IQueryable<Employee> query = _context.Employees
+                .Include(e => e.Branch)
+                .Include(e => e.Vehicle)
+                .Where(e => e.JobType == EmployeeJobType.Courier);
 
+            if (branchId.HasValue)
+            {
+                query = query.Where(e => e.BranchId == branchId.Value);
+            }
+
+            // Araç türü süzgeci aracın üzerinden: aracı olmayan kurye bu süzgeçte görünmez
+            if (vehicleType.HasValue)
+            {
+                query = query.Where(e => e.Vehicle != null && e.Vehicle.VehicleType == vehicleType.Value);
+            }
+
+            if (isActive.HasValue)
+            {
+                query = query.Where(e => e.IsActive == isActive.Value);
+            }
+
+            if (!string.IsNullOrWhiteSpace(search))
+            {
+                var term = search.Trim();
+                query = query.Where(e => e.FirstName.Contains(term)
+                                      || e.LastName.Contains(term)
+                                      || (e.Vehicle != null && e.Vehicle.Plate.Contains(term)));
+            }
+
+            var totalCount = await query.CountAsync();
+
+            var items = await query
+                .OrderBy(e => e.FirstName)
+                .ThenBy(e => e.LastName)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize)
+                .ToListAsync();
+
+            return (items, totalCount);
+        }
+
+        public async Task<Dictionary<Guid, int>> GetOnDeliveryCountsAsync()
+        {
+            return await _context.Cargos
+                .Where(c => c.CourierId != null && c.CargoStatus == CargoStatus.OutForDelivery)
+                .GroupBy(c => c.CourierId!.Value)
+                .Select(g => new { CourierId = g.Key, Count = g.Count() })
+                .ToDictionaryAsync(x => x.CourierId, x => x.Count);
+        }
+
+        public async Task<Dictionary<Guid, int>> GetDeliveredTodayCountsAsync()
+        {
+            // Tarihler UTC saklanıyor; "bugün" tanımı CargoMovementRepository ile aynı
+            var bugun = DateTime.UtcNow.Date;
+
+            return await _context.Deliveries
+                .Where(d => d.DeliveredAt >= bugun)
+                .GroupBy(d => d.DeliveredByEmployeeId)
+                .Select(g => new { EmployeeId = g.Key, Count = g.Count() })
+                .ToDictionaryAsync(x => x.EmployeeId, x => x.Count);
+        }
     }
 }

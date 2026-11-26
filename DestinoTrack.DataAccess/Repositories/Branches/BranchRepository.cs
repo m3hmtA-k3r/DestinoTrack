@@ -60,6 +60,7 @@ namespace DestinoTrack.DataAccess.Repositories.Branches
         {
             return await _context.Cargos.AnyAsync(c => c.OriginBranchId == branchId || c.DestinationBranchId == branchId)
                 || await _context.Employees.AnyAsync(e => e.BranchId == branchId)
+                || await _context.Vehicles.AnyAsync(v => v.BranchId == branchId)
                 || await _context.Payments.AnyAsync(p => p.CollectedByBranchId == branchId)
                 || await _context.Branches.AnyAsync(b => b.Id == branchId && b.ManagerId != null);
         }

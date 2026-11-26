@@ -8,5 +8,6 @@ namespace DestinoTrack.DTO.DTOs.VehicleDtos
         public Guid Id { get; set; }
         public string Plate { get; set; }
         public VehicleType VehicleType { get; set; }
+        public Guid BranchId { get; set; }
     }
 }

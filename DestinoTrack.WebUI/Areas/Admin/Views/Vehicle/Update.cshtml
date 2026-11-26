@@ -1,0 +1,66 @@
+﻿@model UpdateVehicleDto
+@{
+    ViewData["Title"] = L["UpdateVehicle"].Value;
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex items-center gap-4 mt-4 mb-8">
+    <a asp-action="Index" title="@L["Cancel"]"
+       class="p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+    </a>
+    <div class="flex flex-col">
+        <span class="font-label-md text-label-md text-primary uppercase">@L["Vehicles"]</span>
+        <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["UpdateVehicle"]</h1>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="m3-card p-6 w-full max-w-2xl">
+    <form asp-action="Update" method="post" class="flex flex-col gap-5">
+        <input type="hidden" asp-for="Id" />
+
+        <div>
+            <label asp-for="Plate" class="field-label">@L["VehiclePlate"]</label>
+            <input asp-for="Plate" class="field-input uppercase tracking-wide" autocomplete="off" placeholder="34 ABC 123" />
+            <span asp-validation-for="Plate" class="field-error"></span>
+        </div>
+
+        <div>
+            <label asp-for="VehicleType" class="field-label">@L["VehicleType"]</label>
+            <select asp-for="VehicleType" class="field-input cursor-pointer">
+                <option value="">— @L["VehicleType"] —</option>
+                @foreach (var type in Enum.GetValues<VehicleType>())
+                {
+                    <option value="@type">@L["VehicleType_" + type]</option>
+                }
+            </select>
+            <span asp-validation-for="VehicleType" class="field-error"></span>
+        </div>
+
+        <div>
+            <label asp-for="BranchId" class="field-label">@L["Branch"]</label>
+            <select asp-for="BranchId" asp-items="ViewBag.Branches" class="field-input cursor-pointer">
+                <option value="">— @L["Branch"] —</option>
+            </select>
+            <span asp-validation-for="BranchId" class="field-error"></span>
+        </div>
+
+        <label class="flex items-center gap-2 cursor-pointer">
+            <input asp-for="IsActive" class="w-4 h-4 accent-primary" />
+            <span class="font-body-sm text-body-sm">@L["Active"]</span>
+        </label>
+
+        <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
+            <a asp-action="Index" class="btn-tonal">@L["Cancel"]</a>
+            <button type="submit" class="btn-filled">
+                <span class="material-symbols-outlined text-[20px]">check</span>
+                <span>@L["Save"]</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

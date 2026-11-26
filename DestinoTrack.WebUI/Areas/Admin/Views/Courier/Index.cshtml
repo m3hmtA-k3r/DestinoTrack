@@ -1,0 +1,214 @@
+﻿@model CourierIndexViewModel
+@{
+    ViewData["Title"] = L["Menu_CourierDistribution"].Value;
+
+    var chipBase = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-label-md text-label-md transition-colors";
+    var chipOn = chipBase + " bg-primary-container text-on-primary";
+    var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
+
+    string AracSimgesi(VehicleType tur) => tur switch
+    {
+        VehicleType.Motorcycle => "two_wheeler",
+        VehicleType.Van => "airport_shuttle",
+        _ => "local_shipping"
+    };
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+    <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+        <span class="material-symbols-outlined text-[28px]">two_wheeler</span>
+    </div>
+    <div class="flex flex-col">
+        <span class="font-label-md text-label-md text-primary uppercase">@L["FleetManagement"]</span>
+        <div class="flex items-center gap-2">
+            <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Menu_CourierDistribution"]</h1>
+            <span class="chip-neutral">@Model.Couriers.TotalCount</span>
+        </div>
+    </div>
+</div>
+
+<!-- Salt okunur bandı: bu ekran kayıt değiştirmez -->
+<div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-surface-container-low text-on-surface-variant">
+    <span class="material-symbols-outlined text-[22px] shrink-0">lock</span>
+    <span class="font-body-sm text-body-sm">@L["ReadOnlyScreen"]</span>
+</div>
+
+<!-- Süzgeçler -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+
+    <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2">
+        <input type="hidden" name="branchId" value="@Model.SelectedBranchId" />
+        <input type="hidden" name="isActive" value="@(Model.SelectedIsActive?.ToString().ToLowerInvariant())" />
+        <input type="hidden" name="q" value="@Model.Search" />
+
+        <button type="submit" name="vehicleType" value=""
+                class="@(Model.SelectedVehicleType == null ? chipOn : chipOff)">
+            <span>@L["All"]</span>
+        </button>
+
+        @foreach (var tur in Enum.GetValues<VehicleType>())
+        {
+            <button type="submit" name="vehicleType" value="@tur"
+                    class="@(Model.SelectedVehicleType == tur ? chipOn : chipOff)">
+                <span class="material-symbols-outlined text-[18px]">@AracSimgesi(tur)</span>
+                <span>@L["VehicleType_" + tur]</span>
+            </button>
+        }
+    </form>
+
+    <form asp-action="Filter" method="post" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full lg:w-auto">
+        <input type="hidden" name="vehicleType" value="@Model.SelectedVehicleType" />
+
+        <select name="branchId" class="field-input cursor-pointer sm:w-44" onchange="this.form.submit();">
+            <option value="">@L["Branch"] — @L["All"]</option>
+            @foreach (var branch in Model.Branches)
+            {
+                <option value="@branch.Id" selected="@(Model.SelectedBranchId == branch.Id)">@branch.Name</option>
+            }
+        </select>
+
+        <select name="isActive" class="field-input cursor-pointer sm:w-36" onchange="this.form.submit();">
+            <option value="">@L["Status"] — @L["All"]</option>
+            <option value="true" selected="@(Model.SelectedIsActive == true)">@L["Active"]</option>
+            <option value="false" selected="@(Model.SelectedIsActive == false)">@L["Inactive"]</option>
+        </select>
+
+        <div class="relative flex-1 lg:w-60">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
+            <input type="search" name="q" value="@Model.Search" placeholder="@L["SearchCourierOrPlate"]"
+                   class="field-input pl-10" autocomplete="off" data-clear-submit />
+        </div>
+        <button type="submit" class="btn-tonal shrink-0">@L["Search"]</button>
+    </form>
+</div>
+
+<!-- Liste -->
+<div class="m3-card overflow-hidden">
+    @if (Model.Couriers.Items.Count > 0)
+    {
+        <div class="overflow-x-auto">
+            <table class="m3-table font-body-sm text-body-sm">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-6">@L["Couriers"]</th>
+                        <th class="py-3.5 px-4">@L["Branch"]</th>
+                        <th class="py-3.5 px-4">@L["Vehicle"]</th>
+                        <th class="py-3.5 px-4">@L["Region"]</th>
+                        <th class="py-3.5 px-4">@L["Rating"]</th>
+                        <th class="py-3.5 px-4">@L["OnDelivery"]</th>
+                        <th class="py-3.5 px-6">@L["DeliveredToday"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var courier in Model.Couriers.Items)
+                    {
+                        <tr class="@(courier.IsActive ? "" : "opacity-60")">
+                            <td class="py-4 px-6">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+                                        <span class="material-symbols-outlined text-[20px]">person</span>
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="font-bold text-on-surface">@courier.FirstName @courier.LastName</span>
+                                        <span class="chip-neutral w-fit">@(courier.IsActive? L["Active"] : L["Inactive"])</span>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="chip-info">@courier.BranchName</span>
+                            </td>
+                            <td class="py-4 px-4">
+                                @if (courier.VehicleType != null)
+                                {
+                                    <span class="inline-flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[18px] text-primary">@AracSimgesi(courier.VehicleType.Value)</span>
+                                        <span>@L["VehicleType_" + courier.VehicleType] · <strong class="tracking-wide">@courier.VehiclePlate</strong></span>
+                                    </span>
+                                }
+                                else
+                                {
+                                    <span class="text-on-surface-variant">—</span>
+                                }
+                            </td>
+                            <td class="py-4 px-4">
+                                @if (!string.IsNullOrWhiteSpace(courier.Region))
+                                {
+                                    <span>@courier.Region</span>
+                                }
+                                else
+                                {
+                                    <span class="text-on-surface-variant">—</span>
+                                }
+                            </td>
+                            <td class="py-4 px-4">
+                                @if (courier.Rating != null)
+                                {
+                                    <span>@courier.Rating.Value.ToString("0.0")</span>
+                                }
+                                else
+                                {
+                                    <span class="text-on-surface-variant">—</span>
+                                }
+                            </td>
+                            <td class="py-4 px-4">
+                                @if (courier.OnDeliveryCount > 0)
+                                {
+                                    <span class="chip-active">@courier.OnDeliveryCount</span>
+                                }
+                                else
+                                {
+                                    <span class="text-on-surface-variant">—</span>
+                                }
+                            </td>
+                            <td class="py-4 px-6">
+                                @if (courier.DeliveredTodayCount > 0)
+                                {
+                                    <span class="chip-info">@courier.DeliveredTodayCount</span>
+                                }
+                                else
+                                {
+                                    <span class="text-on-surface-variant">—</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @await Html.PartialAsync("_Pagination", Model.Couriers)
+    }
+    else if (Model.IsFiltered)
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+            <form asp-action="Filter" method="post">
+                <button type="submit" class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+                    <span>@L["ClearFilter"]</span>
+                </button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">person_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</p>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('[data-clear-submit]').forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value === '') {
+                    input.form.submit();
+                }
+            });
+        });
+    </script>
+}

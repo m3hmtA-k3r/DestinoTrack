@@ -256,7 +256,7 @@
     <value>This facility code is already used by another branch.</value>
   </data>
   <data name="BranchHasDependents" xml:space="preserve">
-    <value>This branch has linked cargos, employees, payments or a manager. Remove them first.</value>
+    <value>This branch has linked cargos, employees, vehicles, payments or a manager. Remove them first.</value>
   </data>
   <data name="EmployeeNotFound" xml:space="preserve"><value>Employee not found.</value></data>
   <data name="EmployeeHasDependents" xml:space="preserve"><value>This employee has linked cargos or payments and cannot be deleted. You can deactivate them instead.</value></data>
@@ -361,14 +361,23 @@
   </data>
   <data name="BranchRequired" xml:space="preserve"><value>A facility must be selected.</value></data>
   <data name="JobTypeInvalid" xml:space="preserve"><value>A valid job must be selected.</value></data>
-  <data name="VehicleTypeRequired" xml:space="preserve"><value>A vehicle type is required for couriers.</value></data>
-  <data name="VehiclePlateRequired" xml:space="preserve"><value>A licence plate is required for couriers.</value></data>
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>The licence plate can be at most 20 characters.</value></data>
   <data name="VehicleNotFound" xml:space="preserve"><value>Vehicle not found.</value></data>
   <data name="VehicleHasCouriers" xml:space="preserve"><value>This vehicle cannot be deleted because it is assigned to a courier.</value></data>
   <data name="VehiclePlateInUse" xml:space="preserve"><value>This licence plate is already registered to another vehicle.</value></data>
   <data name="PlateRequired" xml:space="preserve"><value>A licence plate is required.</value></data>
   <data name="VehicleTypeSelectRequired" xml:space="preserve"><value>A vehicle type is required.</value></data>
+  <data name="Vehicles" xml:space="preserve"><value>Vehicles</value></data>
+  <data name="Vehicle" xml:space="preserve"><value>Vehicle</value></data>
+  <data name="DeliveredToday" xml:space="preserve"><value>Delivered today</value></data>
+  <data name="SearchCourierOrPlate" xml:space="preserve"><value>Search courier or plate</value></data>
+  <data name="NewVehicle" xml:space="preserve"><value>New vehicle</value></data>
+  <data name="UpdateVehicle" xml:space="preserve"><value>Update vehicle</value></data>
+  <data name="SearchPlate" xml:space="preserve"><value>Search by plate</value></data>
+  <data name="AssignedCouriers" xml:space="preserve"><value>Assigned couriers</value></data>
+  <data name="FleetManagement" xml:space="preserve"><value>Fleet management</value></data>
+  <data name="CourierVehicleRequired" xml:space="preserve"><value>A vehicle must be selected for couriers.</value></data>
+  <data name="VehicleBranchMismatch" xml:space="preserve"><value>The selected vehicle does not belong to the employee's branch.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>The delivery area can be at most 100 characters.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>The account role must be Branch Officer or Courier.</value></data>
   <data name="RouteScopeInvalid" xml:space="preserve"><value>A valid route scope must be selected.</value></data>

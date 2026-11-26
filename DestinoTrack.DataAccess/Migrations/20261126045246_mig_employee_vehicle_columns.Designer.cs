@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DestinoTrack.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20261124012227_mig-kurye")]
-    partial class migkurye
+    [Migration("20261126045246_mig_employee_vehicle_columns")]
+    partial class mig_employee_vehicle_columns
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -1087,13 +1087,6 @@ namespace DestinoTrack.DataAccess.Migrations
 
                     b.Property<Guid?>("VehicleId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("VehiclePlate")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<int?>("VehicleType")
-                        .HasColumnType("int");
 
                     b.HasKey("Id");
 

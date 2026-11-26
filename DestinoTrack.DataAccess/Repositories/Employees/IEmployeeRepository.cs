@@ -26,6 +26,15 @@ namespace DestinoTrack.DataAccess.Repositories.Employees
         // Dağıtıma çıkarma listesindeki kurye seçimi: yalnız o şubenin aktif kuryeleri
         Task<List<Employee>> GetActiveCouriersAsync(Guid branchId);
 
+        // Admin → Kurye & Dağıtım ekranı: sayfalı kurye listesi, şube ve aracıyla birlikte
+        Task<(List<Employee> Items, int TotalCount)> GetCourierOverviewAsync(Guid? branchId, VehicleType? vehicleType,
+                                                                            bool? isActive, string? search, int page, int pageSize);
+
+        // EmployeeId → şu an üzerinde olan kargo sayısı (OutForDelivery)
+        Task<Dictionary<Guid, int>> GetOnDeliveryCountsAsync();
+
+        // EmployeeId → bugün teslim ettiği kargo sayısı
+        Task<Dictionary<Guid, int>> GetDeliveredTodayCountsAsync();
 
     }
 }

@@ -11,8 +11,8 @@ namespace DestinoTrack.DTO.DTOs.EmployeeDtos
         public Guid BranchId { get; set; }
 
         // Kurye alanları — yalnızca JobType = Courier iken zorunlu
-        public VehicleType? VehicleType { get; set; }
-        public string? VehiclePlate { get; set; }
+
+        public Guid? VehicleId { get; set; }
         public string? Region { get; set; }
 
         // Giriş hesabı — isteğe bağlı. CreateAccount işaretli değilse aşağıdakiler yok sayılır

@@ -48,7 +48,7 @@ namespace DestinoTrack.Business.Services.Vehicles
             };
         }
 
-        public async Task<List<VehicleLookupDto>> GetLookupAsync(Guid branchId)
+        public async Task<List<VehicleLookupDto>> GetLookupAsync(Guid? branchId = null)
         {
             var vehicles = await _vehicleRepository.GetLookupAsync(branchId);
 
@@ -56,7 +56,8 @@ namespace DestinoTrack.Business.Services.Vehicles
             {
                 Id = v.Id,
                 Plate = v.Plate,
-                VehicleType = v.VehicleType
+                VehicleType = v.VehicleType,
+                BranchId = v.BranchId
             }).ToList();
         }
 

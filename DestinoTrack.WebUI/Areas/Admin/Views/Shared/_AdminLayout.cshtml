@@ -61,6 +61,12 @@
                     <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_CourierDistribution"]</span>
                 </span>
+
+                <a asp-area="Admin" asp-controller="Vehicle" asp-action="Index" class="@(controller == "Vehicle" ? navActive : navPassive)">
+                    <span class="material-symbols-outlined text-[20px]">local_shipping</span>
+                    <span class="font-body-sm text-body-sm">@L["Vehicles"]</span>
+                </a>
+
                 <a asp-area="Admin" asp-controller="Branch" asp-action="Index" class="@(controller == "Branch" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">warehouse</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_BranchesWarehouses"]</span>

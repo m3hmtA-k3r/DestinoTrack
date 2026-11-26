@@ -48,12 +48,16 @@ namespace DestinoTrack.DataAccess.Repositories.Vehicles
             return (items, totalCount);
         }
 
-        public async Task<List<Vehicle>> GetLookupAsync(Guid branchId)
+        public async Task<List<Vehicle>> GetLookupAsync(Guid? branchId = null)
         {
-            return await _context.Vehicles
-                .Where(v => v.BranchId == branchId && v.IsActive)
-                .OrderBy(v => v.Plate)
-                .ToListAsync();
+            IQueryable<Vehicle> query = _context.Vehicles.Where(v => v.IsActive);
+
+            if (branchId.HasValue)
+            {
+                query = query.Where(v => v.BranchId == branchId.Value);
+            }
+
+            return await query.OrderBy(v => v.Plate).ToListAsync();
         }
 
         public async Task<bool> PlateExistsAsync(string plate, Guid? excludeId)
@@ -67,6 +71,11 @@ namespace DestinoTrack.DataAccess.Repositories.Vehicles
         public async Task<bool> HasCouriersAsync(Guid vehicleId)
         {
             return await _context.Employees.AnyAsync(e => e.VehicleId == vehicleId);
+        }
+
+        public async Task<bool> BelongsToBranchAsync(Guid vehicleId, Guid branchId)
+        {
+            return await _context.Vehicles.AnyAsync(v => v.Id == vehicleId && v.BranchId == branchId);
         }
 
         public async Task<Dictionary<Guid, int>> GetCourierCountsAsync()

@@ -1,6 +1,7 @@
 ﻿using DestinoTrack.Business.Services.Branches;
 using DestinoTrack.Business.Services.Countries;
 using DestinoTrack.Business.Services.Employees;
+using DestinoTrack.Business.Services.Vehicles;
 using DestinoTrack.DTO.DTOs.EmployeeDtos;
 using DestinoTrack.Entity.Entities.Enums;
 using DestinoTrack.WebUI.Areas.Admin.Models;
@@ -13,7 +14,7 @@ using System.ComponentModel.DataAnnotations;
 namespace DestinoTrack.WebUI.Areas.Admin.Controllers
 {
     public class EmployeeController(IEmployeeService _employeeService, IBranchService _branchService,
-                                ICountryService _countryService) : AdminBaseController
+                            ICountryService _countryService, IVehicleService _vehicleService) : AdminBaseController
 
     {
         // Filtre oturumda tutulur: adres yalnızca sayfa numarası taşır
@@ -191,6 +192,7 @@ namespace DestinoTrack.WebUI.Areas.Admin.Controllers
                 .ToList();
 
             ViewBag.Branches = await _branchService.GetLookupAsync();
+            ViewBag.Vehicles = await _vehicleService.GetLookupAsync();
         }
     }
 }

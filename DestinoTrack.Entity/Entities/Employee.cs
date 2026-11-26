@@ -19,8 +19,7 @@ namespace DestinoTrack.Entity.Entities
         public Guid? AppUserId { get; set; }
 
         // Yalnızca JobType = Courier olan personelde dolu
-        public VehicleType? VehicleType { get; set; }
-        public string? VehiclePlate { get; set; }
+        
         public Guid? VehicleId { get; set; }
         public string? Region { get; set; }
         public decimal? Rating { get; set; }

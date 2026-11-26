@@ -76,26 +76,21 @@
                 <legend class="field-label">@L["CourierInfo"]</legend>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
-                        <label asp-for="VehicleType" class="field-label">@L["VehicleType"]</label>
-                        <select asp-for="VehicleType" class="field-input cursor-pointer">
-                            <option value="">—</option>
-                            @foreach (var type in Enum.GetValues<VehicleType>())
+                        <label asp-for="VehicleId" class="field-label">@L["Vehicle"]</label>
+                        <select asp-for="VehicleId" data-cascade-from="BranchId" class="field-input cursor-pointer">
+                            <option value="">— @L["Vehicle"] —</option>
+                            @foreach (var vehicle in (List<VehicleLookupDto>)ViewBag.Vehicles)
                             {
-                                <option value="@type">@L["VehicleType_" + type]</option>
+                                <option value="@vehicle.Id" data-parent="@vehicle.BranchId">@vehicle.Plate · @L["VehicleType_" + vehicle.VehicleType]</option>
                             }
                         </select>
-                        <span asp-validation-for="VehicleType" class="field-error"></span>
+                        <span asp-validation-for="VehicleId" class="field-error"></span>
                     </div>
                     <div>
-                        <label asp-for="VehiclePlate" class="field-label">@L["VehiclePlate"]</label>
-                        <input asp-for="VehiclePlate" class="field-input" autocomplete="off" placeholder="34 ABC 123" />
-                        <span asp-validation-for="VehiclePlate" class="field-error"></span>
+                        <label asp-for="Region" class="field-label">@L["Region"]</label>
+                        <input asp-for="Region" class="field-input" autocomplete="off" />
+                        <span asp-validation-for="Region" class="field-error"></span>
                     </div>
-                </div>
-                <div>
-                    <label asp-for="Region" class="field-label">@L["Region"]</label>
-                    <input asp-for="Region" class="field-input" autocomplete="off" />
-                    <span asp-validation-for="Region" class="field-error"></span>
                 </div>
             </fieldset>
 

@@ -256,7 +256,7 @@
     <value>Bu tesis kodu başka bir şubede kayıtlı.</value>
   </data>
   <data name="BranchHasDependents" xml:space="preserve">
-    <value>Bu şubeye bağlı kargo, personel, ödeme veya müdür kaydı var. Önce onları kaldırın.</value>
+    <value>Bu şubeye bağlı kargo, personel, araç, ödeme veya müdür kaydı var. Önce onları kaldırın.</value>
   </data>
   <data name="EmployeeNotFound" xml:space="preserve"><value>Personel bulunamadı.</value></data>
   <data name="EmployeeHasDependents" xml:space="preserve"><value>Bu personele bağlı kargo veya ödeme kaydı var, silinemez. Pasifleştirebilirsin.</value></data>
@@ -361,14 +361,23 @@
   </data>
   <data name="BranchRequired" xml:space="preserve"><value>Tesis seçilmelidir.</value></data>
   <data name="JobTypeInvalid" xml:space="preserve"><value>Geçerli bir görev seçilmelidir.</value></data>
-  <data name="VehicleTypeRequired" xml:space="preserve"><value>Kurye için araç türü seçilmelidir.</value></data>
-  <data name="VehiclePlateRequired" xml:space="preserve"><value>Kurye için plaka girilmelidir.</value></data>
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>Plaka en fazla 20 karakter olabilir.</value></data>
   <data name="VehicleNotFound" xml:space="preserve"><value>Araç bulunamadı.</value></data>
   <data name="VehicleHasCouriers" xml:space="preserve"><value>Bu araç bir kuryeye bağlı olduğu için silinemez.</value></data>
   <data name="VehiclePlateInUse" xml:space="preserve"><value>Bu plaka başka bir araçta kayıtlı.</value></data>
   <data name="PlateRequired" xml:space="preserve"><value>Plaka girilmelidir.</value></data>
   <data name="VehicleTypeSelectRequired" xml:space="preserve"><value>Araç türü seçilmelidir.</value></data>
+  <data name="Vehicles" xml:space="preserve"><value>Araçlar</value></data>
+  <data name="Vehicle" xml:space="preserve"><value>Araç</value></data>
+  <data name="DeliveredToday" xml:space="preserve"><value>Bugün Teslim</value></data>
+  <data name="SearchCourierOrPlate" xml:space="preserve"><value>Kurye ya da plaka ara</value></data>
+  <data name="NewVehicle" xml:space="preserve"><value>Yeni Araç</value></data>
+  <data name="UpdateVehicle" xml:space="preserve"><value>Aracı Güncelle</value></data>
+  <data name="SearchPlate" xml:space="preserve"><value>Plakada ara</value></data>
+  <data name="AssignedCouriers" xml:space="preserve"><value>Bağlı kurye</value></data>
+  <data name="FleetManagement" xml:space="preserve"><value>Filo Yönetimi</value></data>
+  <data name="CourierVehicleRequired" xml:space="preserve"><value>Kurye için araç seçilmelidir.</value></data>
+  <data name="VehicleBranchMismatch" xml:space="preserve"><value>Seçilen araç personelin şubesine ait değil.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>Dağıtım bölgesi en fazla 100 karakter olabilir.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>Hesap rolü Şube Yetkilisi ya da Kurye olmalıdır.</value></data>
   <data name="RouteScopeInvalid" xml:space="preserve"><value>Geçerli bir güzergah kademesi seçilmelidir.</value></data>

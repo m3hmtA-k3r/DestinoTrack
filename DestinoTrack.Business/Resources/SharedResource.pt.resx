@@ -256,7 +256,7 @@
     <value>Este código já está em uso por outra filial.</value>
   </data>
   <data name="BranchHasDependents" xml:space="preserve">
-    <value>Esta filial possui cargas, funcionários, pagamentos ou um gerente vinculados. Remova-os primeiro.</value>
+    <value>Esta filial possui cargas, funcionários, veículos, pagamentos ou um gerente vinculados. Remova-os primeiro.</value>
   </data>
   <data name="EmployeeNotFound" xml:space="preserve"><value>Funcionário não encontrado.</value></data>
   <data name="EmployeeHasDependents" xml:space="preserve"><value>Este funcionário possui cargas ou pagamentos vinculados e não pode ser excluído. Você pode desativá-lo.</value></data>
@@ -361,14 +361,23 @@
   </data>
   <data name="BranchRequired" xml:space="preserve"><value>Uma instalação deve ser selecionada.</value></data>
   <data name="JobTypeInvalid" xml:space="preserve"><value>Uma função válida deve ser selecionada.</value></data>
-  <data name="VehicleTypeRequired" xml:space="preserve"><value>O tipo de veículo é obrigatório para entregadores.</value></data>
-  <data name="VehiclePlateRequired" xml:space="preserve"><value>A placa é obrigatória para entregadores.</value></data>
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>A placa pode ter no máximo 20 caracteres.</value></data>
   <data name="VehicleNotFound" xml:space="preserve"><value>Veículo não encontrado.</value></data>
   <data name="VehicleHasCouriers" xml:space="preserve"><value>Este veículo não pode ser excluído porque está atribuído a um entregador.</value></data>
   <data name="VehiclePlateInUse" xml:space="preserve"><value>Esta placa já está registrada em outro veículo.</value></data>
   <data name="PlateRequired" xml:space="preserve"><value>A placa é obrigatória.</value></data>
   <data name="VehicleTypeSelectRequired" xml:space="preserve"><value>O tipo de veículo é obrigatório.</value></data>
+  <data name="Vehicles" xml:space="preserve"><value>Veículos</value></data>
+  <data name="Vehicle" xml:space="preserve"><value>Veículo</value></data>
+  <data name="DeliveredToday" xml:space="preserve"><value>Entregues hoje</value></data>
+  <data name="SearchCourierOrPlate" xml:space="preserve"><value>Pesquisar entregador ou placa</value></data>
+  <data name="NewVehicle" xml:space="preserve"><value>Novo veículo</value></data>
+  <data name="UpdateVehicle" xml:space="preserve"><value>Atualizar veículo</value></data>
+  <data name="SearchPlate" xml:space="preserve"><value>Pesquisar por placa</value></data>
+  <data name="AssignedCouriers" xml:space="preserve"><value>Entregadores atribuídos</value></data>
+  <data name="FleetManagement" xml:space="preserve"><value>Gestão de frota</value></data>
+  <data name="CourierVehicleRequired" xml:space="preserve"><value>Um veículo deve ser selecionado para entregadores.</value></data>
+  <data name="VehicleBranchMismatch" xml:space="preserve"><value>O veículo selecionado não pertence à filial do funcionário.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>A área de entrega pode ter no máximo 100 caracteres.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>A função da conta deve ser Responsável da filial ou Entregador.</value></data>
   <data name="RouteScopeInvalid" xml:space="preserve"><value>Um escopo de rota válido deve ser selecionado.</value></data>

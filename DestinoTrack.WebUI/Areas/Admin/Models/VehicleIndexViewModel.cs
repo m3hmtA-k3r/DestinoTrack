@@ -16,6 +16,7 @@ namespace DestinoTrack.WebUI.Areas.Admin.Models
         public bool? SelectedIsActive { get; set; }
         public string? Search { get; set; }
 
+        // Liste boşsa "hiç araç yok" ile "süzgece uyan yok" ayrımı buradan yapılır
         public bool IsFiltered => SelectedBranchId.HasValue
                                   || SelectedVehicleType.HasValue
                                   || SelectedIsActive.HasValue

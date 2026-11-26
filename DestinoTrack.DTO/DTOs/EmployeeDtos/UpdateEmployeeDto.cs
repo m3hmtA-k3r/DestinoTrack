@@ -12,8 +12,8 @@ namespace DestinoTrack.DTO.DTOs.EmployeeDtos
         public EmployeeJobType JobType { get; set; }
         public Guid BranchId { get; set; }
 
-        public VehicleType? VehicleType { get; set; }
-        public string? VehiclePlate { get; set; }
+       
+        public Guid? VehicleId { get; set; }
         public string? Region { get; set; }
 
         // Yalnız gösterim: formda "Giriş hesabı var" rozeti. Hesap bilgileri Kullanıcılar ekranından yönetilir
