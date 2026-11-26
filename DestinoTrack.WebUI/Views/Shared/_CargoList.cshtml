@@ -19,12 +19,7 @@
     var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
 
     // Durum rozetinin rengi: teslim edildi vurgulu, iade/başarısız kırmızı, yoldakiler bilgi
-    string DurumSinifi(CargoStatus s) => s switch
-    {
-        CargoStatus.Delivered => "chip-active",
-        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
-        _ => "chip-info"
-    };
+    
 }
 
 <!-- Sayfa başlığı -->
@@ -143,7 +138,8 @@
                                     <span class="font-body-sm text-body-sm text-on-surface-variant">@L["CargoType_" + cargo.CargoType]</span>
                                 </div>
                             </td>
-                            <td class="py-4 px-4"><span class="@DurumSinifi(cargo.CargoStatus)">@L["CargoStatus_" + cargo.CargoStatus]</span></td>
+
+                            <td class="py-4 px-4"><span class="@cargo.CargoStatus.ChipClass()">@L["CargoStatus_" + cargo.CargoStatus]</span></td>
                             <td class="py-4 px-4 text-on-surface">@cargo.OriginBranchName → @cargo.DestinationBranchName</td>
                             <td class="py-4 px-4">
                                 <div class="flex flex-col">
@@ -151,6 +147,8 @@
                                     <span class="font-body-sm text-body-sm text-on-surface-variant">→ @cargo.ReceiverName</span>
                                 </div>
                             </td>
+
+
                             <td class="py-4 px-4 text-right text-on-surface">
                                 @cargo.Price.ToString("N2") @cargo.CurrencyCode
                                 @if (!cargo.IsPaid)

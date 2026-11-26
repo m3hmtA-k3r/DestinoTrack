@@ -1082,6 +1082,9 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid?>("VehicleId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("VehiclePlate")
                         .HasMaxLength(20)
                         .HasColumnType("nvarchar(20)");
@@ -1094,6 +1097,8 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.HasIndex("AppUserId");
 
                     b.HasIndex("BranchId");
+
+                    b.HasIndex("VehicleId");
 
                     b.ToTable("Employees");
                 });
@@ -1148,6 +1153,48 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.HasIndex("CollectedByCourierId");
 
                     b.ToTable("Payments");
+                });
+
+            modelBuilder.Entity("DestinoTrack.Entity.Entities.Vehicle", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BranchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("SYSUTCDATETIME()");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Plate")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("VehicleType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BranchId");
+
+                    b.HasIndex("Plate")
+                        .IsUnique()
+                        .HasFilter("[IsDeleted] = 0");
+
+                    b.ToTable("Vehicles");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -1464,9 +1511,16 @@ namespace DestinoTrack.DataAccess.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
+                    b.HasOne("DestinoTrack.Entity.Entities.Vehicle", "Vehicle")
+                        .WithMany("Couriers")
+                        .HasForeignKey("VehicleId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
                     b.Navigation("AppUser");
 
                     b.Navigation("Branch");
+
+                    b.Navigation("Vehicle");
                 });
 
             modelBuilder.Entity("DestinoTrack.Entity.Entities.Payment", b =>
@@ -1492,6 +1546,17 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Navigation("CollectedByBranch");
 
                     b.Navigation("CollectedByCourier");
+                });
+
+            modelBuilder.Entity("DestinoTrack.Entity.Entities.Vehicle", b =>
+                {
+                    b.HasOne("DestinoTrack.Entity.Entities.Branch", "Branch")
+                        .WithMany("Vehicles")
+                        .HasForeignKey("BranchId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Branch");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -1563,6 +1628,8 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Navigation("Employees");
 
                     b.Navigation("OriginCargos");
+
+                    b.Navigation("Vehicles");
                 });
 
             modelBuilder.Entity("DestinoTrack.Entity.Entities.Cargo", b =>
@@ -1599,6 +1666,11 @@ namespace DestinoTrack.DataAccess.Migrations
                     b.Navigation("Cargos");
 
                     b.Navigation("CollectedPayments");
+                });
+
+            modelBuilder.Entity("DestinoTrack.Entity.Entities.Vehicle", b =>
+                {
+                    b.Navigation("Couriers");
                 });
 #pragma warning restore 612, 618
         }

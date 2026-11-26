@@ -1,0 +1,28 @@
+﻿@model WeeklyTrafficDto
+
+@* VC5 · Admin panosu — son 7 gün trafiği, kabul gününe (`ShipmentDate`) göre.
+   Çubuğun `max`'ı EN YOĞUN gün — VC6'dan bilerek farklı: oradaki soru "toplamın payı",
+   buradaki "hangi gün daha yoğun". Yüzde yazılmıyor, iki ölçek karışmıyor.
+   Gün adı için resx anahtarı yok: `ddd` biçimi kültürden geliyor. *@
+
+<div class="m3-card p-6 mb-8">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["Summary_WeeklyTraffic"]</h2>
+
+    @if (Model.Max == 0)
+    {
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["NoCargoInLast7Days"]</p>
+    }
+    else
+    {
+        <div class="flex flex-col gap-3">
+            @foreach (var gun in Model.Rows)
+            {
+                <div class="flex items-center gap-3">
+                    <span class="w-24 shrink-0 font-body-sm text-body-sm text-on-surface">@gun.Date.ToString("ddd dd.MM")</span>
+                    <progress class="bar" value="@gun.Count" max="@Model.Max"></progress>
+                    <span class="w-10 shrink-0 text-right font-label-md text-label-md text-on-surface">@gun.Count.ToString("N0")</span>
+                </div>
+            }
+        </div>
+    }
+</div>

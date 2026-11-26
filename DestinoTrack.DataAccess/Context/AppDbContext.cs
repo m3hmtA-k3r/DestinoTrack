@@ -29,6 +29,7 @@ namespace DestinoTrack.DataAccess.Context
         public DbSet<CargoTypeRate> CargoTypeRates { get; set; }
         public DbSet<Delivery> Deliveries { get; set; }
         public DbSet<DeliveryException> DeliveryExceptions { get; set; }
+        public DbSet<Vehicle> Vehicles { get; set; }
 
 
 
@@ -228,6 +229,20 @@ namespace DestinoTrack.DataAccess.Context
                 .HasForeignKey(u => u.BranchId)
                 .OnDelete(DeleteBehavior.Restrict);
 
+            //Vehicle => Şube havuzu. Aracı olan şube silinemez
+            builder.Entity<Vehicle>()
+                .HasOne(v => v.Branch)
+                .WithMany(b => b.Vehicles)
+                .HasForeignKey(v => v.BranchId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            // Kurye => kullandığı araç. Kuryesi olan araç silinemez (D103)
+            builder.Entity<Employee>()
+                .HasOne(e => e.Vehicle)
+                .WithMany(v => v.Couriers)
+                .HasForeignKey(e => e.VehicleId)
+                .OnDelete(DeleteBehavior.Restrict);
+
 
             // Tekil indeksler yalnızca silinmemiş kayıtlarda geçerli: silinen kayıt aynı değerin yeniden eklenmesini engellemez
 
@@ -289,6 +304,12 @@ namespace DestinoTrack.DataAccess.Context
             // Aynı deneme numarası bir kargoda iki kez yazılamaz
             builder.Entity<DeliveryException>()
                 .HasIndex(x => new { x.CargoId, x.AttemptNo })
+                .IsUnique()
+                .HasFilter("[IsDeleted] = 0");
+
+            // Aynı plaka iki araçta olamaz
+            builder.Entity<Vehicle>()
+                .HasIndex(v => v.Plate)
                 .IsUnique()
                 .HasFilter("[IsDeleted] = 0");
 
@@ -354,6 +375,11 @@ namespace DestinoTrack.DataAccess.Context
                 e.Property(x => x.PhoneNumber).HasMaxLength(20);
                 e.Property(x => x.VehiclePlate).HasMaxLength(20);
                 e.Property(x => x.Region).HasMaxLength(100);
+            });
+
+            builder.Entity<Vehicle>(e =>
+            {
+                e.Property(v => v.Plate).HasMaxLength(20);
             });
 
             // Kargo metinleri tek blokta: takip/barkod · teslimat kodu · gönderici ve alıcı bilgisi 

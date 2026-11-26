@@ -1,0 +1,29 @@
+﻿@model TopBranchesDto
+
+@* VC7 · Admin panosu — en yoğun beş şube.
+   "Yoğunluk" = şubeye DEĞEN kargo: çıkış veya varış. Scoped'in şube dalıyla aynı tanım,
+   yani buradaki sayı o şubenin kendi panosundaki toplamla EŞİT (D94).
+   Çubuğun ölçeği en yoğun şube: karşılaştırma şubeler arası. *@
+
+<div class="m3-card p-6 mb-8">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["Summary_TopBranches"]</h2>
+
+    @if (Model.Max == 0)
+    {
+        @* Hiç kargo yoksa hiçbir şube "değmiş" olmaz; yeni metin gerekmedi *@
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["NoCargoInSystem"]</p>
+    }
+    else
+    {
+        <div class="flex flex-col gap-3">
+            @foreach (var sube in Model.Rows)
+            {
+                <div class="flex items-center gap-3">
+                    <span class="w-44 shrink-0 font-body-sm text-body-sm text-on-surface truncate">@sube.BranchName</span>
+                    <progress class="bar" value="@sube.Count" max="@Model.Max"></progress>
+                    <span class="w-10 shrink-0 text-right font-label-md text-label-md text-on-surface">@sube.Count.ToString("N0")</span>
+                </div>
+            }
+        </div>
+    }
+</div>

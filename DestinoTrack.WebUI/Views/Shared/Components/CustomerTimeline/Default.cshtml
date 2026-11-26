@@ -1,0 +1,61 @@
+﻿@model CustomerTimelineDto
+
+@* Durum rozetinin rengi ortak `ChipClass()`'tan geliyor : kural bir yerde duruyor,
+   bu çizelge de diğer altı ekranla aynı okumayı basıyor. *@
+
+
+<div class="p-6 mb-8 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+
+    <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+        <div class="flex items-center gap-2 min-w-0">
+            <span class="material-symbols-outlined text-[22px] text-primary shrink-0">timeline</span>
+            <h2 class="font-headline-sm text-headline-sm text-on-surface truncate">@L["Movements"]</h2>
+            <span class="font-body-sm text-body-sm text-on-surface-variant truncate">@Model.TrackCode</span>
+        </div>
+
+        @* Teslim edildiyse tahmin artık anlamsız: yerine gerçek teslim zamanı yazılıyor *@
+        <div class="flex items-center gap-2">
+            @if (Model.DeliveredAt is not null)
+            {
+                <span class="font-label-md text-label-md text-on-surface-variant">@L["DeliveredAt"]</span>
+                <span class="font-body-sm text-body-sm text-on-surface">@Model.DeliveredAt.Value.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
+            }
+            else
+            {
+                <span class="font-label-md text-label-md text-on-surface-variant">@L["EstimatedArrival"]</span>
+                <span class="font-body-sm text-body-sm text-on-surface">@Model.EstimatedArrivalDate.ToLocalTime().ToString("dd.MM.yyyy")</span>
+            }
+        </div>
+    </div>
+
+    <ol class="flex flex-col">
+        @for (var i = 0; i < Model.Movements.Count; i++)
+        {
+            var m = Model.Movements[i];
+            var sonuncu = i == Model.Movements.Count - 1;
+            <li class="flex gap-4">
+                <!-- Nokta ve çizgi: son satırda çizgi yok, nokta vurgulu — o güncel durum -->
+                <div class="flex flex-col items-center shrink-0">
+                    <span class="mt-1.5 h-3 w-3 rounded-full @(sonuncu ? "bg-primary" : "bg-outline")"></span>
+                    @if (!sonuncu)
+                    {
+                        <span class="w-px flex-1 bg-outline-variant"></span>
+                    }
+                </div>
+                <div class="min-w-0 pb-6">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span class="@m.CargoStatus.ChipClass()">@L["CargoStatus_" + m.CargoStatus]</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant">@m.MovementDate.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
+                    </div>
+                    <p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">
+                        @(string.IsNullOrEmpty(m.CityName) ? m.BranchName : $"{m.BranchName}, {m.CityName}")
+                    </p>
+                    @if (m.DelayReason.HasValue)
+                    {
+                        <p class="mt-1 font-body-sm text-body-sm text-on-surface">@L["DelayReason_" + m.DelayReason.Value]</p>
+                    }
+                </div>
+            </li>
+        }
+    </ol>
+</div>

@@ -2,15 +2,18 @@
 using DestinoTrack.Business.Localization;
 using DestinoTrack.Business.Options;
 using DestinoTrack.Business.Services.Accounts;
+using DestinoTrack.Business.Services.AuditLogs;
 using DestinoTrack.Business.Services.Branches;
 using DestinoTrack.Business.Services.Cargos;
 using DestinoTrack.Business.Services.Cities;
 using DestinoTrack.Business.Services.Countries;
-using DestinoTrack.Business.Services.Dashboard;
 using DestinoTrack.Business.Services.Employees;
 using DestinoTrack.Business.Services.Pricing;
 using DestinoTrack.Business.Services.Users;
+using DestinoTrack.Business.Services.Vehicles;
+using DestinoTrack.DataAccess.Repositories.Vehicles;
 using DestinoTrack.DataAccess.Context;
+using DestinoTrack.DataAccess.Repositories.AuditLogs;
 using DestinoTrack.DataAccess.Interceptors;
 using DestinoTrack.DataAccess.Repositories.Abouts;
 using DestinoTrack.DataAccess.Repositories.Addresses;
@@ -113,6 +116,8 @@ builder.Services.AddLocalization(options => options.ResourcesPath = "Resources")
 // Repository Dependency Injection kısmına giriş.
 builder.Services.AddScoped<IAboutRepository, AboutRepository>();
 builder.Services.AddScoped<IAddressRepository, AddressRepository>();
+builder.Services.AddScoped<IAuditLogRepository, AuditLogRepository>();
+builder.Services.AddScoped<IVehicleRepository, VehicleRepository>();
 builder.Services.AddScoped<IBranchRepository, BranchRepository>();
 builder.Services.AddScoped<ICargoRepository, CargoRepository>();
 builder.Services.AddScoped<ICargoMovementRepository, CargoMovementRepository>();
@@ -134,7 +139,6 @@ builder.Services.AddScoped<ICityService, CityService>();
 builder.Services.AddScoped<IBranchService, BranchService>();
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 builder.Services.AddScoped<ICountryService, CountryService>();
-builder.Services.AddScoped<IDashboardService, DashboardService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICargoPricingService, CargoPricingService>();
@@ -143,9 +147,8 @@ builder.Services.AddScoped<ITrackCodeGenerator, TrackCodeGenerator>();
 builder.Services.AddScoped<ICargoService, CargoService>();
 builder.Services.AddScoped<IBarcodeService, BarcodeService>();
 builder.Services.AddScoped<IPublicTrackingUrl, HttpPublicTrackingUrl>();
-
-
-
+builder.Services.AddScoped<IAuditLogService, AuditLogService>();
+builder.Services.AddScoped<IVehicleService, VehicleService>();
 
 
 builder.Services.Configure<CargoSettings>(builder.Configuration.GetSection("Cargo"));
@@ -161,7 +164,6 @@ builder.Services.AddControllersWithViews(options =>
 
 
 
-// MVC'nin İngilizce model binding mesajları seçili dilde
 builder.Services.ConfigureOptions<LocalizedModelBindingMessages>();
 
 // Liste filtreleri adreste taşınmaz 
@@ -173,8 +175,7 @@ builder.Services.AddSession(options =>
     options.IdleTimeout = TimeSpan.FromMinutes(30);
 });
 
-//girişsiz takip ucu — aynı IP dakikada 20 sorgu.
-// Kota aşılırsa 429 döner, UseStatusCodePagesWithReExecute bunu durum sayfasına çevirir
+
 builder.Services.AddRateLimiter(options =>
 {
     options.RejectionStatusCode = StatusCodes.Status429TooManyRequests;

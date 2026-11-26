@@ -48,8 +48,25 @@ namespace DestinoTrack.Business.Services.Cargos
         Task<List<RecentMovementDto>> GetRecentMovementsAsync(int count = 8);
 
         Task<CustomerSummaryDto?> GetCustomerSummaryAsync();
+        Task<CustomerTimelineDto?> GetCustomerTimelineAsync();
 
-        // detay + hareket çizelgesi (kapsam dışındaysa yetki hatası)
+        // Admin panosu: kısıtsız kapsam dışına null
+        Task<AdminSummaryDto?> GetAdminSummaryAsync();
+        Task<StatusDistributionDto?> GetStatusDistributionAsync();
+
+        // Admin panosu · son 7 gün trafiği: yedi gün, kargosuz günler dahil
+        Task<WeeklyTrafficDto?> GetWeeklyTrafficAsync();
+
+
+        // Admin panosu · en yoğun şubeler (varsayılan beş)
+        Task<TopBranchesDto?> GetTopBranchesAsync(int take = 5);
+
+        // Rapor sayfası · SLA: zamanında teslim oranı (payda YALNIZ teslim edilenler)
+        Task<SlaSummaryDto?> GetSlaSummaryAsync();
+
+        // Rapor · kök neden dağılımları: beş nedenin beşi de satır alır, sıfırlar dahil
+        Task<ReasonBreakdownDto?> GetDelayReasonBreakdownAsync();
+        Task<ReasonBreakdownDto?> GetFailureReasonBreakdownAsync();
         Task<CargoDetailDto> GetDetailAsync(Guid id);
 
         // yazdırılabilir etiketin verisi + hazır barkod/QR (kapsam dışındaysa yetki hatası)

@@ -364,6 +364,11 @@
   <data name="VehicleTypeRequired" xml:space="preserve"><value>Kurye için araç türü seçilmelidir.</value></data>
   <data name="VehiclePlateRequired" xml:space="preserve"><value>Kurye için plaka girilmelidir.</value></data>
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>Plaka en fazla 20 karakter olabilir.</value></data>
+  <data name="VehicleNotFound" xml:space="preserve"><value>Araç bulunamadı.</value></data>
+  <data name="VehicleHasCouriers" xml:space="preserve"><value>Bu araç bir kuryeye bağlı olduğu için silinemez.</value></data>
+  <data name="VehiclePlateInUse" xml:space="preserve"><value>Bu plaka başka bir araçta kayıtlı.</value></data>
+  <data name="PlateRequired" xml:space="preserve"><value>Plaka girilmelidir.</value></data>
+  <data name="VehicleTypeSelectRequired" xml:space="preserve"><value>Araç türü seçilmelidir.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>Dağıtım bölgesi en fazla 100 karakter olabilir.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>Hesap rolü Şube Yetkilisi ya da Kurye olmalıdır.</value></data>
   <data name="RouteScopeInvalid" xml:space="preserve"><value>Geçerli bir güzergah kademesi seçilmelidir.</value></data>
@@ -1068,6 +1073,23 @@
   <data name="Summary_DispatchedToday" xml:space="preserve"><value>Bugün Çıkan</value></data>
   <data name="Summary_DeliveredToday" xml:space="preserve"><value>Bugün Teslim Edilen</value></data>
   <data name="Summary_Issues" xml:space="preserve"><value>Sorunlu</value></data>
+  <data name="Summary_TotalCargo" xml:space="preserve"><value>Toplam Kargo</value></data>
+  <data name="Summary_ActiveCargo" xml:space="preserve"><value>Aktif Kargo</value></data>
+  <data name="Summary_DeliveryRate" xml:space="preserve"><value>Teslimat Oranı</value></data>
+  <data name="Summary_FinalizedBasis" xml:space="preserve"><value>sonuçlanan kargolarda</value></data>
+  <data name="Summary_StatusDistribution" xml:space="preserve"><value>Durum Dağılımı</value></data>
+  <data name="NoCargoInSystem" xml:space="preserve"><value>Sistemde henüz kargo yok</value></data>
+  <data name="Summary_WeeklyTraffic" xml:space="preserve"><value>Son 7 Gün Trafiği</value></data>
+  <data name="Summary_TopBranches" xml:space="preserve"><value>En Yoğun 5 Şube</value></data>
+  <data name="Summary_BranchesStaff" xml:space="preserve"><value>Şube ve Personel</value></data>
+  <data name="Summary_OnTimeRate" xml:space="preserve"><value>Zamanında Teslim Oranı</value></data>
+  <data name="Summary_DelayReasons" xml:space="preserve"><value>Gecikme Nedenleri</value></data>
+  <data name="Summary_FailureReasons" xml:space="preserve"><value>Teslim Edilememe Nedenleri</value></data>
+  <data name="Summary_NoReasonYet" xml:space="preserve"><value>Bu kümede henüz kayıt yok</value></data>
+  <data name="Summary_OnTimeDelivered" xml:space="preserve"><value>Zamanında</value></data>
+  <data name="Summary_LateDelivered" xml:space="preserve"><value>Geç Teslim</value></data>
+  <data name="Summary_OnTimeBasis" xml:space="preserve"><value>teslim edilen kargolarda</value></data>
+  <data name="NoCargoInLast7Days" xml:space="preserve"><value>Son 7 günde kargo kabul edilmemiş</value></data>
   <data name="RecentMovements" xml:space="preserve"><value>Son Hareketler</value></data>
   <data name="Attempt" xml:space="preserve"><value>Deneme</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Teslim Alan</value></data>
@@ -1078,4 +1100,18 @@
   <data name="DelayReason_AddressNotFound" xml:space="preserve"><value>Adres bulunamadı</value></data>
   <data name="DelayReason_RecipientUnavailable" xml:space="preserve"><value>Alıcı adreste yok</value></data>
   <data name="DelayReason_Customs" xml:space="preserve"><value>Gümrük işlemleri</value></data>
+  <data name="AuditLog" xml:space="preserve"><value>Denetim Kaydı</value></data>
+  <data name="Audit_ReadOnlyNote" xml:space="preserve"><value>Denetim kayıtları değiştirilemez ve silinemez.</value></data>
+  <data name="Audit_When" xml:space="preserve"><value>Zaman</value></data>
+  <data name="Audit_User" xml:space="preserve"><value>Kullanıcı</value></data>
+  <data name="Audit_Action" xml:space="preserve"><value>İşlem</value></data>
+  <data name="Audit_Entity" xml:space="preserve"><value>Kayıt Türü</value></data>
+  <data name="Audit_RecordId" xml:space="preserve"><value>Kayıt No</value></data>
+  <data name="Audit_NewValues" xml:space="preserve"><value>Yeni Değer</value></data>
+  <data name="Audit_OldValues" xml:space="preserve"><value>Önceki Değer</value></data>
+  <data name="Audit_SystemUser" xml:space="preserve"><value>Sistem</value></data>
+  <data name="Audit_SearchUser" xml:space="preserve"><value>Kullanıcı e-postası ara</value></data>
+  <data name="AuditAction_Create" xml:space="preserve"><value>Oluşturma</value></data>
+  <data name="AuditAction_Update" xml:space="preserve"><value>Güncelleme</value></data>
+  <data name="AuditAction_Delete" xml:space="preserve"><value>Silme</value></data>
 </root>

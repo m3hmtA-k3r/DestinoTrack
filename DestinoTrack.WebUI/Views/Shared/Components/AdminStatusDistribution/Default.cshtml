@@ -1,0 +1,25 @@
+﻿@model StatusDistributionDto
+
+<div class="m3-card p-6 mb-8">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["Summary_StatusDistribution"]</h2>
+
+    @if (Model.Total == 0)
+    {
+        @* Dokuz kez sıfır basmak yerine tek cümle; ayrıca max="0" geçersiz HTML olurdu *@
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["NoCargoInSystem"]</p>
+    }
+    else
+    {
+        <div class="flex flex-col gap-3">
+            @foreach (var satir in Model.Rows)
+            {
+                <div class="flex items-center gap-3">
+                    <span class="w-44 shrink-0 font-body-sm text-body-sm text-on-surface truncate">@L["CargoStatus_" + satir.Status]</span>
+                    <progress class="bar" value="@satir.Count" max="@Model.Total"></progress>
+                    <span class="w-10 shrink-0 text-right font-label-md text-label-md text-on-surface">@satir.Count.ToString("N0")</span>
+                    <span class="w-12 shrink-0 text-right font-body-sm text-body-sm text-on-surface-variant">@satir.Share.ToString("P0")</span>
+                </div>
+            }
+        </div>
+    }
+</div>

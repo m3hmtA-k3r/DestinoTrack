@@ -2,13 +2,7 @@
 @{
     ViewData["Title"] = L["Menu_NewMovement"].Value;
 
-    // Durum rozetinin rengi: şube kargoları ekranındakiyle aynı okuma
-    string DurumSinifi(CargoStatus s) => s switch
-    {
-        CargoStatus.Delivered => "chip-active",
-        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
-        _ => "chip-info"
-    };
+    
 }
 
 <div class="mx-auto max-w-3xl">
@@ -64,7 +58,7 @@
                 <div class="flex flex-col items-start sm:items-end gap-2">
                     <div class="flex items-center gap-2">
                         <span class="font-label-md text-label-md text-secondary uppercase">@L["CurrentStatus"]</span>
-                        <span class="@DurumSinifi(Model.Target.CurrentStatus)">@L["CargoStatus_" + Model.Target.CurrentStatus]</span>
+                        <span class="@Model.Target.CurrentStatus.ChipClass()">@L["CargoStatus_" + Model.Target.CurrentStatus]</span>
                     </div>
                     @if (Model.Target.LastMovementDate is not null)
                     {

@@ -13,13 +13,7 @@
     var chipOn = chipBase + " bg-primary-container text-on-primary";
     var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
 
-    // Durum rozeti: diğer ekranlarla aynı okuma
-    string DurumSinifi(CargoStatus s) => s switch
-    {
-        CargoStatus.Delivered => "chip-active",
-        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
-        _ => "chip-info"
-    };
+    
 }
 
 <div class="w-full">
@@ -81,7 +75,7 @@
                                 <a asp-controller="Cargo" asp-action="Detail" asp-route-id="@kargo.Id"
                                    class="font-headline-sm text-body-sm text-primary hover:underline">@kargo.TrackCode</a>
                             </td>
-                            <td class="py-4 px-4"><span class="@DurumSinifi(kargo.CargoStatus)">@L["CargoStatus_" + kargo.CargoStatus]</span></td>
+                            <td class="py-4 px-4"><span class="@kargo.CargoStatus.ChipClass()">@L["CargoStatus_" + kargo.CargoStatus]</span></td>
                             <td class="py-4 px-4 font-body-sm text-body-sm">@kargo.ReceiverName</td>
                             <td class="py-4 px-4 font-body-sm text-body-sm">@kargo.DestinationBranchName</td>
                             <td class="py-4 px-4">

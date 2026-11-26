@@ -3,10 +3,10 @@
 @* VC11 · müşteri panosu — aktif kargolar · geçmiş teslimatlar · son durum.
    Kart düzeni DailySummary ile aynı: aynı sistemin iki panosu iki ayrı dil konuşmasın.
 
-   Durum rozetinin RENK kuralı burada BİLEREK tekrarlanmadı. O kural _CargoList ve
-   _CargoDetail'de duruyor; üçüncü bir kopya çıkarsa akışa bir durum eklendiğinde üç yer
-   güncellenmek zorunda kalır. Renk buraya da gerekirse doğru hamle yardımcıyı ortak bir
-   yere ÇIKARMAK, buraya kopyalamak değil. *@
+   Durum rozetinin rengi ortak `ChipClass()` yardımcısından geliyor. Bu kutu ile
+   hemen altındaki VC12 çizelgesi aynı kargonun aynı durumunu gösterdiği için ikisi de
+   aynı kaynaktan beslenmek zorunda; yoksa tek sayfada tek durum iki renkte görünür. *@
+
 @{
     var kartlar = new (string Etiket, int Sayi, string Ikon)[]
     {
@@ -48,7 +48,7 @@ else
                 <div class="font-label-md text-label-md text-on-surface-variant">@L["LatestStatus"]</div>
                 <div class="flex items-center gap-2 min-w-0">
                     <span class="font-headline-sm text-headline-sm text-on-surface truncate">@Model.LatestTrackCode</span>
-                    <span class="chip-neutral shrink-0">@L["CargoStatus_" + Model.LatestStatus]</span>
+                    <span class="@Model.LatestStatus!.Value.ChipClass() shrink-0">@L["CargoStatus_" + Model.LatestStatus]</span>
                 </div>
                 @if (Model.LatestMovementDate is not null)
                 {

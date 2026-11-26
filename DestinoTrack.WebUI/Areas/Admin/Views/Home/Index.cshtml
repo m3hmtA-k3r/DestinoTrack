@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = L["Menu_Dashboard"].Value;
+}
+
+<div class="w-full">
+
+    <!-- Sayfa başlığı -->
+    <div class="flex items-center gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">insights</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["AdminPanel"]</span>
+            <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["Menu_Dashboard"]</h1>
+        </div>
+    </div>
+
+    @* VC3 · toplam · aktif · geciken kargo + teslimat oranı. Sayıları servisten kendi alıyor *@
+    @await Component.InvokeAsync("AdminSummary")
+
+
+    @* VC6 · dokuz durumun dağılımı, sıfırlar dahil *@
+    @await Component.InvokeAsync("AdminStatusDistribution")
+
+
+    @* VC5 · son 7 gün trafiği, kabul gününe göre *@
+    @await Component.InvokeAsync("AdminWeeklyTraffic")
+
+
+    @* VC7 · en yoğun beş şube — şubeye değen kargo (D94) *@
+    @await Component.InvokeAsync("AdminTopBranches")
+
+    @* VC4 · ikinci view: şube ve personel kadrosu. branchType verilmiyor = bütün tesisler *@
+    @await Component.InvokeAsync("BranchSummary", new { view = "Dashboard" })
+</div>

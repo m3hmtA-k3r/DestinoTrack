@@ -16,7 +16,7 @@ namespace DestinoTrack.Entity.Entities
 
         // Şubede çalışan personel (kurye · şube personeli · depo · şoför)
         public virtual IList<Employee> Employees { get; set; }
-
+        public virtual IList<Vehicle> Vehicles { get; set; }
 
         // Branch için
         public virtual IList<Payment> CollectedPayments { get; set; }

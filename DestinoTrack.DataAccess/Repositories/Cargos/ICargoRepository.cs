@@ -7,7 +7,6 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
     public interface ICargoRepository : IRepository<Cargo>
     {
         Task<Cargo?> GetByTrackCodeAsync(string trackCode);
-        Task<int> CountByStatusAsync(CargoStatus status);
 
         // üretilen takip no daha önce kullanılmış mı (silinmişler dahil — numara geri dönüşmez)
         Task<bool> TrackCodeExistsAsync(string trackCode);
@@ -51,6 +50,30 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
 
         Task<int> CountByStatusScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
                                            Guid? courierEmployeeId, bool unrestricted, params CargoStatus[] statuses);
+        Task<int> CountScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted);
+
+        Task<Dictionary<CargoStatus, int>> CountGroupedByStatusScopedAsync(Guid? branchId, Guid? countryId,
+                                   Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted);
+        Task<Dictionary<DateTime, int>> CountByShipmentDayScopedAsync(Guid? branchId, Guid? countryId,
+                                   Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted,
+                                   DateTime from, DateTime to);
+        Task<List<(Guid BranchId, string BranchName, int Count)>> TopBranchesByTrafficScopedAsync(
+                                   Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted, int take);
+        Task<(int Delivered, int OnTime)> CountOnTimeDeliveredScopedAsync(Guid? branchId, Guid? countryId,
+                                   Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted);
+
+
+        // Rapor · kök neden dağılımları. İkisi de kapsamdan geçiyor: rapor da D47–D50'nin dışında değil.
+        // "Yolda neden gecikti" hareketten, "kapıda neden teslim edilemedi" teslim denemesinden —
+        // iki ayrı tablo, iki ayrı soru, birleştirilmiyor
+        Task<Dictionary<DelayReason, int>> CountDelayReasonsScopedAsync(Guid? branchId, Guid? countryId,
+                                   Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted);
+
+        Task<Dictionary<DeliveryFailureReason, int>> CountFailureReasonsScopedAsync(Guid? branchId,
+                                   Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted);
         Task<Cargo?> GetLatestScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
                                            Guid? courierEmployeeId, bool unrestricted);
 

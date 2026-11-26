@@ -1,0 +1,46 @@
+﻿@model AdminSummaryDto
+
+@* VC3 · Admin panosu — toplam · aktif · geciken kargo + teslimat oranı.
+   Kart düzeni DailySummary ve VC11 ile aynı: aynı sistemin panoları aynı dili konuşsun.
+
+   Oranın paydası SONUÇLANAN kargolar (teslim + iade), yoldakiler değil. Yüzdenin altına
+   pay ve payda da basılıyor: okuyan sayıyı denetleyebilsin, paydayı yanlış okumasın. *@
+@{
+    var kartlar = new (string Etiket, int Sayi, string Ikon)[]
+    {
+        (L["Summary_TotalCargo"].Value,  Model.TotalCargo,   "inventory_2"),
+        (L["Summary_ActiveCargo"].Value, Model.ActiveCargo,  "local_shipping"),
+        (L["CargoIssue_Delayed"].Value,  Model.DelayedCargo, "schedule")
+    };
+}
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    @foreach (var kart in kartlar)
+    {
+        <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">@kart.Ikon</span>
+            </div>
+            <div class="min-w-0">
+                <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@kart.Sayi.ToString("N0")</div>
+                <div class="font-label-md text-label-md text-on-surface-variant truncate">@kart.Etiket</div>
+            </div>
+        </div>
+    }
+
+    <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[20px]">percent</span>
+        </div>
+        <div class="min-w-0">
+            @* Hiç sonuçlanmış kargo yoksa oran YOK — %0 yazmak "hepsi başarısız" demek olurdu *@
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">
+                @(Model.DeliveryRate is null ? "—" : Model.DeliveryRate.Value.ToString("P1"))
+            </div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["Summary_DeliveryRate"]</div>
+            <div class="font-body-sm text-body-sm text-on-surface-variant truncate">
+                @Model.DeliveredCargo.ToString("N0") / @Model.FinalizedCargo.ToString("N0") · @L["Summary_FinalizedBasis"]
+            </div>
+        </div>
+    </div>
+</div>

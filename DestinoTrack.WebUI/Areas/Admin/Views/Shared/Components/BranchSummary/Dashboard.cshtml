@@ -1,0 +1,33 @@
+﻿@model BranchSummaryDto
+
+@* VC4 · Dashboard view — panoda tek kart içinde dört rakam.
+   `Default` şube ekranının BAŞLIĞI (dört büyük kart); panoda VC3 zaten dört kart basıyor,
+   aynısını tekrarlamak görsel gürültü olurdu. Veri aynı servis metodundan, yalnız çizim farklı. *@
+
+<div class="m3-card p-6 mb-8">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["Summary_BranchesStaff"]</h2>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <div class="flex flex-col">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.EmployeeCount.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["Employees"]</div>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.CourierCount.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["Couriers"]</div>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.TotalCapacity.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["TotalCapacity"]</div>
+        </div>
+
+        <div class="flex flex-col">
+            <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.TotalDockCount.ToString("N0")</div>
+            <div class="font-label-md text-label-md text-on-surface-variant truncate">@L["TotalDockCount"]</div>
+        </div>
+
+    </div>
+</div>

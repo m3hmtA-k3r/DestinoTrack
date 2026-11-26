@@ -364,6 +364,11 @@
   <data name="VehicleTypeRequired" xml:space="preserve"><value>O tipo de veículo é obrigatório para entregadores.</value></data>
   <data name="VehiclePlateRequired" xml:space="preserve"><value>A placa é obrigatória para entregadores.</value></data>
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>A placa pode ter no máximo 20 caracteres.</value></data>
+  <data name="VehicleNotFound" xml:space="preserve"><value>Veículo não encontrado.</value></data>
+  <data name="VehicleHasCouriers" xml:space="preserve"><value>Este veículo não pode ser excluído porque está atribuído a um entregador.</value></data>
+  <data name="VehiclePlateInUse" xml:space="preserve"><value>Esta placa já está registrada em outro veículo.</value></data>
+  <data name="PlateRequired" xml:space="preserve"><value>A placa é obrigatória.</value></data>
+  <data name="VehicleTypeSelectRequired" xml:space="preserve"><value>O tipo de veículo é obrigatório.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>A área de entrega pode ter no máximo 100 caracteres.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>A função da conta deve ser Responsável da filial ou Entregador.</value></data>
   <data name="RouteScopeInvalid" xml:space="preserve"><value>Um escopo de rota válido deve ser selecionado.</value></data>
@@ -1068,6 +1073,23 @@
   <data name="Summary_DispatchedToday" xml:space="preserve"><value>Expedidos hoje</value></data>
   <data name="Summary_DeliveredToday" xml:space="preserve"><value>Entregues hoje</value></data>
   <data name="Summary_Issues" xml:space="preserve"><value>Com problemas</value></data>
+  <data name="Summary_TotalCargo" xml:space="preserve"><value>Total de Cargas</value></data>
+  <data name="Summary_ActiveCargo" xml:space="preserve"><value>Cargas Ativas</value></data>
+  <data name="Summary_DeliveryRate" xml:space="preserve"><value>Taxa de Entrega</value></data>
+  <data name="Summary_FinalizedBasis" xml:space="preserve"><value>das cargas finalizadas</value></data>
+  <data name="Summary_StatusDistribution" xml:space="preserve"><value>Distribuição por Estado</value></data>
+  <data name="NoCargoInSystem" xml:space="preserve"><value>Ainda não há encomendas no sistema</value></data>
+  <data name="Summary_WeeklyTraffic" xml:space="preserve"><value>Tráfego dos Últimos 7 Dias</value></data>
+  <data name="Summary_TopBranches" xml:space="preserve"><value>5 Filiais Mais Movimentadas</value></data>
+  <data name="Summary_BranchesStaff" xml:space="preserve"><value>Filiais e Pessoal</value></data>
+  <data name="Summary_OnTimeRate" xml:space="preserve"><value>Taxa de Entrega no Prazo</value></data>
+  <data name="Summary_DelayReasons" xml:space="preserve"><value>Motivos de Atraso</value></data>
+  <data name="Summary_FailureReasons" xml:space="preserve"><value>Motivos de Falha na Entrega</value></data>
+  <data name="Summary_NoReasonYet" xml:space="preserve"><value>Ainda não há registos neste grupo</value></data>
+  <data name="Summary_OnTimeDelivered" xml:space="preserve"><value>No prazo</value></data>
+  <data name="Summary_LateDelivered" xml:space="preserve"><value>Atrasadas</value></data>
+  <data name="Summary_OnTimeBasis" xml:space="preserve"><value>das cargas entregues</value></data>
+  <data name="NoCargoInLast7Days" xml:space="preserve"><value>Nenhuma encomenda aceite nos últimos 7 dias</value></data>
   <data name="RecentMovements" xml:space="preserve"><value>Movimentos recentes</value></data>
   <data name="Attempt" xml:space="preserve"><value>Tentativa</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Recebido por</value></data>
@@ -1078,4 +1100,18 @@
   <data name="DelayReason_AddressNotFound" xml:space="preserve"><value>Endereço não encontrado</value></data>
   <data name="DelayReason_RecipientUnavailable" xml:space="preserve"><value>Destinatário ausente</value></data>
   <data name="DelayReason_Customs" xml:space="preserve"><value>Alfândega</value></data>
+  <data name="AuditLog" xml:space="preserve"><value>Registo de Auditoria</value></data>
+  <data name="Audit_ReadOnlyNote" xml:space="preserve"><value>Os registos de auditoria não podem ser alterados nem eliminados.</value></data>
+  <data name="Audit_When" xml:space="preserve"><value>Hora</value></data>
+  <data name="Audit_User" xml:space="preserve"><value>Utilizador</value></data>
+  <data name="Audit_Action" xml:space="preserve"><value>Ação</value></data>
+  <data name="Audit_Entity" xml:space="preserve"><value>Tipo de Registo</value></data>
+  <data name="Audit_RecordId" xml:space="preserve"><value>N.º de Registo</value></data>
+  <data name="Audit_NewValues" xml:space="preserve"><value>Novo Valor</value></data>
+  <data name="Audit_OldValues" xml:space="preserve"><value>Valor Anterior</value></data>
+  <data name="Audit_SystemUser" xml:space="preserve"><value>Sistema</value></data>
+  <data name="Audit_SearchUser" xml:space="preserve"><value>Pesquisar e-mail do utilizador</value></data>
+  <data name="AuditAction_Create" xml:space="preserve"><value>Criação</value></data>
+  <data name="AuditAction_Update" xml:space="preserve"><value>Atualização</value></data>
+  <data name="AuditAction_Delete" xml:space="preserve"><value>Eliminação</value></data>
 </root>

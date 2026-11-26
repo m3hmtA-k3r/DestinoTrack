@@ -3,13 +3,6 @@
     // Üst etiket çağıran sayfadan gelir: Admin "Gönderiler", şube paneli "Şube Kargoları" der
     var caption = ViewData["Caption"] as string ?? L["Menu_Shipments"].Value;
 
-    // Durum rozetinin rengi: teslim edildi vurgulu, iade/başarısız kırmızı, yoldakiler bilgi
-    string DurumSinifi(CargoStatus s) => s switch
-    {
-        CargoStatus.Delivered => "chip-active",
-        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
-        _ => "chip-info"
-    };
 }
 
 <!-- Başlık: takip no + güncel durum -->
@@ -22,7 +15,7 @@
             <span class="font-label-md text-label-md text-primary uppercase">@caption</span>
             <div class="flex items-center gap-2">
                 <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@Model.TrackCode</h1>
-                <span class="@DurumSinifi(Model.CargoStatus)">@L["CargoStatus_" + Model.CargoStatus]</span>
+                <span class="@Model.CargoStatus.ChipClass()">@L["CargoStatus_" + Model.CargoStatus]</span>
             </div>
         </div>
     </div>
@@ -113,7 +106,7 @@
                         </div>
                         <div class="pb-6 min-w-0">
                             <div class="flex flex-wrap items-center gap-2">
-                                <span class="@DurumSinifi(m.CargoStatus)">@L["CargoStatus_" + m.CargoStatus]</span>
+                                <span class="@m.CargoStatus.ChipClass()">@L["CargoStatus_" + m.CargoStatus]</span>
                                 <span class="font-body-sm text-body-sm text-on-surface-variant">@m.MovementDate.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
                             </div>
                             @if (!string.IsNullOrEmpty(m.Description))

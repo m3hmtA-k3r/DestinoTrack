@@ -55,10 +55,7 @@ namespace DestinoTrack.Business.Services.Cargos
 
 
         private static readonly CargoStatus[] ActiveStatuses = AllowedTransitions.Where(g => g.Value.Length > 0).Select(g => g.Key).ToArray();
-
-        // Bu üç durumun kendi akışı var: kurye ataması (Dispatch) · teslim kodu (Deliver) ·
-        // iade gerekçesi (FailDelivery). Genel hareket ekranı bunları yazamaz — yazabilse
-        // kurye atanmadan dağıtıma çıkan, kodu doğrulanmadan teslim görünen kargo olurdu 
+        private static readonly CargoStatus[] FinalStatuses = AllowedTransitions.Where(g => g.Value.Length == 0).Select(g => g.Key).ToArray();
         private static readonly FrozenSet<CargoStatus> GatedStatuses =
             new[] { CargoStatus.OutForDelivery, CargoStatus.Delivered, CargoStatus.DeliveryFailed }.ToFrozenSet();
 
@@ -191,7 +188,6 @@ namespace DestinoTrack.Business.Services.Cargos
                 TotalCount = totalCount
             };
         }
-
 
         public async Task<CargoDetailDto> GetDetailAsync(Guid id)
         {
@@ -372,7 +368,6 @@ namespace DestinoTrack.Business.Services.Cargos
             };
         }
 
-
         // {Önek}-{Yıl}-{6 rakam}. Uymayan metin veritabanına hiç gitmez
         private static readonly Regex TrackCodePattern = new(@"^[A-Z]{2,5}-\d{4}-\d{6}$", RegexOptions.Compiled);
 
@@ -434,9 +429,6 @@ namespace DestinoTrack.Business.Services.Cargos
             await WriteTransitionAsync(cargoId, newStatus, branchId, performedByUserId, description, delayReason);
         }
 
-
-        // Geçişi doğrular, kargoyu günceller, hareketi yazar. Kapı denetimi burada YOK:
-        // kapılı durumlara yalnız Dispatch · Deliver · FailDelivery kendi içinden gelir
         private async Task WriteTransitionAsync(Guid cargoId, CargoStatus newStatus, Guid branchId, Guid performedByUserId,
                                                 string? description = null, DelayReason? delayReason = null)
         {
@@ -580,8 +572,6 @@ namespace DestinoTrack.Business.Services.Cargos
 
         }
 
-        // Kuryenin personel kaydı veritabanından okunuyor, o yüzden async: kapsamı Business
-        // katmanı kendi repository'siyle çözüyor, WebUI'ye ya da çereze iş düşmüyor
         private async Task<CargoScope> GetScopeAsync()
         {
             if (_currentUser.Role == RoleNames.Courier)
@@ -608,31 +598,20 @@ namespace DestinoTrack.Business.Services.Cargos
                     UserId = _currentUser.CustomerId is null ? _currentUser.UserId : null
                 },
 
-                // Tanımsız rol ya da girişsiz istek: hiçbir şey görmez
                 _ => new CargoScope()
             };
         }
 
-
-        // Dağıtıma hazır: varış şubesine ulaşmış, henüz kuryeye verilmemiş kargolar.
-        // Yön "gelen": kargonun çıkış şubesi değil, VARIŞ şubesi bizim şubemiz olmalı
         public Task<PagedResult<DeliveryRowDto>> GetReadyForDispatchAsync(int page = 1)
         {
             return DeliveryListAsync([CargoStatus.AtDestinationBranch, CargoStatus.DeliveryFailed],
                                      page, CargoDirection.Incoming);
         }
 
-
-
-        // Dağıtımda: kuryenin üzerindeki kargolar. Kurye kendi kapsamıyla girdiği için
-        // burada ek bir süzgeç yok — kuralı kapsam uyguluyor, ekran değil
         public Task<PagedResult<DeliveryRowDto>> GetOnDeliveryAsync(int page = 1)
         {
             return DeliveryListAsync([CargoStatus.OutForDelivery], page);
         }
-
-
-
 
         // İki listenin ortak gövdesi: yalnız durum ve yön değişiyor
         private async Task<PagedResult<DeliveryRowDto>> DeliveryListAsync(CargoStatus[] statuses, int page,
@@ -676,8 +655,6 @@ namespace DestinoTrack.Business.Services.Cargos
                 TotalCount = totalCount
             };
         }
-
-
 
         public async Task<PagedResult<CargoIssueRowDto>> GetIssuesAsync(CargoIssue? issue = null, int page = 1)
         {
@@ -761,8 +738,7 @@ namespace DestinoTrack.Business.Services.Cargos
             var scope = await GetScopeAsync();
 
             // Pano "benim kargolarım" diyor: bu soruyu yalnız müşteri kapsamı yanıtlayabilir.
-            // Şube ya da ülke kapsamıyla gelen birine o toplamı basmak yanlış sayı olurdu —
-            // D84'ün aynadaki hali: kapsamı olmayan ekrana sayı uydurulmaz
+            // Şube ya da ülke kapsamıyla gelen birine o toplamı basmak yanlış sayı olurdu
             if (scope.CustomerId is null && scope.UserId is null)
             {
                 return null;
@@ -789,12 +765,277 @@ namespace DestinoTrack.Business.Services.Cargos
                 LatestMovementDate = latest?.Movements.Max(m => (DateTime?)m.MovementDate)
             };
         }
+
+        public async Task<CustomerTimelineDto?> GetCustomerTimelineAsync()
+        {
+            var scope = await GetScopeAsync();
+
+            if (scope.CustomerId is null && scope.UserId is null)
+            {
+                return null;
+            }
+
+            var cargo = await _cargoRepository.GetLatestScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId, scope.IsUnrestricted);
+
+            // Hiç kargosu yok: bileşen sessiz kalacak, "henüz kargonuz yok"u VC11 yazıyor
+            if (cargo is null)
+            {
+                return null;
+            }
+
+            var movements = (cargo.Movements ?? new List<CargoMovement>())
+                .OrderBy(m => m.MovementDate)
+                .ThenBy(m => m.CargoStatus)
+                .ToList();
+
+            return new CustomerTimelineDto
+            {
+                TrackCode = cargo.TrackCode,
+                CargoStatus = cargo.CargoStatus,
+                EstimatedArrivalDate = cargo.EstimatedArrivalDate,
+
+                DeliveredAt = movements.LastOrDefault(m => m.CargoStatus == CargoStatus.Delivered)?.MovementDate,
+
+                Movements = movements.Select(m => new CustomerMovementDto
+                {
+                    MovementDate = m.MovementDate,
+                    CargoStatus = m.CargoStatus,
+                    BranchName = m.Branch?.Name,
+                    CityName = m.Branch?.City?.Name,
+                    DelayReason = m.DelayReason
+                }).ToList()
+            };
+        }
+
+        public async Task<AdminSummaryDto?> GetAdminSummaryAsync()
+        {
+            var scope = await GetScopeAsync();
+
+            // Pano bütün sistemin sayısını söylüyor: bu soruyu yalnız kısıtsız kapsam yanıtlayabilir.
+            // Daralmış kapsama yanlış toplam basmaktansa hiç basma
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var teslim = await _cargoRepository.CountByStatusScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted, CargoStatus.Delivered);
+
+            var sonuclanan = await _cargoRepository.CountByStatusScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted, FinalStatuses);
+
+            return new AdminSummaryDto
+            {
+                TotalCargo = await _cargoRepository.CountScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted),
+
+                ActiveCargo = await _cargoRepository.CountByStatusScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted, ActiveStatuses),
+
+                // Gecikme kuralı sorunlu kargolar listesiyle AYNI metottan: ekranda 5 diyorsa kart da 5 der
+                DelayedCargo = await _cargoRepository.CountIssuesScopedAsync(
+                    scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                    scope.IsUnrestricted, CargoIssue.Delayed),
+
+                DeliveredCargo = teslim,
+                FinalizedCargo = sonuclanan,
+
+                // Hiç sonuçlanmamışsa oran YOK. 0 yazmak "hepsi başarısız" demek olurdu
+                DeliveryRate = sonuclanan == 0 ? null : (double)teslim / sonuclanan
+            };
+        }
+
+
+        public async Task<StatusDistributionDto?> GetStatusDistributionAsync()
+        {
+            var scope = await GetScopeAsync();
+
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var sayim = await _cargoRepository.CountGroupedByStatusScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted);
+
+            var toplam = sayim.Values.Sum();
+
+            return new StatusDistributionDto
+            {
+                Total = toplam,
+
+                Rows = AllowedTransitions.Keys.OrderBy(durum => durum).Select(durum => new StatusCountDto
+                {
+                    Status = durum,
+                    Count = Adet(sayim, durum),
+                    Share = toplam == 0 ? 0 : (double)Adet(sayim, durum) / toplam
+                }).ToList()
+            };
+        }
+
+
+        public async Task<WeeklyTrafficDto?> GetWeeklyTrafficAsync()
+        {
+            var scope = await GetScopeAsync();
+
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            // "Son 7 gün" = bugün DAHİL, geriye 6 gün. Sınır UTC: günlük özet de UTC okuyor,
+            // iki yerde iki ayrı "bugün" çıkmasın
+            var bugun = DateTime.UtcNow.Date;
+            var baslangic = bugun.AddDays(-6);
+
+            var sayim = await _cargoRepository.CountByShipmentDayScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted, baslangic, bugun.AddDays(1));
+
+            // Yedi günün yedisi de satır alıyor: kargosuz gün atlanırsa grafik boşluğu GİZLER
+            var satirlar = Enumerable.Range(0, 7)
+                .Select(i => baslangic.AddDays(i))
+                .Select(gun => new DailyTrafficDto
+                {
+                    Date = gun,
+                    Count = sayim.TryGetValue(gun, out var adet) ? adet : 0
+                })
+                .ToList();
+
+            return new WeeklyTrafficDto
+            {
+                Rows = satirlar,
+
+                // Çubuğun ölçeği EN YOĞUN gün: günler arası fark görünsün
+                Max = satirlar.Max(x => x.Count)
+            };
+        }
         private static int Adet(Dictionary<CargoStatus, int> sayim, CargoStatus durum)
         {
             return sayim.TryGetValue(durum, out var adet) ? adet : 0;
         }
 
+        public async Task<TopBranchesDto?> GetTopBranchesAsync(int take = 5)
+        {
+            var scope = await GetScopeAsync();
 
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var liste = await _cargoRepository.TopBranchesByTrafficScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted, take);
+
+            var satirlar = liste.Select(x => new BranchTrafficDto
+            {
+                BranchName = x.BranchName,
+                Count = x.Count
+            }).ToList();
+
+            return new TopBranchesDto
+            {
+                Rows = satirlar,
+
+                // Hiç şube yoksa `Max()` boş listede patlar — görünüm de bu 0'ı boş duruma çeviriyor
+                Max = satirlar.Count == 0 ? 0 : satirlar.Max(x => x.Count)
+            };
+        }
+
+        public async Task<SlaSummaryDto?> GetSlaSummaryAsync()
+        {
+            var scope = await GetScopeAsync();
+
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var (teslim, zamaninda) = await _cargoRepository.CountOnTimeDeliveredScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted);
+
+            return new SlaSummaryDto
+            {
+                Delivered = teslim,
+                OnTime = zamaninda,
+                Late = teslim - zamaninda,
+
+                // Hiç teslim edilmiş kargo yoksa oran YOK: sıfıra bölme değil, anlamsız olduğu için
+                OnTimeRate = teslim == 0 ? null : (double)zamaninda / teslim
+            };
+        }
+
+
+
+        public async Task<ReasonBreakdownDto?> GetDelayReasonBreakdownAsync()
+        {
+            var scope = await GetScopeAsync();
+
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var sayim = await _cargoRepository.CountDelayReasonsScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted);
+
+            return Dagilim(sayim, "Summary_DelayReasons", "DelayReason_");
+        }
+
+        public async Task<ReasonBreakdownDto?> GetFailureReasonBreakdownAsync()
+        {
+            var scope = await GetScopeAsync();
+
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var sayim = await _cargoRepository.CountFailureReasonsScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted);
+
+            return Dagilim(sayim, "Summary_FailureReasons", "DeliveryFailureReason_");
+        }
+
+        // İki dağılım birebir aynı şekilde kuruluyor: ikinci kopya yazmak yerine TEK yardımcı.
+        // Neden listesi elle yazılmıyor, enum'dan geliyor — akışa bir neden eklenirse satır kendiliğinden çıkar
+        private static ReasonBreakdownDto Dagilim<TEnum>(Dictionary<TEnum, int> sayim, string titleKey, string prefix)
+            where TEnum : struct, Enum
+        {
+            var toplam = sayim.Values.Sum();
+
+            // Beş nedenin beşi de satır alıyor, sıfırlar dahil: "hiç gümrük gecikmesi yok" da bir bilgi.
+            // Sıra adet azalan, eşitlikte ADA göre — rastgele sıra olmasın
+            var satirlar = Enum.GetValues<TEnum>()
+                .Select(neden => new ReasonCountDto
+                {
+                    Reason = neden.ToString(),
+                    Count = sayim.TryGetValue(neden, out var adet) ? adet : 0,
+                    Share = toplam == 0 ? 0 : (double)(sayim.TryGetValue(neden, out var a2) ? a2 : 0) / toplam
+                })
+                .OrderByDescending(x => x.Count)
+                .ThenBy(x => x.Reason)
+                .ToList();
+
+            return new ReasonBreakdownDto
+            {
+                TitleKey = titleKey,
+                LabelPrefix = prefix,
+                Total = toplam,
+                Max = satirlar.Count == 0 ? 0 : satirlar.Max(x => x.Count),
+                Rows = satirlar
+            };
+        }
         public async Task<List<RecentMovementDto>> GetRecentMovementsAsync(int count = 8)
         {
             var scope = await GetScopeAsync();
@@ -836,8 +1077,6 @@ namespace DestinoTrack.Business.Services.Cargos
                 BranchName = ulkeKapsami ? m.Branch?.Name : null
             }).ToList();
         }
-
-
 
         // kapsam dışındaki kayda dokunulamaz — kargo var ama bu kullanıcının değil
         private async Task<Cargo> FindInScopeAsync(Guid cargoId)

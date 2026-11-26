@@ -1,0 +1,41 @@
+﻿@model SlaSummaryDto
+
+<div class="m3-card p-6 mb-8">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["Summary_OnTimeRate"]</h2>
+
+    @if (Model.Delivered == 0)
+    {
+        @* Hiç teslim edilmiş kargo yoksa oran yok — %0 yazmak "hiçbiri zamanında değildi" demek olurdu *@
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["NoCargoInSystem"]</p>
+    }
+    else
+    {
+        <div class="flex flex-wrap items-end gap-8">
+
+            <div class="flex flex-col">
+                <div class="font-display-sm text-display-sm text-on-surface leading-none">
+                    @(Model.OnTimeRate is null ? "—" : Model.OnTimeRate.Value.ToString("P1"))
+                </div>
+                <div class="font-body-sm text-body-sm text-on-surface-variant mt-1">
+                    @Model.OnTime.ToString("N0") / @Model.Delivered.ToString("N0") · @L["Summary_OnTimeBasis"]
+                </div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.OnTime.ToString("N0")</div>
+                <div class="font-label-md text-label-md text-on-surface-variant">@L["Summary_OnTimeDelivered"]</div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.Late.ToString("N0")</div>
+                <div class="font-label-md text-label-md text-on-surface-variant">@L["Summary_LateDelivered"]</div>
+            </div>
+
+            <div class="flex flex-col">
+                <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@Model.Delivered.ToString("N0")</div>
+                <div class="font-label-md text-label-md text-on-surface-variant">@L["CargoStatus_Delivered"]</div>
+            </div>
+
+        </div>
+    }
+</div>

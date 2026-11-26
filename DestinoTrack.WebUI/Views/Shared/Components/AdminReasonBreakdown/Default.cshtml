@@ -1,0 +1,28 @@
+﻿@model ReasonBreakdownDto
+
+@* Rapor · kök neden dağılımı. TEK görünüm İKİ kart çiziyor: başlık ve etiket ön eki
+   modelden geliyor. Beş nedenin beşi de satır alıyor; sıra adet azalan. *@
+
+<div class="m3-card p-6 mb-8">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L[Model.TitleKey]</h2>
+
+    @if (Model.Total == 0)
+    {
+        @* Hiç kayıt yoksa beş sıfır satırı yerine tek cümle; ayrıca max="0" geçersiz HTML olurdu *@
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["Summary_NoReasonYet"]</p>
+    }
+    else
+    {
+        <div class="flex flex-col gap-3">
+            @foreach (var satir in Model.Rows)
+            {
+                <div class="flex items-center gap-3">
+                    <span class="w-56 shrink-0 font-body-sm text-body-sm text-on-surface truncate">@L[Model.LabelPrefix + satir.Reason]</span>
+                    <progress class="bar" value="@satir.Count" max="@Model.Max"></progress>
+                    <span class="w-10 shrink-0 text-right font-label-md text-label-md text-on-surface">@satir.Count.ToString("N0")</span>
+                    <span class="w-12 shrink-0 text-right font-body-sm text-body-sm text-on-surface-variant">@satir.Share.ToString("P0")</span>
+                </div>
+            }
+        </div>
+    }
+</div>

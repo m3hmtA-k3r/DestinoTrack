@@ -16,11 +16,6 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                 .FirstOrDefaultAsync(c => c.TrackCode == trackCode);
         }
 
-        public async Task<int> CountByStatusAsync(CargoStatus status)
-        {
-            return await _context.Cargos.CountAsync(c => c.CargoStatus == status);
-        }
-
         public async Task<bool> TrackCodeExistsAsync(string trackCode)
         {
             // IgnoreQueryFilters: silinmiş bir kargonun numarası yeniden verilmemeli,
@@ -142,11 +137,113 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
                 .CountAsync(c => statuses.Contains(c.CargoStatus));
         }
 
+
+        public async Task<int> CountScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                                Guid? courierEmployeeId, bool unrestricted)
+        {
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .CountAsync();
+        }
+
+
+        public async Task<Dictionary<CargoStatus, int>> CountGroupedByStatusScopedAsync(Guid? branchId, Guid? countryId,
+                                   Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted)
+        {
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .GroupBy(c => c.CargoStatus)
+                .Select(g => new { Durum = g.Key, Adet = g.Count() })
+                .ToDictionaryAsync(x => x.Durum, x => x.Adet);
+        }
+
+
+        public async Task<Dictionary<DateTime, int>> CountByShipmentDayScopedAsync(Guid? branchId, Guid? countryId,
+                                   Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted,
+                                   DateTime from, DateTime to)
+        {
+            // Gruplama `ShipmentDate.Date` ile: SQL tarafında CAST(... AS date) oluyor,
+            // yani saat farkı günleri bölmüyor
+            return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .Where(c => c.ShipmentDate >= from && c.ShipmentDate < to)
+                .GroupBy(c => c.ShipmentDate.Date)
+                .Select(g => new { Gun = g.Key, Adet = g.Count() })
+                .ToDictionaryAsync(x => x.Gun, x => x.Adet);
+        }
+
+
+        public async Task<List<(Guid BranchId, string BranchName, int Count)>> TopBranchesByTrafficScopedAsync(
+                                   Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted, int take)
+        {
+            var kapsam = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted);
+
+            var dokunan = kapsam.Select(c => new { Id = c.OriginBranchId, Ad = c.OriginBranch.Name })
+                .Concat(kapsam.Select(c => new { Id = c.DestinationBranchId, Ad = c.DestinationBranch.Name }));
+
+            var liste = await dokunan
+                .GroupBy(x => new { x.Id, x.Ad })
+                .Select(g => new { g.Key.Id, g.Key.Ad, Adet = g.Count() })
+                // Sıra BELİRLİ olmak zorunda: eşit adette şube adı ayırır.
+                // Yoksa iki şubenin sırası sorgudan sorguya değişir ve derleme yine yeşil geçer
+                .OrderByDescending(x => x.Adet).ThenBy(x => x.Ad)
+                .Take(take)
+                .ToListAsync();
+
+            return liste.Select(x => (x.Id, x.Ad, x.Adet)).ToList();
+        }
+
+        public async Task<(int Delivered, int OnTime)> CountOnTimeDeliveredScopedAsync(Guid? branchId,
+                                   Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted)
+        {
+            var teslim = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .Where(c => c.CargoStatus == CargoStatus.Delivered);
+
+            var toplam = await teslim.CountAsync();
+
+            // Durum makinesi gereği kargo başına TEK teslim hareketi var (Delivered'ın çıkışı yok),
+            // bu yüzden `Any` yeterli: o tek hareketin tarihi tahmini varışta ya da öncesinde mi
+            var zamaninda = await teslim.CountAsync(c => c.Movements
+                .Any(m => m.CargoStatus == CargoStatus.Delivered
+                          && m.MovementDate <= c.EstimatedArrivalDate));
+
+            return (toplam, zamaninda);
+        }
+
+
+        public async Task<Dictionary<DelayReason, int>> CountDelayReasonsScopedAsync(Guid? branchId,
+                                   Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted)
+        {
+            // Kapsam kargo tarafında tanımlı; hareketler oradan süzülüyor (SQL'de IN alt sorgusu)
+            var kapsamIds = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .Select(c => c.Id);
+
+            return await _context.CargoMovements
+                .Where(m => m.DelayReason != null && kapsamIds.Contains(m.CargoId))
+                .GroupBy(m => m.DelayReason!.Value)
+                .Select(g => new { Neden = g.Key, Adet = g.Count() })
+                .ToDictionaryAsync(x => x.Neden, x => x.Adet);
+        }
+
+        public async Task<Dictionary<DeliveryFailureReason, int>> CountFailureReasonsScopedAsync(Guid? branchId,
+                                   Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted)
+        {
+            var kapsamIds = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
+                .Select(c => c.Id);
+
+            return await _context.DeliveryExceptions
+                .Where(e => kapsamIds.Contains(e.CargoId))
+                .GroupBy(e => e.Reason)
+                .Select(g => new { Neden = g.Key, Adet = g.Count() })
+                .ToDictionaryAsync(x => x.Neden, x => x.Adet);
+        }
+
         public async Task<Cargo?> GetLatestScopedAsync(Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
                                                 Guid? courierEmployeeId, bool unrestricted)
         {
             return await Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted)
-                .Include(c => c.Movements)
+                .Include(c => c.Movements).ThenInclude(m => m.Branch).ThenInclude(b => b.City)
                 .OrderByDescending(c => c.Movements.Max(m => (DateTime?)m.MovementDate) ?? c.CreatedDate)
                 .ThenByDescending(c => c.CreatedDate)
                 .FirstOrDefaultAsync();

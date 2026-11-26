@@ -2,14 +2,6 @@
 @model PublicTrackingDto
 @{
     ViewData["Title"] = Model.TrackCode;
-
-    // Admin detayıyla aynı kural: teslim edildi yeşil, iade/başarısız kırmızı, diğerleri bilgi
-    string DurumSinifi(CargoStatus s) => s switch
-    {
-        CargoStatus.Delivered => "chip-active",
-        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
-        _ => "chip-info"
-    };
 }
 
 <!-- Başlık bandı: takip no + güncel durum -->
@@ -18,7 +10,7 @@
         <span class="font-label-md text-label-md uppercase tracking-wider text-inverse-on-surface/60">@L["TrackCode"]</span>
         <div class="mt-2 flex flex-wrap items-center gap-4">
             <h1 class="font-mono font-headline-lg-mobile text-headline-lg-mobile sm:font-headline-lg sm:text-headline-lg text-inverse-on-surface">@Model.TrackCode</h1>
-            <span class="@DurumSinifi(Model.CargoStatus)">@L["CargoStatus_" + Model.CargoStatus]</span>
+            <span class="@Model.CargoStatus.ChipClass()">@L["CargoStatus_" + Model.CargoStatus]</span>
         </div>
         <a asp-controller="Home" asp-action="Index"
            class="mt-6 inline-flex items-center gap-2 font-body-sm text-body-sm text-inverse-on-surface/70 hover:text-inverse-on-surface transition-colors">
@@ -94,7 +86,7 @@
                     </div>
                     <div class="min-w-0 pb-6">
                         <div class="flex flex-wrap items-center gap-2">
-                            <span class="@DurumSinifi(m.CargoStatus)">@L["CargoStatus_" + m.CargoStatus]</span>
+                            <span class="@m.CargoStatus.ChipClass()">@L["CargoStatus_" + m.CargoStatus]</span>
                             <span class="font-body-sm text-body-sm text-on-surface-variant">@m.MovementDate.ToLocalTime().ToString("dd.MM.yyyy HH:mm")</span>
                         </div>
                         <p class="mt-1 font-body-sm text-body-sm text-on-surface-variant">

@@ -4,15 +4,6 @@
    Tablo değil çizelge: detay sayfasındaki hareket okumasıyla aynı (durum · kim · not),
    ama tek kargo değil kapsamın tamamı (şube paneli şube, ülke paneli ülke).
    Saat yerel gösteriliyor; "bugün" kartlarının sayısı ise UTC günü üzerinden sayılıyor. *@
-@{
-    // Durum rozeti: diğer ekranlarla aynı okuma
-    string DurumSinifi(CargoStatus s) => s switch
-    {
-        CargoStatus.Delivered => "chip-active",
-        CargoStatus.DeliveryFailed or CargoStatus.ReturnInProgress or CargoStatus.ReturnedToSender => "chip-error",
-        _ => "chip-info"
-    };
-}
 
 <div class="m3-card p-6">
 
@@ -50,7 +41,7 @@
                                 <span class="chip-neutral">@L["CargoStatus_" + hareket.OldStatus]</span>
                                 <span class="material-symbols-outlined text-[16px] text-on-surface-variant">arrow_forward</span>
                             }
-                            <span class="@DurumSinifi(hareket.CargoStatus)">@L["CargoStatus_" + hareket.CargoStatus]</span>
+                            <span class="@hareket.CargoStatus.ChipClass()">@L["CargoStatus_" + hareket.CargoStatus]</span>
                         </div>
 
                         @if (!string.IsNullOrEmpty(hareket.BranchName) || !string.IsNullOrEmpty(hareket.PerformedByName)

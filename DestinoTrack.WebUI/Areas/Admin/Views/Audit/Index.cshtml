@@ -1,0 +1,190 @@
+﻿@model AuditLogIndexViewModel
+@{
+    ViewData["Title"] = L["AuditLog"].Value;
+
+    var chipBase = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-label-md text-label-md transition-colors";
+    var chipOn = chipBase + " bg-primary-container text-on-primary";
+    var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
+
+    // Tek kullanım yeri burası: D89'daki gibi Infrastructure'a çıkarılmadı
+    string RozetSinifi(AuditAction islem) => islem switch
+    {
+        AuditAction.Create => "chip-active",
+        AuditAction.Delete => "chip-error",
+        _ => "chip-info"
+    };
+
+    // JSON uzun olabilir: kolonda kırpılır, tamamı ipucunda kalır
+    string Kisalt(string? deger) => string.IsNullOrWhiteSpace(deger)
+        ? "—"
+        : (deger.Length <= 90 ? deger : deger[..90] + "…");
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">history</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["Menu_UserSettings"]</span>
+            <div class="flex items-center gap-2">
+                <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["AuditLog"]</h1>
+                <span class="chip-neutral">@Model.Logs.TotalCount</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Salt okunur bandı: bu ekranda değiştirme/silme yok -->
+<div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-secondary-container text-on-secondary-fixed">
+    <span class="material-symbols-outlined text-[22px] shrink-0">lock</span>
+    <span class="font-body-sm text-body-sm">@L["Audit_ReadOnlyNote"]</span>
+</div>
+
+<!-- Süzgeçler: üçü de POST ile gider, seçim oturumda saklanır -->
+<div class="flex flex-col gap-4 mb-6">
+
+    <!-- İşlem çipleri: diğer iki süzgeç gizli alanlarla korunur -->
+    <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2">
+        <input type="hidden" name="entityName" value="@Model.SelectedEntityName" />
+        <input type="hidden" name="q" value="@Model.Search" />
+
+        <button type="submit" name="auditAction" value=""
+                class="@(Model.SelectedAction == null ? chipOn : chipOff)">
+            <span>@L["All"]</span>
+        </button>
+
+        @foreach (var islem in Enum.GetValues<AuditAction>())
+        {
+            <button type="submit" name="auditAction" value="@islem"
+                    class="@(Model.SelectedAction == islem ? chipOn : chipOff)">
+                <span>@L["AuditAction_" + islem]</span>
+            </button>
+        }
+    </form>
+
+    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+
+        <!-- Kayıt türü çipleri: veritabanında GERÇEKTEN geçen türler -->
+        <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2">
+            <input type="hidden" name="auditAction" value="@Model.SelectedAction" />
+            <input type="hidden" name="q" value="@Model.Search" />
+
+            <button type="submit" name="entityName" value=""
+                    class="@(Model.SelectedEntityName == null ? chipOn : chipOff)">
+                <span class="material-symbols-outlined text-[18px]">category</span>
+                <span>@L["All"]</span>
+            </button>
+
+            @foreach (var tur in Model.EntityFilters)
+            {
+                <button type="submit" name="entityName" value="@tur"
+                        class="@(Model.SelectedEntityName == tur ? chipOn : chipOff)">
+                    <span>@tur</span>
+                </button>
+            }
+        </form>
+
+        <!-- Arama: kullanıcı e-postasında · kutu boşaltılınca form kendiliğinden gider -->
+        <form asp-action="Filter" method="post" class="flex items-center gap-2 w-full lg:w-auto">
+            <input type="hidden" name="auditAction" value="@Model.SelectedAction" />
+            <input type="hidden" name="entityName" value="@Model.SelectedEntityName" />
+            <div class="relative flex-1 lg:w-80">
+                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
+                <input type="search" name="q" value="@Model.Search" placeholder="@L["Audit_SearchUser"]"
+                       class="field-input pl-10" autocomplete="off" data-clear-submit />
+            </div>
+            <button type="submit" class="btn-tonal shrink-0">@L["Search"]</button>
+        </form>
+    </div>
+</div>
+
+<!-- Liste -->
+<div class="m3-card overflow-hidden">
+    @if (Model.Logs.Items.Count > 0)
+    {
+        <div class="overflow-x-auto">
+            <table class="m3-table font-body-sm text-body-sm">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-6">@L["Audit_When"]</th>
+                        <th class="py-3.5 px-4">@L["Audit_User"]</th>
+                        <th class="py-3.5 px-4">@L["Audit_Action"]</th>
+                        <th class="py-3.5 px-4">@L["Audit_Entity"]</th>
+                        <th class="py-3.5 px-4">@L["Audit_RecordId"]</th>
+                        <th class="py-3.5 px-6">@L["Audit_NewValues"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var log in Model.Logs.Items)
+                    {
+                        var oncekiIpucu = L["Audit_OldValues"].Value + ": " + (string.IsNullOrWhiteSpace(log.OldValues) ? "—" : log.OldValues);
+
+                        <tr>
+                            <td class="py-4 px-6 whitespace-nowrap">
+                                <span class="font-bold text-on-surface">@log.CreatedDate.ToString("dd.MM.yyyy")</span>
+                                <span class="text-on-surface-variant">@log.CreatedDate.ToString("HH:mm")</span>
+                            </td>
+                            <td class="py-4 px-4">
+                                @if (string.IsNullOrWhiteSpace(log.UserEmail))
+                                {
+                                    <span class="chip-neutral">@L["Audit_SystemUser"]</span>
+                                }
+                                else
+                                {
+                                    <span class="text-on-surface">@log.UserEmail</span>
+                                }
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="@RozetSinifi(log.Action)">@L["AuditAction_" + log.Action]</span>
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="chip-neutral">@log.EntityName</span>
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="text-on-surface-variant" title="@log.EntityId">@log.EntityId.ToString()[..8]</span>
+                            </td>
+                            <td class="py-4 px-6 max-w-md">
+                                <span class="text-on-surface-variant break-all" title="@oncekiIpucu">@Kisalt(log.NewValues)</span>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @await Html.PartialAsync("_Pagination", Model.Logs)
+    }
+    else if (Model.IsFiltered)
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+            <a asp-action="Index" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+                <span>@L["ClearFilter"]</span>
+            </a>
+        </div>
+    }
+    else
+    {
+        <!-- Hiç denetim kaydı yok. Salt okunur ekran: "yeni ekle" düğmesi BİLEREK yok -->
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">history_toggle_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</p>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('[data-clear-submit]').forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value === '') {
+                    input.form.submit();
+                }
+            });
+        });
+    </script>
+}

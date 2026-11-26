@@ -364,6 +364,11 @@
   <data name="VehicleTypeRequired" xml:space="preserve"><value>A vehicle type is required for couriers.</value></data>
   <data name="VehiclePlateRequired" xml:space="preserve"><value>A licence plate is required for couriers.</value></data>
   <data name="VehiclePlateMaxLength" xml:space="preserve"><value>The licence plate can be at most 20 characters.</value></data>
+  <data name="VehicleNotFound" xml:space="preserve"><value>Vehicle not found.</value></data>
+  <data name="VehicleHasCouriers" xml:space="preserve"><value>This vehicle cannot be deleted because it is assigned to a courier.</value></data>
+  <data name="VehiclePlateInUse" xml:space="preserve"><value>This licence plate is already registered to another vehicle.</value></data>
+  <data name="PlateRequired" xml:space="preserve"><value>A licence plate is required.</value></data>
+  <data name="VehicleTypeSelectRequired" xml:space="preserve"><value>A vehicle type is required.</value></data>
   <data name="RegionMaxLength" xml:space="preserve"><value>The delivery area can be at most 100 characters.</value></data>
   <data name="AccountRoleInvalid" xml:space="preserve"><value>The account role must be Branch Officer or Courier.</value></data>
   <data name="RouteScopeInvalid" xml:space="preserve"><value>A valid route scope must be selected.</value></data>
@@ -1068,6 +1073,23 @@
   <data name="Summary_DispatchedToday" xml:space="preserve"><value>Dispatched today</value></data>
   <data name="Summary_DeliveredToday" xml:space="preserve"><value>Delivered today</value></data>
   <data name="Summary_Issues" xml:space="preserve"><value>With issues</value></data>
+  <data name="Summary_TotalCargo" xml:space="preserve"><value>Total Cargo</value></data>
+  <data name="Summary_ActiveCargo" xml:space="preserve"><value>Active Cargo</value></data>
+  <data name="Summary_DeliveryRate" xml:space="preserve"><value>Delivery Rate</value></data>
+  <data name="Summary_FinalizedBasis" xml:space="preserve"><value>of finalized cargo</value></data>
+  <data name="Summary_StatusDistribution" xml:space="preserve"><value>Status Distribution</value></data>
+  <data name="NoCargoInSystem" xml:space="preserve"><value>No shipments in the system yet</value></data>
+  <data name="Summary_WeeklyTraffic" xml:space="preserve"><value>Last 7 Days Traffic</value></data>
+  <data name="Summary_TopBranches" xml:space="preserve"><value>Top 5 Busiest Branches</value></data>
+  <data name="Summary_BranchesStaff" xml:space="preserve"><value>Branches and Staff</value></data>
+  <data name="Summary_OnTimeRate" xml:space="preserve"><value>On-Time Delivery Rate</value></data>
+  <data name="Summary_DelayReasons" xml:space="preserve"><value>Delay Reasons</value></data>
+  <data name="Summary_FailureReasons" xml:space="preserve"><value>Delivery Failure Reasons</value></data>
+  <data name="Summary_NoReasonYet" xml:space="preserve"><value>No records in this group yet</value></data>
+  <data name="Summary_OnTimeDelivered" xml:space="preserve"><value>On time</value></data>
+  <data name="Summary_LateDelivered" xml:space="preserve"><value>Late</value></data>
+  <data name="Summary_OnTimeBasis" xml:space="preserve"><value>of delivered cargo</value></data>
+  <data name="NoCargoInLast7Days" xml:space="preserve"><value>No shipments accepted in the last 7 days</value></data>
   <data name="RecentMovements" xml:space="preserve"><value>Recent movements</value></data>
   <data name="Attempt" xml:space="preserve"><value>Attempt</value></data>
   <data name="RecipientName" xml:space="preserve"><value>Received by</value></data>
@@ -1078,4 +1100,18 @@
   <data name="DelayReason_AddressNotFound" xml:space="preserve"><value>Address not found</value></data>
   <data name="DelayReason_RecipientUnavailable" xml:space="preserve"><value>Recipient unavailable</value></data>
   <data name="DelayReason_Customs" xml:space="preserve"><value>Customs</value></data>
+  <data name="AuditLog" xml:space="preserve"><value>Audit Log</value></data>
+  <data name="Audit_ReadOnlyNote" xml:space="preserve"><value>Audit records cannot be modified or deleted.</value></data>
+  <data name="Audit_When" xml:space="preserve"><value>Time</value></data>
+  <data name="Audit_User" xml:space="preserve"><value>User</value></data>
+  <data name="Audit_Action" xml:space="preserve"><value>Action</value></data>
+  <data name="Audit_Entity" xml:space="preserve"><value>Record Type</value></data>
+  <data name="Audit_RecordId" xml:space="preserve"><value>Record No</value></data>
+  <data name="Audit_NewValues" xml:space="preserve"><value>New Value</value></data>
+  <data name="Audit_OldValues" xml:space="preserve"><value>Previous Value</value></data>
+  <data name="Audit_SystemUser" xml:space="preserve"><value>System</value></data>
+  <data name="Audit_SearchUser" xml:space="preserve"><value>Search user e-mail</value></data>
+  <data name="AuditAction_Create" xml:space="preserve"><value>Create</value></data>
+  <data name="AuditAction_Update" xml:space="preserve"><value>Update</value></data>
+  <data name="AuditAction_Delete" xml:space="preserve"><value>Delete</value></data>
 </root>
