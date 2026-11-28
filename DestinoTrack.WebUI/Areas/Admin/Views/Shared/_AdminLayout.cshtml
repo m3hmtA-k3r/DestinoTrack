@@ -55,12 +55,12 @@
                     <span class="material-symbols-outlined text-[20px]">inventory_2</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_Shipments"]</span>
                 </a>
-        
 
-                <span class="@navDisabled" title="@L["ComingSoon"]">
+
+                <a asp-area="Admin" asp-controller="Courier" asp-action="Index" class="@(controller == "Courier" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">two_wheeler</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_CourierDistribution"]</span>
-                </span>
+                </a>
 
                 <a asp-area="Admin" asp-controller="Vehicle" asp-action="Index" class="@(controller == "Vehicle" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">local_shipping</span>
@@ -81,10 +81,10 @@
                     <span class="font-body-sm text-body-sm">@L["Employees"]</span>
                 </a>
 
-                <span class="@navDisabled" title="@L["ComingSoon"]">
+                <a asp-area="Admin" asp-controller="Customer" asp-action="Index" class="@(controller == "Customer" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">groups</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_Customers"]</span>
-                </span>
+                </a>
                 <a asp-area="Admin" asp-controller="Report" asp-action="Index" class="@(controller == "Report" ? navActive : navPassive)">
                     <span class="material-symbols-outlined text-[20px]">monitoring</span>
                     <span class="font-body-sm text-body-sm">@L["Menu_Reports"]</span>

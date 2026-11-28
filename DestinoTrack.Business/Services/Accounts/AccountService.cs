@@ -1,6 +1,7 @@
 ﻿using System.Security.Claims;
 using DestinoTrack.Business.Consts;
 using DestinoTrack.Business.Services.Users;
+using DestinoTrack.Business.Services.Customers;
 using DestinoTrack.Business.Validators.Common;
 using DestinoTrack.DataAccess.Repositories.Countries;
 using DestinoTrack.DataAccess.Repositories.Customers;
@@ -17,6 +18,7 @@ namespace DestinoTrack.Business.Services.Accounts
                                 IUserService _userService,
                                 ICustomerRepository _customerRepository,
                                 ICountryRepository _countryRepository,
+                                ICustomerCodeGenerator _customerCodeGenerator,
                                 IStringLocalizer<SharedResource> _localizer) : IAccountService
     {
         public async Task<LoginResultDto> LoginAsync(LoginDto loginDto)
@@ -50,7 +52,6 @@ namespace DestinoTrack.Business.Services.Accounts
 
         }
         
-
         public async Task LogoutAsync()
         {
             await _signInManager.SignOutAsync();
@@ -109,7 +110,7 @@ namespace DestinoTrack.Business.Services.Accounts
             var individual = registerDto.CustomerType == CustomerType.Individual;
             var customer = new Customer
             {
-                Code = await GenerateCustomerCodeAsync(),
+                Code = await _customerCodeGenerator.GenerateAsync(),
                 Title = individual ? $"{user.FirstName} {user.LastName}" : registerDto.CompanyTitle!.Trim(),
                 CustomerType = registerDto.CustomerType,
                 TaxNumber = taxNumber,
@@ -165,18 +166,6 @@ namespace DestinoTrack.Business.Services.Accounts
                 CustomerType = user.Customer?.CustomerType,
                 CustomerStatus = user.Customer?.Status
             };
-        }
-
-        private async Task<string> GenerateCustomerCodeAsync()
-        {
-            string code;
-            do
-            {
-                code = $"CUK-{DateTime.UtcNow:yyMMdd}-{Random.Shared.Next(10000, 100000)}";
-            }
-            while (await _customerRepository.CodeExistsAsync(code));
-
-            return code;
         }
 
         public async Task<UserCardDto?> GetUserCardAsync(ClaimsPrincipal principal)

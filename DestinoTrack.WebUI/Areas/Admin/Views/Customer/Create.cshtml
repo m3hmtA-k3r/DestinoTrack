@@ -1,0 +1,92 @@
+@model CreateCustomerDto
+@{
+    ViewData["Title"] = L["NewCustomer"].Value;
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex items-center gap-4 mt-4 mb-8">
+    <a asp-action="Index" title="@L["Cancel"]"
+       class="p-2.5 rounded-xl bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high transition-colors">
+        <span class="material-symbols-outlined text-[22px]">arrow_back</span>
+    </a>
+    <div class="flex flex-col">
+        <span class="font-label-md text-label-md text-primary uppercase">@L["Menu_Customers"]</span>
+        <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">@L["NewCustomer"]</h1>
+    </div>
+</div>
+
+<!-- Form -->
+<div class="m3-card p-6 w-full max-w-2xl">
+    <form asp-action="Create" method="post" class="flex flex-col gap-5">
+        @* Vergi numarasının ülkeye göre biçimi ve tekilliği SERVİSTE denetleniyor (ülkenin ISO
+           kodu gerekiyor, doğrulama veritabanına gidemez): o mesajlar buraya düşer *@
+        <div asp-validation-summary="ModelOnly" class="field-error"></div>
+
+        <div>
+            @* Kurumsalda ünvan, bireyselde ad soyad — tek alan *@
+            <label asp-for="Title" class="field-label">@L["CustomerTitle"]</label>
+            <input asp-for="Title" class="field-input" autocomplete="off" />
+            <span asp-validation-for="Title" class="field-error"></span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+                @* Tür ve ülke birlikte vergi numarasının biçimini belirler *@
+                <label asp-for="CustomerType" class="field-label">@L["CustomerType"]</label>
+                <select asp-for="CustomerType" class="field-input cursor-pointer">
+                    @foreach (var tip in Enum.GetValues<CustomerType>())
+                    {
+                        <option value="@tip">@L["CustomerType_" + tip]</option>
+                    }
+                </select>
+                <span asp-validation-for="CustomerType" class="field-error"></span>
+            </div>
+            <div>
+                <label asp-for="CountryId" class="field-label">@L["Country"]</label>
+                <select asp-for="CountryId" asp-items="ViewBag.Countries" class="field-input cursor-pointer">
+                    <option value="">— @L["Country"] —</option>
+                </select>
+                <span asp-validation-for="CountryId" class="field-error"></span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+                <label asp-for="TaxNumber" class="field-label">@L["TaxNumber"]</label>
+                <input asp-for="TaxNumber" class="field-input" autocomplete="off" />
+                <span asp-validation-for="TaxNumber" class="field-error"></span>
+            </div>
+            <div>
+                @* Yalnız kurumsalda zorunlu; bireyselde boş bırakılırsa servis "-" yazar *@
+                <label asp-for="TaxOffice" class="field-label">@L["TaxOffice"]</label>
+                <input asp-for="TaxOffice" class="field-input" autocomplete="off" />
+                <span asp-validation-for="TaxOffice" class="field-error"></span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+                <label asp-for="Email" class="field-label">@L["Email"]</label>
+                <input asp-for="Email" class="field-input" autocomplete="off" />
+                <span asp-validation-for="Email" class="field-error"></span>
+            </div>
+            <div>
+                <label asp-for="PhoneNumber" class="field-label">@L["Phone"]</label>
+                <input asp-for="PhoneNumber" class="field-input" autocomplete="off" placeholder="+90 555 000 00 00" />
+                <span asp-validation-for="PhoneNumber" class="field-error"></span>
+            </div>
+        </div>
+
+        <div class="flex flex-col-reverse sm:flex-row sm:justify-end gap-3 pt-2">
+            <a asp-action="Index" class="btn-tonal">@L["Cancel"]</a>
+            <button type="submit" class="btn-filled">
+                <span class="material-symbols-outlined text-[20px]">check</span>
+                <span>@L["Save"]</span>
+            </button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

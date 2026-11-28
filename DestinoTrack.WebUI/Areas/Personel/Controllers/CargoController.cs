@@ -4,6 +4,7 @@ using DestinoTrack.Business.Services.Cargos;
 using DestinoTrack.Business.Services.Pricing;
 using DestinoTrack.DataAccess.Interceptors;
 using DestinoTrack.DTO.DTOs.CargoDtos;
+using DestinoTrack.DTO.DTOs.CustomerDtos;
 using DestinoTrack.DTO.DTOs.PricingDtos;
 using DestinoTrack.Entity.Entities.Enums;
 using DestinoTrack.WebUI.Areas.Personel.Models;
@@ -95,8 +96,6 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
             }
         }
 
-
-
         // kargo kabul formu. Çıkış şubesi seçilmez, personelin kendi şubesidir
         public async Task<IActionResult> Create()
         {
@@ -113,7 +112,6 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
 
             return await FormView(cargo, fiyatSor: true);
         }
-
 
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -153,8 +151,6 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
             }
         }
 
-
-
         // Formun her hâlinde aynı hazırlık: şube listesi + çıkış şubesinin adı (+ istenirse fiyat)
         private async Task<IActionResult> FormView(CreateCargoDto cargo, bool fiyatSor = false)
         {
@@ -169,14 +165,25 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
             }
 
             var subeler = await _branchService.GetLookupAsync();
+            var kendiSube = subeler.FirstOrDefault(b => b.Id == subeId.Value);
+
+            // Müşteri listesi personelin ülkesine göre süzülür (D110): TC gişesi TC müşterilerini görür.
+            // Varış şubesi süzülmüyor — sınır ötesi gönderim serbest, kısıtlanan yalnız hesabın ülkesi.
+            // Şube bulunamazsa ülke bilinmiyor: liste boş geçer, form yine açılır
+            List<CustomerLookupDto> musteriler = kendiSube is null
+                ? []
+                : await _cargoService.GetCustomerLookupAsync(kendiSube.CountryId);
 
             var model = new CargoCreateViewModel
             {
                 Cargo = cargo,
-                OriginBranchName = subeler.FirstOrDefault(b => b.Id == subeId.Value)?.Name,
+                OriginBranchName = kendiSube?.Name,
 
                 // Kendi şubesi varış olarak seçilemez: aynı şubeye gönderi operasyonda anlamsız
-                DestinationBranches = subeler.Where(b => b.Id != subeId.Value).ToList()
+                DestinationBranches = subeler.Where(b => b.Id != subeId.Value).ToList(),
+
+                // Formun her hâlinde dolu: doğrulama hatasından sonra yeniden çizilirken de liste kaybolmasın
+                Customers = musteriler
             };
 
             if (fiyatSor && cargo.DestinationBranchId != Guid.Empty)
@@ -195,7 +202,6 @@ namespace DestinoTrack.WebUI.Areas.Personel.Controllers
 
             return View(nameof(Create), model);
         }
-
 
 
         // ---- Oturumdaki filtre ----

@@ -268,6 +268,7 @@
   <data name="InvalidStatusTransition" xml:space="preserve"><value>{0} durumundan {1} durumuna geçilemez.</value></data>
   <data name="StatusRequiresOwnFlow" xml:space="preserve"><value>{0} durumu bu ekrandan yazılamaz; kendi işlem ekranından yapılmalıdır.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Takip numarası üretilemedi, lütfen yeniden deneyin.</value></data>
+  <data name="CustomerCodeGenerationFailed" xml:space="preserve"><value>Müşteri kodu üretilemedi, lütfen yeniden deneyin.</value></data>
   <data name="BarcodeValueInvalid" xml:space="preserve"><value>Barkod üretilecek değer geçersiz.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Müşteri bulunamadı.</value></data>
   <data name="CustomerNotActive" xml:space="preserve"><value>Müşteri hesabı aktif değil, bu müşteri adına kargo açılamaz.</value></data>
@@ -370,6 +371,7 @@
   <data name="Vehicles" xml:space="preserve"><value>Araçlar</value></data>
   <data name="Vehicle" xml:space="preserve"><value>Araç</value></data>
   <data name="DeliveredToday" xml:space="preserve"><value>Bugün Teslim</value></data>
+  <data name="ReadOnlyScreen" xml:space="preserve"><value>Bu ekran yalnız görüntüler. Kurye kaydı Personel ekranından, kargo ataması şube panelinden yönetilir.</value></data>
   <data name="SearchCourierOrPlate" xml:space="preserve"><value>Kurye ya da plaka ara</value></data>
   <data name="NewVehicle" xml:space="preserve"><value>Yeni Araç</value></data>
   <data name="UpdateVehicle" xml:space="preserve"><value>Aracı Güncelle</value></data>
@@ -853,6 +855,9 @@
   <data name="TaxOfficeMaxLength" xml:space="preserve">
     <value>Vergi dairesi en fazla 100 karakter olabilir.</value>
   </data>
+  <data name="CustomerTitleRequired" xml:space="preserve"><value>Ünvan / ad soyad boş olamaz.</value></data>
+  <data name="CustomerTitleMaxLength" xml:space="preserve"><value>Ünvan en fazla 200 karakter olabilir.</value></data>
+  <data name="TaxNumberMaxLength" xml:space="preserve"><value>Vergi / kimlik numarası en fazla 20 karakter olabilir.</value></data>
   <data name="CustomerEmailMaxLength" xml:space="preserve">
     <value>E-posta en fazla 100 karakter olabilir.</value>
   </data>
@@ -883,6 +888,24 @@
   <data name="CustomerCode" xml:space="preserve">
     <value>Müşteri kodu</value>
   </data>
+  <data name="NewCustomer" xml:space="preserve"><value>Yeni Müşteri</value></data>
+  <data name="UpdateCustomer" xml:space="preserve"><value>Müşteriyi Düzenle</value></data>
+  <data name="SearchCustomer" xml:space="preserve"><value>Ünvan, kod veya vergi no ara</value></data>
+  <data name="CustomerTitle" xml:space="preserve"><value>Ünvan</value></data>
+  <data name="CargoCount" xml:space="preserve"><value>Gönderi</value></data>
+  <data name="LastCargoDate" xml:space="preserve"><value>Son Gönderi</value></data>
+  <data name="Approve" xml:space="preserve"><value>Onayla</value></data>
+  <data name="Suspend" xml:space="preserve"><value>Askıya Al</value></data>
+  <data name="CloseAccount" xml:space="preserve"><value>Hesabı Kapat</value></data>
+  <data name="ConfirmApproveCustomer" xml:space="preserve"><value>Bu müşteri onaylanacak ve gişede seçilebilir hale gelecek. Onaylıyor musunuz?</value></data>
+  <data name="ConfirmSuspendCustomer" xml:space="preserve"><value>Bu müşteri askıya alınacak ve gişede seçilemeyecek. Onaylıyor musunuz?</value></data>
+  <data name="ConfirmCloseCustomer" xml:space="preserve"><value>Bu hesap kapatılacak. Kapatılan hesap yeniden açılamaz. Onaylıyor musunuz?</value></data>
+  <data name="Summary_TotalCustomers" xml:space="preserve"><value>Toplam Müşteri</value></data>
+  <data name="Summary_ActiveCorporate" xml:space="preserve"><value>Aktif Kurumsal Portföy</value></data>
+  <data name="Summary_NewThisMonth" xml:space="preserve"><value>Bu Ay Yeni Kayıt</value></data>
+  <data name="Summary_PendingApproval" xml:space="preserve"><value>Onay Bekleyen</value></data>
+  <data name="CorporateCustomer" xml:space="preserve"><value>Kurumsal Müşteri</value></data>
+  <data name="CorporateCustomerHint" xml:space="preserve"><value>Tek seferlik gönderilerde boş bırakın</value></data>
   <data name="AccountStatus" xml:space="preserve">
     <value>Hesap durumu</value>
   </data>
@@ -898,6 +921,7 @@
   <data name="AccountStatus_Closed" xml:space="preserve">
     <value>Kapatıldı</value>
   </data>
+  <data name="CustomerStatusTransitionInvalid" xml:space="preserve"><value>Müşteri {0} durumundan {1} durumuna geçirilemez.</value></data>
   <data name="PendingApprovalNotice" xml:space="preserve">
     <value>Kurumsal hesabın yönetici onayı bekliyor.</value>
   </data>
@@ -1090,6 +1114,12 @@
   <data name="NoCargoInSystem" xml:space="preserve"><value>Sistemde henüz kargo yok</value></data>
   <data name="Summary_WeeklyTraffic" xml:space="preserve"><value>Son 7 Gün Trafiği</value></data>
   <data name="Summary_TopBranches" xml:space="preserve"><value>En Yoğun 5 Şube</value></data>
+  <data name="Summary_DelayedBranches" xml:space="preserve"><value>Geciken Kargoya Göre Şubeler</value></data>
+  <data name="Summary_NoDelayedCargo" xml:space="preserve"><value>Geciken kargo yok</value></data>
+  <data name="Summary_DeliveryPerformance" xml:space="preserve"><value>Personel Teslimat Performansı</value></data>
+  <data name="Summary_DeliveredCount" xml:space="preserve"><value>Teslim</value></data>
+  <data name="Summary_FailedAttempts" xml:space="preserve"><value>Başarısız Deneme</value></data>
+  <data name="Summary_NoDeliveryYet" xml:space="preserve"><value>Henüz teslimat kaydı yok</value></data>
   <data name="Summary_BranchesStaff" xml:space="preserve"><value>Şube ve Personel</value></data>
   <data name="Summary_OnTimeRate" xml:space="preserve"><value>Zamanında Teslim Oranı</value></data>
   <data name="Summary_DelayReasons" xml:space="preserve"><value>Gecikme Nedenleri</value></data>

@@ -61,6 +61,21 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
         Task<List<(Guid BranchId, string BranchName, int Count)>> TopBranchesByTrafficScopedAsync(
                                    Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
                                    Guid? courierEmployeeId, bool unrestricted, int take);
+        
+        // Rapor · şubeyi VARIŞ kargosundaki gecikmeye göre sıralar. Trafik kardeşi
+        // kargoyu iki uçta da sayar, bu yalnız varışta: gecikme varış taahhüdünün ihlali
+        Task<List<(Guid BranchId, string BranchName, int DelayedCount)>> TopBranchesByDelayScopedAsync(
+                                   Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted, int take);
+
+
+        // Rapor · personel başına teslim ve başarısız DENEME sayısı.
+        // ⚠️ Buradaki teslim sayısı Kurye & Dağıtım ekranındaki "Bugün Teslim" ile EŞİT DEĞİL:
+        // orası yalnız bugünü ve yalnız kuryeleri sayar, burası kapsamın tamamını
+        Task<List<(Guid EmployeeId, string EmployeeName, int DeliveredCount, int FailedAttemptCount)>> TopEmployeesByDeliveryScopedAsync(
+                                   Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                                   Guid? courierEmployeeId, bool unrestricted, int take);
+
         Task<(int Delivered, int OnTime)> CountOnTimeDeliveredScopedAsync(Guid? branchId, Guid? countryId,
                                    Guid? customerId, Guid? userId, Guid? courierEmployeeId, bool unrestricted);
 

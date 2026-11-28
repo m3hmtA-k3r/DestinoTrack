@@ -1,0 +1,39 @@
+﻿@model DeliveryPerformanceDto
+
+@* VC14 · Rapor — personel başına teslim ve başarısız deneme.
+   "Başarısız" DENEME sayar, kargo DEĞİL: aynı kargoya üç kez gidip bulamayan kurye 3 alır.
+   ⚠️ Buradaki teslim sayısı Kurye & Dağıtım ekranındaki "Bugün Teslim" ile EŞİT DEĞİL —
+   orası yalnız bugünü ve yalnız kuryeleri sayar, burası kapsamın tamamını.
+   Boş durum `Rows.Count` ile korunuyor, `Max` ile DEĞİL: herkesin teslimi 0 olabilir ama
+   başarısız denemesi varsa o satırlar yine basılmalı. *@
+
+<div class="m3-card p-6 mb-8">
+    <h2 class="font-headline-sm text-headline-sm text-on-surface mb-4">@L["Summary_DeliveryPerformance"]</h2>
+
+    @if (Model.Rows.Count == 0)
+    {
+        <p class="font-body-md text-body-md text-on-surface-variant">@L["Summary_NoDeliveryYet"]</p>
+    }
+    else
+    {
+        @* Başlıklar sayı kolonlarıyla hizalı: boşluk, çubuğun KENDİ sınıfını taşıyan görünmez bir span *@
+        <div class="flex items-center gap-3 mb-2">
+            <span class="w-56 shrink-0"></span>
+            <span class="bar flex-1 invisible" aria-hidden="true"></span>
+            <span class="w-16 shrink-0 text-right font-body-sm text-body-sm text-on-surface-variant">@L["Summary_DeliveredCount"]</span>
+            <span class="w-36 shrink-0 text-right font-body-sm text-body-sm text-on-surface-variant">@L["Summary_FailedAttempts"]</span>
+        </div>
+
+        <div class="flex flex-col gap-3">
+            @foreach (var personel in Model.Rows)
+            {
+                <div class="flex items-center gap-3">
+                    <span class="w-56 shrink-0 font-body-sm text-body-sm text-on-surface truncate">@personel.EmployeeName</span>
+                    <progress class="bar flex-1" value="@personel.DeliveredCount" max="@Model.Max"></progress>
+                    <span class="w-16 shrink-0 text-right font-label-md text-label-md text-on-surface">@personel.DeliveredCount.ToString("N0")</span>
+                    <span class="w-36 shrink-0 text-right font-label-md text-label-md text-error">@personel.FailedAttemptCount.ToString("N0")</span>
+                </div>
+            }
+        </div>
+    }
+</div>

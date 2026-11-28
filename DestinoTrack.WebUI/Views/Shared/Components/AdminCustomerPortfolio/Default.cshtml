@@ -1,0 +1,41 @@
+﻿@using DestinoTrack.DTO.DTOs.CustomerDtos
+@model CustomerPortfolioDto
+
+@* VC16 · kart düzeni VC3 (AdminSummary) ile aynı: aynı sistemin panoları aynı dili konuşsun.
+   Onay bekleyen kartı dördünden tek "işlem bekleyen" olduğu için sayı sıfırdan büyükken
+   vurgulanır — ekranın varlık sebebi o sayının azalması *@
+@{
+    var kartlar = new (string Etiket, int Sayi, string Ikon)[]
+    {
+        (L["Summary_TotalCustomers"].Value,  Model.TotalCustomers,  "groups"),
+        (L["Summary_ActiveCorporate"].Value, Model.ActiveCorporate, "domain"),
+        (L["Summary_NewThisMonth"].Value,    Model.NewThisMonth,    "person_add")
+    };
+
+    var bekleyenVar = Model.PendingApproval > 0;
+}
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+    @foreach (var kart in kartlar)
+    {
+        <div class="flex items-center gap-3 p-4 rounded-xl bg-surface-container shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+            <div class="w-10 h-10 rounded-xl bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined text-[20px]">@kart.Ikon</span>
+            </div>
+            <div class="min-w-0">
+                <div class="font-headline-sm text-headline-sm text-on-surface leading-none">@kart.Sayi.ToString("N0")</div>
+                <div class="font-label-md text-label-md text-on-surface-variant truncate">@kart.Etiket</div>
+            </div>
+        </div>
+    }
+
+    <div class="flex items-center gap-3 p-4 rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] @(bekleyenVar ? "bg-error-container" : "bg-surface-container")">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center shrink-0 @(bekleyenVar ? "bg-error text-on-error" : "bg-primary-container text-on-primary")">
+            <span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+        </div>
+        <div class="min-w-0">
+            <div class="font-headline-sm text-headline-sm leading-none @(bekleyenVar ? "text-on-error-container" : "text-on-surface")">@Model.PendingApproval.ToString("N0")</div>
+            <div class="font-label-md text-label-md truncate @(bekleyenVar ? "text-on-error-container" : "text-on-surface-variant")">@L["Summary_PendingApproval"]</div>
+        </div>
+    </div>
+</div>

@@ -18,6 +18,11 @@
     @* SLA · zamanında teslim oranı — T3'ün kalan yarısı *@
     @await Component.InvokeAsync("AdminSlaSummary")
 
+    @* Şubeler geciken kargoya göre — "nerede" sorusu, nedenlerden önce *@
+    @await Component.InvokeAsync("AdminDelayedBranches")
+
+    @* Personel teslimat performansı — "kim" sorusu, nedenlerden önce *@
+    @await Component.InvokeAsync("AdminDeliveryPerformance")
 
     @* Yolda neden gecikti *@
     @await Component.InvokeAsync("AdminReasonBreakdown")

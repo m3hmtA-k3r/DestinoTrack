@@ -1,5 +1,6 @@
 ﻿using DestinoTrack.DTO.DTOs.CargoDtos;
 using DestinoTrack.DTO.DTOs.Common;
+using DestinoTrack.DTO.DTOs.CustomerDtos;
 using DestinoTrack.Entity.Entities.Enums;
 
 namespace DestinoTrack.Business.Services.Cargos
@@ -33,6 +34,10 @@ namespace DestinoTrack.Business.Services.Cargos
         //fiyat, tahmini teslim ve takip no servis tarafından üretilir; ilk hareket de burada yazılır
         Task<Guid> CreateAsync(CreateCargoDto createCargoDto, Guid performedByUserId);
 
+        // Gişe formundaki müşteri açılır listesi — yalnız Active (D109), yalnız verilen ülke (D110), ünvana göre sıralı.
+        // countryId çağırandan gelir: personelin AppUser.CountryId'si null, ülke kendi şubesinden çıkarılır
+        Task<List<CustomerLookupDto>> GetCustomerLookupAsync(Guid countryId);
+
         // yalnızca kullanıcının kapsamındaki kargolar · direction yalnız şube kapsamında anlamlı (gelen / çıkan)
         Task<PagedResult<ResultCargoDto>> GetPagedAsync(CargoStatus? status = null, string? search = null, int page = 1,
                                                         CargoDirection? direction = null);
@@ -63,6 +68,15 @@ namespace DestinoTrack.Business.Services.Cargos
 
         // Rapor sayfası · SLA: zamanında teslim oranı (payda YALNIZ teslim edilenler)
         Task<SlaSummaryDto?> GetSlaSummaryAsync();
+
+        // Rapor · şubeler geciken kargo sayısına göre azalan (varsayılan beş).
+        // Boş liste "hiç geciken yok" demek — bu iyi haber, görünüm öyle de basacak
+        Task<DelayedBranchesDto?> GetDelayedBranchesAsync(int take = 5);
+
+
+        // Rapor · personel başına teslim ve başarısız deneme (varsayılan beş).
+        // "Başarısız" DENEME sayar, kargo sayar gibi okunmamalı (D108)
+        Task<DeliveryPerformanceDto?> GetDeliveryPerformanceAsync(int take = 5);
 
         // Rapor · kök neden dağılımları: beş nedenin beşi de satır alır, sıfırlar dahil
         Task<ReasonBreakdownDto?> GetDelayReasonBreakdownAsync();

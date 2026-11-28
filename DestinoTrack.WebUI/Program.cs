@@ -7,6 +7,7 @@ using DestinoTrack.Business.Services.Branches;
 using DestinoTrack.Business.Services.Cargos;
 using DestinoTrack.Business.Services.Cities;
 using DestinoTrack.Business.Services.Countries;
+using DestinoTrack.Business.Services.Customers;
 using DestinoTrack.Business.Services.Employees;
 using DestinoTrack.Business.Services.Pricing;
 using DestinoTrack.Business.Services.Users;
@@ -144,12 +145,13 @@ builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<ICargoPricingService, CargoPricingService>();
 builder.Services.AddScoped<IPricingRuleService, PricingRuleService>();
 builder.Services.AddScoped<ITrackCodeGenerator, TrackCodeGenerator>();
+builder.Services.AddScoped<ICustomerCodeGenerator, CustomerCodeGenerator>();
 builder.Services.AddScoped<ICargoService, CargoService>();
 builder.Services.AddScoped<IBarcodeService, BarcodeService>();
 builder.Services.AddScoped<IPublicTrackingUrl, HttpPublicTrackingUrl>();
 builder.Services.AddScoped<IAuditLogService, AuditLogService>();
 builder.Services.AddScoped<IVehicleService, VehicleService>();
-
+builder.Services.AddScoped<ICustomerService, CustomerService>();
 
 builder.Services.Configure<CargoSettings>(builder.Configuration.GetSection("Cargo"));
 

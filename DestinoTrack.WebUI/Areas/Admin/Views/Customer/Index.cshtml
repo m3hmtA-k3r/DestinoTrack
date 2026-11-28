@@ -1,0 +1,248 @@
+﻿@model CustomerIndexViewModel
+@{
+    ViewData["Title"] = L["Menu_Customers"].Value;
+
+    var chipBase = "inline-flex items-center gap-2 px-3 py-1.5 rounded-full font-label-md text-label-md transition-colors";
+    var chipOn = chipBase + " bg-primary-container text-on-primary";
+    var chipOff = chipBase + " bg-surface-container-lowest text-on-surface-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)] hover:bg-surface-container-high";
+
+    @* Askıda olan dikkat çeksin (işlem bekleyen anormal durum), kapalı olan solsun (bitmiş) *@
+    var durumCipi = new Dictionary<AccountStatus, string>
+    {
+        [AccountStatus.Active] = "chip-active",
+        [AccountStatus.PendingApproval] = "chip-info",
+        [AccountStatus.Suspended] = "chip-error",
+        [AccountStatus.Closed] = "chip-neutral"
+    };
+
+    var eylemDugmesi = "p-2 rounded-xl bg-surface-container text-on-surface hover:bg-surface-variant transition-colors";
+}
+
+<!-- Sayfa başlığı -->
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 p-6 mt-4 mb-8 rounded-xl bg-surface-container shadow-sm">
+    <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-xl bg-primary flex items-center justify-center text-on-primary shrink-0 shadow-sm">
+            <span class="material-symbols-outlined text-[28px]">groups</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="font-label-md text-label-md text-primary uppercase">@L["AdminPanel"]</span>
+            <div class="flex items-center gap-2">
+                <h1 class="font-headline-md text-headline-md lg:font-headline-lg lg:text-headline-lg text-on-surface tracking-tight">@L["Menu_Customers"]</h1>
+                <span class="chip-neutral">@Model.Customers.TotalCount</span>
+            </div>
+        </div>
+    </div>
+    <a asp-action="Create" class="btn-filled h-11 w-full sm:w-auto">
+        <span class="material-symbols-outlined text-[20px]">person_add</span>
+        <span>@L["NewCustomer"]</span>
+    </a>
+</div>
+
+@* Geçersiz durum geçişi ve bulunamayan kayıt mesajları buraya düşer *@
+@if (TempData["Error"] is string error)
+{
+    <div class="flex items-center gap-3 p-4 mb-6 rounded-xl bg-error-container text-on-error-container">
+        <span class="material-symbols-outlined text-[22px] shrink-0">error</span>
+        <span class="font-body-sm text-body-sm">@error</span>
+    </div>
+}
+
+@* VC16 · dört KPI kartı — verisini kendi alır *@
+@await Component.InvokeAsync("AdminCustomerPortfolio")
+
+<!-- Süzgeç: durum çipleri + tür + arama. Her form ötekilerin seçimini gizli alanda taşır -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-6">
+    <form asp-action="Filter" method="post" class="flex flex-wrap items-center gap-2">
+        <input type="hidden" name="customerType" value="@Model.SelectedType" />
+        <input type="hidden" name="q" value="@Model.Search" />
+
+        <button type="submit" name="status" value="" class="@(Model.SelectedStatus == null ? chipOn : chipOff)">
+            <span>@L["All"]</span>
+            <span class="opacity-70">@Model.TotalCustomerCount</span>
+        </button>
+
+        @foreach (var filter in Model.StatusFilters)
+        {
+            <button type="submit" name="status" value="@filter.Status"
+                    class="@(Model.SelectedStatus == filter.Status ? chipOn : chipOff)">
+                <span>@L["AccountStatus_" + filter.Status]</span>
+                <span class="opacity-70">@filter.CustomerCount</span>
+            </button>
+        }
+    </form>
+
+    <form asp-action="Filter" method="post" class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 w-full lg:w-auto">
+        <input type="hidden" name="status" value="@Model.SelectedStatus" />
+
+        <select name="customerType" class="field-input cursor-pointer sm:w-44" data-submit-on-change>
+            <option value="">@L["All"]</option>
+            @foreach (var tip in Enum.GetValues<CustomerType>())
+            {
+                <option value="@tip" selected="@(Model.SelectedType == tip)">@L["CustomerType_" + tip]</option>
+            }
+        </select>
+
+        <div class="relative flex-1 lg:w-72">
+            <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-[20px] pointer-events-none">search</span>
+            <input type="search" name="q" value="@Model.Search" placeholder="@L["SearchCustomer"]"
+                   class="field-input pl-10" autocomplete="off" data-clear-submit />
+        </div>
+        <button type="submit" class="btn-tonal shrink-0">@L["Search"]</button>
+    </form>
+</div>
+
+<!-- Liste -->
+<div class="m3-card overflow-hidden">
+    @if (Model.Customers.Items.Count > 0)
+    {
+        <div class="overflow-x-auto">
+            <table class="m3-table font-body-sm text-body-sm">
+                <thead>
+                    <tr>
+                        <th class="py-3.5 px-6">@L["CustomerTitle"]</th>
+                        <th class="py-3.5 px-4">@L["CustomerType"]</th>
+                        <th class="py-3.5 px-4">@L["TaxNumber"]</th>
+                        <th class="py-3.5 px-4">@L["Country"]</th>
+                        <th class="py-3.5 px-4 text-right">@L["CargoCount"]</th>
+                        <th class="py-3.5 px-4">@L["Status"]</th>
+                        <th class="py-3.5 px-6 text-right">@L["Actions"]</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var musteri in Model.Customers.Items)
+                    {
+                        <tr class="@(musteri.Status == AccountStatus.Closed ? "opacity-60" : "")">
+                            <td class="py-4 px-6">
+                                <div class="flex flex-col">
+                                    <span class="font-bold text-on-surface">@musteri.Title</span>
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">@musteri.Code</span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="chip-neutral">@L["CustomerType_" + musteri.CustomerType]</span>
+                            </td>
+                            <td class="py-4 px-4 text-on-surface">@musteri.TaxNumber</td>
+                            <td class="py-4 px-4 text-on-surface">@musteri.CountryName</td>
+                            <td class="py-4 px-4 text-right">
+                                <div class="flex flex-col items-end">
+                                    <span class="text-on-surface">@musteri.CargoCount.ToString("N0")</span>
+                                    @* Hiç gönderi yoksa tarih de yok — "01.01.0001" yerine çizgi *@
+                                    <span class="font-body-sm text-body-sm text-on-surface-variant">
+                                        @(musteri.LastCargoDate?.ToLocalTime().ToString("dd.MM.yyyy") ?? "—")
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="py-4 px-4">
+                                <span class="@durumCipi[musteri.Status]">@L["AccountStatus_" + musteri.Status]</span>
+                            </td>
+                            <td class="py-4 px-6">
+                                <div class="flex items-center justify-end gap-2">
+                                    <a asp-action="Update" asp-route-id="@musteri.Id" title="@L["Update"]" class="@eylemDugmesi">
+                                        <span class="material-symbols-outlined text-[18px]">edit</span>
+                                    </a>
+
+                                    @* Yalnız geçiş tablosunun izin verdiği düğme çıkar (D118):
+                                       basılınca reddedilecek düğme göstermiyoruz *@
+                                    @if (musteri.Status == AccountStatus.PendingApproval)
+                                    {
+                                        <form asp-action="SetStatus" method="post" data-confirm="@L["ConfirmApproveCustomer"]"
+                                              onsubmit="return confirm(this.dataset.confirm);">
+                                            <input type="hidden" name="id" value="@musteri.Id" />
+                                            <input type="hidden" name="status" value="@AccountStatus.Active" />
+                                            <button type="submit" title="@L["Approve"]" class="@eylemDugmesi">
+                                                <span class="material-symbols-outlined text-[18px]">check_circle</span>
+                                            </button>
+                                        </form>
+                                    }
+
+                                    @if (musteri.Status == AccountStatus.Active)
+                                    {
+                                        <form asp-action="SetStatus" method="post" data-confirm="@L["ConfirmSuspendCustomer"]"
+                                              onsubmit="return confirm(this.dataset.confirm);">
+                                            <input type="hidden" name="id" value="@musteri.Id" />
+                                            <input type="hidden" name="status" value="@AccountStatus.Suspended" />
+                                            <button type="submit" title="@L["Suspend"]" class="@eylemDugmesi">
+                                                <span class="material-symbols-outlined text-[18px]">pause_circle</span>
+                                            </button>
+                                        </form>
+                                    }
+
+                                    @if (musteri.Status == AccountStatus.Suspended)
+                                    {
+                                        <form asp-action="SetStatus" method="post">
+                                            <input type="hidden" name="id" value="@musteri.Id" />
+                                            <input type="hidden" name="status" value="@AccountStatus.Active" />
+                                            <button type="submit" title="@L["Activate"]" class="@eylemDugmesi">
+                                                <span class="material-symbols-outlined text-[18px]">play_circle</span>
+                                            </button>
+                                        </form>
+                                    }
+
+                                    @if (musteri.Status != AccountStatus.Closed)
+                                    {
+                                        <form asp-action="SetStatus" method="post" data-confirm="@L["ConfirmCloseCustomer"]"
+                                              onsubmit="return confirm(this.dataset.confirm);">
+                                            <input type="hidden" name="id" value="@musteri.Id" />
+                                            <input type="hidden" name="status" value="@AccountStatus.Closed" />
+                                            <button type="submit" title="@L["CloseAccount"]"
+                                                    class="p-2 rounded-xl bg-surface-container text-on-surface hover:bg-error-container hover:text-on-error-container transition-colors">
+                                                <span class="material-symbols-outlined text-[18px]">block</span>
+                                            </button>
+                                        </form>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @await Html.PartialAsync("_Pagination", Model.Customers)
+    }
+    else if (Model.IsFiltered)
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">search_off</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoResults"]</p>
+            <form asp-action="Filter" method="post">
+                <input type="hidden" name="status" value="" />
+                <input type="hidden" name="customerType" value="" />
+                <input type="hidden" name="q" value="" />
+                <button type="submit" class="btn-tonal">
+                    <span class="material-symbols-outlined text-[20px]">filter_alt_off</span>
+                    <span>@L["ClearFilter"]</span>
+                </button>
+            </form>
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <span class="material-symbols-outlined text-[48px] text-outline">groups</span>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">@L["NoRecords"]</p>
+            <a asp-action="Create" class="btn-tonal">
+                <span class="material-symbols-outlined text-[20px]">person_add</span>
+                <span>@L["NewCustomer"]</span>
+            </a>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        // Arama kutusu boşaltılınca süzgeç kendiliğinden kalkar
+        document.querySelectorAll('[data-clear-submit]').forEach(input => {
+            input.addEventListener('input', () => {
+                if (input.value === '') {
+                    input.form.submit();
+                }
+            });
+        });
+
+        // Tür seçimi ayrı düğme istemiyor
+        document.querySelectorAll('[data-submit-on-change]').forEach(select => {
+            select.addEventListener('change', () => select.form.submit());
+        });
+    </script>
+}

@@ -191,6 +191,73 @@ namespace DestinoTrack.DataAccess.Repositories.Cargos
             return liste.Select(x => (x.Id, x.Ad, x.Adet)).ToList();
         }
 
+        public async Task<List<(Guid BranchId, string BranchName, int DelayedCount)>> TopBranchesByDelayScopedAsync(
+                           Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                           Guid? courierEmployeeId, bool unrestricted, int take)
+        {
+            var kapsam = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted);
+
+            // Gecikme kuralı BURADA tanımlı değil: WithIssue'dan geçiyor, böylece bu rapor
+            // sorunlu kargolar listesiyle aynı kargoları sayar
+            var geciken = WithIssue(kapsam, CargoIssue.Delayed);
+
+            var liste = await geciken
+                .GroupBy(c => new { Id = c.DestinationBranchId, Ad = c.DestinationBranch.Name })
+                .Select(g => new { g.Key.Id, g.Key.Ad, Adet = g.Count() })
+                // Sıra BELİRLİ olmak zorunda: eşit adette şube adı ayırır
+                .OrderByDescending(x => x.Adet).ThenBy(x => x.Ad)
+                .Take(take)
+                .ToListAsync();
+
+            return liste.Select(x => (x.Id, x.Ad, x.Adet)).ToList();
+        }
+
+        public async Task<List<(Guid EmployeeId, string EmployeeName, int DeliveredCount, int FailedAttemptCount)>> TopEmployeesByDeliveryScopedAsync(
+                           Guid? branchId, Guid? countryId, Guid? customerId, Guid? userId,
+                           Guid? courierEmployeeId, bool unrestricted, int take)
+        {
+            var kapsam = Scoped(branchId, countryId, customerId, userId, courierEmployeeId, unrestricted);
+
+            // Teslim kargo başına TEK satır, başarısız deneme BİRDEN ÇOK olabilir: bu yüzden
+            // ikisi ayrı toplanıp `Concat` ile tek sorguda birleşiyor (SQL'de UNION ALL).
+            // Sabit 1/0 sütunları, gruplamada iki sayının ayrı toplanmasını sağlıyor
+            var teslimler = kapsam
+                .Where(c => c.Delivery != null)
+                .Select(c => new
+                {
+                    Id = c.Delivery.DeliveredByEmployeeId,
+                    Ad = c.Delivery.DeliveredByEmployee.FirstName + " " + c.Delivery.DeliveredByEmployee.LastName,
+                    Teslim = 1,
+                    Basarisiz = 0
+                });
+
+            var denemeler = kapsam
+                .SelectMany(c => c.DeliveryExceptions)
+                .Select(e => new
+                {
+                    Id = e.AttemptedByEmployeeId,
+                    Ad = e.AttemptedByEmployee.FirstName + " " + e.AttemptedByEmployee.LastName,
+                    Teslim = 0,
+                    Basarisiz = 1
+                });
+
+            var liste = await teslimler.Concat(denemeler)
+                .GroupBy(x => new { x.Id, x.Ad })
+                .Select(g => new
+                {
+                    g.Key.Id,
+                    g.Key.Ad,
+                    Teslim = g.Sum(x => x.Teslim),
+                    Basarisiz = g.Sum(x => x.Basarisiz)
+                })
+                // Sıra BELİRLİ olmak zorunda: eşit teslimde personel ADI ayırır
+                .OrderByDescending(x => x.Teslim).ThenBy(x => x.Ad)
+                .Take(take)
+                .ToListAsync();
+
+            return liste.Select(x => (x.Id, x.Ad, x.Teslim, x.Basarisiz)).ToList();
+        }
+
         public async Task<(int Delivered, int OnTime)> CountOnTimeDeliveredScopedAsync(Guid? branchId,
                                    Guid? countryId, Guid? customerId, Guid? userId,
                                    Guid? courierEmployeeId, bool unrestricted)

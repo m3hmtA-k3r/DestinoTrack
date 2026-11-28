@@ -268,6 +268,7 @@
   <data name="InvalidStatusTransition" xml:space="preserve"><value>A cargo cannot move from {0} to {1}.</value></data>
   <data name="StatusRequiresOwnFlow" xml:space="preserve"><value>The status {0} cannot be set from this screen; it must be done from its own operation screen.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>The tracking number could not be generated, please try again.</value></data>
+  <data name="CustomerCodeGenerationFailed" xml:space="preserve"><value>The customer code could not be generated, please try again.</value></data>
   <data name="BarcodeValueInvalid" xml:space="preserve"><value>The value to encode as a barcode is not valid.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Customer not found.</value></data>
   <data name="CustomerNotActive" xml:space="preserve"><value>The customer account is not active; a cargo cannot be created for this customer.</value></data>
@@ -370,6 +371,7 @@
   <data name="Vehicles" xml:space="preserve"><value>Vehicles</value></data>
   <data name="Vehicle" xml:space="preserve"><value>Vehicle</value></data>
   <data name="DeliveredToday" xml:space="preserve"><value>Delivered today</value></data>
+  <data name="ReadOnlyScreen" xml:space="preserve"><value>This screen is read-only. Couriers are managed on the Employees screen and cargo assignment in the branch panel.</value></data>
   <data name="SearchCourierOrPlate" xml:space="preserve"><value>Search courier or plate</value></data>
   <data name="NewVehicle" xml:space="preserve"><value>New vehicle</value></data>
   <data name="UpdateVehicle" xml:space="preserve"><value>Update vehicle</value></data>
@@ -853,6 +855,9 @@
   <data name="TaxOfficeMaxLength" xml:space="preserve">
     <value>Tax office can be at most 100 characters.</value>
   </data>
+  <data name="CustomerTitleRequired" xml:space="preserve"><value>Title / full name cannot be empty.</value></data>
+  <data name="CustomerTitleMaxLength" xml:space="preserve"><value>Title can be at most 200 characters.</value></data>
+  <data name="TaxNumberMaxLength" xml:space="preserve"><value>Tax / ID number can be at most 20 characters.</value></data>
   <data name="CustomerEmailMaxLength" xml:space="preserve">
     <value>Email can be at most 100 characters.</value>
   </data>
@@ -883,6 +888,24 @@
   <data name="CustomerCode" xml:space="preserve">
     <value>Customer code</value>
   </data>
+  <data name="NewCustomer" xml:space="preserve"><value>New Customer</value></data>
+  <data name="UpdateCustomer" xml:space="preserve"><value>Update Customer</value></data>
+  <data name="SearchCustomer" xml:space="preserve"><value>Search title, code or tax number</value></data>
+  <data name="CustomerTitle" xml:space="preserve"><value>Title</value></data>
+  <data name="CargoCount" xml:space="preserve"><value>Shipments</value></data>
+  <data name="LastCargoDate" xml:space="preserve"><value>Last Shipment</value></data>
+  <data name="Approve" xml:space="preserve"><value>Approve</value></data>
+  <data name="Suspend" xml:space="preserve"><value>Suspend</value></data>
+  <data name="CloseAccount" xml:space="preserve"><value>Close Account</value></data>
+  <data name="ConfirmApproveCustomer" xml:space="preserve"><value>This customer will be approved and become selectable at the counter. Do you confirm?</value></data>
+  <data name="ConfirmSuspendCustomer" xml:space="preserve"><value>This customer will be suspended and can no longer be selected at the counter. Do you confirm?</value></data>
+  <data name="ConfirmCloseCustomer" xml:space="preserve"><value>This account will be closed. A closed account cannot be reopened. Do you confirm?</value></data>
+  <data name="Summary_TotalCustomers" xml:space="preserve"><value>Total Customers</value></data>
+  <data name="Summary_ActiveCorporate" xml:space="preserve"><value>Active Corporate Portfolio</value></data>
+  <data name="Summary_NewThisMonth" xml:space="preserve"><value>New This Month</value></data>
+  <data name="Summary_PendingApproval" xml:space="preserve"><value>Pending Approval</value></data>
+  <data name="CorporateCustomer" xml:space="preserve"><value>Corporate Customer</value></data>
+  <data name="CorporateCustomerHint" xml:space="preserve"><value>Leave empty for one-off shipments</value></data>
   <data name="AccountStatus" xml:space="preserve">
     <value>Account status</value>
   </data>
@@ -898,6 +921,7 @@
   <data name="AccountStatus_Closed" xml:space="preserve">
     <value>Closed</value>
   </data>
+  <data name="CustomerStatusTransitionInvalid" xml:space="preserve"><value>A customer cannot move from {0} to {1}.</value></data>
   <data name="PendingApprovalNotice" xml:space="preserve">
     <value>Your corporate account is awaiting administrator approval.</value>
   </data>
@@ -1090,6 +1114,12 @@
   <data name="NoCargoInSystem" xml:space="preserve"><value>No shipments in the system yet</value></data>
   <data name="Summary_WeeklyTraffic" xml:space="preserve"><value>Last 7 Days Traffic</value></data>
   <data name="Summary_TopBranches" xml:space="preserve"><value>Top 5 Busiest Branches</value></data>
+  <data name="Summary_DelayedBranches" xml:space="preserve"><value>Branches by Delayed Shipments</value></data>
+  <data name="Summary_NoDelayedCargo" xml:space="preserve"><value>No delayed shipments</value></data>
+  <data name="Summary_DeliveryPerformance" xml:space="preserve"><value>Staff Delivery Performance</value></data>
+  <data name="Summary_DeliveredCount" xml:space="preserve"><value>Delivered</value></data>
+  <data name="Summary_FailedAttempts" xml:space="preserve"><value>Failed attempts</value></data>
+  <data name="Summary_NoDeliveryYet" xml:space="preserve"><value>No delivery records yet</value></data>
   <data name="Summary_BranchesStaff" xml:space="preserve"><value>Branches and Staff</value></data>
   <data name="Summary_OnTimeRate" xml:space="preserve"><value>On-Time Delivery Rate</value></data>
   <data name="Summary_DelayReasons" xml:space="preserve"><value>Delay Reasons</value></data>

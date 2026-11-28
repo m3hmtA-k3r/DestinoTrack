@@ -268,6 +268,7 @@
   <data name="InvalidStatusTransition" xml:space="preserve"><value>Não é possível passar de {0} para {1}.</value></data>
   <data name="StatusRequiresOwnFlow" xml:space="preserve"><value>O estado {0} não pode ser definido neste ecrã; deve ser feito no ecrã da operação correspondente.</value></data>
   <data name="TrackCodeGenerationFailed" xml:space="preserve"><value>Não foi possível gerar o número de rastreio, tente novamente.</value></data>
+  <data name="CustomerCodeGenerationFailed" xml:space="preserve"><value>Não foi possível gerar o código de cliente, tente novamente.</value></data>
   <data name="BarcodeValueInvalid" xml:space="preserve"><value>O valor a codificar como código de barras não é válido.</value></data>
   <data name="CustomerNotFound" xml:space="preserve"><value>Cliente não encontrado.</value></data>
   <data name="CustomerNotActive" xml:space="preserve"><value>A conta do cliente não está ativa; não é possível criar uma carga para este cliente.</value></data>
@@ -370,6 +371,7 @@
   <data name="Vehicles" xml:space="preserve"><value>Veículos</value></data>
   <data name="Vehicle" xml:space="preserve"><value>Veículo</value></data>
   <data name="DeliveredToday" xml:space="preserve"><value>Entregues hoje</value></data>
+  <data name="ReadOnlyScreen" xml:space="preserve"><value>Esta tela é somente leitura. Os entregadores são geridos na tela de Funcionários e a atribuição de cargas no painel da filial.</value></data>
   <data name="SearchCourierOrPlate" xml:space="preserve"><value>Pesquisar entregador ou placa</value></data>
   <data name="NewVehicle" xml:space="preserve"><value>Novo veículo</value></data>
   <data name="UpdateVehicle" xml:space="preserve"><value>Atualizar veículo</value></data>
@@ -853,6 +855,9 @@
   <data name="TaxOfficeMaxLength" xml:space="preserve">
     <value>A repartição fiscal pode ter no máximo 100 caracteres.</value>
   </data>
+  <data name="CustomerTitleRequired" xml:space="preserve"><value>O título / nome completo não pode ficar vazio.</value></data>
+  <data name="CustomerTitleMaxLength" xml:space="preserve"><value>O título pode ter no máximo 200 caracteres.</value></data>
+  <data name="TaxNumberMaxLength" xml:space="preserve"><value>O número fiscal / de identificação pode ter no máximo 20 caracteres.</value></data>
   <data name="CustomerEmailMaxLength" xml:space="preserve">
     <value>O e-mail pode ter no máximo 100 caracteres.</value>
   </data>
@@ -883,6 +888,24 @@
   <data name="CustomerCode" xml:space="preserve">
     <value>Código do cliente</value>
   </data>
+  <data name="NewCustomer" xml:space="preserve"><value>Novo Cliente</value></data>
+  <data name="UpdateCustomer" xml:space="preserve"><value>Editar Cliente</value></data>
+  <data name="SearchCustomer" xml:space="preserve"><value>Procurar título, código ou n.º fiscal</value></data>
+  <data name="CustomerTitle" xml:space="preserve"><value>Título</value></data>
+  <data name="CargoCount" xml:space="preserve"><value>Encomendas</value></data>
+  <data name="LastCargoDate" xml:space="preserve"><value>Última Encomenda</value></data>
+  <data name="Approve" xml:space="preserve"><value>Aprovar</value></data>
+  <data name="Suspend" xml:space="preserve"><value>Suspender</value></data>
+  <data name="CloseAccount" xml:space="preserve"><value>Encerrar Conta</value></data>
+  <data name="ConfirmApproveCustomer" xml:space="preserve"><value>Este cliente será aprovado e poderá ser selecionado no balcão. Confirma?</value></data>
+  <data name="ConfirmSuspendCustomer" xml:space="preserve"><value>Este cliente será suspenso e deixará de poder ser selecionado no balcão. Confirma?</value></data>
+  <data name="ConfirmCloseCustomer" xml:space="preserve"><value>Esta conta será encerrada. Uma conta encerrada não pode ser reaberta. Confirma?</value></data>
+  <data name="Summary_TotalCustomers" xml:space="preserve"><value>Total de Clientes</value></data>
+  <data name="Summary_ActiveCorporate" xml:space="preserve"><value>Carteira Empresarial Ativa</value></data>
+  <data name="Summary_NewThisMonth" xml:space="preserve"><value>Novos Este Mês</value></data>
+  <data name="Summary_PendingApproval" xml:space="preserve"><value>Aguardam Aprovação</value></data>
+  <data name="CorporateCustomer" xml:space="preserve"><value>Cliente Empresarial</value></data>
+  <data name="CorporateCustomerHint" xml:space="preserve"><value>Deixe em branco para encomendas pontuais</value></data>
   <data name="AccountStatus" xml:space="preserve">
     <value>Situação da conta</value>
   </data>
@@ -898,6 +921,7 @@
   <data name="AccountStatus_Closed" xml:space="preserve">
     <value>Encerrada</value>
   </data>
+  <data name="CustomerStatusTransitionInvalid" xml:space="preserve"><value>Não é possível passar um cliente de {0} para {1}.</value></data>
   <data name="PendingApprovalNotice" xml:space="preserve">
     <value>Sua conta de pessoa jurídica está aguardando aprovação do administrador.</value>
   </data>
@@ -1090,6 +1114,12 @@
   <data name="NoCargoInSystem" xml:space="preserve"><value>Ainda não há encomendas no sistema</value></data>
   <data name="Summary_WeeklyTraffic" xml:space="preserve"><value>Tráfego dos Últimos 7 Dias</value></data>
   <data name="Summary_TopBranches" xml:space="preserve"><value>5 Filiais Mais Movimentadas</value></data>
+  <data name="Summary_DelayedBranches" xml:space="preserve"><value>Filiais por Encomendas Atrasadas</value></data>
+  <data name="Summary_NoDelayedCargo" xml:space="preserve"><value>Não há encomendas atrasadas</value></data>
+  <data name="Summary_DeliveryPerformance" xml:space="preserve"><value>Desempenho de Entrega do Pessoal</value></data>
+  <data name="Summary_DeliveredCount" xml:space="preserve"><value>Entregues</value></data>
+  <data name="Summary_FailedAttempts" xml:space="preserve"><value>Tentativas falhadas</value></data>
+  <data name="Summary_NoDeliveryYet" xml:space="preserve"><value>Ainda não há registos de entrega</value></data>
   <data name="Summary_BranchesStaff" xml:space="preserve"><value>Filiais e Pessoal</value></data>
   <data name="Summary_OnTimeRate" xml:space="preserve"><value>Taxa de Entrega no Prazo</value></data>
   <data name="Summary_DelayReasons" xml:space="preserve"><value>Motivos de Atraso</value></data>

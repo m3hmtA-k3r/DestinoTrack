@@ -361,3 +361,7 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# Graphify kod grafigi onbellegi - yerelde uretilir, commit edilmez
+# (798 dosya / 25 MB; a592d5f bir kez yanlislikla yuttu)
+graphify-out/

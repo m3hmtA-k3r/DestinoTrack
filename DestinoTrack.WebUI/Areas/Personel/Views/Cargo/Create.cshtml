@@ -113,6 +113,20 @@
             }
 
             <!-- Taraflar -->
+            <div>
+                <label asp-for="Cargo.CustomerId" class="field-label">@L["CorporateCustomer"]</label>
+                <select asp-for="Cargo.CustomerId" class="field-input cursor-pointer">
+                    @* Boş seçenek ilk sırada: gişeye gelen gönderilerin çoğunun müşteri hesabı yok *@
+                    <option value="">—</option>
+                    @foreach (var musteri in Model.Customers)
+                    {
+                        <option value="@musteri.Id">@musteri.Title (@musteri.Code)</option>
+                    }
+                </select>
+                @* Hata yolu: servis "müşteri bulunamadı/aktif değil" derse mesaj en üstteki özet bloğunda çıkar *@
+                <p class="field-hint">@L["CorporateCustomerHint"]</p>
+            </div>
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="flex flex-col gap-5">
                     <h2 class="font-headline-sm text-headline-sm text-on-surface">@L["Sender"]</h2>

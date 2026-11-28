@@ -7,9 +7,11 @@ using DestinoTrack.DataAccess.Repositories.Cargos;
 using DestinoTrack.DataAccess.Repositories.Customers;
 using DestinoTrack.DataAccess.Repositories.Deliveries;
 using DestinoTrack.DataAccess.Repositories.DeliveryExceptions;
+using DestinoTrack.DataAccess.Repositories.DeliveryExceptions;
 using DestinoTrack.DataAccess.Repositories.Employees;
 using DestinoTrack.DTO.DTOs.CargoDtos;
 using DestinoTrack.DTO.DTOs.Common;
+using DestinoTrack.DTO.DTOs.CustomerDtos;
 using DestinoTrack.DTO.DTOs.PricingDtos;
 using DestinoTrack.Entity.Entities;
 using DestinoTrack.Entity.Entities.Enums;
@@ -143,6 +145,18 @@ namespace DestinoTrack.Business.Services.Cargos
             });
 
             return cargo.Id;
+        }
+
+        public async Task<List<CustomerLookupDto>> GetCustomerLookupAsync(Guid countryId)
+        {
+            var musteriler = await _customerRepository.GetActiveByCountryAsync(countryId);
+
+            return musteriler.Select(c => new CustomerLookupDto
+            {
+                Id = c.Id,
+                Title = c.Title,
+                Code = c.Code
+            }).ToList();
         }
 
         public async Task<PagedResult<ResultCargoDto>> GetPagedAsync(CargoStatus? status = null, string? search = null, int page = 1,
@@ -946,6 +960,64 @@ namespace DestinoTrack.Business.Services.Cargos
 
                 // Hiç şube yoksa `Max()` boş listede patlar — görünüm de bu 0'ı boş duruma çeviriyor
                 Max = satirlar.Count == 0 ? 0 : satirlar.Max(x => x.Count)
+            };
+        }
+
+        public async Task<DelayedBranchesDto?> GetDelayedBranchesAsync(int take = 5)
+        {
+            var scope = await GetScopeAsync();
+
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var liste = await _cargoRepository.TopBranchesByDelayScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted, take);
+
+            var satirlar = liste.Select(x => new BranchDelayDto
+            {
+                BranchName = x.BranchName,
+                DelayedCount = x.DelayedCount
+            }).ToList();
+
+            return new DelayedBranchesDto
+            {
+                Rows = satirlar,
+
+                // Hiç geciken yoksa liste boş gelir, `Max()` boş listede patlar — görünüm 0'ı boş duruma çeviriyor
+                Max = satirlar.Count == 0 ? 0 : satirlar.Max(x => x.DelayedCount)
+            };
+        }
+
+        public async Task<DeliveryPerformanceDto?> GetDeliveryPerformanceAsync(int take = 5)
+        {
+            var scope = await GetScopeAsync();
+
+            if (!scope.IsUnrestricted)
+            {
+                return null;
+            }
+
+            var liste = await _cargoRepository.TopEmployeesByDeliveryScopedAsync(
+                scope.BranchId, scope.CountryId, scope.CustomerId, scope.UserId, scope.CourierEmployeeId,
+                scope.IsUnrestricted, take);
+
+            var satirlar = liste.Select(x => new EmployeeDeliveryDto
+            {
+                EmployeeName = x.EmployeeName,
+                DeliveredCount = x.DeliveredCount,
+                FailedAttemptCount = x.FailedAttemptCount
+            }).ToList();
+
+            return new DeliveryPerformanceDto
+            {
+                Rows = satirlar,
+
+                // Liste dolu ama herkesin teslimi 0 ise (yalnız başarısız denemesi olanlar)
+                // `max="0"` geçersiz HTML olurdu — ölçek en az 1'e çekiliyor
+                Max = satirlar.Count == 0 ? 0 : Math.Max(1, satirlar.Max(x => x.DeliveredCount))
             };
         }
 
